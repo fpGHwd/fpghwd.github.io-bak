@@ -6,115 +6,151 @@
     xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
-  <loc>https://suzumiya.autove.dev/</loc>
-  <lastmod>2020-05-22T09:21:00Z</lastmod>
+  <loc>https://fpghwd.github.io/</loc>
+  <lastmod>2020-06-22T11:47:00Z</lastmod>
  </url>
  <url>
-  <loc>https://suzumiya.autove.dev/2012/</loc>
-  <lastmod>2020-05-22T09:21:00Z</lastmod>
+  <loc>https://fpghwd.github.io/2012/</loc>
+  <lastmod>2020-06-22T11:41:00Z</lastmod>
  </url>
  <url>
-  <loc>https://suzumiya.autove.dev/archive.html</loc>
-  <lastmod>2020-05-22T09:21:00Z</lastmod>
+  <loc>https://fpghwd.github.io/2020/</loc>
+  <lastmod>2020-06-22T11:47:00Z</lastmod>
  </url>
  <url>
-  <loc>https://suzumiya.autove.dev/categories/</loc>
-  <lastmod>2020-05-22T09:21:00Z</lastmod>
+  <loc>https://fpghwd.github.io/archive.html</loc>
+  <lastmod>2020-06-22T11:41:00Z</lastmod>
  </url>
  <url>
-  <loc>https://suzumiya.autove.dev/categories/blog/</loc>
-  <lastmod>2020-05-22T09:21:00Z</lastmod>
+  <loc>https://fpghwd.github.io/authors/</loc>
+  <lastmod>2020-06-22T11:47:00Z</lastmod>
  </url>
  <url>
-  <loc>https://suzumiya.autove.dev/categories/cat_nikola/</loc>
-  <lastmod>2020-05-22T09:21:00Z</lastmod>
+  <loc>https://fpghwd.github.io/authors/roberto-alsina/</loc>
+  <lastmod>2020-06-22T11:47:00Z</lastmod>
  </url>
  <url>
-  <loc>https://suzumiya.autove.dev/categories/demo/</loc>
-  <lastmod>2020-05-22T09:21:00Z</lastmod>
+  <loc>https://fpghwd.github.io/authors/suzumiya-haruhi/</loc>
+  <lastmod>2020-06-22T11:47:00Z</lastmod>
  </url>
  <url>
-  <loc>https://suzumiya.autove.dev/categories/nikola/</loc>
-  <lastmod>2020-05-22T09:21:00Z</lastmod>
+  <loc>https://fpghwd.github.io/categories/</loc>
+  <lastmod>2020-06-22T11:55:00Z</lastmod>
  </url>
  <url>
-  <loc>https://suzumiya.autove.dev/categories/python/</loc>
-  <lastmod>2020-05-22T09:21:00Z</lastmod>
+  <loc>https://fpghwd.github.io/categories/blog/</loc>
+  <lastmod>2020-06-22T11:41:00Z</lastmod>
  </url>
  <url>
-  <loc>https://suzumiya.autove.dev/galleries/</loc>
-  <lastmod>2020-05-22T09:21:00Z</lastmod>
+  <loc>https://fpghwd.github.io/categories/cat_nikola/</loc>
+  <lastmod>2020-06-22T11:41:00Z</lastmod>
  </url>
  <url>
-  <loc>https://suzumiya.autove.dev/galleries/demo/</loc>
-  <lastmod>2020-05-22T09:21:00Z</lastmod>
+  <loc>https://fpghwd.github.io/categories/demo/</loc>
+  <lastmod>2020-06-22T11:41:00Z</lastmod>
  </url>
  <url>
-  <loc>https://suzumiya.autove.dev/listings/</loc>
-  <lastmod>2020-05-22T09:20:00Z</lastmod>
+  <loc>https://fpghwd.github.io/categories/emacs/</loc>
+  <lastmod>2020-06-22T11:47:00Z</lastmod>
  </url>
  <url>
-  <loc>https://suzumiya.autove.dev/listings/hello.py.html</loc>
-  <lastmod>2020-05-22T09:20:00Z</lastmod>
+  <loc>https://fpghwd.github.io/categories/leetcode/</loc>
+  <lastmod>2020-06-22T11:55:00Z</lastmod>
  </url>
  <url>
-  <loc>https://suzumiya.autove.dev/pages/about-nikola/</loc>
-  <lastmod>2020-05-22T09:21:00Z</lastmod>
+  <loc>https://fpghwd.github.io/categories/nikola/</loc>
+  <lastmod>2020-06-22T11:41:00Z</lastmod>
  </url>
  <url>
-  <loc>https://suzumiya.autove.dev/pages/bootstrap-demo/</loc>
-  <lastmod>2020-05-22T09:21:00Z</lastmod>
+  <loc>https://fpghwd.github.io/categories/python/</loc>
+  <lastmod>2020-06-22T11:41:00Z</lastmod>
  </url>
  <url>
-  <loc>https://suzumiya.autove.dev/pages/charts/</loc>
-  <lastmod>2020-05-22T09:21:00Z</lastmod>
+  <loc>https://fpghwd.github.io/galleries/</loc>
+  <lastmod>2020-06-22T11:41:00Z</lastmod>
  </url>
  <url>
-  <loc>https://suzumiya.autove.dev/pages/creating-a-theme/</loc>
-  <lastmod>2020-05-22T09:21:00Z</lastmod>
+  <loc>https://fpghwd.github.io/galleries/demo/</loc>
+  <lastmod>2020-06-22T11:41:00Z</lastmod>
  </url>
  <url>
-  <loc>https://suzumiya.autove.dev/pages/dr-nikolas-vendetta/</loc>
-  <lastmod>2020-05-22T09:21:00Z</lastmod>
+  <loc>https://fpghwd.github.io/listings/</loc>
+  <lastmod>2020-06-22T11:41:00Z</lastmod>
  </url>
  <url>
-  <loc>https://suzumiya.autove.dev/pages/extending/</loc>
-  <lastmod>2020-05-22T09:21:00Z</lastmod>
+  <loc>https://fpghwd.github.io/listings/hello.py.html</loc>
+  <lastmod>2020-06-22T11:41:00Z</lastmod>
  </url>
  <url>
-  <loc>https://suzumiya.autove.dev/pages/handbook/</loc>
-  <lastmod>2020-05-22T09:21:00Z</lastmod>
+  <loc>https://fpghwd.github.io/pages/about-nikola/</loc>
+  <lastmod>2020-06-22T11:41:00Z</lastmod>
  </url>
  <url>
-  <loc>https://suzumiya.autove.dev/pages/internals/</loc>
-  <lastmod>2020-05-22T09:21:00Z</lastmod>
+  <loc>https://fpghwd.github.io/pages/bootstrap-demo/</loc>
+  <lastmod>2020-06-22T11:41:00Z</lastmod>
  </url>
  <url>
-  <loc>https://suzumiya.autove.dev/pages/listings-demo/</loc>
-  <lastmod>2020-05-22T09:21:00Z</lastmod>
+  <loc>https://fpghwd.github.io/pages/charts/</loc>
+  <lastmod>2020-06-22T11:41:00Z</lastmod>
  </url>
  <url>
-  <loc>https://suzumiya.autove.dev/pages/path-handlers/</loc>
-  <lastmod>2020-05-22T09:21:00Z</lastmod>
+  <loc>https://fpghwd.github.io/pages/creating-a-theme/</loc>
+  <lastmod>2020-06-22T11:41:00Z</lastmod>
  </url>
  <url>
-  <loc>https://suzumiya.autove.dev/pages/quickref/</loc>
-  <lastmod>2020-05-22T09:21:00Z</lastmod>
+  <loc>https://fpghwd.github.io/pages/dr-nikolas-vendetta/</loc>
+  <lastmod>2020-06-22T11:41:00Z</lastmod>
  </url>
  <url>
-  <loc>https://suzumiya.autove.dev/pages/quickstart/</loc>
-  <lastmod>2020-05-22T09:21:00Z</lastmod>
+  <loc>https://fpghwd.github.io/pages/extending/</loc>
+  <lastmod>2020-06-22T11:41:00Z</lastmod>
  </url>
  <url>
-  <loc>https://suzumiya.autove.dev/pages/social_buttons/</loc>
-  <lastmod>2020-05-22T09:21:00Z</lastmod>
+  <loc>https://fpghwd.github.io/pages/handbook/</loc>
+  <lastmod>2020-06-22T11:41:00Z</lastmod>
  </url>
  <url>
-  <loc>https://suzumiya.autove.dev/pages/theming/</loc>
-  <lastmod>2020-05-22T09:21:00Z</lastmod>
+  <loc>https://fpghwd.github.io/pages/internals/</loc>
+  <lastmod>2020-06-22T11:41:00Z</lastmod>
  </url>
  <url>
-  <loc>https://suzumiya.autove.dev/posts/welcome-to-nikola/</loc>
-  <lastmod>2020-05-22T09:21:00Z</lastmod>
+  <loc>https://fpghwd.github.io/pages/listings-demo/</loc>
+  <lastmod>2020-06-22T11:41:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://fpghwd.github.io/pages/path-handlers/</loc>
+  <lastmod>2020-06-22T11:41:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://fpghwd.github.io/pages/quickref/</loc>
+  <lastmod>2020-06-22T11:41:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://fpghwd.github.io/pages/quickstart/</loc>
+  <lastmod>2020-06-22T11:41:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://fpghwd.github.io/pages/social_buttons/</loc>
+  <lastmod>2020-06-22T11:41:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://fpghwd.github.io/pages/theming/</loc>
+  <lastmod>2020-06-22T11:41:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://fpghwd.github.io/posts/blog-title/</loc>
+  <lastmod>2020-06-22T11:47:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://fpghwd.github.io/posts/bu-ma/</loc>
+  <lastmod>2020-06-22T11:47:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://fpghwd.github.io/posts/nikola-first-time/</loc>
+  <lastmod>2020-06-22T11:47:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://fpghwd.github.io/posts/welcome-to-nikola/</loc>
+  <lastmod>2020-06-22T11:41:00Z</lastmod>
  </url>
 </urlset>

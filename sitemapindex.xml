@@ -6,39 +6,55 @@
     xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <sitemap>
-  <loc>https://suzumiya.autove.dev/categories/blog.xml</loc>
-  <lastmod>2020-05-22T09:21:00Z</lastmod>
+  <loc>https://fpghwd.github.io/authors/roberto-alsina.xml</loc>
+  <lastmod>2020-06-22T11:47:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>https://suzumiya.autove.dev/categories/cat_nikola.xml</loc>
-  <lastmod>2020-05-22T09:21:00Z</lastmod>
+  <loc>https://fpghwd.github.io/authors/suzumiya-haruhi.xml</loc>
+  <lastmod>2020-06-22T11:55:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>https://suzumiya.autove.dev/categories/demo.xml</loc>
-  <lastmod>2020-05-22T09:21:00Z</lastmod>
+  <loc>https://fpghwd.github.io/categories/blog.xml</loc>
+  <lastmod>2020-06-22T11:41:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>https://suzumiya.autove.dev/categories/nikola.xml</loc>
-  <lastmod>2020-05-22T09:21:00Z</lastmod>
+  <loc>https://fpghwd.github.io/categories/cat_nikola.xml</loc>
+  <lastmod>2020-06-22T11:41:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>https://suzumiya.autove.dev/categories/python.xml</loc>
-  <lastmod>2020-05-22T09:21:00Z</lastmod>
+  <loc>https://fpghwd.github.io/categories/demo.xml</loc>
+  <lastmod>2020-06-22T11:41:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>https://suzumiya.autove.dev/galleries/demo/rss.xml</loc>
-  <lastmod>2020-05-22T09:21:00Z</lastmod>
+  <loc>https://fpghwd.github.io/categories/emacs.xml</loc>
+  <lastmod>2020-06-22T11:47:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>https://suzumiya.autove.dev/galleries/rss.xml</loc>
-  <lastmod>2020-05-22T09:21:00Z</lastmod>
+  <loc>https://fpghwd.github.io/categories/leetcode.xml</loc>
+  <lastmod>2020-06-22T11:55:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>https://suzumiya.autove.dev/rss.xml</loc>
-  <lastmod>2020-05-22T09:21:00Z</lastmod>
+  <loc>https://fpghwd.github.io/categories/nikola.xml</loc>
+  <lastmod>2020-06-22T11:41:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>https://suzumiya.autove.dev/sitemap.xml</loc>
-  <lastmod>2020-05-22T09:21:00Z</lastmod>
+  <loc>https://fpghwd.github.io/categories/python.xml</loc>
+  <lastmod>2020-06-22T11:41:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>https://fpghwd.github.io/galleries/demo/rss.xml</loc>
+  <lastmod>2020-06-22T11:41:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>https://fpghwd.github.io/galleries/rss.xml</loc>
+  <lastmod>2020-06-22T11:41:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>https://fpghwd.github.io/rss.xml</loc>
+  <lastmod>2020-06-22T11:55:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>https://fpghwd.github.io/sitemap.xml</loc>
+  <lastmod>2020-06-22T11:55:00Z</lastmod>
  </sitemap>
 </sitemapindex>
