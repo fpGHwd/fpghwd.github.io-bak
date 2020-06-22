@@ -1,20 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>suzumiya's blog (Posts about leetcode)</title><link>https://fpghwd.github.io/</link><description></description><atom:link href="https://fpghwd.github.io/categories/leetcode.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;suzumiya haruhi&lt;/a&gt; </copyright><lastBuildDate>Mon, 22 Jun 2020 11:55:22 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>leetcode405 Two's complement</title><link>https://fpghwd.github.io/posts/bu-ma/</link><dc:creator>suzumiya haruhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>suzumiya's blog (Posts about leetcode)</title><link>https://fpghwd.github.io/</link><description></description><atom:link href="https://fpghwd.github.io/categories/leetcode.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;suzumiya haruhi&lt;/a&gt; </copyright><lastBuildDate>Mon, 22 Jun 2020 11:58:17 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>leetcode405 Two's complement</title><link>https://fpghwd.github.io/posts/bu-ma/</link><dc:creator>suzumiya haruhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
 这道题要将有符号数转化为16进制表示法. 有符号整数在计算机内是补码表, 所以将数字的补码转化为16进制即可.
 &lt;/p&gt;
 
 &lt;p&gt;
 &lt;b&gt;原码&lt;/b&gt;
+&lt;/p&gt;
+
+&lt;p&gt;
 在指定数字范围和位数上限后, 原码最高位为符号, 其他位为数字的绝对值二进制表示. 例如: 5为00000000, -4为10000100
 &lt;/p&gt;
 
 &lt;p&gt;
-&lt;b&gt;反码&lt;/b&gt; 
+&lt;b&gt;反码&lt;/b&gt;
+&lt;/p&gt;
+
+&lt;p&gt;
 反码: 原码的进一步表示. 但是对于0有两种表示方法(假设位数上限为8位, 00000000和10000000), 且对于负数的运算并不直观: 例如(-5)+1=-4, 10000101+1=10000100在位运算上不直观(此处的直观是指计算机的位运算)
 &lt;/p&gt;
 
 &lt;p&gt;
 &lt;b&gt;补码&lt;/b&gt;
+&lt;/p&gt;
+
+&lt;p&gt;
 补码: 补码的操作看起来复杂(反码除符号位取反,然后加1), 但是最终的目的还是解决掉反码表示的两个问题(0的两个表示和负数的运算直观性). 其实我觉得换我来设计也是一样的.
 &lt;/p&gt;
 
@@ -29,6 +38,9 @@
 &lt;p&gt;
 把原码(128/10000000~255/11111111)映射为(-128/10000000~-1/11111111), 其实就是数字-256: 128 + (-256) = -128, 255 + (-256) = -1, 因为128和255的原码我们很容易得到,而后面负数就是原来我们需要转换的负数.
 所以对于负数而言, 求原码的稍微转换一下: 原码数 + (-256) = 原数.
+&lt;/p&gt;
+
+&lt;p&gt;
 那么我们来求一个-24的原码: -2(原数) + 256 = 254(原码数), 254是11111110, 所以-2的补码就是11111110
 我觉得中间反码的概念对于设计过程理解而言可能有用, 但是对于转码就直接用公式就可以了: 当原数为正,补码就是原码; 当原数为负, 补码就是原数+256后的原码.(这里以8位为例子, int就是32位)  
 &lt;/p&gt;
@@ -45,7 +57,7 @@ public:
         string ret = "";
         unsigned int n;
         if(num &amp;lt; 0){
-        n =  ~(abs(num))+1; // two's complement to two's original code // 负数的补码是在其原码的基础上, 符号位不变, 其余各位取反, 最后+1. (即在反码的基础上+1)
+        n =  ~(abs(num))+1; // 负数的补码是在其原码的基础上, 符号位不变, 其余各位取反, 最后+1
         }else if(num == 0){
             return "0";
         }else{
