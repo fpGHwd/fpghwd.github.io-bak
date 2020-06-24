@@ -15,11 +15,7 @@
 <meta property="og:site_name" content="suzumiya's blog">
 <meta property="og:title" content="leetcode405 Two's complement">
 <meta property="og:url" content="https://fpghwd.github.io/posts/bu-ma/">
-<meta property="og:description" content='CLOSED: [2020-06-22 Mon 20:01]
-
-
-
-State "DONE"       from              [2020-06-22 Mon 20:01]
+<meta property="og:description" content='State "DONE"       from              [2020-06-22 Mon 20:01]
 
 
 
@@ -31,7 +27,10 @@ State "DONE"       from              [2020-06-22 Mon 20:01]
 
 
 
-在指定数字范围和位数上限后, 原码最高位为符号, 其他位为数字的绝对值二进制'>
+在指定数字范围和位数上限后, 原码最高位为符号, 其他位为数字的绝对值二进制表示. 例如: 5为00000000, -4为10000100
+
+
+'>
 <meta property="og:type" content="article">
 <meta property="article:published_time" content="2020-06-22T09:14:03+08:00">
 <meta property="article:tag" content="leetcode">
@@ -116,10 +115,6 @@ State "DONE"       from              [2020-06-22 Mon 20:01]
 
     </header><div class="e-content entry-content" itemprop="articleBody text">
     <div>
-<p>
-CLOSED: <span class="timestamp-wrapper"><span class="timestamp">[2020-06-22 Mon 20:01]</span></span>
-</p>
-
 <ul class="org-ul">
 <li>State "DONE"       from              <span class="timestamp-wrapper"><span class="timestamp">[2020-06-22 Mon 20:01]</span></span>
 </li>
@@ -202,7 +197,7 @@ public:
 </div>
 
 <p>
-其中 <code>n = ~(abs(num)) + 1</code> 就是求反码的过程. 之前已经最高位8位时的反码公式得到 <code>原数 + 2^8  = 反码数</code> 可以直接转化为反码. 那么在考虑到类型转换的原因, 不能让运算过程中发生隐性的类型转换, 那么原来的过程可以转化为 <code>原数 + 255 + 1 = 反码数</code>, 同时考虑到原数是负数, 进一步转化为 <code>255 - (-原数) + 1 = 反码数</code>, 现在把 <code>255-(-原数)</code> 单独拿出来就是 <code>255-abs(原数)</code>, 其实也就可以用求反符号马上可以转化为 <code>~(abs(原数))</code>. 
+其中 <code>n = ~(abs(num)) + 1</code> 就是求反码的过程. 之前最高位8位时已经得到反码公式: <code>原数 + 2^8  = 反码数</code> 可以直接转化为反码. 那么在考虑到类型转换的原因, 不能让运算过程中发生隐性的类型转换, 那么原来的过程可以转化为 <code>原数 + 255 + 1 = 反码数</code>, 同时考虑到原数是负数, 进一步转化为 <code>255 - (-原数) + 1 = 反码数</code>, 现在把 <code>255-(-原数)</code> 单独拿出来就是 <code>255-abs(原数)</code>, 其实也就可以用求反符号马上可以转化为 <code>~(abs(原数))</code>. 
 </p>
 
 <p>

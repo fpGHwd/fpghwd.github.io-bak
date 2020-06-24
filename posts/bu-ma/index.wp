@@ -1,6 +1,3 @@
-<p>
-CLOSED: <span class="timestamp-wrapper"><span class="timestamp">[2020-06-22 Mon 20:01]</span></span>
-</p>
 <ul class="org-ul">
 <li>State "DONE"       from              <span class="timestamp-wrapper"><span class="timestamp">[2020-06-22 Mon 20:01]</span></span></li>
 </ul>
@@ -87,7 +84,7 @@ public:
 </div>
 
 <p>
-其中 <code>n = ~(abs(num)) + 1</code> 就是求反码的过程. 之前已经最高位8位时的反码公式得到 <code>原数 + 2^8  = 反码数</code> 可以直接转化为反码. 那么在考虑到类型转换的原因, 不能让运算过程中发生隐性的类型转换, 那么原来的过程可以转化为 <code>原数 + 255 + 1 = 反码数</code>, 同时考虑到原数是负数, 进一步转化为 <code>255 - (-原数) + 1 = 反码数</code>, 现在把 <code>255-(-原数)</code> 单独拿出来就是 <code>255-abs(原数)</code>, 其实也就可以用求反符号马上可以转化为 <code>~(abs(原数))</code>. 
+其中 <code>n = ~(abs(num)) + 1</code> 就是求反码的过程. 之前最高位8位时已经得到反码公式: <code>原数 + 2^8  = 反码数</code> 可以直接转化为反码. 那么在考虑到类型转换的原因, 不能让运算过程中发生隐性的类型转换, 那么原来的过程可以转化为 <code>原数 + 255 + 1 = 反码数</code>, 同时考虑到原数是负数, 进一步转化为 <code>255 - (-原数) + 1 = 反码数</code>, 现在把 <code>255-(-原数)</code> 单独拿出来就是 <code>255-abs(原数)</code>, 其实也就可以用求反符号马上可以转化为 <code>~(abs(原数))</code>. 
 </p>
 
 <p>

@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>suzumiya's blog</title><link>https://fpghwd.github.io/</link><description>This is a demo site for Nikola.</description><atom:link href="https://fpghwd.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;suzumiya haruhi&lt;/a&gt; </copyright><lastBuildDate>Wed, 24 Jun 2020 01:51:56 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>leetcode405 Two's complement</title><link>https://fpghwd.github.io/posts/bu-ma/</link><dc:creator>suzumiya haruhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
-CLOSED: &lt;span class="timestamp-wrapper"&gt;&lt;span class="timestamp"&gt;[2020-06-22 Mon 20:01]&lt;/span&gt;&lt;/span&gt;
-&lt;/p&gt;
-
-&lt;ul class="org-ul"&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>suzumiya's blog</title><link>https://fpghwd.github.io/</link><description>This is a demo site for Nikola.</description><atom:link href="https://fpghwd.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;suzumiya haruhi&lt;/a&gt; </copyright><lastBuildDate>Wed, 24 Jun 2020 02:17:27 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>leetcode405 Two's complement</title><link>https://fpghwd.github.io/posts/bu-ma/</link><dc:creator>suzumiya haruhi</dc:creator><description>&lt;div&gt;&lt;ul class="org-ul"&gt;
 &lt;li&gt;State "DONE"       from              &lt;span class="timestamp-wrapper"&gt;&lt;span class="timestamp"&gt;[2020-06-22 Mon 20:01]&lt;/span&gt;&lt;/span&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -85,7 +81,7 @@ public:
 &lt;/div&gt;
 
 &lt;p&gt;
-其中 &lt;code&gt;n = ~(abs(num)) + 1&lt;/code&gt; 就是求反码的过程. 之前已经最高位8位时的反码公式得到 &lt;code&gt;原数 + 2^8  = 反码数&lt;/code&gt; 可以直接转化为反码. 那么在考虑到类型转换的原因, 不能让运算过程中发生隐性的类型转换, 那么原来的过程可以转化为 &lt;code&gt;原数 + 255 + 1 = 反码数&lt;/code&gt;, 同时考虑到原数是负数, 进一步转化为 &lt;code&gt;255 - (-原数) + 1 = 反码数&lt;/code&gt;, 现在把 &lt;code&gt;255-(-原数)&lt;/code&gt; 单独拿出来就是 &lt;code&gt;255-abs(原数)&lt;/code&gt;, 其实也就可以用求反符号马上可以转化为 &lt;code&gt;~(abs(原数))&lt;/code&gt;. 
+其中 &lt;code&gt;n = ~(abs(num)) + 1&lt;/code&gt; 就是求反码的过程. 之前最高位8位时已经得到反码公式: &lt;code&gt;原数 + 2^8  = 反码数&lt;/code&gt; 可以直接转化为反码. 那么在考虑到类型转换的原因, 不能让运算过程中发生隐性的类型转换, 那么原来的过程可以转化为 &lt;code&gt;原数 + 255 + 1 = 反码数&lt;/code&gt;, 同时考虑到原数是负数, 进一步转化为 &lt;code&gt;255 - (-原数) + 1 = 反码数&lt;/code&gt;, 现在把 &lt;code&gt;255-(-原数)&lt;/code&gt; 单独拿出来就是 &lt;code&gt;255-abs(原数)&lt;/code&gt;, 其实也就可以用求反符号马上可以转化为 &lt;code&gt;~(abs(原数))&lt;/code&gt;. 
 &lt;/p&gt;
 
 &lt;p&gt;
