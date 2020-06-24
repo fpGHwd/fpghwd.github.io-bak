@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>suzumiya's blog</title><link>https://fpghwd.github.io/</link><description>This is a demo site for Nikola.</description><atom:link href="https://fpghwd.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;suzumiya haruhi&lt;/a&gt; </copyright><lastBuildDate>Wed, 24 Jun 2020 02:43:55 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>leetcode405 Two's complement</title><link>https://fpghwd.github.io/posts/bu-ma/</link><dc:creator>suzumiya haruhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>suzumiya's blog</title><link>https://fpghwd.github.io/</link><description>This is a demo site for Nikola.</description><atom:link href="https://fpghwd.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;suzumiya haruhi&lt;/a&gt; </copyright><lastBuildDate>Wed, 24 Jun 2020 02:46:27 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>leetcode405 Two's complement</title><link>https://fpghwd.github.io/posts/bu-ma/</link><dc:creator>suzumiya haruhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
 这道题要将有符号数转化为16进制表示法. 有符号整数在计算机内是补码表, 所以将数字的补码转化为16进制即可.
 &lt;/p&gt;
 
@@ -77,11 +77,11 @@ public:
 &lt;/div&gt;
 
 &lt;p&gt;
-其中 &lt;code&gt;n = ~(abs(num)) + 1&lt;/code&gt; 就是求反码的过程. 之前最高位8位时已经得到反码公式: &lt;code&gt;原数 + 2^8  = 反码数&lt;/code&gt; 可以直接转化为反码. 那么在考虑到类型转换的原因, 不能让运算过程中发生隐性的类型转换, 那么原来的过程可以转化为 &lt;code&gt;原数 + 255 + 1 = 反码数&lt;/code&gt;, 同时考虑到原数是负数, 进一步转化为 &lt;code&gt;255 - (-原数) + 1 = 反码数&lt;/code&gt;, 现在把 &lt;code&gt;255-(-原数)&lt;/code&gt; 单独拿出来就是 &lt;code&gt;255-abs(原数)&lt;/code&gt;, 其实也就可以用求反符号马上可以转化为 &lt;code&gt;~(abs(原数))&lt;/code&gt;. 
+其中 &lt;code&gt;n = ~(abs(num)) + 1&lt;/code&gt; 就是求反码的过程. 之前最高位8位时已经得到反码公式: &lt;code&gt;原数 + 2^8  = 反码数&lt;/code&gt; 可以直接转化为反码. 那么在考虑到类型转换的原因, 不能让运算过程中发生隐性的类型转换, 那么原来的过程可以转化为 &lt;code&gt;原数 + 255 + 1 = 反码数&lt;/code&gt;, 同时考虑到原数是负数, 进一步转化为 &lt;code&gt;255 - (-原数) + 1 = 反码数&lt;/code&gt;, 现在把 &lt;code&gt;255-(-原数)&lt;/code&gt; 单独拿出来就是 &lt;code&gt;255-abs(原数)&lt;/code&gt;, 其实也就可以用求反符号代替 &lt;code&gt;255-&lt;/code&gt; , 原式转化为 &lt;code&gt;~(abs(原数))+1&lt;/code&gt;. 
 &lt;/p&gt;
 
 &lt;p&gt;
-同时在int的32位情况下, 求反码的公式为: &lt;code&gt;反码数 = ~abs(原数) + 1&lt;/code&gt; .
+同样在int为32位的情况中, 求反码的公式为: &lt;code&gt;反码数 = ~abs(原数) + 1&lt;/code&gt; .
 &lt;/p&gt;&lt;/div&gt;</description><category>leetcode</category><guid>https://fpghwd.github.io/posts/bu-ma/</guid><pubDate>Mon, 22 Jun 2020 01:14:03 GMT</pubDate></item><item><title>Nikola First Time</title><link>https://fpghwd.github.io/posts/nikola-first-time/</link><dc:creator>suzumiya haruhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
 最近觉得自己是时候开始写博客了，然后就在自己用的openSUSE上用&lt;a href="https://snapcraft.io/search?q=Nikola"&gt;snap安装nikola&lt;/a&gt;，然后用Chen Bin的&lt;a href="https://github.com/redguardtoo/emacs.d"&gt;Emacs配置&lt;/a&gt;。最后照着&lt;a href="https://github.com/redguardtoo/org2nikola"&gt;org2nikola&lt;/a&gt;说明稍微配置了一下：大纲导出即发布，以后就可以用org来写博客了。
 &lt;/p&gt;
