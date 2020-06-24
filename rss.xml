@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>suzumiya's blog</title><link>https://fpghwd.github.io/</link><description>This is a demo site for Nikola.</description><atom:link href="https://fpghwd.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;suzumiya haruhi&lt;/a&gt; </copyright><lastBuildDate>Wed, 24 Jun 2020 02:17:27 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>leetcode405 Two's complement</title><link>https://fpghwd.github.io/posts/bu-ma/</link><dc:creator>suzumiya haruhi</dc:creator><description>&lt;div&gt;&lt;ul class="org-ul"&gt;
-&lt;li&gt;State "DONE"       from              &lt;span class="timestamp-wrapper"&gt;&lt;span class="timestamp"&gt;[2020-06-22 Mon 20:01]&lt;/span&gt;&lt;/span&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>suzumiya's blog</title><link>https://fpghwd.github.io/</link><description>This is a demo site for Nikola.</description><atom:link href="https://fpghwd.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;suzumiya haruhi&lt;/a&gt; </copyright><lastBuildDate>Wed, 24 Jun 2020 02:43:55 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>leetcode405 Two's complement</title><link>https://fpghwd.github.io/posts/bu-ma/</link><dc:creator>suzumiya haruhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
 这道题要将有符号数转化为16进制表示法. 有符号整数在计算机内是补码表, 所以将数字的补码转化为16进制即可.
 &lt;/p&gt;
 
@@ -61,7 +57,7 @@ public:
         string ret = "";
         unsigned int n;
         if(num &amp;lt; 0){
-        n =  ~(abs(num))+1; // 负数的补码是在其原码的基础上, 符号位不变, 其余各位取反, 最后+1
+        n =  ~(abs(num))+1; // 负数的补码是原数绝对值再求反,然后+1
         }else if(num == 0){
             return "0";
         }else{
