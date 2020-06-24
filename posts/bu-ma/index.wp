@@ -60,16 +60,12 @@ public:
     string toHex(int num) {
         string ret = "";
         unsigned int n;
-        if(num &lt; 0){
-        n =  ~(abs(num))+1; // &#36127;&#25968;&#30340;&#34917;&#30721;&#26159;&#21407;&#25968;&#32477;&#23545;&#20540;&#20877;&#27714;&#21453;,&#28982;&#21518;+1
-        }else if(num == 0){
-            return "0";
-        }else{
-            n = num;
-        }
+        if(num &lt; 0)n =  ~(abs(num))+1;
+        else if(num == 0)return "0";
+        else n = num;
 
         while(n){
-            ret.insert(0,1,(n%16&gt;=10)?(n%16-10+'a'):(n%16+'0'));
+            ret.insert(0,1,(n%16 &gt;= 10)?(n%16 - 10 + 'a'):(n%16 + '0'));
             n /= 16;
         }
 
