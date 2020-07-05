@@ -3,38 +3,39 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Leetcode405 Convert a Number to Hexadecimal | suzumiya's blog</title>
+<title>Leetcode41 First Missing Positive | suzumiya's blog</title>
 <link href="../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
 <meta name="theme-color" content="#5670d4">
 <meta name="generator" content="Nikola (getnikola.com)">
 <link rel="alternate" type="application/rss+xml" title="RSS" hreflang="en" href="../../rss.xml">
-<link rel="canonical" href="https://fpghwd.github.io/posts/bu-ma/">
+<link rel="canonical" href="https://fpghwd.github.io/posts/leetcode41-first-missing-positive/">
 <!--[if lt IE 9]><script src="../../assets/js/html5.js"></script><![endif]--><meta name="author" content="suzumiya haruhi">
-<link rel="prev" href="../nikola-first-time/" title="Nikola First Time" type="text/html">
-<link rel="next" href="../leetcode41-first-missing-positive/" title="Leetcode41 First Missing Positive" type="text/html">
+<link rel="prev" href="../bu-ma/" title="Leetcode405 Convert a Number to Hexadecimal" type="text/html">
 <meta property="og:site_name" content="suzumiya's blog">
-<meta property="og:title" content="Leetcode405 Convert a Number to Hexadecimal">
-<meta property="og:url" content="https://fpghwd.github.io/posts/bu-ma/">
-<meta property="og:description" content="这道题要将有符号数转化为16进制表示法. 有符号整数在计算机内是补码表, 所以将数字的补码转化为16进制即可.
+<meta property="og:title" content="Leetcode41 First Missing Positive">
+<meta property="og:url" content="https://fpghwd.github.io/posts/leetcode41-first-missing-positive/">
+<meta property="og:description" content="Given an unsorted integer array, find the smallest missing positive integer.
 
 
 
-原码
+Example 1:
+Input: [1,2,0]
+Output: 3
 
 
 
-在指定数字范围和位数上限后, 原码最高位为符号, 其他位为数字的绝对值二进制表示. 例如: 5为00000000, -4为10000100
+Example 2:
+Input: [3,4,-1,1]
+Output: 2
 
 
 
-反码
-
-
-
-反码: 原码的进一步表示. 但是对于0有两种表示方法(假设位数上限为8位, 00000000和10000000)">
+Example 3:
+Input: [7,8,9,11,12]
+Output:">
 <meta property="og:type" content="article">
-<meta property="article:published_time" content="2020-06-22T09:14:03+08:00">
+<meta property="article:published_time" content="2020-07-05T01:36:01+08:00">
 <meta property="article:tag" content="leetcode">
 </head>
 <body>
@@ -93,7 +94,7 @@
         
         
         
-<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">Leetcode405 Convert a Number to Hexadecimal</a></h1>
+<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">Leetcode41 First Missing Positive</a></h1>
 
         <div class="metadata">
             <p class="byline author vcard p-author h-card"><span class="byline-name fn p-name" itemprop="author">
@@ -101,11 +102,11 @@
             </span></p>
             <p class="dateline">
             <a href="." rel="bookmark">
-            <time class="published dt-published" datetime="2020-06-22T09:14:03+08:00" itemprop="datePublished" title="2020-06-22 09:14">2020-06-22 09:14</time></a>
+            <time class="published dt-published" datetime="2020-07-05T01:36:01+08:00" itemprop="datePublished" title="2020-07-05 01:36">2020-07-05 01:36</time></a>
             </p>
                 <p class="commentline">
         
-    <a href="#disqus_thread" data-disqus-identifier="cache/posts/bu-ma.html">Comments</a>
+    <a href="#disqus_thread" data-disqus-identifier="cache/posts/leetcode41-first-missing-positive.html">Comments</a>
 
 
             
@@ -118,85 +119,68 @@
     </header><div class="e-content entry-content" itemprop="articleBody text">
     <div>
 <p>
-这道题要将有符号数转化为16进制表示法. 有符号整数在计算机内是补码表, 所以将数字的补码转化为16进制即可.
+Given an unsorted integer array, find the smallest missing positive integer.
 </p>
 
 <p>
-<b>原码</b>
+<b>Example 1</b>:
+Input: [1,2,0]
+Output: 3
 </p>
 
 <p>
-在指定数字范围和位数上限后, 原码最高位为符号, 其他位为数字的绝对值二进制表示. 例如: 5为00000000, -4为10000100
+<b>Example 2</b>:
+Input: [3,4,-1,1]
+Output: 2
 </p>
 
 <p>
-<b>反码</b>
+<b>Example 3</b>:
+Input: [7,8,9,11,12]
+Output: 1
 </p>
 
 <p>
-反码: 原码的进一步表示. 但是对于0有两种表示方法(假设位数上限为8位, 00000000和10000000), 且对于负数的运算并不直观: 例如(-5)+1=-4, 10000101+1=10000100在位运算上不直观(此处的直观是指计算机的位运算)
+<b>Note</b>:
+Your algorithm should run in O(n) time and uses constant extra space.
 </p>
 
 <p>
-<b>补码</b>
+<b>思路</b>
 </p>
 
-<p>
-补码: 补码的操作看起来复杂(反码除符号位取反,然后加1), 但是最终的目的还是解决掉反码表示的两个问题(0的两个表示和负数的运算直观性). 其实我觉得换我来设计也是一样的.
-</p>
-
-<p>
-8位能表示 2<sup>8</sup> 个数, 如果对于无符号(正数)可以表示从0~255这256个数(可能是0~255, 也可以是2~257, 3~258等等), 而对于有符号整数, 同样可以表示256个. 假设我们从0~255中把128~255这128个数的位置腾出来给负数, 那可以表示-128~-1这128个数. 整体情况就是用了8位表示-128~127这256个数. 之前的两个问题已经解决了一个, 那就是0的重合问题, 现在要解决的就是运算的直观性. 其实一眼就看出来了: 在表示的128~255中本来就有运算直观性, 现在要做的就是把 -128~-1 放到 100000000~11111111 这128个位置中而已. 然后刚好11111111代表-1, 11111111(-1)+1=00000000(0), 刚好合适. 其实这里写了很多, 不如公式里面写的更为清楚. 
-</p>
-
-<p>
-<b>8位求补码</b>
-</p>
-
-<p>
-把原码(128/10000000~255/11111111)映射为(-128/10000000~-1/11111111), 其实就是数字-256: 128 + (-256) = -128, 255 + (-256) = -1, 因为128和255的原码我们很容易得到,而后面负数就是原来我们需要转换的负数.
-所以对于负数而言, 求原码的稍微转换一下: 原码数 + (-256) = 原数.
-</p>
-
-<p>
-那么我们来求一个-24的原码: -2(原数) + 256 = 254(原码数), 254是11111110, 所以-2的补码就是11111110
-我觉得中间反码的概念对于设计过程理解而言可能有用, 但是对于转码就直接用公式就可以了: 当原数为正,补码就是原码; 当原数为负, 补码就是原数+256后的原码.(这里以8位为例子, int就是32位)  
-</p>
-
-<p>
-<b>Solution</b>
-</p>
-
+<ol class="org-ol">
+<li>排序占用O(nlogn)的时间复杂度;</li>
+<li>丢失意味着需要一定程度的排序,才能知道哪个是丢失的;</li>
+<li>最小的正数,说明负数和0不参与排序;</li>
+<li>证明复杂度为O(n). 因为每次交换都将一个正数nums[k]放到nums中nums[k-1]的位置上,因此复杂度是O(n).</li>
+</ol>
 <div class="org-src-container">
 
 <pre><code class="lang-cpp">class Solution {
 public:
-    string toHex(int num) {
-        string ret = "";
-        unsigned int n;
-        if(num &lt; 0)n =  ~(abs(num))+1;
-        else if(num == 0)return "0";
-        else n = num;
+    int firstMissingPositive(vector&lt;int&gt;&amp; nums) {
+        int len = nums.size(), tmp;
 
-        while(n){
-            ret.insert(0,1,(n%16 &gt;= 10)?(n%16 - 10 + 'a'):(n%16 + '0'));
-            n /= 16;
+        for(int i = 0; i &lt; len; i++){
+            while(nums[i] &gt;= 1 &amp;&amp; nums[i] &lt;= len &amp;&amp; nums[i]!=i+1 &amp;&amp; nums[nums[i]-1]!=nums[i]){
+                tmp = nums[nums[i]-1];
+                nums[nums[i]-1]=nums[i];
+                nums[i] = tmp;
+            }
         }
 
-        return ret;
+        for(int i = 0; i &lt; len; i++){
+            if(nums[i]!=i+1){
+                return i+1;
+            }
+        }
+        return len+1;
     }
 };
 </code></pre>
 
 </div>
-
-<p>
-其中 <code>n = ~(abs(num)) + 1</code> 就是求反码的过程. 之前最高位8位时已经得到反码公式: <code>原数 + 2^8  = 反码数</code> 可以直接转化为反码. 那么在考虑到类型转换的原因, 不能让运算过程中发生隐性的类型转换(256不能用八位表示, 且不能用long或者其他高位数来参与运算), 那么原来的过程可以转化为 <code>原数 + 255 + 1 = 反码数</code>, 同时考虑到原数是负数, 进一步转化为 <code>255 - (-原数) + 1 = 反码数</code>, 现在把 <code>255 - (-原数)</code> 单独拿出来就是 <code>255 - abs(原数)</code>, 用求反符号代替 <code>255 -</code> , 原式最终转化为 <code>反码数 = ~(abs(原数)) + 1</code>. 
-</p>
-
-<p>
-同样在int为32位的情况中, 求反码的公式为: <code>反码数 = ~abs(原数) + 1</code> .
-</p>
 </div>
     </div>
     <aside class="postpromonav"><nav><ul itemprop="keywords" class="tags">
@@ -204,10 +188,7 @@ public:
         </ul>
 <ul class="pager hidden-print">
 <li class="previous">
-                <a href="../nikola-first-time/" rel="prev" title="Nikola First Time">Previous post</a>
-            </li>
-            <li class="next">
-                <a href="../leetcode41-first-missing-positive/" rel="next" title="Leetcode41 First Missing Positive">Next post</a>
+                <a href="../bu-ma/" rel="prev" title="Leetcode405 Convert a Number to Hexadecimal">Previous post</a>
             </li>
         </ul></nav></aside><section class="comments hidden-print"><h2>Comments</h2>
         
@@ -215,9 +196,9 @@ public:
         <div id="disqus_thread"></div>
         <script>
         var disqus_shortname ="fpghwd-github-io",
-            disqus_url="https://fpghwd.github.io/posts/bu-ma/",
-        disqus_title="Leetcode405 Convert a Number to Hexadecimal",
-        disqus_identifier="cache/posts/bu-ma.html",
+            disqus_url="https://fpghwd.github.io/posts/leetcode41-first-missing-positive/",
+        disqus_title="Leetcode41 First Missing Positive",
+        disqus_identifier="cache/posts/leetcode41-first-missing-positive.html",
         disqus_config = function () {
             this.language = "en";
         };

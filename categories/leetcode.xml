@@ -1,5 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>suzumiya's blog (Posts about leetcode)</title><link>https://fpghwd.github.io/</link><description></description><atom:link href="https://fpghwd.github.io/categories/leetcode.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;suzumiya haruhi&lt;/a&gt; </copyright><lastBuildDate>Wed, 24 Jun 2020 03:35:28 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Leetcode405 Convert a Number to Hexadecimal</title><link>https://fpghwd.github.io/posts/bu-ma/</link><dc:creator>suzumiya haruhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>suzumiya's blog (Posts about leetcode)</title><link>https://fpghwd.github.io/</link><description></description><atom:link href="https://fpghwd.github.io/categories/leetcode.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;suzumiya haruhi&lt;/a&gt; </copyright><lastBuildDate>Sun, 05 Jul 2020 01:36:44 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Leetcode41 First Missing Positive</title><link>https://fpghwd.github.io/posts/leetcode41-first-missing-positive/</link><dc:creator>suzumiya haruhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
+Given an unsorted integer array, find the smallest missing positive integer.
+&lt;/p&gt;
+
+&lt;p&gt;
+&lt;b&gt;Example 1&lt;/b&gt;:
+Input: [1,2,0]
+Output: 3
+&lt;/p&gt;
+
+&lt;p&gt;
+&lt;b&gt;Example 2&lt;/b&gt;:
+Input: [3,4,-1,1]
+Output: 2
+&lt;/p&gt;
+
+&lt;p&gt;
+&lt;b&gt;Example 3&lt;/b&gt;:
+Input: [7,8,9,11,12]
+Output: 1
+&lt;/p&gt;
+
+&lt;p&gt;
+&lt;b&gt;Note&lt;/b&gt;:
+Your algorithm should run in O(n) time and uses constant extra space.
+&lt;/p&gt;
+
+&lt;p&gt;
+&lt;b&gt;思路&lt;/b&gt;
+&lt;/p&gt;
+
+&lt;ol class="org-ol"&gt;
+&lt;li&gt;排序占用O(nlogn)的时间复杂度;&lt;/li&gt;
+&lt;li&gt;丢失意味着需要一定程度的排序,才能知道哪个是丢失的;&lt;/li&gt;
+&lt;li&gt;最小的正数,说明负数和0不参与排序;&lt;/li&gt;
+&lt;li&gt;证明复杂度为O(n). 因为每次交换都将一个正数nums[k]放到nums中nums[k-1]的位置上,因此复杂度是O(n).&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class="org-src-container"&gt;
+
+&lt;pre&gt;&lt;code class="lang-cpp"&gt;class Solution {
+public:
+    int firstMissingPositive(vector&amp;lt;int&amp;gt;&amp;amp; nums) {
+        int len = nums.size(), tmp;
+
+        for(int i = 0; i &amp;lt; len; i++){
+            while(nums[i] &amp;gt;= 1 &amp;amp;&amp;amp; nums[i] &amp;lt;= len &amp;amp;&amp;amp; nums[i]!=i+1 &amp;amp;&amp;amp; nums[nums[i]-1]!=nums[i]){
+                tmp = nums[nums[i]-1];
+                nums[nums[i]-1]=nums[i];
+                nums[i] = tmp;
+            }
+        }
+
+        for(int i = 0; i &amp;lt; len; i++){
+            if(nums[i]!=i+1){
+                return i+1;
+            }
+        }
+        return len+1;
+    }
+};
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;/div&gt;&lt;/div&gt;</description><category>leetcode</category><guid>https://fpghwd.github.io/posts/leetcode41-first-missing-positive/</guid><pubDate>Sat, 04 Jul 2020 17:36:01 GMT</pubDate></item><item><title>Leetcode405 Convert a Number to Hexadecimal</title><link>https://fpghwd.github.io/posts/bu-ma/</link><dc:creator>suzumiya haruhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
 这道题要将有符号数转化为16进制表示法. 有符号整数在计算机内是补码表, 所以将数字的补码转化为16进制即可.
 &lt;/p&gt;
 

@@ -1,0 +1,63 @@
+<p>
+Given an unsorted integer array, find the smallest missing positive integer.
+</p>
+
+<p>
+<b>Example 1</b>:
+Input: [1,2,0]
+Output: 3
+</p>
+
+<p>
+<b>Example 2</b>:
+Input: [3,4,-1,1]
+Output: 2
+</p>
+
+<p>
+<b>Example 3</b>:
+Input: [7,8,9,11,12]
+Output: 1
+</p>
+
+<p>
+<b>Note</b>:
+Your algorithm should run in O(n) time and uses constant extra space.
+</p>
+
+<p>
+<b>思路</b>
+</p>
+<ol class="org-ol">
+<li>排序占用O(nlogn)的时间复杂度;</li>
+<li>丢失意味着需要一定程度的排序,才能知道哪个是丢失的;</li>
+<li>最小的正数,说明负数和0不参与排序;</li>
+<li>证明复杂度为O(n). 因为每次交换都将一个正数nums[k]放到nums中nums[k-1]的位置上,因此复杂度是O(n).</li>
+</ol>
+
+<div class="org-src-container">
+
+<pre><code class="lang-cpp">class Solution {
+public:
+    int firstMissingPositive(vector&lt;int&gt;&amp; nums) {
+        int len = nums.size(), tmp;
+
+        for(int i = 0; i &lt; len; i++){
+            while(nums[i] &gt;= 1 &amp;&amp; nums[i] &lt;= len &amp;&amp; nums[i]!=i+1 &amp;&amp; nums[nums[i]-1]!=nums[i]){
+                tmp = nums[nums[i]-1];
+                nums[nums[i]-1]=nums[i];
+                nums[i] = tmp;
+            }
+        }
+
+        for(int i = 0; i &lt; len; i++){
+            if(nums[i]!=i+1){
+                return i+1;
+            }
+        }
+        return len+1;
+    }
+};
+</code></pre>
+
+</div>
