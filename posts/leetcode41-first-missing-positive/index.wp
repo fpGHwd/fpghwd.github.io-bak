@@ -26,7 +26,7 @@ Your algorithm should run in O(n) time and uses constant extra space.
 </p>
 
 <p>
-<b>思路</b>
+<b>思路:</b>
 </p>
 <ol class="org-ol">
 <li>排序占用O(nlogn)的时间复杂度;</li>
