@@ -1,10 +1,10 @@
 <p>
-<b>Workgroups2<sup><a id="fnr.1" class="footref" href="#fn.1">1</a></sup></b>
-Workgroups2是一款保存和恢复用户工作空间的一款emacs插件
+<b>Workgroups2<sup><a id="fnr.1" class="footref" href="#fn.1">1</a></sup></b> 
+Workgroups2是一款保存和恢复用户工作空间的一款emacs插件。
 </p>
 
 <p>
-<b>sessions和workgroups</b>
+<b>sessions和workgroups</b> 
 这里的session指的是emacs里面的buffer的一个集合，甚至buffer的指针的状态即位置。workgroups与用户的工作相关，指的是用户指定的显示buffer和buffer的状态集合。
 </p>
 
