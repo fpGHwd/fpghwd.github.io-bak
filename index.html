@@ -11,7 +11,7 @@
 <meta name="generator" content="Nikola (getnikola.com)">
 <link rel="alternate" type="application/rss+xml" title="RSS" hreflang="en" href="rss.xml">
 <link rel="canonical" href="https://fpghwd.github.io/">
-<!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="posts/makefileemacs/" type="text/html">
+<!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="posts/shi-yong-workgroups2-guan-li-emacs-de-session/" type="text/html">
 </head>
 <body>
 <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
@@ -68,7 +68,52 @@
     
         
     <div class="postindex">
-            <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/makefileemacs/" class="u-url">makefile</a></h1>
+            <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/shi-yong-workgroups2-guan-li-emacs-de-session/" class="u-url">使用workgroups2管理emacs的session</a></h1>
+                <div class="metadata">
+                    <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                        <a href="authors/suzumiya-haruhi/">suzumiya haruhi</a>
+                    </span></p>
+            <p class="dateline">
+            <a href="posts/shi-yong-workgroups2-guan-li-emacs-de-session/" rel="bookmark">
+            <time class="published dt-published" datetime="2020-07-09T10:08:16+08:00" itemprop="datePublished" title="2020-07-09 10:08">2020-07-09 10:08</time></a>
+            </p>
+                        <p class="commentline">
+        
+    <a href="posts/shi-yong-workgroups2-guan-li-emacs-de-session/#disqus_thread" data-disqus-identifier="cache/posts/shi-yong-workgroups2-guan-li-emacs-de-session.html">Comments</a>
+
+
+                </p>
+</div>
+            </header><div class="e-content entry-content">
+                    <div>
+<p>
+<b>sessions和workgroups</b>
+这里的session指的是emacs里面的buffer的一个集合，甚至buffer的指针的状态即位置。workgroups与用户的工作相关，指的是用户指定的显示buffer和buffer的状态集合。
+</p>
+
+<p>
+<b>如何管理：group的创建/修改/删除</b>
+</p>
+
+<ol class="org-ol">
+<li>
+<code>wg-create-group</code> 用于创建一个group（比如cpp-dev），可以用 <code>wg-rename-group</code> 修改group的名字，然后使用 <code>wg-save-session</code> 将当前的group的状态保存入文件中（比如~/.emacs<sub>workgroups</sub>）</li>
+<li>
+<code>wg-rename-group</code> 用于修改group的名字，然后用 <code>wg-save-session</code> 保存。同时如果想保存指针（cursor）在另一个位置的状态，需要重新用 <code>wg-save-session</code> 保存。</li>
+<li>
+<code>wg-kill-workgroup</code> 用于删除打开的group，同时完成后用 <code>wg-save-session</code> 保存。</li>
+</ol>
+<p>
+<b>意义</b>
+</p>
+
+<ol class="org-ol">
+<li>在多个workgroups之间切换将会变得很容易。当然可以使用 <code>C-x b</code> 来切换buffer，但是使用了workgroups后一次切换到你所指定的所需buffer集合，将是一个极大的效率提升。</li>
+<li>保存共享同步workgroups。这个是一个次要的提升，由于在不同环境中的文件可能不同，buffer是否能够正常打开并不确定。</li>
+</ol>
+</div>
+                </div>
+            </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/makefileemacs/" class="u-url">makefile</a></h1>
                 <div class="metadata">
                     <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                         <a href="authors/suzumiya-haruhi/">suzumiya haruhi</a>

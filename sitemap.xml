@@ -19,7 +19,7 @@
  </url>
  <url>
   <loc>https://fpghwd.github.io/archive.html</loc>
-  <lastmod>2020-07-09T03:46:00Z</lastmod>
+  <lastmod>2020-07-09T10:08:00Z</lastmod>
  </url>
  <url>
   <loc>https://fpghwd.github.io/authors/</loc>
@@ -35,7 +35,7 @@
  </url>
  <url>
   <loc>https://fpghwd.github.io/categories/</loc>
-  <lastmod>2020-07-09T04:05:00Z</lastmod>
+  <lastmod>2020-07-09T10:08:00Z</lastmod>
  </url>
  <url>
   <loc>https://fpghwd.github.io/categories/blog/</loc>
@@ -68,6 +68,10 @@
  <url>
   <loc>https://fpghwd.github.io/categories/python/</loc>
   <lastmod>2020-06-22T11:41:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://fpghwd.github.io/categories/workgroups2/</loc>
+  <lastmod>2020-07-09T10:08:00Z</lastmod>
  </url>
  <url>
   <loc>https://fpghwd.github.io/galleries/</loc>
@@ -160,6 +164,10 @@
  <url>
   <loc>https://fpghwd.github.io/posts/nikola-first-time/</loc>
   <lastmod>2020-06-22T11:47:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://fpghwd.github.io/posts/shi-yong-workgroups2-guan-li-emacs-de-session/</loc>
+  <lastmod>2020-07-09T10:08:00Z</lastmod>
  </url>
  <url>
   <loc>https://fpghwd.github.io/posts/welcome-to-nikola/</loc>
