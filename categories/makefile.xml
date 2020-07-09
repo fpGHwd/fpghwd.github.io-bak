@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>suzumiya's blog (Posts about makefile)</title><link>https://fpghwd.github.io/</link><description></description><atom:link href="https://fpghwd.github.io/categories/makefile.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;suzumiya haruhi&lt;/a&gt; </copyright><lastBuildDate>Thu, 09 Jul 2020 04:05:46 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>makefile</title><link>https://fpghwd.github.io/posts/makefileemacs/</link><dc:creator>suzumiya haruhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
-&lt;code&gt;预警&lt;/code&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>suzumiya's blog (Posts about makefile)</title><link>https://fpghwd.github.io/</link><description></description><atom:link href="https://fpghwd.github.io/categories/makefile.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;suzumiya haruhi&lt;/a&gt; </copyright><lastBuildDate>Thu, 09 Jul 2020 10:09:15 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>makefile</title><link>https://fpghwd.github.io/posts/makefileemacs/</link><dc:creator>suzumiya haruhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
+&lt;b&gt;预警&lt;/b&gt;
 本文可能没有重点，我觉得博客改个更日常的标题更为合适:)
 &lt;/p&gt;
 
 &lt;p&gt;
-&lt;code&gt;makefile&lt;/code&gt;
+&lt;b&gt;makefile&lt;/b&gt;
 很多年前自学了makefile，但是当时特别想搞懂但后来的印象还是没搞懂。后来就不了了之也免不了心心念念。
 &lt;/p&gt;
 
 &lt;p&gt;
-&lt;code&gt;emacs&lt;/code&gt;
+&lt;b&gt;emacs&lt;/b&gt;
 提到emacs的原因是整个过程都是用emacs来做的，虽然很多人说emacs始终是一个编辑器。但是对于我来说emacs可能是一种态度：对于自己不了解的东西的好奇心吧。也是现阶段我最喜欢的态度了。从开始用emacs到现在也快两年的时间了，也收获不少。
 &lt;/p&gt;
 
 &lt;p&gt;
-&lt;code&gt;english&lt;/code&gt;
+&lt;b&gt;english&lt;/b&gt;
 想这些旅程也离不开英语的陪伴，曾经也吃过英语的亏，英语也是国际化所必须要掌握的一个工具。
 &lt;/p&gt;&lt;/div&gt;</description><category>emacs</category><category>makefile</category><guid>https://fpghwd.github.io/posts/makefileemacs/</guid><pubDate>Wed, 08 Jul 2020 19:45:25 GMT</pubDate></item></channel></rss>
