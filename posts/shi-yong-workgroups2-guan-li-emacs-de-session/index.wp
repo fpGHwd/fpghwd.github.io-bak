@@ -1,4 +1,9 @@
 <p>
+<b>Workgroups2<sup><a id="fnr.1" class="footref" href="#fn.1">1</a></sup></b>
+Workgroups2是一款保存和恢复用户工作空间的一款emacs插件
+</p>
+
+<p>
 <b>sessions和workgroups</b>
 这里的session指的是emacs里面的buffer的一个集合，甚至buffer的指针的状态即位置。workgroups与用户的工作相关，指的是用户指定的显示buffer和buffer的状态集合。
 </p>
@@ -19,3 +24,13 @@
 <li>在多个workgroups之间切换将会变得很容易。当然可以使用 <code>C-x b</code> 来切换buffer，但是使用了workgroups后一次切换到你所指定的所需buffer集合，将是一个极大的效率提升。</li>
 <li>保存共享同步workgroups。这个是一个次要的提升，由于在不同环境中的文件可能不同，buffer是否能够正常打开并不确定。</li>
 </ol>
+<div id="footnotes">
+<h2 class="footnotes">Footnotes: </h2>
+<div id="text-footnotes">
+
+<div class="footdef"><sup><a id="fn.1" class="footnum" href="#fnr.1">1</a></sup> <div class="footpara"><p class="footpara">
+<a href="https://github.com/tlh/workgroups.el">Workgroups2的Github主页</a></p></div></div>
+
+
+</div>
+</div>

@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>suzumiya's blog (Posts by suzumiya haruhi)</title><link>https://fpghwd.github.io/</link><description></description><atom:link href="https://fpghwd.github.io/authors/suzumiya-haruhi.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;suzumiya haruhi&lt;/a&gt; </copyright><lastBuildDate>Thu, 09 Jul 2020 10:10:45 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>使用workgroups2管理emacs的session</title><link>https://fpghwd.github.io/posts/shi-yong-workgroups2-guan-li-emacs-de-session/</link><dc:creator>suzumiya haruhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>suzumiya's blog (Posts by suzumiya haruhi)</title><link>https://fpghwd.github.io/</link><description></description><atom:link href="https://fpghwd.github.io/authors/suzumiya-haruhi.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;suzumiya haruhi&lt;/a&gt; </copyright><lastBuildDate>Thu, 09 Jul 2020 10:20:25 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>使用workgroups2管理emacs的session</title><link>https://fpghwd.github.io/posts/shi-yong-workgroups2-guan-li-emacs-de-session/</link><dc:creator>suzumiya haruhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
+&lt;b&gt;Workgroups2&lt;sup&gt;&lt;a id="fnr.1" class="footref" href="https://fpghwd.github.io/posts/shi-yong-workgroups2-guan-li-emacs-de-session/#fn.1"&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/b&gt;
+Workgroups2是一款保存和恢复用户工作空间的一款emacs插件
+&lt;/p&gt;
+
+&lt;p&gt;
 &lt;b&gt;sessions和workgroups&lt;/b&gt;
 这里的session指的是emacs里面的buffer的一个集合，甚至buffer的指针的状态即位置。workgroups与用户的工作相关，指的是用户指定的显示buffer和buffer的状态集合。
 &lt;/p&gt;
@@ -21,7 +26,18 @@
 &lt;ol class="org-ol"&gt;
 &lt;li&gt;在多个workgroups之间切换将会变得很容易。当然可以使用 &lt;code&gt;C-x b&lt;/code&gt; 来切换buffer，但是使用了workgroups后一次切换到你所指定的所需buffer集合，将是一个极大的效率提升。&lt;/li&gt;
 &lt;li&gt;保存共享同步workgroups。这个是一个次要的提升，由于在不同环境中的文件可能不同，buffer是否能够正常打开并不确定。&lt;/li&gt;
-&lt;/ol&gt;&lt;/div&gt;</description><category>emacs</category><category>workgroups2</category><guid>https://fpghwd.github.io/posts/shi-yong-workgroups2-guan-li-emacs-de-session/</guid><pubDate>Thu, 09 Jul 2020 02:08:16 GMT</pubDate></item><item><title>makefile</title><link>https://fpghwd.github.io/posts/makefileemacs/</link><dc:creator>suzumiya haruhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
+&lt;/ol&gt;
+
+&lt;div id="footnotes"&gt;
+&lt;h3 class="footnotes"&gt;Footnotes: &lt;/h3&gt;
+&lt;div id="text-footnotes"&gt;
+
+&lt;div class="footdef"&gt;&lt;sup&gt;&lt;a id="fn.1" class="footnum" href="https://fpghwd.github.io/posts/shi-yong-workgroups2-guan-li-emacs-de-session/#fnr.1"&gt;1&lt;/a&gt;&lt;/sup&gt; &lt;div class="footpara"&gt;&lt;p class="footpara"&gt;
+&lt;a href="https://github.com/tlh/workgroups.el"&gt;Workgroups2的Github主页&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;
+
+
+&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;</description><category>emacs</category><category>workgroups2</category><guid>https://fpghwd.github.io/posts/shi-yong-workgroups2-guan-li-emacs-de-session/</guid><pubDate>Thu, 09 Jul 2020 02:08:16 GMT</pubDate></item><item><title>makefile</title><link>https://fpghwd.github.io/posts/makefileemacs/</link><dc:creator>suzumiya haruhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
 &lt;b&gt;预警&lt;/b&gt;
 本文可能没有重点，我觉得博客改个更日常的标题更为合适:)
 &lt;/p&gt;
