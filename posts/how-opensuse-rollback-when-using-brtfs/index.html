@@ -3,37 +3,23 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Manage workgroups in emacs via workgroups2 | suzumiya's blog</title>
+<title>How openSUSE rollback when using brtfs | suzumiya's blog</title>
 <link href="../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
 <meta name="theme-color" content="#5670d4">
 <meta name="generator" content="Nikola (getnikola.com)">
 <link rel="alternate" type="application/rss+xml" title="RSS" hreflang="en" href="../../rss.xml">
-<link rel="canonical" href="https://fpghwd.github.io/posts/shi-yong-workgroups2-guan-li-emacs-de-session/">
+<link rel="canonical" href="https://fpghwd.github.io/posts/how-opensuse-rollback-when-using-brtfs/">
 <!--[if lt IE 9]><script src="../../assets/js/html5.js"></script><![endif]--><meta name="author" content="suzumiya haruhi">
-<link rel="prev" href="../makefileemacs/" title="makefile" type="text/html">
-<link rel="next" href="../how-opensuse-rollback-when-using-brtfs/" title="How openSUSE rollback when using brtfs" type="text/html">
+<link rel="prev" href="../shi-yong-workgroups2-guan-li-emacs-de-session/" title="Manage workgroups in emacs via workgroups2" type="text/html">
 <meta property="og:site_name" content="suzumiya's blog">
-<meta property="og:title" content="Manage workgroups in emacs via workgroups2">
-<meta property="og:url" content="https://fpghwd.github.io/posts/shi-yong-workgroups2-guan-li-emacs-de-session/">
-<meta property="og:description" content="Workgroups21 
-Workgroups2是一款保存和恢复用户工作空间的一款emacs插件。
-
-
-
-sessions和workgroups 
-这里的session指的是emacs里面的buffer的一个集合，甚至buffer的指针的状态即位置。workgroups与用户的工作相关，指的是用户指定的显示buffer和buffer的状态集合。
-
-
-
-如何管理：group的创建/修改/删除
-
-
-">
+<meta property="og:title" content="How openSUSE rollback when using brtfs">
+<meta property="og:url" content="https://fpghwd.github.io/posts/how-opensuse-rollback-when-using-brtfs/">
+<meta property="og:description" content="Brtfs
+Btrfs, an abbreviation for b-tree file system. By default, openSUSE is set up using Btrfs and snapshots for the root partition. Snapshots allow you to easily roll back your system if needed afte">
 <meta property="og:type" content="article">
-<meta property="article:published_time" content="2020-07-09T10:08:16+08:00">
-<meta property="article:tag" content="emacs">
-<meta property="article:tag" content="workgroups2">
+<meta property="article:published_time" content="2020-07-13T15:16:58+08:00">
+<meta property="article:tag" content="openSUSE">
 </head>
 <body>
 <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
@@ -91,7 +77,7 @@ sessions和workgroups
         
         
         
-<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">Manage workgroups in emacs via workgroups2</a></h1>
+<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">How openSUSE rollback when using brtfs</a></h1>
 
         <div class="metadata">
             <p class="byline author vcard p-author h-card"><span class="byline-name fn p-name" itemprop="author">
@@ -99,11 +85,11 @@ sessions和workgroups
             </span></p>
             <p class="dateline">
             <a href="." rel="bookmark">
-            <time class="published dt-published" datetime="2020-07-09T10:08:16+08:00" itemprop="datePublished" title="2020-07-09 10:08">2020-07-09 10:08</time></a>
+            <time class="published dt-published" datetime="2020-07-13T15:16:58+08:00" itemprop="datePublished" title="2020-07-13 15:16">2020-07-13 15:16</time></a>
             </p>
                 <p class="commentline">
         
-    <a href="#disqus_thread" data-disqus-identifier="cache/posts/shi-yong-workgroups2-guan-li-emacs-de-session.html">Comments</a>
+    <a href="#disqus_thread" data-disqus-identifier="cache/posts/how-opensuse-rollback-when-using-brtfs.html">Comments</a>
 
 
             
@@ -116,59 +102,26 @@ sessions和workgroups
     </header><div class="e-content entry-content" itemprop="articleBody text">
     <div>
 <p>
-<b>Workgroups2<sup><a id="fnr.1" class="footref" href="#fn.1">1</a></sup></b> 
-Workgroups2是一款保存和恢复用户工作空间的一款emacs插件。
+<b>Brtfs</b>
+Btrfs, an abbreviation for b-tree file system. By default, openSUSE is set up using Btrfs and snapshots for the root partition. Snapshots allow you to easily roll back your system if needed after applying updates, or to back up files. Snapshots can easily be managed with Snapper.
 </p>
 
 <p>
-<b>sessions和workgroups</b> 
-这里的session指的是emacs里面的buffer的一个集合，甚至buffer的指针的状态即位置。workgroups与用户的工作相关，指的是用户指定的显示buffer和buffer的状态集合。
+<b>Yast Filesystem Snapshots</b>
+In yast Filesystem Snapshots, sensitive changes in system file(/ excluding /home) will be listed and checked difference between pre-changed status and post-changed status. One can specify the volumn to rollback via time or file(s).
 </p>
 
 <p>
-<b>如何管理：group的创建/修改/删除</b>
-</p>
-
-<ol class="org-ol">
-<li>
-<code>wg-create-group</code> 用于创建一个group（比如cpp-dev），可以用 <code>wg-rename-group</code> 修改group的名字，然后使用 <code>wg-save-session</code> 将当前的group的状态保存入文件中（比如 <code>~/.emacs_workgroups</code> ）</li>
-<li>
-<code>wg-rename-group</code> 用于修改group的名字，然后用 <code>wg-save-session</code> 保存。同时如果想保存指针（cursor）在另一个位置的状态，需要重新用 <code>wg-save-session</code> 保存。</li>
-<li>
-<code>wg-kill-workgroup</code> 用于删除打开的group，同时完成后用 <code>wg-save-session</code> 保存。</li>
-</ol>
-<p>
-<b>意义</b>
-</p>
-
-<ol class="org-ol">
-<li>在多个workgroups之间切换将会变得很容易。当然可以使用 <code>C-x b</code> 来切换buffer，但是使用了workgroups后一次切换到你所指定的所需buffer集合，将是一个极大的效率提升。</li>
-<li>保存共享同步workgroups。这个是一个次要的提升，由于在不同环境中的文件可能不同，buffer是否能够正常打开并不确定。如果依赖同步来同步整个环境的话我感觉没有必要，毕竟在对应的环境中做什么事情效率更高一些。</li>
-</ol>
-<div id="footnotes">
-<h3 class="footnotes">Footnotes: </h3>
-<div id="text-footnotes">
-
-<div class="footdef">
-<sup><a id="fn.1" class="footnum" href="#fnr.1">1</a></sup><div class="footpara"><p class="footpara">
-<a href="https://github.com/pashinin/workgroups2">Workgroups2的Github主页</a></p></div>
-</div>
-
-
-</div>
-</div>
+<b>Rollback</b>
+Reboot and on the grub(2) interface, choose "Advance bootloader for openSUSE" and enter in and choose the item you want to rollback. And then "openSUSE Tumbleweed" to start normally. Login and open terminal then run <code>sudo zypper rollback &amp;&amp; reboot</code>, and relogin, then everything is OK.</p>
 </div>
     </div>
     <aside class="postpromonav"><nav><ul itemprop="keywords" class="tags">
-<li><a class="tag p-category" href="../../categories/emacs/" rel="tag">emacs</a></li>
-            <li><a class="tag p-category" href="../../categories/workgroups2/" rel="tag">workgroups2</a></li>
+<li><a class="tag p-category" href="../../categories/opensuse/" rel="tag">openSUSE</a></li>
         </ul>
 <ul class="pager hidden-print">
 <li class="previous">
-                <a href="../makefileemacs/" rel="prev" title="makefile">Previous post</a>
-            </li>
-            <li class="next">
-                <a href="../how-opensuse-rollback-when-using-brtfs/" rel="next" title="How openSUSE rollback when using brtfs">Next post</a>
+                <a href="../shi-yong-workgroups2-guan-li-emacs-de-session/" rel="prev" title="Manage workgroups in emacs via workgroups2">Previous post</a>
             </li>
         </ul></nav></aside><section class="comments hidden-print"><h2>Comments</h2>
         
@@ -176,9 +129,9 @@ Workgroups2是一款保存和恢复用户工作空间的一款emacs插件。
         <div id="disqus_thread"></div>
         <script>
         var disqus_shortname ="fpghwd-github-io",
-            disqus_url="https://fpghwd.github.io/posts/shi-yong-workgroups2-guan-li-emacs-de-session/",
-        disqus_title="Manage workgroups in emacs via workgroups2",
-        disqus_identifier="cache/posts/shi-yong-workgroups2-guan-li-emacs-de-session.html",
+            disqus_url="https://fpghwd.github.io/posts/how-opensuse-rollback-when-using-brtfs/",
+        disqus_title="How openSUSE rollback when using brtfs",
+        disqus_identifier="cache/posts/how-opensuse-rollback-when-using-brtfs.html",
         disqus_config = function () {
             this.language = "en";
         };

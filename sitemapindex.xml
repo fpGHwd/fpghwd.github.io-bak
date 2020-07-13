@@ -11,7 +11,7 @@
  </sitemap>
  <sitemap>
   <loc>https://fpghwd.github.io/authors/suzumiya-haruhi.xml</loc>
-  <lastmod>2020-07-09T10:08:00Z</lastmod>
+  <lastmod>2020-07-13T15:17:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://fpghwd.github.io/categories/blog.xml</loc>
@@ -27,7 +27,7 @@
  </sitemap>
  <sitemap>
   <loc>https://fpghwd.github.io/categories/emacs.xml</loc>
-  <lastmod>2020-07-09T10:08:00Z</lastmod>
+  <lastmod>2020-07-10T09:28:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://fpghwd.github.io/categories/leetcode.xml</loc>
@@ -35,11 +35,15 @@
  </sitemap>
  <sitemap>
   <loc>https://fpghwd.github.io/categories/makefile.xml</loc>
-  <lastmod>2020-07-09T04:05:00Z</lastmod>
+  <lastmod>2020-07-09T10:09:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://fpghwd.github.io/categories/nikola.xml</loc>
   <lastmod>2020-06-22T11:41:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>https://fpghwd.github.io/categories/opensuse.xml</loc>
+  <lastmod>2020-07-13T15:17:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://fpghwd.github.io/categories/python.xml</loc>
@@ -47,7 +51,7 @@
  </sitemap>
  <sitemap>
   <loc>https://fpghwd.github.io/categories/workgroups2.xml</loc>
-  <lastmod>2020-07-09T10:08:00Z</lastmod>
+  <lastmod>2020-07-10T09:28:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://fpghwd.github.io/galleries/demo/rss.xml</loc>
@@ -59,10 +63,10 @@
  </sitemap>
  <sitemap>
   <loc>https://fpghwd.github.io/rss.xml</loc>
-  <lastmod>2020-07-09T10:08:00Z</lastmod>
+  <lastmod>2020-07-13T15:17:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://fpghwd.github.io/sitemap.xml</loc>
-  <lastmod>2020-07-09T10:08:00Z</lastmod>
+  <lastmod>2020-07-13T15:17:00Z</lastmod>
  </sitemap>
 </sitemapindex>

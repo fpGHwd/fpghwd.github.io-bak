@@ -1,0 +1,13 @@
+<p>
+<b>Brtfs</b>
+Btrfs, an abbreviation for b-tree file system. By default, openSUSE is set up using Btrfs and snapshots for the root partition. Snapshots allow you to easily roll back your system if needed after applying updates, or to back up files. Snapshots can easily be managed with Snapper.
+</p>
+
+<p>
+<b>Yast Filesystem Snapshots</b>
+In yast Filesystem Snapshots, sensitive changes in system file(/ excluding /home) will be listed and checked difference between pre-changed status and post-changed status. One can specify the volumn to rollback via time or file(s).
+</p>
+
+<p>
+<b>Rollback</b>
+Reboot and on the grub(2) interface, choose "Advance bootloader for openSUSE" and enter in and choose the item you want to rollback. And then "openSUSE Tumbleweed" to start normally. Login and open terminal then run <code>sudo zypper rollback &amp;&amp; reboot</code>, and relogin, then everything is OK.</p>

@@ -19,7 +19,7 @@
  </url>
  <url>
   <loc>https://fpghwd.github.io/archive.html</loc>
-  <lastmod>2020-07-09T10:08:00Z</lastmod>
+  <lastmod>2020-07-13T15:17:00Z</lastmod>
  </url>
  <url>
   <loc>https://fpghwd.github.io/authors/</loc>
@@ -35,7 +35,7 @@
  </url>
  <url>
   <loc>https://fpghwd.github.io/categories/</loc>
-  <lastmod>2020-07-09T10:08:00Z</lastmod>
+  <lastmod>2020-07-13T15:17:00Z</lastmod>
  </url>
  <url>
   <loc>https://fpghwd.github.io/categories/blog/</loc>
@@ -64,6 +64,10 @@
  <url>
   <loc>https://fpghwd.github.io/categories/nikola/</loc>
   <lastmod>2020-06-22T11:41:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://fpghwd.github.io/categories/opensuse/</loc>
+  <lastmod>2020-07-13T15:17:00Z</lastmod>
  </url>
  <url>
   <loc>https://fpghwd.github.io/categories/python/</loc>
@@ -152,6 +156,10 @@
  <url>
   <loc>https://fpghwd.github.io/posts/bu-ma/</loc>
   <lastmod>2020-06-22T11:47:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://fpghwd.github.io/posts/how-opensuse-rollback-when-using-brtfs/</loc>
+  <lastmod>2020-07-13T15:17:00Z</lastmod>
  </url>
  <url>
   <loc>https://fpghwd.github.io/posts/leetcode41-first-missing-positive/</loc>
