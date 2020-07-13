@@ -15,8 +15,8 @@
 <meta property="og:site_name" content="suzumiya's blog">
 <meta property="og:title" content="How openSUSE rollback when using brtfs">
 <meta property="og:url" content="https://fpghwd.github.io/posts/how-opensuse-rollback-when-using-brtfs/">
-<meta property="og:description" content="Brtfs
-Btrfs, an abbreviation for b-tree file system. By default, openSUSE is set up using Btrfs and snapshots for the root partition. Snapshots allow you to easily roll back your system if needed afte">
+<meta property="og:description" content="Brtfs 
+Btrfs, an abbreviation for b-tree file system. By default, openSUSE is set up using Btrfs and snapshots for the root partition. Snapshots allow you to easily roll back your system if needed aft">
 <meta property="og:type" content="article">
 <meta property="article:published_time" content="2020-07-13T15:16:58+08:00">
 <meta property="article:tag" content="openSUSE">
@@ -102,17 +102,17 @@ Btrfs, an abbreviation for b-tree file system. By default, openSUSE is set up us
     </header><div class="e-content entry-content" itemprop="articleBody text">
     <div>
 <p>
-<b>Brtfs</b>
+<b>Brtfs</b> 
 Btrfs, an abbreviation for b-tree file system. By default, openSUSE is set up using Btrfs and snapshots for the root partition. Snapshots allow you to easily roll back your system if needed after applying updates, or to back up files. Snapshots can easily be managed with Snapper.
 </p>
 
 <p>
-<b>Yast Filesystem Snapshots</b>
+<b>Yast Filesystem Snapshots</b> 
 In yast Filesystem Snapshots, sensitive changes in system files(directories in / like /etc, /bin, excluding /home) will be listed and You can check difference between pre-changed status and post-changed status. One can specify the volumn to rollback via time or file(s') changes.
 </p>
 
 <p>
-<b>Rollback</b>
+<b>Rollback</b> 
 Reboot and on grub(2) interface, choose "Advance bootloader for openSUSE" and enter in and choose item you want to rollback. And then "openSUSE Tumbleweed" to start normally. Login and open terminal then run <code>sudo snapper rollback &amp;&amp; reboot</code>, and relogin. Then everything is OK.</p>
 </div>
     </div>
