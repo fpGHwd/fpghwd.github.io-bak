@@ -16,4 +16,4 @@ In yast Filesystem Snapshots, sensitive changes in system files(directories in /
 <li>Rollback</li>
 </ul>
 <p>
-Reboot and on grub(2) interface, choose "Advance bootloader for openSUSE" and enter in and choose item you want to rollback. And then "openSUSE Tumbleweed" to start normally. Login and open terminal then run <code>sudo snapper rollback &amp;&amp; reboot</code>, and relogin. Then everything is OK.</p>
+Boot and on grub(2) interface, choose "Advance bootloader for openSUSE" and enter in and choose item you want to rollback to. And then "openSUSE Tumbleweed" to boot normally. Login and run <code>sudo snapper rollback &amp;&amp; reboot</code> in opened terminal, then relogin. And everything is OK.</p>
