@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>suzumiya's blog (Posts about openSUSE)</title><link>https://fpghwd.github.io/</link><description></description><atom:link href="https://fpghwd.github.io/categories/opensuse.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;suzumiya haruhi&lt;/a&gt; </copyright><lastBuildDate>Wed, 15 Jul 2020 09:42:44 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>How openSUSE rollbacks when using brtfs</title><link>https://fpghwd.github.io/posts/how-opensuse-rollback-when-using-brtfs/</link><dc:creator>suzumiya haruhi</dc:creator><description>&lt;div&gt;&lt;ul class="org-ul"&gt;
-&lt;li&gt;Brtfs&lt;/li&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>suzumiya's blog (Posts about openSUSE)</title><link>https://fpghwd.github.io/</link><description></description><atom:link href="https://fpghwd.github.io/categories/opensuse.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;suzumiya haruhi&lt;/a&gt; </copyright><lastBuildDate>Wed, 15 Jul 2020 14:42:27 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>How openSUSE rollbacks when using brtfs</title><link>https://fpghwd.github.io/posts/how-opensuse-rollback-when-using-brtfs/</link><dc:creator>suzumiya haruhi</dc:creator><description>&lt;div&gt;&lt;ul class="org-ul"&gt;
+&lt;li&gt;&lt;b&gt;Brtfs&lt;/b&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;
@@ -8,7 +8,7 @@ Btrfs, an abbreviation for b-tree file system. By default, openSUSE is set up us
 &lt;/p&gt;
 
 &lt;ul class="org-ul"&gt;
-&lt;li&gt;Yast Filesystem Snapshots&lt;/li&gt;
+&lt;li&gt;&lt;b&gt;Yast Filesystem Snapshots&lt;/b&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;
@@ -16,7 +16,7 @@ In yast Filesystem Snapshots, sensitive changes in system files(directories in /
 &lt;/p&gt;
 
 &lt;ul class="org-ul"&gt;
-&lt;li&gt;Rollback&lt;/li&gt;
+&lt;li&gt;&lt;b&gt;Rollback&lt;/b&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;
