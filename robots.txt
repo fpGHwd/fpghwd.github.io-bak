@@ -1,4 +1,4 @@
-Sitemap: https://suzumiya.autove.dev/sitemapindex.xml
+Sitemap: https://fpghwd.github.io/sitemapindex.xml
 
 User-Agent: *
-Host: suzumiya.autove.dev
+Host: fpghwd.github.io
