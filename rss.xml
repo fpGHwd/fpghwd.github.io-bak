@@ -1,35 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Dichotomy</title><link>https://fpghwd.github.io/</link><description>To iterate is human, to recurse, divine</description><atom:link href="https://fpghwd.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;suzumiya haruhi&lt;/a&gt; </copyright><lastBuildDate>Wed, 29 Jul 2020 10:10:00 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Recent status in July of 2020</title><link>https://fpghwd.github.io/posts/recent-status/</link><dc:creator>suzumiya haruhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
-Recently I learn a word "If I have seen further, it is by standing on the shoulders of giants.", which is from Sir Isaac Newton. Though I heard it long time ago, I learn new from it when reading it again now. 
-&lt;/p&gt;
-
-&lt;p&gt;
-Recently days maybe darkest days in my life that has passed. Fear, unknown, and extremely wandering and not focusing on urgent stuffs made me unhappy. And I had time to chew and  classify these feelings, and most of which were just not willing to step into unknown fields. It's critical for positive attitude and deeds in life and many things. 
-&lt;/p&gt;
-
-&lt;p&gt;
-I hope I would have handled it better, though there is no chance for me to handle them once again. When next case, I hope I can do the same as "learn war in war".&lt;/p&gt;&lt;/div&gt;</description><guid>https://fpghwd.github.io/posts/recent-status/</guid><pubDate>Tue, 28 Jul 2020 03:06:55 GMT</pubDate></item><item><title>How openSUSE rollbacks when using brtfs</title><link>https://fpghwd.github.io/posts/how-opensuse-rollback-when-using-brtfs/</link><dc:creator>suzumiya haruhi</dc:creator><description>&lt;div&gt;&lt;ul class="org-ul"&gt;
-&lt;li&gt;&lt;b&gt;Brtfs&lt;/b&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;
-Btrfs, an abbreviation for b-tree file system. By default, openSUSE is set up using Btrfs and snapshots for the root partition. Snapshots allow you to easily roll back your system if needed after applying updates, or to back up files. Snapshots can easily be managed with Snapper.
-&lt;/p&gt;
-
-&lt;ul class="org-ul"&gt;
-&lt;li&gt;&lt;b&gt;Yast Filesystem Snapshots&lt;/b&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;
-In yast Filesystem Snapshots, sensitive changes in system files(directories in / like /etc, /bin, excluding /home) will be listed and You can check difference between pre-changed status and post-changed status. One can specify the volumn to rollback via time or file(s') changes.
-&lt;/p&gt;
-
-&lt;ul class="org-ul"&gt;
-&lt;li&gt;&lt;b&gt;Rollback&lt;/b&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;
-Boot and on grub(2) interface, choose "Advance bootloader for openSUSE" and enter in and choose item you want to rollback to. And then "openSUSE Tumbleweed" to boot normally. Login and run &lt;code&gt;sudo snapper rollback &amp;amp;&amp;amp; reboot&lt;/code&gt; in opened terminal, then relogin. And everything is OK.&lt;/p&gt;&lt;/div&gt;</description><category>openSUSE</category><guid>https://fpghwd.github.io/posts/how-opensuse-rollback-when-using-brtfs/</guid><pubDate>Mon, 13 Jul 2020 07:16:58 GMT</pubDate></item><item><title>Manage workgroups in emacs via workgroups2</title><link>https://fpghwd.github.io/posts/shi-yong-workgroups2-guan-li-emacs-de-session/</link><dc:creator>suzumiya haruhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Dichotomy</title><link>https://fpghwd.github.io/</link><description>To iterate is human, to recurse, divine</description><atom:link href="https://fpghwd.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;suzumiya haruhi&lt;/a&gt; </copyright><lastBuildDate>Thu, 20 Aug 2020 14:39:38 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Manage workgroups in emacs via workgroups2</title><link>https://fpghwd.github.io/posts/shi-yong-workgroups2-guan-li-emacs-de-session/</link><dc:creator>suzumiya haruhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
 &lt;b&gt;Workgroups2&lt;sup&gt;&lt;a id="fnr.1" class="footref" href="https://fpghwd.github.io/posts/shi-yong-workgroups2-guan-li-emacs-de-session/#fn.1"&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/b&gt; 
 Workgroups2是一款保存和恢复用户工作空间的一款emacs插件。
 &lt;/p&gt;
