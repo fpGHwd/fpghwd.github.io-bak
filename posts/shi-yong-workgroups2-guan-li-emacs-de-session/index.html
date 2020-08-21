@@ -10,25 +10,23 @@
 <meta name="generator" content="Nikola (getnikola.com)">
 <link rel="alternate" type="application/rss+xml" title="RSS" hreflang="en" href="../../rss.xml">
 <link rel="canonical" href="https://fpghwd.github.io/posts/shi-yong-workgroups2-guan-li-emacs-de-session/">
-<!--[if lt IE 9]><script src="../../assets/js/html5.js"></script><![endif]--><meta name="author" content="suzumiya haruhi">
+<!--[if lt IE 9]><script src="../../assets/js/html5.js"></script><![endif]--><meta name="author" content="suzumiya natsuhi">
 <link rel="prev" href="../makefileemacs/" title="makefile" type="text/html">
+<link rel="next" href="../recent-status/" title="Recent status in July of 2020" type="text/html">
 <meta property="og:site_name" content="Dichotomy">
 <meta property="og:title" content="Manage workgroups in emacs via workgroups2">
 <meta property="og:url" content="https://fpghwd.github.io/posts/shi-yong-workgroups2-guan-li-emacs-de-session/">
 <meta property="og:description" content="Workgroups21 
-Workgroups2是一款保存和恢复用户工作空间的一款emacs插件。
+Workgroups2 是一款保存和恢复用户工作空间的一款 emacs 插件。
 
 
 
-sessions和workgroups 
-这里的session指的是emacs里面的buffer的一个集合，甚至buffer的指针的状态即位置。workgroups与用户的工作相关，指的是用户指定的显示buffer和buffer的状态集合。
+sessions 和 workgroups 
+这里的 session 指的是 emacs 里面的 buffer 的一个集合，甚至 buffer 的指针的状态即位置。workgroups 与用户的工作相关，指的是用户指定的显示 buffer 和 buffer 的状态集合。
 
 
 
-如何管理：group的创建/修改/删除
-
-
-">
+如何管理">
 <meta property="og:type" content="article">
 <meta property="article:published_time" content="2020-07-09T10:08:16+08:00">
 <meta property="article:tag" content="emacs">
@@ -94,7 +92,7 @@ sessions和workgroups
 
         <div class="metadata">
             <p class="byline author vcard p-author h-card"><span class="byline-name fn p-name" itemprop="author">
-                    suzumiya haruhi
+                    suzumiya natsuhi
             </span></p>
             <p class="dateline">
             <a href="." rel="bookmark">
@@ -116,33 +114,33 @@ sessions和workgroups
     <div>
 <p>
 <b>Workgroups2<sup><a id="fnr.1" class="footref" href="#fn.1">1</a></sup></b> 
-Workgroups2是一款保存和恢复用户工作空间的一款emacs插件。
+Workgroups2 是一款保存和恢复用户工作空间的一款 emacs 插件。
 </p>
 
 <p>
-<b>sessions和workgroups</b> 
-这里的session指的是emacs里面的buffer的一个集合，甚至buffer的指针的状态即位置。workgroups与用户的工作相关，指的是用户指定的显示buffer和buffer的状态集合。
+<b>sessions 和 workgroups</b> 
+这里的 session 指的是 emacs 里面的 buffer 的一个集合，甚至 buffer 的指针的状态即位置。workgroups 与用户的工作相关，指的是用户指定的显示 buffer 和 buffer 的状态集合。
 </p>
 
 <p>
-<b>如何管理：group的创建/修改/删除</b>
+<b>如何管理：group 的创建/修改/删除</b>
 </p>
 
 <ol class="org-ol">
 <li>
-<code>wg-create-group</code> 用于创建一个group（比如cpp-dev），可以用 <code>wg-rename-group</code> 修改group的名字，然后使用 <code>wg-save-session</code> 将当前的group的状态保存入文件中（比如 <code>~/.emacs_workgroups</code> ）</li>
+<code>wg-create-group</code> 用于创建一个 group（比如 cpp-dev），可以用 <code>wg-rename-group</code> 修改 group 的名字，然后使用 <code>wg-save-session</code> 将当前的 group 的状态保存入文件中（比如 <code>~/.emacs_workgroups</code> ）</li>
 <li>
-<code>wg-rename-group</code> 用于修改group的名字，然后用 <code>wg-save-session</code> 保存。同时如果想保存指针（cursor）在另一个位置的状态，需要重新用 <code>wg-save-session</code> 保存。</li>
+<code>wg-rename-group</code> 用于修改 group 的名字，然后用 <code>wg-save-session</code> 保存。同时如果想保存指针（cursor）在另一个位置的状态，需要重新用 <code>wg-save-session</code> 保存。</li>
 <li>
-<code>wg-kill-workgroup</code> 用于删除打开的group，同时完成后用 <code>wg-save-session</code> 保存。</li>
+<code>wg-kill-workgroup</code> 用于删除打开的 group，同时完成后用 <code>wg-save-session</code> 保存。</li>
 </ol>
 <p>
 <b>意义</b>
 </p>
 
 <ol class="org-ol">
-<li>在多个workgroups之间切换将会变得很容易。当然可以使用 <code>C-x b</code> 来切换buffer，但是使用了workgroups后一次切换到你所指定的所需buffer集合，将是一个极大的效率提升。</li>
-<li>保存共享同步workgroups。这个是一个次要的提升，由于在不同环境中的文件可能不同，buffer是否能够正常打开并不确定。如果依赖同步来同步整个环境的话我感觉没有必要，毕竟在对应的环境中做什么事情效率更高一些。</li>
+<li>在多个 workgroups 之间切换将会变得很容易。当然可以使用 <code>C-x b</code> 来切换 buffer，但是使用了 workgroups 后一次切换到你所指定的所需 buffer 集合，将是一个极大的效率提升。</li>
+<li>保存共享同步 workgroups。这个是一个次要的提升，由于在不同环境中的文件可能不同，buffer 是否能够正常打开并不确定。如果依赖同步来同步整个环境的话我感觉没有必要，毕竟在对应的环境中做什么事情效率更高一些。</li>
 </ol>
 <div id="footnotes">
 <h3 class="footnotes">Footnotes: </h3>
@@ -150,7 +148,8 @@ Workgroups2是一款保存和恢复用户工作空间的一款emacs插件。
 
 <div class="footdef">
 <sup><a id="fn.1" class="footnum" href="#fnr.1">1</a></sup><div class="footpara"><p class="footpara">
-<a href="https://github.com/pashinin/workgroups2">Workgroups2的Github主页</a></p></div>
+<a href="https://github.com/pashinin/workgroups2">Workgroups2的Github主页</a>
+</p></div>
 </div>
 
 
@@ -165,6 +164,9 @@ Workgroups2是一款保存和恢复用户工作空间的一款emacs插件。
 <ul class="pager hidden-print">
 <li class="previous">
                 <a href="../makefileemacs/" rel="prev" title="makefile">Previous post</a>
+            </li>
+            <li class="next">
+                <a href="../recent-status/" rel="next" title="Recent status in July of 2020">Next post</a>
             </li>
         </ul></nav></aside><section class="comments hidden-print"><h2>Comments</h2>
         
@@ -189,7 +191,7 @@ Workgroups2是一款保存和恢复用户工作空间的一款emacs插件。
 
 
         </section></article><script>var disqus_shortname="fpghwd-github-io";(function(){var a=document.createElement("script");a.async=true;a.src="https://"+disqus_shortname+".disqus.com/count.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(a)}());</script><!--End of body content--><footer id="footer">
-            Contents © 2020         <a href="mailto:ggwdwhu@gmail.com">suzumiya haruhi</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
+            Contents © 2020         <a href="mailto:ggwdwhu@gmail.com">suzumiya natsuhi</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
             
             
         </footer>
