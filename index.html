@@ -11,7 +11,7 @@
 <meta name="generator" content="Nikola (getnikola.com)">
 <link rel="alternate" type="application/rss+xml" title="RSS" hreflang="en" href="rss.xml">
 <link rel="canonical" href="https://fpghwd.github.io/">
-<!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="posts/shi-yong-workgroups2-guan-li-emacs-de-session/" type="text/html">
+<!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="posts/recent-status/" type="text/html">
 </head>
 <body>
 <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
@@ -68,18 +68,18 @@
     
         
     <div class="postindex">
-            <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/shi-yong-workgroups2-guan-li-emacs-de-session/" class="u-url">Manage workgroups in emacs via workgroups2</a></h1>
+            <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/recent-status/" class="u-url">Recent status in July of 2020</a></h1>
                 <div class="metadata">
                     <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
-                        suzumiya haruhi
+                        suzumiya natsuhi
                     </span></p>
             <p class="dateline">
-            <a href="posts/shi-yong-workgroups2-guan-li-emacs-de-session/" rel="bookmark">
-            <time class="published dt-published" datetime="2020-07-09T10:08:16+08:00" itemprop="datePublished" title="2020-07-09 10:08">2020-07-09 10:08</time></a>
+            <a href="posts/recent-status/" rel="bookmark">
+            <time class="published dt-published" datetime="2020-07-28T11:06:55+08:00" itemprop="datePublished" title="2020-07-28 11:06">2020-07-28 11:06</time></a>
             </p>
                         <p class="commentline">
         
-    <a href="posts/shi-yong-workgroups2-guan-li-emacs-de-session/#disqus_thread" data-disqus-identifier="cache/posts/shi-yong-workgroups2-guan-li-emacs-de-session.html">Comments</a>
+    <a href="posts/recent-status/#disqus_thread" data-disqus-identifier="cache/posts/recent-status.html">Comments</a>
 
 
                 </p>
@@ -87,373 +87,20 @@
             </header><div class="e-content entry-content">
                     <div>
 <p>
-<b>Workgroups2<sup><a id="fnr.1" class="footref" href="posts/shi-yong-workgroups2-guan-li-emacs-de-session/#fn.1">1</a></sup></b> 
-Workgroups2是一款保存和恢复用户工作空间的一款emacs插件。
+Recently I learn a word “If I have seen further, it is by standing on the shoulders of giants.”, which is from Sir Isaac Newton. Though I heard it long time ago, I learn new from it when reading it again now. 
 </p>
 
 <p>
-<b>sessions和workgroups</b> 
-这里的session指的是emacs里面的buffer的一个集合，甚至buffer的指针的状态即位置。workgroups与用户的工作相关，指的是用户指定的显示buffer和buffer的状态集合。
+Recently days maybe darkest days in my life that has passed. Fear, unknown, and extremely wandering and not focusing on urgent stuffs made me unhappy. And I had time to chew and  classify these feelings, and most of which were just not willing to step into unknown fields. It’s critical for positive attitude and deeds in life and many things. 
 </p>
 
 <p>
-<b>如何管理：group的创建/修改/删除</b>
-</p>
-
-<ol class="org-ol">
-<li>
-<code>wg-create-group</code> 用于创建一个group（比如cpp-dev），可以用 <code>wg-rename-group</code> 修改group的名字，然后使用 <code>wg-save-session</code> 将当前的group的状态保存入文件中（比如 <code>~/.emacs_workgroups</code> ）</li>
-<li>
-<code>wg-rename-group</code> 用于修改group的名字，然后用 <code>wg-save-session</code> 保存。同时如果想保存指针（cursor）在另一个位置的状态，需要重新用 <code>wg-save-session</code> 保存。</li>
-<li>
-<code>wg-kill-workgroup</code> 用于删除打开的group，同时完成后用 <code>wg-save-session</code> 保存。</li>
-</ol>
-<p>
-<b>意义</b>
-</p>
-
-<ol class="org-ol">
-<li>在多个workgroups之间切换将会变得很容易。当然可以使用 <code>C-x b</code> 来切换buffer，但是使用了workgroups后一次切换到你所指定的所需buffer集合，将是一个极大的效率提升。</li>
-<li>保存共享同步workgroups。这个是一个次要的提升，由于在不同环境中的文件可能不同，buffer是否能够正常打开并不确定。如果依赖同步来同步整个环境的话我感觉没有必要，毕竟在对应的环境中做什么事情效率更高一些。</li>
-</ol>
-<div id="footnotes">
-<h3 class="footnotes">Footnotes: </h3>
-<div id="text-footnotes">
-
-<div class="footdef">
-<sup><a id="fn.1" class="footnum" href="posts/shi-yong-workgroups2-guan-li-emacs-de-session/#fnr.1">1</a></sup><div class="footpara"><p class="footpara">
-<a href="https://github.com/pashinin/workgroups2">Workgroups2的Github主页</a></p></div>
-</div>
-
-
-</div>
-</div>
-</div>
-                </div>
-            </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/makefileemacs/" class="u-url">makefile</a></h1>
-                <div class="metadata">
-                    <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
-                        suzumiya haruhi
-                    </span></p>
-            <p class="dateline">
-            <a href="posts/makefileemacs/" rel="bookmark">
-            <time class="published dt-published" datetime="2020-07-09T03:45:25+08:00" itemprop="datePublished" title="2020-07-09 03:45">2020-07-09 03:45</time></a>
-            </p>
-                        <p class="commentline">
-        
-    <a href="posts/makefileemacs/#disqus_thread" data-disqus-identifier="cache/posts/makefileemacs.html">Comments</a>
-
-
-                </p>
-</div>
-            </header><div class="e-content entry-content">
-                    <div>
-<p>
-<b>预警</b>
-本文可能没有重点，我觉得博客改个更日常的标题更为合适:)
+I hope I would have handled it better, though there is no chance for me to handle them once again. When next case, I hope I can do the same as “learn war in war”.
 </p>
 
 <p>
-<b>makefile</b>
-很多年前自学了makefile，但是当时特别想搞懂但后来的印象还是没搞懂。后来就不了了之也免不了心心念念。
+λλλλλ
 </p>
-
-<p>
-<b>emacs</b>
-提到emacs的原因是整个过程都是用emacs来做的，虽然很多人说emacs始终是一个编辑器。但是对于我来说emacs可能是一种态度：对于自己不了解的东西的好奇心吧。也是现阶段我最喜欢的态度了。从开始用emacs到现在也快两年的时间了，也收获不少。
-</p>
-
-<p>
-<b>english</b>
-想这些旅程也离不开英语的陪伴，曾经也吃过英语的亏，英语也是国际化所必须要掌握的一个工具。
-</p>
-</div>
-                </div>
-            </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/leetcode41-first-missing-positive/" class="u-url">Leetcode41 First Missing Positive</a></h1>
-                <div class="metadata">
-                    <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
-                        suzumiya haruhi
-                    </span></p>
-            <p class="dateline">
-            <a href="posts/leetcode41-first-missing-positive/" rel="bookmark">
-            <time class="published dt-published" datetime="2020-07-05T01:36:01+08:00" itemprop="datePublished" title="2020-07-05 01:36">2020-07-05 01:36</time></a>
-            </p>
-                        <p class="commentline">
-        
-    <a href="posts/leetcode41-first-missing-positive/#disqus_thread" data-disqus-identifier="cache/posts/leetcode41-first-missing-positive.html">Comments</a>
-
-
-                </p>
-</div>
-            </header><div class="e-content entry-content">
-                    <div>
-<p>
-Given an unsorted integer array, find the smallest missing positive integer.
-</p>
-
-<p>
-<b>Example 1</b>:
-Input: [1,2,0]
-Output: 3
-</p>
-
-<p>
-<b>Example 2</b>:
-Input: [3,4,-1,1]
-Output: 2
-</p>
-
-<p>
-<b>Example 3</b>:
-Input: [7,8,9,11,12]
-Output: 1
-</p>
-
-<p>
-<b>Note</b>:
-Your algorithm should run in O(n) time and uses constant extra space.
-</p>
-
-<p>
-<b>思路:</b>
-</p>
-
-<ol class="org-ol">
-<li>排序占用O(nlogn)的时间复杂度;</li>
-<li>丢失意味着需要一定程度的排序,才能知道哪个是丢失的;</li>
-<li>最小的正数,说明负数和0不参与排序;</li>
-<li>证明复杂度为O(n). 因为每次交换都将一个正数nums[k]放到nums中nums[k]-1的位置上,因此复杂度是O(n).</li>
-</ol>
-<div class="org-src-container">
-
-<pre><code class="lang-cpp">class Solution {
-public:
-    int firstMissingPositive(vector&lt;int&gt;&amp; nums) {
-        int len = nums.size(), tmp;
-
-        for(int i = 0; i &lt; len; i++){
-            while(nums[i] &gt;= 1 &amp;&amp; nums[i] &lt;= len &amp;&amp; nums[i]!=i+1 &amp;&amp; nums[nums[i]-1]!=nums[i]){
-                tmp = nums[nums[i]-1];
-                nums[nums[i]-1]=nums[i];
-                nums[i] = tmp;
-            }
-        }
-
-        for(int i = 0; i &lt; len; i++){
-            if(nums[i]!=i+1){
-                return i+1;
-            }
-        }
-        return len+1;
-    }
-};
-</code></pre>
-
-</div>
-</div>
-                </div>
-            </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/bu-ma/" class="u-url">Leetcode405 Convert a Number to Hexadecimal</a></h1>
-                <div class="metadata">
-                    <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
-                        suzumiya haruhi
-                    </span></p>
-            <p class="dateline">
-            <a href="posts/bu-ma/" rel="bookmark">
-            <time class="published dt-published" datetime="2020-06-22T09:14:03+08:00" itemprop="datePublished" title="2020-06-22 09:14">2020-06-22 09:14</time></a>
-            </p>
-                        <p class="commentline">
-        
-    <a href="posts/bu-ma/#disqus_thread" data-disqus-identifier="cache/posts/bu-ma.html">Comments</a>
-
-
-                </p>
-</div>
-            </header><div class="e-content entry-content">
-                    <div>
-<p>
-这道题要将有符号数转化为16进制表示法. 有符号整数在计算机内是补码表, 所以将数字的补码转化为16进制即可.
-</p>
-
-<p>
-<b>原码</b>
-</p>
-
-<p>
-在指定数字范围和位数上限后, 原码最高位为符号, 其他位为数字的绝对值二进制表示. 例如: 5为00000000, -4为10000100
-</p>
-
-<p>
-<b>反码</b>
-</p>
-
-<p>
-反码: 原码的进一步表示. 但是对于0有两种表示方法(假设位数上限为8位, 00000000和10000000), 且对于负数的运算并不直观: 例如(-5)+1=-4, 10000101+1=10000100在位运算上不直观(此处的直观是指计算机的位运算)
-</p>
-
-<p>
-<b>补码</b>
-</p>
-
-<p>
-补码: 补码的操作看起来复杂(反码除符号位取反,然后加1), 但是最终的目的还是解决掉反码表示的两个问题(0的两个表示和负数的运算直观性). 其实我觉得换我来设计也是一样的.
-</p>
-
-<p>
-8位能表示 2<sup>8</sup> 个数, 如果对于无符号(正数)可以表示从0~255这256个数(可能是0~255, 也可以是2~257, 3~258等等), 而对于有符号整数, 同样可以表示256个. 假设我们从0~255中把128~255这128个数的位置腾出来给负数, 那可以表示-128~-1这128个数. 整体情况就是用了8位表示-128~127这256个数. 之前的两个问题已经解决了一个, 那就是0的重合问题, 现在要解决的就是运算的直观性. 其实一眼就看出来了: 在表示的128~255中本来就有运算直观性, 现在要做的就是把 -128~-1 放到 100000000~11111111 这128个位置中而已. 然后刚好11111111代表-1, 11111111(-1)+1=00000000(0), 刚好合适. 其实这里写了很多, 不如公式里面写的更为清楚. 
-</p>
-
-<p>
-<b>8位求补码</b>
-</p>
-
-<p>
-把原码(128/10000000~255/11111111)映射为(-128/10000000~-1/11111111), 其实就是数字-256: 128 + (-256) = -128, 255 + (-256) = -1, 因为128和255的原码我们很容易得到,而后面负数就是原来我们需要转换的负数.
-所以对于负数而言, 求原码的稍微转换一下: 原码数 + (-256) = 原数.
-</p>
-
-<p>
-那么我们来求一个-24的原码: -2(原数) + 256 = 254(原码数), 254是11111110, 所以-2的补码就是11111110
-我觉得中间反码的概念对于设计过程理解而言可能有用, 但是对于转码就直接用公式就可以了: 当原数为正,补码就是原码; 当原数为负, 补码就是原数+256后的原码.(这里以8位为例子, int就是32位)  
-</p>
-
-<p>
-<b>Solution</b>
-</p>
-
-<div class="org-src-container">
-
-<pre><code class="lang-cpp">class Solution {
-public:
-    string toHex(int num) {
-        string ret = "";
-        unsigned int n;
-        if(num &lt; 0)n =  ~(abs(num))+1;
-        else if(num == 0)return "0";
-        else n = num;
-
-        while(n){
-            ret.insert(0,1,(n%16 &gt;= 10)?(n%16 - 10 + 'a'):(n%16 + '0'));
-            n /= 16;
-        }
-
-        return ret;
-    }
-};
-</code></pre>
-
-</div>
-
-<p>
-其中 <code>n = ~(abs(num)) + 1</code> 就是求反码的过程. 之前最高位8位时已经得到反码公式: <code>原数 + 2^8  = 反码数</code> 可以直接转化为反码. 那么在考虑到类型转换的原因, 不能让运算过程中发生隐性的类型转换(256不能用八位表示, 且不能用long或者其他高位数来参与运算), 那么原来的过程可以转化为 <code>原数 + 255 + 1 = 反码数</code>, 同时考虑到原数是负数, 进一步转化为 <code>255 - (-原数) + 1 = 反码数</code>, 现在把 <code>255 - (-原数)</code> 单独拿出来就是 <code>255 - abs(原数)</code>, 用求反符号代替 <code>255 -</code> , 原式最终转化为 <code>反码数 = ~(abs(原数)) + 1</code>. 
-</p>
-
-<p>
-同样在int为32位的情况中, 求反码的公式为: <code>反码数 = ~abs(原数) + 1</code> .
-</p>
-</div>
-                </div>
-            </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/nikola-first-time/" class="u-url">Nikola First Time</a></h1>
-                <div class="metadata">
-                    <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
-                        suzumiya haruhi
-                    </span></p>
-            <p class="dateline">
-            <a href="posts/nikola-first-time/" rel="bookmark">
-            <time class="published dt-published" datetime="2020-05-23T02:51:23+08:00" itemprop="datePublished" title="2020-05-23 02:51">2020-05-23 02:51</time></a>
-            </p>
-                        <p class="commentline">
-        
-    <a href="posts/nikola-first-time/#disqus_thread" data-disqus-identifier="cache/posts/nikola-first-time.html">Comments</a>
-
-
-                </p>
-</div>
-            </header><div class="e-content entry-content">
-                    <div>
-<p>
-最近觉得自己是时候开始写博客了，然后就在自己用的openSUSE上用<a href="https://snapcraft.io/search?q=Nikola">snap安装nikola</a>，然后用Chen Bin的<a href="https://github.com/redguardtoo/emacs.d">Emacs配置</a>。最后照着<a href="https://github.com/redguardtoo/org2nikola">org2nikola</a>说明稍微配置了一下：大纲导出即发布，以后就可以用org来写博客了。
-</p>
-
-<p>
-<i>“如果无法决定的话，试着丢掉一些东西”</i>
-是不久前看蔡康永听到的，是「背水一战」的一种温和的形式。刚听到这句话我就打开手机把浏览器书签里的超过100估计有200多以前都有点不想删的书签都删除，希望享受着这种丢弃带给我的坚定感，但却事与愿违。
-</p>
-</div>
-                </div>
-            </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/blog-title/" class="u-url">blog-title</a></h1>
-                <div class="metadata">
-                    <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
-                        suzumiya haruhi
-                    </span></p>
-            <p class="dateline">
-            <a href="posts/blog-title/" rel="bookmark">
-            <time class="published dt-published" datetime="2020-05-23T02:47:42+08:00" itemprop="datePublished" title="2020-05-23 02:47">2020-05-23 02:47</time></a>
-            </p>
-                        <p class="commentline">
-        
-    <a href="posts/blog-title/#disqus_thread" data-disqus-identifier="cache/posts/blog-title.html">Comments</a>
-
-
-                </p>
-</div>
-            </header><div class="e-content entry-content">
-                    <div>
-<p>
-Some content here
-</p>
-
-<p>
-Test <b>bolded</b> test <i>italic text</i> <code>verbatim.key[0].hello.value</code>
-</p>
-
-<p>
-This is <span class="underline">underlined text</span>.
-</p>
-
-<p>
-This is some code,
-</p>
-
-<div class="org-src-container">
-
-<pre><code class="lang-javascript">console.log('object=', object);
-</code></pre>
-
-</div>
-
-<p>
-This is <a href="http://www.google.com">google link</a>.
-</p>
-
-<p>
-Footnote1 <sup><a id="fnr.1" class="footref" href="posts/blog-title/#fn.1">1</a></sup> and footnote2 <sup><a id="fnr.2" class="footref" href="posts/blog-title/#fn.2">2</a></sup> to explain something.
-</p>
-
-<div id="footnotes">
-<h3 class="footnotes">Footnotes: </h3>
-<div id="text-footnotes">
-
-<div class="footdef">
-<sup><a id="fn.1" class="footnum" href="posts/blog-title/#fnr.1">1</a></sup><div class="footpara"><p class="footpara">
-The link is: <a href="http://orgmode.org">http://orgmode.org</a>
-</p></div>
-</div>
-
-<div class="footdef">
-<sup><a id="fn.2" class="footnum" href="posts/blog-title/#fnr.2">2</a></sup><div class="footpara">
-<p class="footpara">
-Just another footnote
-</p>
-
-<pre class="example">
-here is some example
-</pre>
-</div>
-</div>
-
-
-</div>
-</div>
 </div>
                 </div>
             </article>
@@ -463,7 +110,7 @@ here is some example
     
         
        <script>var disqus_shortname="fpghwd-github-io";(function(){var a=document.createElement("script");a.async=true;a.src="https://"+disqus_shortname+".disqus.com/count.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(a)}());</script><!--End of body content--><footer id="footer">
-            Contents © 2020         <a href="mailto:ggwdwhu@gmail.com">suzumiya haruhi</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
+            Contents © 2020         <a href="mailto:ggwdwhu@gmail.com">suzumiya natsuhi</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
             
             
         </footer>
