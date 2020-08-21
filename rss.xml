@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Dichotomy</title><link>https://fpghwd.github.io/</link><description>To iterate is human, to recurse, divine</description><atom:link href="https://fpghwd.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;suzumiya natsuhi&lt;/a&gt; </copyright><lastBuildDate>Fri, 21 Aug 2020 03:16:26 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Recent status in July of 2020</title><link>https://fpghwd.github.io/posts/recent-status/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Dichotomy</title><link>https://fpghwd.github.io/</link><description>To iterate is human, to recurse, divine</description><atom:link href="https://fpghwd.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;suzumiya natsuhi&lt;/a&gt; </copyright><lastBuildDate>Fri, 21 Aug 2020 03:18:02 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Recent status in July of 2020</title><link>https://fpghwd.github.io/posts/recent-status/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
 Recently I learn a word “If I have seen further, it is by standing on the shoulders of giants.”, which is from Sir Isaac Newton. Though I heard it long time ago, I learn new from it when reading it again now. 
 &lt;/p&gt;
 
@@ -234,4 +234,53 @@ public:
 
 &lt;p&gt;
 同样在 int 为 32 位的情况中, 求反码的公式为: &lt;code&gt;反码数 = ~abs(原数) + 1&lt;/code&gt; .
-&lt;/p&gt;&lt;/div&gt;</description><category>leetcode</category><guid>https://fpghwd.github.io/posts/bu-ma/</guid><pubDate>Mon, 22 Jun 2020 01:14:03 GMT</pubDate></item></channel></rss>
+&lt;/p&gt;&lt;/div&gt;</description><category>leetcode</category><guid>https://fpghwd.github.io/posts/bu-ma/</guid><pubDate>Mon, 22 Jun 2020 01:14:03 GMT</pubDate></item><item><title>Writing template for org2nikola</title><link>https://fpghwd.github.io/posts/blog-title/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
+Some content here
+&lt;/p&gt;
+
+&lt;p&gt;
+Test &lt;b&gt;bolded&lt;/b&gt; test &lt;i&gt;italic text&lt;/i&gt; &lt;code&gt;verbatim.key[0].hello.value&lt;/code&gt;
+&lt;/p&gt;
+
+&lt;p&gt;
+This is &lt;span class="underline"&gt;underlined text&lt;/span&gt;.
+&lt;/p&gt;
+
+&lt;p&gt;
+This is some code,
+&lt;/p&gt;
+
+&lt;div class="org-src-container"&gt;
+
+&lt;pre&gt;&lt;code class="lang-javascript"&gt;console.log('object=', object);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;/div&gt;
+
+&lt;p&gt;
+This is &lt;a href="http://www.google.com"&gt;google link&lt;/a&gt;.
+&lt;/p&gt;
+
+&lt;p&gt;
+Footnote1 &lt;sup&gt;&lt;a id="fnr.1" class="footref" href="https://fpghwd.github.io/posts/blog-title/#fn.1"&gt;1&lt;/a&gt;&lt;/sup&gt; and footnote2 &lt;sup&gt;&lt;a id="fnr.2" class="footref" href="https://fpghwd.github.io/posts/blog-title/#fn.2"&gt;2&lt;/a&gt;&lt;/sup&gt; to explain something.
+&lt;/p&gt;
+
+&lt;div id="footnotes"&gt;
+&lt;h3 class="footnotes"&gt;Footnotes: &lt;/h3&gt;
+&lt;div id="text-footnotes"&gt;
+
+&lt;div class="footdef"&gt;&lt;sup&gt;&lt;a id="fn.1" class="footnum" href="https://fpghwd.github.io/posts/blog-title/#fnr.1"&gt;1&lt;/a&gt;&lt;/sup&gt; &lt;div class="footpara"&gt;&lt;p class="footpara"&gt;
+The link is: &lt;a href="http://orgmode.org"&gt;http://orgmode.org&lt;/a&gt;
+&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class="footdef"&gt;&lt;sup&gt;&lt;a id="fn.2" class="footnum" href="https://fpghwd.github.io/posts/blog-title/#fnr.2"&gt;2&lt;/a&gt;&lt;/sup&gt; &lt;div class="footpara"&gt;&lt;p class="footpara"&gt;
+Just another footnote
+&lt;/p&gt;
+
+&lt;pre class="example"&gt;
+here is some example
+&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+
+&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;</description><guid>https://fpghwd.github.io/posts/blog-title/</guid><pubDate>Fri, 22 May 2020 18:47:42 GMT</pubDate></item></channel></rss>
