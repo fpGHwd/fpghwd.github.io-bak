@@ -29,10 +29,10 @@ Your algorithm should run in O(n) time and uses constant extra space.
 <b>思路:</b>
 </p>
 <ol class="org-ol">
-<li>排序占用O(nlogn)的时间复杂度;</li>
+<li>排序占用 O(nlogn)的时间复杂度;</li>
 <li>丢失意味着需要一定程度的排序,才能知道哪个是丢失的;</li>
-<li>最小的正数,说明负数和0不参与排序;</li>
-<li>证明复杂度为O(n). 因为每次交换都将一个正数nums[k]放到nums中nums[k]-1的位置上,因此复杂度是O(n).</li>
+<li>最小的正数,说明负数和 0 不参与排序;</li>
+<li>证明复杂度为 O(n). 因为每次交换都将一个正数 nums[k]放到 nums 中 nums[k]-1 的位置上,因此复杂度是 O(n).</li>
 </ol>
 
 <div class="org-src-container">
