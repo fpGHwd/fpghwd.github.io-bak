@@ -7,7 +7,7 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
   <loc>https://fpghwd.github.io/</loc>
-  <lastmod>2020-08-20T12:37:00Z</lastmod>
+  <lastmod>2020-08-25T03:04:00Z</lastmod>
  </url>
  <url>
   <loc>https://fpghwd.github.io/2012/</loc>
@@ -35,7 +35,11 @@
  </url>
  <url>
   <loc>https://fpghwd.github.io/categories/</loc>
-  <lastmod>2020-08-25T02:58:00Z</lastmod>
+  <lastmod>2020-08-25T03:04:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://fpghwd.github.io/categories/attach/</loc>
+  <lastmod>2020-08-25T03:04:00Z</lastmod>
  </url>
  <url>
   <loc>https://fpghwd.github.io/categories/blog/</loc>
