@@ -3,22 +3,31 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Recent status in July of 2020 | Dichotomy</title>
+<title>No news is good news | Dichotomy</title>
 <link href="../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
 <meta name="theme-color" content="#5670d4">
 <meta name="generator" content="Nikola (getnikola.com)">
 <link rel="alternate" type="application/rss+xml" title="RSS" hreflang="en" href="../../rss.xml">
-<link rel="canonical" href="https://fpghwd.github.io/posts/recent-status/">
+<link rel="canonical" href="https://fpghwd.github.io/posts/no-news-is-good-news/">
 <!--[if lt IE 9]><script src="../../assets/js/html5.js"></script><![endif]--><meta name="author" content="suzumiya natsuhi">
-<link rel="prev" href="../how-opensuse-rollback-when-using-brtfs/" title="How openSUSE rollbacks when using brtfs" type="text/html">
-<link rel="next" href="../no-news-is-good-news/" title="No news is good news" type="text/html">
+<link rel="prev" href="../recent-status/" title="Recent status in July of 2020" type="text/html">
 <meta property="og:site_name" content="Dichotomy">
-<meta property="og:title" content="Recent status in July of 2020">
-<meta property="og:url" content="https://fpghwd.github.io/posts/recent-status/">
-<meta property="og:description" content="Recently I learn a word “If I have seen further, it is by standing on the shoulders of giants.”, which is from Sir Isaac Newton. Though I heard it long time ago, I learn new from it when reading it ag">
+<meta property="og:title" content="No news is good news">
+<meta property="og:url" content="https://fpghwd.github.io/posts/no-news-is-good-news/">
+<meta property="og:description" content="今天看书看到了在如何在应用程序中加载/链接共享库，书中以高性能 Web 服务器的例子来说明，对于一个繁忙的网站，运行时加载和链接共享库对于服务质量的提升意义重大。
+
+
+
+加载和链接共享库用到的是 dlfcn.h 中的 dlopen/dlsym/dlclose 的三个函数。还有最后一个检查前面三个调用情况的函数： dlerror ，声明为：
+
+
+
+
+const char *dlerror(void)">
 <meta property="og:type" content="article">
-<meta property="article:published_time" content="2020-07-28T11:06:55+08:00">
+<meta property="article:published_time" content="2020-08-25T02:52:31+08:00">
+<meta property="article:tag" content="csapp">
 </head>
 <body>
 <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
@@ -76,7 +85,7 @@
         
         
         
-<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">Recent status in July of 2020</a></h1>
+<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">No news is good news</a></h1>
 
         <div class="metadata">
             <p class="byline author vcard p-author h-card"><span class="byline-name fn p-name" itemprop="author">
@@ -84,11 +93,11 @@
             </span></p>
             <p class="dateline">
             <a href="." rel="bookmark">
-            <time class="published dt-published" datetime="2020-07-28T11:06:55+08:00" itemprop="datePublished" title="2020-07-28 11:06">2020-07-28 11:06</time></a>
+            <time class="published dt-published" datetime="2020-08-25T02:52:31+08:00" itemprop="datePublished" title="2020-08-25 02:52">2020-08-25 02:52</time></a>
             </p>
                 <p class="commentline">
         
-    <a href="#disqus_thread" data-disqus-identifier="cache/posts/recent-status.html">Comments</a>
+    <a href="#disqus_thread" data-disqus-identifier="cache/posts/no-news-is-good-news.html">Comments</a>
 
 
             
@@ -101,28 +110,35 @@
     </header><div class="e-content entry-content" itemprop="articleBody text">
     <div>
 <p>
-Recently I learn a word “If I have seen further, it is by standing on the shoulders of giants.”, which is from Sir Isaac Newton. Though I heard it long time ago, I learn new from it when reading it again now. 
+今天看书看到了在如何在应用程序中加载/链接共享库，书中以高性能 Web 服务器的例子来说明，对于一个繁忙的网站，运行时加载和链接共享库对于服务质量的提升意义重大。
 </p>
 
 <p>
-Recently days maybe darkest days in my life that has passed. Fear, unknown, and extremely wandering and not focusing on urgent stuffs made me unhappy. And I had time to chew and  classify these feelings, and most of which were just not willing to step into unknown fields. It’s critical for positive attitude and deeds in life and many things. 
+加载和链接共享库用到的是 <code>dlfcn.h</code> 中的 <code>dlopen/dlsym/dlclose</code> 的三个函数。还有最后一个检查前面三个调用情况的函数： <code>dlerror</code> ，声明为：
+</p>
+
+<div class="org-src-container">
+
+<pre><code class="lang-cpp">const char *dlerror(void);
+</code></pre>
+
+</div>
+
+<p>
+如果调用前三个函数没有发生错误，则返回NULL。我想起了以前看过的K&amp;R的函数返回值如果为0则是运行成功，当时还特意想着为什么这么来设计，还学到了一句话“没有消息就是好消息”。
 </p>
 
 <p>
-I hope I would have handled it better, though there is no chance for me to handle them once again. When next case, I hope I can do the same as “learn war in war”.
-</p>
-
-<p>
-λλλλλλ
+当然硬要说：“成功都是一样的，失败各有各的不同的原因”也是没有问题的。我觉得这说明从失败中获取原因是有价值的，而从成功中找原因应该没有什么大的价值吧。怎么回事，好像顺手黑了成功学一把。
 </p>
 </div>
     </div>
-    <aside class="postpromonav"><nav><ul class="pager hidden-print">
+    <aside class="postpromonav"><nav><ul itemprop="keywords" class="tags">
+<li><a class="tag p-category" href="../../categories/csapp/" rel="tag">csapp</a></li>
+        </ul>
+<ul class="pager hidden-print">
 <li class="previous">
-                <a href="../how-opensuse-rollback-when-using-brtfs/" rel="prev" title="How openSUSE rollbacks when using brtfs">Previous post</a>
-            </li>
-            <li class="next">
-                <a href="../no-news-is-good-news/" rel="next" title="No news is good news">Next post</a>
+                <a href="../recent-status/" rel="prev" title="Recent status in July of 2020">Previous post</a>
             </li>
         </ul></nav></aside><section class="comments hidden-print"><h2>Comments</h2>
         
@@ -130,9 +146,9 @@ I hope I would have handled it better, though there is no chance for me to handl
         <div id="disqus_thread"></div>
         <script>
         var disqus_shortname ="fpghwd-github-io",
-            disqus_url="https://fpghwd.github.io/posts/recent-status/",
-        disqus_title="Recent status in July of 2020",
-        disqus_identifier="cache/posts/recent-status.html",
+            disqus_url="https://fpghwd.github.io/posts/no-news-is-good-news/",
+        disqus_title="No news is good news",
+        disqus_identifier="cache/posts/no-news-is-good-news.html",
         disqus_config = function () {
             this.language = "en";
         };
