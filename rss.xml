@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Dichotomy</title><link>https://fpghwd.github.io/</link><description>To iterate is human, to recurse, divine</description><atom:link href="https://fpghwd.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;suzumiya natsuhi&lt;/a&gt; </copyright><lastBuildDate>Tue, 25 Aug 2020 03:29:10 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>No news is good news</title><link>https://fpghwd.github.io/posts/no-news-is-good-news/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Dichotomy</title><link>https://fpghwd.github.io/</link><description>To iterate is human, to recurse, divine</description><atom:link href="https://fpghwd.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;suzumiya natsuhi&lt;/a&gt; </copyright><lastBuildDate>Tue, 25 Aug 2020 06:50:03 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>No news is good news</title><link>https://fpghwd.github.io/posts/no-news-is-good-news/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
 今天看书看到了在如何在应用程序中加载/链接共享库，书中以高性能 Web 服务器的例子来说明，对于一个繁忙的网站，运行时加载和链接共享库对于服务质量的提升意义重大。
 &lt;/p&gt;
 
@@ -14,9 +14,15 @@
 
 &lt;/div&gt;
 
-&lt;p&gt;
-&lt;a href="https://fpghwd.github.io/posts/no-news-is-good-news/_20200825_110429screenshot.png"&gt;_20200825_110429screenshot.png&lt;/a&gt;
+&lt;div class="figure"&gt;
+&lt;p&gt;&lt;img src="file:///home/wd/Dropbox/text/org/.attach/44/fb0c61-59f7-4c20-b6a3-9670b19c059b/_20200825_110429screenshot.png" alt="_20200825_110429screenshot.png"&gt;
 &lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class="figure"&gt;
+&lt;p&gt;&lt;img src="file:///home/wd/Dropbox/text/org/.attach/44/fb0c61-59f7-4c20-b6a3-9670b19c059b/_20200825_144945screenshot.png" alt="_20200825_144945screenshot.png"&gt;
+&lt;/p&gt;
+&lt;/div&gt;
 
 &lt;p&gt;
 如果调用前三个函数没有发生错误，则返回NULL。我想起了以前看过的K&amp;amp;R的函数返回值如果为0则是运行成功，当时还特意想着为什么这么来设计，还学到了标题的那句话“没有消息就是好消息”。
