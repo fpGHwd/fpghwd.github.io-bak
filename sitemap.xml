@@ -7,7 +7,7 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
   <loc>https://fpghwd.github.io/</loc>
-  <lastmod>2020-08-25T03:04:00Z</lastmod>
+  <lastmod>2020-09-09T02:04:00Z</lastmod>
  </url>
  <url>
   <loc>https://fpghwd.github.io/2012/</loc>
@@ -19,7 +19,7 @@
  </url>
  <url>
   <loc>https://fpghwd.github.io/archive.html</loc>
-  <lastmod>2020-09-03T03:06:00Z</lastmod>
+  <lastmod>2020-09-09T02:04:00Z</lastmod>
  </url>
  <url>
   <loc>https://fpghwd.github.io/authors/</loc>
@@ -96,6 +96,10 @@
  <url>
   <loc>https://fpghwd.github.io/galleries/demo/</loc>
   <lastmod>2020-06-22T11:41:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://fpghwd.github.io/index-1.html</loc>
+  <lastmod>2020-09-09T02:04:00Z</lastmod>
  </url>
  <url>
   <loc>https://fpghwd.github.io/listings/</loc>
@@ -176,6 +180,10 @@
  <url>
   <loc>https://fpghwd.github.io/posts/how-opensuse-rollback-when-using-brtfs/</loc>
   <lastmod>2020-07-13T15:17:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://fpghwd.github.io/posts/ignorant-and-tolerant/</loc>
+  <lastmod>2020-09-09T02:04:00Z</lastmod>
  </url>
  <url>
   <loc>https://fpghwd.github.io/posts/leetcode41-first-missing-positive/</loc>
