@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Dichotomy</title><link>https://fpghwd.github.io/</link><description>To iterate is human, to recurse, divine</description><atom:link href="https://fpghwd.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;suzumiya natsuhi&lt;/a&gt; </copyright><lastBuildDate>Wed, 09 Sep 2020 02:06:58 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Ignorant and tolerant</title><link>https://fpghwd.github.io/posts/ignorant-and-tolerant/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Dichotomy</title><link>https://fpghwd.github.io/</link><description>To iterate is human, to recurse, divine</description><atom:link href="https://fpghwd.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;suzumiya natsuhi&lt;/a&gt; </copyright><lastBuildDate>Wed, 09 Sep 2020 03:50:13 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Ignorant and tolerant</title><link>https://fpghwd.github.io/posts/ignorant-and-tolerant/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
 如果把宽容理解成行为的话，那么有两个和这种行为相关的 无知相关的宽容 和 尊重相关的宽容。
 &lt;/p&gt;
 
@@ -174,7 +174,7 @@ Workgroups2 是一款保存和恢复用户工作空间的一款 emacs 插件。
 
 
 &lt;/div&gt;
-&lt;/div&gt;&lt;/div&gt;</description><category>emacs</category><category>workgroups2</category><guid>https://fpghwd.github.io/posts/shi-yong-workgroups2-guan-li-emacs-de-session/</guid><pubDate>Thu, 09 Jul 2020 02:08:16 GMT</pubDate></item><item><title>makefile</title><link>https://fpghwd.github.io/posts/makefileemacs/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
+&lt;/div&gt;&lt;/div&gt;</description><category>emacs</category><category>workgroups2</category><guid>https://fpghwd.github.io/posts/shi-yong-workgroups2-guan-li-emacs-de-session/</guid><pubDate>Thu, 09 Jul 2020 02:08:16 GMT</pubDate></item><item><title>Makefile</title><link>https://fpghwd.github.io/posts/makefileemacs/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
 &lt;b&gt;预警&lt;/b&gt;
 本文可能没有重点，我觉得博客改个更日常的标题更为合适:)
 &lt;/p&gt;
