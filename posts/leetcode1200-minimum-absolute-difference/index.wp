@@ -1,0 +1,34 @@
+<p>
+<a href="https://leetcode.com/problems/minimum-absolute-difference/">1200. Minimum Absolute Difference</a>
+</p>
+
+<p>
+<b>Solution</b>
+</p>
+
+<div class="org-src-container">
+
+<pre><code class="lang-C">class Solution {
+public:
+    vector&lt;vector&lt;int&gt;&gt; minimumAbsDifference(vector&lt;int&gt;&amp; arr) {
+        sort(arr.begin(), arr.end());
+        int v = -1;
+        vector&lt;vector&lt;int&gt;&gt; mad;
+        for(int i = 0; i + 1 &lt; arr.size(); i++){
+            vector&lt;int&gt; tmp;
+            if( v == -1 || arr[i+1] - arr[i] &lt; v){
+                mad.clear();
+                mad.push_back(vector&lt;int&gt;{arr[i],arr[i+1]});
+                v = arr[i+1] - arr[i];
+            }else{
+                if(arr[i+1] - arr[i] == v){
+                    mad.push_back(vector&lt;int&gt;{arr[i],arr[i+1]});
+                }
+            }
+        }
+        return mad;
+    }
+};
+</code></pre>
+
+</div>
