@@ -130,11 +130,11 @@ class Solution {
         TreeNode* increasingBST(TreeNode* root) {
             if(root == nullptr)return nullptr;
             TreeNode *first = root, *last = root;
-            increasingBST1(root, first, last);
+            inOrderRecursion(root, first, last);
             return first;
         }
 
-       void increasingBST1(TreeNode* root,TreeNode*&amp; first, TreeNode*&amp; last){
+       void inOrderRecursion(TreeNode* root,TreeNode*&amp; first, TreeNode*&amp; last){
 
            if(root == nullptr)return;
            TreeNode *first1, *last1;
@@ -142,13 +142,13 @@ class Solution {
            if(root-&gt;left){
                last1 = root-&gt;left;
                first = root-&gt;left;
-               increasingBST1(root-&gt;left, first, last1);
+               inOrderRecursion(root-&gt;left, first, last1);
                last1-&gt;left = nullptr; last1-&gt;right=root;
            }
            if(root-&gt;right){
                first1 = root-&gt;right;
                last = root-&gt;right;
-               increasingBST1(root-&gt;right,first1,last);
+               inOrderRecursion(root-&gt;right,first1,last);
                root-&gt;left = nullptr; root-&gt;right = first1;
            }
         }
