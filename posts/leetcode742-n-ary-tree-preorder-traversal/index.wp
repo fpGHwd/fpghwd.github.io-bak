@@ -1,0 +1,32 @@
+<p>
+<a href="https://leetcode.com/problems/n-ary-tree-preorder-traversal">589. N-ary Tree Preorder Traversal</a>
+</p>
+
+<p>
+<b>Solution</b>
+</p>
+
+<div class="org-src-container">
+
+<pre><code class="lang-CPP">
+class Solution {
+    public:
+        vector&lt;int&gt; preorder(Node* root) {
+            if(root==nullptr)return preorder_vi;
+            preorder_vi.push_back(root-&gt;val);
+            for(Node* n:root-&gt;children){
+                preorder(n);
+            }
+            return preorder_vi;
+        }
+    private:
+        vector&lt;int&gt; preorder_vi;
+};
+
+</code></pre>
+
+</div>
+
+<p>
+虽然这个返回有点丑陋，不想写第二个函数，尽管感觉总是怪怪的。
+</p>
