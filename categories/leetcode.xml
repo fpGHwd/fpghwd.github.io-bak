@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Dichotomy (Posts about leetcode)</title><link>https://fpghwd.github.io/</link><description></description><atom:link href="https://fpghwd.github.io/categories/leetcode.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;suzumiya natsuhi&lt;/a&gt; </copyright><lastBuildDate>Mon, 14 Sep 2020 12:12:54 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Leetcode589 N-ary Tree Preorder Traversal</title><link>https://fpghwd.github.io/posts/leetcode742-n-ary-tree-preorder-traversal/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Dichotomy (Posts about leetcode)</title><link>https://fpghwd.github.io/</link><description></description><atom:link href="https://fpghwd.github.io/categories/leetcode.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;suzumiya natsuhi&lt;/a&gt; </copyright><lastBuildDate>Mon, 14 Sep 2020 12:35:25 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Leetcode589 N-ary Tree Preorder Traversal</title><link>https://fpghwd.github.io/posts/leetcode742-n-ary-tree-preorder-traversal/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
 &lt;a href="https://leetcode.com/problems/n-ary-tree-preorder-traversal"&gt;589. N-ary Tree Preorder Traversal&lt;/a&gt;
 &lt;/p&gt;
 
@@ -30,6 +30,14 @@ class Solution {
 
 &lt;p&gt;
 虽然这个返回有点丑陋，不想写第二个函数，尽管感觉总是怪怪的。
+&lt;/p&gt;
+
+&lt;p&gt;
+&lt;b&gt;更新：&lt;/b&gt;
+&lt;/p&gt;
+
+&lt;p&gt;
+奇怪的原因主要还是因为这个 &lt;code&gt;preorder_vi&lt;/code&gt; 的返回操作看起来貌似有点多余，可能以前习惯写的遍历操作都是 &lt;code&gt;void&lt;/code&gt; 返回的，导致有这样的错觉。
 &lt;/p&gt;&lt;/div&gt;</description><category>leetcode</category><guid>https://fpghwd.github.io/posts/leetcode742-n-ary-tree-preorder-traversal/</guid><pubDate>Mon, 14 Sep 2020 04:09:43 GMT</pubDate></item><item><title>Leetcode893 IncreasingOrderSearch Tree</title><link>https://fpghwd.github.io/posts/leetcode893-increasingordersearch-tree/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
 &lt;a href="https://leetcode.com/problems/increasing-order-search-tree/"&gt;893. IncreasingOrderSearch Tree&lt;/a&gt;
 &lt;/p&gt;
