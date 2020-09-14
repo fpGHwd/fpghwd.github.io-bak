@@ -36,5 +36,5 @@ class Solution {
 </p>
 
 <p>
-奇怪的原因主要还是因为这个 <code>preorder_vi</code> 的返回看起来有点多余，可能以前习惯写的遍历都是返回 <code>void</code> ，导致有这样的错觉。
+奇怪主要因为这个 <code>preorder_vi</code> 的返回看起来有点多余，可能以前习惯写的遍历都是返回 <code>void</code> ，导致有这样的错觉。
 </p>
