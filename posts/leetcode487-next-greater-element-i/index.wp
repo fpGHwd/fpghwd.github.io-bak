@@ -1,0 +1,52 @@
+<p>
+<a href="https://leetcode.com/problems/next-greater-element-i/">487. Next Greater Element I</a>
+</p>
+
+<p>
+<b>Solution</b>
+</p>
+
+<div class="org-src-container">
+
+<pre><code class="lang-C">
+#include &lt;cstdio&gt;
+#include &lt;vector&gt;
+#include &lt;iostream&gt;
+#include &lt;unordered_map&gt;
+#include &lt;stack&gt;
+
+using namespace std;
+
+class Solution {
+public:
+    vector&lt;int&gt; nextGreaterElement(vector&lt;int&gt;&amp; nums1, vector&lt;int&gt;&amp; nums2) {
+        unordered_map&lt;int, int&gt; mp;
+        stack&lt;int&gt; s;
+        for(int num : nums2){
+            while(!s.empty() and s.top()&lt;num)
+                mp[s.top()] = num, s.pop(); // , trick
+            s.push(num);
+        }
+
+        for(int &amp;num : nums1)
+            num = (mp.find(num) == mp.end()) ? -1 : mp[num];
+
+        return nums1;
+    }
+};
+
+// Input: nums1 = [2,4], nums2 = [1,2,3,4].
+
+int main(int arch, char **argv){
+
+    vector&lt;int&gt; nums1 = {2,4}, nums2 = {1,2,3,4};
+    auto solution = new Solution();
+    solution-&gt;nextGreaterElement(nums1, nums2);
+
+    return 0;
+}
+
+
+</code></pre>
+
+</div>
