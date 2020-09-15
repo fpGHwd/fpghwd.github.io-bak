@@ -8,7 +8,7 @@
 
 <div class="org-src-container">
 
-<pre><code class="lang-CPP">
+<pre><code class="lang-C">
 class Solution {
     public:
         TreeNode* increasingBST(TreeNode* root) {
