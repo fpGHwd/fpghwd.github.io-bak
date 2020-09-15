@@ -1,5 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Dichotomy (Posts about leetcode)</title><link>https://fpghwd.github.io/</link><description></description><atom:link href="https://fpghwd.github.io/categories/leetcode.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;suzumiya natsuhi&lt;/a&gt; </copyright><lastBuildDate>Tue, 15 Sep 2020 02:51:32 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Leetcode589 N-ary Tree Preorder Traversal</title><link>https://fpghwd.github.io/posts/leetcode742-n-ary-tree-preorder-traversal/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Dichotomy (Posts about leetcode)</title><link>https://fpghwd.github.io/</link><description></description><atom:link href="https://fpghwd.github.io/categories/leetcode.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;suzumiya natsuhi&lt;/a&gt; </copyright><lastBuildDate>Tue, 15 Sep 2020 03:02:11 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Leetcode487 Next Greater Element I</title><link>https://fpghwd.github.io/posts/leetcode487-next-greater-element-i/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
+&lt;a href="https://leetcode.com/problems/next-greater-element-i/"&gt;487. Next Greater Element I&lt;/a&gt;
+&lt;/p&gt;
+
+&lt;p&gt;
+&lt;b&gt;Solution&lt;/b&gt;
+&lt;/p&gt;
+
+&lt;div class="org-src-container"&gt;
+
+&lt;pre&gt;&lt;code class="lang-C"&gt;
+#include &amp;lt;cstdio&amp;gt;
+#include &amp;lt;vector&amp;gt;
+#include &amp;lt;iostream&amp;gt;
+#include &amp;lt;unordered_map&amp;gt;
+#include &amp;lt;stack&amp;gt;
+
+using namespace std;
+
+class Solution {
+public:
+    vector&amp;lt;int&amp;gt; nextGreaterElement(vector&amp;lt;int&amp;gt;&amp;amp; nums1, vector&amp;lt;int&amp;gt;&amp;amp; nums2) {
+        unordered_map&amp;lt;int, int&amp;gt; mp;
+        stack&amp;lt;int&amp;gt; s;
+        for(int num : nums2){
+            while(!s.empty() and s.top()&amp;lt;num)
+                mp[s.top()] = num, s.pop(); // , trick
+            s.push(num);
+        }
+
+        for(int &amp;amp;num : nums1)
+            num = (mp.find(num) == mp.end()) ? -1 : mp[num];
+
+        return nums1;
+    }
+};
+
+// Input: nums1 = [2,4], nums2 = [1,2,3,4].
+
+int main(int arch, char **argv){
+
+    vector&amp;lt;int&amp;gt; nums1 = {2,4}, nums2 = {1,2,3,4};
+    auto solution = new Solution();
+    solution-&amp;gt;nextGreaterElement(nums1, nums2);
+
+    return 0;
+}
+
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;/div&gt;
+
+&lt;p&gt;
+开始没有看太懂题目的意思，解答也看不懂。后来在 gud-gdb 下调试了一下，才懂了一点点。Map 的作用是存 nums2 中每个 element 的后面第一个比自身大的 element, stack 的作用是暂存吧（没有想出来如何更好的表达）。num1 是 nums2 的字集，那么再遍历一遍就可以得到 nums1 中每个元素的在 nums2 中后面的第一个比它大的元素了。
+&lt;/p&gt;&lt;/div&gt;</description><category>leetcode</category><guid>https://fpghwd.github.io/posts/leetcode487-next-greater-element-i/</guid><pubDate>Mon, 14 Sep 2020 18:51:50 GMT</pubDate></item><item><title>Leetcode589 N-ary Tree Preorder Traversal</title><link>https://fpghwd.github.io/posts/leetcode742-n-ary-tree-preorder-traversal/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
 &lt;a href="https://leetcode.com/problems/n-ary-tree-preorder-traversal"&gt;589. N-ary Tree Preorder Traversal&lt;/a&gt;
 &lt;/p&gt;
 
