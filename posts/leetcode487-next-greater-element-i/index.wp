@@ -52,5 +52,5 @@ int main(int arch, char **argv){
 </div>
 
 <p>
-开始没有看太懂题目的意思，解答也看不懂。后来在 gud-gdb 下调试了一下，才懂了一点点。Map 的作用是存 nums2 中每个 element 的后面第一个比自身大的 element, stack 的作用是暂存吧（没有想出来如何更好的表达）。num1 是 nums2 的字集，那么再遍历一遍就可以得到 nums1 中每个元素的在 nums2 中后面的第一个比它大的元素了。
+开始没有看太懂题目的意思，解答也看不懂。后来在 gud-gdb 下调试了一下，才懂了一点点。Map 的作用是存 nums2 中每个 element 的后面第一个比自身大的 element, stack 的作用是暂存正在处理的位置吧（没有想出来如何更好的表达）。num1 是 nums2 的字集，那么再遍历一遍 map 就可以得到 nums1 中每个元素的在 nums2 中后面的第一个比它大的元素了。
 </p>
