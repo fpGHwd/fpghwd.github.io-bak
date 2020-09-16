@@ -1,5 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Dichotomy</title><link>https://fpghwd.github.io/</link><description>To iterate is human, to recurse, divine</description><atom:link href="https://fpghwd.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;suzumiya natsuhi&lt;/a&gt; </copyright><lastBuildDate>Tue, 15 Sep 2020 03:15:52 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Leetcode487 Next Greater Element I</title><link>https://fpghwd.github.io/posts/leetcode487-next-greater-element-i/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Dichotomy</title><link>https://fpghwd.github.io/</link><description>To iterate is human, to recurse, divine</description><atom:link href="https://fpghwd.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;suzumiya natsuhi&lt;/a&gt; </copyright><lastBuildDate>Wed, 16 Sep 2020 04:24:01 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Leetcode606 Construct String from Binary Tree</title><link>https://fpghwd.github.io/posts/leetcode606-construct-string-from-binary-tree/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
+&lt;a href="https://leetcode.com/problems/construct-string-from-binary-tree/"&gt;606. Construct String from Binary Tree&lt;/a&gt;
+&lt;/p&gt;
+
+&lt;p&gt;
+&lt;b&gt;Solution&lt;/b&gt;
+&lt;/p&gt;
+
+&lt;div class="org-src-container"&gt;
+
+&lt;pre&gt;&lt;code class="lang-C"&gt;
+/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
+ * };
+ */
+class Solution {
+    public:
+        string tree2str(TreeNode* t) {
+            if(t == nullptr)return result;
+            result.append(to_string(t-&amp;gt;val));
+            if(t-&amp;gt;left){
+                result.append(1,'(');
+                tree2str(t-&amp;gt;left);
+                result.append(1,')');
+            }else{
+                if(t-&amp;gt;right){
+                    result.append("()");
+                }
+            }
+            if(t-&amp;gt;right){
+                result.append(1,'(');
+                tree2str(t-&amp;gt;right);
+                result.append(1,')');
+            }
+            return result;
+        }
+    private:
+        string result;
+};
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;/div&gt;&lt;/div&gt;</description><category>leetcode</category><guid>https://fpghwd.github.io/posts/leetcode606-construct-string-from-binary-tree/</guid><pubDate>Tue, 15 Sep 2020 20:23:51 GMT</pubDate></item><item><title>Leetcode487 Next Greater Element I</title><link>https://fpghwd.github.io/posts/leetcode487-next-greater-element-i/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
 &lt;a href="https://leetcode.com/problems/next-greater-element-i/"&gt;487. Next Greater Element I&lt;/a&gt;
 &lt;/p&gt;
 
@@ -283,26 +332,4 @@ I hope I would have handled it better, though there is no chance for me to handl
 
 &lt;p&gt;
 λλλλλλ
-&lt;/p&gt;&lt;/div&gt;</description><category>life</category><guid>https://fpghwd.github.io/posts/recent-status/</guid><pubDate>Tue, 28 Jul 2020 03:06:55 GMT</pubDate></item><item><title>How openSUSE rollbacks when using brtfs</title><link>https://fpghwd.github.io/posts/how-opensuse-rollback-when-using-brtfs/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;ul class="org-ul"&gt;
-&lt;li&gt;&lt;b&gt;Brtfs&lt;/b&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;
-Btrfs, an abbreviation for b-tree file system. By default, openSUSE is set up using Btrfs and snapshots for the root partition. Snapshots allow you to easily roll back your system if needed after applying updates, or to back up files. Snapshots can easily be managed with Snapper.
-&lt;/p&gt;
-
-&lt;ul class="org-ul"&gt;
-&lt;li&gt;&lt;b&gt;Yast Filesystem Snapshots&lt;/b&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;
-In yast Filesystem Snapshots, sensitive changes in system files(directories in / like /etc, /bin, excluding /home) will be listed and You can check difference between pre-changed status and post-changed status. One can specify the volumn to rollback via time or file(s’) changes.
-&lt;/p&gt;
-
-&lt;ul class="org-ul"&gt;
-&lt;li&gt;&lt;b&gt;Rollback&lt;/b&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;
-Boot and on grub(2) interface, choose “Advance bootloader for openSUSE” and enter in and choose item you want to rollback to. And then “openSUSE Tumbleweed” to boot normally. Login and run &lt;code&gt;sudo snapper rollback &amp;amp;&amp;amp; reboot&lt;/code&gt; in opened terminal, then relogin. And everything is OK.
-&lt;/p&gt;&lt;/div&gt;</description><category>openSUSE</category><guid>https://fpghwd.github.io/posts/how-opensuse-rollback-when-using-brtfs/</guid><pubDate>Mon, 13 Jul 2020 07:16:58 GMT</pubDate></item></channel></rss>
+&lt;/p&gt;&lt;/div&gt;</description><category>life</category><guid>https://fpghwd.github.io/posts/recent-status/</guid><pubDate>Tue, 28 Jul 2020 03:06:55 GMT</pubDate></item></channel></rss>

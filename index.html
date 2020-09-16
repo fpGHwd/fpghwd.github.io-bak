@@ -12,7 +12,7 @@
 <link rel="alternate" type="application/rss+xml" title="RSS" hreflang="en" href="rss.xml">
 <link rel="canonical" href="https://fpghwd.github.io/">
 <link rel="next" href="index-1.html" type="text/html">
-<!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="posts/leetcode487-next-greater-element-i/" type="text/html">
+<!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="posts/leetcode606-construct-string-from-binary-tree/" type="text/html">
 </head>
 <body>
 <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
@@ -69,7 +69,77 @@
     
         
     <div class="postindex">
-            <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/leetcode487-next-greater-element-i/" class="u-url">Leetcode487 Next Greater Element I</a></h1>
+            <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/leetcode606-construct-string-from-binary-tree/" class="u-url">Leetcode606 Construct String from Binary Tree</a></h1>
+                <div class="metadata">
+                    <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                        suzumiya natsuhi
+                    </span></p>
+            <p class="dateline">
+            <a href="posts/leetcode606-construct-string-from-binary-tree/" rel="bookmark">
+            <time class="published dt-published" datetime="2020-09-16T04:23:51+08:00" itemprop="datePublished" title="2020-09-16 04:23">2020-09-16 04:23</time></a>
+            </p>
+                        <p class="commentline">
+        
+    <a href="posts/leetcode606-construct-string-from-binary-tree/#disqus_thread" data-disqus-identifier="cache/posts/leetcode606-construct-string-from-binary-tree.html">Comments</a>
+
+
+                </p>
+</div>
+            </header><div class="e-content entry-content">
+                    <div>
+<p>
+<a href="https://leetcode.com/problems/construct-string-from-binary-tree/">606. Construct String from Binary Tree</a>
+</p>
+
+<p>
+<b>Solution</b>
+</p>
+
+<div class="org-src-container">
+
+<pre><code class="lang-C">
+/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
+ * };
+ */
+class Solution {
+    public:
+        string tree2str(TreeNode* t) {
+            if(t == nullptr)return result;
+            result.append(to_string(t-&gt;val));
+            if(t-&gt;left){
+                result.append(1,'(');
+                tree2str(t-&gt;left);
+                result.append(1,')');
+            }else{
+                if(t-&gt;right){
+                    result.append("()");
+                }
+            }
+            if(t-&gt;right){
+                result.append(1,'(');
+                tree2str(t-&gt;right);
+                result.append(1,')');
+            }
+            return result;
+        }
+    private:
+        string result;
+};
+
+</code></pre>
+
+</div>
+</div>
+                </div>
+            </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/leetcode487-next-greater-element-i/" class="u-url">Leetcode487 Next Greater Element I</a></h1>
                 <div class="metadata">
                     <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                         suzumiya natsuhi
@@ -538,46 +608,6 @@ I hope I would have handled it better, though there is no chance for me to handl
 
 <p>
 λλλλλλ
-</p>
-</div>
-                </div>
-            </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/how-opensuse-rollback-when-using-brtfs/" class="u-url">How openSUSE rollbacks when using brtfs</a></h1>
-                <div class="metadata">
-                    <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
-                        suzumiya natsuhi
-                    </span></p>
-            <p class="dateline">
-            <a href="posts/how-opensuse-rollback-when-using-brtfs/" rel="bookmark">
-            <time class="published dt-published" datetime="2020-07-13T15:16:58+08:00" itemprop="datePublished" title="2020-07-13 15:16">2020-07-13 15:16</time></a>
-            </p>
-                        <p class="commentline">
-        
-    <a href="posts/how-opensuse-rollback-when-using-brtfs/#disqus_thread" data-disqus-identifier="cache/posts/how-opensuse-rollback-when-using-brtfs.html">Comments</a>
-
-
-                </p>
-</div>
-            </header><div class="e-content entry-content">
-                    <div>
-<ul class="org-ul">
-<li><b>Brtfs</b></li>
-</ul>
-<p>
-Btrfs, an abbreviation for b-tree file system. By default, openSUSE is set up using Btrfs and snapshots for the root partition. Snapshots allow you to easily roll back your system if needed after applying updates, or to back up files. Snapshots can easily be managed with Snapper.
-</p>
-
-<ul class="org-ul">
-<li><b>Yast Filesystem Snapshots</b></li>
-</ul>
-<p>
-In yast Filesystem Snapshots, sensitive changes in system files(directories in / like /etc, /bin, excluding /home) will be listed and You can check difference between pre-changed status and post-changed status. One can specify the volumn to rollback via time or file(s’) changes.
-</p>
-
-<ul class="org-ul">
-<li><b>Rollback</b></li>
-</ul>
-<p>
-Boot and on grub(2) interface, choose “Advance bootloader for openSUSE” and enter in and choose item you want to rollback to. And then “openSUSE Tumbleweed” to boot normally. Login and run <code>sudo snapper rollback &amp;&amp; reboot</code> in opened terminal, then relogin. And everything is OK.
 </p>
 </div>
                 </div>

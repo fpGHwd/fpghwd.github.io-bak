@@ -19,7 +19,7 @@
  </url>
  <url>
   <loc>https://fpghwd.github.io/archive.html</loc>
-  <lastmod>2020-09-15T02:51:00Z</lastmod>
+  <lastmod>2020-09-16T04:24:00Z</lastmod>
  </url>
  <url>
   <loc>https://fpghwd.github.io/authors/</loc>
@@ -99,7 +99,7 @@
  </url>
  <url>
   <loc>https://fpghwd.github.io/index-1.html</loc>
-  <lastmod>2020-09-15T02:51:00Z</lastmod>
+  <lastmod>2020-09-16T04:24:00Z</lastmod>
  </url>
  <url>
   <loc>https://fpghwd.github.io/listings/</loc>
@@ -196,6 +196,10 @@
  <url>
   <loc>https://fpghwd.github.io/posts/leetcode487-next-greater-element-i/</loc>
   <lastmod>2020-09-15T02:51:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://fpghwd.github.io/posts/leetcode606-construct-string-from-binary-tree/</loc>
+  <lastmod>2020-09-16T04:24:00Z</lastmod>
  </url>
  <url>
   <loc>https://fpghwd.github.io/posts/leetcode742-n-ary-tree-preorder-traversal/</loc>
