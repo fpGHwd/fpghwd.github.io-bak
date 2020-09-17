@@ -129,7 +129,7 @@
                                              (let* ((file-path (progn (string-match "/home.*[a-z0-9-]\\{34\\}.+png" html-text)
                                                                       (match-string 0 html-text))))
 
-                                               (setq cmd (format "cp %s /home/wd/.config/nikola/output/images/" file-path))
+                                               (setq cmd (format "cp %s /home/wd/.config/nikola/images/" file-path))
                                                (shell-command cmd)))))
 </code></pre>
 
