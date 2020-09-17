@@ -19,12 +19,12 @@
 
 
 
-修改配置文件，将这个自定义函数 org2nikola-process-output-html-function 设置为
+修改配置文件，将这个自定义函数 org2nikola-process-output-html-function 设置为：
 
 
 
 
-  (org2nikola-process-output-html-function (lambda (html-text title post">
+  (org2nikola-process-output-html-function (lambda (html-text title pos">
 <meta property="og:type" content="article">
 <meta property="article:published_time" content="2020-09-17T03:35:39+08:00">
 <meta property="article:tag" content="ATTACH">
@@ -115,7 +115,7 @@
 </p>
 
 <p>
-修改配置文件，将这个自定义函数 <code>org2nikola-process-output-html-function</code> 设置为
+修改配置文件，将这个自定义函数 <code>org2nikola-process-output-html-function</code> 设置为：
 </p>
 
 <div class="org-src-container">
@@ -124,9 +124,7 @@
                                              (progn
                                                (let* ((file-path (progn (string-match "\\/home.*[a-z0-9-]\\{34\\}.\\{27\\}.png" html-text)
                                                                         (match-string 0 html-text))))
-                                                 (message (format "file-path is: %s" file-path))
                                                  (setq cmd (format "cp %s /home/wd/.config/nikola/images/" file-path))
-                                                 (message (format "cmd is %s" cmd))
                                                  (shell-command cmd))
                                                (replace-regexp-in-string
                                                 "file:.*[a-z0-9-]\\{34\\}\/"
