@@ -101,17 +101,18 @@
 
 <div class="org-src-container">
 
-<pre><code class="lang-lisp">(setq org2nikola-process-output-html-function
+<pre><code class="lang-lisp">(org2nikola-process-output-html-function
  (lambda (html-text title post-slug)
-   (progn
-     (let* ((file-path (progn (string-match "\\/home.*[a-z0-9-]\\{34\\}.\\{27\\}.png" html-text)
-                              (match-string 0 html-text))))
-       (setq cmd (format "cp %s /home/wd/.config/nikola/images/" file-path))
-       (shell-command cmd))
-     (replace-regexp-in-string
-      "file:.*[a-z0-9-]\\{34\\}\/"
-      "https://raw.githubusercontent.com/fpGHwd/fpghwd.github.io/master/images/"
-      html-text))))
+   (progn (let* ((re-str "\\/home\\/.+?\\.png"))
+            (let* ((files-list (s-match-strings-all re-str html-text)))
+              (dolist (file-path files-list)
+                (message (format "file-path: %s" (car  file-path)))
+                (setq cmd (format "cp %s /home/wd/.config/nikola/images/" (car file-path)))
+                (shell-command (format "cp %s /home/wd/.config/nikola/images/" (car file-path))))))
+          (replace-regexp-in-string
+           "file:.+?\\/[a-z0-9-]\\{34\\}\\/"
+           "https://raw.githubusercontent.com/fpGHwd/fpghwd.github.io/master/images/"
+           html-text))))
 </code></pre>
 
 </div>
@@ -162,24 +163,9 @@
 <div id="text-footnotes">
 
 <div class="footdef">
-<sup><a id="fn.1" class="footnum" href="posts/org2nikola-image-display/#fnr.1">1</a></sup><div class="footpara">
-<p class="footpara">
+<sup><a id="fn.1" class="footnum" href="posts/org2nikola-image-display/#fnr.1">1</a></sup><div class="footpara"><p class="footpara">
 <a href="https://www.gnu.org/software/emacs/manual/html_node/elisp/Searching-and-Matching.html">34 Searching and Matching</a>
-</p>
-
-<p class="footpara">
-test-picture 2
-</p>
-
-
-<div class="figure">
-<p><img src="https://raw.githubusercontent.com/fpGHwd/fpghwd.github.io/master/images/_20200917_215402screenshot.png" alt="_20200917_215402screenshot.png"></p>
-</div>
-
-<p class="footpara">
-lambda lambda lambda lambda lambda lambuda
-</p>
-</div>
+</p></div>
 </div>
 
 
