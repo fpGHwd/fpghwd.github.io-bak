@@ -1,0 +1,59 @@
+<p>
+最近做了一道题无法提交，用了 gdb 调试可能因为 image 的 size 有点小所以也没有问题。
+</p>
+
+<p>
+但是提交到 leetcode 的时候就提示：
+</p>
+<div class="org-src-container">
+
+<pre><code class="lang-html">Status: Runtime Error
+
+AddressSanitizer:DEADLYSIGNAL
+=================================================================
+==33==ERROR: AddressSanitizer: stack-overflow on address 0x7ffe804b8fc0 (pc 0x000000383a89 bp 0x7ffe804b9190 sp 0x7ffe804b8fc0 T0)
+==33==ABORTING
+</code></pre>
+
+</div>
+
+<p>
+<b>Incomplete Solution</b>
+</p>
+
+<div class="org-src-container">
+
+<pre><code class="lang-C">
+    class Solution {
+public:
+  vector&lt;vector&lt;int&gt;&gt; floodFill(vector&lt;vector&lt;int&gt;&gt; &amp;image, int sr, int sc,
+                                int newColor) {
+    int tmp_color = image[sr][sc];
+    if (tmp_color == newColor)
+      return image;
+
+    // paint
+    if (image[sr][sc] != 0)
+      image[sr][sc] = newColor;
+
+    // paint others
+    if (sr - 1 &gt;= 0 &amp;&amp; tmp_color == image[sr - 1][sc])
+      floodFill(image, sr - 1, sc, newColor);
+    if (sr + 1 &lt; image.size() &amp;&amp; tmp_color == image[sr + 1][sc])
+      floodFill(image, sr + 1, sc, newColor);
+    if (sc - 1 &gt;= 0 &amp;&amp; tmp_color == image[sr][sc - 1])
+      floodFill(image, sr, sc - 1, newColor);
+    if (sc + 1 &lt; image[0].size() &amp;&amp; tmp_color == image[sr][sc + 1])
+      floodFill(image, sr, sc + 1, newColor);
+
+    return image;
+  }
+            
+};
+
+    &#24182;&#19981;&#30693;&#36947;&#21738;&#37324;&#20986;&#20102;&#38382;&#39064;&#65292;&#20808;&#35760;&#19979;&#26469;&#20877;&#35828;&#12290;
+
+
+</code></pre>
+
+</div>
