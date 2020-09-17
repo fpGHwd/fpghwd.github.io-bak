@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Dichotomy</title><link>https://fpghwd.github.io/</link><description>To iterate is human, to recurse, divine</description><atom:link href="https://fpghwd.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;suzumiya natsuhi&lt;/a&gt; </copyright><lastBuildDate>Thu, 17 Sep 2020 18:06:41 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Org2nikola image displaying</title><link>https://fpghwd.github.io/posts/org2nikola-image-display/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Dichotomy</title><link>https://fpghwd.github.io/</link><description>To iterate is human, to recurse, divine</description><atom:link href="https://fpghwd.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;suzumiya natsuhi&lt;/a&gt; </copyright><lastBuildDate>Thu, 17 Sep 2020 18:09:16 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Org2nikola image displaying</title><link>https://fpghwd.github.io/posts/org2nikola-image-display/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
 &lt;b&gt;设置&lt;/b&gt;
 &lt;/p&gt;
 
@@ -18,9 +18,10 @@
    (progn (let* ((re-str "\\/home\\/.+?\\.png"))
             (let* ((files-list (s-match-strings-all re-str html-text)))
               (dolist (file-path files-list)
-                (message (format "file-path: %s" (car  file-path)))
+                ;; (message (format "file-path: %s" (car file-path)))
                 (setq cmd (format "cp %s /home/wd/.config/nikola/images/" (car file-path)))
-                (shell-command (format "cp %s /home/wd/.config/nikola/images/" (car file-path))))))
+                (message cmd)
+                (shell-command cmd))))
           (replace-regexp-in-string
            "file:.+?\\/[a-z0-9-]\\{34\\}\\/"
            "https://raw.githubusercontent.com/fpGHwd/fpghwd.github.io/master/images/"
@@ -72,12 +73,21 @@
 &lt;li&gt;还只能匹配截图这样文件名的图片，需要完善正则表达式。&lt;/li&gt;
 &lt;/ol&gt;
 
+&lt;div class="figure"&gt;
+&lt;p&gt;&lt;img src="https://raw.githubusercontent.com/fpGHwd/fpghwd.github.io/master/images/_20200918_020909screenshot.png" alt="_20200918_020909screenshot.png"&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+
 &lt;div id="footnotes"&gt;
 &lt;h3 class="footnotes"&gt;Footnotes: &lt;/h3&gt;
 &lt;div id="text-footnotes"&gt;
 
 &lt;div class="footdef"&gt;&lt;sup&gt;&lt;a id="fn.1" class="footnum" href="https://fpghwd.github.io/posts/org2nikola-image-display/#fnr.1"&gt;1&lt;/a&gt;&lt;/sup&gt; &lt;div class="footpara"&gt;&lt;p class="footpara"&gt;
 &lt;a href="https://www.gnu.org/software/emacs/manual/html_node/elisp/Searching-and-Matching.html"&gt;34 Searching and Matching&lt;/a&gt;
+&lt;/p&gt;
+
+&lt;p class="footpara"&gt;
+&lt;b&gt;测试多张图片&lt;/b&gt;
 &lt;/p&gt;&lt;/div&gt;&lt;/div&gt;
 
 

@@ -16,9 +16,10 @@
    (progn (let* ((re-str "\\/home\\/.+?\\.png"))
             (let* ((files-list (s-match-strings-all re-str html-text)))
               (dolist (file-path files-list)
-                (message (format "file-path: %s" (car  file-path)))
+                ;; (message (format "file-path: %s" (car file-path)))
                 (setq cmd (format "cp %s /home/wd/.config/nikola/images/" (car file-path)))
-                (shell-command (format "cp %s /home/wd/.config/nikola/images/" (car file-path))))))
+                (message cmd)
+                (shell-command cmd))))
           (replace-regexp-in-string
            "file:.+?\\/[a-z0-9-]\\{34\\}\\/"
            "https://raw.githubusercontent.com/fpGHwd/fpghwd.github.io/master/images/"
@@ -69,12 +70,22 @@
 <li>由于没有循环，只能找到第一个图片的字符串然后替换成真实的 url, 需要完善正则表达式。</li>
 <li>还只能匹配截图这样文件名的图片，需要完善正则表达式。</li>
 </ol>
+
+
+<div class="figure">
+<p><img src="https://raw.githubusercontent.com/fpGHwd/fpghwd.github.io/master/images/_20200918_020909screenshot.png" alt="_20200918_020909screenshot.png" />
+</p>
+</div>
 <div id="footnotes">
 <h2 class="footnotes">Footnotes: </h2>
 <div id="text-footnotes">
 
 <div class="footdef"><sup><a id="fn.1" class="footnum" href="#fnr.1">1</a></sup> <div class="footpara"><p class="footpara">
 <a href="https://www.gnu.org/software/emacs/manual/html_node/elisp/Searching-and-Matching.html">34 Searching and Matching</a>
+</p>
+
+<p class="footpara">
+<b>测试多张图片</b>
 </p></div></div>
 
 
