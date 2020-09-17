@@ -1,9 +1,13 @@
 <p>
+<b>设置</b>
+</p>
+
+<p>
 先<a href="https://github.com/redguardtoo/org2nikola/issues/11">咨询</a>了作者，然后得到了思路：获得一个对 output html 进行自定义 render 的函数，然后修改 html.
 </p>
 
 <p>
-修改配置文件，将这个自定义函数 <code>org2nikola-process-output-html-function</code> 设置为：
+设置 org2nikola 包变量的 <code>org2nikola-process-output-html-function</code> 为：
 </p>
 <div class="org-src-container">
 
