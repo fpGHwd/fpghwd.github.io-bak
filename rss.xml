@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Dichotomy</title><link>https://fpghwd.github.io/</link><description>To iterate is human, to recurse, divine</description><atom:link href="https://fpghwd.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;suzumiya natsuhi&lt;/a&gt; </copyright><lastBuildDate>Thu, 17 Sep 2020 02:45:31 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Leetcode700 Flood Fill</title><link>https://fpghwd.github.io/posts/leetcode700-flood-fill/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Dichotomy</title><link>https://fpghwd.github.io/</link><description>To iterate is human, to recurse, divine</description><atom:link href="https://fpghwd.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;suzumiya natsuhi&lt;/a&gt; </copyright><lastBuildDate>Thu, 17 Sep 2020 02:48:32 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Leetcode700 Flood Fill</title><link>https://fpghwd.github.io/posts/leetcode700-flood-fill/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
 最近做了这道题（&lt;a href="https://leetcode.com/problems/flood-fill/"&gt;733. Flood Fill&lt;/a&gt;）无法提交，用了 gdb 调试可能因为 image 的 size 有点小所以也没有问题。
 &lt;/p&gt;
 
@@ -388,7 +388,7 @@ When I look back to past time without courage, the only thing I cannot forget is
 &lt;/div&gt;
 
 &lt;div class="figure"&gt;
-&lt;p&gt;&lt;img src="https://fpghwd.github.io/posts/images/_20200825_110429screenshot.png" alt="_20200825_110429screenshot.png"&gt;
+&lt;p&gt;&lt;img src="https://fpghwd.github.io/images/_20200825_110429screenshot.png" alt="_20200825_110429screenshot.png"&gt;
 &lt;/p&gt;
 &lt;/div&gt;
 
