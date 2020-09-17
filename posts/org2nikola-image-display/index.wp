@@ -9,16 +9,15 @@
 
 <pre><code class="lang-lisp">(org2nikola-process-output-html-function (lambda (html-text title post-slug)
                                            (progn
+                                             (replace-regexp-in-string
+                                              "file:.*[a-z0-9-]\\{34\\}.\\{27\\}.png"
+                                              "https://raw.githubusercontent.com/fpGHwd/fpghwd.github.io/master/images/"
+                                              html-text)
                                              (let* ((file-path (progn (string-match "/home.*[a-z0-9-]\\{34\\}.+png" html-text)
                                                                       (match-string 0 html-text))))
 
                                                (setq cmd (format "cp %s /home/wd/.config/nikola/images/" file-path))
-                                               (shell-command cmd))
-                                             (replace-regexp-in-string
-                                              "file:.*[a-z0-9-]\\{34\\}\/"
-                                              "https://raw.githubusercontent.com/fpGHwd/fpghwd.github.io/master/images/"
-                                              html-text)
-                                             )))
+                                               (shell-command cmd)))))
 </code></pre>
 
 </div>
@@ -31,6 +30,7 @@
 <p>
 当然中间最重要的还是哪个正则表达式，我需要匹配字符串的是：
 </p>
+
 
 <p>
 需要将前面的 <code>https://raw.githubusercontent.com/fpGHwd/fpghwd.github.io/master/images/</code> 替换为 <code>https://raw.githubusercontent.com/fpGHwd/fpghwd.github.io/master/images/</code>
