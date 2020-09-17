@@ -113,20 +113,20 @@
 </div>
 
 <p>
-期中用到了 <code>string-match</code> 是 GNU 手册中<sup><a id="fnr.1" class="footref" href="posts/org2nikola-image-display/#fn.1">1</a></sup>的
+其中用到了 <code>string-match</code> 可以在 GNU Emacs Lisp 手册中找到<sup><a id="fnr.1" class="footref" href="posts/org2nikola-image-display/#fn.1">1</a></sup>。
 </p>
 
 <p>
-然后就重新 <code>org2nikola-export-subtree</code> 就可以了
+然后就重新 <code>org2nikola-export-subtree</code> 就可以发布博客了。
 </p>
 
 <p>
-当然中间最重要的还是哪个正则表达式，我需要匹配字符串的是（目前只能匹配一个字符串，如果贴文本的话，写好博客后进行处理后面的真正图片的链接就不能进行转换了，所以用图片代替）：
+整个过程中最重要的还是匹配文件地址和修改 github 图片资源 url 的两个正则表达式。我需要匹配字符串的是（目前只能匹配一个字符串，如果贴文本的话，写好博客后进行处理后面的真正图片的链接就不能进行转换了，所以用图片代替）：
 <code>找不到图片了算了)○(￣□￣○)</code>
 </p>
 
 <p>
-需要将前面的 <code>https://raw.githubusercontent.com/fpGHwd/fpghwd.github.io/master/images/</code> 替换为 <code>https://raw.githubusercontent.com/fpGHwd/fpghwd.github.io/master/images/</code>
+需要将前面的 <code>https://raw.githubusercontent.com/fpGHwd/fpghwd.github.io/master/images/</code> 替换为 <code>https://raw.githubusercontent.com/fpGHwd/fpghwd.github.io/master/images/</code> 。
 </p>
 
 <p>
@@ -134,21 +134,17 @@
 </p>
 
 <p>
-用到了 <code>re-builder</code> 简直不要太好用。
-</p>
-
-<div class="figure">
-<p><img src="https://raw.githubusercontent.com/fpGHwd/fpghwd.github.io/master/images/_20200917_113516screenshot.png" alt="_20200917_113516screenshot.png"></p>
-</div>
+用到了 <code>re-builder</code> 简直不要太好用：
+<img src="https://raw.githubusercontent.com/fpGHwd/fpghwd.github.io/master/images/_20200917_113516screenshot.png" alt="_20200917_113516screenshot.png"></p>
 
 <p>
 <b>TODO</b>
 </p>
 
-<p>
-由于没有循环，只能找到第一个图片的字符串然后替换成真实的 url. 所以后面还需要完善。
-</p>
-
+<ol class="org-ol">
+<li>由于没有循环，只能找到第一个图片的字符串然后替换成真实的 url, 需要完善正则表达式。</li>
+<li>还只能匹配截图这样文件名的图片，需要完善正则表达式。</li>
+</ol>
 <div id="footnotes">
 <h3 class="footnotes">Footnotes: </h3>
 <div id="text-footnotes">
