@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Dichotomy</title><link>https://fpghwd.github.io/</link><description>To iterate is human, to recurse, divine</description><atom:link href="https://fpghwd.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;suzumiya natsuhi&lt;/a&gt; </copyright><lastBuildDate>Thu, 17 Sep 2020 01:13:38 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Leetcode700 Flood Fill</title><link>https://fpghwd.github.io/posts/leetcode700-flood-fill/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Dichotomy</title><link>https://fpghwd.github.io/</link><description>To iterate is human, to recurse, divine</description><atom:link href="https://fpghwd.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;suzumiya natsuhi&lt;/a&gt; </copyright><lastBuildDate>Thu, 17 Sep 2020 01:15:14 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Leetcode700 Flood Fill</title><link>https://fpghwd.github.io/posts/leetcode700-flood-fill/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
 最近做了一道题无法提交，用了 gdb 调试可能因为 image 的 size 有点小所以也没有问题。
 &lt;/p&gt;
 
@@ -26,39 +26,40 @@ AddressSanitizer:DEADLYSIGNAL
 &lt;div class="org-src-container"&gt;
 
 &lt;pre&gt;&lt;code class="lang-C"&gt;
-    class Solution {
-public:
-  vector&amp;lt;vector&amp;lt;int&amp;gt;&amp;gt; floodFill(vector&amp;lt;vector&amp;lt;int&amp;gt;&amp;gt; &amp;amp;image, int sr, int sc,
-                                int newColor) {
-    int tmp_color = image[sr][sc];
-    if (tmp_color == newColor)
-      return image;
+class Solution {
+    public:
+        vector&amp;lt;vector&amp;lt;int&amp;gt;&amp;gt; floodFill(vector&amp;lt;vector&amp;lt;int&amp;gt;&amp;gt; &amp;amp;image, int sr, int sc,
+                                      int newColor) {
+            int tmp_color = image[sr][sc];
+            if (tmp_color == newColor)
+                return image;
 
-    // paint
-    if (image[sr][sc] != 0)
-      image[sr][sc] = newColor;
+            // paint
+            if (image[sr][sc] != 0)
+                image[sr][sc] = newColor;
 
-    // paint others
-    if (sr - 1 &amp;gt;= 0 &amp;amp;&amp;amp; tmp_color == image[sr - 1][sc])
-      floodFill(image, sr - 1, sc, newColor);
-    if (sr + 1 &amp;lt; image.size() &amp;amp;&amp;amp; tmp_color == image[sr + 1][sc])
-      floodFill(image, sr + 1, sc, newColor);
-    if (sc - 1 &amp;gt;= 0 &amp;amp;&amp;amp; tmp_color == image[sr][sc - 1])
-      floodFill(image, sr, sc - 1, newColor);
-    if (sc + 1 &amp;lt; image[0].size() &amp;amp;&amp;amp; tmp_color == image[sr][sc + 1])
-      floodFill(image, sr, sc + 1, newColor);
+            // paint others
+            if (sr - 1 &amp;gt;= 0 &amp;amp;&amp;amp; tmp_color == image[sr - 1][sc])
+                floodFill(image, sr - 1, sc, newColor);
+            if (sr + 1 &amp;lt; image.size() &amp;amp;&amp;amp; tmp_color == image[sr + 1][sc])
+                floodFill(image, sr + 1, sc, newColor);
+            if (sc - 1 &amp;gt;= 0 &amp;amp;&amp;amp; tmp_color == image[sr][sc - 1])
+                floodFill(image, sr, sc - 1, newColor);
+            if (sc + 1 &amp;lt; image[0].size() &amp;amp;&amp;amp; tmp_color == image[sr][sc + 1])
+                floodFill(image, sr, sc + 1, newColor);
 
-    return image;
-  }
+            return image;
+        }
 
 };
 
-    并不知道哪里出了问题，先记下来再说。
-
-
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;/div&gt;&lt;/div&gt;</description><category>leetcode</category><guid>https://fpghwd.github.io/posts/leetcode700-flood-fill/</guid><pubDate>Wed, 16 Sep 2020 17:13:28 GMT</pubDate></item><item><title>Leetcode606 Construct String from Binary Tree</title><link>https://fpghwd.github.io/posts/leetcode606-construct-string-from-binary-tree/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;
+并不知道哪里出了问题，先记下来再说。
+&lt;/p&gt;&lt;/div&gt;</description><category>leetcode</category><guid>https://fpghwd.github.io/posts/leetcode700-flood-fill/</guid><pubDate>Wed, 16 Sep 2020 17:13:28 GMT</pubDate></item><item><title>Leetcode606 Construct String from Binary Tree</title><link>https://fpghwd.github.io/posts/leetcode606-construct-string-from-binary-tree/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
 &lt;a href="https://leetcode.com/problems/construct-string-from-binary-tree/"&gt;606. Construct String from Binary Tree&lt;/a&gt;
 &lt;/p&gt;
 

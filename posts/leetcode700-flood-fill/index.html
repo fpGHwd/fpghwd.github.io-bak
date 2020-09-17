@@ -140,39 +140,40 @@ AddressSanitizer:DEADLYSIGNAL
 <div class="org-src-container">
 
 <pre><code class="lang-C">
-    class Solution {
-public:
-  vector&lt;vector&lt;int&gt;&gt; floodFill(vector&lt;vector&lt;int&gt;&gt; &amp;image, int sr, int sc,
-                                int newColor) {
-    int tmp_color = image[sr][sc];
-    if (tmp_color == newColor)
-      return image;
+class Solution {
+    public:
+        vector&lt;vector&lt;int&gt;&gt; floodFill(vector&lt;vector&lt;int&gt;&gt; &amp;image, int sr, int sc,
+                                      int newColor) {
+            int tmp_color = image[sr][sc];
+            if (tmp_color == newColor)
+                return image;
 
-    // paint
-    if (image[sr][sc] != 0)
-      image[sr][sc] = newColor;
+            // paint
+            if (image[sr][sc] != 0)
+                image[sr][sc] = newColor;
 
-    // paint others
-    if (sr - 1 &gt;= 0 &amp;&amp; tmp_color == image[sr - 1][sc])
-      floodFill(image, sr - 1, sc, newColor);
-    if (sr + 1 &lt; image.size() &amp;&amp; tmp_color == image[sr + 1][sc])
-      floodFill(image, sr + 1, sc, newColor);
-    if (sc - 1 &gt;= 0 &amp;&amp; tmp_color == image[sr][sc - 1])
-      floodFill(image, sr, sc - 1, newColor);
-    if (sc + 1 &lt; image[0].size() &amp;&amp; tmp_color == image[sr][sc + 1])
-      floodFill(image, sr, sc + 1, newColor);
+            // paint others
+            if (sr - 1 &gt;= 0 &amp;&amp; tmp_color == image[sr - 1][sc])
+                floodFill(image, sr - 1, sc, newColor);
+            if (sr + 1 &lt; image.size() &amp;&amp; tmp_color == image[sr + 1][sc])
+                floodFill(image, sr + 1, sc, newColor);
+            if (sc - 1 &gt;= 0 &amp;&amp; tmp_color == image[sr][sc - 1])
+                floodFill(image, sr, sc - 1, newColor);
+            if (sc + 1 &lt; image[0].size() &amp;&amp; tmp_color == image[sr][sc + 1])
+                floodFill(image, sr, sc + 1, newColor);
 
-    return image;
-  }
+            return image;
+        }
 
 };
-
-    并不知道哪里出了问题，先记下来再说。
-
 
 </code></pre>
 
 </div>
+
+<p>
+并不知道哪里出了问题，先记下来再说。
+</p>
 </div>
     </div>
     <aside class="postpromonav"><nav><ul itemprop="keywords" class="tags">
