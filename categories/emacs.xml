@@ -1,5 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Dichotomy (Posts about emacs)</title><link>https://fpghwd.github.io/</link><description></description><atom:link href="https://fpghwd.github.io/categories/emacs.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;suzumiya natsuhi&lt;/a&gt; </copyright><lastBuildDate>Thu, 17 Sep 2020 04:40:03 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Org2nikola image display</title><link>https://fpghwd.github.io/posts/org2nikola-image-display/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;p&gt;&lt;/p&gt;</description><category>ATTACH</category><category>emacs</category><guid>https://fpghwd.github.io/posts/org2nikola-image-display/</guid><pubDate>Wed, 16 Sep 2020 19:35:39 GMT</pubDate></item><item><title>Manage workgroups in emacs via workgroups2</title><link>https://fpghwd.github.io/posts/shi-yong-workgroups2-guan-li-emacs-de-session/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Dichotomy (Posts about emacs)</title><link>https://fpghwd.github.io/</link><description></description><atom:link href="https://fpghwd.github.io/categories/emacs.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;suzumiya natsuhi&lt;/a&gt; </copyright><lastBuildDate>Thu, 17 Sep 2020 04:59:19 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Org2nikola image display</title><link>https://fpghwd.github.io/posts/org2nikola-image-display/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
+先&lt;a href="https://github.com/redguardtoo/org2nikola/issues/11"&gt;咨询&lt;/a&gt;了作者，然后得到了思路：获得一个对 output html 进行自定义 render 的函数，然后修改 html.
+&lt;/p&gt;
+
+&lt;p&gt;
+修改配置文件，将这个自定义函数 &lt;code&gt;org2nikola-process-output-html-function&lt;/code&gt; 设置为
+&lt;/p&gt;
+
+&lt;div class="org-src-container"&gt;
+
+&lt;pre&gt;&lt;code class="lang-lisp"&gt;(org2nikola-process-output-html-function (lambda (html-text title post-slug)
+                                           (progn
+                                             (replace-regexp-in-string
+                                              "file:.*[a-z0-9-]\\{34\\}\/"
+                                              "https://raw.githubusercontent.com/fpGHwd/fpghwd.github.io/master/images/"
+                                              html-text)
+                                             (let* ((file-path (progn (string-match "/home.*[a-z0-9-]\\{34\\}.+png" html-text)
+                                                                      (match-string 0 html-text))))
+
+                                               (setq cmd (format "cp %s /home/wd/.config/nikola/output/images/" file-path))
+                                               (shell-command cmd)))))
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;/div&gt;
+
+&lt;p&gt;
+然后就重新 &lt;code&gt;org2nikola-export-subtree&lt;/code&gt; 就可以了
+&lt;/p&gt;
+
+&lt;p&gt;
+当然中间最重要的还是哪个正则表达式，我需要匹配字符串的是：
+&lt;/p&gt;
+
+&lt;div class="org-src-container"&gt;
+
+&lt;pre&gt;&lt;code class="lang-lisp"&gt;
+(setq test-string "https://raw.githubusercontent.com/fpGHwd/fpghwd.github.io/master/images/_20200825_110429screenshot.png")
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;/div&gt;
+
+&lt;p&gt;
+需要将前面的 &lt;code&gt;https://raw.githubusercontent.com/fpGHwd/fpghwd.github.io/master/images/&lt;/code&gt; 替换为 &lt;code&gt;https://raw.githubusercontent.com/fpGHwd/fpghwd.github.io/master/images/&lt;/code&gt;
+&lt;/p&gt;
+
+&lt;p&gt;
+调试正则表达式，用到了 &lt;code&gt;re-builder&lt;/code&gt; 简直不要太好用。
+&lt;/p&gt;
+
+&lt;div class="figure"&gt;
+&lt;p&gt;&lt;img src="https://raw.githubusercontent.com/fpGHwd/fpghwd.github.io/master/images/_20200917_113516screenshot.png" alt="_20200917_113516screenshot.png"&gt;
+&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;</description><category>ATTACH</category><category>emacs</category><guid>https://fpghwd.github.io/posts/org2nikola-image-display/</guid><pubDate>Wed, 16 Sep 2020 19:35:39 GMT</pubDate></item><item><title>Manage workgroups in emacs via workgroups2</title><link>https://fpghwd.github.io/posts/shi-yong-workgroups2-guan-li-emacs-de-session/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
 &lt;b&gt;Workgroups2&lt;sup&gt;&lt;a id="fnr.1" class="footref" href="https://fpghwd.github.io/posts/shi-yong-workgroups2-guan-li-emacs-de-session/#fn.1"&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/b&gt; 
 Workgroups2 是一款保存和恢复用户工作空间的一款 emacs 插件。
 &lt;/p&gt;
