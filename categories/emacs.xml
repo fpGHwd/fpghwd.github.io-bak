@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Dichotomy (Posts about emacs)</title><link>https://fpghwd.github.io/</link><description></description><atom:link href="https://fpghwd.github.io/categories/emacs.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;suzumiya natsuhi&lt;/a&gt; </copyright><lastBuildDate>Thu, 17 Sep 2020 05:47:48 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Org2nikola image display</title><link>https://fpghwd.github.io/posts/org2nikola-image-display/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Dichotomy (Posts about emacs)</title><link>https://fpghwd.github.io/</link><description></description><atom:link href="https://fpghwd.github.io/categories/emacs.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;suzumiya natsuhi&lt;/a&gt; </copyright><lastBuildDate>Thu, 17 Sep 2020 05:53:40 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Org2nikola image displaying</title><link>https://fpghwd.github.io/posts/org2nikola-image-display/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
 先&lt;a href="https://github.com/redguardtoo/org2nikola/issues/11"&gt;咨询&lt;/a&gt;了作者，然后得到了思路：获得一个对 output html 进行自定义 render 的函数，然后修改 html.
 &lt;/p&gt;
 
@@ -23,6 +23,10 @@
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;/div&gt;
+
+&lt;p&gt;
+期中用到了 &lt;code&gt;string-match&lt;/code&gt; 是 GNU 手册中&lt;sup&gt;&lt;a id="fnr.1" class="footref" href="https://fpghwd.github.io/posts/org2nikola-image-display/#fn.1"&gt;1&lt;/a&gt;&lt;/sup&gt;的
+&lt;/p&gt;
 
 &lt;p&gt;
 然后就重新 &lt;code&gt;org2nikola-export-subtree&lt;/code&gt; 就可以了
@@ -56,7 +60,18 @@
 
 &lt;p&gt;
 由于没有循环，只能找到第一个图片的字符串然后替换成真实的 url. 所以后面还需要完善。
-&lt;/p&gt;&lt;/div&gt;</description><category>ATTACH</category><category>emacs</category><guid>https://fpghwd.github.io/posts/org2nikola-image-display/</guid><pubDate>Wed, 16 Sep 2020 19:35:39 GMT</pubDate></item><item><title>Manage workgroups in emacs via workgroups2</title><link>https://fpghwd.github.io/posts/shi-yong-workgroups2-guan-li-emacs-de-session/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
+&lt;/p&gt;
+
+&lt;div id="footnotes"&gt;
+&lt;h3 class="footnotes"&gt;Footnotes: &lt;/h3&gt;
+&lt;div id="text-footnotes"&gt;
+
+&lt;div class="footdef"&gt;&lt;sup&gt;&lt;a id="fn.1" class="footnum" href="https://fpghwd.github.io/posts/org2nikola-image-display/#fnr.1"&gt;1&lt;/a&gt;&lt;/sup&gt; &lt;div class="footpara"&gt;&lt;p class="footpara"&gt;
+&lt;a href="https://www.gnu.org/software/emacs/manual/html_node/elisp/Searching-and-Matching.html"&gt;34 Searching and Matching&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;
+
+
+&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;</description><category>ATTACH</category><category>emacs</category><guid>https://fpghwd.github.io/posts/org2nikola-image-display/</guid><pubDate>Wed, 16 Sep 2020 19:35:39 GMT</pubDate></item><item><title>Manage workgroups in emacs via workgroups2</title><link>https://fpghwd.github.io/posts/shi-yong-workgroups2-guan-li-emacs-de-session/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
 &lt;b&gt;Workgroups2&lt;sup&gt;&lt;a id="fnr.1" class="footref" href="https://fpghwd.github.io/posts/shi-yong-workgroups2-guan-li-emacs-de-session/#fn.1"&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/b&gt; 
 Workgroups2 是一款保存和恢复用户工作空间的一款 emacs 插件。
 &lt;/p&gt;
