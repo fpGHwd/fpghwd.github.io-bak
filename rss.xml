@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Dichotomy</title><link>https://fpghwd.github.io/</link><description>To iterate is human, to recurse, divine</description><atom:link href="https://fpghwd.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;suzumiya natsuhi&lt;/a&gt; </copyright><lastBuildDate>Thu, 17 Sep 2020 06:01:37 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Org2nikola image displaying</title><link>https://fpghwd.github.io/posts/org2nikola-image-display/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Dichotomy</title><link>https://fpghwd.github.io/</link><description>To iterate is human, to recurse, divine</description><atom:link href="https://fpghwd.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;suzumiya natsuhi&lt;/a&gt; </copyright><lastBuildDate>Thu, 17 Sep 2020 06:07:14 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Org2nikola image displaying</title><link>https://fpghwd.github.io/posts/org2nikola-image-display/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
 先&lt;a href="https://github.com/redguardtoo/org2nikola/issues/11"&gt;咨询&lt;/a&gt;了作者，然后得到了思路：获得一个对 output html 进行自定义 render 的函数，然后修改 html.
 &lt;/p&gt;
 
@@ -25,11 +25,7 @@
 &lt;/div&gt;
 
 &lt;p&gt;
-其中用到了 &lt;code&gt;string-match&lt;/code&gt; 可以在 GNU Emacs Lisp 手册中找到&lt;sup&gt;&lt;a id="fnr.1" class="footref" href="https://fpghwd.github.io/posts/org2nikola-image-display/#fn.1"&gt;1&lt;/a&gt;&lt;/sup&gt;。
-&lt;/p&gt;
-
-&lt;p&gt;
-然后就重新 &lt;code&gt;org2nikola-export-subtree&lt;/code&gt; 就可以发布博客了。
+其中用到了 &lt;code&gt;string-match&lt;/code&gt; 可以在 GNU Emacs Lisp 手册中找到&lt;sup&gt;&lt;a id="fnr.1" class="footref" href="https://fpghwd.github.io/posts/org2nikola-image-display/#fn.1"&gt;1&lt;/a&gt;&lt;/sup&gt;。然后重新 &lt;code&gt;org2nikola-export-subtree&lt;/code&gt; 就可以发布博客了。
 &lt;/p&gt;
 
 &lt;p&gt;
@@ -38,7 +34,19 @@
 &lt;/p&gt;
 
 &lt;p&gt;
-需要将前面的 &lt;code&gt;https://raw.githubusercontent.com/fpGHwd/fpghwd.github.io/master/images/&lt;/code&gt; 替换为 &lt;code&gt;https://raw.githubusercontent.com/fpGHwd/fpghwd.github.io/master/images/&lt;/code&gt; 。
+&lt;b&gt;获取图片的地址&lt;/b&gt;
+&lt;/p&gt;
+
+&lt;p&gt;
+我需要将图片的地址拿到并复制到 nikola 自己的 images 目录，这样 nikola 在发布的时候会图片做一些自己的处理，然后放到 output/images 中。使用的正则是 &lt;code&gt;\\/home.*[a-z0-9-]\\{34\\}.\\{27\\}.png&lt;/code&gt;
+&lt;/p&gt;
+
+&lt;p&gt;
+&lt;b&gt;替换的内容&lt;/b&gt;
+&lt;/p&gt;
+
+&lt;p&gt;
+我需要将前面的 &lt;code&gt;https://raw.githubusercontent.com/fpGHwd/fpghwd.github.io/master/images/&lt;/code&gt; 替换为 &lt;code&gt;https://raw.githubusercontent.com/fpGHwd/fpghwd.github.io/master/images/&lt;/code&gt; ，使用的正则是 &lt;code&gt;file:.*[a-z0-9-]\\{34\\}\/&lt;/code&gt; 。
 &lt;/p&gt;
 
 &lt;p&gt;

@@ -113,11 +113,7 @@
 </div>
 
 <p>
-其中用到了 <code>string-match</code> 可以在 GNU Emacs Lisp 手册中找到<sup><a id="fnr.1" class="footref" href="posts/org2nikola-image-display/#fn.1">1</a></sup>。
-</p>
-
-<p>
-然后就重新 <code>org2nikola-export-subtree</code> 就可以发布博客了。
+其中用到了 <code>string-match</code> 可以在 GNU Emacs Lisp 手册中找到<sup><a id="fnr.1" class="footref" href="posts/org2nikola-image-display/#fn.1">1</a></sup>。然后重新 <code>org2nikola-export-subtree</code> 就可以发布博客了。
 </p>
 
 <p>
@@ -126,7 +122,19 @@
 </p>
 
 <p>
-需要将前面的 <code>https://raw.githubusercontent.com/fpGHwd/fpghwd.github.io/master/images/</code> 替换为 <code>https://raw.githubusercontent.com/fpGHwd/fpghwd.github.io/master/images/</code> 。
+<b>获取图片的地址</b>
+</p>
+
+<p>
+我需要将图片的地址拿到并复制到 nikola 自己的 images 目录，这样 nikola 在发布的时候会图片做一些自己的处理，然后放到 output/images 中。使用的正则是 <code>\\/home.*[a-z0-9-]\\{34\\}.\\{27\\}.png</code>
+</p>
+
+<p>
+<b>替换的内容</b>
+</p>
+
+<p>
+我需要将前面的 <code>https://raw.githubusercontent.com/fpGHwd/fpghwd.github.io/master/images/</code> 替换为 <code>https://raw.githubusercontent.com/fpGHwd/fpghwd.github.io/master/images/</code> ，使用的正则是 <code>file:.*[a-z0-9-]\\{34\\}\/</code> 。
 </p>
 
 <p>
