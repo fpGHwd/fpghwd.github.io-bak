@@ -19,7 +19,7 @@
  </url>
  <url>
   <loc>https://fpghwd.github.io/archive.html</loc>
-  <lastmod>2020-09-17T01:13:00Z</lastmod>
+  <lastmod>2020-09-17T03:35:00Z</lastmod>
  </url>
  <url>
   <loc>https://fpghwd.github.io/authors/</loc>
@@ -99,7 +99,7 @@
  </url>
  <url>
   <loc>https://fpghwd.github.io/index-1.html</loc>
-  <lastmod>2020-09-17T01:13:00Z</lastmod>
+  <lastmod>2020-09-17T03:35:00Z</lastmod>
  </url>
  <url>
   <loc>https://fpghwd.github.io/listings/</loc>
@@ -224,6 +224,10 @@
  <url>
   <loc>https://fpghwd.github.io/posts/no-news-is-good-news/</loc>
   <lastmod>2020-08-25T02:58:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://fpghwd.github.io/posts/org2nikola-image-display/</loc>
+  <lastmod>2020-09-17T03:35:00Z</lastmod>
  </url>
  <url>
   <loc>https://fpghwd.github.io/posts/questions-that-create-reality/</loc>

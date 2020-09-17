@@ -12,7 +12,7 @@
 <link rel="alternate" type="application/rss+xml" title="RSS" hreflang="en" href="rss.xml">
 <link rel="canonical" href="https://fpghwd.github.io/">
 <link rel="next" href="index-1.html" type="text/html">
-<!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="posts/leetcode700-flood-fill/" type="text/html">
+<!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="posts/org2nikola-image-display/" type="text/html">
 </head>
 <body>
 <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
@@ -69,7 +69,69 @@
     
         
     <div class="postindex">
-            <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/leetcode700-flood-fill/" class="u-url">Leetcode700 Flood Fill</a></h1>
+            <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/org2nikola-image-display/" class="u-url">Org2nikola image display</a></h1>
+                <div class="metadata">
+                    <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                        suzumiya natsuhi
+                    </span></p>
+            <p class="dateline">
+            <a href="posts/org2nikola-image-display/" rel="bookmark">
+            <time class="published dt-published" datetime="2020-09-17T03:35:39+08:00" itemprop="datePublished" title="2020-09-17 03:35">2020-09-17 03:35</time></a>
+            </p>
+                        <p class="commentline">
+        
+    <a href="posts/org2nikola-image-display/#disqus_thread" data-disqus-identifier="cache/posts/org2nikola-image-display.html">Comments</a>
+
+
+                </p>
+</div>
+            </header><div class="e-content entry-content">
+                    <div>
+<ol class="org-ol">
+<li>先<a href="https://github.com/redguardtoo/org2nikola/issues/11">咨询</a>了作者，然后得到了思路：获得一个对 output html 进行自定义 render 的函数，然后修改 html.</li>
+<li>
+<p>
+修改配置文件，将这个自定义函数 <code>org2nikola-process-output-html-function</code> 设置为
+</p>
+<div class="org-src-container">
+
+<pre><code class="lang-lisp">(setq org2nikola-process-output-html-function (lambda (html-text title post-slug)
+                                                (progn
+                                                  (replace-regexp-in-string
+                                                   "file:.*[a-z0-9-]\\{34\\}\/"
+                                                   "https://raw.githubusercontent.com/fpGHwd/fpghwd.github.io/master/images/"
+                                                   html-text))))
+</code></pre>
+
+</div>
+</li>
+
+<li>然后就重新 <code>org2nikola-export-subtree</code> 就可以了</li>
+<li>
+<p>
+当然中间最重要的还是哪个正则表达式，我需要匹配字符串的是：
+</p>
+<div class="org-src-container">
+
+<pre><code class="lang-lisp">
+        (setq test-string "https://raw.githubusercontent.com/fpGHwd/fpghwd.github.io/master/images/_20200825_110429screenshot.png")
+
+</code></pre>
+
+</div>
+
+<p>
+需要将前面的 <code>https://raw.githubusercontent.com/fpGHwd/fpghwd.github.io/master/images/</code> 替换为 <code>https://raw.githubusercontent.com/fpGHwd/fpghwd.github.io/master/images/</code>
+</p>
+</li>
+<li>调试正则表达式，用到了 <code>re-builder</code> 简直不要太好用。</li>
+</ol>
+<div class="figure">
+<p><img src="https://raw.githubusercontent.com/fpGHwd/fpghwd.github.io/master/images/_20200917_113516screenshot.png" alt="_20200917_113516screenshot.png"></p>
+</div>
+</div>
+                </div>
+            </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/leetcode700-flood-fill/" class="u-url">Leetcode700 Flood Fill</a></h1>
                 <div class="metadata">
                     <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                         suzumiya natsuhi
@@ -628,52 +690,6 @@ When I look back to past time without courage, the only thing I cannot forget is
 
 <p>
 如果再有那么一次机会的话，我会选择很直接的表达出来，而不是让这些东西默默成为困扰自己的一部分。因为我觉得这开了一个坏头，造成后面有一些事也发展成类似结果。我认为是自我意识的不足导致的，勇气是自我意识的一个重要的组成部分。
-</p>
-</div>
-                </div>
-            </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/no-news-is-good-news/" class="u-url">No news is good news</a></h1>
-                <div class="metadata">
-                    <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
-                        suzumiya natsuhi
-                    </span></p>
-            <p class="dateline">
-            <a href="posts/no-news-is-good-news/" rel="bookmark">
-            <time class="published dt-published" datetime="2020-08-25T02:52:31+08:00" itemprop="datePublished" title="2020-08-25 02:52">2020-08-25 02:52</time></a>
-            </p>
-                        <p class="commentline">
-        
-    <a href="posts/no-news-is-good-news/#disqus_thread" data-disqus-identifier="cache/posts/no-news-is-good-news.html">Comments</a>
-
-
-                </p>
-</div>
-            </header><div class="e-content entry-content">
-                    <div>
-<p>
-今天看书看到了在如何在应用程序中加载/链接共享库，书中以高性能 Web 服务器的例子来说明，对于一个繁忙的网站，运行时加载和链接共享库对于服务质量的提升意义重大。
-</p>
-
-<p>
-加载和链接共享库用到的是 <code>dlfcn.h</code> 中的 <code>dlopen/dlsym/dlclose</code> 的三个函数。还有最后一个检查前面三个调用情况的函数： <code>dlerror</code> ，声明为：
-</p>
-
-<div class="org-src-container">
-
-<pre><code class="lang-cpp">const char *dlerror(void);
-</code></pre>
-
-</div>
-
-<div class="figure">
-<p><img src="https://raw.githubusercontent.com/fpGHwd/fpghwd.github.io/master/images/_20200825_110429screenshot.png" alt="_20200825_110429screenshot.png"></p>
-</div>
-
-<p>
-如果调用前三个函数没有发生错误，则返回NULL。我想起了以前看过的K&amp;R的函数返回值如果为0则是运行成功，当时还特意想着为什么这么来设计，还学到了标题的那句话“没有消息就是好消息”。
-</p>
-
-<p>
-当然其实要说：“成功都是一样的，失败各有各的不同的原因”也是没有问题的，毕竟比“失败都是一样的，成功各有各的不同”这句话要更为实诚一点。我觉得这说明从失败中获取原因是有价值的，而从成功中找原因应该没有什么大的价值吧。怎么回事，好像顺手黑了成功学一把，这不是我的本意。
 </p>
 </div>
                 </div>
