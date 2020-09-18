@@ -1,5 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Dichotomy</title><link>https://fpghwd.github.io/</link><description>To iterate is human, to recurse, divine</description><atom:link href="https://fpghwd.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;suzumiya natsuhi&lt;/a&gt; </copyright><lastBuildDate>Fri, 18 Sep 2020 04:32:41 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Org2nikola image displaying</title><link>https://fpghwd.github.io/posts/org2nikola-image-display/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Dichotomy</title><link>https://fpghwd.github.io/</link><description>To iterate is human, to recurse, divine</description><atom:link href="https://fpghwd.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;suzumiya natsuhi&lt;/a&gt; </copyright><lastBuildDate>Fri, 18 Sep 2020 09:06:29 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Replace outbound in vmess-url(GFW) with your down v2ray config file</title><link>https://fpghwd.github.io/posts/replace-outbound-in-vmess-urlgfw-with-your-down-v2ray-config-file/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;ul class="org-ul"&gt;
+&lt;li&gt;&lt;p&gt;
+目标
+&lt;/p&gt;
+
+&lt;p&gt;
+目标是将 vmess-url 转换成可用的 v2ray 配置文件，抽取其中的 outbounds[0] 替换自定义的 v2ray 配置文件 outbounds[0] 部分。因为自定义的设置比如路由还有 inbounds 已经有而且不打算更改。
+&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;
+Vmess-url.info
+&lt;/p&gt;
+
+&lt;p&gt;
+将所有的 vmess urls 存入一个文件 &lt;code&gt;vmess-url.info&lt;/code&gt; 。
+&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;
+Shell json 文件操作
+&lt;/p&gt;
+
+&lt;p&gt;
+安装 v2ray-tools: &lt;code&gt;npm -g install v2ray-tools&lt;/code&gt; 。
+&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;
+转换和重启服务脚本
+&lt;/p&gt;
+
+&lt;div class="org-src-container"&gt;
+
+&lt;pre&gt;&lt;code class="lang-shell"&gt;
+    vmess_file_path=$1
+    line_num=$2
+    config_file_path=$3
+    password=$4
+
+    line=`sed -n $(line_num)p $vmess_file_path`
+    result=`v2ray-tools vmess2config --port 8080 --url $line`
+    outbound0=`echo $result | jq '.outbounds[0]'`
+    config=`cat "/etc/v2ray/config.json"`
+    replace_config=`echo $config | jq -r ".outbounds[0]=$outbound0"`
+    echo $password | sudo -S bash -c "echo '$replace_config' &amp;gt; $config_file_path"
+
+    # usage: vmess-url-to-config-json.sh ~/vmess-url.info 2 ~/config.json "password"
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;/div&gt;
+
+&lt;p&gt;
+这样就得到了 config.json 文件，然后可用 v2ray 检查： &lt;code&gt;v2ray -test -config ~/config.json&lt;/code&gt; 。
+&lt;/p&gt;
+
+&lt;p&gt;
+然后替换系统的默认配置文件 &lt;code&gt;/etc/v2ray/config.json&lt;/code&gt; ，重启服务 &lt;code&gt;sudo systemctl restart v2ray.service&lt;/code&gt; 。
+&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;</description><guid>https://fpghwd.github.io/posts/replace-outbound-in-vmess-urlgfw-with-your-down-v2ray-config-file/</guid><pubDate>Fri, 18 Sep 2020 00:36:18 GMT</pubDate></item><item><title>Org2nikola image displaying</title><link>https://fpghwd.github.io/posts/org2nikola-image-display/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
 &lt;b&gt;设置&lt;/b&gt;
 &lt;/p&gt;
 
@@ -449,10 +506,4 @@ public:
 &lt;p&gt;
 好的问题正是根本都不需要回答的问题吧，因为答案不过是一些立场而已。但最重要的是有自己的立场，而不是人云亦云随波逐流。
 同时好的问题是激发人的思考的问题：Questions that create reality.
-&lt;/p&gt;&lt;/div&gt;</description><category>life</category><guid>https://fpghwd.github.io/posts/questions-that-create-reality/</guid><pubDate>Wed, 02 Sep 2020 19:05:43 GMT</pubDate></item><item><title>Courage and Self</title><link>https://fpghwd.github.io/posts/courage-and-self/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
-When I look back to past time without courage, the only thing I cannot forget is I didn’t tell the teacher beside me to stop ticking her shoes upon chair in NHEEE. For me, it’s an apparent evidence that lacking courage is my weakness.
-&lt;/p&gt;
-
-&lt;p&gt;
-如果再有那么一次机会的话，我会选择很直接的表达出来，而不是让这些东西默默成为困扰自己的一部分。因为我觉得这开了一个坏头，造成后面有一些事也发展成类似结果。我认为是自我意识的不足导致的，勇气是自我意识的一个重要的组成部分。
-&lt;/p&gt;&lt;/div&gt;</description><category>life</category><guid>https://fpghwd.github.io/posts/courage-and-self/</guid><pubDate>Mon, 31 Aug 2020 08:20:23 GMT</pubDate></item></channel></rss>
+&lt;/p&gt;&lt;/div&gt;</description><category>life</category><guid>https://fpghwd.github.io/posts/questions-that-create-reality/</guid><pubDate>Wed, 02 Sep 2020 19:05:43 GMT</pubDate></item></channel></rss>

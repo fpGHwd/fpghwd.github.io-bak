@@ -19,7 +19,7 @@
  </url>
  <url>
   <loc>https://fpghwd.github.io/archive.html</loc>
-  <lastmod>2020-09-18T08:36:00Z</lastmod>
+  <lastmod>2020-09-18T09:06:00Z</lastmod>
  </url>
  <url>
   <loc>https://fpghwd.github.io/authors/</loc>
@@ -99,7 +99,7 @@
  </url>
  <url>
   <loc>https://fpghwd.github.io/index-1.html</loc>
-  <lastmod>2020-09-18T08:36:00Z</lastmod>
+  <lastmod>2020-09-18T09:06:00Z</lastmod>
  </url>
  <url>
   <loc>https://fpghwd.github.io/listings/</loc>
@@ -236,6 +236,10 @@
  <url>
   <loc>https://fpghwd.github.io/posts/recent-status/</loc>
   <lastmod>2020-07-28T12:07:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://fpghwd.github.io/posts/replace-outbound-in-vmess-urlgfw-with-your-down-v2ray-config-file/</loc>
+  <lastmod>2020-09-18T09:06:00Z</lastmod>
  </url>
  <url>
   <loc>https://fpghwd.github.io/posts/shi-yong-workgroups2-guan-li-emacs-de-session/</loc>

@@ -1,0 +1,58 @@
+<ul class="org-ul">
+<li><p>
+目标
+</p>
+
+<p>
+目标是将 vmess-url 转换成可用的 v2ray 配置文件，抽取其中的 outbounds[0] 替换自定义的 v2ray 配置文件 outbounds[0] 部分。因为自定义的设置比如路由还有 inbounds 已经有而且不打算更改。
+</p></li>
+
+<li><p>
+Vmess-url.info
+</p>
+
+<p>
+将所有的 vmess urls 存入一个文件 <code>vmess-url.info</code> 。
+</p></li>
+
+<li><p>
+Shell json 文件操作
+</p>
+
+<p>
+安装 v2ray-tools: <code>npm -g install v2ray-tools</code> 。
+</p></li>
+
+<li><p>
+转换和重启服务脚本
+</p>
+
+<div class="org-src-container">
+
+<pre><code class="lang-shell">
+    vmess_file_path=$1
+    line_num=$2
+    config_file_path=$3
+    password=$4
+
+    line=`sed -n $(line_num)p $vmess_file_path`
+    result=`v2ray-tools vmess2config --port 8080 --url $line`
+    outbound0=`echo $result | jq '.outbounds[0]'`
+    config=`cat "/etc/v2ray/config.json"`
+    replace_config=`echo $config | jq -r ".outbounds[0]=$outbound0"`
+    echo $password | sudo -S bash -c "echo '$replace_config' &gt; $config_file_path"
+
+    # usage: vmess-url-to-config-json.sh ~/vmess-url.info 2 ~/config.json "password"
+    
+</code></pre>
+
+</div>
+
+<p>
+这样就得到了 config.json 文件，然后可用 v2ray 检查： <code>v2ray -test -config ~/config.json</code> 。
+</p>
+
+<p>
+然后替换系统的默认配置文件 <code>/etc/v2ray/config.json</code> ，重启服务 <code>sudo systemctl restart v2ray.service</code> 。
+</p></li>
+</ul>
