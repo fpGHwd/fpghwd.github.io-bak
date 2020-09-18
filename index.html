@@ -89,6 +89,16 @@
                     <ul class="org-ul">
 <li>
 <p>
+v2ray on linux
+</p>
+
+<p>
+v2ray 在 linux 平台上<a href="https://github.com/v2ray/v2ray-core/issues/1517">并不也不计划</a>支持将 vmess-url 转换成可用的 v2ray 配置文件（我猜考虑到这些有端口和系统代理设置而在 linux 平台上这些是单独的功能）。也有人使用 python 脚本转换，<a href="https://github.com/boypt/vmess2json">代码太长也没有仔细看</a>。不过我想到自己已经有自己的配置文件，即使转化 vmess url 也不能完全部用，而有用的部分是 outbound 即出口部分（提供 v2ray 服务的主机）相关，所以打断取出 vmess url 的 outbound 部分合并到现有的 <i>/etc/v2ray/config.json</i> 。
+</p>
+</li>
+
+<li>
+<p>
 目标
 </p>
 
@@ -125,17 +135,16 @@ vmess urls
 <div class="org-src-container">
 
 <pre><code class="lang-shell">
-    vmess_file_path=$1
-    line_num=$2
-    config_file_path=$3
-    password=$4
+    vmess_file_path=$1      # vmdss-url.info 路径
+    line_num=$2             # 使用的 vmess-url 行号
+    config_file_path=$3     # 待合并的原配置。一般是 /etc/v2ray/config.json
 
-    line=`sed -n $(line_num)p $vmess_file_path`
-    result=`v2ray-tools vmess2config --port 8080 --url $line`
-    outbound0=`echo $result | jq '.outbounds[0]'`
-    config=`cat "/etc/v2ray/config.json"`
-    replace_config=`echo $config | jq -r ".outbounds[0]=$outbound0"`
-    echo $password | sudo -S bash -c "echo '$replace_config' &gt; $config_file_path"
+    line=`sed -n $(line_num)p $vmess_file_path`                         # 获取 vmess-url 
+    result=`v2ray-tools vmess2config --port 8080 --url $line`           # 利用 v2ray-tools 生成配置文件
+    outbound0=`echo $result | jq '.outbounds[0]'`                       # 获取生成配置文件的 outbounds[0] 部分
+    config=`cat "/etc/v2ray/config.json"`                               # 获取原配置
+    replace_config=`echo $config | jq -r ".outbounds[0]=$outbound0"`    # 替换原配置的 outbounds[0] 为 vmess-url 的 outbounds[0]
+    echo '$replace_config' &gt; $config_file_path                          # 写出文件，也可以直接写入 /etc/v2ray/config.json 需要 root 权限
 
     # usage: vmess-url-to-config-json.sh ~/vmess-url.info 2 ~/config.json "password"
 
