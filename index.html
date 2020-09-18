@@ -138,15 +138,16 @@ vmess urls
     vmess_file_path=$1      # vmdss-url.info 路径
     line_num=$2             # 使用的 vmess-url 行号
     config_file_path=$3     # 待合并的原配置。一般是 /etc/v2ray/config.json
+    output_config_file_path=$4  # 合并后的 config.json
 
     line=`sed -n $(line_num)p $vmess_file_path`                         # 获取 vmess-url 
     result=`v2ray-tools vmess2config --port 8080 --url $line`           # 利用 v2ray-tools 生成配置文件
     outbound0=`echo $result | jq '.outbounds[0]'`                       # 获取生成配置文件的 outbounds[0] 部分
     config=`cat "/etc/v2ray/config.json"`                               # 获取原配置
     replace_config=`echo $config | jq -r ".outbounds[0]=$outbound0"`    # 替换原配置的 outbounds[0] 为 vmess-url 的 outbounds[0]
-    echo '$replace_config' &gt; $config_file_path                          # 写出文件，也可以直接写入 /etc/v2ray/config.json 需要 root 权限
+    echo '$replace_config' &gt; $output_config_file_path                   # 写出文件，也可以直接写入 /etc/v2ray/config.json 需要 root 权限
 
-    # usage: vmess-url-to-config-json.sh ~/vmess-url.info 2 ~/config.json "password"
+    # usage: vmess-url-to-config-json.sh ~/vmess-url.info 2 /etc/config/config.json ~/config.json
 
 </code></pre>
 

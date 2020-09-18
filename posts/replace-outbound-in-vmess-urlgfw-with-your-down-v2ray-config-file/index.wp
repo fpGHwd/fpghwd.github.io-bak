@@ -41,15 +41,16 @@ vmess urls
     vmess_file_path=$1      # vmdss-url.info &#36335;&#24452;
     line_num=$2             # &#20351;&#29992;&#30340; vmess-url &#34892;&#21495;
     config_file_path=$3     # &#24453;&#21512;&#24182;&#30340;&#21407;&#37197;&#32622;&#12290;&#19968;&#33324;&#26159; /etc/v2ray/config.json
+    output_config_file_path=$4  # &#21512;&#24182;&#21518;&#30340; config.json
 
     line=`sed -n $(line_num)p $vmess_file_path`                         # &#33719;&#21462; vmess-url 
     result=`v2ray-tools vmess2config --port 8080 --url $line`           # &#21033;&#29992; v2ray-tools &#29983;&#25104;&#37197;&#32622;&#25991;&#20214;
     outbound0=`echo $result | jq '.outbounds[0]'`                       # &#33719;&#21462;&#29983;&#25104;&#37197;&#32622;&#25991;&#20214;&#30340; outbounds[0] &#37096;&#20998;
     config=`cat "/etc/v2ray/config.json"`                               # &#33719;&#21462;&#21407;&#37197;&#32622;
     replace_config=`echo $config | jq -r ".outbounds[0]=$outbound0"`    # &#26367;&#25442;&#21407;&#37197;&#32622;&#30340; outbounds[0] &#20026; vmess-url &#30340; outbounds[0]
-    echo '$replace_config' &gt; $config_file_path                          # &#20889;&#20986;&#25991;&#20214;&#65292;&#20063;&#21487;&#20197;&#30452;&#25509;&#20889;&#20837; /etc/v2ray/config.json &#38656;&#35201; root &#26435;&#38480;
+    echo '$replace_config' &gt; $output_config_file_path                   # &#20889;&#20986;&#25991;&#20214;&#65292;&#20063;&#21487;&#20197;&#30452;&#25509;&#20889;&#20837; /etc/v2ray/config.json &#38656;&#35201; root &#26435;&#38480;
 
-    # usage: vmess-url-to-config-json.sh ~/vmess-url.info 2 ~/config.json "password"
+    # usage: vmess-url-to-config-json.sh ~/vmess-url.info 2 /etc/config/config.json ~/config.json
 
 </code></pre>
 
