@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Dichotomy</title><link>https://fpghwd.github.io/</link><description>To iterate is human, to recurse, divine</description><atom:link href="https://fpghwd.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;suzumiya natsuhi&lt;/a&gt; </copyright><lastBuildDate>Fri, 18 Sep 2020 09:11:14 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Replace outbound in vmess-url(GFW) with v2ray config.json</title><link>https://fpghwd.github.io/posts/replace-outbound-in-vmess-urlgfw-with-your-down-v2ray-config-file/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;ul class="org-ul"&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Dichotomy</title><link>https://fpghwd.github.io/</link><description>To iterate is human, to recurse, divine</description><atom:link href="https://fpghwd.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;suzumiya natsuhi&lt;/a&gt; </copyright><lastBuildDate>Fri, 18 Sep 2020 09:18:24 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Replace outbound in vmess-url(GFW) with v2ray config.json</title><link>https://fpghwd.github.io/posts/replace-outbound-in-vmess-urlgfw-with-your-down-v2ray-config-file/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;ul class="org-ul"&gt;
 &lt;li&gt;&lt;p&gt;
 目标
 &lt;/p&gt;
@@ -99,7 +99,7 @@ vmess urls
 &lt;/p&gt;
 
 &lt;p&gt;
-我需要将图片的地址拿到并复制到 nikola 自己的 images 目录，这样 nikola 在发布的时候会对图片做一些自己的处理，然后放到 output/images 中。使用的正则是 &lt;code&gt;\\/home\\/.+?\\.\\(png\\|jpg\\|jpeg\\|bmp\\)&lt;/code&gt; 。
+我需要将图片的地址拿到并复制到 nikola/images 目录，这样 nikola 在发布的时候会对图片做一些处理，然后输出到 output/images 中。使用的正则是 &lt;code&gt;\\/home\\/.+?\\.\\(png\\|jpg\\|jpeg\\|bmp\\)&lt;/code&gt; 。
 &lt;/p&gt;
 
 &lt;div class="figure"&gt;
@@ -112,7 +112,7 @@ vmess urls
 &lt;/p&gt;
 
 &lt;p&gt;
-我需要将前面的 &lt;code&gt;https://raw.githubusercontent.com/fpGHwd/fpghwd.github.io/master/images/&lt;/code&gt; 替换为 &lt;code&gt;https://raw.githubusercontent.com/fpGHwd/fpghwd.github.io/master/images/&lt;/code&gt; ，使用的正则是 &lt;code&gt;"file:.+?\\/[a-z0-9-]\\{34\\}\\/&lt;/code&gt; 。
+我需要将 &lt;code&gt;https://raw.githubusercontent.com/fpGHwd/fpghwd.github.io/master/images/&lt;/code&gt; 替换为 &lt;code&gt;https://raw.githubusercontent.com/fpGHwd/fpghwd.github.io/master/images/&lt;/code&gt; ，使用的正则是 &lt;code&gt;"file:.+?\\/[a-z0-9-]\\{34\\}\\/&lt;/code&gt; 。
 &lt;/p&gt;
 
 &lt;div class="figure"&gt;

@@ -164,7 +164,7 @@
 </p>
 
 <p>
-我需要将图片的地址拿到并复制到 nikola 自己的 images 目录，这样 nikola 在发布的时候会对图片做一些自己的处理，然后放到 output/images 中。使用的正则是 <code>\\/home\\/.+?\\.\\(png\\|jpg\\|jpeg\\|bmp\\)</code> 。
+我需要将图片的地址拿到并复制到 nikola/images 目录，这样 nikola 在发布的时候会对图片做一些处理，然后输出到 output/images 中。使用的正则是 <code>\\/home\\/.+?\\.\\(png\\|jpg\\|jpeg\\|bmp\\)</code> 。
 </p>
 
 <div class="figure">
@@ -176,7 +176,7 @@
 </p>
 
 <p>
-我需要将前面的 <code>https://raw.githubusercontent.com/fpGHwd/fpghwd.github.io/master/images/</code> 替换为 <code>https://raw.githubusercontent.com/fpGHwd/fpghwd.github.io/master/images/</code> ，使用的正则是 <code>"file:.+?\\/[a-z0-9-]\\{34\\}\\/</code> 。
+我需要将 <code>https://raw.githubusercontent.com/fpGHwd/fpghwd.github.io/master/images/</code> 替换为 <code>https://raw.githubusercontent.com/fpGHwd/fpghwd.github.io/master/images/</code> ，使用的正则是 <code>"file:.+?\\/[a-z0-9-]\\{34\\}\\/</code> 。
 </p>
 
 <div class="figure">
