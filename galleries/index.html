@@ -74,15 +74,13 @@
 <nav class="breadcrumbs"><ul class="breadcrumb">
 <li class="breadcrumb-item active">galleries</li>
 </ul></nav><h1>galleries</h1>
-            <ul>
-<li><a href="demo/">📂 Nikola Tesla</a></li>
-            </ul>
+
 <div id="gallery_container"></div>
 
         <!--End of body content-->
 
         <footer id="footer">
-            Contents © 2020         <a href="mailto:ggwdwhu@gmail.com">suzumiya haruhi</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
+            Contents © 2020         <a href="mailto:ggwdwhu@gmail.com">suzumiya natsuhi</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
             
             
         </footer>
@@ -90,7 +88,10 @@
 </div>
 
 
-        <script src="../assets/js/all-nocdn.js"></script><script src="../assets/js/justified-layout.min.js"></script><script src="../assets/js/gallery.min.js"></script><script>
+        <script src="../assets/js/all-nocdn.js"></script><script src="https://polyfill.io/v3/polyfill.js?features=Intl.RelativeTimeFormat.%7Elocale.en"></script><script src="../assets/js/luxon.min.js"></script><!-- fancy dates --><script>
+        luxon.Settings.defaultLocale = "en";
+        fancydates(2, {"preset": false, "format": "yyyy-MM-dd HH:mm"});
+        </script><!-- end fancy dates --><script src="../assets/js/justified-layout.min.js"></script><script src="../assets/js/gallery.min.js"></script><script>
 var jsonContent = [];
 var thumbnailSize = 180;
 renderGallery(jsonContent, thumbnailSize);
