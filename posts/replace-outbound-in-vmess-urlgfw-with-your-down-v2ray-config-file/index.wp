@@ -4,7 +4,7 @@
 </p>
 
 <p>
-目标是将 vmess-url 转换成可用的 v2ray 配置文件，抽取其中的 outbounds[0] 替换自定义的 v2ray 配置文件 config.json outbounds[0] 部分。因为自定义文件设置的路由还有 inbounds 已经有而且不打算更改。
+目标是将 vmess-url 转换成可用的 v2ray 配置文件，抽取其中的 outbounds[0] 替换自定义的 v2ray 配置文件 config.json 的 outbounds[0] 部分。因为自定义文件设置的路由还有 inbounds 已经有而且不打算更改。
 </p></li>
 
 <li><p>
