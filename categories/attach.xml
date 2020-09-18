@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Dichotomy (Posts about ATTACH)</title><link>https://fpghwd.github.io/</link><description></description><atom:link href="https://fpghwd.github.io/categories/attach.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;suzumiya natsuhi&lt;/a&gt; </copyright><lastBuildDate>Fri, 18 Sep 2020 01:14:48 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Org2nikola image displaying</title><link>https://fpghwd.github.io/posts/org2nikola-image-display/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Dichotomy (Posts about ATTACH)</title><link>https://fpghwd.github.io/</link><description></description><atom:link href="https://fpghwd.github.io/categories/attach.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;suzumiya natsuhi&lt;/a&gt; </copyright><lastBuildDate>Fri, 18 Sep 2020 01:31:26 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Org2nikola image displaying</title><link>https://fpghwd.github.io/posts/org2nikola-image-display/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
 &lt;b&gt;设置&lt;/b&gt;
 &lt;/p&gt;
 
@@ -52,7 +52,7 @@
 &lt;/p&gt;
 
 &lt;p&gt;
-我需要将前面的 &lt;code&gt;https://raw.githubusercontent.com/fpGHwd/fpghwd.github.io/master/images/&lt;/code&gt; 替换为 &lt;code&gt;https://raw.githubusercontent.com/fpGHwd/fpghwd.github.io/master/images/&lt;/code&gt; ，使用的正则是 &lt;code&gt;file:.*[a-z0-9-]\\{34\\}\/&lt;/code&gt; 。
+我需要将前面的 &lt;code&gt;file:///home/wd/Dropbox/text/org/.attach/44/fb0c61-59f7-4c20-b6a3-9670b19c059b/&lt;/code&gt; 替换为 &lt;code&gt;https://raw.githubusercontent.com/fpGHwd/fpghwd.github.io/master/images/&lt;/code&gt; ，使用的正则是 &lt;code&gt;file:.*[a-z0-9-]\\{34\\}\/&lt;/code&gt; 。
 &lt;/p&gt;
 
 &lt;p&gt;
@@ -68,7 +68,7 @@
 &lt;/p&gt;
 
 &lt;p&gt;
-&lt;b&gt;测试多张图片2&lt;/b&gt;
+&lt;b&gt;测试多张图片&lt;/b&gt;
 &lt;/p&gt;
 
 &lt;p&gt;
