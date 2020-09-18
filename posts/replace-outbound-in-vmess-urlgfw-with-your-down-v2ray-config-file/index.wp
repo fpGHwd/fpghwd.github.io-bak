@@ -8,15 +8,15 @@
 </p></li>
 
 <li><p>
-Vmess-url.info
+vmess urls
 </p>
 
 <p>
-将所有的 vmess urls 存入一个文件 <code>vmess-url.info</code> 。
+将你得到的所有的 vmess urls 存入一个文件 <code>vmess-url.info</code> 。
 </p></li>
 
 <li><p>
-Shell json 文件操作
+命令行 json 操作依赖
 </p>
 
 <p>
