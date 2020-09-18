@@ -4,7 +4,7 @@
 </p>
 
 <p>
-目标是将 vmess-url 转换成可用的 v2ray 配置文件，抽取其中的 outbounds[0] 替换自定义的 v2ray 配置文件 outbounds[0] 部分。因为自定义的设置比如路由还有 inbounds 已经有而且不打算更改。
+目标是将 vmess-url 转换成可用的 v2ray 配置文件，抽取其中的 outbounds[0] 替换自定义的 v2ray 配置文件 config.json outbounds[0] 部分。因为自定义文件设置的路由还有 inbounds 已经有而且不打算更改。
 </p></li>
 
 <li><p>
@@ -24,7 +24,7 @@ Shell json 文件操作
 </p></li>
 
 <li><p>
-转换和重启服务脚本
+转换 shell 脚本
 </p>
 
 <div class="org-src-container">
@@ -43,16 +43,12 @@ Shell json 文件操作
     echo $password | sudo -S bash -c "echo '$replace_config' &gt; $config_file_path"
 
     # usage: vmess-url-to-config-json.sh ~/vmess-url.info 2 ~/config.json "password"
-    
+
 </code></pre>
 
 </div>
 
 <p>
-这样就得到了 config.json 文件，然后可用 v2ray 检查： <code>v2ray -test -config ~/config.json</code> 。
-</p>
-
-<p>
-然后替换系统的默认配置文件 <code>/etc/v2ray/config.json</code> ，重启服务 <code>sudo systemctl restart v2ray.service</code> 。
+这样就得到了 config.json 文件，然后可用 v2ray 检查： <code>v2ray -test -config ~/config.json</code> 。可替换系统的默认配置文件 <code>/etc/v2ray/config.json</code> ，并重启服务 <code>sudo systemctl restart v2ray.service</code> 。
 </p></li>
 </ul>
