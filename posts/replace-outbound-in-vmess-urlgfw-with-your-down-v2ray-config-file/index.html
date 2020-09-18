@@ -19,7 +19,7 @@
 
 
 
-v2ray 在 linux 平台上并不也不计划支持将 vmess-url 转换成可用的 v2ray 配置文件（我猜考虑到这些有端口和系统代理设置而在 linux 平台上这些是单独的功能）。也有人使用 python 脚本转换，代码太长也没有仔细看。不过我想到自己已经有自己的配置文件，即使转化 vmess url 也不能完全部用，而有用的部分是 outbound 即">
+v2ray 在 linux 平台上并不也不计划支持将 vmess-url 转换成可用的 v2ray 配置文件（我猜考虑到这些有端口和系统代理设置而在 linux 平台上这些是单独的功能）。也有人使用 python 脚本转换，代码太长也没有仔细看。不过我想到自己已经有在使用的配置文件，即使转化 vmess url 也不能完全用，有用的部分是 outbounds （">
 <meta property="og:type" content="article">
 <meta property="article:published_time" content="2020-09-18T08:36:18+08:00">
 <meta property="article:tag" content="openSUSE">
@@ -110,7 +110,7 @@ v2ray on linux
 </p>
 
 <p>
-v2ray 在 linux 平台上<a href="https://github.com/v2ray/v2ray-core/issues/1517">并不也不计划</a>支持将 vmess-url 转换成可用的 v2ray 配置文件（我猜考虑到这些有端口和系统代理设置而在 linux 平台上这些是单独的功能）。也有人使用 python 脚本转换，<a href="https://github.com/boypt/vmess2json">代码太长也没有仔细看</a>。不过我想到自己已经有自己的配置文件，即使转化 vmess url 也不能完全部用，而有用的部分是 outbound 即出口部分（提供 v2ray 服务的主机）相关，所以打断取出 vmess url 的 outbound 部分合并到现有的 <i>/etc/v2ray/config.json</i> 。
+v2ray 在 linux 平台上<a href="https://github.com/v2ray/v2ray-core/issues/1517">并不也不计划</a>支持将 vmess-url 转换成可用的 v2ray 配置文件（我猜考虑到这些有端口和系统代理设置而在 linux 平台上这些是单独的功能）。也有人使用 python 脚本转换，<a href="https://github.com/boypt/vmess2json">代码太长也没有仔细看</a>。不过我想到自己已经有在使用的配置文件，即使转化 vmess url 也不能完全用，有用的部分是 outbounds （即出口部分，提供 v2ray 服务的主机相关），所以打断取出 vmess url 的 outbound 部分合并到现有的 <i>/etc/v2ray/config.json</i> 中使用。
 </p>
 </li>
 
@@ -120,7 +120,7 @@ v2ray 在 linux 平台上<a href="https://github.com/v2ray/v2ray-core/issues/151
 </p>
 
 <p>
-目标是将 vmess-url 转换成可用的 v2ray 配置文件，抽取其中的 outbounds[0] 替换自定义的 v2ray 配置文件 config.json 的 outbounds[0] 部分。因为自定义文件设置的路由还有 inbounds 已经有而且不打算更改。
+目标是将 vmess-url 转换成可用的 v2ray 配置文件，然后抽取其中的 outbounds[0] 替换原有 v2ray 配置文件的 outbounds[0] 部分。因为原有文件设置的路由还有 inbounds 已经有而且不打算更改。
 </p>
 </li>
 
@@ -130,17 +130,17 @@ vmess urls
 </p>
 
 <p>
-将你得到的所有的 vmess urls 存入一个文件 <code>vmess-url.info</code> 。
+将可得的所有的 vmess urls 存入一个文件 <code>vmess-url.info</code> 。
 </p>
 </li>
 
 <li>
 <p>
-命令行 json 操作依赖
+命令行 json 操作
 </p>
 
 <p>
-安装 v2ray-tools: <code>npm -g install v2ray-tools</code> 。
+安装 v2ray-tools 工具: <code>npm -g install v2ray-tools</code> 。
 </p>
 </li>
 
@@ -157,7 +157,7 @@ vmess urls
     config_file_path=$3     # 待合并的原配置。一般是 /etc/v2ray/config.json
     output_config_file_path=$4  # 合并后的 config.json
 
-    line=`sed -n $(line_num)p $vmess_file_path`                         # 获取 vmess-url 
+    line=`sed -n $(line_num)p $vmess_file_path`                         # 获取 vmess-url
     result=`v2ray-tools vmess2config --port 8080 --url $line`           # 利用 v2ray-tools 生成配置文件
     outbound0=`echo $result | jq '.outbounds[0]'`                       # 获取生成配置文件的 outbounds[0] 部分
     config=`cat "/etc/v2ray/config.json"`                               # 获取原配置
