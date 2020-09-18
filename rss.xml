@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Dichotomy</title><link>https://fpghwd.github.io/</link><description>To iterate is human, to recurse, divine</description><atom:link href="https://fpghwd.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;suzumiya natsuhi&lt;/a&gt; </copyright><lastBuildDate>Fri, 18 Sep 2020 04:10:30 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Org2nikola image displaying</title><link>https://fpghwd.github.io/posts/org2nikola-image-display/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Dichotomy</title><link>https://fpghwd.github.io/</link><description>To iterate is human, to recurse, divine</description><atom:link href="https://fpghwd.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;suzumiya natsuhi&lt;/a&gt; </copyright><lastBuildDate>Fri, 18 Sep 2020 04:30:17 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Org2nikola image displaying</title><link>https://fpghwd.github.io/posts/org2nikola-image-display/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
 &lt;b&gt;设置&lt;/b&gt;
 &lt;/p&gt;
 
 &lt;p&gt;
-先&lt;a href="https://github.com/redguardtoo/org2nikola/issues/11"&gt;咨询&lt;/a&gt;了作者，然后得到了思路：获得一个对 output html 进行自定义 render 的函数，然后修改 html 。
+先&lt;a href="https://github.com/redguardtoo/org2nikola/issues/11"&gt;咨询&lt;/a&gt;了作者，然后得到了思路：获得一个对 output html 进行自定义 render 的函数，然后自定义修改 html 。
 &lt;/p&gt;
 
 &lt;p&gt;
@@ -13,9 +13,9 @@
 
 &lt;div class="org-src-container"&gt;
 
-&lt;pre&gt;&lt;code class="lang-lisp"&gt;(org2nikola-process-output-html-function
+&lt;pre&gt;&lt;code class="lang-lisp"&gt;(setq org2nikola-process-output-html-function
  (lambda (html-text title post-slug)
-   (progn (let* ((re-str "\\/home\\/.+?\\.png"))
+   (progn (let* ((re-str "\\/home\\/.+?\\.\\(png\\|jpg\\|jpeg\\|bmp\\)"))
             (let* ((files-list (s-match-strings-all re-str html-text)))
               (dolist (file-path files-list)
                 ;; (message (format "file-path: %s" (car file-path)))
@@ -25,13 +25,29 @@
           (replace-regexp-in-string
            "file:.+?\\/[a-z0-9-]\\{34\\}\\/"
            "https://raw.githubusercontent.com/fpGHwd/fpghwd.github.io/master/images/"
-           html-text))))
+           html-text)))) ;; 这个可用
+
+  ;; (org2nikola-process-output-html-function
+  ;;  (lambda (html-text title post-slug)
+  ;;    (progn
+  ;;      (let* ((re-str "\\/home\\/.+?\\.\\(png\\|jpg\\|jpeg\\|bmp\\)"))
+  ;;        (let* ((files-list (s-match-strings-all re-str html-text)))
+  ;;          (dolist (file-path files-list)
+  ;;            (shell-command
+  ;;             cmd (format "cp %s /home/wd/.config/nikola/images/"
+  ;;                         (car file-path))))))
+  ;;      (replace-regexp-in-string
+  ;;       "\\(file:.+?\\/\\)[0-9a-zA-Z_-]+?\\(.png\\|.jpeg\\|.bmp\\|.gif\\|.jpg\\)"
+  ;;       "https://raw.githubusercontent.com/fpGHwd/fpghwd.github.io/master/images/"
+  ;;       html-text nil nil 1))))
+;; 这个在测试中可以替换 url，但是放到设置中后却不行。
+
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;/div&gt;
 
 &lt;p&gt;
-其中用到了 &lt;code&gt;string-match&lt;/code&gt; 可以在 GNU Emacs Lisp 手册中找到&lt;sup&gt;&lt;a id="fnr.1" class="footref" href="https://fpghwd.github.io/posts/org2nikola-image-display/#fn.1"&gt;1&lt;/a&gt;&lt;/sup&gt;。然后重新 &lt;code&gt;org2nikola-export-subtree&lt;/code&gt; 就可以发布博客了。
+其中用到了 &lt;code&gt;s-match-strings-all&lt;/code&gt; 和 &lt;code&gt;replace-regexp-in-string&lt;/code&gt; 两个函数。
 &lt;/p&gt;
 
 &lt;p&gt;
@@ -40,42 +56,38 @@
 &lt;/p&gt;
 
 &lt;p&gt;
-&lt;b&gt;获取图片的地址&lt;/b&gt;
+&lt;b&gt;获取图片地址&lt;/b&gt;
 &lt;/p&gt;
 
 &lt;p&gt;
-我需要将图片的地址拿到并复制到 nikola 自己的 images 目录，这样 nikola 在发布的时候会对图片做一些自己的处理，然后放到 output/images 中。使用的正则是 &lt;code&gt;\\/home.*[a-z0-9-]\\{34\\}.\\{27\\}.png&lt;/code&gt; 。
+我需要将图片的地址拿到并复制到 nikola 自己的 images 目录，这样 nikola 在发布的时候会对图片做一些自己的处理，然后放到 output/images 中。使用的正则是 &lt;code&gt;\\/home\\/.+?\\.\\(png\\|jpg\\|jpeg\\|bmp\\)&lt;/code&gt; 。
+&lt;/p&gt;
+
+&lt;div class="figure"&gt;
+&lt;p&gt;&lt;img src="https://raw.githubusercontent.com/fpGHwd/fpghwd.github.io/master/images/_20200918_123005screenshot.png" alt="_20200918_123005screenshot.png"&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;
+&lt;b&gt;替换图片地址&lt;/b&gt;
 &lt;/p&gt;
 
 &lt;p&gt;
-&lt;b&gt;替换图片本地地址为 github 地址&lt;/b&gt;
+我需要将前面的 &lt;code&gt;https://raw.githubusercontent.com/fpGHwd/fpghwd.github.io/master/images/&lt;/code&gt; 替换为 &lt;code&gt;https://raw.githubusercontent.com/fpGHwd/fpghwd.github.io/master/images/&lt;/code&gt; ，使用的正则是 &lt;code&gt;"file:.+?\\/[a-z0-9-]\\{34\\}\\/&lt;/code&gt; 。
 &lt;/p&gt;
 
-&lt;p&gt;
-我需要将前面的 &lt;code&gt;https://raw.githubusercontent.com/fpGHwd/fpghwd.github.io/master/images/&lt;/code&gt; 替换为 &lt;code&gt;https://raw.githubusercontent.com/fpGHwd/fpghwd.github.io/master/images/&lt;/code&gt; ，使用的正则是 &lt;code&gt;file:.*[a-z0-9-]\\{34\\}\/&lt;/code&gt; 。
+&lt;div class="figure"&gt;
+&lt;p&gt;&lt;img src="https://raw.githubusercontent.com/fpGHwd/fpghwd.github.io/master/images/_20200918_122914screenshot.png" alt="_20200918_122914screenshot.png"&gt;
 &lt;/p&gt;
+&lt;/div&gt;
 
 &lt;p&gt;
-&lt;b&gt;调试正则表达式&lt;/b&gt;
+&lt;b&gt;调试正则&lt;/b&gt;
 &lt;/p&gt;
 
 &lt;p&gt;
 用到了 emacs 自带的 &lt;code&gt;re-builder&lt;/code&gt; 来对当前 buffer 测试正则表达式，很好用。
 &lt;/p&gt;
-
-&lt;div class="figure"&gt;
-&lt;p&gt;&lt;img src="https://raw.githubusercontent.com/fpGHwd/fpghwd.github.io/master/images/_20200917_113516screenshot.png" alt="_20200917_113516screenshot.png"&gt;
-&lt;/p&gt;
-&lt;/div&gt;
-
-&lt;p&gt;
-&lt;b&gt;测试多张图片6&lt;/b&gt;
-&lt;/p&gt;
-
-&lt;div class="figure"&gt;
-&lt;p&gt;&lt;img src="https://raw.githubusercontent.com/fpGHwd/fpghwd.github.io/master/images/_20200918_020909screenshot.png" alt="_20200918_020909screenshot.png"&gt;
-&lt;/p&gt;
-&lt;/div&gt;
 
 &lt;p&gt;
 &lt;b&gt;TODO&lt;/b&gt;
@@ -84,19 +96,7 @@
 &lt;ol class="org-ol"&gt;
 &lt;li&gt;由于没有循环，只能找到第一个图片的字符串然后替换成真实的 url, 需要完善匹配后的操作。（完成）&lt;/li&gt;
 &lt;li&gt;还只能匹配截图这样文件名的图片，需要完善正则表达式。（完成）&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;div id="footnotes"&gt;
-&lt;h3 class="footnotes"&gt;Footnotes: &lt;/h3&gt;
-&lt;div id="text-footnotes"&gt;
-
-&lt;div class="footdef"&gt;&lt;sup&gt;&lt;a id="fn.1" class="footnum" href="https://fpghwd.github.io/posts/org2nikola-image-display/#fnr.1"&gt;1&lt;/a&gt;&lt;/sup&gt; &lt;div class="footpara"&gt;&lt;p class="footpara"&gt;
-&lt;a href="https://www.gnu.org/software/emacs/manual/html_node/elisp/Searching-and-Matching.html"&gt;34 Searching and Matching&lt;/a&gt;
-&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;
-
-
-&lt;/div&gt;
-&lt;/div&gt;&lt;/div&gt;</description><category>ATTACH</category><category>emacs</category><guid>https://fpghwd.github.io/posts/org2nikola-image-display/</guid><pubDate>Wed, 16 Sep 2020 19:35:39 GMT</pubDate></item><item><title>Leetcode700 Flood Fill</title><link>https://fpghwd.github.io/posts/leetcode700-flood-fill/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
+&lt;/ol&gt;&lt;/div&gt;</description><category>ATTACH</category><category>emacs</category><guid>https://fpghwd.github.io/posts/org2nikola-image-display/</guid><pubDate>Wed, 16 Sep 2020 19:35:39 GMT</pubDate></item><item><title>Leetcode700 Flood Fill</title><link>https://fpghwd.github.io/posts/leetcode700-flood-fill/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
 最近做了这道题（&lt;a href="https://leetcode.com/problems/flood-fill/"&gt;733. Flood Fill&lt;/a&gt;）无法提交，用了 gdb 调试可能因为 image 的 size 有点小所以也没有问题。
 &lt;/p&gt;
 

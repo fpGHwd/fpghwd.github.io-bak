@@ -3,7 +3,7 @@
 </p>
 
 <p>
-先<a href="https://github.com/redguardtoo/org2nikola/issues/11">咨询</a>了作者，然后得到了思路：获得一个对 output html 进行自定义 render 的函数，然后修改 html 。
+先<a href="https://github.com/redguardtoo/org2nikola/issues/11">咨询</a>了作者，然后得到了思路：获得一个对 output html 进行自定义 render 的函数，然后自定义修改 html 。
 </p>
 
 <p>
@@ -11,9 +11,9 @@
 </p>
 <div class="org-src-container">
 
-<pre><code class="lang-lisp">(org2nikola-process-output-html-function
+<pre><code class="lang-lisp">(setq org2nikola-process-output-html-function
  (lambda (html-text title post-slug)
-   (progn (let* ((re-str "\\/home\\/.+?\\.png"))
+   (progn (let* ((re-str "\\/home\\/.+?\\.\\(png\\|jpg\\|jpeg\\|bmp\\)"))
             (let* ((files-list (s-match-strings-all re-str html-text)))
               (dolist (file-path files-list)
                 ;; (message (format "file-path: %s" (car file-path)))
@@ -23,13 +23,29 @@
           (replace-regexp-in-string
            "file:.+?\\/[a-z0-9-]\\{34\\}\\/"
            "https://raw.githubusercontent.com/fpGHwd/fpghwd.github.io/master/images/"
-           html-text))))
+           html-text)))) ;; &#36825;&#20010;&#21487;&#29992;
+
+  ;; (org2nikola-process-output-html-function
+  ;;  (lambda (html-text title post-slug)
+  ;;    (progn
+  ;;      (let* ((re-str "\\/home\\/.+?\\.\\(png\\|jpg\\|jpeg\\|bmp\\)"))
+  ;;        (let* ((files-list (s-match-strings-all re-str html-text)))
+  ;;          (dolist (file-path files-list)
+  ;;            (shell-command
+  ;;             cmd (format "cp %s /home/wd/.config/nikola/images/"
+  ;;                         (car file-path))))))
+  ;;      (replace-regexp-in-string
+  ;;       "\\(file:.+?\\/\\)[0-9a-zA-Z_-]+?\\(.png\\|.jpeg\\|.bmp\\|.gif\\|.jpg\\)"
+  ;;       "https://raw.githubusercontent.com/fpGHwd/fpghwd.github.io/master/images/"
+  ;;       html-text nil nil 1))))
+;; &#36825;&#20010;&#22312;&#27979;&#35797;&#20013;&#21487;&#20197;&#26367;&#25442; url&#65292;&#20294;&#26159;&#25918;&#21040;&#35774;&#32622;&#20013;&#21518;&#21364;&#19981;&#34892;&#12290;
+
 </code></pre>
 
 </div>
 
 <p>
-其中用到了 <code>string-match</code> 可以在 GNU Emacs Lisp 手册中找到<sup><a id="fnr.1" class="footref" href="#fn.1">1</a></sup>。然后重新 <code>org2nikola-export-subtree</code> 就可以发布博客了。
+其中用到了 <code>s-match-strings-all</code> 和 <code>replace-regexp-in-string</code> 两个函数。
 </p>
 
 <p>
@@ -38,44 +54,44 @@
 </p>
 
 <p>
-<b>获取图片的地址</b>
+<b>获取图片地址</b>
 </p>
 
 <p>
-我需要将图片的地址拿到并复制到 nikola 自己的 images 目录，这样 nikola 在发布的时候会对图片做一些自己的处理，然后放到 output/images 中。使用的正则是 <code>\\/home.*[a-z0-9-]\\{34\\}.\\{27\\}.png</code> 。
+我需要将图片的地址拿到并复制到 nikola 自己的 images 目录，这样 nikola 在发布的时候会对图片做一些自己的处理，然后放到 output/images 中。使用的正则是 <code>\\/home\\/.+?\\.\\(png\\|jpg\\|jpeg\\|bmp\\)</code> 。
+</p>
+
+
+
+<div class="figure">
+<p><img src="https://raw.githubusercontent.com/fpGHwd/fpghwd.github.io/master/images/_20200918_123005screenshot.png" alt="_20200918_123005screenshot.png" />
+</p>
+</div>
+
+
+<p>
+<b>替换图片地址</b>
 </p>
 
 <p>
-<b>替换图片本地地址为 github 地址</b>
+我需要将前面的 <code>https://raw.githubusercontent.com/fpGHwd/fpghwd.github.io/master/images/</code> 替换为 <code>https://raw.githubusercontent.com/fpGHwd/fpghwd.github.io/master/images/</code> ，使用的正则是 <code>"file:.+?\\/[a-z0-9-]\\{34\\}\\/</code> 。
 </p>
 
-<p>
-我需要将前面的 <code>https://raw.githubusercontent.com/fpGHwd/fpghwd.github.io/master/images/</code> 替换为 <code>https://raw.githubusercontent.com/fpGHwd/fpghwd.github.io/master/images/</code> ，使用的正则是 <code>file:.*[a-z0-9-]\\{34\\}\/</code> 。
+
+
+<div class="figure">
+<p><img src="https://raw.githubusercontent.com/fpGHwd/fpghwd.github.io/master/images/_20200918_122914screenshot.png" alt="_20200918_122914screenshot.png" />
 </p>
+</div>
+
 
 <p>
-<b>调试正则表达式</b>
+<b>调试正则</b>
 </p>
 
 <p>
 用到了 emacs 自带的 <code>re-builder</code> 来对当前 buffer 测试正则表达式，很好用。
 </p>
-
-
-<div class="figure">
-<p><img src="https://raw.githubusercontent.com/fpGHwd/fpghwd.github.io/master/images/_20200917_113516screenshot.png" alt="_20200917_113516screenshot.png" />
-</p>
-</div>
-
-<p>
-<b>测试多张图片6</b>
-</p>
-
-
-<div class="figure">
-<p><img src="https://raw.githubusercontent.com/fpGHwd/fpghwd.github.io/master/images/_20200918_020909screenshot.png" alt="_20200918_020909screenshot.png" />
-</p>
-</div>
 
 <p>
 <b>TODO</b>
@@ -85,14 +101,3 @@
 <li>由于没有循环，只能找到第一个图片的字符串然后替换成真实的 url, 需要完善匹配后的操作。（完成）</li>
 <li>还只能匹配截图这样文件名的图片，需要完善正则表达式。（完成）</li>
 </ol>
-<div id="footnotes">
-<h2 class="footnotes">Footnotes: </h2>
-<div id="text-footnotes">
-
-<div class="footdef"><sup><a id="fn.1" class="footnum" href="#fnr.1">1</a></sup> <div class="footpara"><p class="footpara">
-<a href="https://www.gnu.org/software/emacs/manual/html_node/elisp/Searching-and-Matching.html">34 Searching and Matching</a>
-</p></div></div>
-
-
-</div>
-</div>
