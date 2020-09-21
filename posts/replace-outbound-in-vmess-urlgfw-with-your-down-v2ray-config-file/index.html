@@ -103,7 +103,8 @@ v2ray 在 linux 平台上并不也不计划支持将 vmess-url 转换成可用�
         
 
     </header><div class="e-content entry-content" itemprop="articleBody text">
-    <ul class="org-ul">
+    <div>
+<ul class="org-ul">
 <li>
 <p>
 v2ray on linux
@@ -176,9 +177,28 @@ vmess urls
 
 \begin{equation}
 x=\sqrt{b}
-\end{equation}</li>
+\end{equation}
+
+<p>
+\usepackage{ifthen}
+</p>
+</li>
 </ul>
+<p>
+\newenvironment{formulalist}[1][1]
+  {%
+    \def\formulalistcols{#1}%
+    \begin{list}{}{\rightmargin-0.5cm\leftmargin+0.5cm}\item[]%
+    \ifnumequal{\formulalistcols}{1}{\begin{flushleft}}{\begin{multicols}{#1}}%
+    \long\def\formula##1{\par\noindent##1}%
+  }%
+  {%
+    \ifnumequal{\formulalistcols}{1}{\end{flushleft}}{\end{multicols}}%
+    \end{list}%
+  }
+</p>
 </div>
+    </div>
     <aside class="postpromonav"><nav><ul itemprop="keywords" class="tags">
 <li><a class="tag p-category" href="../../categories/opensuse/" rel="tag">openSUSE</a></li>
         </ul>
