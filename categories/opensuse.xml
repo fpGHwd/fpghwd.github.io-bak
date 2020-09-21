@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Dichotomy (Posts about openSUSE)</title><link>https://fpghwd.github.io/</link><description></description><atom:link href="https://fpghwd.github.io/categories/opensuse.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;suzumiya natsuhi&lt;/a&gt; </copyright><lastBuildDate>Mon, 21 Sep 2020 12:46:38 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Replace v2ray config outbounds with vmess</title><link>https://fpghwd.github.io/posts/replace-outbound-in-vmess-urlgfw-with-your-down-v2ray-config-file/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;ul class="org-ul"&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Dichotomy (Posts about openSUSE)</title><link>https://fpghwd.github.io/</link><description></description><atom:link href="https://fpghwd.github.io/categories/opensuse.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;suzumiya natsuhi&lt;/a&gt; </copyright><lastBuildDate>Mon, 21 Sep 2020 13:02:22 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Replace v2ray config outbounds with vmess</title><link>https://fpghwd.github.io/posts/replace-outbound-in-vmess-urlgfw-with-your-down-v2ray-config-file/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;ul class="org-ul"&gt;
 &lt;li&gt;&lt;p&gt;
 v2ray on linux
 &lt;/p&gt;
@@ -59,7 +59,11 @@ vmess urls
 
 &lt;p&gt;
 这样就得到了 config.json 文件，然后可用 v2ray 检查： &lt;code&gt;v2ray -test -config ~/config.json&lt;/code&gt; 。可替换系统的默认配置文件 &lt;code&gt;/etc/v2ray/config.json&lt;/code&gt; ，并重启服务 &lt;code&gt;sudo systemctl restart v2ray.service&lt;/code&gt; 。
-&lt;/p&gt;&lt;/li&gt;
+&lt;/p&gt;
+
+\begin{equation}
+x=\sqrt{b}
+\end{equation}&lt;/li&gt;
 &lt;/ul&gt;</description><category>openSUSE</category><guid>https://fpghwd.github.io/posts/replace-outbound-in-vmess-urlgfw-with-your-down-v2ray-config-file/</guid><pubDate>Fri, 18 Sep 2020 00:36:18 GMT</pubDate></item><item><title>How openSUSE rollbacks when using brtfs</title><link>https://fpghwd.github.io/posts/how-opensuse-rollback-when-using-brtfs/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;ul class="org-ul"&gt;
 &lt;li&gt;&lt;b&gt;Brtfs&lt;/b&gt;&lt;/li&gt;
 &lt;/ul&gt;
