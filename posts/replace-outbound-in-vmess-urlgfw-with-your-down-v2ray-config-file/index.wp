@@ -58,5 +58,9 @@ vmess urls
 
 <p>
 这样就得到了 config.json 文件，然后可用 v2ray 检查： <code>v2ray -test -config ~/config.json</code> 。可替换系统的默认配置文件 <code>/etc/v2ray/config.json</code> ，并重启服务 <code>sudo systemctl restart v2ray.service</code> 。
-</p></li>
+</p>
+
+\begin{equation}
+x=\sqrt{b}
+\end{equation}</li>
 </ul>
