@@ -9,6 +9,7 @@
 <p>
 设置 org2nikola 包变量的 <code>org2nikola-process-output-html-function</code> 为：
 </p>
+
 <div class="org-src-container">
 
 <pre><code class="lang-lisp">
@@ -48,9 +49,11 @@
 </p>
 
 
-<p>
-<a href="_20200918_123005screenshot.png">_20200918_123005screenshot.png</a>
+
+<div class="figure">
+<p><img src="https://raw.githubusercontent.com/fpGHwd/fpghwd.github.io/master/images/_20200918_123005screenshot.png" alt="_20200918_123005screenshot.png" />
 </p>
+</div>
 
 
 <p>
@@ -62,9 +65,11 @@
 </p>
 
 
-<p>
-<a href="_20200918_122914screenshot.png">_20200918_122914screenshot.png</a>
+
+<div class="figure">
+<p><img src="https://raw.githubusercontent.com/fpGHwd/fpghwd.github.io/master/images/_20200918_122914screenshot.png" alt="_20200918_122914screenshot.png" />
 </p>
+</div>
 
 
 <p>
