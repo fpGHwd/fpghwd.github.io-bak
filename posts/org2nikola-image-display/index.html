@@ -137,14 +137,14 @@
    (progn (let* ((re-str "\\/home\\/.+?\\.\\(png\\|jpg\\|jpeg\\|bmp\\)"))
             (let* ((files-list (s-match-strings-all re-str html-text)))
               (dolist (file-path files-list)
-                ;; (message (format "file-path: %s" (car file-path)))
+                (message (format "file-path: %s" (car file-path)))
                 (setq cmd (format "cp %s /home/wd/.config/nikola/images/" (car file-path)))
                 (message cmd)
                 (shell-command cmd))))
           (replace-regexp-in-string
            "file:.+?\\/[a-z0-9-]\\{34\\}\\/"
            "https://raw.githubusercontent.com/fpGHwd/fpghwd.github.io/master/images/"
-           html-text)))) ;; 这个可用
+           html-text)))) 
 
 </code></pre>
 
