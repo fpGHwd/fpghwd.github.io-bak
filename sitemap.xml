@@ -19,7 +19,7 @@
  </url>
  <url>
   <loc>https://fpghwd.github.io/archive.html</loc>
-  <lastmod>2020-09-20T12:24:00Z</lastmod>
+  <lastmod>2020-09-24T12:31:00Z</lastmod>
  </url>
  <url>
   <loc>https://fpghwd.github.io/authors/</loc>
@@ -99,7 +99,7 @@
  </url>
  <url>
   <loc>https://fpghwd.github.io/index-1.html</loc>
-  <lastmod>2020-09-20T12:24:00Z</lastmod>
+  <lastmod>2020-09-24T12:31:00Z</lastmod>
  </url>
  <url>
   <loc>https://fpghwd.github.io/listings/</loc>
@@ -212,6 +212,10 @@
  <url>
   <loc>https://fpghwd.github.io/posts/leetcode893-increasingordersearch-tree/</loc>
   <lastmod>2020-09-13T09:10:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://fpghwd.github.io/posts/leetcode937-reorder-data-in-log-files/</loc>
+  <lastmod>2020-09-24T12:31:00Z</lastmod>
  </url>
  <url>
   <loc>https://fpghwd.github.io/posts/makefileemacs/</loc>

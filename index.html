@@ -12,7 +12,7 @@
 <link rel="alternate" type="application/rss+xml" title="RSS" hreflang="en" href="rss.xml">
 <link rel="canonical" href="https://fpghwd.github.io/">
 <link rel="next" href="index-1.html" type="text/html">
-<!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="posts/replace-outbound-in-vmess-urlgfw-with-your-down-v2ray-config-file/" type="text/html">
+<!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="posts/leetcode937-reorder-data-in-log-files/" type="text/html">
 </head>
 <body>
 <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
@@ -69,7 +69,62 @@
     
         
     <div class="postindex">
-            <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/replace-outbound-in-vmess-urlgfw-with-your-down-v2ray-config-file/" class="u-url">Replace v2ray config outbounds with vmess</a></h1>
+            <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/leetcode937-reorder-data-in-log-files/" class="u-url">Leetcode937 Reorder Data in Log Files</a></h1>
+                <div class="metadata">
+                    <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                        suzumiya natsuhi
+                    </span></p>
+            <p class="dateline">
+            <a href="posts/leetcode937-reorder-data-in-log-files/" rel="bookmark">
+            <time class="published dt-published" datetime="2020-09-24T12:31:36+08:00" itemprop="datePublished" title="2020-09-24 12:31">2020-09-24 12:31</time></a>
+            </p>
+                        <p class="commentline">
+        
+    <a href="posts/leetcode937-reorder-data-in-log-files/#disqus_thread" data-disqus-identifier="cache/posts/leetcode937-reorder-data-in-log-files.html">Comments</a>
+
+
+                </p>
+</div>
+            </header><div class="e-content entry-content">
+                    <div>
+<p>
+<a href="https://leetcode.com/problems/reorder-data-in-log-files/">937. Reorder Data in Log Files</a>
+</p>
+
+<p>
+<b>Solution</b>
+</p>
+
+<div class="org-src-container">
+
+<pre><code class="lang-C">
+class Solution {
+    public:
+        vector&lt;string&gt; reorderLogFiles(vector&lt;string&gt; &amp;logs) {
+            stable_sort(begin(logs), end(logs), [](auto &amp;a, auto &amp;b) {
+                auto A = 1 + a.find(' '), B = 1 + b.find(' ');
+                return a[A] &gt; '@' &amp;&amp;
+                    (b[B] &lt; '@' ||
+                     a.substr(A).append(a, 0, A) &lt; b.substr(B).append(b, 0, B));
+            });
+            return logs;
+        }
+};
+
+</code></pre>
+
+</div>
+
+<p>
+先找到 identifier 和后面部分的分隔点 A 和 B ，然后用 ’@’ 作为判断后面是数字还是字母的基准。ASCII 码表中， <code>'0'</code> 和 <code>'9'</code> 分别是 48 和 57 ， <code>'@'</code> 是 64 ， <code>'a'</code> 和 <code>'z'</code> 分别是 97 和 122 。
+</p>
+
+<p>
+<code>return</code> 后的部分同时保证了当 letter-logs 排在 digit-logs 的前面；如果数字部分相同时，按 identifier 的顺序排列。
+</p>
+</div>
+                </div>
+            </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/replace-outbound-in-vmess-urlgfw-with-your-down-v2ray-config-file/" class="u-url">Replace v2ray config outbounds with vmess</a></h1>
                 <div class="metadata">
                     <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                         suzumiya natsuhi
@@ -730,69 +785,6 @@ public:
 
 <p>
 所以真正值得发展的宽容应该是尊重相关的宽容。
-</p>
-</div>
-                </div>
-            </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/questions-that-create-reality/" class="u-url">Questions that create reality</a></h1>
-                <div class="metadata">
-                    <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
-                        suzumiya natsuhi
-                    </span></p>
-            <p class="dateline">
-            <a href="posts/questions-that-create-reality/" rel="bookmark">
-            <time class="published dt-published" datetime="2020-09-03T03:05:43+08:00" itemprop="datePublished" title="2020-09-03 03:05">2020-09-03 03:05</time></a>
-            </p>
-                        <p class="commentline">
-        
-    <a href="posts/questions-that-create-reality/#disqus_thread" data-disqus-identifier="cache/posts/questions-that-create-reality.html">Comments</a>
-
-
-                </p>
-</div>
-            </header><div class="e-content entry-content">
-                    <div>
-<p>
-一个穷人带自己的小孩去读书。
-老师：“识字吗？”
-穷人：“不识字。”
-老师：“不识字读什么书？”
-穷人：“就是因为不识字才要读书啊！”
-</p>
-
-<p>
-老师站在自己的逻辑（强者逻辑，自己的成本），认为基础不好的就没有必要再读书了。
-穷人的回答正好是自己立场的体现：就是因为不识字，才更要读书。
-两种逻辑看起来都没有问题。矛盾就出现了：一个问题，两个人得出截然相反的结论。为什么呢？
-</p>
-
-<p>
-那是因为立场的转换，当我们理解老师的逻辑时，是站在老师的立场的（基础差的学生有什么好学的）；当我们理解穷人的逻辑时，是站在穷人的立场的（正是基础差才更要学的）。立场的转换让两句话逻辑本身都看起来没问题。
-老师不过是一个身份，换成“强者”是一个简单的替换。“识字”也只不过很常见的场景中的一种而已。
-</p>
-
-<p>
-其实讽刺的还是明明自己是弱者的一方，还误把自己在强者的立场。这不就是把弱者自己推入万劫不复的境地吗？弱者一遍一遍地重复强者逻辑，没有自我思维，只能陷入没有希望的境地。
-这个笑话自己深刻的体现了穷人的自我意识：正是因为没有才会去追求，这就是人类。
-然而自我思维，说到底不过是人性而已。强者拥有自己的逻辑，弱者重复他的逻辑，不知不觉间就失去了自我意识，也失去了人性。
-事实上，强者坚持自己的逻辑是坚持自己的人性，而弱者坚持强者的逻辑而放弃自己的逻辑，不过是将自己的人性拱手让人罢了。根本都怪不了任何人。放弃自己人性相当于放弃自己的自我意识，没有自我意识，梦想什么的就更不用空谈了。
-</p>
-
-<p>
-当今“某国需不需要民主”这种问题，我觉得已经不需要回答了。“素质低的国民不需要民主”和“素质低的国民更需要民主”正是以上一个镜像立场对。虽然我只举了强者和弱者的例子，生活中不会只有强者和弱者，更应该有的是各种具有系统思维的独立思维个体。
-</p>
-
-<p>
-而生活中也大量充斥大量的这样的问题。如果你发现别人不希望你做某件事的时候，你的自我意识觉醒就更想去做成这件事。当然前提是你知道“别人不希望你做这件事”，这包含一个搜集资料的过程。对于一个信息公开的环境，别人的逻辑似乎就不那么重要了，你会越听从于自己的内心和自己的观点。
-另一方面，提出类似的问题也是你在完成这件事的一个阶段，而不是什么都没做，是在努力解决这个问题的一个重要环节。
-</p>
-
-<p>
-当然，如果一开始你就知道你不必看重任何人的观点，只需要了解一下其他人的观点即可，就不用纠结在别人的立场纷争中了，更早些走上自己想走的那条路了。想必这个平行时空中，所有的事物都发展得比较快和更理性吧。
-</p>
-
-<p>
-好的问题正是根本都不需要回答的问题吧，因为答案不过是一些立场而已。但最重要的是有自己的立场，而不是人云亦云随波逐流。
-同时好的问题是激发人的思考的问题：Questions that create reality.
 </p>
 </div>
                 </div>

@@ -1,0 +1,35 @@
+<p>
+<a href="https://leetcode.com/problems/reorder-data-in-log-files/">937. Reorder Data in Log Files</a>
+</p>
+
+<p>
+<b>Solution</b>
+</p>
+
+<div class="org-src-container">
+
+<pre><code class="lang-C">
+class Solution {
+    public:
+        vector&lt;string&gt; reorderLogFiles(vector&lt;string&gt; &amp;logs) {
+            stable_sort(begin(logs), end(logs), [](auto &amp;a, auto &amp;b) {
+                auto A = 1 + a.find(' '), B = 1 + b.find(' ');
+                return a[A] &gt; '@' &amp;&amp;
+                    (b[B] &lt; '@' ||
+                     a.substr(A).append(a, 0, A) &lt; b.substr(B).append(b, 0, B));
+            });
+            return logs;
+        }
+};
+
+</code></pre>
+
+</div>
+
+<p>
+先找到 identifier 和后面部分的分隔点 A 和 B ，然后用 &rsquo;@&rsquo; 作为判断后面是数字还是字母的基准。ASCII 码表中， <code>'0'</code> 和 <code>'9'</code> 分别是 48 和 57 ， <code>'@'</code> 是 64 ， <code>'a'</code> 和 <code>'z'</code> 分别是 97 和 122 。
+</p>
+
+<p>
+<code>return</code> 后的部分同时保证了当 letter-logs 排在 digit-logs 的前面；如果数字部分相同时，按 identifier 的顺序排列。
+</p>
