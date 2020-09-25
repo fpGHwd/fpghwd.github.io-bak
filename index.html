@@ -154,7 +154,7 @@ Memory Usage: 72.6 MB, less than 5.21% of C++ submissions.
 </div>
 
 <p>
-第一次做的时候没有做出来，觉得有点复杂。不过说到底还只是一个简单的树遍历，当然可以认为和求树深度的那类题其实差不多。其中每个点的处理就是找到是否比现有的最长路径 <code>luvp-1</code> 更长的 <code>1+left_tmp+right_tmp</code> ，然后返回的若是 <code>1+left_tmp+right_tmp</code> ，那么得出来的结果不是 <b>最长的path</b> ，而是相同值最多的相邻点个数。所以最后修改一下，返回稍长的路径即可。
+第一次做的时候没有做出来，觉得有点复杂。不过说到底还只是一个简单的树遍历，当然可以认为和求树深度的那类题其实差不多。其中每个点的处理就是找到是否比现有的最长路径 <code>luvp - 1</code> 更长的 <code>1 + left_tmp + right_tmp</code> ，然后返回的若是 <code>1 + left_tmp + right_tmp</code> ，那么得出来的结果不是 <b>最长的path</b> ，而是相同值最多的相邻点个数。所以最后修改一下，返回稍长的路径即可。
 </p>
 
 <p>
