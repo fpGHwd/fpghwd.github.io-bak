@@ -12,7 +12,7 @@
 <link rel="alternate" type="application/rss+xml" title="RSS" hreflang="en" href="rss.xml">
 <link rel="canonical" href="https://fpghwd.github.io/">
 <link rel="next" href="index-1.html" type="text/html">
-<!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="posts/leetcode937-reorder-data-in-log-files/" type="text/html">
+<!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="posts/leetcode108-convert-sorted-array-to-binary-search-tree/" type="text/html">
 </head>
 <body>
 <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
@@ -69,7 +69,75 @@
     
         
     <div class="postindex">
-            <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/leetcode937-reorder-data-in-log-files/" class="u-url">Leetcode937 Reorder Data in Log Files</a></h1>
+            <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/leetcode108-convert-sorted-array-to-binary-search-tree/" class="u-url">Leetcode108 Convert Sorted Array to Binary Search Tree</a></h1>
+                <div class="metadata">
+                    <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                        suzumiya natsuhi
+                    </span></p>
+            <p class="dateline">
+            <a href="posts/leetcode108-convert-sorted-array-to-binary-search-tree/" rel="bookmark">
+            <time class="published dt-published" datetime="2020-09-25T03:35:49+08:00" itemprop="datePublished" title="2020-09-25 03:35">2020-09-25 03:35</time></a>
+            </p>
+                        <p class="commentline">
+        
+    <a href="posts/leetcode108-convert-sorted-array-to-binary-search-tree/#disqus_thread" data-disqus-identifier="cache/posts/leetcode108-convert-sorted-array-to-binary-search-tree.html">Comments</a>
+
+
+                </p>
+</div>
+            </header><div class="e-content entry-content">
+                    <div>
+<p>
+<a href="https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/">108. Convert Sorted Array to Binary Search Tree</a>
+</p>
+
+<p>
+<b>Solution</b>
+</p>
+
+<div class="org-src-container">
+
+<pre><code class="lang-C">
+    /**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left),
+ * right(right) {}
+ * };
+ */
+class Solution {
+  public:
+    TreeNode *sortedArrayToBST(vector&lt;int&gt; &amp;nums) {
+        // create tree
+        return toHeightBST(nums, 0, nums.size() - 1);
+    }
+
+    TreeNode *toHeightBST(vector&lt;int&gt; &amp;nums, int l, int r) {
+        if (l &gt; r)
+            return NULL;
+        int mid = l + (r - l) / 2;
+        TreeNode *root = new TreeNode(nums[mid]);
+        root-&gt;left = toHeightBST(nums, l, mid - 1);
+        root-&gt;right = toHeightBST(nums, mid + 1, r);
+        return root;
+    }
+};
+
+</code></pre>
+
+</div>
+
+<p>
+一开始以为是树的高度的调整题，后来发现这个和 <b>数组表示的树构造一棵树</b> 的做法差不多。
+</p>
+</div>
+                </div>
+            </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/leetcode937-reorder-data-in-log-files/" class="u-url">Leetcode937 Reorder Data in Log Files</a></h1>
                 <div class="metadata">
                     <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                         suzumiya natsuhi
@@ -739,53 +807,6 @@ public:
 </code></pre>
 
 </div>
-</div>
-                </div>
-            </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/ignorant-and-tolerant/" class="u-url">Ignorant and tolerant</a></h1>
-                <div class="metadata">
-                    <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
-                        suzumiya natsuhi
-                    </span></p>
-            <p class="dateline">
-            <a href="posts/ignorant-and-tolerant/" rel="bookmark">
-            <time class="published dt-published" datetime="2020-09-09T02:06:30+08:00" itemprop="datePublished" title="2020-09-09 02:06">2020-09-09 02:06</time></a>
-            </p>
-                        <p class="commentline">
-        
-    <a href="posts/ignorant-and-tolerant/#disqus_thread" data-disqus-identifier="cache/posts/ignorant-and-tolerant.html">Comments</a>
-
-
-                </p>
-</div>
-            </header><div class="e-content entry-content">
-                    <div>
-<p>
-如果把宽容理解成行为的话，那么有两个和这种行为相关的 无知相关的宽容 和 尊重相关的宽容。
-</p>
-
-<p>
-其实两者在大多数情况看来并没有区别，两者形成在表面上相通的宽容行为。假设一种情况：有人请我喝酒，我说不喝，而请我啤酒的人只是说 “好吧”，她也没有打扰我，甚至没有问我，我怎么能确定她尊重我的选择呢？如果不知道的话，那谈论这两点又有什么意义呢？
-</p>
-
-<p>
-尊重相关的宽容往往是这样的：我们尊重别人的价值和独特性，因为我们理解并有意识地意识到这是他们的独特之处。而另一方面：无知是一种不打扰他人行为的行为，因为我们不关心，甚至更麻烦。
-</p>
-
-<p>
-尊重的宽容鼓励沟通和相互理解，而无知的宽容则会引发假设和判断。
-</p>
-
-<p>
-<del>表面上看来，无知的宽容像是 “不知者不罪”；但很多场合下，“雪崩下每一片雪花都有在助力”。</del> 在危机时，尤其是当我们的自我受到干扰的时候，我们自己对生活的看法就会受到挑战。那么，所有与他人不一样的生命价值的差异，都会莫名其妙地浮现出来，变得清晰可见。在这种情况下，无知（的宽容）将导致我们更加判断。在更糟的环境下，他们的价值会被我们忽视和虐待。同时，尊重的宽容会使我们仍然给予尊重，而不是刻板地认为那些有同样价值的人也可以做同样的事情。在喝酒的例子中，很可能是这样：给我饮料的人认定了我的拒绝，并 <b>判断</b> 我有点认真/不好玩，或者可能不尊重人。
-</p>
-
-<p>
-信息越闭塞下的宽容，很可能是无知的宽容；而信息闭塞情况下仍保持尊重的宽容的人，难能可贵。
-</p>
-
-<p>
-所以真正值得发展的宽容应该是尊重相关的宽容。
-</p>
 </div>
                 </div>
             </article>

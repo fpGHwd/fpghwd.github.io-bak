@@ -1,5 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Dichotomy</title><link>https://fpghwd.github.io/</link><description>To iterate is human, to recurse, divine</description><atom:link href="https://fpghwd.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;suzumiya natsuhi&lt;/a&gt; </copyright><lastBuildDate>Fri, 25 Sep 2020 03:35:32 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Leetcode937 Reorder Data in Log Files</title><link>https://fpghwd.github.io/posts/leetcode937-reorder-data-in-log-files/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Dichotomy</title><link>https://fpghwd.github.io/</link><description>To iterate is human, to recurse, divine</description><atom:link href="https://fpghwd.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;suzumiya natsuhi&lt;/a&gt; </copyright><lastBuildDate>Fri, 25 Sep 2020 03:35:55 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Leetcode108 Convert Sorted Array to Binary Search Tree</title><link>https://fpghwd.github.io/posts/leetcode108-convert-sorted-array-to-binary-search-tree/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
+&lt;a href="https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/"&gt;108. Convert Sorted Array to Binary Search Tree&lt;/a&gt;
+&lt;/p&gt;
+
+&lt;p&gt;
+&lt;b&gt;Solution&lt;/b&gt;
+&lt;/p&gt;
+
+&lt;div class="org-src-container"&gt;
+
+&lt;pre&gt;&lt;code class="lang-C"&gt;
+    /**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left),
+ * right(right) {}
+ * };
+ */
+class Solution {
+  public:
+    TreeNode *sortedArrayToBST(vector&amp;lt;int&amp;gt; &amp;amp;nums) {
+        // create tree
+        return toHeightBST(nums, 0, nums.size() - 1);
+    }
+
+    TreeNode *toHeightBST(vector&amp;lt;int&amp;gt; &amp;amp;nums, int l, int r) {
+        if (l &amp;gt; r)
+            return NULL;
+        int mid = l + (r - l) / 2;
+        TreeNode *root = new TreeNode(nums[mid]);
+        root-&amp;gt;left = toHeightBST(nums, l, mid - 1);
+        root-&amp;gt;right = toHeightBST(nums, mid + 1, r);
+        return root;
+    }
+};
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;/div&gt;
+
+&lt;p&gt;
+一开始以为是树的高度的调整题，后来发现这个和 &lt;b&gt;数组表示的树构造一棵树&lt;/b&gt; 的做法差不多。
+&lt;/p&gt;&lt;/div&gt;</description><category>leetcode</category><guid>https://fpghwd.github.io/posts/leetcode108-convert-sorted-array-to-binary-search-tree/</guid><pubDate>Thu, 24 Sep 2020 19:35:49 GMT</pubDate></item><item><title>Leetcode937 Reorder Data in Log Files</title><link>https://fpghwd.github.io/posts/leetcode937-reorder-data-in-log-files/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
 &lt;a href="https://leetcode.com/problems/reorder-data-in-log-files/"&gt;937. Reorder Data in Log Files&lt;/a&gt;
 &lt;/p&gt;
 
@@ -476,30 +523,4 @@ public:
 };
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;/div&gt;&lt;/div&gt;</description><category>leetcode</category><guid>https://fpghwd.github.io/posts/leetcode1200-minimum-absolute-difference/</guid><pubDate>Fri, 11 Sep 2020 19:43:01 GMT</pubDate></item><item><title>Ignorant and tolerant</title><link>https://fpghwd.github.io/posts/ignorant-and-tolerant/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
-如果把宽容理解成行为的话，那么有两个和这种行为相关的 无知相关的宽容 和 尊重相关的宽容。
-&lt;/p&gt;
-
-&lt;p&gt;
-其实两者在大多数情况看来并没有区别，两者形成在表面上相通的宽容行为。假设一种情况：有人请我喝酒，我说不喝，而请我啤酒的人只是说 “好吧”，她也没有打扰我，甚至没有问我，我怎么能确定她尊重我的选择呢？如果不知道的话，那谈论这两点又有什么意义呢？
-&lt;/p&gt;
-
-&lt;p&gt;
-尊重相关的宽容往往是这样的：我们尊重别人的价值和独特性，因为我们理解并有意识地意识到这是他们的独特之处。而另一方面：无知是一种不打扰他人行为的行为，因为我们不关心，甚至更麻烦。
-&lt;/p&gt;
-
-&lt;p&gt;
-尊重的宽容鼓励沟通和相互理解，而无知的宽容则会引发假设和判断。
-&lt;/p&gt;
-
-&lt;p&gt;
-&lt;del&gt;表面上看来，无知的宽容像是 “不知者不罪”；但很多场合下，“雪崩下每一片雪花都有在助力”。&lt;/del&gt; 在危机时，尤其是当我们的自我受到干扰的时候，我们自己对生活的看法就会受到挑战。那么，所有与他人不一样的生命价值的差异，都会莫名其妙地浮现出来，变得清晰可见。在这种情况下，无知（的宽容）将导致我们更加判断。在更糟的环境下，他们的价值会被我们忽视和虐待。同时，尊重的宽容会使我们仍然给予尊重，而不是刻板地认为那些有同样价值的人也可以做同样的事情。在喝酒的例子中，很可能是这样：给我饮料的人认定了我的拒绝，并 &lt;b&gt;判断&lt;/b&gt; 我有点认真/不好玩，或者可能不尊重人。
-&lt;/p&gt;
-
-&lt;p&gt;
-信息越闭塞下的宽容，很可能是无知的宽容；而信息闭塞情况下仍保持尊重的宽容的人，难能可贵。
-&lt;/p&gt;
-
-&lt;p&gt;
-所以真正值得发展的宽容应该是尊重相关的宽容。
-&lt;/p&gt;&lt;/div&gt;</description><guid>https://fpghwd.github.io/posts/ignorant-and-tolerant/</guid><pubDate>Tue, 08 Sep 2020 18:06:30 GMT</pubDate></item></channel></rss>
+&lt;/div&gt;&lt;/div&gt;</description><category>leetcode</category><guid>https://fpghwd.github.io/posts/leetcode1200-minimum-absolute-difference/</guid><pubDate>Fri, 11 Sep 2020 19:43:01 GMT</pubDate></item></channel></rss>
