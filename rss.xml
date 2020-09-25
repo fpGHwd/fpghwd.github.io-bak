@@ -1,5 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Dichotomy</title><link>https://fpghwd.github.io/</link><description>To iterate is human, to recurse, divine</description><atom:link href="https://fpghwd.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;suzumiya natsuhi&lt;/a&gt; </copyright><lastBuildDate>Fri, 25 Sep 2020 07:02:15 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Leetcode804 Most Common Word</title><link>https://fpghwd.github.io/posts/leetcode804-most-common-word/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Dichotomy</title><link>https://fpghwd.github.io/</link><description>To iterate is human, to recurse, divine</description><atom:link href="https://fpghwd.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;suzumiya natsuhi&lt;/a&gt; </copyright><lastBuildDate>Fri, 25 Sep 2020 07:44:29 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Leetcode649  Second Minimum Node In a Binary Tree</title><link>https://fpghwd.github.io/posts/leetcode649-second-minimum-node-in-a-binary-tree/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
+&lt;a href="https://leetcode.com/problems/second-minimum-node-in-a-binary-tree/"&gt;671. Second Minimum Node In a Binary Tree&lt;/a&gt;
+&lt;/p&gt;
+
+&lt;p&gt;
+&lt;b&gt;Solution&lt;/b&gt;
+&lt;/p&gt;
+
+&lt;div class="org-src-container"&gt;
+
+&lt;pre&gt;&lt;code class="lang-C"&gt;
+/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left),
+ * right(right) {}
+ * };
+ */
+class Solution {
+  public:
+    int fm = -1, sm = -1;
+    int findSecondMinimumValue(TreeNode *root) {
+        if (root == NULL)
+            return sm;
+
+        if (fm == -1)
+            fm = root-&amp;gt;val;
+        else {
+            if (sm == -1) {
+                if (root-&amp;gt;val &amp;gt; fm)
+                    sm = root-&amp;gt;val;
+                else if (root-&amp;gt;val &amp;lt; fm) {
+                    sm = fm;
+                    fm = root-&amp;gt;val;
+                } else {
+                    // do nothing
+                }
+            } else {
+                if (root-&amp;gt;val &amp;gt; sm) {
+                    // do noting
+                } else if (root-&amp;gt;val &amp;lt; fm) {
+                    sm = fm;
+                    fm = root-&amp;gt;val;
+                } else if (root-&amp;gt;val == sm || root-&amp;gt;val == fm) {
+                    // do nothing
+                } else { // root-&amp;gt;val &amp;gt; fm and root-&amp;gt;val &amp;lt; sm;
+                    sm = root-&amp;gt;val;
+                }
+            }
+        }
+
+        findSecondMinimumValue(root-&amp;gt;left);
+        findSecondMinimumValue(root-&amp;gt;right);
+
+        return sm;
+    }
+};
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;/div&gt;
+
+&lt;p&gt;
+自从学会了一种偷懒的写法之后，就一直用这种 travel 的方法。
+&lt;/p&gt;&lt;/div&gt;</description><category>leetcode</category><guid>https://fpghwd.github.io/posts/leetcode649-second-minimum-node-in-a-binary-tree/</guid><pubDate>Thu, 24 Sep 2020 23:44:24 GMT</pubDate></item><item><title>Leetcode804 Most Common Word</title><link>https://fpghwd.github.io/posts/leetcode804-most-common-word/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
 &lt;a href="https://leetcode.com/problems/most-common-word/"&gt;819. Most Common Word&lt;/a&gt;
 &lt;/p&gt;
 
@@ -500,59 +569,4 @@ Memory Usage: 144.4 MB, less than 6.22% of C++ submissions.
 &lt;/div&gt;
 
 &lt;p&gt;
-结果排倒数 ，以及显示不了:)这个emoji。&lt;/p&gt;&lt;/div&gt;</description><category>leetcode</category><guid>https://fpghwd.github.io/posts/leetcode606-construct-string-from-binary-tree/</guid><pubDate>Tue, 15 Sep 2020 20:23:51 GMT</pubDate></item><item><title>Leetcode487 Next Greater Element I</title><link>https://fpghwd.github.io/posts/leetcode487-next-greater-element-i/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
-&lt;a href="https://leetcode.com/problems/next-greater-element-i/"&gt;487. Next Greater Element I&lt;/a&gt;
-&lt;/p&gt;
-
-&lt;p&gt;
-&lt;b&gt;Solution&lt;/b&gt;
-&lt;/p&gt;
-
-&lt;div class="org-src-container"&gt;
-
-&lt;pre&gt;&lt;code class="lang-C"&gt;
-#include &amp;lt;cstdio&amp;gt;
-#include &amp;lt;vector&amp;gt;
-#include &amp;lt;iostream&amp;gt;
-#include &amp;lt;unordered_map&amp;gt;
-#include &amp;lt;stack&amp;gt;
-
-using namespace std;
-
-class Solution {
-public:
-    vector&amp;lt;int&amp;gt; nextGreaterElement(vector&amp;lt;int&amp;gt;&amp;amp; nums1, vector&amp;lt;int&amp;gt;&amp;amp; nums2) {
-        unordered_map&amp;lt;int, int&amp;gt; mp;
-        stack&amp;lt;int&amp;gt; s;
-        for(int num : nums2){
-            while(!s.empty() and s.top()&amp;lt;num)
-                mp[s.top()] = num, s.pop(); // , trick
-            s.push(num);
-        }
-
-        for(int &amp;amp;num : nums1)
-            num = (mp.find(num) == mp.end()) ? -1 : mp[num];
-
-        return nums1;
-    }
-};
-
-// Input: nums1 = [2,4], nums2 = [1,2,3,4].
-
-int main(int arch, char **argv){
-
-    vector&amp;lt;int&amp;gt; nums1 = {2,4}, nums2 = {1,2,3,4};
-    auto solution = new Solution();
-    solution-&amp;gt;nextGreaterElement(nums1, nums2);
-
-    return 0;
-}
-
-
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;/div&gt;
-
-&lt;p&gt;
-开始没有看太懂题目的意思，解答也看不懂。后来在 gud-gdb 下调试了一下，才懂了一点点。Map 的作用是存 nums2 中每个 element 的后面第一个比自身大的 element, stack 的作用是暂存正在处理的位置吧（没有想出来如何更好的表达）。num1 是 nums2 的字集，那么再遍历一遍 map 就可以得到 nums1 中每个元素的在 nums2 的位置上后面的第一个比它大的元素了。
-&lt;/p&gt;&lt;/div&gt;</description><category>leetcode</category><guid>https://fpghwd.github.io/posts/leetcode487-next-greater-element-i/</guid><pubDate>Mon, 14 Sep 2020 18:51:50 GMT</pubDate></item></channel></rss>
+结果排倒数 ，以及显示不了:)这个emoji。&lt;/p&gt;&lt;/div&gt;</description><category>leetcode</category><guid>https://fpghwd.github.io/posts/leetcode606-construct-string-from-binary-tree/</guid><pubDate>Tue, 15 Sep 2020 20:23:51 GMT</pubDate></item></channel></rss>

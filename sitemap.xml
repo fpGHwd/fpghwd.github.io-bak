@@ -19,7 +19,7 @@
  </url>
  <url>
   <loc>https://fpghwd.github.io/archive.html</loc>
-  <lastmod>2020-09-25T06:56:00Z</lastmod>
+  <lastmod>2020-09-25T07:44:00Z</lastmod>
  </url>
  <url>
   <loc>https://fpghwd.github.io/authors/</loc>
@@ -103,7 +103,7 @@
  </url>
  <url>
   <loc>https://fpghwd.github.io/index-2.html</loc>
-  <lastmod>2020-09-25T06:56:00Z</lastmod>
+  <lastmod>2020-09-25T07:44:00Z</lastmod>
  </url>
  <url>
   <loc>https://fpghwd.github.io/listings/</loc>
@@ -216,6 +216,10 @@
  <url>
   <loc>https://fpghwd.github.io/posts/leetcode606-construct-string-from-binary-tree/</loc>
   <lastmod>2020-09-17T17:19:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://fpghwd.github.io/posts/leetcode649-second-minimum-node-in-a-binary-tree/</loc>
+  <lastmod>2020-09-25T07:44:00Z</lastmod>
  </url>
  <url>
   <loc>https://fpghwd.github.io/posts/leetcode700-flood-fill/</loc>
