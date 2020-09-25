@@ -100,8 +100,11 @@
 </p>
 
 <p>
-想到可能是类型的问题：size<sub>type</sub> 是一个无符号的整数，int 是有符号整数，-1 转化成 0xffffffff ，所以应该是没有问题的。
+想到可能是类型的问题：size<sub>type</sub> 是一个无符号的整数，int 是有符号整数，有符号整数首先转换成无符号整数。-1 转化成 0xffffffff ，所以应该是没有问题的。
 </p>
+
+<p>
+同时为什么是有符号整数转换成无符号整数，而不是相反呢？</p>
 </div>
                 </div>
             </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/leetcode107-binary-tree-level-order-traversal-ii/" class="u-url">Leetcode107 Binary Tree Level Order Traversal II</a></h1>

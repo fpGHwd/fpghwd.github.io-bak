@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Dichotomy (Posts about ATTACH)</title><link>https://fpghwd.github.io/</link><description></description><atom:link href="https://fpghwd.github.io/categories/attach.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;suzumiya natsuhi&lt;/a&gt; </copyright><lastBuildDate>Fri, 25 Sep 2020 05:51:16 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>调试的时候出了一个问题</title><link>https://fpghwd.github.io/posts/diao-shi-de-shi-hou-chu-le-yi-ge-wen-ti/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Dichotomy (Posts about ATTACH)</title><link>https://fpghwd.github.io/</link><description></description><atom:link href="https://fpghwd.github.io/categories/attach.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;suzumiya natsuhi&lt;/a&gt; </copyright><lastBuildDate>Fri, 25 Sep 2020 05:53:30 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>调试的时候出了一个问题</title><link>https://fpghwd.github.io/posts/diao-shi-de-shi-hou-chu-le-yi-ge-wen-ti/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
 &lt;a href="https://leetcode.com/problems/shortest-distance-to-a-character/"&gt;821. Shortest Distance to a Character&lt;/a&gt;
 &lt;/p&gt;
 
@@ -12,8 +12,11 @@
 &lt;/p&gt;
 
 &lt;p&gt;
-想到可能是类型的问题：size&lt;sub&gt;type&lt;/sub&gt; 是一个无符号的整数，int 是有符号整数，-1 转化成 0xffffffff ，所以应该是没有问题的。
-&lt;/p&gt;&lt;/div&gt;</description><category>ATTACH</category><guid>https://fpghwd.github.io/posts/diao-shi-de-shi-hou-chu-le-yi-ge-wen-ti/</guid><pubDate>Thu, 24 Sep 2020 21:22:42 GMT</pubDate></item><item><title>Org2nikola image displaying</title><link>https://fpghwd.github.io/posts/org2nikola-image-display/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
+想到可能是类型的问题：size&lt;sub&gt;type&lt;/sub&gt; 是一个无符号的整数，int 是有符号整数，有符号整数首先转换成无符号整数。-1 转化成 0xffffffff ，所以应该是没有问题的。
+&lt;/p&gt;
+
+&lt;p&gt;
+同时为什么是有符号整数转换成无符号整数，而不是相反呢？&lt;/p&gt;&lt;/div&gt;</description><category>ATTACH</category><guid>https://fpghwd.github.io/posts/diao-shi-de-shi-hou-chu-le-yi-ge-wen-ti/</guid><pubDate>Thu, 24 Sep 2020 21:22:42 GMT</pubDate></item><item><title>Org2nikola image displaying</title><link>https://fpghwd.github.io/posts/org2nikola-image-display/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
 &lt;b&gt;设置&lt;/b&gt;
 &lt;/p&gt;
 

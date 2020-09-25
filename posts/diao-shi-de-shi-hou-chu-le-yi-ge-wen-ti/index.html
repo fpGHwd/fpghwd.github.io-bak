@@ -27,7 +27,11 @@ _20200925_132117screenshot.png
 
 
 
-想到可能是类型的问题：sizetype 是一个无符号的整数，int 是有符号整数，-1 转化成 0xffffffff ，所以应该是没有问题的。">
+想到可能是类型的问题：sizetype 是一个无符号的整数，int 是有符号整数，有符号整数首先转换成无符号整数。-1 转化成 0xffffffff ，所以应该是没有问题的。
+
+
+
+同时为什么是有">
 <meta property="og:type" content="article">
 <meta property="article:published_time" content="2020-09-25T05:22:42+08:00">
 <meta property="article:tag" content="ATTACH">
@@ -125,8 +129,11 @@ _20200925_132117screenshot.png
 </p>
 
 <p>
-想到可能是类型的问题：size<sub>type</sub> 是一个无符号的整数，int 是有符号整数，-1 转化成 0xffffffff ，所以应该是没有问题的。
+想到可能是类型的问题：size<sub>type</sub> 是一个无符号的整数，int 是有符号整数，有符号整数首先转换成无符号整数。-1 转化成 0xffffffff ，所以应该是没有问题的。
 </p>
+
+<p>
+同时为什么是有符号整数转换成无符号整数，而不是相反呢？</p>
 </div>
     </div>
     <aside class="postpromonav"><nav><ul itemprop="keywords" class="tags">
