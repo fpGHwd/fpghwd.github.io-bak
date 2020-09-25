@@ -3,39 +3,26 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Leetcode107 Binary Tree Level Order Traversal II | Dichotomy</title>
+<title>调试的时候出了一个问题 | Dichotomy</title>
 <link href="../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
 <meta name="theme-color" content="#5670d4">
 <meta name="generator" content="Nikola (getnikola.com)">
 <link rel="alternate" type="application/rss+xml" title="RSS" hreflang="en" href="../../rss.xml">
-<link rel="canonical" href="https://fpghwd.github.io/posts/leetcode107-binary-tree-level-order-traversal-ii/">
+<link rel="canonical" href="https://fpghwd.github.io/posts/diao-shi-de-shi-hou-chu-le-yi-ge-wen-ti/">
 <!--[if lt IE 9]><script src="../../assets/js/html5.js"></script><![endif]--><meta name="author" content="suzumiya natsuhi">
-<link rel="prev" href="../leetcode108-convert-sorted-array-to-binary-search-tree/" title="Leetcode108 Convert Sorted Array to Binary Search Tree" type="text/html">
-<link rel="next" href="../diao-shi-de-shi-hou-chu-le-yi-ge-wen-ti/" title="调试的时候出了一个问题" type="text/html">
+<link rel="prev" href="../leetcode107-binary-tree-level-order-traversal-ii/" title="Leetcode107 Binary Tree Level Order Traversal II" type="text/html">
 <meta property="og:site_name" content="Dichotomy">
-<meta property="og:title" content="Leetcode107 Binary Tree Level Order Traversal II">
-<meta property="og:url" content="https://fpghwd.github.io/posts/leetcode107-binary-tree-level-order-traversal-ii/">
-<meta property="og:description" content="107. Binary Tree Level Order Traversal II
+<meta property="og:title" content="调试的时候出了一个问题">
+<meta property="og:url" content="https://fpghwd.github.io/posts/diao-shi-de-shi-hou-chu-le-yi-ge-wen-ti/">
+<meta property="og:description" content="821. Shortest Distance to a Character
 
 
 
-Solution
-
-
-
-
-
-/**
- * Definition for a binary tree node.
- * struct TreeNode {
- *     int val;
- *     TreeNode *left;
- *     TreeNode *right;
- *     TreeNode">
+一个 gdb 调试的问题，没太看明白（暴哭）：">
 <meta property="og:type" content="article">
-<meta property="article:published_time" content="2020-09-25T04:07:52+08:00">
-<meta property="article:tag" content="leetcode">
+<meta property="article:published_time" content="2020-09-25T05:22:42+08:00">
+<meta property="article:tag" content="ATTACH">
 </head>
 <body>
 <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
@@ -93,7 +80,7 @@ Solution
         
         
         
-<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">Leetcode107 Binary Tree Level Order Traversal II</a></h1>
+<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">调试的时候出了一个问题</a></h1>
 
         <div class="metadata">
             <p class="byline author vcard p-author h-card"><span class="byline-name fn p-name" itemprop="author">
@@ -101,11 +88,11 @@ Solution
             </span></p>
             <p class="dateline">
             <a href="." rel="bookmark">
-            <time class="published dt-published" datetime="2020-09-25T04:07:52+08:00" itemprop="datePublished" title="2020-09-25 04:07">2020-09-25 04:07</time></a>
+            <time class="published dt-published" datetime="2020-09-25T05:22:42+08:00" itemprop="datePublished" title="2020-09-25 05:22">2020-09-25 05:22</time></a>
             </p>
                 <p class="commentline">
         
-    <a href="#disqus_thread" data-disqus-identifier="cache/posts/leetcode107-binary-tree-level-order-traversal-ii.html">Comments</a>
+    <a href="#disqus_thread" data-disqus-identifier="cache/posts/diao-shi-de-shi-hou-chu-le-yi-ge-wen-ti.html">Comments</a>
 
 
             
@@ -118,87 +105,24 @@ Solution
     </header><div class="e-content entry-content" itemprop="articleBody text">
     <div>
 <p>
-<a href="https://leetcode.com/problems/binary-tree-level-order-traversal-ii/">107. Binary Tree Level Order Traversal II</a>
+<a href="https://leetcode.com/problems/shortest-distance-to-a-character/">821. Shortest Distance to a Character</a>
 </p>
 
 <p>
-<b>Solution</b>
+一个 gdb 调试的问题，没太看明白（暴哭）：
 </p>
 
-<div class="org-src-container">
-
-<pre><code class="lang-C">
-/**
- * Definition for a binary tree node.
- * struct TreeNode {
- *     int val;
- *     TreeNode *left;
- *     TreeNode *right;
- *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
- *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
- *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left),
- * right(right) {}
- * };
- */
-class Solution {
-  public:
-    vector&lt;vector&lt;int&gt;&gt; levelOrderBottom(TreeNode *root) {
-        vector&lt;vector&lt;int&gt;&gt; result;
-
-        queue&lt;TreeNode *&gt; q;
-        TreeNode *last, *end;
-        if (root) {
-            q.push(root);
-            end = root;
-            last = end;
-            result.push_back(vector&lt;int&gt;{});
-        }
-        while (!q.empty()) {
-            TreeNode *temp = q.front();
-            result[result.size() - 1].push_back(temp-&gt;val);
-            q.pop();
-            if (temp-&gt;left)q.push(temp-&gt;left);
-            if (temp-&gt;right)q.push(temp-&gt;right);
-            if (temp == last &amp;&amp; !q.empty())result.push_back(vector&lt;int&gt;{}); // 达到一层结尾还有元素就增加一个空 vector
-            if (temp == last)last=q.back();
-        }
-        reverse(result.begin(), result.end());
-        return result;
-    }
-};
-
-
-</code></pre>
-
-</div>
-
-<p>
-二叉树的层序遍历，稍微修改一下就行。
-</p>
-
-<div class="org-src-container">
-
-<pre><code class="lang-html">
-Status: Accepted (34/34)
-
-Runtime: 4 ms, faster than 91.99% of C++ submissions.
-
-Memory Usage: 12.5 MB, less than 97.56% of C++ submissions.
-
-</code></pre>
-
+<div class="figure">
+<p><img src="https://raw.githubusercontent.com/fpGHwd/fpghwd.github.io/master/images/_20200925_132117screenshot.png" alt="_20200925_132117screenshot.png"></p>
 </div>
 </div>
     </div>
     <aside class="postpromonav"><nav><ul itemprop="keywords" class="tags">
-<li><a class="tag p-category" href="../../categories/leetcode/" rel="tag">leetcode</a></li>
+<li><a class="tag p-category" href="../../categories/attach/" rel="tag">ATTACH</a></li>
         </ul>
 <ul class="pager hidden-print">
 <li class="previous">
-                <a href="../leetcode108-convert-sorted-array-to-binary-search-tree/" rel="prev" title="Leetcode108 Convert Sorted Array to Binary Search Tree">Previous post</a>
-            </li>
-            <li class="next">
-                <a href="../diao-shi-de-shi-hou-chu-le-yi-ge-wen-ti/" rel="next" title="调试的时候出了一个问题">Next post</a>
+                <a href="../leetcode107-binary-tree-level-order-traversal-ii/" rel="prev" title="Leetcode107 Binary Tree Level Order Traversal II">Previous post</a>
             </li>
         </ul></nav></aside><section class="comments hidden-print"><h2>Comments</h2>
         
@@ -206,9 +130,9 @@ Memory Usage: 12.5 MB, less than 97.56% of C++ submissions.
         <div id="disqus_thread"></div>
         <script>
         var disqus_shortname ="fpghwd-github-io",
-            disqus_url="https://fpghwd.github.io/posts/leetcode107-binary-tree-level-order-traversal-ii/",
-        disqus_title="Leetcode107 Binary Tree Level Order Traversal II",
-        disqus_identifier="cache/posts/leetcode107-binary-tree-level-order-traversal-ii.html",
+            disqus_url="https://fpghwd.github.io/posts/diao-shi-de-shi-hou-chu-le-yi-ge-wen-ti/",
+        disqus_title="\u8c03\u8bd5\u7684\u65f6\u5019\u51fa\u4e86\u4e00\u4e2a\u95ee\u9898",
+        disqus_identifier="cache/posts/diao-shi-de-shi-hou-chu-le-yi-ge-wen-ti.html",
         disqus_config = function () {
             this.language = "en";
         };
