@@ -11,8 +11,8 @@
 <meta name="generator" content="Nikola (getnikola.com)">
 <link rel="alternate" type="application/rss+xml" title="RSS" hreflang="en" href="rss.xml">
 <link rel="canonical" href="https://fpghwd.github.io/">
-<link rel="next" href="index-1.html" type="text/html">
-<!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="posts/leetcode108-convert-sorted-array-to-binary-search-tree/" type="text/html">
+<link rel="next" href="index-2.html" type="text/html">
+<!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="posts/leetcode107-binary-tree-level-order-traversal-ii/" type="text/html">
 </head>
 <body>
 <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
@@ -69,7 +69,85 @@
     
         
     <div class="postindex">
-            <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/leetcode108-convert-sorted-array-to-binary-search-tree/" class="u-url">Leetcode108 Convert Sorted Array to Binary Search Tree</a></h1>
+            <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/leetcode107-binary-tree-level-order-traversal-ii/" class="u-url">Leetcode107 Binary Tree Level Order Traversal II</a></h1>
+                <div class="metadata">
+                    <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                        suzumiya natsuhi
+                    </span></p>
+            <p class="dateline">
+            <a href="posts/leetcode107-binary-tree-level-order-traversal-ii/" rel="bookmark">
+            <time class="published dt-published" datetime="2020-09-25T04:07:52+08:00" itemprop="datePublished" title="2020-09-25 04:07">2020-09-25 04:07</time></a>
+            </p>
+                        <p class="commentline">
+        
+    <a href="posts/leetcode107-binary-tree-level-order-traversal-ii/#disqus_thread" data-disqus-identifier="cache/posts/leetcode107-binary-tree-level-order-traversal-ii.html">Comments</a>
+
+
+                </p>
+</div>
+            </header><div class="e-content entry-content">
+                    <div>
+<p>
+<a href="https://leetcode.com/problems/binary-tree-level-order-traversal-ii/">107. Binary Tree Level Order Traversal II</a>
+</p>
+
+<p>
+<b>Solution</b>
+</p>
+
+<div class="org-src-container">
+
+<pre><code class="lang-C">
+/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left),
+ * right(right) {}
+ * };
+ */
+class Solution {
+  public:
+    vector&lt;vector&lt;int&gt;&gt; levelOrderBottom(TreeNode *root) {
+        vector&lt;vector&lt;int&gt;&gt; result;
+
+        queue&lt;TreeNode *&gt; q;
+        TreeNode *last, *end;
+        if (root) {
+            q.push(root);
+            end = root;
+            last = end;
+            result.push_back(vector&lt;int&gt;{});
+        }
+        while (!q.empty()) {
+            TreeNode *temp = q.front();
+            result[result.size() - 1].push_back(temp-&gt;val);
+            q.pop();
+            if (temp-&gt;left)q.push(temp-&gt;left);
+            if (temp-&gt;right)q.push(temp-&gt;right);
+            if (temp == last &amp;&amp; !q.empty())result.push_back(vector&lt;int&gt;{}); // 达到一层结尾还有元素就增加一个空 vector
+            if (temp == last)last=q.back();
+        }
+        reverse(result.begin(), result.end());
+        return result;
+    }
+};
+
+
+</code></pre>
+
+</div>
+
+<p>
+二叉树的层序遍历，稍微修改一下就行。
+</p>
+</div>
+                </div>
+            </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/leetcode108-convert-sorted-array-to-binary-search-tree/" class="u-url">Leetcode108 Convert Sorted Array to Binary Search Tree</a></h1>
                 <div class="metadata">
                     <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                         suzumiya natsuhi
@@ -755,65 +833,11 @@ class Solution {
 </div>
 </div>
                 </div>
-            </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/leetcode1200-minimum-absolute-difference/" class="u-url">Leetcode1200 minimum absolute difference</a></h1>
-                <div class="metadata">
-                    <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
-                        suzumiya natsuhi
-                    </span></p>
-            <p class="dateline">
-            <a href="posts/leetcode1200-minimum-absolute-difference/" rel="bookmark">
-            <time class="published dt-published" datetime="2020-09-12T03:43:01+08:00" itemprop="datePublished" title="2020-09-12 03:43">2020-09-12 03:43</time></a>
-            </p>
-                        <p class="commentline">
-        
-    <a href="posts/leetcode1200-minimum-absolute-difference/#disqus_thread" data-disqus-identifier="cache/posts/leetcode1200-minimum-absolute-difference.html">Comments</a>
-
-
-                </p>
-</div>
-            </header><div class="e-content entry-content">
-                    <div>
-<p>
-<a href="https://leetcode.com/problems/minimum-absolute-difference/">1200. Minimum Absolute Difference</a>
-</p>
-
-<p>
-<b>Solution</b>
-</p>
-
-<div class="org-src-container">
-
-<pre><code class="lang-C">class Solution {
-public:
-    vector&lt;vector&lt;int&gt;&gt; minimumAbsDifference(vector&lt;int&gt;&amp; arr) {
-        sort(arr.begin(), arr.end());
-        int v = -1;
-        vector&lt;vector&lt;int&gt;&gt; mad;
-        for(int i = 0; i + 1 &lt; arr.size(); i++){
-            vector&lt;int&gt; tmp;
-            if( v == -1 || arr[i+1] - arr[i] &lt; v){
-                mad.clear();
-                mad.push_back(vector&lt;int&gt;{arr[i],arr[i+1]});
-                v = arr[i+1] - arr[i];
-            }else{
-                if(arr[i+1] - arr[i] == v){
-                    mad.push_back(vector&lt;int&gt;{arr[i],arr[i+1]});
-                }
-            }
-        }
-        return mad;
-    }
-};
-</code></pre>
-
-</div>
-</div>
-                </div>
             </article>
 </div>
     
         <ul class="pager postindexpager clearfix">
-<li class="next"><a href="index-1.html" rel="next">Older posts</a></li>
+<li class="next"><a href="index-2.html" rel="next">Older posts</a></li>
         </ul>
 <script>var disqus_shortname="fpghwd-github-io";(function(){var a=document.createElement("script");a.async=true;a.src="https://"+disqus_shortname+".disqus.com/count.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(a)}());</script><!--End of body content--><footer id="footer">
             Contents © 2020         <a href="mailto:ggwdwhu@gmail.com">suzumiya natsuhi</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         

@@ -1,5 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Dichotomy</title><link>https://fpghwd.github.io/</link><description>To iterate is human, to recurse, divine</description><atom:link href="https://fpghwd.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;suzumiya natsuhi&lt;/a&gt; </copyright><lastBuildDate>Fri, 25 Sep 2020 03:38:11 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Leetcode108 Convert Sorted Array to Binary Search Tree</title><link>https://fpghwd.github.io/posts/leetcode108-convert-sorted-array-to-binary-search-tree/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Dichotomy</title><link>https://fpghwd.github.io/</link><description>To iterate is human, to recurse, divine</description><atom:link href="https://fpghwd.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;suzumiya natsuhi&lt;/a&gt; </copyright><lastBuildDate>Fri, 25 Sep 2020 04:07:57 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Leetcode107 Binary Tree Level Order Traversal II</title><link>https://fpghwd.github.io/posts/leetcode107-binary-tree-level-order-traversal-ii/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
+&lt;a href="https://leetcode.com/problems/binary-tree-level-order-traversal-ii/"&gt;107. Binary Tree Level Order Traversal II&lt;/a&gt;
+&lt;/p&gt;
+
+&lt;p&gt;
+&lt;b&gt;Solution&lt;/b&gt;
+&lt;/p&gt;
+
+&lt;div class="org-src-container"&gt;
+
+&lt;pre&gt;&lt;code class="lang-C"&gt;
+/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left),
+ * right(right) {}
+ * };
+ */
+class Solution {
+  public:
+    vector&amp;lt;vector&amp;lt;int&amp;gt;&amp;gt; levelOrderBottom(TreeNode *root) {
+        vector&amp;lt;vector&amp;lt;int&amp;gt;&amp;gt; result;
+
+        queue&amp;lt;TreeNode *&amp;gt; q;
+        TreeNode *last, *end;
+        if (root) {
+            q.push(root);
+            end = root;
+            last = end;
+            result.push_back(vector&amp;lt;int&amp;gt;{});
+        }
+        while (!q.empty()) {
+            TreeNode *temp = q.front();
+            result[result.size() - 1].push_back(temp-&amp;gt;val);
+            q.pop();
+            if (temp-&amp;gt;left)q.push(temp-&amp;gt;left);
+            if (temp-&amp;gt;right)q.push(temp-&amp;gt;right);
+            if (temp == last &amp;amp;&amp;amp; !q.empty())result.push_back(vector&amp;lt;int&amp;gt;{}); // 达到一层结尾还有元素就增加一个空 vector
+            if (temp == last)last=q.back();
+        }
+        reverse(result.begin(), result.end());
+        return result;
+    }
+};
+
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;/div&gt;
+
+&lt;p&gt;
+二叉树的层序遍历，稍微修改一下就行。
+&lt;/p&gt;&lt;/div&gt;</description><category>leetcode</category><guid>https://fpghwd.github.io/posts/leetcode107-binary-tree-level-order-traversal-ii/</guid><pubDate>Thu, 24 Sep 2020 20:07:52 GMT</pubDate></item><item><title>Leetcode108 Convert Sorted Array to Binary Search Tree</title><link>https://fpghwd.github.io/posts/leetcode108-convert-sorted-array-to-binary-search-tree/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
 &lt;a href="https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/"&gt;108. Convert Sorted Array to Binary Search Tree&lt;/a&gt;
 &lt;/p&gt;
 
@@ -490,37 +547,4 @@ class Solution {
 
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;/div&gt;&lt;/div&gt;</description><category>leetcode</category><guid>https://fpghwd.github.io/posts/leetcode893-increasingordersearch-tree/</guid><pubDate>Sun, 13 Sep 2020 01:10:47 GMT</pubDate></item><item><title>Leetcode1200 minimum absolute difference</title><link>https://fpghwd.github.io/posts/leetcode1200-minimum-absolute-difference/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
-&lt;a href="https://leetcode.com/problems/minimum-absolute-difference/"&gt;1200. Minimum Absolute Difference&lt;/a&gt;
-&lt;/p&gt;
-
-&lt;p&gt;
-&lt;b&gt;Solution&lt;/b&gt;
-&lt;/p&gt;
-
-&lt;div class="org-src-container"&gt;
-
-&lt;pre&gt;&lt;code class="lang-C"&gt;class Solution {
-public:
-    vector&amp;lt;vector&amp;lt;int&amp;gt;&amp;gt; minimumAbsDifference(vector&amp;lt;int&amp;gt;&amp;amp; arr) {
-        sort(arr.begin(), arr.end());
-        int v = -1;
-        vector&amp;lt;vector&amp;lt;int&amp;gt;&amp;gt; mad;
-        for(int i = 0; i + 1 &amp;lt; arr.size(); i++){
-            vector&amp;lt;int&amp;gt; tmp;
-            if( v == -1 || arr[i+1] - arr[i] &amp;lt; v){
-                mad.clear();
-                mad.push_back(vector&amp;lt;int&amp;gt;{arr[i],arr[i+1]});
-                v = arr[i+1] - arr[i];
-            }else{
-                if(arr[i+1] - arr[i] == v){
-                    mad.push_back(vector&amp;lt;int&amp;gt;{arr[i],arr[i+1]});
-                }
-            }
-        }
-        return mad;
-    }
-};
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;/div&gt;&lt;/div&gt;</description><category>leetcode</category><guid>https://fpghwd.github.io/posts/leetcode1200-minimum-absolute-difference/</guid><pubDate>Fri, 11 Sep 2020 19:43:01 GMT</pubDate></item></channel></rss>
+&lt;/div&gt;&lt;/div&gt;</description><category>leetcode</category><guid>https://fpghwd.github.io/posts/leetcode893-increasingordersearch-tree/</guid><pubDate>Sun, 13 Sep 2020 01:10:47 GMT</pubDate></item></channel></rss>

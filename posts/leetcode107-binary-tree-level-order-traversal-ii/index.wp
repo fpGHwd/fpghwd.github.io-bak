@@ -1,0 +1,58 @@
+<p>
+<a href="https://leetcode.com/problems/binary-tree-level-order-traversal-ii/">107. Binary Tree Level Order Traversal II</a>
+</p>
+
+<p>
+<b>Solution</b>
+</p>
+
+<div class="org-src-container">
+
+<pre><code class="lang-C">
+/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left),
+ * right(right) {}
+ * };
+ */
+class Solution {
+  public:
+    vector&lt;vector&lt;int&gt;&gt; levelOrderBottom(TreeNode *root) {
+        vector&lt;vector&lt;int&gt;&gt; result;
+
+        queue&lt;TreeNode *&gt; q;
+        TreeNode *last, *end;
+        if (root) {
+            q.push(root);
+            end = root;
+            last = end;
+            result.push_back(vector&lt;int&gt;{});
+        }
+        while (!q.empty()) {
+            TreeNode *temp = q.front();
+            result[result.size() - 1].push_back(temp-&gt;val);
+            q.pop();
+            if (temp-&gt;left)q.push(temp-&gt;left);
+            if (temp-&gt;right)q.push(temp-&gt;right);
+            if (temp == last &amp;&amp; !q.empty())result.push_back(vector&lt;int&gt;{}); // &#36798;&#21040;&#19968;&#23618;&#32467;&#23614;&#36824;&#26377;&#20803;&#32032;&#23601;&#22686;&#21152;&#19968;&#20010;&#31354; vector
+            if (temp == last)last=q.back();
+        }
+        reverse(result.begin(), result.end());
+        return result;
+    }
+};
+
+
+</code></pre>
+
+</div>
+
+<p>
+二叉树的层序遍历，稍微修改一下就行。
+</p>
