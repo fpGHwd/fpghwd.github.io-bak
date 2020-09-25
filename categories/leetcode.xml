@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Dichotomy (Posts about leetcode)</title><link>https://fpghwd.github.io/</link><description></description><atom:link href="https://fpghwd.github.io/categories/leetcode.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;suzumiya natsuhi&lt;/a&gt; </copyright><lastBuildDate>Fri, 25 Sep 2020 06:56:39 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Leetcode804 Most Common Word</title><link>https://fpghwd.github.io/posts/leetcode804-most-common-word/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Dichotomy (Posts about leetcode)</title><link>https://fpghwd.github.io/</link><description></description><atom:link href="https://fpghwd.github.io/categories/leetcode.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;suzumiya natsuhi&lt;/a&gt; </copyright><lastBuildDate>Fri, 25 Sep 2020 07:00:45 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Leetcode804 Most Common Word</title><link>https://fpghwd.github.io/posts/leetcode804-most-common-word/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
 &lt;a href="https://leetcode.com/problems/most-common-word/"&gt;819. Most Common Word&lt;/a&gt;
 &lt;/p&gt;
 
@@ -57,7 +57,26 @@ Memory Usage: 7.8 MB, less than 87.14% of C++ submissions.
 
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;/div&gt;&lt;/div&gt;</description><category>leetcode</category><guid>https://fpghwd.github.io/posts/leetcode804-most-common-word/</guid><pubDate>Thu, 24 Sep 2020 22:56:27 GMT</pubDate></item><item><title>Leetcode107 Binary Tree Level Order Traversal II</title><link>https://fpghwd.github.io/posts/leetcode107-binary-tree-level-order-traversal-ii/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
+&lt;/div&gt;&lt;/div&gt;</description><category>leetcode</category><guid>https://fpghwd.github.io/posts/leetcode804-most-common-word/</guid><pubDate>Thu, 24 Sep 2020 22:56:27 GMT</pubDate></item><item><title>调试的时候出了一个问题</title><link>https://fpghwd.github.io/posts/diao-shi-de-shi-hou-chu-le-yi-ge-wen-ti/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
+&lt;a href="https://leetcode.com/problems/shortest-distance-to-a-character/"&gt;821. Shortest Distance to a Character&lt;/a&gt;
+&lt;/p&gt;
+
+&lt;p&gt;
+一个 gdb 调试的问题，没太看明白（暴哭）：
+&lt;/p&gt;
+
+&lt;div class="figure"&gt;
+&lt;p&gt;&lt;img src="https://raw.githubusercontent.com/fpGHwd/fpghwd.github.io/master/images/_20200925_132117screenshot.png" alt="_20200925_132117screenshot.png"&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;
+想到可能是类型的问题：size&lt;sub&gt;type&lt;/sub&gt; 是一个无符号的整数，int 是有符号整数，有符号整数首先转换成无符号整数。-1 转化成 0xffffffff ，所以应该是没有问题的。
+&lt;/p&gt;
+
+&lt;p&gt;
+同时为什么是有符号整数转换成无符号整数，而不是相反呢？
+&lt;/p&gt;&lt;/div&gt;</description><category>ATTACH</category><category>leetcode</category><guid>https://fpghwd.github.io/posts/diao-shi-de-shi-hou-chu-le-yi-ge-wen-ti/</guid><pubDate>Thu, 24 Sep 2020 21:22:42 GMT</pubDate></item><item><title>Leetcode107 Binary Tree Level Order Traversal II</title><link>https://fpghwd.github.io/posts/leetcode107-binary-tree-level-order-traversal-ii/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
 &lt;a href="https://leetcode.com/problems/binary-tree-level-order-traversal-ii/"&gt;107. Binary Tree Level Order Traversal II&lt;/a&gt;
 &lt;/p&gt;
 
@@ -474,37 +493,4 @@ class Solution {
 
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;/div&gt;&lt;/div&gt;</description><category>leetcode</category><guid>https://fpghwd.github.io/posts/leetcode893-increasingordersearch-tree/</guid><pubDate>Sun, 13 Sep 2020 01:10:47 GMT</pubDate></item><item><title>Leetcode1200 minimum absolute difference</title><link>https://fpghwd.github.io/posts/leetcode1200-minimum-absolute-difference/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
-&lt;a href="https://leetcode.com/problems/minimum-absolute-difference/"&gt;1200. Minimum Absolute Difference&lt;/a&gt;
-&lt;/p&gt;
-
-&lt;p&gt;
-&lt;b&gt;Solution&lt;/b&gt;
-&lt;/p&gt;
-
-&lt;div class="org-src-container"&gt;
-
-&lt;pre&gt;&lt;code class="lang-C"&gt;class Solution {
-public:
-    vector&amp;lt;vector&amp;lt;int&amp;gt;&amp;gt; minimumAbsDifference(vector&amp;lt;int&amp;gt;&amp;amp; arr) {
-        sort(arr.begin(), arr.end());
-        int v = -1;
-        vector&amp;lt;vector&amp;lt;int&amp;gt;&amp;gt; mad;
-        for(int i = 0; i + 1 &amp;lt; arr.size(); i++){
-            vector&amp;lt;int&amp;gt; tmp;
-            if( v == -1 || arr[i+1] - arr[i] &amp;lt; v){
-                mad.clear();
-                mad.push_back(vector&amp;lt;int&amp;gt;{arr[i],arr[i+1]});
-                v = arr[i+1] - arr[i];
-            }else{
-                if(arr[i+1] - arr[i] == v){
-                    mad.push_back(vector&amp;lt;int&amp;gt;{arr[i],arr[i+1]});
-                }
-            }
-        }
-        return mad;
-    }
-};
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;/div&gt;&lt;/div&gt;</description><category>leetcode</category><guid>https://fpghwd.github.io/posts/leetcode1200-minimum-absolute-difference/</guid><pubDate>Fri, 11 Sep 2020 19:43:01 GMT</pubDate></item></channel></rss>
+&lt;/div&gt;&lt;/div&gt;</description><category>leetcode</category><guid>https://fpghwd.github.io/posts/leetcode893-increasingordersearch-tree/</guid><pubDate>Sun, 13 Sep 2020 01:10:47 GMT</pubDate></item></channel></rss>
