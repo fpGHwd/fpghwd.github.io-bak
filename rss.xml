@@ -1,5 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Dichotomy</title><link>https://fpghwd.github.io/</link><description>To iterate is human, to recurse, divine</description><atom:link href="https://fpghwd.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;suzumiya natsuhi&lt;/a&gt; </copyright><lastBuildDate>Fri, 25 Sep 2020 08:15:39 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Leetcode668. Employee Importance</title><link>https://fpghwd.github.io/posts/leetcode668-employee-importance/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Dichotomy</title><link>https://fpghwd.github.io/</link><description>To iterate is human, to recurse, divine</description><atom:link href="https://fpghwd.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;suzumiya natsuhi&lt;/a&gt; </copyright><lastBuildDate>Fri, 25 Sep 2020 08:54:30 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Leetcode617. Merge Two Binary Trees</title><link>https://fpghwd.github.io/posts/leetcode617-merge-two-binary-trees/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
+&lt;a href="https://leetcode.com/problems/merge-two-binary-trees/"&gt;617. Merge Two Binary Trees&lt;/a&gt;
+&lt;/p&gt;
+
+&lt;p&gt;
+&lt;b&gt;Solution&lt;/b&gt;
+&lt;/p&gt;
+
+&lt;div class="org-src-container"&gt;
+
+&lt;pre&gt;&lt;code class="lang-C"&gt;
+/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left),
+ * right(right) {}
+ * };
+ */
+class Solution {
+  public:
+    TreeNode *mergeTrees(TreeNode *t1, TreeNode *t2) {
+        if (t1 == NULL &amp;amp;&amp;amp; t2 == NULL)
+            return NULL;
+        TreeNode *t3 = new TreeNode((t1 == NULL ? 0 : t1-&amp;gt;val) +
+                                    (t2 == NULL ? 0 : t2-&amp;gt;val));
+        t3-&amp;gt;left = mergeTrees(t1 == NULL ? NULL : t1-&amp;gt;left,
+                              t2 == NULL ? NULL : t2-&amp;gt;left);
+        t3-&amp;gt;right = mergeTrees(t1 == NULL ? NULL : t1-&amp;gt;right,
+                               t2 == NULL ? NULL : t2-&amp;gt;right);
+        return t3;
+    }
+};
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;/div&gt;
+
+&lt;div class="org-src-container"&gt;
+
+&lt;pre&gt;&lt;code class="lang-html"&gt;
+Status: Accepted (183/183)
+
+Runtime: 56 ms, faster than 47.43% of C++ submissions.
+
+Memory Usage: 35.7 MB, less than 5.05% of C++ submissions.
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;/div&gt;&lt;/div&gt;</description><category>leetcode</category><guid>https://fpghwd.github.io/posts/leetcode617-merge-two-binary-trees/</guid><pubDate>Fri, 25 Sep 2020 00:54:22 GMT</pubDate></item><item><title>Leetcode668. Employee Importance</title><link>https://fpghwd.github.io/posts/leetcode668-employee-importance/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
 &lt;a href="https://leetcode.com/problems/employee-importance/"&gt;690. Employee Importance&lt;/a&gt;
 &lt;/p&gt;
 
@@ -512,64 +565,4 @@ vmess urls
 &lt;ol class="org-ol"&gt;
 &lt;li&gt;由于没有循环，只能找到第一个图片的字符串然后替换成真实的 url, 需要完善匹配后的操作。（完成）&lt;/li&gt;
 &lt;li&gt;还只能匹配截图这样文件名的图片，需要完善正则表达式。（完成）&lt;/li&gt;
-&lt;/ol&gt;&lt;/div&gt;</description><category>ATTACH</category><category>emacs</category><guid>https://fpghwd.github.io/posts/org2nikola-image-display/</guid><pubDate>Wed, 16 Sep 2020 19:35:39 GMT</pubDate></item><item><title>Leetcode700 Flood Fill</title><link>https://fpghwd.github.io/posts/leetcode700-flood-fill/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
-最近做了这道题（&lt;a href="https://leetcode.com/problems/flood-fill/"&gt;733. Flood Fill&lt;/a&gt;）无法提交，用了 gdb 调试可能因为 image 的 size 有点小所以也没有问题。
-&lt;/p&gt;
-
-&lt;p&gt;
-但是提交到 leetcode 的时候就提示：
-&lt;/p&gt;
-
-&lt;div class="org-src-container"&gt;
-
-&lt;pre&gt;&lt;code class="lang-html"&gt;Status: Runtime Error
-
-AddressSanitizer:DEADLYSIGNAL
-=================================================================
-==33==ERROR: AddressSanitizer: stack-overflow on address 0x7ffe804b8fc0 (pc 0x000000383a89 bp 0x7ffe804b9190 sp 0x7ffe804b8fc0 T0)
-==33==ABORTING
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;/div&gt;
-
-&lt;p&gt;
-&lt;b&gt;Incomplete Solution&lt;/b&gt;
-&lt;/p&gt;
-
-&lt;div class="org-src-container"&gt;
-
-&lt;pre&gt;&lt;code class="lang-C"&gt;
-class Solution {
-    public:
-        vector&amp;lt;vector&amp;lt;int&amp;gt;&amp;gt; floodFill(vector&amp;lt;vector&amp;lt;int&amp;gt;&amp;gt; &amp;amp;image, int sr, int sc,
-                                      int newColor) {
-            int tmp_color = image[sr][sc];
-            if (tmp_color == newColor)
-                return image;
-
-            // paint
-            if (image[sr][sc] != 0)
-                image[sr][sc] = newColor;
-
-            // paint others
-            if (sr - 1 &amp;gt;= 0 &amp;amp;&amp;amp; tmp_color == image[sr - 1][sc])
-                floodFill(image, sr - 1, sc, newColor);
-            if (sr + 1 &amp;lt; image.size() &amp;amp;&amp;amp; tmp_color == image[sr + 1][sc])
-                floodFill(image, sr + 1, sc, newColor);
-            if (sc - 1 &amp;gt;= 0 &amp;amp;&amp;amp; tmp_color == image[sr][sc - 1])
-                floodFill(image, sr, sc - 1, newColor);
-            if (sc + 1 &amp;lt; image[0].size() &amp;amp;&amp;amp; tmp_color == image[sr][sc + 1])
-                floodFill(image, sr, sc + 1, newColor);
-
-            return image;
-        }
-
-};
-
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;/div&gt;
-
-&lt;p&gt;
-并不知道哪里出了问题，先记下来再说。
-&lt;/p&gt;&lt;/div&gt;</description><category>leetcode</category><guid>https://fpghwd.github.io/posts/leetcode700-flood-fill/</guid><pubDate>Wed, 16 Sep 2020 17:13:28 GMT</pubDate></item></channel></rss>
+&lt;/ol&gt;&lt;/div&gt;</description><category>ATTACH</category><category>emacs</category><guid>https://fpghwd.github.io/posts/org2nikola-image-display/</guid><pubDate>Wed, 16 Sep 2020 19:35:39 GMT</pubDate></item></channel></rss>

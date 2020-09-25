@@ -12,7 +12,7 @@
 <link rel="alternate" type="application/rss+xml" title="RSS" hreflang="en" href="rss.xml">
 <link rel="canonical" href="https://fpghwd.github.io/">
 <link rel="next" href="index-2.html" type="text/html">
-<!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="posts/leetcode668-employee-importance/" type="text/html">
+<!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="posts/leetcode617-merge-two-binary-trees/" type="text/html">
 </head>
 <body>
 <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
@@ -69,7 +69,81 @@
     
         
     <div class="postindex">
-            <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/leetcode668-employee-importance/" class="u-url">Leetcode668. Employee Importance</a></h1>
+            <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/leetcode617-merge-two-binary-trees/" class="u-url">Leetcode617. Merge Two Binary Trees</a></h1>
+                <div class="metadata">
+                    <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                        suzumiya natsuhi
+                    </span></p>
+            <p class="dateline">
+            <a href="posts/leetcode617-merge-two-binary-trees/" rel="bookmark">
+            <time class="published dt-published" datetime="2020-09-25T08:54:22+08:00" itemprop="datePublished" title="2020-09-25 08:54">2020-09-25 08:54</time></a>
+            </p>
+                        <p class="commentline">
+        
+    <a href="posts/leetcode617-merge-two-binary-trees/#disqus_thread" data-disqus-identifier="cache/posts/leetcode617-merge-two-binary-trees.html">Comments</a>
+
+
+                </p>
+</div>
+            </header><div class="e-content entry-content">
+                    <div>
+<p>
+<a href="https://leetcode.com/problems/merge-two-binary-trees/">617. Merge Two Binary Trees</a>
+</p>
+
+<p>
+<b>Solution</b>
+</p>
+
+<div class="org-src-container">
+
+<pre><code class="lang-C">
+/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left),
+ * right(right) {}
+ * };
+ */
+class Solution {
+  public:
+    TreeNode *mergeTrees(TreeNode *t1, TreeNode *t2) {
+        if (t1 == NULL &amp;&amp; t2 == NULL)
+            return NULL;
+        TreeNode *t3 = new TreeNode((t1 == NULL ? 0 : t1-&gt;val) +
+                                    (t2 == NULL ? 0 : t2-&gt;val));
+        t3-&gt;left = mergeTrees(t1 == NULL ? NULL : t1-&gt;left,
+                              t2 == NULL ? NULL : t2-&gt;left);
+        t3-&gt;right = mergeTrees(t1 == NULL ? NULL : t1-&gt;right,
+                               t2 == NULL ? NULL : t2-&gt;right);
+        return t3;
+    }
+};
+
+</code></pre>
+
+</div>
+
+<div class="org-src-container">
+
+<pre><code class="lang-html">
+Status: Accepted (183/183)
+
+Runtime: 56 ms, faster than 47.43% of C++ submissions.
+
+Memory Usage: 35.7 MB, less than 5.05% of C++ submissions.
+
+</code></pre>
+
+</div>
+</div>
+                </div>
+            </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/leetcode668-employee-importance/" class="u-url">Leetcode668. Employee Importance</a></h1>
                 <div class="metadata">
                     <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                         suzumiya natsuhi
@@ -774,87 +848,6 @@ vmess urls
 <li>由于没有循环，只能找到第一个图片的字符串然后替换成真实的 url, 需要完善匹配后的操作。（完成）</li>
 <li>还只能匹配截图这样文件名的图片，需要完善正则表达式。（完成）</li>
 </ol>
-</div>
-                </div>
-            </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/leetcode700-flood-fill/" class="u-url">Leetcode700 Flood Fill</a></h1>
-                <div class="metadata">
-                    <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
-                        suzumiya natsuhi
-                    </span></p>
-            <p class="dateline">
-            <a href="posts/leetcode700-flood-fill/" rel="bookmark">
-            <time class="published dt-published" datetime="2020-09-17T01:13:28+08:00" itemprop="datePublished" title="2020-09-17 01:13">2020-09-17 01:13</time></a>
-            </p>
-                        <p class="commentline">
-        
-    <a href="posts/leetcode700-flood-fill/#disqus_thread" data-disqus-identifier="cache/posts/leetcode700-flood-fill.html">Comments</a>
-
-
-                </p>
-</div>
-            </header><div class="e-content entry-content">
-                    <div>
-<p>
-最近做了这道题（<a href="https://leetcode.com/problems/flood-fill/">733. Flood Fill</a>）无法提交，用了 gdb 调试可能因为 image 的 size 有点小所以也没有问题。
-</p>
-
-<p>
-但是提交到 leetcode 的时候就提示：
-</p>
-
-<div class="org-src-container">
-
-<pre><code class="lang-html">Status: Runtime Error
-
-AddressSanitizer:DEADLYSIGNAL
-=================================================================
-==33==ERROR: AddressSanitizer: stack-overflow on address 0x7ffe804b8fc0 (pc 0x000000383a89 bp 0x7ffe804b9190 sp 0x7ffe804b8fc0 T0)
-==33==ABORTING
-</code></pre>
-
-</div>
-
-<p>
-<b>Incomplete Solution</b>
-</p>
-
-<div class="org-src-container">
-
-<pre><code class="lang-C">
-class Solution {
-    public:
-        vector&lt;vector&lt;int&gt;&gt; floodFill(vector&lt;vector&lt;int&gt;&gt; &amp;image, int sr, int sc,
-                                      int newColor) {
-            int tmp_color = image[sr][sc];
-            if (tmp_color == newColor)
-                return image;
-
-            // paint
-            if (image[sr][sc] != 0)
-                image[sr][sc] = newColor;
-
-            // paint others
-            if (sr - 1 &gt;= 0 &amp;&amp; tmp_color == image[sr - 1][sc])
-                floodFill(image, sr - 1, sc, newColor);
-            if (sr + 1 &lt; image.size() &amp;&amp; tmp_color == image[sr + 1][sc])
-                floodFill(image, sr + 1, sc, newColor);
-            if (sc - 1 &gt;= 0 &amp;&amp; tmp_color == image[sr][sc - 1])
-                floodFill(image, sr, sc - 1, newColor);
-            if (sc + 1 &lt; image[0].size() &amp;&amp; tmp_color == image[sr][sc + 1])
-                floodFill(image, sr, sc + 1, newColor);
-
-            return image;
-        }
-
-};
-
-</code></pre>
-
-</div>
-
-<p>
-并不知道哪里出了问题，先记下来再说。
-</p>
 </div>
                 </div>
             </article>
