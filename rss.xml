@@ -1,5 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Dichotomy</title><link>https://fpghwd.github.io/</link><description>To iterate is human, to recurse, divine</description><atom:link href="https://fpghwd.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;suzumiya natsuhi&lt;/a&gt; </copyright><lastBuildDate>Fri, 25 Sep 2020 09:08:32 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Leetcode599. Minimum Index Sum of Two Lists</title><link>https://fpghwd.github.io/posts/leetcode/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Dichotomy</title><link>https://fpghwd.github.io/</link><description>To iterate is human, to recurse, divine</description><atom:link href="https://fpghwd.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;suzumiya natsuhi&lt;/a&gt; </copyright><lastBuildDate>Fri, 25 Sep 2020 13:21:53 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Leetcode687. Longest Univalue Path</title><link>https://fpghwd.github.io/posts/leetcode687-longest-univalue-path/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
+&lt;a href="https://leetcode.com/problems/longest-univalue-path/"&gt;687. Longest Univalue Path&lt;/a&gt;
+&lt;/p&gt;
+
+&lt;p&gt;
+&lt;b&gt;Solution&lt;/b&gt;
+&lt;/p&gt;
+
+&lt;div class="org-src-container"&gt;
+
+&lt;pre&gt;&lt;code class="lang-C"&gt;
+/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left),
+ * right(right) {}
+ * };
+ */
+
+class Solution {
+  public:
+    int luvp = 0;
+    int longestUnivaluePath(TreeNode *root) {
+        if (root == nullptr)
+            return 0;
+        travelPath(root);
+        return luvp - 1;
+    }
+
+    int travelPath(TreeNode *root) {
+        int left = 0, right = 0;
+        if (root-&amp;gt;left != nullptr)
+            left = travelPath(root-&amp;gt;left);
+        if (root-&amp;gt;right != nullptr)
+            right = travelPath(root-&amp;gt;right);
+        int root_value_length =
+            1 + (root-&amp;gt;left &amp;amp;&amp;amp; root-&amp;gt;left-&amp;gt;val == root-&amp;gt;val ? left : 0) +
+            (root-&amp;gt;right &amp;amp;&amp;amp; root-&amp;gt;right-&amp;gt;val == root-&amp;gt;val ? right : 0);
+        luvp = max(luvp, root_value_length);
+        return 1 +
+               max((root-&amp;gt;left &amp;amp;&amp;amp; root-&amp;gt;left-&amp;gt;val == root-&amp;gt;val ? left : 0),
+                   (root-&amp;gt;right &amp;amp;&amp;amp; root-&amp;gt;right-&amp;gt;val == root-&amp;gt;val ? right : 0));
+    }
+};
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;/div&gt;
+
+&lt;div class="org-src-container"&gt;
+
+&lt;pre&gt;&lt;code class="lang-html"&gt;
+Status: Accepted (71/71)
+
+Runtime: 184 ms, faster than 86.14% of C++ submissions.
+
+Memory Usage: 72.6 MB, less than 5.21% of C++ submissions.
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;/div&gt;
+
+&lt;p&gt;
+第一次做的时候没有做出来，觉得有点复杂。不过说到底还只是一个简单的树遍历，当然可以认为和求树深度的那类题其实差不多。其中每个点的处理就是找到是否比现有的最长路径 &lt;code&gt;luvp-1&lt;/code&gt; 更长的 &lt;code&gt;root_value_length&lt;/code&gt; ，然后返回的若是 &lt;code&gt;root_value_length&lt;/code&gt; ，那么得出来的结果不是 &lt;b&gt;最长的path&lt;/b&gt; ，而是相同值最多的相邻点个数。所以最后修改一下，返回稍长的路径即可。
+&lt;/p&gt;&lt;/div&gt;</description><category>leetcode</category><guid>https://fpghwd.github.io/posts/leetcode687-longest-univalue-path/</guid><pubDate>Fri, 25 Sep 2020 05:21:48 GMT</pubDate></item><item><title>Leetcode599. Minimum Index Sum of Two Lists</title><link>https://fpghwd.github.io/posts/leetcode/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
 &lt;a href="https://leetcode.com/problems/minimum-index-sum-of-two-lists/"&gt;599. Minimum Index Sum of Two Lists&lt;/a&gt;
 &lt;/p&gt;
 
@@ -475,65 +544,4 @@ class Solution {
 
 &lt;p&gt;
 这个写法是翻解答时看到的，比较简洁，如果熟悉 sort 的话也比较容易懂。sort 的关键还是后面的函数 &lt;code&gt;template&amp;lt; class RandomIt, class Compare &amp;gt; void stable_sort( RandomIt first, RandomIt last, Compare comp );&lt;/code&gt; 。
-&lt;/p&gt;&lt;/div&gt;</description><category>leetcode</category><guid>https://fpghwd.github.io/posts/leetcode937-reorder-data-in-log-files/</guid><pubDate>Thu, 24 Sep 2020 04:31:36 GMT</pubDate></item><item><title>Replace v2ray config outbounds with vmess</title><link>https://fpghwd.github.io/posts/replace-outbound-in-vmess-urlgfw-with-your-down-v2ray-config-file/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;ul class="org-ul"&gt;
-&lt;li&gt;&lt;p&gt;
-v2ray on linux
-&lt;/p&gt;
-
-&lt;p&gt;
-v2ray 在 linux 平台上&lt;a href="https://github.com/v2ray/v2ray-core/issues/1517"&gt;并不也不计划&lt;/a&gt;支持将 vmess-url 转换成可用的 v2ray 配置文件（我猜考虑到这些有端口和系统代理设置而在 linux 平台上这些是单独的功能）。也有人使用 python 脚本转换，&lt;a href="https://github.com/boypt/vmess2json"&gt;代码&lt;/a&gt;没有仔细看。不过我想到自己已经有在使用的配置文件，即使转化 vmess url 也不能完全用，有用的部分是 outbounds （即出口部分，提供 v2ray 服务的主机相关），所以打断取出 vmess url 的 outbound 部分合并到现有的 &lt;i&gt;/etc/v2ray/config.json&lt;/i&gt; 中使用。
-&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;
-目标
-&lt;/p&gt;
-
-&lt;p&gt;
-目标是将 vmess-url 转换成可用的 v2ray 配置文件，然后抽取其中的 outbounds[0] 替换原有 v2ray 配置文件的 outbounds[0] 部分。因为原有文件设置的路由还有 inbounds 已经有而且不打算更改这部分内容。
-&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;
-vmess urls
-&lt;/p&gt;
-
-&lt;p&gt;
-将可得的所有的 vmess urls 存入一个文件 &lt;code&gt;vmess-url.info&lt;/code&gt; 。
-&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;
-命令行 json 操作
-&lt;/p&gt;
-
-&lt;p&gt;
-安装 v2ray-tools 工具: &lt;code&gt;npm -g install v2ray-tools&lt;/code&gt; 。
-&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;
-转换 shell 脚本
-&lt;/p&gt;
-
-&lt;div class="org-src-container"&gt;
-
-&lt;pre&gt;&lt;code class="lang-shell"&gt;
-    vmess_file_path=$1      # vmdss-url.info 路径
-    line_num=$2             # 使用的 vmess-url 行号
-    config_file_path=$3     # 待合并的原配置。一般是 /etc/v2ray/config.json
-    output_config_file_path=$4  # 合并后的 config.json
-
-    line=`sed -n $(line_num)p $vmess_file_path`                         # 获取 vmess-url
-    result=`v2ray-tools vmess2config --port 8080 --url $line`           # 利用 v2ray-tools 生成配置文件
-    outbound0=`echo $result | jq '.outbounds[0]'`                       # 获取生成配置文件的 outbounds[0] 部分
-    config=`cat "/etc/v2ray/config.json"`                               # 获取原配置
-    replace_config=`echo $config | jq -r ".outbounds[0]=$outbound0"`    # 替换原配置的 outbounds[0] 为 vmess-url 的 outbounds[0]
-    echo '$replace_config' &amp;gt; $output_config_file_path                   # 写出文件，也可以直接写入 /etc/v2ray/config.json 需要 root 权限
-
-    # usage: vmess-url-to-config-json.sh ~/vmess-url.info 2 /etc/config/config.json ~/config.json
-
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;/div&gt;
-
-&lt;p&gt;
-这样就得到了 config.json 文件，然后可用 v2ray 检查： &lt;code&gt;v2ray -test -config ~/config.json&lt;/code&gt; 。可替换系统的默认配置文件 &lt;code&gt;/etc/v2ray/config.json&lt;/code&gt; ，并重启服务 &lt;code&gt;sudo systemctl restart v2ray.service&lt;/code&gt; 。
-&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;</description><category>openSUSE</category><guid>https://fpghwd.github.io/posts/replace-outbound-in-vmess-urlgfw-with-your-down-v2ray-config-file/</guid><pubDate>Fri, 18 Sep 2020 00:36:18 GMT</pubDate></item></channel></rss>
+&lt;/p&gt;&lt;/div&gt;</description><category>leetcode</category><guid>https://fpghwd.github.io/posts/leetcode937-reorder-data-in-log-files/</guid><pubDate>Thu, 24 Sep 2020 04:31:36 GMT</pubDate></item></channel></rss>

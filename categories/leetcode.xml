@@ -1,5 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Dichotomy (Posts about leetcode)</title><link>https://fpghwd.github.io/</link><description></description><atom:link href="https://fpghwd.github.io/categories/leetcode.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;suzumiya natsuhi&lt;/a&gt; </copyright><lastBuildDate>Fri, 25 Sep 2020 08:54:30 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Leetcode617. Merge Two Binary Trees</title><link>https://fpghwd.github.io/posts/leetcode617-merge-two-binary-trees/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Dichotomy (Posts about leetcode)</title><link>https://fpghwd.github.io/</link><description></description><atom:link href="https://fpghwd.github.io/categories/leetcode.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;suzumiya natsuhi&lt;/a&gt; </copyright><lastBuildDate>Fri, 25 Sep 2020 13:21:53 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Leetcode687. Longest Univalue Path</title><link>https://fpghwd.github.io/posts/leetcode687-longest-univalue-path/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
+&lt;a href="https://leetcode.com/problems/longest-univalue-path/"&gt;687. Longest Univalue Path&lt;/a&gt;
+&lt;/p&gt;
+
+&lt;p&gt;
+&lt;b&gt;Solution&lt;/b&gt;
+&lt;/p&gt;
+
+&lt;div class="org-src-container"&gt;
+
+&lt;pre&gt;&lt;code class="lang-C"&gt;
+/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left),
+ * right(right) {}
+ * };
+ */
+
+class Solution {
+  public:
+    int luvp = 0;
+    int longestUnivaluePath(TreeNode *root) {
+        if (root == nullptr)
+            return 0;
+        travelPath(root);
+        return luvp - 1;
+    }
+
+    int travelPath(TreeNode *root) {
+        int left = 0, right = 0;
+        if (root-&amp;gt;left != nullptr)
+            left = travelPath(root-&amp;gt;left);
+        if (root-&amp;gt;right != nullptr)
+            right = travelPath(root-&amp;gt;right);
+        int root_value_length =
+            1 + (root-&amp;gt;left &amp;amp;&amp;amp; root-&amp;gt;left-&amp;gt;val == root-&amp;gt;val ? left : 0) +
+            (root-&amp;gt;right &amp;amp;&amp;amp; root-&amp;gt;right-&amp;gt;val == root-&amp;gt;val ? right : 0);
+        luvp = max(luvp, root_value_length);
+        return 1 +
+               max((root-&amp;gt;left &amp;amp;&amp;amp; root-&amp;gt;left-&amp;gt;val == root-&amp;gt;val ? left : 0),
+                   (root-&amp;gt;right &amp;amp;&amp;amp; root-&amp;gt;right-&amp;gt;val == root-&amp;gt;val ? right : 0));
+    }
+};
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;/div&gt;
+
+&lt;div class="org-src-container"&gt;
+
+&lt;pre&gt;&lt;code class="lang-html"&gt;
+Status: Accepted (71/71)
+
+Runtime: 184 ms, faster than 86.14% of C++ submissions.
+
+Memory Usage: 72.6 MB, less than 5.21% of C++ submissions.
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;/div&gt;
+
+&lt;p&gt;
+第一次做的时候没有做出来，觉得有点复杂。不过说到底还只是一个简单的树遍历，当然可以认为和求树深度的那类题其实差不多。其中每个点的处理就是找到是否比现有的最长路径 &lt;code&gt;luvp-1&lt;/code&gt; 更长的 &lt;code&gt;root_value_length&lt;/code&gt; ，然后返回的若是 &lt;code&gt;root_value_length&lt;/code&gt; ，那么得出来的结果不是 &lt;b&gt;最长的path&lt;/b&gt; ，而是相同值最多的相邻点个数。所以最后修改一下，返回稍长的路径即可。
+&lt;/p&gt;&lt;/div&gt;</description><category>leetcode</category><guid>https://fpghwd.github.io/posts/leetcode687-longest-univalue-path/</guid><pubDate>Fri, 25 Sep 2020 05:21:48 GMT</pubDate></item><item><title>Leetcode617. Merge Two Binary Trees</title><link>https://fpghwd.github.io/posts/leetcode617-merge-two-binary-trees/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
 &lt;a href="https://leetcode.com/problems/merge-two-binary-trees/"&gt;617. Merge Two Binary Trees&lt;/a&gt;
 &lt;/p&gt;
 
@@ -481,73 +550,4 @@ class Solution {
 
 &lt;p&gt;
 并不知道哪里出了问题，先记下来再说。
-&lt;/p&gt;&lt;/div&gt;</description><category>leetcode</category><guid>https://fpghwd.github.io/posts/leetcode700-flood-fill/</guid><pubDate>Wed, 16 Sep 2020 17:13:28 GMT</pubDate></item><item><title>Leetcode606 Construct String from Binary Tree</title><link>https://fpghwd.github.io/posts/leetcode606-construct-string-from-binary-tree/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
-&lt;a href="https://leetcode.com/problems/construct-string-from-binary-tree/"&gt;606. Construct String from Binary Tree&lt;/a&gt;
-&lt;/p&gt;
-
-&lt;p&gt;
-&lt;b&gt;Solution&lt;/b&gt;
-&lt;/p&gt;
-
-&lt;div class="org-src-container"&gt;
-
-&lt;pre&gt;&lt;code class="lang-C"&gt;
-/**
- * Definition for a binary tree node.
- * struct TreeNode {
- *     int val;
- *     TreeNode *left;
- *     TreeNode *right;
- *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
- *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
- *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
- * };
- */
-class Solution {
-    public:
-        string tree2str(TreeNode* t) {
-            if(t == nullptr)return result;
-            result.append(to_string(t-&amp;gt;val));
-            if(t-&amp;gt;left){
-                result.append(1,'(');
-                tree2str(t-&amp;gt;left);
-                result.append(1,')');
-            }else{
-                if(t-&amp;gt;right){
-                    result.append("()");
-                }
-            }
-            if(t-&amp;gt;right){
-                result.append(1,'(');
-                tree2str(t-&amp;gt;right);
-                result.append(1,')');
-            }
-            return result;
-        }
-    private:
-        string result;
-};
-
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;/div&gt;
-
-&lt;p&gt;
-&lt;b&gt;Leetcode result&lt;/b&gt;
-&lt;/p&gt;
-
-&lt;div class="org-src-container"&gt;
-
-&lt;pre&gt;&lt;code class="lang-html"&gt;
-Status: Accepted (162/162)
-
-Runtime: 56 ms, faster than 20.91% of C++ submissions.
-
-Memory Usage: 144.4 MB, less than 6.22% of C++ submissions.
-
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;/div&gt;
-
-&lt;p&gt;
-结果排倒数 ，以及显示不了:)这个emoji。&lt;/p&gt;&lt;/div&gt;</description><category>leetcode</category><guid>https://fpghwd.github.io/posts/leetcode606-construct-string-from-binary-tree/</guid><pubDate>Tue, 15 Sep 2020 20:23:51 GMT</pubDate></item></channel></rss>
+&lt;/p&gt;&lt;/div&gt;</description><category>leetcode</category><guid>https://fpghwd.github.io/posts/leetcode700-flood-fill/</guid><pubDate>Wed, 16 Sep 2020 17:13:28 GMT</pubDate></item></channel></rss>

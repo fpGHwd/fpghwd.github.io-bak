@@ -70,7 +70,97 @@
     
         
     <div class="postindex">
-            <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/org2nikola-image-display/" class="u-url">Org2nikola image displaying</a></h1>
+            <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/replace-outbound-in-vmess-urlgfw-with-your-down-v2ray-config-file/" class="u-url">Replace v2ray config outbounds with vmess</a></h1>
+                <div class="metadata">
+                    <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                        suzumiya natsuhi
+                    </span></p>
+            <p class="dateline">
+            <a href="posts/replace-outbound-in-vmess-urlgfw-with-your-down-v2ray-config-file/" rel="bookmark">
+            <time class="published dt-published" datetime="2020-09-18T08:36:18+08:00" itemprop="datePublished" title="2020-09-18 08:36">2020-09-18 08:36</time></a>
+            </p>
+                        <p class="commentline">
+        
+    <a href="posts/replace-outbound-in-vmess-urlgfw-with-your-down-v2ray-config-file/#disqus_thread" data-disqus-identifier="cache/posts/replace-outbound-in-vmess-urlgfw-with-your-down-v2ray-config-file.html">Comments</a>
+
+
+                </p>
+</div>
+            </header><div class="e-content entry-content">
+                    <ul class="org-ul">
+<li>
+<p>
+v2ray on linux
+</p>
+
+<p>
+v2ray 在 linux 平台上<a href="https://github.com/v2ray/v2ray-core/issues/1517">并不也不计划</a>支持将 vmess-url 转换成可用的 v2ray 配置文件（我猜考虑到这些有端口和系统代理设置而在 linux 平台上这些是单独的功能）。也有人使用 python 脚本转换，<a href="https://github.com/boypt/vmess2json">代码</a>没有仔细看。不过我想到自己已经有在使用的配置文件，即使转化 vmess url 也不能完全用，有用的部分是 outbounds （即出口部分，提供 v2ray 服务的主机相关），所以打断取出 vmess url 的 outbound 部分合并到现有的 <i>/etc/v2ray/config.json</i> 中使用。
+</p>
+</li>
+
+<li>
+<p>
+目标
+</p>
+
+<p>
+目标是将 vmess-url 转换成可用的 v2ray 配置文件，然后抽取其中的 outbounds[0] 替换原有 v2ray 配置文件的 outbounds[0] 部分。因为原有文件设置的路由还有 inbounds 已经有而且不打算更改这部分内容。
+</p>
+</li>
+
+<li>
+<p>
+vmess urls
+</p>
+
+<p>
+将可得的所有的 vmess urls 存入一个文件 <code>vmess-url.info</code> 。
+</p>
+</li>
+
+<li>
+<p>
+命令行 json 操作
+</p>
+
+<p>
+安装 v2ray-tools 工具: <code>npm -g install v2ray-tools</code> 。
+</p>
+</li>
+
+<li>
+<p>
+转换 shell 脚本
+</p>
+
+<div class="org-src-container">
+
+<pre><code class="lang-shell">
+    vmess_file_path=$1      # vmdss-url.info 路径
+    line_num=$2             # 使用的 vmess-url 行号
+    config_file_path=$3     # 待合并的原配置。一般是 /etc/v2ray/config.json
+    output_config_file_path=$4  # 合并后的 config.json
+
+    line=`sed -n $(line_num)p $vmess_file_path`                         # 获取 vmess-url
+    result=`v2ray-tools vmess2config --port 8080 --url $line`           # 利用 v2ray-tools 生成配置文件
+    outbound0=`echo $result | jq '.outbounds[0]'`                       # 获取生成配置文件的 outbounds[0] 部分
+    config=`cat "/etc/v2ray/config.json"`                               # 获取原配置
+    replace_config=`echo $config | jq -r ".outbounds[0]=$outbound0"`    # 替换原配置的 outbounds[0] 为 vmess-url 的 outbounds[0]
+    echo '$replace_config' &gt; $output_config_file_path                   # 写出文件，也可以直接写入 /etc/v2ray/config.json 需要 root 权限
+
+    # usage: vmess-url-to-config-json.sh ~/vmess-url.info 2 /etc/config/config.json ~/config.json
+
+</code></pre>
+
+</div>
+
+<p>
+这样就得到了 config.json 文件，然后可用 v2ray 检查： <code>v2ray -test -config ~/config.json</code> 。可替换系统的默认配置文件 <code>/etc/v2ray/config.json</code> ，并重启服务 <code>sudo systemctl restart v2ray.service</code> 。
+</p>
+</li>
+</ul>
+</div>
+            </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/org2nikola-image-display/" class="u-url">Org2nikola image displaying</a></h1>
                 <div class="metadata">
                     <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                         suzumiya natsuhi
