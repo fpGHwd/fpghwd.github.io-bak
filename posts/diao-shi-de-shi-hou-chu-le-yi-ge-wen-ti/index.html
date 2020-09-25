@@ -19,7 +19,15 @@
 
 
 
-一个 gdb 调试的问题，没太看明白（暴哭）：">
+一个 gdb 调试的问题，没太看明白（暴哭）：
+
+
+
+_20200925_132117screenshot.png
+
+
+
+想到可能是类型的问题：sizetype 是一个无符号的整数，int 是有符号整数，-1 转化成 0xffffffff ，所以应该是没有问题的。">
 <meta property="og:type" content="article">
 <meta property="article:published_time" content="2020-09-25T05:22:42+08:00">
 <meta property="article:tag" content="ATTACH">
@@ -112,9 +120,13 @@
 一个 gdb 调试的问题，没太看明白（暴哭）：
 </p>
 
-<div class="figure">
-<p><img src="https://raw.githubusercontent.com/fpGHwd/fpghwd.github.io/master/images/_20200925_132117screenshot.png" alt="_20200925_132117screenshot.png"></p>
-</div>
+<p>
+<a href="_20200925_132117screenshot.png">_20200925_132117screenshot.png</a>
+</p>
+
+<p>
+想到可能是类型的问题：size<sub>type</sub> 是一个无符号的整数，int 是有符号整数，-1 转化成 0xffffffff ，所以应该是没有问题的。
+</p>
 </div>
     </div>
     <aside class="postpromonav"><nav><ul itemprop="keywords" class="tags">

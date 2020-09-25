@@ -6,8 +6,10 @@
 一个 gdb 调试的问题，没太看明白（暴哭）：
 </p>
 
-
-<div class="figure">
-<p><img src="https://raw.githubusercontent.com/fpGHwd/fpghwd.github.io/master/images/_20200925_132117screenshot.png" alt="_20200925_132117screenshot.png" />
+<p>
+<a href="_20200925_132117screenshot.png">_20200925_132117screenshot.png</a>
 </p>
-</div>
+
+<p>
+想到可能是类型的问题：size<sub>type</sub> 是一个无符号的整数，int 是有符号整数，-1 转化成 0xffffffff ，所以应该是没有问题的。
+</p>
