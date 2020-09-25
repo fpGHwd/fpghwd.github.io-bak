@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Dichotomy</title><link>https://fpghwd.github.io/</link><description>To iterate is human, to recurse, divine</description><atom:link href="https://fpghwd.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;suzumiya natsuhi&lt;/a&gt; </copyright><lastBuildDate>Fri, 25 Sep 2020 03:35:55 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Leetcode108 Convert Sorted Array to Binary Search Tree</title><link>https://fpghwd.github.io/posts/leetcode108-convert-sorted-array-to-binary-search-tree/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Dichotomy</title><link>https://fpghwd.github.io/</link><description>To iterate is human, to recurse, divine</description><atom:link href="https://fpghwd.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;suzumiya natsuhi&lt;/a&gt; </copyright><lastBuildDate>Fri, 25 Sep 2020 03:37:52 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Leetcode108 Convert Sorted Array to Binary Search Tree</title><link>https://fpghwd.github.io/posts/leetcode108-convert-sorted-array-to-binary-search-tree/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
 &lt;a href="https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/"&gt;108. Convert Sorted Array to Binary Search Tree&lt;/a&gt;
 &lt;/p&gt;
 
@@ -45,7 +45,7 @@ class Solution {
 &lt;/div&gt;
 
 &lt;p&gt;
-一开始以为是树的高度的调整题，后来发现这个和 &lt;b&gt;数组表示的树构造一棵树&lt;/b&gt; 的做法差不多。
+一开始以为是树的高度的调整题，后来发现这个和 &lt;b&gt;用数组表示的树构造一棵树&lt;/b&gt; 的做法差不多。
 &lt;/p&gt;&lt;/div&gt;</description><category>leetcode</category><guid>https://fpghwd.github.io/posts/leetcode108-convert-sorted-array-to-binary-search-tree/</guid><pubDate>Thu, 24 Sep 2020 19:35:49 GMT</pubDate></item><item><title>Leetcode937 Reorder Data in Log Files</title><link>https://fpghwd.github.io/posts/leetcode937-reorder-data-in-log-files/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
 &lt;a href="https://leetcode.com/problems/reorder-data-in-log-files/"&gt;937. Reorder Data in Log Files&lt;/a&gt;
 &lt;/p&gt;
