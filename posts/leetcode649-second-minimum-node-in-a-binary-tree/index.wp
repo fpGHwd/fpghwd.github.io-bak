@@ -65,6 +65,19 @@ class Solution {
 
 </div>
 
+<div class="org-src-container">
+
+<pre><code class="lang-html">
+Status: Accepted (35/35)
+
+Runtime: 0 ms, faster than 100.00% of C++ submissions.
+
+Memory Usage: 7.2 MB, less than 17.00% of C++ submissions.
+
+</code></pre>
+
+</div>
+
 <p>
 自从学会了一种偷懒的写法之后，就一直用这种 travel 的方法。
 </p>

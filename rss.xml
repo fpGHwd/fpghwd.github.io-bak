@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Dichotomy</title><link>https://fpghwd.github.io/</link><description>To iterate is human, to recurse, divine</description><atom:link href="https://fpghwd.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;suzumiya natsuhi&lt;/a&gt; </copyright><lastBuildDate>Fri, 25 Sep 2020 07:44:29 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Leetcode649  Second Minimum Node In a Binary Tree</title><link>https://fpghwd.github.io/posts/leetcode649-second-minimum-node-in-a-binary-tree/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Dichotomy</title><link>https://fpghwd.github.io/</link><description>To iterate is human, to recurse, divine</description><atom:link href="https://fpghwd.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;suzumiya natsuhi&lt;/a&gt; </copyright><lastBuildDate>Fri, 25 Sep 2020 07:46:06 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Leetcode649  Second Minimum Node In a Binary Tree</title><link>https://fpghwd.github.io/posts/leetcode649-second-minimum-node-in-a-binary-tree/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
 &lt;a href="https://leetcode.com/problems/second-minimum-node-in-a-binary-tree/"&gt;671. Second Minimum Node In a Binary Tree&lt;/a&gt;
 &lt;/p&gt;
 
@@ -61,6 +61,19 @@ class Solution {
         return sm;
     }
 };
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;/div&gt;
+
+&lt;div class="org-src-container"&gt;
+
+&lt;pre&gt;&lt;code class="lang-html"&gt;
+Status: Accepted (35/35)
+
+Runtime: 0 ms, faster than 100.00% of C++ submissions.
+
+Memory Usage: 7.2 MB, less than 17.00% of C++ submissions.
 
 &lt;/code&gt;&lt;/pre&gt;
 
