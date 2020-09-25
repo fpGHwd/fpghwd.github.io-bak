@@ -1,0 +1,60 @@
+<p>
+<a href="https://leetcode.com/problems/employee-importance/">690. Employee Importance</a>
+</p>
+
+<div class="org-src-container">
+
+<pre><code class="lang-C">
+/*
+// Definition for Employee.
+class Employee {
+public:
+    int id;
+    int importance;
+    vector&lt;int&gt; subordinates;
+};
+*/
+
+class Solution {
+  public:
+    int getImportance(vector&lt;Employee *&gt; employees, int id) {
+
+        unordered_map&lt;int, Employee *&gt; umii;
+        for (Employee *e : employees) {
+            umii[e-&gt;id] = e;
+        }
+
+        int importance = 0;
+        queue&lt;int&gt; qi;
+        qi.push(id);
+
+        int tmp;
+        while (!qi.empty()) {
+            tmp = qi.front();
+            importance += umii[tmp]-&gt;importance;
+            qi.pop();
+            for (int i : umii[tmp]-&gt;subordinates)
+                qi.push(i);
+        }
+
+        return importance;
+    }
+};
+
+
+</code></pre>
+
+</div>
+
+<div class="org-src-container">
+
+<pre><code class="lang-html">
+Status: Accepted (108/108)
+
+Runtime: 36 ms, faster than 92.63% of C++ submissions.
+
+Memory Usage: 14.4 MB, less than 27.87% of C++ submissions.
+
+</code></pre>
+
+</div>
