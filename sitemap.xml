@@ -19,7 +19,7 @@
  </url>
  <url>
   <loc>https://fpghwd.github.io/archive.html</loc>
-  <lastmod>2020-09-25T08:54:00Z</lastmod>
+  <lastmod>2020-09-25T09:06:00Z</lastmod>
  </url>
  <url>
   <loc>https://fpghwd.github.io/authors/</loc>
@@ -103,7 +103,7 @@
  </url>
  <url>
   <loc>https://fpghwd.github.io/index-2.html</loc>
-  <lastmod>2020-09-25T08:54:00Z</lastmod>
+  <lastmod>2020-09-25T09:06:00Z</lastmod>
  </url>
  <url>
   <loc>https://fpghwd.github.io/listings/</loc>
@@ -192,6 +192,10 @@
  <url>
   <loc>https://fpghwd.github.io/posts/ignorant-and-tolerant/</loc>
   <lastmod>2020-09-09T02:04:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://fpghwd.github.io/posts/leetcode/</loc>
+  <lastmod>2020-09-25T09:06:00Z</lastmod>
  </url>
  <url>
   <loc>https://fpghwd.github.io/posts/leetcode107-binary-tree-level-order-traversal-ii/</loc>
