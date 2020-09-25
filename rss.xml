@@ -1,5 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Dichotomy</title><link>https://fpghwd.github.io/</link><description>To iterate is human, to recurse, divine</description><atom:link href="https://fpghwd.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;suzumiya natsuhi&lt;/a&gt; </copyright><lastBuildDate>Fri, 25 Sep 2020 05:53:29 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>调试的时候出了一个问题</title><link>https://fpghwd.github.io/posts/diao-shi-de-shi-hou-chu-le-yi-ge-wen-ti/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Dichotomy</title><link>https://fpghwd.github.io/</link><description>To iterate is human, to recurse, divine</description><atom:link href="https://fpghwd.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;suzumiya natsuhi&lt;/a&gt; </copyright><lastBuildDate>Fri, 25 Sep 2020 06:56:39 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Leetcode804 Most Common Word</title><link>https://fpghwd.github.io/posts/leetcode804-most-common-word/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
+&lt;a href="https://leetcode.com/problems/most-common-word/"&gt;819. Most Common Word&lt;/a&gt;
+&lt;/p&gt;
+
+&lt;p&gt;
+&lt;b&gt;Solution&lt;/b&gt;
+&lt;/p&gt;
+
+&lt;div class="org-src-container"&gt;
+
+&lt;pre&gt;&lt;code class="lang-C"&gt;
+class Solution {
+  public:
+    string mostCommonWord(string paragraph, vector&amp;lt;string&amp;gt; &amp;amp;banned) {
+        unordered_map&amp;lt;string, int&amp;gt; umsi;
+        int start, end;
+        transform(paragraph.begin(),paragraph.end(),paragraph.begin(),::tolower);
+        for (int i = 0; i &amp;lt; paragraph.length(); i++) {
+            while (i &amp;lt; paragraph.length() &amp;amp;&amp;amp; !isalpha(paragraph[i]))
+                i++;
+            start = i;
+            while (i &amp;lt; paragraph.length() &amp;amp;&amp;amp; isalpha(paragraph[i]))
+                i++;
+            end = i;
+            umsi[paragraph.substr(start, end - start)]++;
+        }
+
+        for (string s : banned)
+            if (umsi.find(s) != umsi.end())
+                umsi.erase(s);
+
+        string w = "";
+        for (auto it : umsi) {
+            if (w == "")
+                w = it.first;
+            else if (umsi[it.first] &amp;gt; umsi[w])
+                w = it.first;
+        }
+
+        return w;
+    }
+};
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;/div&gt;
+
+&lt;div class="org-src-container"&gt;
+
+&lt;pre&gt;&lt;code class="lang-html"&gt;
+Status: Accepted (47/47)
+
+Runtime: 4 ms, faster than 99.63% of C++ submissions.
+
+Memory Usage: 7.8 MB, less than 87.14% of C++ submissions.
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;/div&gt;&lt;/div&gt;</description><category>leetcode</category><guid>https://fpghwd.github.io/posts/leetcode804-most-common-word/</guid><pubDate>Thu, 24 Sep 2020 22:56:27 GMT</pubDate></item><item><title>调试的时候出了一个问题</title><link>https://fpghwd.github.io/posts/diao-shi-de-shi-hou-chu-le-yi-ge-wen-ti/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
 &lt;a href="https://leetcode.com/problems/shortest-distance-to-a-character/"&gt;821. Shortest Distance to a Character&lt;/a&gt;
 &lt;/p&gt;
 
@@ -495,43 +553,4 @@ int main(int arch, char **argv){
 
 &lt;p&gt;
 开始没有看太懂题目的意思，解答也看不懂。后来在 gud-gdb 下调试了一下，才懂了一点点。Map 的作用是存 nums2 中每个 element 的后面第一个比自身大的 element, stack 的作用是暂存正在处理的位置吧（没有想出来如何更好的表达）。num1 是 nums2 的字集，那么再遍历一遍 map 就可以得到 nums1 中每个元素的在 nums2 的位置上后面的第一个比它大的元素了。
-&lt;/p&gt;&lt;/div&gt;</description><category>leetcode</category><guid>https://fpghwd.github.io/posts/leetcode487-next-greater-element-i/</guid><pubDate>Mon, 14 Sep 2020 18:51:50 GMT</pubDate></item><item><title>Leetcode589 N-ary Tree Preorder Traversal</title><link>https://fpghwd.github.io/posts/leetcode742-n-ary-tree-preorder-traversal/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
-&lt;a href="https://leetcode.com/problems/n-ary-tree-preorder-traversal"&gt;589. N-ary Tree Preorder Traversal&lt;/a&gt;
-&lt;/p&gt;
-
-&lt;p&gt;
-&lt;b&gt;Solution&lt;/b&gt;
-&lt;/p&gt;
-
-&lt;div class="org-src-container"&gt;
-
-&lt;pre&gt;&lt;code class="lang-C"&gt;
-class Solution {
-    public:
-        vector&amp;lt;int&amp;gt; preorder(Node* root) {
-            if(root==nullptr)return preorder_vi;
-            preorder_vi.push_back(root-&amp;gt;val);
-            for(Node* n:root-&amp;gt;children){
-                preorder(n);
-            }
-            return preorder_vi;
-        }
-    private:
-        vector&amp;lt;int&amp;gt; preorder_vi;
-};
-
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;/div&gt;
-
-&lt;p&gt;
-虽然这个返回有点丑陋，不想写第二个函数，尽管感觉总是怪怪的。
-&lt;/p&gt;
-
-&lt;p&gt;
-&lt;b&gt;更新：&lt;/b&gt;
-&lt;/p&gt;
-
-&lt;p&gt;
-奇怪主要因为这个 &lt;code&gt;preorder_vi&lt;/code&gt; 的返回看起来有点多余，可能以前习惯写的遍历都是返回 &lt;code&gt;void&lt;/code&gt; ，导致有这样的错觉。
-&lt;/p&gt;&lt;/div&gt;</description><category>leetcode</category><guid>https://fpghwd.github.io/posts/leetcode742-n-ary-tree-preorder-traversal/</guid><pubDate>Mon, 14 Sep 2020 04:09:43 GMT</pubDate></item></channel></rss>
+&lt;/p&gt;&lt;/div&gt;</description><category>leetcode</category><guid>https://fpghwd.github.io/posts/leetcode487-next-greater-element-i/</guid><pubDate>Mon, 14 Sep 2020 18:51:50 GMT</pubDate></item></channel></rss>

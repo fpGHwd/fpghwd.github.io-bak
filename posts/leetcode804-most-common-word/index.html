@@ -3,39 +3,36 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>调试的时候出了一个问题 | Dichotomy</title>
+<title>Leetcode804 Most Common Word | Dichotomy</title>
 <link href="../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
 <meta name="theme-color" content="#5670d4">
 <meta name="generator" content="Nikola (getnikola.com)">
 <link rel="alternate" type="application/rss+xml" title="RSS" hreflang="en" href="../../rss.xml">
-<link rel="canonical" href="https://fpghwd.github.io/posts/diao-shi-de-shi-hou-chu-le-yi-ge-wen-ti/">
+<link rel="canonical" href="https://fpghwd.github.io/posts/leetcode804-most-common-word/">
 <!--[if lt IE 9]><script src="../../assets/js/html5.js"></script><![endif]--><meta name="author" content="suzumiya natsuhi">
-<link rel="prev" href="../leetcode107-binary-tree-level-order-traversal-ii/" title="Leetcode107 Binary Tree Level Order Traversal II" type="text/html">
-<link rel="next" href="../leetcode804-most-common-word/" title="Leetcode804 Most Common Word" type="text/html">
+<link rel="prev" href="../diao-shi-de-shi-hou-chu-le-yi-ge-wen-ti/" title="调试的时候出了一个问题" type="text/html">
 <meta property="og:site_name" content="Dichotomy">
-<meta property="og:title" content="调试的时候出了一个问题">
-<meta property="og:url" content="https://fpghwd.github.io/posts/diao-shi-de-shi-hou-chu-le-yi-ge-wen-ti/">
-<meta property="og:description" content="821. Shortest Distance to a Character
+<meta property="og:title" content="Leetcode804 Most Common Word">
+<meta property="og:url" content="https://fpghwd.github.io/posts/leetcode804-most-common-word/">
+<meta property="og:description" content="819. Most Common Word
 
 
 
-一个 gdb 调试的问题，没太看明白（暴哭）：
+Solution
 
 
 
-_20200925_132117screenshot.png
 
 
-
-想到可能是类型的问题：sizetype 是一个无符号的整数，int 是有符号整数，有符号整数首先转换成无符号整数。-1 转化成 0xffffffff ，所以应该是没有问题的。
-
-
-
-同时为什么是有">
+class Solution {
+  public:
+    string mostCommonWord(string paragraph, vector&lt;string&gt; &amp;banned) {
+        unordered_map&lt;string, int&gt; umsi;
+        int start, end;">
 <meta property="og:type" content="article">
-<meta property="article:published_time" content="2020-09-25T05:22:42+08:00">
-<meta property="article:tag" content="ATTACH">
+<meta property="article:published_time" content="2020-09-25T06:56:27+08:00">
+<meta property="article:tag" content="leetcode">
 </head>
 <body>
 <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
@@ -93,7 +90,7 @@ _20200925_132117screenshot.png
         
         
         
-<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">调试的时候出了一个问题</a></h1>
+<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">Leetcode804 Most Common Word</a></h1>
 
         <div class="metadata">
             <p class="byline author vcard p-author h-card"><span class="byline-name fn p-name" itemprop="author">
@@ -101,11 +98,11 @@ _20200925_132117screenshot.png
             </span></p>
             <p class="dateline">
             <a href="." rel="bookmark">
-            <time class="published dt-published" datetime="2020-09-25T05:22:42+08:00" itemprop="datePublished" title="2020-09-25 05:22">2020-09-25 05:22</time></a>
+            <time class="published dt-published" datetime="2020-09-25T06:56:27+08:00" itemprop="datePublished" title="2020-09-25 06:56">2020-09-25 06:56</time></a>
             </p>
                 <p class="commentline">
         
-    <a href="#disqus_thread" data-disqus-identifier="cache/posts/diao-shi-de-shi-hou-chu-le-yi-ge-wen-ti.html">Comments</a>
+    <a href="#disqus_thread" data-disqus-identifier="cache/posts/leetcode804-most-common-word.html">Comments</a>
 
 
             
@@ -118,34 +115,72 @@ _20200925_132117screenshot.png
     </header><div class="e-content entry-content" itemprop="articleBody text">
     <div>
 <p>
-<a href="https://leetcode.com/problems/shortest-distance-to-a-character/">821. Shortest Distance to a Character</a>
+<a href="https://leetcode.com/problems/most-common-word/">819. Most Common Word</a>
 </p>
 
 <p>
-一个 gdb 调试的问题，没太看明白（暴哭）：
+<b>Solution</b>
 </p>
 
-<p>
-<a href="_20200925_132117screenshot.png">_20200925_132117screenshot.png</a>
-</p>
+<div class="org-src-container">
 
-<p>
-想到可能是类型的问题：size<sub>type</sub> 是一个无符号的整数，int 是有符号整数，有符号整数首先转换成无符号整数。-1 转化成 0xffffffff ，所以应该是没有问题的。
-</p>
+<pre><code class="lang-C">
+class Solution {
+  public:
+    string mostCommonWord(string paragraph, vector&lt;string&gt; &amp;banned) {
+        unordered_map&lt;string, int&gt; umsi;
+        int start, end;
+        transform(paragraph.begin(),paragraph.end(),paragraph.begin(),::tolower);
+        for (int i = 0; i &lt; paragraph.length(); i++) {
+            while (i &lt; paragraph.length() &amp;&amp; !isalpha(paragraph[i]))
+                i++;
+            start = i;
+            while (i &lt; paragraph.length() &amp;&amp; isalpha(paragraph[i]))
+                i++;
+            end = i;
+            umsi[paragraph.substr(start, end - start)]++;
+        }
 
-<p>
-同时为什么是有符号整数转换成无符号整数，而不是相反呢？</p>
+        for (string s : banned)
+            if (umsi.find(s) != umsi.end())
+                umsi.erase(s);
+
+        string w = "";
+        for (auto it : umsi) {
+            if (w == "")
+                w = it.first;
+            else if (umsi[it.first] &gt; umsi[w])
+                w = it.first;
+        }
+
+        return w;
+    }
+};
+
+</code></pre>
+
+</div>
+
+<div class="org-src-container">
+
+<pre><code class="lang-html">
+Status: Accepted (47/47)
+
+Runtime: 4 ms, faster than 99.63% of C++ submissions.
+
+Memory Usage: 7.8 MB, less than 87.14% of C++ submissions.
+
+</code></pre>
+
+</div>
 </div>
     </div>
     <aside class="postpromonav"><nav><ul itemprop="keywords" class="tags">
-<li><a class="tag p-category" href="../../categories/attach/" rel="tag">ATTACH</a></li>
+<li><a class="tag p-category" href="../../categories/leetcode/" rel="tag">leetcode</a></li>
         </ul>
 <ul class="pager hidden-print">
 <li class="previous">
-                <a href="../leetcode107-binary-tree-level-order-traversal-ii/" rel="prev" title="Leetcode107 Binary Tree Level Order Traversal II">Previous post</a>
-            </li>
-            <li class="next">
-                <a href="../leetcode804-most-common-word/" rel="next" title="Leetcode804 Most Common Word">Next post</a>
+                <a href="../diao-shi-de-shi-hou-chu-le-yi-ge-wen-ti/" rel="prev" title="调试的时候出了一个问题">Previous post</a>
             </li>
         </ul></nav></aside><section class="comments hidden-print"><h2>Comments</h2>
         
@@ -153,9 +188,9 @@ _20200925_132117screenshot.png
         <div id="disqus_thread"></div>
         <script>
         var disqus_shortname ="fpghwd-github-io",
-            disqus_url="https://fpghwd.github.io/posts/diao-shi-de-shi-hou-chu-le-yi-ge-wen-ti/",
-        disqus_title="\u8c03\u8bd5\u7684\u65f6\u5019\u51fa\u4e86\u4e00\u4e2a\u95ee\u9898",
-        disqus_identifier="cache/posts/diao-shi-de-shi-hou-chu-le-yi-ge-wen-ti.html",
+            disqus_url="https://fpghwd.github.io/posts/leetcode804-most-common-word/",
+        disqus_title="Leetcode804 Most Common Word",
+        disqus_identifier="cache/posts/leetcode804-most-common-word.html",
         disqus_config = function () {
             this.language = "en";
         };

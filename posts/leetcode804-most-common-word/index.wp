@@ -1,0 +1,59 @@
+<p>
+<a href="https://leetcode.com/problems/most-common-word/">819. Most Common Word</a>
+</p>
+
+<p>
+<b>Solution</b>
+</p>
+
+<div class="org-src-container">
+
+<pre><code class="lang-C">
+class Solution {
+  public:
+    string mostCommonWord(string paragraph, vector&lt;string&gt; &amp;banned) {
+        unordered_map&lt;string, int&gt; umsi;
+        int start, end;
+        transform(paragraph.begin(),paragraph.end(),paragraph.begin(),::tolower);
+        for (int i = 0; i &lt; paragraph.length(); i++) {
+            while (i &lt; paragraph.length() &amp;&amp; !isalpha(paragraph[i]))
+                i++;
+            start = i;
+            while (i &lt; paragraph.length() &amp;&amp; isalpha(paragraph[i]))
+                i++;
+            end = i;
+            umsi[paragraph.substr(start, end - start)]++;
+        }
+
+        for (string s : banned)
+            if (umsi.find(s) != umsi.end())
+                umsi.erase(s);
+
+        string w = "";
+        for (auto it : umsi) {
+            if (w == "")
+                w = it.first;
+            else if (umsi[it.first] &gt; umsi[w])
+                w = it.first;
+        }
+
+        return w;
+    }
+};
+
+</code></pre>
+
+</div>
+
+<div class="org-src-container">
+
+<pre><code class="lang-html">
+Status: Accepted (47/47)
+
+Runtime: 4 ms, faster than 99.63% of C++ submissions.
+
+Memory Usage: 7.8 MB, less than 87.14% of C++ submissions.
+
+</code></pre>
+
+</div>

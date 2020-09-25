@@ -1,5 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Dichotomy (Posts about leetcode)</title><link>https://fpghwd.github.io/</link><description></description><atom:link href="https://fpghwd.github.io/categories/leetcode.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;suzumiya natsuhi&lt;/a&gt; </copyright><lastBuildDate>Fri, 25 Sep 2020 04:09:38 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Leetcode107 Binary Tree Level Order Traversal II</title><link>https://fpghwd.github.io/posts/leetcode107-binary-tree-level-order-traversal-ii/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Dichotomy (Posts about leetcode)</title><link>https://fpghwd.github.io/</link><description></description><atom:link href="https://fpghwd.github.io/categories/leetcode.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;suzumiya natsuhi&lt;/a&gt; </copyright><lastBuildDate>Fri, 25 Sep 2020 06:56:39 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Leetcode804 Most Common Word</title><link>https://fpghwd.github.io/posts/leetcode804-most-common-word/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
+&lt;a href="https://leetcode.com/problems/most-common-word/"&gt;819. Most Common Word&lt;/a&gt;
+&lt;/p&gt;
+
+&lt;p&gt;
+&lt;b&gt;Solution&lt;/b&gt;
+&lt;/p&gt;
+
+&lt;div class="org-src-container"&gt;
+
+&lt;pre&gt;&lt;code class="lang-C"&gt;
+class Solution {
+  public:
+    string mostCommonWord(string paragraph, vector&amp;lt;string&amp;gt; &amp;amp;banned) {
+        unordered_map&amp;lt;string, int&amp;gt; umsi;
+        int start, end;
+        transform(paragraph.begin(),paragraph.end(),paragraph.begin(),::tolower);
+        for (int i = 0; i &amp;lt; paragraph.length(); i++) {
+            while (i &amp;lt; paragraph.length() &amp;amp;&amp;amp; !isalpha(paragraph[i]))
+                i++;
+            start = i;
+            while (i &amp;lt; paragraph.length() &amp;amp;&amp;amp; isalpha(paragraph[i]))
+                i++;
+            end = i;
+            umsi[paragraph.substr(start, end - start)]++;
+        }
+
+        for (string s : banned)
+            if (umsi.find(s) != umsi.end())
+                umsi.erase(s);
+
+        string w = "";
+        for (auto it : umsi) {
+            if (w == "")
+                w = it.first;
+            else if (umsi[it.first] &amp;gt; umsi[w])
+                w = it.first;
+        }
+
+        return w;
+    }
+};
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;/div&gt;
+
+&lt;div class="org-src-container"&gt;
+
+&lt;pre&gt;&lt;code class="lang-html"&gt;
+Status: Accepted (47/47)
+
+Runtime: 4 ms, faster than 99.63% of C++ submissions.
+
+Memory Usage: 7.8 MB, less than 87.14% of C++ submissions.
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;/div&gt;&lt;/div&gt;</description><category>leetcode</category><guid>https://fpghwd.github.io/posts/leetcode804-most-common-word/</guid><pubDate>Thu, 24 Sep 2020 22:56:27 GMT</pubDate></item><item><title>Leetcode107 Binary Tree Level Order Traversal II</title><link>https://fpghwd.github.io/posts/leetcode107-binary-tree-level-order-traversal-ii/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
 &lt;a href="https://leetcode.com/problems/binary-tree-level-order-traversal-ii/"&gt;107. Binary Tree Level Order Traversal II&lt;/a&gt;
 &lt;/p&gt;
 
@@ -449,67 +507,4 @@ public:
 };
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;/div&gt;&lt;/div&gt;</description><category>leetcode</category><guid>https://fpghwd.github.io/posts/leetcode1200-minimum-absolute-difference/</guid><pubDate>Fri, 11 Sep 2020 19:43:01 GMT</pubDate></item><item><title>Leetcode41 First Missing Positive</title><link>https://fpghwd.github.io/posts/leetcode41-first-missing-positive/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
-Given an unsorted integer array, find the smallest missing positive integer.
-&lt;/p&gt;
-
-&lt;p&gt;
-&lt;b&gt;Example 1&lt;/b&gt;:
-Input: [1,2,0]
-Output: 3
-&lt;/p&gt;
-
-&lt;p&gt;
-&lt;b&gt;Example 2&lt;/b&gt;:
-Input: [3,4,-1,1]
-Output: 2
-&lt;/p&gt;
-
-&lt;p&gt;
-&lt;b&gt;Example 3&lt;/b&gt;:
-Input: [7,8,9,11,12]
-Output: 1
-&lt;/p&gt;
-
-&lt;p&gt;
-&lt;b&gt;Note&lt;/b&gt;:
-Your algorithm should run in O(n) time and uses constant extra space.
-&lt;/p&gt;
-
-&lt;p&gt;
-&lt;b&gt;思路:&lt;/b&gt;
-&lt;/p&gt;
-
-&lt;ol class="org-ol"&gt;
-&lt;li&gt;排序占用 O(nlogn)的时间复杂度;&lt;/li&gt;
-&lt;li&gt;丢失意味着需要一定程度的排序,才能知道哪个是丢失的;&lt;/li&gt;
-&lt;li&gt;最小的正数,说明负数和 0 不参与排序;&lt;/li&gt;
-&lt;li&gt;证明复杂度为 O(n). 因为每次交换都将一个正数 nums[k]放到 nums 中 nums[k]-1 的位置上,因此复杂度是 O(n).&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;div class="org-src-container"&gt;
-
-&lt;pre&gt;&lt;code class="lang-cpp"&gt;class Solution {
-public:
-    int firstMissingPositive(vector&amp;lt;int&amp;gt;&amp;amp; nums) {
-        int len = nums.size(), tmp;
-
-        for(int i = 0; i &amp;lt; len; i++){
-            while(nums[i] &amp;gt;= 1 &amp;amp;&amp;amp; nums[i] &amp;lt;= len &amp;amp;&amp;amp; nums[i]!=i+1 &amp;amp;&amp;amp; nums[nums[i]-1]!=nums[i]){
-                tmp = nums[nums[i]-1];
-                nums[nums[i]-1]=nums[i];
-                nums[i] = tmp;
-            }
-        }
-
-        for(int i = 0; i &amp;lt; len; i++){
-            if(nums[i]!=i+1){
-                return i+1;
-            }
-        }
-        return len+1;
-    }
-};
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;/div&gt;&lt;/div&gt;</description><category>leetcode</category><guid>https://fpghwd.github.io/posts/leetcode41-first-missing-positive/</guid><pubDate>Sat, 04 Jul 2020 17:36:01 GMT</pubDate></item></channel></rss>
+&lt;/div&gt;&lt;/div&gt;</description><category>leetcode</category><guid>https://fpghwd.github.io/posts/leetcode1200-minimum-absolute-difference/</guid><pubDate>Fri, 11 Sep 2020 19:43:01 GMT</pubDate></item></channel></rss>

@@ -19,7 +19,7 @@
  </url>
  <url>
   <loc>https://fpghwd.github.io/archive.html</loc>
-  <lastmod>2020-09-25T05:22:00Z</lastmod>
+  <lastmod>2020-09-25T06:56:00Z</lastmod>
  </url>
  <url>
   <loc>https://fpghwd.github.io/authors/</loc>
@@ -103,7 +103,7 @@
  </url>
  <url>
   <loc>https://fpghwd.github.io/index-2.html</loc>
-  <lastmod>2020-09-25T05:22:00Z</lastmod>
+  <lastmod>2020-09-25T06:56:00Z</lastmod>
  </url>
  <url>
   <loc>https://fpghwd.github.io/listings/</loc>
@@ -224,6 +224,10 @@
  <url>
   <loc>https://fpghwd.github.io/posts/leetcode742-n-ary-tree-preorder-traversal/</loc>
   <lastmod>2020-09-14T12:09:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://fpghwd.github.io/posts/leetcode804-most-common-word/</loc>
+  <lastmod>2020-09-25T06:56:00Z</lastmod>
  </url>
  <url>
   <loc>https://fpghwd.github.io/posts/leetcode893-increasingordersearch-tree/</loc>
