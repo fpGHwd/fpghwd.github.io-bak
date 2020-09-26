@@ -1,5 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Dichotomy (Posts about leetcode)</title><link>https://fpghwd.github.io/</link><description></description><atom:link href="https://fpghwd.github.io/categories/leetcode.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;suzumiya natsuhi&lt;/a&gt; </copyright><lastBuildDate>Sat, 26 Sep 2020 02:36:56 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Leetcode696. Count Binary Substrings</title><link>https://fpghwd.github.io/posts/leetcode696-count-binary-substrings/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Dichotomy (Posts about leetcode)</title><link>https://fpghwd.github.io/</link><description></description><atom:link href="https://fpghwd.github.io/categories/leetcode.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;suzumiya natsuhi&lt;/a&gt; </copyright><lastBuildDate>Sat, 26 Sep 2020 04:17:44 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Leetcode733. Flood Fill</title><link>https://fpghwd.github.io/posts/leetcode733-flood-fill/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
+&lt;a href="https://leetcode.com/problems/flood-fill/"&gt;733. Flood Fill&lt;/a&gt;
+&lt;/p&gt;
+
+&lt;p&gt;
+&lt;b&gt;Solution&lt;/b&gt;
+&lt;/p&gt;
+
+&lt;div class="org-src-container"&gt;
+
+&lt;pre&gt;&lt;code class="lang-C"&gt;
+class Solution {
+  public:
+    vector&amp;lt;vector&amp;lt;int&amp;gt;&amp;gt;
+    floodFill(vector&amp;lt;vector&amp;lt;int&amp;gt;&amp;gt; &amp;amp;image, int sr, int sc, int newColor) {
+        int old_color = image[sr][sc];
+        if (old_color == newColor)
+            return image;
+
+        floodFill(image, sr, sc, newColor, old_color);
+
+        return image;
+    }
+
+    void floodFill(vector&amp;lt;vector&amp;lt;int&amp;gt;&amp;gt; &amp;amp;image,
+                   int sr,
+                   int sc,
+                   int newColor,
+                   int oldColor) {
+        // paint
+        image[sr][sc] = newColor;
+
+        // paint others
+        if (sr - 1 &amp;gt;= 0 &amp;amp;&amp;amp; oldColor == image[sr - 1][sc])
+            floodFill(image, sr - 1, sc, newColor);
+        if (sr + 1 &amp;lt; image.size() &amp;amp;&amp;amp; oldColor == image[sr + 1][sc])
+            floodFill(image, sr + 1, sc, newColor);
+        if (sc - 1 &amp;gt;= 0 &amp;amp;&amp;amp; oldColor == image[sr][sc - 1])
+            floodFill(image, sr, sc - 1, newColor);
+        if (sc + 1 &amp;lt; image[0].size() &amp;amp;&amp;amp; oldColor == image[sr][sc + 1])
+            floodFill(image, sr, sc + 1, newColor);
+    }
+};
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;/div&gt;
+
+&lt;div class="org-src-container"&gt;
+
+&lt;pre&gt;&lt;code class="lang-html"&gt;
+Status: Accepted (277/277)
+
+Runtime: 12 ms, faster than 97.05% of C++ submissions.
+
+Memory Usage: 14.9 MB, less than 5.01% of C++ submissions.
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;/div&gt;
+
+&lt;p&gt;
+第一次做的时候忽略了没有保存 &lt;code&gt;old_color&lt;/code&gt; ，后面有问题。&lt;/p&gt;&lt;/div&gt;</description><category>leetcode</category><guid>https://fpghwd.github.io/posts/leetcode733-flood-fill/</guid><pubDate>Fri, 25 Sep 2020 20:17:37 GMT</pubDate></item><item><title>Leetcode696. Count Binary Substrings</title><link>https://fpghwd.github.io/posts/leetcode696-count-binary-substrings/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
 &lt;a href="https://leetcode.com/problems/count-binary-substrings/"&gt;696. Count Binary Substrings&lt;/a&gt;
 &lt;/p&gt;
 
@@ -507,38 +569,4 @@ class Solution {
 
 &lt;p&gt;
 一开始以为是树的高度的调整题，后来发现这个和 &lt;b&gt;用数组表示的树构造一棵树&lt;/b&gt; 的做法差不多。
-&lt;/p&gt;&lt;/div&gt;</description><category>leetcode</category><guid>https://fpghwd.github.io/posts/leetcode108-convert-sorted-array-to-binary-search-tree/</guid><pubDate>Thu, 24 Sep 2020 19:35:49 GMT</pubDate></item><item><title>Leetcode937 Reorder Data in Log Files</title><link>https://fpghwd.github.io/posts/leetcode937-reorder-data-in-log-files/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
-&lt;a href="https://leetcode.com/problems/reorder-data-in-log-files/"&gt;937. Reorder Data in Log Files&lt;/a&gt;
-&lt;/p&gt;
-
-&lt;p&gt;
-&lt;b&gt;Solution&lt;/b&gt;
-&lt;/p&gt;
-
-&lt;div class="org-src-container"&gt;
-
-&lt;pre&gt;&lt;code class="lang-C"&gt;
-class Solution {
-    public:
-        vector&amp;lt;string&amp;gt; reorderLogFiles(vector&amp;lt;string&amp;gt; &amp;amp;logs) {
-            stable_sort(begin(logs), end(logs), [](auto &amp;amp;a, auto &amp;amp;b) {
-                auto A = 1 + a.find(' '), B = 1 + b.find(' ');
-                return a[A] &amp;gt; '@' &amp;amp;&amp;amp;
-                    (b[B] &amp;lt; '@' ||
-                     a.substr(A).append(a, 0, A) &amp;lt; b.substr(B).append(b, 0, B));
-            });
-            return logs;
-        }
-};
-
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;/div&gt;
-
-&lt;p&gt;
-先找到 identifier 和后面部分的分隔点 &lt;code&gt;A&lt;/code&gt; 和 &lt;code&gt;B&lt;/code&gt; ，然后用 &lt;code&gt;'@'&lt;/code&gt; 作为判断后面是数字还是字母的基准。ASCII 码表中， &lt;code&gt;'0'&lt;/code&gt; 和 &lt;code&gt;'9'&lt;/code&gt; 分别是 48 和 57 ， &lt;code&gt;'@'&lt;/code&gt; 是 64 ， &lt;code&gt;'a'&lt;/code&gt; 和 &lt;code&gt;'z'&lt;/code&gt; 分别是 97 和 122 。 &lt;code&gt;return&lt;/code&gt; 后的部分同时保证了 letter-logs 排在 digit-logs 的前面；后部分（数字或者字母）拼接 identifier 后用字典序排列，也即后部分如果恰好相同时， identifier dominating。
-&lt;/p&gt;
-
-&lt;p&gt;
-这个写法是翻解答时看到的，比较简洁，如果熟悉 sort 的话也比较容易懂。sort 的关键还是后面的函数 &lt;code&gt;template&amp;lt; class RandomIt, class Compare &amp;gt; void stable_sort( RandomIt first, RandomIt last, Compare comp );&lt;/code&gt; 。
-&lt;/p&gt;&lt;/div&gt;</description><category>leetcode</category><guid>https://fpghwd.github.io/posts/leetcode937-reorder-data-in-log-files/</guid><pubDate>Thu, 24 Sep 2020 04:31:36 GMT</pubDate></item></channel></rss>
+&lt;/p&gt;&lt;/div&gt;</description><category>leetcode</category><guid>https://fpghwd.github.io/posts/leetcode108-convert-sorted-array-to-binary-search-tree/</guid><pubDate>Thu, 24 Sep 2020 19:35:49 GMT</pubDate></item></channel></rss>
