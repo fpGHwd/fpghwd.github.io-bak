@@ -1,5 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Dichotomy</title><link>https://fpghwd.github.io/</link><description>To iterate is human, to recurse, divine</description><atom:link href="https://fpghwd.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;suzumiya natsuhi&lt;/a&gt; </copyright><lastBuildDate>Fri, 25 Sep 2020 13:40:55 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Leetcode687. Longest Univalue Path</title><link>https://fpghwd.github.io/posts/leetcode687-longest-univalue-path/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Dichotomy</title><link>https://fpghwd.github.io/</link><description>To iterate is human, to recurse, divine</description><atom:link href="https://fpghwd.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;suzumiya natsuhi&lt;/a&gt; </copyright><lastBuildDate>Sat, 26 Sep 2020 02:34:28 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Leetcode696. Count Binary Substrings</title><link>https://fpghwd.github.io/posts/leetcode696-count-binary-substrings/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
+&lt;a href="https://leetcode.com/problems/count-binary-substrings/"&gt;696. Count Binary Substrings&lt;/a&gt;
+&lt;/p&gt;
+
+&lt;div class="org-src-container"&gt;
+
+&lt;pre&gt;&lt;code class="lang-C"&gt;
+class Solution {
+  public:
+    int countBinarySubstrings(string s) {
+        if (s == "")
+            return 0;
+        vector&amp;lt;int&amp;gt; vi_pos;
+        for (int i = 1; i &amp;lt; s.length(); i++) {
+            if (s[i] != s[i - 1])
+                vi_pos.push_back(i);
+        }
+        int count = 0, left, right;
+        for (int i = 0; i &amp;lt; vi_pos.size(); i++) {
+            left = vi_pos[i] - (i == 0 ? 0 : vi_pos[i - 1]);
+            right = ((i == vi_pos.size() - 1) ? s.length() : vi_pos[i + 1]) -
+                    vi_pos[i];
+            count += min(left, right);
+        }
+        return count;
+    }
+};
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;/div&gt;
+
+&lt;div class="org-src-container"&gt;
+
+&lt;pre&gt;&lt;code class="lang-html"&gt;
+Status: Accepted (90/90)
+
+Runtime: 40 ms, faster than 99.85% of C++ submissions.
+
+Memory Usage: 14.4 MB, less than 6.03% of C++ submissions.
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;/div&gt;
+
+&lt;p&gt;
+这道题我在 &lt;code&gt;right = ((i =&lt;/code&gt; vi&lt;sub&gt;pos.size&lt;/sub&gt;() - 1) ? s.length() : vi&lt;sub&gt;pos&lt;/sub&gt;[i + 1]) -
+                    vi&lt;sub&gt;pos&lt;/sub&gt;[i];= 的时候把 &lt;code&gt;s.length()&lt;/code&gt; 写成了 &lt;code&gt;vi_pos.size()&lt;/code&gt; ，一直没有检查出来。后来代码拆开了几个变量用 gdb 调试出来了 right 值的问题。隐藏得太深了。
+&lt;/p&gt;&lt;/div&gt;</description><category>leetcode</category><guid>https://fpghwd.github.io/posts/leetcode696-count-binary-substrings/</guid><pubDate>Fri, 25 Sep 2020 18:34:20 GMT</pubDate></item><item><title>Leetcode687. Longest Univalue Path</title><link>https://fpghwd.github.io/posts/leetcode687-longest-univalue-path/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
 &lt;a href="https://leetcode.com/problems/longest-univalue-path/"&gt;687. Longest Univalue Path&lt;/a&gt;
 &lt;/p&gt;
 
@@ -513,38 +561,4 @@ class Solution {
 
 &lt;p&gt;
 一开始以为是树的高度的调整题，后来发现这个和 &lt;b&gt;用数组表示的树构造一棵树&lt;/b&gt; 的做法差不多。
-&lt;/p&gt;&lt;/div&gt;</description><category>leetcode</category><guid>https://fpghwd.github.io/posts/leetcode108-convert-sorted-array-to-binary-search-tree/</guid><pubDate>Thu, 24 Sep 2020 19:35:49 GMT</pubDate></item><item><title>Leetcode937 Reorder Data in Log Files</title><link>https://fpghwd.github.io/posts/leetcode937-reorder-data-in-log-files/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
-&lt;a href="https://leetcode.com/problems/reorder-data-in-log-files/"&gt;937. Reorder Data in Log Files&lt;/a&gt;
-&lt;/p&gt;
-
-&lt;p&gt;
-&lt;b&gt;Solution&lt;/b&gt;
-&lt;/p&gt;
-
-&lt;div class="org-src-container"&gt;
-
-&lt;pre&gt;&lt;code class="lang-C"&gt;
-class Solution {
-    public:
-        vector&amp;lt;string&amp;gt; reorderLogFiles(vector&amp;lt;string&amp;gt; &amp;amp;logs) {
-            stable_sort(begin(logs), end(logs), [](auto &amp;amp;a, auto &amp;amp;b) {
-                auto A = 1 + a.find(' '), B = 1 + b.find(' ');
-                return a[A] &amp;gt; '@' &amp;amp;&amp;amp;
-                    (b[B] &amp;lt; '@' ||
-                     a.substr(A).append(a, 0, A) &amp;lt; b.substr(B).append(b, 0, B));
-            });
-            return logs;
-        }
-};
-
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;/div&gt;
-
-&lt;p&gt;
-先找到 identifier 和后面部分的分隔点 &lt;code&gt;A&lt;/code&gt; 和 &lt;code&gt;B&lt;/code&gt; ，然后用 &lt;code&gt;'@'&lt;/code&gt; 作为判断后面是数字还是字母的基准。ASCII 码表中， &lt;code&gt;'0'&lt;/code&gt; 和 &lt;code&gt;'9'&lt;/code&gt; 分别是 48 和 57 ， &lt;code&gt;'@'&lt;/code&gt; 是 64 ， &lt;code&gt;'a'&lt;/code&gt; 和 &lt;code&gt;'z'&lt;/code&gt; 分别是 97 和 122 。 &lt;code&gt;return&lt;/code&gt; 后的部分同时保证了 letter-logs 排在 digit-logs 的前面；后部分（数字或者字母）拼接 identifier 后用字典序排列，也即后部分如果恰好相同时， identifier dominating。
-&lt;/p&gt;
-
-&lt;p&gt;
-这个写法是翻解答时看到的，比较简洁，如果熟悉 sort 的话也比较容易懂。sort 的关键还是后面的函数 &lt;code&gt;template&amp;lt; class RandomIt, class Compare &amp;gt; void stable_sort( RandomIt first, RandomIt last, Compare comp );&lt;/code&gt; 。
-&lt;/p&gt;&lt;/div&gt;</description><category>leetcode</category><guid>https://fpghwd.github.io/posts/leetcode937-reorder-data-in-log-files/</guid><pubDate>Thu, 24 Sep 2020 04:31:36 GMT</pubDate></item></channel></rss>
+&lt;/p&gt;&lt;/div&gt;</description><category>leetcode</category><guid>https://fpghwd.github.io/posts/leetcode108-convert-sorted-array-to-binary-search-tree/</guid><pubDate>Thu, 24 Sep 2020 19:35:49 GMT</pubDate></item></channel></rss>

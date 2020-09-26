@@ -12,7 +12,7 @@
 <link rel="alternate" type="application/rss+xml" title="RSS" hreflang="en" href="rss.xml">
 <link rel="canonical" href="https://fpghwd.github.io/">
 <link rel="next" href="index-2.html" type="text/html">
-<!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="posts/leetcode687-longest-univalue-path/" type="text/html">
+<!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="posts/leetcode696-count-binary-substrings/" type="text/html">
 </head>
 <body>
 <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
@@ -69,7 +69,76 @@
     
         
     <div class="postindex">
-            <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/leetcode687-longest-univalue-path/" class="u-url">Leetcode687. Longest Univalue Path</a></h1>
+            <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/leetcode696-count-binary-substrings/" class="u-url">Leetcode696. Count Binary Substrings</a></h1>
+                <div class="metadata">
+                    <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                        suzumiya natsuhi
+                    </span></p>
+            <p class="dateline">
+            <a href="posts/leetcode696-count-binary-substrings/" rel="bookmark">
+            <time class="published dt-published" datetime="2020-09-26T02:34:20+08:00" itemprop="datePublished" title="2020-09-26 02:34">2020-09-26 02:34</time></a>
+            </p>
+                        <p class="commentline">
+        
+    <a href="posts/leetcode696-count-binary-substrings/#disqus_thread" data-disqus-identifier="cache/posts/leetcode696-count-binary-substrings.html">Comments</a>
+
+
+                </p>
+</div>
+            </header><div class="e-content entry-content">
+                    <div>
+<p>
+<a href="https://leetcode.com/problems/count-binary-substrings/">696. Count Binary Substrings</a>
+</p>
+
+<div class="org-src-container">
+
+<pre><code class="lang-C">
+class Solution {
+  public:
+    int countBinarySubstrings(string s) {
+        if (s == "")
+            return 0;
+        vector&lt;int&gt; vi_pos;
+        for (int i = 1; i &lt; s.length(); i++) {
+            if (s[i] != s[i - 1])
+                vi_pos.push_back(i);
+        }
+        int count = 0, left, right;
+        for (int i = 0; i &lt; vi_pos.size(); i++) {
+            left = vi_pos[i] - (i == 0 ? 0 : vi_pos[i - 1]);
+            right = ((i == vi_pos.size() - 1) ? s.length() : vi_pos[i + 1]) -
+                    vi_pos[i];
+            count += min(left, right);
+        }
+        return count;
+    }
+};
+
+</code></pre>
+
+</div>
+
+<div class="org-src-container">
+
+<pre><code class="lang-html">
+Status: Accepted (90/90)
+
+Runtime: 40 ms, faster than 99.85% of C++ submissions.
+
+Memory Usage: 14.4 MB, less than 6.03% of C++ submissions.
+
+</code></pre>
+
+</div>
+
+<p>
+这道题我在 <code>right = ((i =</code> vi<sub>pos.size</sub>() - 1) ? s.length() : vi<sub>pos</sub>[i + 1]) -
+                    vi<sub>pos</sub>[i];= 的时候把 <code>s.length()</code> 写成了 <code>vi_pos.size()</code> ，一直没有检查出来。后来代码拆开了几个变量用 gdb 调试出来了 right 值的问题。隐藏得太深了。
+</p>
+</div>
+                </div>
+            </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/leetcode687-longest-univalue-path/" class="u-url">Leetcode687. Longest Univalue Path</a></h1>
                 <div class="metadata">
                     <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                         suzumiya natsuhi
@@ -768,61 +837,6 @@ class Solution {
 
 <p>
 一开始以为是树的高度的调整题，后来发现这个和 <b>用数组表示的树构造一棵树</b> 的做法差不多。
-</p>
-</div>
-                </div>
-            </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/leetcode937-reorder-data-in-log-files/" class="u-url">Leetcode937 Reorder Data in Log Files</a></h1>
-                <div class="metadata">
-                    <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
-                        suzumiya natsuhi
-                    </span></p>
-            <p class="dateline">
-            <a href="posts/leetcode937-reorder-data-in-log-files/" rel="bookmark">
-            <time class="published dt-published" datetime="2020-09-24T12:31:36+08:00" itemprop="datePublished" title="2020-09-24 12:31">2020-09-24 12:31</time></a>
-            </p>
-                        <p class="commentline">
-        
-    <a href="posts/leetcode937-reorder-data-in-log-files/#disqus_thread" data-disqus-identifier="cache/posts/leetcode937-reorder-data-in-log-files.html">Comments</a>
-
-
-                </p>
-</div>
-            </header><div class="e-content entry-content">
-                    <div>
-<p>
-<a href="https://leetcode.com/problems/reorder-data-in-log-files/">937. Reorder Data in Log Files</a>
-</p>
-
-<p>
-<b>Solution</b>
-</p>
-
-<div class="org-src-container">
-
-<pre><code class="lang-C">
-class Solution {
-    public:
-        vector&lt;string&gt; reorderLogFiles(vector&lt;string&gt; &amp;logs) {
-            stable_sort(begin(logs), end(logs), [](auto &amp;a, auto &amp;b) {
-                auto A = 1 + a.find(' '), B = 1 + b.find(' ');
-                return a[A] &gt; '@' &amp;&amp;
-                    (b[B] &lt; '@' ||
-                     a.substr(A).append(a, 0, A) &lt; b.substr(B).append(b, 0, B));
-            });
-            return logs;
-        }
-};
-
-</code></pre>
-
-</div>
-
-<p>
-先找到 identifier 和后面部分的分隔点 <code>A</code> 和 <code>B</code> ，然后用 <code>'@'</code> 作为判断后面是数字还是字母的基准。ASCII 码表中， <code>'0'</code> 和 <code>'9'</code> 分别是 48 和 57 ， <code>'@'</code> 是 64 ， <code>'a'</code> 和 <code>'z'</code> 分别是 97 和 122 。 <code>return</code> 后的部分同时保证了 letter-logs 排在 digit-logs 的前面；后部分（数字或者字母）拼接 identifier 后用字典序排列，也即后部分如果恰好相同时， identifier dominating。
-</p>
-
-<p>
-这个写法是翻解答时看到的，比较简洁，如果熟悉 sort 的话也比较容易懂。sort 的关键还是后面的函数 <code>template&lt; class RandomIt, class Compare &gt; void stable_sort( RandomIt first, RandomIt last, Compare comp );</code> 。
 </p>
 </div>
                 </div>
