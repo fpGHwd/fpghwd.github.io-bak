@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Dichotomy</title><link>https://fpghwd.github.io/</link><description>To iterate is human, to recurse, divine</description><atom:link href="https://fpghwd.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;suzumiya natsuhi&lt;/a&gt; </copyright><lastBuildDate>Sat, 26 Sep 2020 02:34:28 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Leetcode696. Count Binary Substrings</title><link>https://fpghwd.github.io/posts/leetcode696-count-binary-substrings/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Dichotomy</title><link>https://fpghwd.github.io/</link><description>To iterate is human, to recurse, divine</description><atom:link href="https://fpghwd.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;suzumiya natsuhi&lt;/a&gt; </copyright><lastBuildDate>Sat, 26 Sep 2020 02:35:38 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Leetcode696. Count Binary Substrings</title><link>https://fpghwd.github.io/posts/leetcode696-count-binary-substrings/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
 &lt;a href="https://leetcode.com/problems/count-binary-substrings/"&gt;696. Count Binary Substrings&lt;/a&gt;
 &lt;/p&gt;
 
@@ -45,8 +45,8 @@ Memory Usage: 14.4 MB, less than 6.03% of C++ submissions.
 &lt;/div&gt;
 
 &lt;p&gt;
-这道题我在 &lt;code&gt;right = ((i =&lt;/code&gt; vi&lt;sub&gt;pos.size&lt;/sub&gt;() - 1) ? s.length() : vi&lt;sub&gt;pos&lt;/sub&gt;[i + 1]) -
-                    vi&lt;sub&gt;pos&lt;/sub&gt;[i];= 的时候把 &lt;code&gt;s.length()&lt;/code&gt; 写成了 &lt;code&gt;vi_pos.size()&lt;/code&gt; ，一直没有检查出来。后来代码拆开了几个变量用 gdb 调试出来了 right 值的问题。隐藏得太深了。
+这道题我在 &lt;code&gt;right = ((i =&lt;/code&gt; vi\&lt;sub&gt;pos.size&lt;/sub&gt;() - 1) ? s.length() : vi\&lt;sub&gt;pos&lt;/sub&gt;[i + 1]) -
+                    vi\&lt;sub&gt;pos&lt;/sub&gt;[i];= 的时候把 &lt;code&gt;s.length()&lt;/code&gt; 写成了 &lt;code&gt;vi\_pos.size()&lt;/code&gt; ，一直没有检查出来。后来代码拆开了几个变量用 gdb 调试出来了 right 值的问题。隐藏得太深了。
 &lt;/p&gt;&lt;/div&gt;</description><category>leetcode</category><guid>https://fpghwd.github.io/posts/leetcode696-count-binary-substrings/</guid><pubDate>Fri, 25 Sep 2020 18:34:20 GMT</pubDate></item><item><title>Leetcode687. Longest Univalue Path</title><link>https://fpghwd.github.io/posts/leetcode687-longest-univalue-path/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
 &lt;a href="https://leetcode.com/problems/longest-univalue-path/"&gt;687. Longest Univalue Path&lt;/a&gt;
 &lt;/p&gt;
