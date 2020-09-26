@@ -3,20 +3,19 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Leetcode733. Flood Fill | Dichotomy</title>
+<title>Leetcode901. Sort Array By Parity | Dichotomy</title>
 <link href="../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
 <meta name="theme-color" content="#5670d4">
 <meta name="generator" content="Nikola (getnikola.com)">
 <link rel="alternate" type="application/rss+xml" title="RSS" hreflang="en" href="../../rss.xml">
-<link rel="canonical" href="https://fpghwd.github.io/posts/leetcode733-flood-fill/">
+<link rel="canonical" href="https://fpghwd.github.io/posts/leetcode901-sort-array-by-parity/">
 <!--[if lt IE 9]><script src="../../assets/js/html5.js"></script><![endif]--><meta name="author" content="suzumiya natsuhi">
-<link rel="prev" href="../leetcode696-count-binary-substrings/" title="Leetcode696. Count Binary Substrings" type="text/html">
-<link rel="next" href="../leetcode901-sort-array-by-parity/" title="Leetcode901. Sort Array By Parity" type="text/html">
+<link rel="prev" href="../leetcode733-flood-fill/" title="Leetcode733. Flood Fill" type="text/html">
 <meta property="og:site_name" content="Dichotomy">
-<meta property="og:title" content="Leetcode733. Flood Fill">
-<meta property="og:url" content="https://fpghwd.github.io/posts/leetcode733-flood-fill/">
-<meta property="og:description" content="733. Flood Fill
+<meta property="og:title" content="Leetcode901. Sort Array By Parity">
+<meta property="og:url" content="https://fpghwd.github.io/posts/leetcode901-sort-array-by-parity/">
+<meta property="og:description" content="901. Sort Array By Parity
 
 
 
@@ -28,12 +27,11 @@ Solution
 
 class Solution {
   public:
-    vector&lt;vector&lt;int&gt;&gt;
-    floodFill(vector&lt;vector&lt;int&gt;&gt; &amp;image, int sr, int sc, int newColor) {
-        int old_color = image[sr][sc];
-   ">
+    vector&lt;int&gt; sortArrayByParity(vector&lt;int&gt; &amp;A) {
+        sort(begin(A), end(A),
+             [](auto &amp;a, auto &amp;b) { return a % ">
 <meta property="og:type" content="article">
-<meta property="article:published_time" content="2020-09-26T04:17:37+08:00">
+<meta property="article:published_time" content="2020-09-26T15:24:25+08:00">
 <meta property="article:tag" content="leetcode">
 </head>
 <body>
@@ -92,7 +90,7 @@ class Solution {
         
         
         
-<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">Leetcode733. Flood Fill</a></h1>
+<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">Leetcode901. Sort Array By Parity</a></h1>
 
         <div class="metadata">
             <p class="byline author vcard p-author h-card"><span class="byline-name fn p-name" itemprop="author">
@@ -100,11 +98,11 @@ class Solution {
             </span></p>
             <p class="dateline">
             <a href="." rel="bookmark">
-            <time class="published dt-published" datetime="2020-09-26T04:17:37+08:00" itemprop="datePublished" title="2020-09-26 04:17">2020-09-26 04:17</time></a>
+            <time class="published dt-published" datetime="2020-09-26T15:24:25+08:00" itemprop="datePublished" title="2020-09-26 15:24">2020-09-26 15:24</time></a>
             </p>
                 <p class="commentline">
         
-    <a href="#disqus_thread" data-disqus-identifier="cache/posts/leetcode733-flood-fill.html">Comments</a>
+    <a href="#disqus_thread" data-disqus-identifier="cache/posts/leetcode901-sort-array-by-parity.html">Comments</a>
 
 
             
@@ -117,7 +115,7 @@ class Solution {
     </header><div class="e-content entry-content" itemprop="articleBody text">
     <div>
 <p>
-<a href="https://leetcode.com/problems/flood-fill/">733. Flood Fill</a>
+<a href="https://leetcode.com/problems/sort-array-by-parity/">901. Sort Array By Parity</a>
 </p>
 
 <p>
@@ -129,36 +127,13 @@ class Solution {
 <pre><code class="lang-C">
 class Solution {
   public:
-    vector&lt;vector&lt;int&gt;&gt;
-    floodFill(vector&lt;vector&lt;int&gt;&gt; &amp;image, int sr, int sc, int newColor) {
-        int old_color = image[sr][sc];
-        if (old_color == newColor)
-            return image;
-
-        floodFill(image, sr, sc, newColor, old_color);
-
-        return image;
-    }
-
-    void floodFill(vector&lt;vector&lt;int&gt;&gt; &amp;image,
-                   int sr,
-                   int sc,
-                   int newColor,
-                   int oldColor) {
-        // paint
-        image[sr][sc] = newColor;
-
-        // paint others
-        if (sr - 1 &gt;= 0 &amp;&amp; oldColor == image[sr - 1][sc])
-            floodFill(image, sr - 1, sc, newColor);
-        if (sr + 1 &lt; image.size() &amp;&amp; oldColor == image[sr + 1][sc])
-            floodFill(image, sr + 1, sc, newColor);
-        if (sc - 1 &gt;= 0 &amp;&amp; oldColor == image[sr][sc - 1])
-            floodFill(image, sr, sc - 1, newColor);
-        if (sc + 1 &lt; image[0].size() &amp;&amp; oldColor == image[sr][sc + 1])
-            floodFill(image, sr, sc + 1, newColor);
+    vector&lt;int&gt; sortArrayByParity(vector&lt;int&gt; &amp;A) {
+        sort(begin(A), end(A),
+             [](auto &amp;a, auto &amp;b) { return a % 2 == 0 &amp;&amp; b % 2 == 1; });
+        return A;
     }
 };
+
 
 </code></pre>
 
@@ -167,18 +142,19 @@ class Solution {
 <div class="org-src-container">
 
 <pre><code class="lang-html">
-Status: Accepted (277/277)
+Status: Accepted (285/285)
 
-Runtime: 12 ms, faster than 97.05% of C++ submissions.
+Runtime: 36 ms, faster than 19.11% of C++ submissions.
 
-Memory Usage: 14.9 MB, less than 5.01% of C++ submissions.
+Memory Usage: 16.6 MB, less than 16.48% of C++ submissions.
 
 </code></pre>
 
 </div>
 
 <p>
-第一次做的时候忽略了没有保存 <code>old_color</code> ，后面有问题。</p>
+模仿 0947 reorder-data-in-log-files 题目的写法。
+</p>
 </div>
     </div>
     <aside class="postpromonav"><nav><ul itemprop="keywords" class="tags">
@@ -186,10 +162,7 @@ Memory Usage: 14.9 MB, less than 5.01% of C++ submissions.
         </ul>
 <ul class="pager hidden-print">
 <li class="previous">
-                <a href="../leetcode696-count-binary-substrings/" rel="prev" title="Leetcode696. Count Binary Substrings">Previous post</a>
-            </li>
-            <li class="next">
-                <a href="../leetcode901-sort-array-by-parity/" rel="next" title="Leetcode901. Sort Array By Parity">Next post</a>
+                <a href="../leetcode733-flood-fill/" rel="prev" title="Leetcode733. Flood Fill">Previous post</a>
             </li>
         </ul></nav></aside><section class="comments hidden-print"><h2>Comments</h2>
         
@@ -197,9 +170,9 @@ Memory Usage: 14.9 MB, less than 5.01% of C++ submissions.
         <div id="disqus_thread"></div>
         <script>
         var disqus_shortname ="fpghwd-github-io",
-            disqus_url="https://fpghwd.github.io/posts/leetcode733-flood-fill/",
-        disqus_title="Leetcode733. Flood Fill",
-        disqus_identifier="cache/posts/leetcode733-flood-fill.html",
+            disqus_url="https://fpghwd.github.io/posts/leetcode901-sort-array-by-parity/",
+        disqus_title="Leetcode901. Sort Array By Parity",
+        disqus_identifier="cache/posts/leetcode901-sort-array-by-parity.html",
         disqus_config = function () {
             this.language = "en";
         };

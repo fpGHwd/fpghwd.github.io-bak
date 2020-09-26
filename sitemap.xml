@@ -7,7 +7,7 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
   <loc>https://fpghwd.github.io/</loc>
-  <lastmod>2020-09-25T04:07:00Z</lastmod>
+  <lastmod>2020-09-26T15:24:00Z</lastmod>
  </url>
  <url>
   <loc>https://fpghwd.github.io/2012/</loc>
@@ -19,7 +19,7 @@
  </url>
  <url>
   <loc>https://fpghwd.github.io/archive.html</loc>
-  <lastmod>2020-09-26T04:17:00Z</lastmod>
+  <lastmod>2020-09-26T15:24:00Z</lastmod>
  </url>
  <url>
   <loc>https://fpghwd.github.io/authors/</loc>
@@ -103,7 +103,11 @@
  </url>
  <url>
   <loc>https://fpghwd.github.io/index-2.html</loc>
-  <lastmod>2020-09-26T04:17:00Z</lastmod>
+  <lastmod>2020-09-26T15:24:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://fpghwd.github.io/index-3.html</loc>
+  <lastmod>2020-09-26T15:24:00Z</lastmod>
  </url>
  <url>
   <loc>https://fpghwd.github.io/listings/</loc>
@@ -260,6 +264,10 @@
  <url>
   <loc>https://fpghwd.github.io/posts/leetcode893-increasingordersearch-tree/</loc>
   <lastmod>2020-09-13T09:10:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://fpghwd.github.io/posts/leetcode901-sort-array-by-parity/</loc>
+  <lastmod>2020-09-26T15:24:00Z</lastmod>
  </url>
  <url>
   <loc>https://fpghwd.github.io/posts/leetcode937-reorder-data-in-log-files/</loc>
