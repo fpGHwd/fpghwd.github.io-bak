@@ -19,7 +19,7 @@
  </url>
  <url>
   <loc>https://fpghwd.github.io/archive.html</loc>
-  <lastmod>2020-09-27T12:46:00Z</lastmod>
+  <lastmod>2020-09-28T04:21:00Z</lastmod>
  </url>
  <url>
   <loc>https://fpghwd.github.io/authors/</loc>
@@ -107,7 +107,7 @@
  </url>
  <url>
   <loc>https://fpghwd.github.io/index-3.html</loc>
-  <lastmod>2020-09-27T12:46:00Z</lastmod>
+  <lastmod>2020-09-28T04:21:00Z</lastmod>
  </url>
  <url>
   <loc>https://fpghwd.github.io/listings/</loc>
@@ -224,6 +224,10 @@
  <url>
   <loc>https://fpghwd.github.io/posts/leetcode491-find-mode-in-binary-search-tree/</loc>
   <lastmod>2020-09-27T12:46:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://fpghwd.github.io/posts/leetcode528-diameter-of-binary-tree/</loc>
+  <lastmod>2020-09-28T04:21:00Z</lastmod>
  </url>
  <url>
   <loc>https://fpghwd.github.io/posts/leetcode606-construct-string-from-binary-tree/</loc>

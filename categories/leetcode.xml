@@ -1,5 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Dichotomy (Posts about leetcode)</title><link>https://fpghwd.github.io/</link><description></description><atom:link href="https://fpghwd.github.io/categories/leetcode.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;suzumiya natsuhi&lt;/a&gt; </copyright><lastBuildDate>Sat, 26 Sep 2020 15:24:30 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Leetcode901. Sort Array By Parity</title><link>https://fpghwd.github.io/posts/leetcode901-sort-array-by-parity/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Dichotomy (Posts about leetcode)</title><link>https://fpghwd.github.io/</link><description></description><atom:link href="https://fpghwd.github.io/categories/leetcode.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;suzumiya natsuhi&lt;/a&gt; </copyright><lastBuildDate>Mon, 28 Sep 2020 04:21:19 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Leetcode528. Diameter of Binary Tree</title><link>https://fpghwd.github.io/posts/leetcode528-diameter-of-binary-tree/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;ol class="org-ol"&gt;
+&lt;li&gt;Diameter of Binary Tree&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;
+&lt;b&gt;Solution&lt;/b&gt;
+&lt;/p&gt;
+
+&lt;div class="org-src-container"&gt;
+
+&lt;pre&gt;&lt;code class="lang-C"&gt;
+/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left),
+ * right(right) {}
+ * };
+ */
+class Solution {
+  public:
+    int diameter = 0;
+    int diameterOfBinaryTree(TreeNode *root) {
+        depthTravel(root);
+        return diameter;
+    }
+    int depthTravel(TreeNode *root) {
+        if (root == nullptr)
+            return 0;
+        int left = depthTravel(root-&amp;gt;left);
+        int right = depthTravel(root-&amp;gt;right);
+        diameter = max(left + right, diameter);
+        return 1 + max(left, right);
+    }
+};
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;/div&gt;
+
+&lt;div class="org-src-container"&gt;
+
+&lt;pre&gt;&lt;code class="lang-html"&gt;
+Status: Accepted (106/106)
+
+Runtime: 12 ms, faster than 88.39% of C++ submissions.
+
+Memory Usage: 21 MB, less than 13.09% of C++ submissions.
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;/div&gt;&lt;/div&gt;</description><category>leetcode</category><guid>https://fpghwd.github.io/posts/leetcode528-diameter-of-binary-tree/</guid><pubDate>Sun, 27 Sep 2020 20:21:11 GMT</pubDate></item><item><title>Leetcode901. Sort Array By Parity</title><link>https://fpghwd.github.io/posts/leetcode901-sort-array-by-parity/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
 &lt;a href="https://leetcode.com/problems/sort-array-by-parity/"&gt;901. Sort Array By Parity&lt;/a&gt;
 &lt;/p&gt;
 
@@ -492,74 +547,4 @@ Memory Usage: 7.8 MB, less than 87.14% of C++ submissions.
 
 &lt;p&gt;
 同时有一个问题：转化时为什么是有符号整数转换成无符号整数，而不是相反呢？
-&lt;/p&gt;&lt;/div&gt;</description><category>ATTACH</category><category>leetcode</category><guid>https://fpghwd.github.io/posts/diao-shi-de-shi-hou-chu-le-yi-ge-wen-ti/</guid><pubDate>Thu, 24 Sep 2020 21:22:42 GMT</pubDate></item><item><title>Leetcode107 Binary Tree Level Order Traversal II</title><link>https://fpghwd.github.io/posts/leetcode107-binary-tree-level-order-traversal-ii/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
-&lt;a href="https://leetcode.com/problems/binary-tree-level-order-traversal-ii/"&gt;107. Binary Tree Level Order Traversal II&lt;/a&gt;
-&lt;/p&gt;
-
-&lt;p&gt;
-&lt;b&gt;Solution&lt;/b&gt;
-&lt;/p&gt;
-
-&lt;div class="org-src-container"&gt;
-
-&lt;pre&gt;&lt;code class="lang-C"&gt;
-/**
- * Definition for a binary tree node.
- * struct TreeNode {
- *     int val;
- *     TreeNode *left;
- *     TreeNode *right;
- *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
- *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
- *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left),
- * right(right) {}
- * };
- */
-class Solution {
-  public:
-    vector&amp;lt;vector&amp;lt;int&amp;gt;&amp;gt; levelOrderBottom(TreeNode *root) {
-        vector&amp;lt;vector&amp;lt;int&amp;gt;&amp;gt; result;
-
-        queue&amp;lt;TreeNode *&amp;gt; q;
-        TreeNode *last, *end;
-        if (root) {
-            q.push(root);
-            end = root;
-            last = end;
-            result.push_back(vector&amp;lt;int&amp;gt;{});
-        }
-        while (!q.empty()) {
-            TreeNode *temp = q.front();
-            result[result.size() - 1].push_back(temp-&amp;gt;val);
-            q.pop();
-            if (temp-&amp;gt;left)q.push(temp-&amp;gt;left);
-            if (temp-&amp;gt;right)q.push(temp-&amp;gt;right);
-            if (temp == last &amp;amp;&amp;amp; !q.empty())result.push_back(vector&amp;lt;int&amp;gt;{}); // 达到一层结尾还有元素就增加一个空 vector
-            if (temp == last)last=q.back();
-        }
-        reverse(result.begin(), result.end());
-        return result;
-    }
-};
-
-
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;/div&gt;
-
-&lt;p&gt;
-二叉树的层序遍历，稍微修改一下就行。
-&lt;/p&gt;
-
-&lt;div class="org-src-container"&gt;
-
-&lt;pre&gt;&lt;code class="lang-html"&gt;
-Status: Accepted (34/34)
-
-Runtime: 4 ms, faster than 91.99% of C++ submissions.
-
-Memory Usage: 12.5 MB, less than 97.56% of C++ submissions.
-
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;/div&gt;&lt;/div&gt;</description><category>leetcode</category><guid>https://fpghwd.github.io/posts/leetcode107-binary-tree-level-order-traversal-ii/</guid><pubDate>Thu, 24 Sep 2020 20:07:52 GMT</pubDate></item></channel></rss>
+&lt;/p&gt;&lt;/div&gt;</description><category>ATTACH</category><category>leetcode</category><guid>https://fpghwd.github.io/posts/diao-shi-de-shi-hou-chu-le-yi-ge-wen-ti/</guid><pubDate>Thu, 24 Sep 2020 21:22:42 GMT</pubDate></item></channel></rss>
