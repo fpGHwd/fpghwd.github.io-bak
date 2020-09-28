@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Dichotomy</title><link>https://fpghwd.github.io/</link><description>To iterate is human, to recurse, divine</description><atom:link href="https://fpghwd.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;suzumiya natsuhi&lt;/a&gt; </copyright><lastBuildDate>Mon, 28 Sep 2020 04:21:19 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Leetcode528. Diameter of Binary Tree</title><link>https://fpghwd.github.io/posts/leetcode528-diameter-of-binary-tree/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;ol class="org-ol"&gt;
-&lt;li&gt;Diameter of Binary Tree&lt;/li&gt;
-&lt;/ol&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Dichotomy</title><link>https://fpghwd.github.io/</link><description>To iterate is human, to recurse, divine</description><atom:link href="https://fpghwd.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;suzumiya natsuhi&lt;/a&gt; </copyright><lastBuildDate>Mon, 28 Sep 2020 04:40:55 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Leetcode543. Diameter of Binary Tree</title><link>https://fpghwd.github.io/posts/leetcode528-diameter-of-binary-tree/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
+&lt;a href="https://leetcode.com/problems/diameter-of-binary-tree/"&gt;543. Diameter of Binary Tree&lt;/a&gt;
+&lt;/p&gt;
 
 &lt;p&gt;
 &lt;b&gt;Solution&lt;/b&gt;
@@ -54,7 +54,10 @@ Memory Usage: 21 MB, less than 13.09% of C++ submissions.
 
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;/div&gt;&lt;/div&gt;</description><category>leetcode</category><guid>https://fpghwd.github.io/posts/leetcode528-diameter-of-binary-tree/</guid><pubDate>Sun, 27 Sep 2020 20:21:11 GMT</pubDate></item><item><title>Leetcode491. Find Mode in Binary Search Tree</title><link>https://fpghwd.github.io/posts/leetcode491-find-mode-in-binary-search-tree/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;
+同樣的是一個樹遍歷的題目。不過第一次做的時候因爲想用一個函數解決問題，但是好像是不行的。因爲遞歸返回值如果是最長的直徑的話，就無法只用一個單一的返回值來構造這個函數，又不能修改參數。所以遞歸函數的返回值需要更多的信息，因此還是藉助了返回值爲結點高度的函數 &lt;code&gt;depthTravel&lt;/code&gt; 。&lt;/p&gt;&lt;/div&gt;</description><category>leetcode</category><guid>https://fpghwd.github.io/posts/leetcode528-diameter-of-binary-tree/</guid><pubDate>Sun, 27 Sep 2020 20:21:11 GMT</pubDate></item><item><title>Leetcode491. Find Mode in Binary Search Tree</title><link>https://fpghwd.github.io/posts/leetcode491-find-mode-in-binary-search-tree/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
 &lt;a href="https://leetcode.com/problems/find-mode-in-binary-search-tree/"&gt;501. Find Mode in Binary Search Tree&lt;/a&gt;
 &lt;/p&gt;
 
