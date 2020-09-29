@@ -1,5 +1,81 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Dichotomy</title><link>https://fpghwd.github.io/</link><description>To iterate is human, to recurse, divine</description><atom:link href="https://fpghwd.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;suzumiya natsuhi&lt;/a&gt; </copyright><lastBuildDate>Mon, 28 Sep 2020 15:31:16 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Leetcode093. Restore IP Addresses</title><link>https://fpghwd.github.io/posts/leetcode093-restore-ip-addresses/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Dichotomy</title><link>https://fpghwd.github.io/</link><description>To iterate is human, to recurse, divine</description><atom:link href="https://fpghwd.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;suzumiya natsuhi&lt;/a&gt; </copyright><lastBuildDate>Tue, 29 Sep 2020 08:20:10 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Leetcode572. Subtree of Another Tree</title><link>https://fpghwd.github.io/posts/leetcode572-subtree-of-another-tree/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
+&lt;a href="https://leetcode.com/problems/subtree-of-another-tree/"&gt;572. Subtree of Another Tree&lt;/a&gt;
+&lt;/p&gt;
+
+&lt;p&gt;
+&lt;b&gt;Solution&lt;/b&gt;
+&lt;/p&gt;
+
+&lt;div class="org-src-container"&gt;
+
+&lt;pre&gt;&lt;code class="lang-C"&gt;
+/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left),
+ * right(right) {}
+ * };
+ */
+class Solution {
+  public:
+    bool isSubtree(TreeNode *s, TreeNode *t) {
+        // return isSameTree(s, t) || isSameTree(s-&amp;gt;left, t) ||
+        //        isSameTree(s-&amp;gt;right, t);
+        if (s == NULL &amp;amp;&amp;amp; t == NULL)
+            return true;
+        if (s == NULL)
+            return false;
+        if (t == NULL)
+            return true;
+        bool isSub;
+        if (s-&amp;gt;val == t-&amp;gt;val)
+            isSub = isSameTree(s, t);
+        if (isSub)
+            return true;
+        return isSubtree(s-&amp;gt;left, t) || isSubtree(s-&amp;gt;right, t);
+    }
+
+    bool isSameTree(TreeNode *s, TreeNode *t) {
+        if (s == nullptr &amp;amp;&amp;amp; t == nullptr) {
+            return true;
+        } else {
+            if (s == nullptr || t == nullptr)
+                return false;
+            if (s-&amp;gt;val != t-&amp;gt;val)
+                return false;
+            else
+                return isSameTree(s-&amp;gt;left, t-&amp;gt;left) &amp;amp;&amp;amp;
+                       isSameTree(s-&amp;gt;right, t-&amp;gt;right);
+        }
+    }
+};
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;/div&gt;
+
+&lt;div class="org-src-container"&gt;
+
+&lt;pre&gt;&lt;code class="lang-html"&gt;
+Status: Accepted (183/183)
+
+Runtime: 40 ms, faster than 66.02% of C++ submissions.
+
+Memory Usage: 29.7 MB, less than 18.21% of C++ submissions.
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;/div&gt;
+
+&lt;p&gt;
+第一次做的时候并没有做对，第二次倒是 AC 了。没啥感觉，就是感觉自己的方法代码有点复杂。
+&lt;/p&gt;&lt;/div&gt;</description><category>leetcode</category><guid>https://fpghwd.github.io/posts/leetcode572-subtree-of-another-tree/</guid><pubDate>Tue, 29 Sep 2020 00:20:04 GMT</pubDate></item><item><title>Leetcode093. Restore IP Addresses</title><link>https://fpghwd.github.io/posts/leetcode093-restore-ip-addresses/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
 &lt;a href="https://leetcode.com/problems/restore-ip-addresses/"&gt;93. Restore IP Addresses&lt;/a&gt;
 &lt;/p&gt;
 
@@ -526,63 +602,4 @@ Memory Usage: 35.7 MB, less than 5.05% of C++ submissions.
 
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;/div&gt;&lt;/div&gt;</description><category>leetcode</category><guid>https://fpghwd.github.io/posts/leetcode617-merge-two-binary-trees/</guid><pubDate>Fri, 25 Sep 2020 00:54:22 GMT</pubDate></item><item><title>Leetcode668. Employee Importance</title><link>https://fpghwd.github.io/posts/leetcode668-employee-importance/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
-&lt;a href="https://leetcode.com/problems/employee-importance/"&gt;690. Employee Importance&lt;/a&gt;
-&lt;/p&gt;
-
-&lt;div class="org-src-container"&gt;
-
-&lt;pre&gt;&lt;code class="lang-C"&gt;
-/*
-// Definition for Employee.
-class Employee {
-public:
-    int id;
-    int importance;
-    vector&amp;lt;int&amp;gt; subordinates;
-};
-*/
-
-class Solution {
-  public:
-    int getImportance(vector&amp;lt;Employee *&amp;gt; employees, int id) {
-
-        unordered_map&amp;lt;int, Employee *&amp;gt; umii;
-        for (Employee *e : employees) {
-            umii[e-&amp;gt;id] = e;
-        }
-
-        int importance = 0;
-        queue&amp;lt;int&amp;gt; qi;
-        qi.push(id);
-
-        int tmp;
-        while (!qi.empty()) {
-            tmp = qi.front();
-            importance += umii[tmp]-&amp;gt;importance;
-            qi.pop();
-            for (int i : umii[tmp]-&amp;gt;subordinates)
-                qi.push(i);
-        }
-
-        return importance;
-    }
-};
-
-
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;/div&gt;
-
-&lt;div class="org-src-container"&gt;
-
-&lt;pre&gt;&lt;code class="lang-html"&gt;
-Status: Accepted (108/108)
-
-Runtime: 36 ms, faster than 92.63% of C++ submissions.
-
-Memory Usage: 14.4 MB, less than 27.87% of C++ submissions.
-
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;/div&gt;&lt;/div&gt;</description><category>leetcode</category><guid>https://fpghwd.github.io/posts/leetcode668-employee-importance/</guid><pubDate>Fri, 25 Sep 2020 00:15:02 GMT</pubDate></item></channel></rss>
+&lt;/div&gt;&lt;/div&gt;</description><category>leetcode</category><guid>https://fpghwd.github.io/posts/leetcode617-merge-two-binary-trees/</guid><pubDate>Fri, 25 Sep 2020 00:54:22 GMT</pubDate></item></channel></rss>

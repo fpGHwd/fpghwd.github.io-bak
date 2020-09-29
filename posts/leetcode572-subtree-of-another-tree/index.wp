@@ -1,0 +1,77 @@
+<p>
+<a href="https://leetcode.com/problems/subtree-of-another-tree/">572. Subtree of Another Tree</a>
+</p>
+
+<p>
+<b>Solution</b>
+</p>
+
+<div class="org-src-container">
+
+<pre><code class="lang-C">
+/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left),
+ * right(right) {}
+ * };
+ */
+class Solution {
+  public:
+    bool isSubtree(TreeNode *s, TreeNode *t) {
+        // return isSameTree(s, t) || isSameTree(s-&gt;left, t) ||
+        //        isSameTree(s-&gt;right, t);
+        if (s == NULL &amp;&amp; t == NULL)
+            return true;
+        if (s == NULL)
+            return false;
+        if (t == NULL)
+            return true;
+        bool isSub;
+        if (s-&gt;val == t-&gt;val)
+            isSub = isSameTree(s, t);
+        if (isSub)
+            return true;
+        return isSubtree(s-&gt;left, t) || isSubtree(s-&gt;right, t);
+    }
+
+    bool isSameTree(TreeNode *s, TreeNode *t) {
+        if (s == nullptr &amp;&amp; t == nullptr) {
+            return true;
+        } else {
+            if (s == nullptr || t == nullptr)
+                return false;
+            if (s-&gt;val != t-&gt;val)
+                return false;
+            else
+                return isSameTree(s-&gt;left, t-&gt;left) &amp;&amp;
+                       isSameTree(s-&gt;right, t-&gt;right);
+        }
+    }
+};
+
+</code></pre>
+
+</div>
+
+<div class="org-src-container">
+
+<pre><code class="lang-html">
+Status: Accepted (183/183)
+
+Runtime: 40 ms, faster than 66.02% of C++ submissions.
+
+Memory Usage: 29.7 MB, less than 18.21% of C++ submissions.
+
+</code></pre>
+
+</div>
+
+<p>
+第一次做的时候并没有做对，第二次倒是 AC 了。没啥感觉，就是感觉自己的方法代码有点复杂。
+</p>
