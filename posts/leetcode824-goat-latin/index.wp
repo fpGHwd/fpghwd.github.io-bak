@@ -1,0 +1,61 @@
+<p>
+<a href="https://leetcode.com/problems/goat-latin/">824. Goat Latin</a>
+</p>
+
+<p>
+<b>Solution</b>
+</p>
+
+<div class="org-src-container">
+
+<pre><code class="lang-C">
+class Solution {
+  public:
+    string toGoatLatin(string S) {
+        int start = 0, end = 0, i = 1;
+        string goat = "";
+        while (start &lt; S.length()) {
+            if (i != 1)
+                goat += " ";
+            while (end &lt; S.length() &amp;&amp; isalpha(S[end]))
+                end++;
+            if (S[start] == 'a' || S[start] == 'e' || S[start] == 'i' ||
+                S[start] == 'o' || S[start] == 'u' || S[start] == 'A' ||
+                S[start] == 'E' || S[start] == 'I' || S[start] == 'O' ||
+                S[start] == 'U') {
+                goat += S.substr(start, end - start);
+            } else {
+                if (start + 1 != end) {
+                    goat += S.substr(start + 1, end - start - 1);
+                }
+                goat += S.substr(start, 1);
+            }
+            goat += "ma";
+            goat += string(i, 'a');
+
+            end++, start = end, i++;
+        }
+        return goat;
+    }
+};
+
+</code></pre>
+
+</div>
+
+<div class="org-src-container">
+
+<pre><code class="lang-html">
+Status: Accepted (99/99)
+
+Runtime: 0 ms, faster than 100.00% of C++ submissions.
+
+Memory Usage: 6.6 MB, less than 76.77% of C++ submissions.
+
+</code></pre>
+
+</div>
+
+<p>
+字符串的題目都是用指針來做的。
+</p>

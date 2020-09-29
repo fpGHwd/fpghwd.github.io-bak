@@ -1,5 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Dichotomy</title><link>https://fpghwd.github.io/</link><description>To iterate is human, to recurse, divine</description><atom:link href="https://fpghwd.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;suzumiya natsuhi&lt;/a&gt; </copyright><lastBuildDate>Tue, 29 Sep 2020 08:20:10 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Leetcode572. Subtree of Another Tree</title><link>https://fpghwd.github.io/posts/leetcode572-subtree-of-another-tree/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Dichotomy</title><link>https://fpghwd.github.io/</link><description>To iterate is human, to recurse, divine</description><atom:link href="https://fpghwd.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;suzumiya natsuhi&lt;/a&gt; </copyright><lastBuildDate>Tue, 29 Sep 2020 10:01:22 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Leetcode824. Goat Latin</title><link>https://fpghwd.github.io/posts/leetcode824-goat-latin/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
+&lt;a href="https://leetcode.com/problems/goat-latin/"&gt;824. Goat Latin&lt;/a&gt;
+&lt;/p&gt;
+
+&lt;p&gt;
+&lt;b&gt;Solution&lt;/b&gt;
+&lt;/p&gt;
+
+&lt;div class="org-src-container"&gt;
+
+&lt;pre&gt;&lt;code class="lang-C"&gt;
+class Solution {
+  public:
+    string toGoatLatin(string S) {
+        int start = 0, end = 0, i = 1;
+        string goat = "";
+        while (start &amp;lt; S.length()) {
+            if (i != 1)
+                goat += " ";
+            while (end &amp;lt; S.length() &amp;amp;&amp;amp; isalpha(S[end]))
+                end++;
+            if (S[start] == 'a' || S[start] == 'e' || S[start] == 'i' ||
+                S[start] == 'o' || S[start] == 'u' || S[start] == 'A' ||
+                S[start] == 'E' || S[start] == 'I' || S[start] == 'O' ||
+                S[start] == 'U') {
+                goat += S.substr(start, end - start);
+            } else {
+                if (start + 1 != end) {
+                    goat += S.substr(start + 1, end - start - 1);
+                }
+                goat += S.substr(start, 1);
+            }
+            goat += "ma";
+            goat += string(i, 'a');
+
+            end++, start = end, i++;
+        }
+        return goat;
+    }
+};
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;/div&gt;
+
+&lt;div class="org-src-container"&gt;
+
+&lt;pre&gt;&lt;code class="lang-html"&gt;
+Status: Accepted (99/99)
+
+Runtime: 0 ms, faster than 100.00% of C++ submissions.
+
+Memory Usage: 6.6 MB, less than 76.77% of C++ submissions.
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;/div&gt;
+
+&lt;p&gt;
+字符串的題目都是用指針來做的。
+&lt;/p&gt;&lt;/div&gt;</description><category>leetcode</category><guid>https://fpghwd.github.io/posts/leetcode824-goat-latin/</guid><pubDate>Tue, 29 Sep 2020 02:01:13 GMT</pubDate></item><item><title>Leetcode572. Subtree of Another Tree</title><link>https://fpghwd.github.io/posts/leetcode572-subtree-of-another-tree/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
 &lt;a href="https://leetcode.com/problems/subtree-of-another-tree/"&gt;572. Subtree of Another Tree&lt;/a&gt;
 &lt;/p&gt;
 
@@ -549,57 +609,4 @@ Memory Usage: 36.9 MB, less than 63.53% of C++ submissions.
 
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;/div&gt;&lt;/div&gt;</description><guid>https://fpghwd.github.io/posts/leetcode/</guid><pubDate>Fri, 25 Sep 2020 01:06:43 GMT</pubDate></item><item><title>Leetcode617. Merge Two Binary Trees</title><link>https://fpghwd.github.io/posts/leetcode617-merge-two-binary-trees/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
-&lt;a href="https://leetcode.com/problems/merge-two-binary-trees/"&gt;617. Merge Two Binary Trees&lt;/a&gt;
-&lt;/p&gt;
-
-&lt;p&gt;
-&lt;b&gt;Solution&lt;/b&gt;
-&lt;/p&gt;
-
-&lt;div class="org-src-container"&gt;
-
-&lt;pre&gt;&lt;code class="lang-C"&gt;
-/**
- * Definition for a binary tree node.
- * struct TreeNode {
- *     int val;
- *     TreeNode *left;
- *     TreeNode *right;
- *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
- *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
- *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left),
- * right(right) {}
- * };
- */
-class Solution {
-  public:
-    TreeNode *mergeTrees(TreeNode *t1, TreeNode *t2) {
-        if (t1 == NULL &amp;amp;&amp;amp; t2 == NULL)
-            return NULL;
-        TreeNode *t3 = new TreeNode((t1 == NULL ? 0 : t1-&amp;gt;val) +
-                                    (t2 == NULL ? 0 : t2-&amp;gt;val));
-        t3-&amp;gt;left = mergeTrees(t1 == NULL ? NULL : t1-&amp;gt;left,
-                              t2 == NULL ? NULL : t2-&amp;gt;left);
-        t3-&amp;gt;right = mergeTrees(t1 == NULL ? NULL : t1-&amp;gt;right,
-                               t2 == NULL ? NULL : t2-&amp;gt;right);
-        return t3;
-    }
-};
-
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;/div&gt;
-
-&lt;div class="org-src-container"&gt;
-
-&lt;pre&gt;&lt;code class="lang-html"&gt;
-Status: Accepted (183/183)
-
-Runtime: 56 ms, faster than 47.43% of C++ submissions.
-
-Memory Usage: 35.7 MB, less than 5.05% of C++ submissions.
-
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;/div&gt;&lt;/div&gt;</description><category>leetcode</category><guid>https://fpghwd.github.io/posts/leetcode617-merge-two-binary-trees/</guid><pubDate>Fri, 25 Sep 2020 00:54:22 GMT</pubDate></item></channel></rss>
+&lt;/div&gt;&lt;/div&gt;</description><guid>https://fpghwd.github.io/posts/leetcode/</guid><pubDate>Fri, 25 Sep 2020 01:06:43 GMT</pubDate></item></channel></rss>
