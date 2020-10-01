@@ -38,5 +38,5 @@ Memory Usage: 6 MB, less than 59.10% of C++ submissions.
 </div>
 
 <p>
-虽然应该用 DP 做，但是好像递归更容易理解一点。反过来， DP 不就是递归的递推公式的算术或者代数形式嘛。能用递归就做出来的事情，就不要用迭代去做，毕竟<a href="http://algosaur.us/recursion/">&ldquo;To iterate is human, to recurse, divine.&rdquo;</a>
+用 DP 做更快一点，但递归更容易理解一点。反过来， DP 不就是递归的递推公式的代数形式嘛。能用递归就做出来的事情，就不要麻烦迭代了，毕竟<a href="http://algosaur.us/recursion/">&ldquo;To iterate is human, to recurse, divine.&rdquo;</a>，能用神去做的事情，就不要用人了。
 </p>
