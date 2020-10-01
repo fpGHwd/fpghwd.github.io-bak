@@ -28,11 +28,10 @@ Solution
 class Solution {
   public:
     int numTrees(int n) {
-        if (n == 0)
+        if (n == 0 || n == 1)
             return 1;
-        if (n == 1)
-            return 1;
-        if (n =">
+        int count = 0;
+        for (int i = 1; ">
 <meta property="og:type" content="article">
 <meta property="article:published_time" content="2020-10-01T04:39:40+08:00">
 <meta property="article:tag" content="leetcode">
@@ -131,16 +130,12 @@ class Solution {
 class Solution {
   public:
     int numTrees(int n) {
-        if (n == 0)
+        if (n == 0 || n == 1)
             return 1;
-        if (n == 1)
-            return 1;
-        if (n == 2)
-            return 2;
         int count = 0;
-        for (int i = 1; i &lt;= n; i++) {
+        for (int i = 1; i &lt;= n; i++)
             count = count + numTrees(i - 1) * numTrees(n - i);
-        }
+
         return count;
     }
 };
