@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Dichotomy</title><link>https://fpghwd.github.io/</link><description>To iterate is human, to recurse, divine</description><atom:link href="https://fpghwd.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;suzumiya natsuhi&lt;/a&gt; </copyright><lastBuildDate>Thu, 01 Oct 2020 04:58:02 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Leetcode96. Unique Binary Search Trees</title><link>https://fpghwd.github.io/posts/leetcode96-unique-binary-search-trees/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Dichotomy</title><link>https://fpghwd.github.io/</link><description>To iterate is human, to recurse, divine</description><atom:link href="https://fpghwd.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;suzumiya natsuhi&lt;/a&gt; </copyright><lastBuildDate>Thu, 01 Oct 2020 04:59:06 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Leetcode96. Unique Binary Search Trees</title><link>https://fpghwd.github.io/posts/leetcode96-unique-binary-search-trees/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
 &lt;a href="https://leetcode.com/problems/unique-binary-search-trees/"&gt;96. Unique Binary Search Trees&lt;/a&gt;
 &lt;/p&gt;
 
@@ -39,7 +39,7 @@ Memory Usage: 6 MB, less than 59.10% of C++ submissions.
 &lt;/div&gt;
 
 &lt;p&gt;
-用 DP 做更快一点，但递归更容易理解一点。反过来， DP 不就是递归的递推公式的代数形式嘛。能用递归就做出来的事情，就不要麻烦迭代了，毕竟&lt;a href="http://algosaur.us/recursion/"&gt;“To iterate is human, to recurse, divine.”&lt;/a&gt;，能用神去做的事情，就不要用人了。
+用 DP 做更快一点，但递归对理解更友好些。反过来， DP 不就是递归的递推公式的代数形式嘛。能用递归就做出来的事情，就不要麻烦迭代了，毕竟&lt;a href="http://algosaur.us/recursion/"&gt;“To iterate is human, to recurse, divine.”&lt;/a&gt;，能用神去做的事情，就不要用人了。
 &lt;/p&gt;&lt;/div&gt;</description><category>leetcode</category><guid>https://fpghwd.github.io/posts/leetcode96-unique-binary-search-trees/</guid><pubDate>Wed, 30 Sep 2020 20:39:40 GMT</pubDate></item><item><title>Leetcode824. Goat Latin</title><link>https://fpghwd.github.io/posts/leetcode824-goat-latin/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
 &lt;a href="https://leetcode.com/problems/goat-latin/"&gt;824. Goat Latin&lt;/a&gt;
 &lt;/p&gt;
