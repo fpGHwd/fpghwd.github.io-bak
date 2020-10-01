@@ -1,0 +1,48 @@
+<p>
+<a href="https://leetcode.com/problems/unique-binary-search-trees/">96. Unique Binary Search Trees</a>
+</p>
+
+<p>
+<b>Solution</b>
+</p>
+
+<div class="org-src-container">
+
+<pre><code class="lang-C">
+class Solution {
+  public:
+    int numTrees(int n) {
+        if (n == 0)
+            return 1;
+        if (n == 1)
+            return 1;
+        if (n == 2)
+            return 2;
+        int count = 0;
+        for (int i = 1; i &lt;= n; i++) {
+            count = count + numTrees(i - 1) * numTrees(n - i);
+        }
+        return count;
+    }
+};
+
+</code></pre>
+
+</div>
+
+<div class="org-src-container">
+
+<pre><code class="lang-html">
+Status: Accepted (19/19)
+
+Runtime: 1220 ms, faster than 11.92% of C++ submissions.
+
+Memory Usage: 6 MB, less than 59.10% of C++ submissions.
+
+</code></pre>
+
+</div>
+
+<p>
+虽然应该用 DP 做，但是好像递归更容易理解一点。反过来， DP 不就是递归的递推公式的算术或者代数形式嘛。
+</p>
