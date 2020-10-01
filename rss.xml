@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Dichotomy</title><link>https://fpghwd.github.io/</link><description>To iterate is human, to recurse, divine</description><atom:link href="https://fpghwd.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;suzumiya natsuhi&lt;/a&gt; </copyright><lastBuildDate>Thu, 01 Oct 2020 04:52:27 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Leetcode96. Unique Binary Search Trees</title><link>https://fpghwd.github.io/posts/leetcode96-unique-binary-search-trees/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Dichotomy</title><link>https://fpghwd.github.io/</link><description>To iterate is human, to recurse, divine</description><atom:link href="https://fpghwd.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;suzumiya natsuhi&lt;/a&gt; </copyright><lastBuildDate>Thu, 01 Oct 2020 04:55:33 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Leetcode96. Unique Binary Search Trees</title><link>https://fpghwd.github.io/posts/leetcode96-unique-binary-search-trees/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
 &lt;a href="https://leetcode.com/problems/unique-binary-search-trees/"&gt;96. Unique Binary Search Trees&lt;/a&gt;
 &lt;/p&gt;
 
@@ -13,16 +13,14 @@
 class Solution {
   public:
     int numTrees(int n) {
-        if (n == 0 || n == 1)
-            return 1;
+        if (n == 0 || n == 1)return 1;
+
         int count = 0;
-        for (int i = 1; i &amp;lt;= n; i++)
-            count = count + numTrees(i - 1) * numTrees(n - i);
+        for (int i = 1; i &amp;lt;= n; i++)count += numTrees(i - 1) * numTrees(n - i);
 
         return count;
     }
 };
-
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;/div&gt;
