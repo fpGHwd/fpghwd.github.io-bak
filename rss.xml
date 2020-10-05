@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Dichotomy</title><link>https://fpghwd.github.io/</link><description>To iterate is human, to recurse, divine</description><atom:link href="https://fpghwd.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;suzumiya natsuhi&lt;/a&gt; </copyright><lastBuildDate>Mon, 05 Oct 2020 10:04:16 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Leetcode92. Reverse Linked List II</title><link>https://fpghwd.github.io/posts/leetcode92-reverse-linked-list-ii/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Dichotomy</title><link>https://fpghwd.github.io/</link><description>To iterate is human, to recurse, divine</description><atom:link href="https://fpghwd.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;suzumiya natsuhi&lt;/a&gt; </copyright><lastBuildDate>Mon, 05 Oct 2020 10:06:20 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Leetcode92. Reverse Linked List II</title><link>https://fpghwd.github.io/posts/leetcode92-reverse-linked-list-ii/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
 &lt;a href="https://leetcode.com/problems/reverse-linked-list-ii/"&gt;92. Reverse Linked List II&lt;/a&gt;
 &lt;/p&gt;
 
@@ -69,7 +69,11 @@ Memory Usage: 7.8 MB, less than 16.96% of C++ submissions.
 
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;/div&gt;&lt;/div&gt;</description><category>leetcode</category><guid>https://fpghwd.github.io/posts/leetcode92-reverse-linked-list-ii/</guid><pubDate>Mon, 05 Oct 2020 02:04:08 GMT</pubDate></item><item><title>Leetcode96. Unique Binary Search Trees</title><link>https://fpghwd.github.io/posts/leetcode96-unique-binary-search-trees/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;
+第一次做的时候没想那么多，暴力的做法。后来做的时候就想到这是将链表的导致的前插和尾插组合在一起的题。并不难，只要搞清楚两个解法就能写出来。
+&lt;/p&gt;&lt;/div&gt;</description><category>leetcode</category><guid>https://fpghwd.github.io/posts/leetcode92-reverse-linked-list-ii/</guid><pubDate>Mon, 05 Oct 2020 02:04:08 GMT</pubDate></item><item><title>Leetcode96. Unique Binary Search Trees</title><link>https://fpghwd.github.io/posts/leetcode96-unique-binary-search-trees/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
 &lt;a href="https://leetcode.com/problems/unique-binary-search-trees/"&gt;96. Unique Binary Search Trees&lt;/a&gt;
 &lt;/p&gt;
 
