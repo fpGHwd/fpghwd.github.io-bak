@@ -12,7 +12,7 @@
 <link rel="alternate" type="application/rss+xml" title="RSS" hreflang="en" href="rss.xml">
 <link rel="canonical" href="https://fpghwd.github.io/">
 <link rel="next" href="index-3.html" type="text/html">
-<!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="posts/leetcode92-reverse-linked-list-ii/" type="text/html">
+<!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="posts/org-archive-location/" type="text/html">
 </head>
 <body>
 <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
@@ -69,7 +69,69 @@
     
         
     <div class="postindex">
-            <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/leetcode92-reverse-linked-list-ii/" class="u-url">Leetcode92. Reverse Linked List II</a></h1>
+            <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/org-archive-location/" class="u-url">Org archive location</a></h1>
+                <div class="metadata">
+                    <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                        suzumiya natsuhi
+                    </span></p>
+            <p class="dateline">
+            <a href="posts/org-archive-location/" rel="bookmark">
+            <time class="published dt-published" datetime="2020-10-16T11:32:18+08:00" itemprop="datePublished" title="2020-10-16 11:32">2020-10-16 11:32</time></a>
+            </p>
+                        <p class="commentline">
+        
+    <a href="posts/org-archive-location/#disqus_thread" data-disqus-identifier="cache/posts/org-archive-location.html">Comments</a>
+
+
+                </p>
+</div>
+            </header><div class="e-content entry-content">
+                    <div>
+<p>
+最近在使用 org 的时候想把 org-archive-subtree 的条目和 org-capture-templates 那样，将每次当天 archived 的 headline 放到当日的日期 headline 下面，和日记一样组织。这样的话，将来查询的时候就可以顺便看一下当天发生的事情和当天完成的项目了。
+</p>
+
+<p>
+这个是日记的组织方式：
+<img src="https://raw.githubusercontent.com/fpGHwd/fpghwd.github.io/master/images/_20201016_192526screenshot.png" alt="_20201016_192526screenshot.png"></p>
+
+<div class="org-src-container">
+
+<pre><code class="lang-lisp">
+(add-to-list 'org-capture-templates
+                      '("zj" "journal" entry (file "/home/wd/dropbox/to-encfs/text/org/journal.org")
+                        "* %u - %^{heading}\n  %?"))
+
+</code></pre>
+
+</div>
+
+<p>
+同时在 <code>customize org-archive-location</code> 中发现了有这种设定：
+</p>
+
+<div class="org-src-container">
+
+<pre><code class="lang-html">
+"~/org/datetree.org::datetree/* Finished Tasks"
+The "datetree/" string is special, signifying to archive
+items to the datetree.  Items are placed in either the CLOSED
+date of the item, or the current date if there is no CLOSED date.
+The heading will be a subentry to the current date.  There doesn’t
+need to be a heading, but there always needs to be a slash after
+datetree.  For example, to store archived items directly in the
+datetree, use "~/org/datetree.org::datetree/".
+
+</code></pre>
+
+</div>
+
+<p>
+只需要每年修改一次文件即可。
+</p>
+</div>
+                </div>
+            </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/leetcode92-reverse-linked-list-ii/" class="u-url">Leetcode92. Reverse Linked List II</a></h1>
                 <div class="metadata">
                     <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                         suzumiya natsuhi
@@ -818,75 +880,6 @@ Memory Usage: 14.9 MB, less than 5.01% of C++ submissions.
 
 <p>
 第一次做的时候忽略了没有保存 <code>old_color</code> ，后面有问题。</p>
-</div>
-                </div>
-            </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/leetcode696-count-binary-substrings/" class="u-url">Leetcode696. Count Binary Substrings</a></h1>
-                <div class="metadata">
-                    <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
-                        suzumiya natsuhi
-                    </span></p>
-            <p class="dateline">
-            <a href="posts/leetcode696-count-binary-substrings/" rel="bookmark">
-            <time class="published dt-published" datetime="2020-09-26T02:34:20+08:00" itemprop="datePublished" title="2020-09-26 02:34">2020-09-26 02:34</time></a>
-            </p>
-                        <p class="commentline">
-        
-    <a href="posts/leetcode696-count-binary-substrings/#disqus_thread" data-disqus-identifier="cache/posts/leetcode696-count-binary-substrings.html">Comments</a>
-
-
-                </p>
-</div>
-            </header><div class="e-content entry-content">
-                    <div>
-<p>
-<a href="https://leetcode.com/problems/count-binary-substrings/">696. Count Binary Substrings</a>
-</p>
-
-<div class="org-src-container">
-
-<pre><code class="lang-C">
-class Solution {
-  public:
-    int countBinarySubstrings(string s) {
-        if (s == "")
-            return 0;
-        vector&lt;int&gt; vi_pos;
-        for (int i = 1; i &lt; s.length(); i++) {
-            if (s[i] != s[i - 1])
-                vi_pos.push_back(i);
-        }
-        int count = 0, left, right;
-        for (int i = 0; i &lt; vi_pos.size(); i++) {
-            left = vi_pos[i] - (i == 0 ? 0 : vi_pos[i - 1]);
-            right = ((i == vi_pos.size() - 1) ? s.length() : vi_pos[i + 1]) -
-                    vi_pos[i];
-            count += min(left, right);
-        }
-        return count;
-    }
-};
-
-</code></pre>
-
-</div>
-
-<div class="org-src-container">
-
-<pre><code class="lang-html">
-Status: Accepted (90/90)
-
-Runtime: 40 ms, faster than 99.85% of C++ submissions.
-
-Memory Usage: 14.4 MB, less than 6.03% of C++ submissions.
-
-</code></pre>
-
-</div>
-
-<p>
-这道题我在 <code>right = ((i =</code> vi<sub>pos.size</sub>() - 1) ? s.length() : vi<sub>pos</sub>[i + 1]) -
-                    vi<sub>pos</sub>[i];= 的时候把 <code>s.length()</code> 写成了 <code>vi_pos.size()</code> ，一直没有检查出来。后来代码拆开了几个变量用 gdb 调试出来了 right 值的问题。隐藏得太深了。
-</p>
 </div>
                 </div>
             </article>

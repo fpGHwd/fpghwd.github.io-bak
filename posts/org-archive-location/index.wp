@@ -1,0 +1,43 @@
+<p>
+最近在使用 org 的时候想把 org-archive-subtree 的条目和 org-capture-templates 那样，将每次当天 archived 的 headline 放到当日的日期 headline 下面，和日记一样组织。这样的话，将来查询的时候就可以顺便看一下当天发生的事情和当天完成的项目了。
+</p>
+
+<p>
+这个是日记的组织方式：
+<img src="https://raw.githubusercontent.com/fpGHwd/fpghwd.github.io/master/images/_20201016_192526screenshot.png" alt="_20201016_192526screenshot.png" />
+</p>
+
+<div class="org-src-container">
+
+<pre><code class="lang-lisp">
+(add-to-list 'org-capture-templates
+                      '("zj" "journal" entry (file "/home/wd/dropbox/to-encfs/text/org/journal.org")
+                        "* %u - %^{heading}\n  %?"))
+
+</code></pre>
+
+</div>
+
+<p>
+同时在 <code>customize org-archive-location</code> 中发现了有这种设定：
+</p>
+
+<div class="org-src-container">
+
+<pre><code class="lang-html">
+"~/org/datetree.org::datetree/* Finished Tasks"
+The "datetree/" string is special, signifying to archive
+items to the datetree.  Items are placed in either the CLOSED
+date of the item, or the current date if there is no CLOSED date.
+The heading will be a subentry to the current date.  There doesn&#8217;t
+need to be a heading, but there always needs to be a slash after
+datetree.  For example, to store archived items directly in the
+datetree, use "~/org/datetree.org::datetree/".
+
+</code></pre>
+
+</div>
+
+<p>
+只需要每年修改一次文件即可。
+</p>

@@ -1,5 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Dichotomy (Posts about emacs)</title><link>https://fpghwd.github.io/</link><description></description><atom:link href="https://fpghwd.github.io/categories/emacs.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;suzumiya natsuhi&lt;/a&gt; </copyright><lastBuildDate>Wed, 23 Sep 2020 14:23:17 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Org2nikola image displaying</title><link>https://fpghwd.github.io/posts/org2nikola-image-display/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Dichotomy (Posts about emacs)</title><link>https://fpghwd.github.io/</link><description></description><atom:link href="https://fpghwd.github.io/categories/emacs.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;suzumiya natsuhi&lt;/a&gt; </copyright><lastBuildDate>Fri, 16 Oct 2020 11:32:27 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Org archive location</title><link>https://fpghwd.github.io/posts/org-archive-location/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
+最近在使用 org 的时候想把 org-archive-subtree 的条目和 org-capture-templates 那样，将每次当天 archived 的 headline 放到当日的日期 headline 下面，和日记一样组织。这样的话，将来查询的时候就可以顺便看一下当天发生的事情和当天完成的项目了。
+&lt;/p&gt;
+
+&lt;p&gt;
+这个是日记的组织方式：
+&lt;img src="https://raw.githubusercontent.com/fpGHwd/fpghwd.github.io/master/images/_20201016_192526screenshot.png" alt="_20201016_192526screenshot.png"&gt;
+&lt;/p&gt;
+
+&lt;div class="org-src-container"&gt;
+
+&lt;pre&gt;&lt;code class="lang-lisp"&gt;
+(add-to-list 'org-capture-templates
+                      '("zj" "journal" entry (file "/home/wd/dropbox/to-encfs/text/org/journal.org")
+                        "* %u - %^{heading}\n  %?"))
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;/div&gt;
+
+&lt;p&gt;
+同时在 &lt;code&gt;customize org-archive-location&lt;/code&gt; 中发现了有这种设定：
+&lt;/p&gt;
+
+&lt;div class="org-src-container"&gt;
+
+&lt;pre&gt;&lt;code class="lang-html"&gt;
+"~/org/datetree.org::datetree/* Finished Tasks"
+The "datetree/" string is special, signifying to archive
+items to the datetree.  Items are placed in either the CLOSED
+date of the item, or the current date if there is no CLOSED date.
+The heading will be a subentry to the current date.  There doesn’t
+need to be a heading, but there always needs to be a slash after
+datetree.  For example, to store archived items directly in the
+datetree, use "~/org/datetree.org::datetree/".
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;/div&gt;
+
+&lt;p&gt;
+只需要每年修改一次文件即可。
+&lt;/p&gt;&lt;/div&gt;</description><category>ATTACH</category><category>emacs</category><guid>https://fpghwd.github.io/posts/org-archive-location/</guid><pubDate>Fri, 16 Oct 2020 03:32:18 GMT</pubDate></item><item><title>Org2nikola image displaying</title><link>https://fpghwd.github.io/posts/org2nikola-image-display/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
 &lt;b&gt;设置&lt;/b&gt;
 &lt;/p&gt;
 
