@@ -3,38 +3,25 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Org archive location | Dichotomy</title>
+<title>Emacs Lisp Overlay | Dichotomy</title>
 <link href="../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
 <meta name="theme-color" content="#5670d4">
 <meta name="generator" content="Nikola (getnikola.com)">
 <link rel="alternate" type="application/rss+xml" title="RSS" hreflang="en" href="../../rss.xml">
-<link rel="canonical" href="https://fpghwd.github.io/posts/org-archive-location/">
+<link rel="canonical" href="https://fpghwd.github.io/posts/emacs-lisp-overlay/">
 <!--[if lt IE 9]><script src="../../assets/js/html5.js"></script><![endif]--><meta name="author" content="suzumiya natsuhi">
-<link rel="prev" href="../leetcode92-reverse-linked-list-ii/" title="Leetcode92. Reverse Linked List II" type="text/html">
-<link rel="next" href="../emacs-lisp-overlay/" title="Emacs Lisp Overlay" type="text/html">
+<link rel="prev" href="../org-archive-location/" title="Org archive location" type="text/html">
 <meta property="og:site_name" content="Dichotomy">
-<meta property="og:title" content="Org archive location">
-<meta property="og:url" content="https://fpghwd.github.io/posts/org-archive-location/">
-<meta property="og:description" content="最近在使用 org 的时候想把 org-archive-subtree 的条目和 org-capture-templates 那样，将每次当天 archived 的 headline 放到当日的日期 headline 下面，和日记一样组织。这样的话，将来查询的时候就可以顺便看一下当天发生的事情和当天完成的项目了。
+<meta property="og:title" content="Emacs Lisp Overlay">
+<meta property="og:url" content="https://fpghwd.github.io/posts/emacs-lisp-overlay/">
+<meta property="og:description" content="最近看到 Emacs Lisp 里面 Overlay 的概念，可以用于自定义介面 buffer 的文字的某些特殊效果。
 
 
 
-以下是日记的组织方式：
-
-
-
-
-
-
-
-
-
-
-(add-to-list 'org">
+当然其实对文字的编辑和模式本身都可以是文字内容的一种展现方式，但是文字的属性（Text Properties）是文字的一部分，overlay 并不是文字的一部分。所以在 buffer 之间复制某些文字的时候，并不会同时复制  overlay ；同时改变 buffer 的文字">
 <meta property="og:type" content="article">
-<meta property="article:published_time" content="2020-10-16T11:32:18+08:00">
-<meta property="article:tag" content="ATTACH">
+<meta property="article:published_time" content="2020-10-26T13:24:03+08:00">
 <meta property="article:tag" content="emacs">
 </head>
 <body>
@@ -93,7 +80,7 @@
         
         
         
-<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">Org archive location</a></h1>
+<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">Emacs Lisp Overlay</a></h1>
 
         <div class="metadata">
             <p class="byline author vcard p-author h-card"><span class="byline-name fn p-name" itemprop="author">
@@ -101,11 +88,11 @@
             </span></p>
             <p class="dateline">
             <a href="." rel="bookmark">
-            <time class="published dt-published" datetime="2020-10-16T11:32:18+08:00" itemprop="datePublished" title="2020-10-16 11:32">2020-10-16 11:32</time></a>
+            <time class="published dt-published" datetime="2020-10-26T13:24:03+08:00" itemprop="datePublished" title="2020-10-26 13:24">2020-10-26 13:24</time></a>
             </p>
                 <p class="commentline">
         
-    <a href="#disqus_thread" data-disqus-identifier="cache/posts/org-archive-location.html">Comments</a>
+    <a href="#disqus_thread" data-disqus-identifier="cache/posts/emacs-lisp-overlay.html">Comments</a>
 
 
             
@@ -118,63 +105,20 @@
     </header><div class="e-content entry-content" itemprop="articleBody text">
     <div>
 <p>
-最近在使用 org 的时候想把 org-archive-subtree 的条目和 org-capture-templates 那样，将每次当天 archived 的 headline 放到当日的日期 headline 下面，和日记一样组织。这样的话，将来查询的时候就可以顺便看一下当天发生的事情和当天完成的项目了。
+最近看到 Emacs Lisp 里面 Overlay 的概念，可以用于自定义介面 buffer 的文字的某些特殊效果。
 </p>
 
 <p>
-以下是日记的组织方式：
-</p>
-
-<div id="org595b26c" class="figure">
-<p><img src="https://raw.githubusercontent.com/fpGHwd/fpghwd.github.io/master/images/_20201016_192526screenshot.png" alt="_20201016_192526screenshot.png"></p>
-</div>
-
-<div class="org-src-container">
-
-<pre><code class="lang-lisp">
-(add-to-list 'org-capture-templates
-                      '("zj" "journal" entry (file "/home/wd/dropbox/to-encfs/text/org/journal.org")
-                        "* %u - %^{heading}\n  %?"))
-
-</code></pre>
-
-</div>
-
-<p>
-同时在 <code>customize org-archive-location</code> 中发现了有这种设定：
-</p>
-
-<div class="org-src-container">
-
-<pre><code class="lang-html">
-"~/org/datetree.org::datetree/* Finished Tasks"
-The "datetree/" string is special, signifying to archive
-items to the datetree.  Items are placed in either the CLOSED
-date of the item, or the current date if there is no CLOSED date.
-The heading will be a subentry to the current date.  There doesn’t
-need to be a heading, but there always needs to be a slash after
-datetree.  For example, to store archived items directly in the
-datetree, use "~/org/datetree.org::datetree/".
-
-</code></pre>
-
-</div>
-
-<p>
-可以把日记和归档的条目都放到一个文件，归档也不会经常去动，只需要看的时候搜索一下就行。
+当然其实对文字的编辑和模式本身都可以是文字内容的一种展现方式，但是文字的属性（Text Properties）是文字的一部分，overlay 并不是文字的一部分。所以在 buffer 之间复制某些文字的时候，并不会同时复制  overlay ；同时改变 buffer 的文字属性其实也是在修改 buffer 本身。但 overlay 的改变并不会改变 buffer 本身，这种修改自然也不会被保存在这个 buffer 的 undo list 中。
 </p>
 </div>
     </div>
     <aside class="postpromonav"><nav><ul itemprop="keywords" class="tags">
-<li><a class="tag p-category" href="../../categories/attach/" rel="tag">ATTACH</a></li>
-            <li><a class="tag p-category" href="../../categories/emacs/" rel="tag">emacs</a></li>
+<li><a class="tag p-category" href="../../categories/emacs/" rel="tag">emacs</a></li>
         </ul>
 <ul class="pager hidden-print">
 <li class="previous">
-                <a href="../leetcode92-reverse-linked-list-ii/" rel="prev" title="Leetcode92. Reverse Linked List II">Previous post</a>
-            </li>
-            <li class="next">
-                <a href="../emacs-lisp-overlay/" rel="next" title="Emacs Lisp Overlay">Next post</a>
+                <a href="../org-archive-location/" rel="prev" title="Org archive location">Previous post</a>
             </li>
         </ul></nav></aside><section class="comments hidden-print"><h2>Comments</h2>
         
@@ -182,9 +126,9 @@ datetree, use "~/org/datetree.org::datetree/".
         <div id="disqus_thread"></div>
         <script>
         var disqus_shortname ="fpghwd-github-io",
-            disqus_url="https://fpghwd.github.io/posts/org-archive-location/",
-        disqus_title="Org archive location",
-        disqus_identifier="cache/posts/org-archive-location.html",
+            disqus_url="https://fpghwd.github.io/posts/emacs-lisp-overlay/",
+        disqus_title="Emacs Lisp Overlay",
+        disqus_identifier="cache/posts/emacs-lisp-overlay.html",
         disqus_config = function () {
             this.language = "en";
         };
