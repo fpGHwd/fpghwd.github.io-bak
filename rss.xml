@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Dichotomy</title><link>https://fpghwd.github.io/</link><description>To iterate is human, to recurse, divine</description><atom:link href="https://fpghwd.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;suzumiya natsuhi&lt;/a&gt; </copyright><lastBuildDate>Thu, 05 Nov 2020 03:14:15 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Emacs Lisp Overlay</title><link>https://fpghwd.github.io/posts/emacs-lisp-overlay/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Dichotomy</title><link>https://fpghwd.github.io/</link><description>To iterate is human, to recurse, divine</description><atom:link href="https://fpghwd.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;suzumiya natsuhi&lt;/a&gt; </copyright><lastBuildDate>Thu, 05 Nov 2020 03:20:20 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Difference Since Using Doom Emacs</title><link>https://fpghwd.github.io/posts/since-use-doom-emacs/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;p&gt;
+自从使用了 doom emacs 后，就很少纠结系统升级了。以前没事总是会升级一下，但是现在最多的就是可能想起来会升级一下 doom emacs, 只需要在 emacs 中 upgrade 和 reload 即可。其实大多数时候我也只是 doom sync 一下配置然后 reload 一下，最多也就十几二十秒。
+&lt;/p&gt;</description><category>emacs</category><guid>https://fpghwd.github.io/posts/since-use-doom-emacs/</guid><pubDate>Wed, 04 Nov 2020 19:13:58 GMT</pubDate></item><item><title>Emacs Lisp Overlay</title><link>https://fpghwd.github.io/posts/emacs-lisp-overlay/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
 最近看到 Emacs Lisp 里面 Overlay 的概念，可以用于自定义介面 buffer 的文字的某些特殊效果。
 &lt;/p&gt;
 
@@ -511,44 +513,4 @@ Memory Usage: 24.9 MB, less than 56.91% of C++ submissions.
 
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;/div&gt;&lt;/div&gt;</description><guid>https://fpghwd.github.io/posts/leetcode491-find-mode-in-binary-search-tree/</guid><pubDate>Sun, 27 Sep 2020 04:46:23 GMT</pubDate></item><item><title>Leetcode901. Sort Array By Parity</title><link>https://fpghwd.github.io/posts/leetcode901-sort-array-by-parity/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
-&lt;a href="https://leetcode.com/problems/sort-array-by-parity/"&gt;901. Sort Array By Parity&lt;/a&gt;
-&lt;/p&gt;
-
-&lt;p&gt;
-&lt;b&gt;Solution&lt;/b&gt;
-&lt;/p&gt;
-
-&lt;div class="org-src-container"&gt;
-
-&lt;pre&gt;&lt;code class="lang-C"&gt;
-class Solution {
-  public:
-    vector&amp;lt;int&amp;gt; sortArrayByParity(vector&amp;lt;int&amp;gt; &amp;amp;A) {
-        sort(begin(A), end(A),
-             [](auto &amp;amp;a, auto &amp;amp;b) { return a % 2 == 0 &amp;amp;&amp;amp; b % 2 == 1; });
-        return A;
-    }
-};
-
-
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;/div&gt;
-
-&lt;div class="org-src-container"&gt;
-
-&lt;pre&gt;&lt;code class="lang-html"&gt;
-Status: Accepted (285/285)
-
-Runtime: 36 ms, faster than 19.11% of C++ submissions.
-
-Memory Usage: 16.6 MB, less than 16.48% of C++ submissions.
-
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;/div&gt;
-
-&lt;p&gt;
-模仿 0947 reorder-data-in-log-files 题目的写法。
-&lt;/p&gt;&lt;/div&gt;</description><category>leetcode</category><guid>https://fpghwd.github.io/posts/leetcode901-sort-array-by-parity/</guid><pubDate>Sat, 26 Sep 2020 07:24:25 GMT</pubDate></item></channel></rss>
+&lt;/div&gt;&lt;/div&gt;</description><guid>https://fpghwd.github.io/posts/leetcode491-find-mode-in-binary-search-tree/</guid><pubDate>Sun, 27 Sep 2020 04:46:23 GMT</pubDate></item></channel></rss>
