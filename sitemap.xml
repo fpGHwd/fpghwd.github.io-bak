@@ -7,7 +7,7 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
   <loc>https://fpghwd.github.io/</loc>
-  <lastmod>2020-11-05T03:20:00Z</lastmod>
+  <lastmod>2020-11-06T08:59:00Z</lastmod>
  </url>
  <url>
   <loc>https://fpghwd.github.io/2012/</loc>
@@ -19,7 +19,7 @@
  </url>
  <url>
   <loc>https://fpghwd.github.io/archive.html</loc>
-  <lastmod>2020-11-05T03:20:00Z</lastmod>
+  <lastmod>2020-11-23T15:49:00Z</lastmod>
  </url>
  <url>
   <loc>https://fpghwd.github.io/authors/</loc>
@@ -35,7 +35,7 @@
  </url>
  <url>
   <loc>https://fpghwd.github.io/categories/</loc>
-  <lastmod>2020-09-17T17:19:00Z</lastmod>
+  <lastmod>2020-11-23T15:49:00Z</lastmod>
  </url>
  <url>
   <loc>https://fpghwd.github.io/categories/attach/</loc>
@@ -60,6 +60,10 @@
  <url>
   <loc>https://fpghwd.github.io/categories/emacs/</loc>
   <lastmod>2020-09-17T15:04:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://fpghwd.github.io/categories/film/</loc>
+  <lastmod>2020-11-23T15:49:00Z</lastmod>
  </url>
  <url>
   <loc>https://fpghwd.github.io/categories/leetcode/</loc>
@@ -99,19 +103,19 @@
  </url>
  <url>
   <loc>https://fpghwd.github.io/index-1.html</loc>
-  <lastmod>2020-10-26T13:24:00Z</lastmod>
+  <lastmod>2020-11-23T15:49:00Z</lastmod>
  </url>
  <url>
   <loc>https://fpghwd.github.io/index-2.html</loc>
-  <lastmod>2020-11-05T03:14:00Z</lastmod>
+  <lastmod>2020-11-23T15:49:00Z</lastmod>
  </url>
  <url>
   <loc>https://fpghwd.github.io/index-3.html</loc>
-  <lastmod>2020-11-05T03:20:00Z</lastmod>
+  <lastmod>2020-11-23T15:49:00Z</lastmod>
  </url>
  <url>
   <loc>https://fpghwd.github.io/index-4.html</loc>
-  <lastmod>2020-11-05T03:20:00Z</lastmod>
+  <lastmod>2020-11-23T15:49:00Z</lastmod>
  </url>
  <url>
   <loc>https://fpghwd.github.io/listings/</loc>
@@ -204,6 +208,10 @@
  <url>
   <loc>https://fpghwd.github.io/posts/ignorant-and-tolerant/</loc>
   <lastmod>2020-09-09T02:04:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://fpghwd.github.io/posts/kan-wan-dian-ying-gou-zhen-de-yi-dian-xiang-fa/</loc>
+  <lastmod>2020-11-23T15:49:00Z</lastmod>
  </url>
  <url>
   <loc>https://fpghwd.github.io/posts/leetcode/</loc>

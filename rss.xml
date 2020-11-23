@@ -1,5 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Dichotomy</title><link>https://fpghwd.github.io/</link><description>To iterate is human, to recurse, divine</description><atom:link href="https://fpghwd.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;suzumiya natsuhi&lt;/a&gt; </copyright><lastBuildDate>Thu, 05 Nov 2020 07:57:49 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Difference Since Using Doom Emacs</title><link>https://fpghwd.github.io/posts/since-use-doom-emacs/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Dichotomy</title><link>https://fpghwd.github.io/</link><description>To iterate is human, to recurse, divine</description><atom:link href="https://fpghwd.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;suzumiya natsuhi&lt;/a&gt; </copyright><lastBuildDate>Mon, 23 Nov 2020 15:49:16 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>《狗镇》</title><link>https://fpghwd.github.io/posts/kan-wan-dian-ying-gou-zhen-de-yi-dian-xiang-fa/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
+Grace 重新见到父亲时，父亲说了以下的话：
+&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;
+你错了，他们犯下的错误，只是因为他们在服从自己的本性。原谅，宽恕，实在纵容罪恶。你要宽恕他们，原谅他们，才是真正的傲慢。因为只有上帝才有资格去宽恕人类的罪责，去原谅他们的错误。当你要原谅所有有罪之人的时候，就是在傲慢地将自己比肩上帝。但你却指责我，说我傲慢。
+&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;
+其实在中国也有这样的表述：“以德报怨，何以报德？”
+&lt;/p&gt;&lt;/div&gt;</description><category>film</category><guid>https://fpghwd.github.io/posts/kan-wan-dian-ying-gou-zhen-de-yi-dian-xiang-fa/</guid><pubDate>Mon, 23 Nov 2020 07:39:45 GMT</pubDate></item><item><title>Difference Since Using Doom Emacs</title><link>https://fpghwd.github.io/posts/since-use-doom-emacs/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
 自从使用了 doom emacs 后，就很少纠结系统升级了。以前没事总是会升级一下，但是现在最多的就是可能想起来会升级一下 doom emacs, 只需要在 emacs 中 upgrade 和 reload 即可。其实大多数时候我也只是 doom sync 一下配置然后 reload 一下，最多也就十几二十秒。
 &lt;/p&gt;
 
@@ -445,76 +457,4 @@ Memory Usage: 21 MB, less than 13.09% of C++ submissions.
 &lt;/div&gt;
 
 &lt;p&gt;
-同樣的是一個樹遍歷的題目。不過第一次做的時候因爲想用一個函數解決問題，但是好像是不行的。因爲遞歸返回值如果是最長的直徑的話，就無法只用一個單一的返回值來構造這個函數，又不能修改參數。所以遞歸函數的返回值需要更多的信息，因此還是藉助了返回值爲結點高度的函數 &lt;code&gt;depthTravel&lt;/code&gt; 。&lt;/p&gt;&lt;/div&gt;</description><category>leetcode</category><guid>https://fpghwd.github.io/posts/leetcode528-diameter-of-binary-tree/</guid><pubDate>Sun, 27 Sep 2020 20:21:11 GMT</pubDate></item><item><title>Leetcode491. Find Mode in Binary Search Tree</title><link>https://fpghwd.github.io/posts/leetcode491-find-mode-in-binary-search-tree/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
-&lt;a href="https://leetcode.com/problems/find-mode-in-binary-search-tree/"&gt;501. Find Mode in Binary Search Tree&lt;/a&gt;
-&lt;/p&gt;
-
-&lt;p&gt;
-&lt;b&gt;Solution&lt;/b&gt;
-&lt;/p&gt;
-
-&lt;div class="org-src-container"&gt;
-
-&lt;pre&gt;&lt;code class="lang-C"&gt;
-/**
- * Definition for a binary tree node.
- * struct TreeNode {
- *     int val;
- *     TreeNode *left;
- *     TreeNode *right;
- *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
- *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
- *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left),
- * right(right) {}
- * };
- */
-class Solution {
-  public:
-    vector&amp;lt;int&amp;gt; findMode(TreeNode *root) {
-        if (root == NULL)
-            return vector&amp;lt;int&amp;gt;{};
-        vector&amp;lt;int&amp;gt; path, mode;
-        travelMidOrder(root, path);
-        int k, n = 0;
-        for (int i = 0; i &amp;lt; path.size(); i = k) {
-            k = i;
-            while (k &amp;lt; path.size() &amp;amp;&amp;amp; path[k] == path[i])
-                k++;
-            if (k - i &amp;gt; n) {
-                mode.clear();
-                mode.push_back(path[i]);
-                n = k - i;
-            } else if (k - i == n)
-                mode.push_back(path[i]);
-        }
-
-        return mode;
-    }
-
-    void travelMidOrder(TreeNode *root, vector&amp;lt;int&amp;gt; &amp;amp;path) {
-        if (root == nullptr)
-            return;
-        if (root-&amp;gt;left)
-            travelMidOrder(root-&amp;gt;left, path);
-        path.push_back(root-&amp;gt;val);
-        if (root-&amp;gt;right)
-            travelMidOrder(root-&amp;gt;right, path);
-    }
-};
-
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;/div&gt;
-
-&lt;div class="org-src-container"&gt;
-
-&lt;pre&gt;&lt;code class="lang-html"&gt;
-Status: Accepted (25/25)
-
-Runtime: 24 ms, faster than 94.02% of C++ submissions.
-
-Memory Usage: 24.9 MB, less than 56.91% of C++ submissions.
-
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;/div&gt;&lt;/div&gt;</description><guid>https://fpghwd.github.io/posts/leetcode491-find-mode-in-binary-search-tree/</guid><pubDate>Sun, 27 Sep 2020 04:46:23 GMT</pubDate></item></channel></rss>
+同樣的是一個樹遍歷的題目。不過第一次做的時候因爲想用一個函數解決問題，但是好像是不行的。因爲遞歸返回值如果是最長的直徑的話，就無法只用一個單一的返回值來構造這個函數，又不能修改參數。所以遞歸函數的返回值需要更多的信息，因此還是藉助了返回值爲結點高度的函數 &lt;code&gt;depthTravel&lt;/code&gt; 。&lt;/p&gt;&lt;/div&gt;</description><category>leetcode</category><guid>https://fpghwd.github.io/posts/leetcode528-diameter-of-binary-tree/</guid><pubDate>Sun, 27 Sep 2020 20:21:11 GMT</pubDate></item></channel></rss>
