@@ -69,7 +69,7 @@
     
         
     <div class="postindex">
-            <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/linux-ping-tai-xia-emacs-native-comp-fen-zhi-bian-yi/" class="u-url">linux 平台下 emacs native-comp 分枝编译</a></h1>
+            <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/linux-ping-tai-xia-emacs-native-comp-fen-zhi-bian-yi/" class="u-url">linux 平台下 emacs native-comp 分支编译</a></h1>
                 <div class="metadata">
                     <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                         suzumiya natsuhi
@@ -98,12 +98,12 @@
 <li>编译 libgccjit
 <ol class="org-ol">
 <li>下载 gcc
-<code>git clone git://gcc.gnu.org/git/gcc.git</code>
+<code>git clone git://gcc.gnu.org/git/gcc.git</code>,
 然后切换到目录 <code>cd gcc</code>
 </li>
 <li>切换 gcc-9 分枝
-<code>git checkout remotes/origin/releases/gcc-9</code>
-创建 build 目录 <code>mkdir -p build</code>
+<code>git checkout remotes/origin/releases/gcc-9</code>,
+创建 build 目录 <code>mkdir -p build</code>,
 进入 build 目录 <code>cd build</code>
 </li>
 <li>configure
@@ -116,7 +116,7 @@
 <code>sudo make install</code>
 </li>
 <li>加载库
-<code>sudo ldconfig</code>
+<code>sudo ldconfig</code>,
 测试是否能发现 libgccjit 库 <code>sudo ldconfig -p | grep libgccjit</code>
 </li>
 </ol>

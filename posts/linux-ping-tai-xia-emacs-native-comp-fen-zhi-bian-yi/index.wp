@@ -9,11 +9,11 @@
 <li>编译 libgccjit
 <ol class="org-ol">
 <li>下载 gcc
-<code>git clone git://gcc.gnu.org/git/gcc.git</code>
+<code>git clone git://gcc.gnu.org/git/gcc.git</code>,
 然后切换到目录 <code>cd gcc</code></li>
 <li>切换 gcc-9 分枝
-<code>git checkout remotes/origin/releases/gcc-9</code>
-创建 build 目录 <code>mkdir -p build</code>
+<code>git checkout remotes/origin/releases/gcc-9</code>,
+创建 build 目录 <code>mkdir -p build</code>,
 进入 build 目录 <code>cd build</code></li>
 <li>configure
 <code>../configure --enable-host-shared --enable-languages=jit,c,c++,objc,obj-c++ --enable-checking=release --disable-bootstrap</code></li>
@@ -22,7 +22,7 @@
 <li>安装（默认到 <code>/usr/local</code> ）
 <code>sudo make install</code></li>
 <li>加载库
-<code>sudo ldconfig</code>
+<code>sudo ldconfig</code>,
 测试是否能发现 libgccjit 库 <code>sudo ldconfig -p | grep libgccjit</code></li>
 </ol></li>
 
