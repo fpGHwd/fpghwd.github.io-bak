@@ -1,12 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>wd's blog</title><link>https://fpghwd.github.io/</link><description>To iterate is human, to recurse, divine</description><atom:link href="https://fpghwd.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;suzumiya natsuhi&lt;/a&gt; </copyright><lastBuildDate>Thu, 26 Nov 2020 10:23:00 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>linux 平台下 emacs native-comp 分支编译</title><link>https://fpghwd.github.io/posts/linux-ping-tai-xia-emacs-native-comp-fen-zhi-bian-yi/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;ul class="org-ul"&gt;
-&lt;li&gt;Contents
-&lt;ol class="org-ol"&gt;
-&lt;li&gt;编译 libgccjit&lt;/li&gt;
-&lt;li&gt;编译 emacs –with-comp&lt;/li&gt;
-&lt;li&gt;运行&lt;/li&gt;
-&lt;/ol&gt;&lt;/li&gt;
-
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>wd's blog</title><link>https://fpghwd.github.io/</link><description>To iterate is human, to recurse, divine</description><atom:link href="https://fpghwd.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;suzumiya natsuhi&lt;/a&gt; </copyright><lastBuildDate>Thu, 26 Nov 2020 10:23:24 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>linux 平台下 emacs native-comp 分支编译</title><link>https://fpghwd.github.io/posts/linux-ping-tai-xia-emacs-native-comp-fen-zhi-bian-yi/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;ul class="org-ul"&gt;
 &lt;li&gt;编译 libgccjit
 &lt;ol class="org-ol"&gt;
 &lt;li&gt;下载 gcc

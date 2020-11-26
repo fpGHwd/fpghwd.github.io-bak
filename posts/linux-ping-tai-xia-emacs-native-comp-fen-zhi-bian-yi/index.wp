@@ -1,11 +1,4 @@
 <ul class="org-ul">
-<li>Contents
-<ol class="org-ol">
-<li>编译 libgccjit</li>
-<li>编译 emacs &#x2013;with-comp</li>
-<li>运行</li>
-</ol></li>
-
 <li>编译 libgccjit
 <ol class="org-ol">
 <li>下载 gcc

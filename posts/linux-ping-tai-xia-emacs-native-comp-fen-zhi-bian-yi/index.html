@@ -15,21 +15,17 @@
 <meta property="og:site_name" content="wd's blog">
 <meta property="og:title" content="linux 平台下 emacs native-comp 分支编译">
 <meta property="og:url" content="https://fpghwd.github.io/posts/linux-ping-tai-xia-emacs-native-comp-fen-zhi-bian-yi/">
-<meta property="og:description" content="Contents
-
-编译 libgccjit
-编译 emacs –with-comp
-运行
-
-
-编译 libgccjit
+<meta property="og:description" content="编译 libgccjit
 
 下载 gcc
 git clone git://gcc.gnu.org/git/gcc.git,
 然后切换到目录 cd gcc
 切换 gcc-9 分枝
 git checkout remotes/origin/releases/gcc-9,
-创建 build 目录 mkdir -">
+创建 build 目录 mkdir -p build,
+进入 build 目录 cd build
+configure
+../confi">
 <meta property="og:type" content="article">
 <meta property="article:published_time" content="2020-11-26T09:53:27+08:00">
 <meta property="article:tag" content="emacs">
@@ -114,14 +110,6 @@ git checkout remotes/origin/releases/gcc-9,
 
     </header><div class="e-content entry-content" itemprop="articleBody text">
     <ul class="org-ul">
-<li>Contents
-<ol class="org-ol">
-<li>编译 libgccjit</li>
-<li>编译 emacs –with-comp</li>
-<li>运行</li>
-</ol>
-</li>
-
 <li>编译 libgccjit
 <ol class="org-ol">
 <li>下载 gcc
