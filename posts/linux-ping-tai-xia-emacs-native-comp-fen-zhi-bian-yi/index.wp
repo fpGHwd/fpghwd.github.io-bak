@@ -1,0 +1,56 @@
+<ul class="org-ul">
+<li>Contents
+<ol class="org-ol">
+<li>编译 libgccjit</li>
+<li>编译 emacs &#x2013;with-comp</li>
+<li>运行</li>
+</ol></li>
+
+<li>编译 libgccjit
+<ol class="org-ol">
+<li>下载 gcc
+<code>git clone git://gcc.gnu.org/git/gcc.git</code>
+然后切换到目录 <code>cd gcc</code></li>
+<li>切换 gcc-9 分枝
+<code>git checkout remotes/origin/releases/gcc-9</code>
+创建 build 目录 <code>mkdir -p build</code>
+进入 build 目录 <code>cd build</code></li>
+<li>configure
+<code>../configure --enable-host-shared --enable-languages=jit,c,c++,objc,obj-c++ --enable-checking=release --disable-bootstrap</code></li>
+<li>编译
+<code>make -j8</code></li>
+<li>安装（默认到 <code>/usr/local</code> ）
+<code>sudo make install</code></li>
+<li>加载库
+<code>sudo ldconfig</code>
+测试是否能发现 libgccjit 库 <code>sudo ldconfig -p | grep libgccjit</code></li>
+</ol></li>
+
+<li>编译 emacs
+
+<ol class="org-ol">
+<li>进入 emacs 目录后运行 autogen.sh
+<code>./autogen.sh</code></li>
+
+<li>编译 emacs
+<code>./configure --with-nativecomp CC=clang</code></li>
+
+<li>安装（默认 <code>/usr/local</code> ）
+<code>sudo make install</code></li>
+</ol></li>
+
+<li>启动 doom emacs
+
+<ol class="org-ol">
+<li>启动的时候报错 <code>comp-deferred-compilation-black-list</code>
+然后找到<a href="https://github.com/hlissner/doom-emacs/issues/4316">这里</a>解决：注释掉 <code>.emacs.d/core/core.el</code> 里面的一个过程 <code>(add-to-list 'comp-deferred-compilation-black-list entry)</code></li>
+</ol></li>
+
+<li><p>
+最后
+</p>
+
+<p>
+确实有流畅很多，也可能是心理作用吧。 :)
+</p></li>
+</ul>

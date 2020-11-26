@@ -1,5 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>wd's blog</title><link>https://fpghwd.github.io/</link><description>To iterate is human, to recurse, divine</description><atom:link href="https://fpghwd.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;suzumiya natsuhi&lt;/a&gt; </copyright><lastBuildDate>Thu, 26 Nov 2020 09:53:30 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>《狗镇》</title><link>https://fpghwd.github.io/posts/kan-wan-dian-ying-gou-zhen-de-yi-dian-xiang-fa/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>wd's blog</title><link>https://fpghwd.github.io/</link><description>To iterate is human, to recurse, divine</description><atom:link href="https://fpghwd.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;suzumiya natsuhi&lt;/a&gt; </copyright><lastBuildDate>Thu, 26 Nov 2020 10:20:12 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>linux 平台下 emacs native-comp 分枝编译</title><link>https://fpghwd.github.io/posts/linux-ping-tai-xia-emacs-native-comp-fen-zhi-bian-yi/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;ul class="org-ul"&gt;
+&lt;li&gt;Contents
+&lt;ol class="org-ol"&gt;
+&lt;li&gt;编译 libgccjit&lt;/li&gt;
+&lt;li&gt;编译 emacs –with-comp&lt;/li&gt;
+&lt;li&gt;运行&lt;/li&gt;
+&lt;/ol&gt;&lt;/li&gt;
+
+&lt;li&gt;编译 libgccjit
+&lt;ol class="org-ol"&gt;
+&lt;li&gt;下载 gcc
+&lt;code&gt;git clone git://gcc.gnu.org/git/gcc.git&lt;/code&gt;
+然后切换到目录 &lt;code&gt;cd gcc&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;切换 gcc-9 分枝
+&lt;code&gt;git checkout remotes/origin/releases/gcc-9&lt;/code&gt;
+创建 build 目录 &lt;code&gt;mkdir -p build&lt;/code&gt;
+进入 build 目录 &lt;code&gt;cd build&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;configure
+&lt;code&gt;../configure --enable-host-shared --enable-languages=jit,c,c++,objc,obj-c++ --enable-checking=release --disable-bootstrap&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;编译
+&lt;code&gt;make -j8&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;安装（默认到 &lt;code&gt;/usr/local&lt;/code&gt; ）
+&lt;code&gt;sudo make install&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;加载库
+&lt;code&gt;sudo ldconfig&lt;/code&gt;
+测试是否能发现 libgccjit 库 &lt;code&gt;sudo ldconfig -p | grep libgccjit&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;&lt;/li&gt;
+
+&lt;li&gt;编译 emacs
+
+&lt;ol class="org-ol"&gt;
+&lt;li&gt;进入 emacs 目录后运行 autogen.sh
+&lt;code&gt;./autogen.sh&lt;/code&gt;&lt;/li&gt;
+
+&lt;li&gt;编译 emacs
+&lt;code&gt;./configure --with-nativecomp CC=clang&lt;/code&gt;&lt;/li&gt;
+
+&lt;li&gt;安装（默认 &lt;code&gt;/usr/local&lt;/code&gt; ）
+&lt;code&gt;sudo make install&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;&lt;/li&gt;
+
+&lt;li&gt;启动 doom emacs
+
+&lt;ol class="org-ol"&gt;
+&lt;li&gt;启动的时候报错 &lt;code&gt;comp-deferred-compilation-black-list&lt;/code&gt;
+然后找到&lt;a href="https://github.com/hlissner/doom-emacs/issues/4316"&gt;这里&lt;/a&gt;解决：注释掉 &lt;code&gt;.emacs.d/core/core.el&lt;/code&gt; 里面的一个过程 &lt;code&gt;(add-to-list 'comp-deferred-compilation-black-list entry)&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;
+最后
+&lt;/p&gt;
+
+&lt;p&gt;
+确实有流畅很多，也可能是心理作用吧。 :)
+&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;</description><category>emacs</category><guid>https://fpghwd.github.io/posts/linux-ping-tai-xia-emacs-native-comp-fen-zhi-bian-yi/</guid><pubDate>Thu, 26 Nov 2020 01:53:27 GMT</pubDate></item><item><title>《狗镇》</title><link>https://fpghwd.github.io/posts/kan-wan-dian-ying-gou-zhen-de-yi-dian-xiang-fa/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
 Grace 重新见到父亲时，父亲说了以下的话：
 &lt;/p&gt;
 
@@ -399,62 +454,4 @@ Memory Usage: 7.6 MB, less than 13.80% of C++ submissions.
 
 &lt;p&gt;
 這一段，雖然丑但是很有用。
-&lt;/p&gt;&lt;/div&gt;</description><category>leetcode</category><guid>https://fpghwd.github.io/posts/leetcode093-restore-ip-addresses/</guid><pubDate>Mon, 28 Sep 2020 07:12:03 GMT</pubDate></item><item><title>Leetcode543. Diameter of Binary Tree</title><link>https://fpghwd.github.io/posts/leetcode528-diameter-of-binary-tree/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
-&lt;a href="https://leetcode.com/problems/diameter-of-binary-tree/"&gt;543. Diameter of Binary Tree&lt;/a&gt;
-&lt;/p&gt;
-
-&lt;p&gt;
-&lt;b&gt;Solution&lt;/b&gt;
-&lt;/p&gt;
-
-&lt;div class="org-src-container"&gt;
-
-&lt;pre&gt;&lt;code class="lang-C"&gt;
-/**
- * Definition for a binary tree node.
- * struct TreeNode {
- *     int val;
- *     TreeNode *left;
- *     TreeNode *right;
- *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
- *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
- *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left),
- * right(right) {}
- * };
- */
-class Solution {
-  public:
-    int diameter = 0;
-    int diameterOfBinaryTree(TreeNode *root) {
-        depthTravel(root);
-        return diameter;
-    }
-    int depthTravel(TreeNode *root) {
-        if (root == nullptr)
-            return 0;
-        int left = depthTravel(root-&amp;gt;left);
-        int right = depthTravel(root-&amp;gt;right);
-        diameter = max(left + right, diameter);
-        return 1 + max(left, right);
-    }
-};
-
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;/div&gt;
-
-&lt;div class="org-src-container"&gt;
-
-&lt;pre&gt;&lt;code class="lang-html"&gt;
-Status: Accepted (106/106)
-
-Runtime: 12 ms, faster than 88.39% of C++ submissions.
-
-Memory Usage: 21 MB, less than 13.09% of C++ submissions.
-
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;/div&gt;
-
-&lt;p&gt;
-同樣的是一個樹遍歷的題目。不過第一次做的時候因爲想用一個函數解決問題，但是好像是不行的。因爲遞歸返回值如果是最長的直徑的話，就無法只用一個單一的返回值來構造這個函數，又不能修改參數。所以遞歸函數的返回值需要更多的信息，因此還是藉助了返回值爲結點高度的函數 &lt;code&gt;depthTravel&lt;/code&gt; 。&lt;/p&gt;&lt;/div&gt;</description><category>leetcode</category><guid>https://fpghwd.github.io/posts/leetcode528-diameter-of-binary-tree/</guid><pubDate>Sun, 27 Sep 2020 20:21:11 GMT</pubDate></item></channel></rss>
+&lt;/p&gt;&lt;/div&gt;</description><category>leetcode</category><guid>https://fpghwd.github.io/posts/leetcode093-restore-ip-addresses/</guid><pubDate>Mon, 28 Sep 2020 07:12:03 GMT</pubDate></item></channel></rss>

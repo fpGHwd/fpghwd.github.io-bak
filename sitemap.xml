@@ -19,7 +19,7 @@
  </url>
  <url>
   <loc>https://fpghwd.github.io/archive.html</loc>
-  <lastmod>2020-11-26T09:53:00Z</lastmod>
+  <lastmod>2020-11-26T10:20:00Z</lastmod>
  </url>
  <url>
   <loc>https://fpghwd.github.io/authors/</loc>
@@ -115,7 +115,7 @@
  </url>
  <url>
   <loc>https://fpghwd.github.io/index-4.html</loc>
-  <lastmod>2020-11-26T09:53:00Z</lastmod>
+  <lastmod>2020-11-26T10:20:00Z</lastmod>
  </url>
  <url>
   <loc>https://fpghwd.github.io/listings/</loc>
@@ -316,6 +316,10 @@
  <url>
   <loc>https://fpghwd.github.io/posts/leetcode96-unique-binary-search-trees/</loc>
   <lastmod>2020-10-01T04:39:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://fpghwd.github.io/posts/linux-ping-tai-xia-emacs-native-comp-fen-zhi-bian-yi/</loc>
+  <lastmod>2020-11-26T10:20:00Z</lastmod>
  </url>
  <url>
   <loc>https://fpghwd.github.io/posts/makefileemacs/</loc>
