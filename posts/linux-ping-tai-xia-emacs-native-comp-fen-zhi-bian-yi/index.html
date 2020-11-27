@@ -17,15 +17,27 @@
 <meta property="og:url" content="https://fpghwd.github.io/posts/linux-ping-tai-xia-emacs-native-comp-fen-zhi-bian-yi/">
 <meta property="og:description" content="编译 libgccjit
 
+
 下载 gcc
+
+
+
 git clone git://gcc.gnu.org/git/gcc.git,
 然后切换到目录 cd gcc
+
+
+
 切换 gcc-9 分枝
+
+
+
 git checkout remotes/origin/releases/gcc-9,
 创建 build 目录 mkdir -p build,
 进入 build 目录 cd build
-configure
-../confi">
+
+
+
+confi">
 <meta property="og:type" content="article">
 <meta property="article:published_time" content="2020-11-26T09:53:27+08:00">
 <meta property="article:tag" content="emacs">
@@ -112,27 +124,68 @@ configure
     <ul class="org-ul">
 <li>编译 libgccjit
 <ol class="org-ol">
-<li>下载 gcc
+<li>
+<p>
+下载 gcc
+</p>
+
+<p>
 <code>git clone git://gcc.gnu.org/git/gcc.git</code>,
 然后切换到目录 <code>cd gcc</code>
+</p>
 </li>
-<li>切换 gcc-9 分枝
+
+<li>
+<p>
+切换 gcc-9 分枝
+</p>
+
+<p>
 <code>git checkout remotes/origin/releases/gcc-9</code>,
 创建 build 目录 <code>mkdir -p build</code>,
 进入 build 目录 <code>cd build</code>
+</p>
 </li>
-<li>configure
+
+<li>
+<p>
+configure
+</p>
+
+<p>
 <code>../configure --enable-host-shared --enable-languages=jit,c,c++,objc,obj-c++ --enable-checking=release --disable-bootstrap</code>
+</p>
 </li>
-<li>编译
+
+<li>
+<p>
+编译
+</p>
+
+<p>
 <code>make -j8</code>
+</p>
 </li>
-<li>安装（默认到 <code>/usr/local</code> ）
+
+<li>
+<p>
+安装（默认到 <code>/usr/local</code> ）
+</p>
+
+<p>
 <code>sudo make install</code>
+</p>
 </li>
-<li>加载库
+
+<li>
+<p>
+加载库
+</p>
+
+<p>
 <code>sudo ldconfig</code>,
 测试是否能发现 libgccjit 库 <code>sudo ldconfig -p | grep libgccjit</code>
+</p>
 </li>
 </ol>
 </li>
@@ -140,16 +193,34 @@ configure
 <li>编译 emacs
 
 <ol class="org-ol">
-<li>进入 emacs 目录后运行 autogen.sh
+<li>
+<p>
+进入 emacs 目录后运行 autogen.sh
+</p>
+
+<p>
 <code>./autogen.sh</code>
+</p>
 </li>
 
-<li>编译 emacs
+<li>
+<p>
+编译 emacs
+</p>
+
+<p>
 <code>./configure --with-nativecomp CC=clang</code>
+</p>
 </li>
 
-<li>安装（默认 <code>/usr/local</code> ）
+<li>
+<p>
+安装（默认 <code>/usr/local</code> ）
+</p>
+
+<p>
 <code>sudo make install</code>
+</p>
 </li>
 </ol>
 </li>

@@ -1,35 +1,85 @@
 <ul class="org-ul">
 <li>编译 libgccjit
 <ol class="org-ol">
-<li>下载 gcc
+<li><p>
+下载 gcc
+</p>
+
+<p>
 <code>git clone git://gcc.gnu.org/git/gcc.git</code>,
-然后切换到目录 <code>cd gcc</code></li>
-<li>切换 gcc-9 分枝
+然后切换到目录 <code>cd gcc</code>
+</p></li>
+
+<li><p>
+切换 gcc-9 分枝
+</p>
+
+<p>
 <code>git checkout remotes/origin/releases/gcc-9</code>,
 创建 build 目录 <code>mkdir -p build</code>,
-进入 build 目录 <code>cd build</code></li>
-<li>configure
-<code>../configure --enable-host-shared --enable-languages=jit,c,c++,objc,obj-c++ --enable-checking=release --disable-bootstrap</code></li>
-<li>编译
-<code>make -j8</code></li>
-<li>安装（默认到 <code>/usr/local</code> ）
-<code>sudo make install</code></li>
-<li>加载库
+进入 build 目录 <code>cd build</code>
+</p></li>
+
+<li><p>
+configure
+</p>
+
+<p>
+<code>../configure --enable-host-shared --enable-languages=jit,c,c++,objc,obj-c++ --enable-checking=release --disable-bootstrap</code>
+</p></li>
+
+<li><p>
+编译
+</p>
+
+<p>
+<code>make -j8</code>
+</p></li>
+
+<li><p>
+安装（默认到 <code>/usr/local</code> ）
+</p>
+
+<p>
+<code>sudo make install</code>
+</p></li>
+
+<li><p>
+加载库
+</p>
+
+<p>
 <code>sudo ldconfig</code>,
-测试是否能发现 libgccjit 库 <code>sudo ldconfig -p | grep libgccjit</code></li>
+测试是否能发现 libgccjit 库 <code>sudo ldconfig -p | grep libgccjit</code>
+</p></li>
 </ol></li>
 
 <li>编译 emacs
 
 <ol class="org-ol">
-<li>进入 emacs 目录后运行 autogen.sh
-<code>./autogen.sh</code></li>
+<li><p>
+进入 emacs 目录后运行 autogen.sh
+</p>
 
-<li>编译 emacs
-<code>./configure --with-nativecomp CC=clang</code></li>
+<p>
+<code>./autogen.sh</code>
+</p></li>
 
-<li>安装（默认 <code>/usr/local</code> ）
-<code>sudo make install</code></li>
+<li><p>
+编译 emacs
+</p>
+
+<p>
+<code>./configure --with-nativecomp CC=clang</code>
+</p></li>
+
+<li><p>
+安装（默认 <code>/usr/local</code> ）
+</p>
+
+<p>
+<code>sudo make install</code>
+</p></li>
 </ol></li>
 
 <li>启动 doom emacs

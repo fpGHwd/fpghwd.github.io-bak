@@ -1,36 +1,86 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>wd's blog</title><link>https://fpghwd.github.io/</link><description>To iterate is human, to recurse, divine</description><atom:link href="https://fpghwd.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;suzumiya natsuhi&lt;/a&gt; </copyright><lastBuildDate>Fri, 27 Nov 2020 12:45:14 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>linux 平台下 emacs native-comp 分支编译</title><link>https://fpghwd.github.io/posts/linux-ping-tai-xia-emacs-native-comp-fen-zhi-bian-yi/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;ul class="org-ul"&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>wd's blog</title><link>https://fpghwd.github.io/</link><description>To iterate is human, to recurse, divine</description><atom:link href="https://fpghwd.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;suzumiya natsuhi&lt;/a&gt; </copyright><lastBuildDate>Fri, 27 Nov 2020 12:48:58 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>linux 平台下 emacs native-comp 分支编译</title><link>https://fpghwd.github.io/posts/linux-ping-tai-xia-emacs-native-comp-fen-zhi-bian-yi/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;ul class="org-ul"&gt;
 &lt;li&gt;编译 libgccjit
 &lt;ol class="org-ol"&gt;
-&lt;li&gt;下载 gcc
+&lt;li&gt;&lt;p&gt;
+下载 gcc
+&lt;/p&gt;
+
+&lt;p&gt;
 &lt;code&gt;git clone git://gcc.gnu.org/git/gcc.git&lt;/code&gt;,
-然后切换到目录 &lt;code&gt;cd gcc&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;切换 gcc-9 分枝
+然后切换到目录 &lt;code&gt;cd gcc&lt;/code&gt;
+&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;
+切换 gcc-9 分枝
+&lt;/p&gt;
+
+&lt;p&gt;
 &lt;code&gt;git checkout remotes/origin/releases/gcc-9&lt;/code&gt;,
 创建 build 目录 &lt;code&gt;mkdir -p build&lt;/code&gt;,
-进入 build 目录 &lt;code&gt;cd build&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;configure
-&lt;code&gt;../configure --enable-host-shared --enable-languages=jit,c,c++,objc,obj-c++ --enable-checking=release --disable-bootstrap&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;编译
-&lt;code&gt;make -j8&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;安装（默认到 &lt;code&gt;/usr/local&lt;/code&gt; ）
-&lt;code&gt;sudo make install&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;加载库
+进入 build 目录 &lt;code&gt;cd build&lt;/code&gt;
+&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;
+configure
+&lt;/p&gt;
+
+&lt;p&gt;
+&lt;code&gt;../configure --enable-host-shared --enable-languages=jit,c,c++,objc,obj-c++ --enable-checking=release --disable-bootstrap&lt;/code&gt;
+&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;
+编译
+&lt;/p&gt;
+
+&lt;p&gt;
+&lt;code&gt;make -j8&lt;/code&gt;
+&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;
+安装（默认到 &lt;code&gt;/usr/local&lt;/code&gt; ）
+&lt;/p&gt;
+
+&lt;p&gt;
+&lt;code&gt;sudo make install&lt;/code&gt;
+&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;
+加载库
+&lt;/p&gt;
+
+&lt;p&gt;
 &lt;code&gt;sudo ldconfig&lt;/code&gt;,
-测试是否能发现 libgccjit 库 &lt;code&gt;sudo ldconfig -p | grep libgccjit&lt;/code&gt;&lt;/li&gt;
+测试是否能发现 libgccjit 库 &lt;code&gt;sudo ldconfig -p | grep libgccjit&lt;/code&gt;
+&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;&lt;/li&gt;
 
 &lt;li&gt;编译 emacs
 
 &lt;ol class="org-ol"&gt;
-&lt;li&gt;进入 emacs 目录后运行 autogen.sh
-&lt;code&gt;./autogen.sh&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;
+进入 emacs 目录后运行 autogen.sh
+&lt;/p&gt;
 
-&lt;li&gt;编译 emacs
-&lt;code&gt;./configure --with-nativecomp CC=clang&lt;/code&gt;&lt;/li&gt;
+&lt;p&gt;
+&lt;code&gt;./autogen.sh&lt;/code&gt;
+&lt;/p&gt;&lt;/li&gt;
 
-&lt;li&gt;安装（默认 &lt;code&gt;/usr/local&lt;/code&gt; ）
-&lt;code&gt;sudo make install&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;
+编译 emacs
+&lt;/p&gt;
+
+&lt;p&gt;
+&lt;code&gt;./configure --with-nativecomp CC=clang&lt;/code&gt;
+&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;
+安装（默认 &lt;code&gt;/usr/local&lt;/code&gt; ）
+&lt;/p&gt;
+
+&lt;p&gt;
+&lt;code&gt;sudo make install&lt;/code&gt;
+&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;&lt;/li&gt;
 
 &lt;li&gt;启动 doom emacs
