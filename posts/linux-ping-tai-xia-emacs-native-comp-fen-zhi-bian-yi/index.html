@@ -18,6 +18,7 @@
 <meta property="og:description" content="编译 libgccjit
 
 
+
 下载 gcc
 
 
@@ -43,7 +44,6 @@ git checkout remotes/origin/releases/gcc-9
 
 
 进入 build 目录 cd build
-
 
 ">
 <meta property="og:type" content="article">
@@ -131,6 +131,7 @@ git checkout remotes/origin/releases/gcc-9
     </header><div class="e-content entry-content" itemprop="articleBody text">
     <ul class="org-ul">
 <li>编译 libgccjit
+
 <ol class="org-ol">
 <li>
 <p>
@@ -248,8 +249,14 @@ configure
 <li>启动 doom emacs
 
 <ol class="org-ol">
-<li>启动的时候如果报错 <code>comp-deferred-compilation-black-list</code>
+<li>
+<p>
+启动的时候如果报错 <code>comp-deferred-compilation-black-list</code>
+</p>
+
+<p>
 然后找到<a href="https://github.com/hlissner/doom-emacs/issues/4316">这里</a>解决：注释掉 <code>.emacs.d/core/core.el</code> 里面的一个过程 <code>(add-to-list 'comp-deferred-compilation-black-list entry)</code>
+</p>
 </li>
 
 <li>现在已经修复，直接 <code>doom upgrade -f</code> 并且 <code>doom sync</code> 最后 <code>doom run --version</code> 查看 emacs 版本即可。最后运行 <code>doom run</code> 。</li>
