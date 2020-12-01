@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>wd's blog</title><link>https://fpghwd.github.io/</link><description>To iterate is human, to recurse, divine</description><atom:link href="https://fpghwd.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;suzumiya natsuhi&lt;/a&gt; </copyright><lastBuildDate>Sun, 29 Nov 2020 08:12:43 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>openSUSE 上 mariadb 的使用</title><link>https://fpghwd.github.io/posts/opensuse-shang-mariadb-de-shi-yong/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;ul class="org-ul"&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>wd's blog</title><link>https://fpghwd.github.io/</link><description>To iterate is human, to recurse, divine</description><atom:link href="https://fpghwd.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;suzumiya natsuhi&lt;/a&gt; </copyright><lastBuildDate>Tue, 01 Dec 2020 11:57:19 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>最近的感想</title><link>https://fpghwd.github.io/posts/zui-jin-de-gan-xiang/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
+最近有在不断的写自己的感想，内容大多比较琐碎，但也感觉在逐渐摆脱琐碎和细节。
+&lt;/p&gt;
+
+&lt;p&gt;
+突然的感想就是：我并没有活在现在，而是活在了过去和未来。这从我平时记录的东西的内容和自己琐碎的动作就能看出来。
+&lt;/p&gt;
+
+&lt;p&gt;
+但是也有一些另外的感想：1. 很多突然来到的想法，会第一时间存到 gtd 中。其实这些突然来到的想法，大多是不成熟的想法。直觉它们是未来的映像，不需要立即就反应或马上开始想着完成。 2. 其实以上的想法，也大多是未完成的当下的主要的事情的一种反映而已
+&lt;/p&gt;&lt;/div&gt;</description><category>life</category><guid>https://fpghwd.github.io/posts/zui-jin-de-gan-xiang/</guid><pubDate>Tue, 01 Dec 2020 03:57:11 GMT</pubDate></item><item><title>openSUSE 上 mariadb 的使用</title><link>https://fpghwd.github.io/posts/opensuse-shang-mariadb-de-shi-yong/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;ul class="org-ul"&gt;
 &lt;li&gt;&lt;p&gt;
 缘起
 &lt;/p&gt;
@@ -411,80 +421,4 @@ Memory Usage: 6.6 MB, less than 76.77% of C++ submissions.
 
 &lt;p&gt;
 字符串的題目都是用指針來做的。
-&lt;/p&gt;&lt;/div&gt;</description><category>leetcode</category><guid>https://fpghwd.github.io/posts/leetcode824-goat-latin/</guid><pubDate>Tue, 29 Sep 2020 02:01:13 GMT</pubDate></item><item><title>Leetcode572. Subtree of Another Tree</title><link>https://fpghwd.github.io/posts/leetcode572-subtree-of-another-tree/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
-&lt;a href="https://leetcode.com/problems/subtree-of-another-tree/"&gt;572. Subtree of Another Tree&lt;/a&gt;
-&lt;/p&gt;
-
-&lt;p&gt;
-&lt;b&gt;Solution&lt;/b&gt;
-&lt;/p&gt;
-
-&lt;div class="org-src-container"&gt;
-
-&lt;pre&gt;&lt;code class="lang-C"&gt;
-/**
- * Definition for a binary tree node.
- * struct TreeNode {
- *     int val;
- *     TreeNode *left;
- *     TreeNode *right;
- *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
- *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
- *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left),
- * right(right) {}
- * };
- */
-class Solution {
-  public:
-    bool isSubtree(TreeNode *s, TreeNode *t) {
-        // return isSameTree(s, t) || isSameTree(s-&amp;gt;left, t) ||
-        //        isSameTree(s-&amp;gt;right, t);
-        if (s == NULL &amp;amp;&amp;amp; t == NULL)
-            return true;
-        if (s == NULL)
-            return false;
-        if (t == NULL)
-            return true;
-        bool isSub;
-        if (s-&amp;gt;val == t-&amp;gt;val)
-            isSub = isSameTree(s, t);
-        if (isSub)
-            return true;
-        return isSubtree(s-&amp;gt;left, t) || isSubtree(s-&amp;gt;right, t);
-    }
-
-    bool isSameTree(TreeNode *s, TreeNode *t) {
-        if (s == nullptr &amp;amp;&amp;amp; t == nullptr) {
-            return true;
-        } else {
-            if (s == nullptr || t == nullptr)
-                return false;
-            if (s-&amp;gt;val != t-&amp;gt;val)
-                return false;
-            else
-                return isSameTree(s-&amp;gt;left, t-&amp;gt;left) &amp;amp;&amp;amp;
-                       isSameTree(s-&amp;gt;right, t-&amp;gt;right);
-        }
-    }
-};
-
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;/div&gt;
-
-&lt;div class="org-src-container"&gt;
-
-&lt;pre&gt;&lt;code class="lang-html"&gt;
-Status: Accepted (183/183)
-
-Runtime: 40 ms, faster than 66.02% of C++ submissions.
-
-Memory Usage: 29.7 MB, less than 18.21% of C++ submissions.
-
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;/div&gt;
-
-&lt;p&gt;
-第一次做的时候并没有做对，第二次倒是 AC 了。没啥感觉，就是感觉自己的方法代码有点复杂。
-&lt;/p&gt;&lt;/div&gt;</description><category>leetcode</category><guid>https://fpghwd.github.io/posts/leetcode572-subtree-of-another-tree/</guid><pubDate>Tue, 29 Sep 2020 00:20:04 GMT</pubDate></item></channel></rss>
+&lt;/p&gt;&lt;/div&gt;</description><category>leetcode</category><guid>https://fpghwd.github.io/posts/leetcode824-goat-latin/</guid><pubDate>Tue, 29 Sep 2020 02:01:13 GMT</pubDate></item></channel></rss>

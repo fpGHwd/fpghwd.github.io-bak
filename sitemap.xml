@@ -19,7 +19,7 @@
  </url>
  <url>
   <loc>https://fpghwd.github.io/archive.html</loc>
-  <lastmod>2020-11-29T08:09:00Z</lastmod>
+  <lastmod>2020-12-01T11:57:00Z</lastmod>
  </url>
  <url>
   <loc>https://fpghwd.github.io/authors/</loc>
@@ -115,7 +115,7 @@
  </url>
  <url>
   <loc>https://fpghwd.github.io/index-4.html</loc>
-  <lastmod>2020-11-29T08:09:00Z</lastmod>
+  <lastmod>2020-12-01T11:57:00Z</lastmod>
  </url>
  <url>
   <loc>https://fpghwd.github.io/listings/</loc>
@@ -368,5 +368,9 @@
  <url>
   <loc>https://fpghwd.github.io/posts/welcome-to-nikola/</loc>
   <lastmod>2020-06-22T11:41:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://fpghwd.github.io/posts/zui-jin-de-gan-xiang/</loc>
+  <lastmod>2020-12-01T11:57:00Z</lastmod>
  </url>
 </urlset>

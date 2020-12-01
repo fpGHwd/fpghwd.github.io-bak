@@ -12,7 +12,7 @@
 <link rel="alternate" type="application/rss+xml" title="RSS" hreflang="en" href="rss.xml">
 <link rel="canonical" href="https://fpghwd.github.io/">
 <link rel="next" href="index-4.html" type="text/html">
-<!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="posts/opensuse-shang-mariadb-de-shi-yong/" type="text/html">
+<!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="posts/zui-jin-de-gan-xiang/" type="text/html">
 </head>
 <body>
 <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
@@ -69,7 +69,38 @@
     
         
     <div class="postindex">
-            <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/opensuse-shang-mariadb-de-shi-yong/" class="u-url">openSUSE 上 mariadb 的使用</a></h1>
+            <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/zui-jin-de-gan-xiang/" class="u-url">最近的感想</a></h1>
+                <div class="metadata">
+                    <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                        suzumiya natsuhi
+                    </span></p>
+            <p class="dateline">
+            <a href="posts/zui-jin-de-gan-xiang/" rel="bookmark">
+            <time class="published dt-published" datetime="2020-12-01T11:57:11+08:00" itemprop="datePublished" title="2020-12-01 11:57">2020-12-01 11:57</time></a>
+            </p>
+                        <p class="commentline">
+        
+    <a href="posts/zui-jin-de-gan-xiang/#disqus_thread" data-disqus-identifier="cache/posts/zui-jin-de-gan-xiang.html">Comments</a>
+
+
+                </p>
+</div>
+            </header><div class="e-content entry-content">
+                    <div>
+<p>
+最近有在不断的写自己的感想，内容大多比较琐碎，但也感觉在逐渐摆脱琐碎和细节。
+</p>
+
+<p>
+突然的感想就是：我并没有活在现在，而是活在了过去和未来。这从我平时记录的东西的内容和自己琐碎的动作就能看出来。
+</p>
+
+<p>
+但是也有一些另外的感想：1. 很多突然来到的想法，会第一时间存到 gtd 中。其实这些突然来到的想法，大多是不成熟的想法。直觉它们是未来的映像，不需要立即就反应或马上开始想着完成。 2. 其实以上的想法，也大多是未完成的当下的主要的事情的一种反映而已
+</p>
+</div>
+                </div>
+            </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/opensuse-shang-mariadb-de-shi-yong/" class="u-url">openSUSE 上 mariadb 的使用</a></h1>
                 <div class="metadata">
                     <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                         suzumiya natsuhi
@@ -690,103 +721,6 @@ Memory Usage: 6.6 MB, less than 76.77% of C++ submissions.
 
 <p>
 字符串的題目都是用指針來做的。
-</p>
-</div>
-                </div>
-            </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/leetcode572-subtree-of-another-tree/" class="u-url">Leetcode572. Subtree of Another Tree</a></h1>
-                <div class="metadata">
-                    <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
-                        suzumiya natsuhi
-                    </span></p>
-            <p class="dateline">
-            <a href="posts/leetcode572-subtree-of-another-tree/" rel="bookmark">
-            <time class="published dt-published" datetime="2020-09-29T08:20:04+08:00" itemprop="datePublished" title="2020-09-29 08:20">2020-09-29 08:20</time></a>
-            </p>
-                        <p class="commentline">
-        
-    <a href="posts/leetcode572-subtree-of-another-tree/#disqus_thread" data-disqus-identifier="cache/posts/leetcode572-subtree-of-another-tree.html">Comments</a>
-
-
-                </p>
-</div>
-            </header><div class="e-content entry-content">
-                    <div>
-<p>
-<a href="https://leetcode.com/problems/subtree-of-another-tree/">572. Subtree of Another Tree</a>
-</p>
-
-<p>
-<b>Solution</b>
-</p>
-
-<div class="org-src-container">
-
-<pre><code class="lang-C">
-/**
- * Definition for a binary tree node.
- * struct TreeNode {
- *     int val;
- *     TreeNode *left;
- *     TreeNode *right;
- *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
- *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
- *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left),
- * right(right) {}
- * };
- */
-class Solution {
-  public:
-    bool isSubtree(TreeNode *s, TreeNode *t) {
-        // return isSameTree(s, t) || isSameTree(s-&gt;left, t) ||
-        //        isSameTree(s-&gt;right, t);
-        if (s == NULL &amp;&amp; t == NULL)
-            return true;
-        if (s == NULL)
-            return false;
-        if (t == NULL)
-            return true;
-        bool isSub;
-        if (s-&gt;val == t-&gt;val)
-            isSub = isSameTree(s, t);
-        if (isSub)
-            return true;
-        return isSubtree(s-&gt;left, t) || isSubtree(s-&gt;right, t);
-    }
-
-    bool isSameTree(TreeNode *s, TreeNode *t) {
-        if (s == nullptr &amp;&amp; t == nullptr) {
-            return true;
-        } else {
-            if (s == nullptr || t == nullptr)
-                return false;
-            if (s-&gt;val != t-&gt;val)
-                return false;
-            else
-                return isSameTree(s-&gt;left, t-&gt;left) &amp;&amp;
-                       isSameTree(s-&gt;right, t-&gt;right);
-        }
-    }
-};
-
-</code></pre>
-
-</div>
-
-<div class="org-src-container">
-
-<pre><code class="lang-html">
-Status: Accepted (183/183)
-
-Runtime: 40 ms, faster than 66.02% of C++ submissions.
-
-Memory Usage: 29.7 MB, less than 18.21% of C++ submissions.
-
-</code></pre>
-
-</div>
-
-<p>
-第一次做的时候并没有做对，第二次倒是 AC 了。没啥感觉，就是感觉自己的方法代码有点复杂。
 </p>
 </div>
                 </div>
