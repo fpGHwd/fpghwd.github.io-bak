@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="Stay open">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>wd's blog (old posts, page 10) | wd's blog</title>
+<link href="assets/css/theme.css" type="text/css" rel="stylesheet">
+<link href="assets/css/pure.css" type="text/css" rel="stylesheet">
+<link href="assets/css/style.css" type="text/css" rel="stylesheet">
+<meta name="theme-color" content="#5670d4">
+<meta name="generator" content="Nikola (getnikola.com)">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="rss.xml">
+<link rel="canonical" href="https://fpghwd.github.io/index-10.html">
+<link rel="prev" href="index-11.html" type="text/html">
+<link rel="next" href="index-9.html" type="text/html">
+<!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]-->
+</head>
+<body>
+<div class="body_container">
+    <div id="header">
+        <div class="site-name">
+                <h1>wd's blog</h1>
+        </div>
+
+        <div id="nav-menu">
+            <div class="bitcron_nav_container">
+                <div class="bitcron_nav">
+                    <div class="site_nav_wrap">
+                        <ul class="site_nav sm sm-base">
+<li><a href="archive.html" class="nav__item">Archive</a></li>
+            <li><a href="categories/" class="nav__item">Tags</a></li>
+            <li><a href="rss.xml" class="nav__item">RSS feed</a></li>
+
+                            
+                        </ul>
+<div class="clear clear_nav_inline_end"></div>
+                    </div>
+                </div>
+                <div class="clear clear_nav_end"></div>
+            </div>
+        </div>
+    </div>
+    <div id="layout">
+        <div class="pure-g">
+            <div class=" pure-u-24-24 pure-u-sm-24-24 pure-u-md-18-24 pure_cell">
+                <div class="content_container">
+                    <!--Body content-->
+                    <div class="row">
+                        
+                        
+
+    
+    <div class="post">
+        <h2 class="post-title"><a href="posts/leetcode733-flood-fill/">Leetcode733. Flood Fill</a></h2>
+        <div class="post-meta">
+            2020-09-26 04:17
+        </div>
+        <div class="post-meta">
+                suzumiya natsuhi
+        </div>
+        <div class="post-content">
+                <div>
+<p>
+<a href="https://leetcode.com/problems/flood-fill/">733. Flood Fill</a>
+</p>
+
+<p>
+<b>Solution</b>
+</p>
+
+<div class="org-src-container">
+
+<pre><code class="lang-C">
+class Solution {
+  public:
+    vector&lt;vector&lt;int&gt;&gt;
+    floodFill(vector&lt;vector&lt;int&gt;&gt; &amp;image, int sr, int sc, int newColor) {
+        int old_color = image[sr][sc];
+        if (old_color == newColor)
+            return image;
+
+        floodFill(image, sr, sc, newColor, old_color);
+
+        return image;
+    }
+
+    void floodFill(vector&lt;vector&lt;int&gt;&gt; &amp;image,
+                   int sr,
+                   int sc,
+                   int newColor,
+                   int oldColor) {
+        // paint
+        image[sr][sc] = newColor;
+
+        // paint others
+        if (sr - 1 &gt;= 0 &amp;&amp; oldColor == image[sr - 1][sc])
+            floodFill(image, sr - 1, sc, newColor);
+        if (sr + 1 &lt; image.size() &amp;&amp; oldColor == image[sr + 1][sc])
+            floodFill(image, sr + 1, sc, newColor);
+        if (sc - 1 &gt;= 0 &amp;&amp; oldColor == image[sr][sc - 1])
+            floodFill(image, sr, sc - 1, newColor);
+        if (sc + 1 &lt; image[0].size() &amp;&amp; oldColor == image[sr][sc + 1])
+            floodFill(image, sr, sc + 1, newColor);
+    }
+};
+
+</code></pre>
+
+</div>
+
+<div class="org-src-container">
+
+<pre><code class="lang-html">
+Status: Accepted (277/277)
+
+Runtime: 12 ms, faster than 97.05% of C++ submissions.
+
+Memory Usage: 14.9 MB, less than 5.01% of C++ submissions.
+
+</code></pre>
+
+</div>
+
+<p>
+第一次做的时候忽略了没有保存 <code>old_color</code> ，后面有问题。</p>
+</div>
+                <p class="commentline">
+        
+    <a href="posts/leetcode733-flood-fill/#disqus_thread" data-disqus-identifier="cache/posts/leetcode733-flood-fill.html">Comments</a>
+
+
+        </p>
+</div>
+    </div>
+    <div class="post">
+        <h2 class="post-title"><a href="posts/leetcode696-count-binary-substrings/">Leetcode696. Count Binary Substrings</a></h2>
+        <div class="post-meta">
+            2020-09-26 02:34
+        </div>
+        <div class="post-meta">
+                suzumiya natsuhi
+        </div>
+        <div class="post-content">
+                <div>
+<p>
+<a href="https://leetcode.com/problems/count-binary-substrings/">696. Count Binary Substrings</a>
+</p>
+
+<div class="org-src-container">
+
+<pre><code class="lang-C">
+class Solution {
+  public:
+    int countBinarySubstrings(string s) {
+        if (s == "")
+            return 0;
+        vector&lt;int&gt; vi_pos;
+        for (int i = 1; i &lt; s.length(); i++) {
+            if (s[i] != s[i - 1])
+                vi_pos.push_back(i);
+        }
+        int count = 0, left, right;
+        for (int i = 0; i &lt; vi_pos.size(); i++) {
+            left = vi_pos[i] - (i == 0 ? 0 : vi_pos[i - 1]);
+            right = ((i == vi_pos.size() - 1) ? s.length() : vi_pos[i + 1]) -
+                    vi_pos[i];
+            count += min(left, right);
+        }
+        return count;
+    }
+};
+
+</code></pre>
+
+</div>
+
+<div class="org-src-container">
+
+<pre><code class="lang-html">
+Status: Accepted (90/90)
+
+Runtime: 40 ms, faster than 99.85% of C++ submissions.
+
+Memory Usage: 14.4 MB, less than 6.03% of C++ submissions.
+
+</code></pre>
+
+</div>
+
+<p>
+这道题我在 <code>right = ((i =</code> vi<sub>pos.size</sub>() - 1) ? s.length() : vi<sub>pos</sub>[i + 1]) -
+                    vi<sub>pos</sub>[i];= 的时候把 <code>s.length()</code> 写成了 <code>vi_pos.size()</code> ，一直没有检查出来。后来代码拆开了几个变量用 gdb 调试出来了 right 值的问题。隐藏得太深了。
+</p>
+</div>
+                <p class="commentline">
+        
+    <a href="posts/leetcode696-count-binary-substrings/#disqus_thread" data-disqus-identifier="cache/posts/leetcode696-count-binary-substrings.html">Comments</a>
+
+
+        </p>
+</div>
+    </div>
+    <div class="post">
+        <h2 class="post-title"><a href="posts/leetcode687-longest-univalue-path/">Leetcode687. Longest Univalue Path</a></h2>
+        <div class="post-meta">
+            2020-09-25 13:21
+        </div>
+        <div class="post-meta">
+                suzumiya natsuhi
+        </div>
+        <div class="post-content">
+                <div>
+<p>
+<a href="https://leetcode.com/problems/longest-univalue-path/">687. Longest Univalue Path</a>
+</p>
+
+<p>
+<b>Solution</b>
+</p>
+
+<div class="org-src-container">
+
+<pre><code class="lang-C">
+/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left),
+ * right(right) {}
+ * };
+ */
+
+class Solution {
+  public:
+    int luvp = 0;
+    int longestUnivaluePath(TreeNode *root) {
+        if (root == nullptr)
+            return 0;
+        travelPath(root);
+        return luvp - 1;
+    }
+
+    int travelPath(TreeNode *root) {
+        int left = 0, right = 0;
+        if (root-&gt;left != nullptr)
+            left = travelPath(root-&gt;left);
+        if (root-&gt;right != nullptr)
+            right = travelPath(root-&gt;right);
+        int left_tmp =
+            ((root-&gt;left &amp;&amp; root-&gt;left-&gt;val == root-&gt;val) ? left : 0);
+        int right_tmp =
+            ((root-&gt;right &amp;&amp; root-&gt;right-&gt;val == root-&gt;val) ? right : 0);
+        luvp = max(luvp, 1 + left_tmp + right_tmp);
+        return 1 + max(left_tmp, right_tmp);
+    }
+};
+
+</code></pre>
+
+</div>
+
+<div class="org-src-container">
+
+<pre><code class="lang-html">
+Status: Accepted (71/71)
+
+Runtime: 184 ms, faster than 86.14% of C++ submissions.
+
+Memory Usage: 72.6 MB, less than 5.21% of C++ submissions.
+
+</code></pre>
+
+</div>
+
+<p>
+第一次做的时候没有做出来，觉得有点复杂。不过说到底还只是一个简单的树遍历，当然可以认为和求树深度的那类题其实差不多。其中每个点的处理就是找到是否比现有的最长路径 <code>luvp</code> 更长的 <code>1 + left_tmp + right_tmp</code> ，然后返回的若是 <code>1 + left_tmp + right_tmp</code> ，那么得出来的结果不是 <b>最长的path</b> ，而是相同值最多的相邻点个数。所以最后修改一下，返回稍长的路径即可。
+</p>
+
+<p>
+树的题，递归是最简洁的。
+</p>
+</div>
+                <p class="commentline">
+        
+    <a href="posts/leetcode687-longest-univalue-path/#disqus_thread" data-disqus-identifier="cache/posts/leetcode687-longest-univalue-path.html">Comments</a>
+
+
+        </p>
+</div>
+    </div>
+
+        <nav class="postindexpager"><ul class="pager">
+<li class="previous">
+                <a href="index-11.html" rel="prev">Newer posts</a>
+            </li>
+            <li class="next">
+                <a href="index-9.html" rel="next">Older posts</a>
+            </li>
+        </ul></nav><script>var disqus_shortname="fpghwd-github-io";(function(){var a=document.createElement("script");a.async=true;a.src="https://"+disqus_shortname+".disqus.com/count.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(a)}());</script>
+</div>
+                <!--End of body content-->
+                <div style="clear:both;height:0;"></div>
+            </div>
+        </div>
+
+        <!-- Sidebar -->
+
+        <div class=" pure-u-6-24 pure_cell">
+            <div id="sidebar">
+                <div class="widget">
+                    <div id="search_bar">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="footer">
+        Contents © 2020         <a href="mailto:ggwdwhu@gmail.com">suzumiya natsuhi</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
+        
+    </div>
+
+    <!--FIXME: put these somewhere                            -->
+    <!--%if len(translations) > 1:-->
+    <!--<li>
+</li>-->
+    <!--%endif-->
+    <!--% if show_sourcelink:-->
+    <!---->
+    <!--%endif-->
+    <link href="assets/css/duoshuo.css" type="text/css" rel="stylesheet">
+<script src="assets/js/all-nocdn.js"></script><script>$('a.image-reference:not(.islink) img:not(.islink)').parent().colorbox({rel:"gal",maxWidth:"100%",maxHeight:"100%",scalePhotos:true});</script><!-- fancy dates --><script>
+    moment.locale("en");
+    fancydates(0, "YYYY-MM-DD HH:mm");
+    </script><!-- end fancy dates -->
+</div>
+</div>
+</body>
+</html>

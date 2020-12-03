@@ -12,7 +12,7 @@
 <meta name="generator" content="Nikola (getnikola.com)">
 <link rel="alternate" type="application/rss+xml" title="RSS" href="rss.xml">
 <link rel="canonical" href="https://fpghwd.github.io/index-4.html">
-<link rel="prev" href="." type="text/html">
+<link rel="prev" href="index-5.html" type="text/html">
 <link rel="next" href="index-3.html" type="text/html">
 <!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]-->
 </head>
@@ -52,9 +52,9 @@
 
     
     <div class="post">
-        <h2 class="post-title"><a href="posts/leetcode824-goat-latin/">Leetcode824. Goat Latin</a></h2>
+        <h2 class="post-title"><a href="posts/leetcode893-increasingordersearch-tree/">Leetcode893 IncreasingOrderSearch Tree</a></h2>
         <div class="post-meta">
-            2020-09-29 10:01
+            2020-09-13 09:10
         </div>
         <div class="post-meta">
                 suzumiya natsuhi
@@ -62,7 +62,7 @@
         <div class="post-content">
                 <div>
 <p>
-<a href="https://leetcode.com/problems/goat-latin/">824. Goat Latin</a>
+<a href="https://leetcode.com/problems/increasing-order-search-tree/">893. IncreasingOrderSearch Tree</a>
 </p>
 
 <p>
@@ -73,68 +73,104 @@
 
 <pre><code class="lang-C">
 class Solution {
-  public:
-    string toGoatLatin(string S) {
-        int start = 0, end = 0, i = 1;
-        string goat = "";
-        while (start &lt; S.length()) {
-            if (i != 1)
-                goat += " ";
-            while (end &lt; S.length() &amp;&amp; isalpha(S[end]))
-                end++;
-            if (S[start] == 'a' || S[start] == 'e' || S[start] == 'i' ||
-                S[start] == 'o' || S[start] == 'u' || S[start] == 'A' ||
-                S[start] == 'E' || S[start] == 'I' || S[start] == 'O' ||
-                S[start] == 'U') {
-                goat += S.substr(start, end - start);
-            } else {
-                if (start + 1 != end) {
-                    goat += S.substr(start + 1, end - start - 1);
+    public:
+        TreeNode* increasingBST(TreeNode* root) {
+            if(root == nullptr)return nullptr;
+            TreeNode *first = root, *last = root;
+            inOrderRecursion(root, first, last);
+            return first;
+        }
+
+       void inOrderRecursion(TreeNode* root,TreeNode*&amp; first, TreeNode*&amp; last){
+
+           if(root == nullptr)return;
+           TreeNode *first1, *last1;
+
+           if(root-&gt;left){
+               last1 = root-&gt;left;
+               first = root-&gt;left;
+               inOrderRecursion(root-&gt;left, first, last1);
+               last1-&gt;left = nullptr; last1-&gt;right=root;
+           }
+           if(root-&gt;right){
+               first1 = root-&gt;right;
+               last = root-&gt;right;
+               inOrderRecursion(root-&gt;right,first1,last);
+               root-&gt;left = nullptr; root-&gt;right = first1;
+           }
+        }
+
+};
+
+</code></pre>
+
+</div>
+</div>
+                <p class="commentline">
+        
+    <a href="posts/leetcode893-increasingordersearch-tree/#disqus_thread" data-disqus-identifier="cache/posts/leetcode893-increasingordersearch-tree.html">Comments</a>
+
+
+        </p>
+</div>
+    </div>
+    <div class="post">
+        <h2 class="post-title"><a href="posts/leetcode1200-minimum-absolute-difference/">Leetcode1200 minimum absolute difference</a></h2>
+        <div class="post-meta">
+            2020-09-12 03:43
+        </div>
+        <div class="post-meta">
+                suzumiya natsuhi
+        </div>
+        <div class="post-content">
+                <div>
+<p>
+<a href="https://leetcode.com/problems/minimum-absolute-difference/">1200. Minimum Absolute Difference</a>
+</p>
+
+<p>
+<b>Solution</b>
+</p>
+
+<div class="org-src-container">
+
+<pre><code class="lang-C">class Solution {
+public:
+    vector&lt;vector&lt;int&gt;&gt; minimumAbsDifference(vector&lt;int&gt;&amp; arr) {
+        sort(arr.begin(), arr.end());
+        int v = -1;
+        vector&lt;vector&lt;int&gt;&gt; mad;
+        for(int i = 0; i + 1 &lt; arr.size(); i++){
+            vector&lt;int&gt; tmp;
+            if( v == -1 || arr[i+1] - arr[i] &lt; v){
+                mad.clear();
+                mad.push_back(vector&lt;int&gt;{arr[i],arr[i+1]});
+                v = arr[i+1] - arr[i];
+            }else{
+                if(arr[i+1] - arr[i] == v){
+                    mad.push_back(vector&lt;int&gt;{arr[i],arr[i+1]});
                 }
-                goat += S.substr(start, 1);
             }
-            goat += "ma";
-            goat += string(i, 'a');
-
-            end++, start = end, i++;
         }
-        return goat;
+        return mad;
     }
 };
-
 </code></pre>
 
 </div>
-
-<div class="org-src-container">
-
-<pre><code class="lang-html">
-Status: Accepted (99/99)
-
-Runtime: 0 ms, faster than 100.00% of C++ submissions.
-
-Memory Usage: 6.6 MB, less than 76.77% of C++ submissions.
-
-</code></pre>
-
-</div>
-
-<p>
-字符串的題目都是用指針來做的。
-</p>
 </div>
                 <p class="commentline">
         
-    <a href="posts/leetcode824-goat-latin/#disqus_thread" data-disqus-identifier="cache/posts/leetcode824-goat-latin.html">Comments</a>
+    <a href="posts/leetcode1200-minimum-absolute-difference/#disqus_thread" data-disqus-identifier="cache/posts/leetcode1200-minimum-absolute-difference.html">Comments</a>
 
 
         </p>
 </div>
     </div>
     <div class="post">
-        <h2 class="post-title"><a href="posts/leetcode572-subtree-of-another-tree/">Leetcode572. Subtree of Another Tree</a></h2>
+        <h2 class="post-title"><a href="posts/ignorant-and-tolerant/">Ignorant and tolerant</a></h2>
         <div class="post-meta">
-            2020-09-29 08:20
+            2020-09-09 02:06
         </div>
         <div class="post-meta">
                 suzumiya natsuhi
@@ -142,416 +178,36 @@ Memory Usage: 6.6 MB, less than 76.77% of C++ submissions.
         <div class="post-content">
                 <div>
 <p>
-<a href="https://leetcode.com/problems/subtree-of-another-tree/">572. Subtree of Another Tree</a>
+如果把宽容理解成行为的话，那么有两个和这种行为相关的 无知相关的宽容 和 尊重相关的宽容。
 </p>
 
 <p>
-<b>Solution</b>
+其实两者在大多数情况看来并没有区别，两者形成在表面上相通的宽容行为。假设一种情况：有人请我喝酒，我说不喝，而请我啤酒的人只是说 “好吧”，她也没有打扰我，甚至没有问我，我怎么能确定她尊重我的选择呢？如果不知道的话，那谈论这两点又有什么意义呢？
 </p>
 
-<div class="org-src-container">
-
-<pre><code class="lang-C">
-/**
- * Definition for a binary tree node.
- * struct TreeNode {
- *     int val;
- *     TreeNode *left;
- *     TreeNode *right;
- *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
- *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
- *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left),
- * right(right) {}
- * };
- */
-class Solution {
-  public:
-    bool isSubtree(TreeNode *s, TreeNode *t) {
-        // return isSameTree(s, t) || isSameTree(s-&gt;left, t) ||
-        //        isSameTree(s-&gt;right, t);
-        if (s == NULL &amp;&amp; t == NULL)
-            return true;
-        if (s == NULL)
-            return false;
-        if (t == NULL)
-            return true;
-        bool isSub;
-        if (s-&gt;val == t-&gt;val)
-            isSub = isSameTree(s, t);
-        if (isSub)
-            return true;
-        return isSubtree(s-&gt;left, t) || isSubtree(s-&gt;right, t);
-    }
-
-    bool isSameTree(TreeNode *s, TreeNode *t) {
-        if (s == nullptr &amp;&amp; t == nullptr) {
-            return true;
-        } else {
-            if (s == nullptr || t == nullptr)
-                return false;
-            if (s-&gt;val != t-&gt;val)
-                return false;
-            else
-                return isSameTree(s-&gt;left, t-&gt;left) &amp;&amp;
-                       isSameTree(s-&gt;right, t-&gt;right);
-        }
-    }
-};
-
-</code></pre>
-
-</div>
-
-<div class="org-src-container">
-
-<pre><code class="lang-html">
-Status: Accepted (183/183)
-
-Runtime: 40 ms, faster than 66.02% of C++ submissions.
-
-Memory Usage: 29.7 MB, less than 18.21% of C++ submissions.
-
-</code></pre>
-
-</div>
+<p>
+尊重相关的宽容往往是这样的：我们尊重别人的价值和独特性，因为我们理解并有意识地意识到这是他们的独特之处。而另一方面：无知是一种不打扰他人行为的行为，因为我们不关心，甚至更麻烦。
+</p>
 
 <p>
-第一次做的时候并没有做对，第二次倒是 AC 了。没啥感觉，就是感觉自己的方法代码有点复杂。
+尊重的宽容鼓励沟通和相互理解，而无知的宽容则会引发假设和判断。
+</p>
+
+<p>
+在危机时，尤其是当我们的自我受到干扰的时候，我们自己对生活的看法就会受到挑战。那么，所有与他人不一样的生命价值的差异，都会莫名其妙地浮现出来，变得清晰可见。在这种情况下，无知（的宽容）将导致我们更加判断。在更糟的环境下，他们的价值会被我们忽视和虐待。同时，尊重的宽容会使我们仍然给予尊重，而不是刻板地认为那些有同样价值的人也可以做同样的事情。在喝酒的例子中，很可能是这样：给我饮料的人认定了我的拒绝，并 <b>判断</b> 我有点认真/不好玩，或者可能不尊重人。
+</p>
+
+<p>
+信息越闭塞下的宽容，很可能是无知的宽容；而信息闭塞情况下仍保持尊重的宽容的人，难能可贵。
+</p>
+
+<p>
+所以真正值得发展的宽容应该是尊重相关的宽容。
 </p>
 </div>
                 <p class="commentline">
         
-    <a href="posts/leetcode572-subtree-of-another-tree/#disqus_thread" data-disqus-identifier="cache/posts/leetcode572-subtree-of-another-tree.html">Comments</a>
-
-
-        </p>
-</div>
-    </div>
-    <div class="post">
-        <h2 class="post-title"><a href="posts/leetcode093-restore-ip-addresses/">Leetcode093. Restore IP Addresses</a></h2>
-        <div class="post-meta">
-            2020-09-28 15:12
-        </div>
-        <div class="post-meta">
-                suzumiya natsuhi
-        </div>
-        <div class="post-content">
-                <div>
-<p>
-<a href="https://leetcode.com/problems/restore-ip-addresses/">93. Restore IP Addresses</a>
-</p>
-
-<p>
-<b>Solution</b>
-</p>
-
-<div class="org-src-container">
-
-<pre><code class="lang-C">
-class Solution {
-  public:
-    vector&lt;string&gt; addresses;
-    vector&lt;string&gt; restoreIpAddresses(string s) {
-        vector&lt;string&gt; path;
-        dfs(s, path);
-        return addresses;
-    }
-
-    void dfs(string s, vector&lt;string&gt; &amp;path) {
-
-        if (s == "" &amp;&amp; path.size() == 4) {
-            string tmp = "";
-            for (string s : path) {
-                if (tmp != "")
-                    tmp += ".";
-                tmp += s;
-            }
-            addresses.push_back(tmp);
-            return;
-        }
-
-        if (path.size() &gt; 4 || s == "")
-            return;
-
-        for (int i = 1; i &lt;= s.length(); i++) {
-            string ip = s.substr(0, i);
-            if (i &gt; 1 &amp;&amp; s[0] == '0')
-                return;
-            if (stoi(ip) &gt; 255)
-                break;
-            path.push_back(ip);
-            dfs(s.substr(i, s.length() - i), path);
-            path.pop_back();
-        }
-    }
-};
-
-</code></pre>
-
-</div>
-
-<div class="org-src-container">
-
-<pre><code class="lang-html">
-Status: Accepted (147/147)
-
-Runtime: 4 ms, faster than 81.89% of C++ submissions.
-
-Memory Usage: 7.6 MB, less than 13.80% of C++ submissions.
-
-</code></pre>
-
-</div>
-
-<p>
-第一次嘗試是忽略了 10.0.010.0 中的 010 是不能作爲一個符合要求的 ip 段。所以添加了
-</p>
-
-<div class="org-src-container">
-
-<pre><code class="lang-C">if (i &gt; 1 &amp;&amp; s[0] == '0')
-    return;
-</code></pre>
-
-</div>
-
-<p>
-這一段，雖然丑但是很有用。
-</p>
-</div>
-                <p class="commentline">
-        
-    <a href="posts/leetcode093-restore-ip-addresses/#disqus_thread" data-disqus-identifier="cache/posts/leetcode093-restore-ip-addresses.html">Comments</a>
-
-
-        </p>
-</div>
-    </div>
-    <div class="post">
-        <h2 class="post-title"><a href="posts/leetcode528-diameter-of-binary-tree/">Leetcode543. Diameter of Binary Tree</a></h2>
-        <div class="post-meta">
-            2020-09-28 04:21
-        </div>
-        <div class="post-meta">
-                suzumiya natsuhi
-        </div>
-        <div class="post-content">
-                <div>
-<p>
-<a href="https://leetcode.com/problems/diameter-of-binary-tree/">543. Diameter of Binary Tree</a>
-</p>
-
-<p>
-<b>Solution</b>
-</p>
-
-<div class="org-src-container">
-
-<pre><code class="lang-C">
-/**
- * Definition for a binary tree node.
- * struct TreeNode {
- *     int val;
- *     TreeNode *left;
- *     TreeNode *right;
- *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
- *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
- *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left),
- * right(right) {}
- * };
- */
-class Solution {
-  public:
-    int diameter = 0;
-    int diameterOfBinaryTree(TreeNode *root) {
-        depthTravel(root);
-        return diameter;
-    }
-    int depthTravel(TreeNode *root) {
-        if (root == nullptr)
-            return 0;
-        int left = depthTravel(root-&gt;left);
-        int right = depthTravel(root-&gt;right);
-        diameter = max(left + right, diameter);
-        return 1 + max(left, right);
-    }
-};
-
-</code></pre>
-
-</div>
-
-<div class="org-src-container">
-
-<pre><code class="lang-html">
-Status: Accepted (106/106)
-
-Runtime: 12 ms, faster than 88.39% of C++ submissions.
-
-Memory Usage: 21 MB, less than 13.09% of C++ submissions.
-
-</code></pre>
-
-</div>
-
-<p>
-同樣的是一個樹遍歷的題目。不過第一次做的時候因爲想用一個函數解決問題，但是好像是不行的。因爲遞歸返回值如果是最長的直徑的話，就無法只用一個單一的返回值來構造這個函數，又不能修改參數。所以遞歸函數的返回值需要更多的信息，因此還是藉助了返回值爲結點高度的函數 <code>depthTravel</code> 。</p>
-</div>
-                <p class="commentline">
-        
-    <a href="posts/leetcode528-diameter-of-binary-tree/#disqus_thread" data-disqus-identifier="cache/posts/leetcode528-diameter-of-binary-tree.html">Comments</a>
-
-
-        </p>
-</div>
-    </div>
-    <div class="post">
-        <h2 class="post-title"><a href="posts/leetcode491-find-mode-in-binary-search-tree/">Leetcode491. Find Mode in Binary Search Tree</a></h2>
-        <div class="post-meta">
-            2020-09-27 12:46
-        </div>
-        <div class="post-meta">
-                suzumiya natsuhi
-        </div>
-        <div class="post-content">
-                <div>
-<p>
-<a href="https://leetcode.com/problems/find-mode-in-binary-search-tree/">501. Find Mode in Binary Search Tree</a>
-</p>
-
-<p>
-<b>Solution</b>
-</p>
-
-<div class="org-src-container">
-
-<pre><code class="lang-C">
-/**
- * Definition for a binary tree node.
- * struct TreeNode {
- *     int val;
- *     TreeNode *left;
- *     TreeNode *right;
- *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
- *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
- *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left),
- * right(right) {}
- * };
- */
-class Solution {
-  public:
-    vector&lt;int&gt; findMode(TreeNode *root) {
-        if (root == NULL)
-            return vector&lt;int&gt;{};
-        vector&lt;int&gt; path, mode;
-        travelMidOrder(root, path);
-        int k, n = 0;
-        for (int i = 0; i &lt; path.size(); i = k) {
-            k = i;
-            while (k &lt; path.size() &amp;&amp; path[k] == path[i])
-                k++;
-            if (k - i &gt; n) {
-                mode.clear();
-                mode.push_back(path[i]);
-                n = k - i;
-            } else if (k - i == n)
-                mode.push_back(path[i]);
-        }
-
-        return mode;
-    }
-
-    void travelMidOrder(TreeNode *root, vector&lt;int&gt; &amp;path) {
-        if (root == nullptr)
-            return;
-        if (root-&gt;left)
-            travelMidOrder(root-&gt;left, path);
-        path.push_back(root-&gt;val);
-        if (root-&gt;right)
-            travelMidOrder(root-&gt;right, path);
-    }
-};
-
-</code></pre>
-
-</div>
-
-<div class="org-src-container">
-
-<pre><code class="lang-html">
-Status: Accepted (25/25)
-
-Runtime: 24 ms, faster than 94.02% of C++ submissions.
-
-Memory Usage: 24.9 MB, less than 56.91% of C++ submissions.
-
-</code></pre>
-
-</div>
-</div>
-                <p class="commentline">
-        
-    <a href="posts/leetcode491-find-mode-in-binary-search-tree/#disqus_thread" data-disqus-identifier="cache/posts/leetcode491-find-mode-in-binary-search-tree.html">Comments</a>
-
-
-        </p>
-</div>
-    </div>
-    <div class="post">
-        <h2 class="post-title"><a href="posts/leetcode901-sort-array-by-parity/">Leetcode901. Sort Array By Parity</a></h2>
-        <div class="post-meta">
-            2020-09-26 15:24
-        </div>
-        <div class="post-meta">
-                suzumiya natsuhi
-        </div>
-        <div class="post-content">
-                <div>
-<p>
-<a href="https://leetcode.com/problems/sort-array-by-parity/">901. Sort Array By Parity</a>
-</p>
-
-<p>
-<b>Solution</b>
-</p>
-
-<div class="org-src-container">
-
-<pre><code class="lang-C">
-class Solution {
-  public:
-    vector&lt;int&gt; sortArrayByParity(vector&lt;int&gt; &amp;A) {
-        sort(begin(A), end(A),
-             [](auto &amp;a, auto &amp;b) { return a % 2 == 0 &amp;&amp; b % 2 == 1; });
-        return A;
-    }
-};
-
-
-</code></pre>
-
-</div>
-
-<div class="org-src-container">
-
-<pre><code class="lang-html">
-Status: Accepted (285/285)
-
-Runtime: 36 ms, faster than 19.11% of C++ submissions.
-
-Memory Usage: 16.6 MB, less than 16.48% of C++ submissions.
-
-</code></pre>
-
-</div>
-
-<p>
-模仿 0947 reorder-data-in-log-files 题目的写法。
-</p>
-</div>
-                <p class="commentline">
-        
-    <a href="posts/leetcode901-sort-array-by-parity/#disqus_thread" data-disqus-identifier="cache/posts/leetcode901-sort-array-by-parity.html">Comments</a>
+    <a href="posts/ignorant-and-tolerant/#disqus_thread" data-disqus-identifier="cache/posts/ignorant-and-tolerant.html">Comments</a>
 
 
         </p>
@@ -560,7 +216,7 @@ Memory Usage: 16.6 MB, less than 16.48% of C++ submissions.
 
         <nav class="postindexpager"><ul class="pager">
 <li class="previous">
-                <a href="." rel="prev">Newer posts</a>
+                <a href="index-5.html" rel="prev">Newer posts</a>
             </li>
             <li class="next">
                 <a href="index-3.html" rel="next">Older posts</a>

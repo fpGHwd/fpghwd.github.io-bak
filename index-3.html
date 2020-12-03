@@ -52,9 +52,9 @@
 
     
     <div class="post">
-        <h2 class="post-title"><a href="posts/leetcode733-flood-fill/">Leetcode733. Flood Fill</a></h2>
+        <h2 class="post-title"><a href="posts/questions-that-create-reality/">Questions that create reality</a></h2>
         <div class="post-meta">
-            2020-09-26 04:17
+            2020-09-03 03:05
         </div>
         <div class="post-meta">
                 suzumiya natsuhi
@@ -62,81 +62,61 @@
         <div class="post-content">
                 <div>
 <p>
-<a href="https://leetcode.com/problems/flood-fill/">733. Flood Fill</a>
+一个穷人带自己的小孩去读书。
+老师：“识字吗？”
+穷人：“不识字。”
+老师：“不识字读什么书？”
+穷人：“就是因为不识字才要读书啊！”
 </p>
 
 <p>
-<b>Solution</b>
+老师站在自己的逻辑（强者逻辑，自己的成本），认为基础不好的就没有必要再读书了。
+穷人的回答正好是自己立场的体现：就是因为不识字，才更要读书。
+两种逻辑看起来都没有问题。矛盾就出现了：一个问题，两个人得出截然相反的结论。为什么呢？
 </p>
 
-<div class="org-src-container">
-
-<pre><code class="lang-C">
-class Solution {
-  public:
-    vector&lt;vector&lt;int&gt;&gt;
-    floodFill(vector&lt;vector&lt;int&gt;&gt; &amp;image, int sr, int sc, int newColor) {
-        int old_color = image[sr][sc];
-        if (old_color == newColor)
-            return image;
-
-        floodFill(image, sr, sc, newColor, old_color);
-
-        return image;
-    }
-
-    void floodFill(vector&lt;vector&lt;int&gt;&gt; &amp;image,
-                   int sr,
-                   int sc,
-                   int newColor,
-                   int oldColor) {
-        // paint
-        image[sr][sc] = newColor;
-
-        // paint others
-        if (sr - 1 &gt;= 0 &amp;&amp; oldColor == image[sr - 1][sc])
-            floodFill(image, sr - 1, sc, newColor);
-        if (sr + 1 &lt; image.size() &amp;&amp; oldColor == image[sr + 1][sc])
-            floodFill(image, sr + 1, sc, newColor);
-        if (sc - 1 &gt;= 0 &amp;&amp; oldColor == image[sr][sc - 1])
-            floodFill(image, sr, sc - 1, newColor);
-        if (sc + 1 &lt; image[0].size() &amp;&amp; oldColor == image[sr][sc + 1])
-            floodFill(image, sr, sc + 1, newColor);
-    }
-};
-
-</code></pre>
-
-</div>
-
-<div class="org-src-container">
-
-<pre><code class="lang-html">
-Status: Accepted (277/277)
-
-Runtime: 12 ms, faster than 97.05% of C++ submissions.
-
-Memory Usage: 14.9 MB, less than 5.01% of C++ submissions.
-
-</code></pre>
-
-</div>
+<p>
+那是因为立场的转换，当我们理解老师的逻辑时，是站在老师的立场的（基础差的学生有什么好学的）；当我们理解穷人的逻辑时，是站在穷人的立场的（正是基础差才更要学的）。立场的转换让两句话逻辑本身都看起来没问题。
+老师不过是一个身份，换成“强者”是一个简单的替换。“识字”也只不过很常见的场景中的一种而已。
+</p>
 
 <p>
-第一次做的时候忽略了没有保存 <code>old_color</code> ，后面有问题。</p>
+其实讽刺的还是明明自己是弱者的一方，还误把自己在强者的立场。这不就是把弱者自己推入万劫不复的境地吗？弱者一遍一遍地重复强者逻辑，没有自我思维，只能陷入没有希望的境地。
+这个笑话自己深刻的体现了穷人的自我意识：正是因为没有才会去追求，这就是人类。
+然而自我思维，说到底不过是人性而已。强者拥有自己的逻辑，弱者重复他的逻辑，不知不觉间就失去了自我意识，也失去了人性。
+事实上，强者坚持自己的逻辑是坚持自己的人性，而弱者坚持强者的逻辑而放弃自己的逻辑，不过是将自己的人性拱手让人罢了。根本都怪不了任何人。放弃自己人性相当于放弃自己的自我意识，没有自我意识，梦想什么的就更不用空谈了。
+</p>
+
+<p>
+当今“某国需不需要民主”这种问题，我觉得已经不需要回答了。“素质低的国民不需要民主”和“素质低的国民更需要民主”正是以上一个镜像立场对。虽然我只举了强者和弱者的例子，生活中不会只有强者和弱者，更应该有的是各种具有系统思维的独立思维个体。
+</p>
+
+<p>
+而生活中也大量充斥大量的这样的问题。如果你发现别人不希望你做某件事的时候，你的自我意识觉醒就更想去做成这件事。当然前提是你知道“别人不希望你做这件事”，这包含一个搜集资料的过程。对于一个信息公开的环境，别人的逻辑似乎就不那么重要了，你会越听从于自己的内心和自己的观点。
+另一方面，提出类似的问题也是你在完成这件事的一个阶段，而不是什么都没做，是在努力解决这个问题的一个重要环节。
+</p>
+
+<p>
+当然，如果一开始你就知道你不必看重任何人的观点，只需要了解一下其他人的观点即可，就不用纠结在别人的立场纷争中了，更早些走上自己想走的那条路了。想必这个平行时空中，所有的事物都发展得比较快和更理性吧。
+</p>
+
+<p>
+好的问题正是根本都不需要回答的问题吧，因为答案不过是一些立场而已。但最重要的是有自己的立场，而不是人云亦云随波逐流。
+同时好的问题是激发人的思考的问题：Questions that create reality.
+</p>
 </div>
                 <p class="commentline">
         
-    <a href="posts/leetcode733-flood-fill/#disqus_thread" data-disqus-identifier="cache/posts/leetcode733-flood-fill.html">Comments</a>
+    <a href="posts/questions-that-create-reality/#disqus_thread" data-disqus-identifier="cache/posts/questions-that-create-reality.html">Comments</a>
 
 
         </p>
 </div>
     </div>
     <div class="post">
-        <h2 class="post-title"><a href="posts/leetcode696-count-binary-substrings/">Leetcode696. Count Binary Substrings</a></h2>
+        <h2 class="post-title"><a href="posts/courage-and-self/">Courage and Self</a></h2>
         <div class="post-meta">
-            2020-09-26 02:34
+            2020-08-31 16:20
         </div>
         <div class="post-meta">
                 suzumiya natsuhi
@@ -144,67 +124,25 @@ Memory Usage: 14.9 MB, less than 5.01% of C++ submissions.
         <div class="post-content">
                 <div>
 <p>
-<a href="https://leetcode.com/problems/count-binary-substrings/">696. Count Binary Substrings</a>
+When I look back to past time without courage, the only thing I cannot forget is I didn’t tell the teacher beside me to stop ticking her shoes upon chair in NHEEE. For me, it’s an apparent evidence that lacking courage is my weakness.
 </p>
 
-<div class="org-src-container">
-
-<pre><code class="lang-C">
-class Solution {
-  public:
-    int countBinarySubstrings(string s) {
-        if (s == "")
-            return 0;
-        vector&lt;int&gt; vi_pos;
-        for (int i = 1; i &lt; s.length(); i++) {
-            if (s[i] != s[i - 1])
-                vi_pos.push_back(i);
-        }
-        int count = 0, left, right;
-        for (int i = 0; i &lt; vi_pos.size(); i++) {
-            left = vi_pos[i] - (i == 0 ? 0 : vi_pos[i - 1]);
-            right = ((i == vi_pos.size() - 1) ? s.length() : vi_pos[i + 1]) -
-                    vi_pos[i];
-            count += min(left, right);
-        }
-        return count;
-    }
-};
-
-</code></pre>
-
-</div>
-
-<div class="org-src-container">
-
-<pre><code class="lang-html">
-Status: Accepted (90/90)
-
-Runtime: 40 ms, faster than 99.85% of C++ submissions.
-
-Memory Usage: 14.4 MB, less than 6.03% of C++ submissions.
-
-</code></pre>
-
-</div>
-
 <p>
-这道题我在 <code>right = ((i =</code> vi<sub>pos.size</sub>() - 1) ? s.length() : vi<sub>pos</sub>[i + 1]) -
-                    vi<sub>pos</sub>[i];= 的时候把 <code>s.length()</code> 写成了 <code>vi_pos.size()</code> ，一直没有检查出来。后来代码拆开了几个变量用 gdb 调试出来了 right 值的问题。隐藏得太深了。
+如果再有那么一次机会的话，我会选择很直接的表达出来，而不是让这些东西默默成为困扰自己的一部分。因为我觉得这开了一个坏头，造成后面有一些事也发展成类似结果。我认为是自我意识的不足导致的，勇气是自我意识的一个重要的组成部分。
 </p>
 </div>
                 <p class="commentline">
         
-    <a href="posts/leetcode696-count-binary-substrings/#disqus_thread" data-disqus-identifier="cache/posts/leetcode696-count-binary-substrings.html">Comments</a>
+    <a href="posts/courage-and-self/#disqus_thread" data-disqus-identifier="cache/posts/courage-and-self.html">Comments</a>
 
 
         </p>
 </div>
     </div>
     <div class="post">
-        <h2 class="post-title"><a href="posts/leetcode687-longest-univalue-path/">Leetcode687. Longest Univalue Path</a></h2>
+        <h2 class="post-title"><a href="posts/no-news-is-good-news/">No news is good news</a></h2>
         <div class="post-meta">
-            2020-09-25 13:21
+            2020-08-25 02:52
         </div>
         <div class="post-meta">
                 suzumiya natsuhi
@@ -212,616 +150,35 @@ Memory Usage: 14.4 MB, less than 6.03% of C++ submissions.
         <div class="post-content">
                 <div>
 <p>
-<a href="https://leetcode.com/problems/longest-univalue-path/">687. Longest Univalue Path</a>
+今天看书看到了在如何在应用程序中加载/链接共享库，书中以高性能 Web 服务器的例子来说明，对于一个繁忙的网站，运行时加载和链接共享库对于服务质量的提升意义重大。
 </p>
 
 <p>
-<b>Solution</b>
+加载和链接共享库用到的是 <code>dlfcn.h</code> 中的 <code>dlopen/dlsym/dlclose</code> 的三个函数。还有最后一个检查前面三个调用情况的函数： <code>dlerror</code> ，声明为：
 </p>
 
 <div class="org-src-container">
 
-<pre><code class="lang-C">
-/**
- * Definition for a binary tree node.
- * struct TreeNode {
- *     int val;
- *     TreeNode *left;
- *     TreeNode *right;
- *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
- *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
- *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left),
- * right(right) {}
- * };
- */
-
-class Solution {
-  public:
-    int luvp = 0;
-    int longestUnivaluePath(TreeNode *root) {
-        if (root == nullptr)
-            return 0;
-        travelPath(root);
-        return luvp - 1;
-    }
-
-    int travelPath(TreeNode *root) {
-        int left = 0, right = 0;
-        if (root-&gt;left != nullptr)
-            left = travelPath(root-&gt;left);
-        if (root-&gt;right != nullptr)
-            right = travelPath(root-&gt;right);
-        int left_tmp =
-            ((root-&gt;left &amp;&amp; root-&gt;left-&gt;val == root-&gt;val) ? left : 0);
-        int right_tmp =
-            ((root-&gt;right &amp;&amp; root-&gt;right-&gt;val == root-&gt;val) ? right : 0);
-        luvp = max(luvp, 1 + left_tmp + right_tmp);
-        return 1 + max(left_tmp, right_tmp);
-    }
-};
-
+<pre><code class="lang-cpp">const char *dlerror(void);
 </code></pre>
 
 </div>
-
-<div class="org-src-container">
-
-<pre><code class="lang-html">
-Status: Accepted (71/71)
-
-Runtime: 184 ms, faster than 86.14% of C++ submissions.
-
-Memory Usage: 72.6 MB, less than 5.21% of C++ submissions.
-
-</code></pre>
-
-</div>
-
-<p>
-第一次做的时候没有做出来，觉得有点复杂。不过说到底还只是一个简单的树遍历，当然可以认为和求树深度的那类题其实差不多。其中每个点的处理就是找到是否比现有的最长路径 <code>luvp</code> 更长的 <code>1 + left_tmp + right_tmp</code> ，然后返回的若是 <code>1 + left_tmp + right_tmp</code> ，那么得出来的结果不是 <b>最长的path</b> ，而是相同值最多的相邻点个数。所以最后修改一下，返回稍长的路径即可。
-</p>
-
-<p>
-树的题，递归是最简洁的。
-</p>
-</div>
-                <p class="commentline">
-        
-    <a href="posts/leetcode687-longest-univalue-path/#disqus_thread" data-disqus-identifier="cache/posts/leetcode687-longest-univalue-path.html">Comments</a>
-
-
-        </p>
-</div>
-    </div>
-    <div class="post">
-        <h2 class="post-title"><a href="posts/leetcode/">Leetcode599. Minimum Index Sum of Two Lists</a></h2>
-        <div class="post-meta">
-            2020-09-25 09:06
-        </div>
-        <div class="post-meta">
-                suzumiya natsuhi
-        </div>
-        <div class="post-content">
-                <div>
-<p>
-<a href="https://leetcode.com/problems/minimum-index-sum-of-two-lists/">599. Minimum Index Sum of Two Lists</a>
-</p>
-
-<p>
-<b>Solution</b>
-</p>
-
-<div class="org-src-container">
-
-<pre><code class="lang-C">
-class Solution {
-  public:
-    vector&lt;string&gt; findRestaurant(vector&lt;string&gt; &amp;list1,
-                                  vector&lt;string&gt; &amp;list2) {
-        unordered_map&lt;string, int&gt; umsi;
-        for (int i = 0; i &lt; list1.size(); i++) {
-            umsi[list1[i]] = i;
-        }
-
-        int idx_sum = INT_MAX;
-        vector&lt;string&gt; vsr;
-        for (int i = 0; i &lt; list2.size(); i++) {
-            if (umsi.find(list2[i]) != umsi.end()) {
-                if (idx_sum &gt; i + umsi[list2[i]]) {
-                    vsr.clear();
-                    vsr.push_back(list2[i]);
-                    idx_sum = i + umsi[list2[i]];
-                } else if (idx_sum == i + umsi[list2[i]]) {
-                    vsr.push_back(list2[i]);
-                }
-            }
-        }
-
-        return vsr;
-    }
-};
-
-
-</code></pre>
-
-</div>
-
-<div class="org-src-container">
-
-<pre><code class="lang-html">
-Status: Accepted (133/133)
-
-Runtime: 104 ms, faster than 98.98% of C++ submissions.
-
-Memory Usage: 36.9 MB, less than 63.53% of C++ submissions.
-
-</code></pre>
-
-</div>
-</div>
-                <p class="commentline">
-        
-    <a href="posts/leetcode/#disqus_thread" data-disqus-identifier="cache/posts/leetcode.html">Comments</a>
-
-
-        </p>
-</div>
-    </div>
-    <div class="post">
-        <h2 class="post-title"><a href="posts/leetcode617-merge-two-binary-trees/">Leetcode617. Merge Two Binary Trees</a></h2>
-        <div class="post-meta">
-            2020-09-25 08:54
-        </div>
-        <div class="post-meta">
-                suzumiya natsuhi
-        </div>
-        <div class="post-content">
-                <div>
-<p>
-<a href="https://leetcode.com/problems/merge-two-binary-trees/">617. Merge Two Binary Trees</a>
-</p>
-
-<p>
-<b>Solution</b>
-</p>
-
-<div class="org-src-container">
-
-<pre><code class="lang-C">
-/**
- * Definition for a binary tree node.
- * struct TreeNode {
- *     int val;
- *     TreeNode *left;
- *     TreeNode *right;
- *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
- *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
- *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left),
- * right(right) {}
- * };
- */
-class Solution {
-  public:
-    TreeNode *mergeTrees(TreeNode *t1, TreeNode *t2) {
-        if (t1 == NULL &amp;&amp; t2 == NULL)
-            return NULL;
-        TreeNode *t3 = new TreeNode((t1 == NULL ? 0 : t1-&gt;val) +
-                                    (t2 == NULL ? 0 : t2-&gt;val));
-        t3-&gt;left = mergeTrees(t1 == NULL ? NULL : t1-&gt;left,
-                              t2 == NULL ? NULL : t2-&gt;left);
-        t3-&gt;right = mergeTrees(t1 == NULL ? NULL : t1-&gt;right,
-                               t2 == NULL ? NULL : t2-&gt;right);
-        return t3;
-    }
-};
-
-</code></pre>
-
-</div>
-
-<div class="org-src-container">
-
-<pre><code class="lang-html">
-Status: Accepted (183/183)
-
-Runtime: 56 ms, faster than 47.43% of C++ submissions.
-
-Memory Usage: 35.7 MB, less than 5.05% of C++ submissions.
-
-</code></pre>
-
-</div>
-</div>
-                <p class="commentline">
-        
-    <a href="posts/leetcode617-merge-two-binary-trees/#disqus_thread" data-disqus-identifier="cache/posts/leetcode617-merge-two-binary-trees.html">Comments</a>
-
-
-        </p>
-</div>
-    </div>
-    <div class="post">
-        <h2 class="post-title"><a href="posts/leetcode668-employee-importance/">Leetcode668. Employee Importance</a></h2>
-        <div class="post-meta">
-            2020-09-25 08:15
-        </div>
-        <div class="post-meta">
-                suzumiya natsuhi
-        </div>
-        <div class="post-content">
-                <div>
-<p>
-<a href="https://leetcode.com/problems/employee-importance/">690. Employee Importance</a>
-</p>
-
-<div class="org-src-container">
-
-<pre><code class="lang-C">
-/*
-// Definition for Employee.
-class Employee {
-public:
-    int id;
-    int importance;
-    vector&lt;int&gt; subordinates;
-};
-*/
-
-class Solution {
-  public:
-    int getImportance(vector&lt;Employee *&gt; employees, int id) {
-
-        unordered_map&lt;int, Employee *&gt; umii;
-        for (Employee *e : employees) {
-            umii[e-&gt;id] = e;
-        }
-
-        int importance = 0;
-        queue&lt;int&gt; qi;
-        qi.push(id);
-
-        int tmp;
-        while (!qi.empty()) {
-            tmp = qi.front();
-            importance += umii[tmp]-&gt;importance;
-            qi.pop();
-            for (int i : umii[tmp]-&gt;subordinates)
-                qi.push(i);
-        }
-
-        return importance;
-    }
-};
-
-
-</code></pre>
-
-</div>
-
-<div class="org-src-container">
-
-<pre><code class="lang-html">
-Status: Accepted (108/108)
-
-Runtime: 36 ms, faster than 92.63% of C++ submissions.
-
-Memory Usage: 14.4 MB, less than 27.87% of C++ submissions.
-
-</code></pre>
-
-</div>
-</div>
-                <p class="commentline">
-        
-    <a href="posts/leetcode668-employee-importance/#disqus_thread" data-disqus-identifier="cache/posts/leetcode668-employee-importance.html">Comments</a>
-
-
-        </p>
-</div>
-    </div>
-    <div class="post">
-        <h2 class="post-title"><a href="posts/leetcode649-second-minimum-node-in-a-binary-tree/">Leetcode649  Second Minimum Node In a Binary Tree</a></h2>
-        <div class="post-meta">
-            2020-09-25 07:44
-        </div>
-        <div class="post-meta">
-                suzumiya natsuhi
-        </div>
-        <div class="post-content">
-                <div>
-<p>
-<a href="https://leetcode.com/problems/second-minimum-node-in-a-binary-tree/">671. Second Minimum Node In a Binary Tree</a>
-</p>
-
-<p>
-<b>Solution</b>
-</p>
-
-<div class="org-src-container">
-
-<pre><code class="lang-C">
-/**
- * Definition for a binary tree node.
- * struct TreeNode {
- *     int val;
- *     TreeNode *left;
- *     TreeNode *right;
- *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
- *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
- *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left),
- * right(right) {}
- * };
- */
-class Solution {
-  public:
-    int fm = -1, sm = -1;
-    int findSecondMinimumValue(TreeNode *root) {
-        if (root == NULL)
-            return sm;
-
-        if (fm == -1)
-            fm = root-&gt;val;
-        else {
-            if (sm == -1) {
-                if (root-&gt;val &gt; fm)
-                    sm = root-&gt;val;
-                else if (root-&gt;val &lt; fm) {
-                    sm = fm;
-                    fm = root-&gt;val;
-                } else {
-                    // do nothing
-                }
-            } else {
-                if (root-&gt;val &gt; sm) {
-                    // do noting
-                } else if (root-&gt;val &lt; fm) {
-                    sm = fm;
-                    fm = root-&gt;val;
-                } else if (root-&gt;val == sm || root-&gt;val == fm) {
-                    // do nothing
-                } else { // root-&gt;val &gt; fm and root-&gt;val &lt; sm;
-                    sm = root-&gt;val;
-                }
-            }
-        }
-
-        findSecondMinimumValue(root-&gt;left);
-        findSecondMinimumValue(root-&gt;right);
-
-        return sm;
-    }
-};
-
-</code></pre>
-
-</div>
-
-<div class="org-src-container">
-
-<pre><code class="lang-html">
-Status: Accepted (35/35)
-
-Runtime: 0 ms, faster than 100.00% of C++ submissions.
-
-Memory Usage: 7.2 MB, less than 17.00% of C++ submissions.
-
-</code></pre>
-
-</div>
-
-<p>
-自从学会了一种偷懒的写法之后，就一直用这种 travel 的方法。
-</p>
-</div>
-                <p class="commentline">
-        
-    <a href="posts/leetcode649-second-minimum-node-in-a-binary-tree/#disqus_thread" data-disqus-identifier="cache/posts/leetcode649-second-minimum-node-in-a-binary-tree.html">Comments</a>
-
-
-        </p>
-</div>
-    </div>
-    <div class="post">
-        <h2 class="post-title"><a href="posts/leetcode804-most-common-word/">Leetcode804 Most Common Word</a></h2>
-        <div class="post-meta">
-            2020-09-25 06:56
-        </div>
-        <div class="post-meta">
-                suzumiya natsuhi
-        </div>
-        <div class="post-content">
-                <div>
-<p>
-<a href="https://leetcode.com/problems/most-common-word/">819. Most Common Word</a>
-</p>
-
-<p>
-<b>Solution</b>
-</p>
-
-<div class="org-src-container">
-
-<pre><code class="lang-C">
-class Solution {
-  public:
-    string mostCommonWord(string paragraph, vector&lt;string&gt; &amp;banned) {
-        unordered_map&lt;string, int&gt; umsi;
-        int start, end;
-        transform(paragraph.begin(),paragraph.end(),paragraph.begin(),::tolower);
-        for (int i = 0; i &lt; paragraph.length(); i++) {
-            while (i &lt; paragraph.length() &amp;&amp; !isalpha(paragraph[i]))
-                i++;
-            start = i;
-            while (i &lt; paragraph.length() &amp;&amp; isalpha(paragraph[i]))
-                i++;
-            end = i;
-            umsi[paragraph.substr(start, end - start)]++;
-        }
-
-        for (string s : banned)
-            if (umsi.find(s) != umsi.end())
-                umsi.erase(s);
-
-        string w = "";
-        for (auto it : umsi) {
-            if (w == "")
-                w = it.first;
-            else if (umsi[it.first] &gt; umsi[w])
-                w = it.first;
-        }
-
-        return w;
-    }
-};
-
-</code></pre>
-
-</div>
-
-<div class="org-src-container">
-
-<pre><code class="lang-html">
-Status: Accepted (47/47)
-
-Runtime: 4 ms, faster than 99.63% of C++ submissions.
-
-Memory Usage: 7.8 MB, less than 87.14% of C++ submissions.
-
-</code></pre>
-
-</div>
-</div>
-                <p class="commentline">
-        
-    <a href="posts/leetcode804-most-common-word/#disqus_thread" data-disqus-identifier="cache/posts/leetcode804-most-common-word.html">Comments</a>
-
-
-        </p>
-</div>
-    </div>
-    <div class="post">
-        <h2 class="post-title"><a href="posts/diao-shi-de-shi-hou-chu-le-yi-ge-wen-ti/">调试的时候出了一个问题</a></h2>
-        <div class="post-meta">
-            2020-09-25 05:22
-        </div>
-        <div class="post-meta">
-                suzumiya natsuhi
-        </div>
-        <div class="post-content">
-                <div>
-<p>
-<a href="https://leetcode.com/problems/shortest-distance-to-a-character/">821. Shortest Distance to a Character</a>
-</p>
-
-<p>
-一个 gdb 调试的问题，没太看明白（暴哭）：
-</p>
 
 <div class="figure">
-<p><img src="https://raw.githubusercontent.com/fpGHwd/fpghwd.github.io/master/images/_20200925_132117screenshot.png" alt="_20200925_132117screenshot.png"></p>
+<p><img src="https://raw.githubusercontent.com/fpGHwd/fpghwd.github.io/master/images/_20200825_110429screenshot.png" alt="_20200825_110429screenshot.png"></p>
 </div>
 
 <p>
-想到可能是类型的问题： <code>size_type</code> 是一个无符号的整数， <code>int</code> 是有符号整数，有符号整数首先转换成无符号整数。 <code>-1</code> 转化成 <code>0xffffffff</code> ，所以应该是没有问题的。虽然是自己偷懒设置了一个 -1 索引的变量其实是为了后面 for 能从 0 开始遍历。如果从初始值设置为 0 的话应该不会出这样的问题。
+如果调用前三个函数没有发生错误，则返回NULL。我想起了以前看过的K&amp;R的函数返回值如果为0则是运行成功，当时还特意想着为什么这么来设计，还学到了标题的那句话“没有消息就是好消息”。
 </p>
 
 <p>
-同时有一个问题：转化时为什么是有符号整数转换成无符号整数，而不是相反呢？
+当然其实要说：“成功都是一样的，失败各有各的不同的原因”也是没有问题的，毕竟比“失败都是一样的，成功各有各的不同”这句话要更为实诚一点。我觉得这说明从失败中获取原因是有价值的，而从成功中找原因应该没有什么大的价值吧。怎么回事，好像顺手黑了成功学一把，这不是我的本意。
 </p>
 </div>
                 <p class="commentline">
         
-    <a href="posts/diao-shi-de-shi-hou-chu-le-yi-ge-wen-ti/#disqus_thread" data-disqus-identifier="cache/posts/diao-shi-de-shi-hou-chu-le-yi-ge-wen-ti.html">Comments</a>
-
-
-        </p>
-</div>
-    </div>
-    <div class="post">
-        <h2 class="post-title"><a href="posts/leetcode107-binary-tree-level-order-traversal-ii/">Leetcode107 Binary Tree Level Order Traversal II</a></h2>
-        <div class="post-meta">
-            2020-09-25 04:07
-        </div>
-        <div class="post-meta">
-                suzumiya natsuhi
-        </div>
-        <div class="post-content">
-                <div>
-<p>
-<a href="https://leetcode.com/problems/binary-tree-level-order-traversal-ii/">107. Binary Tree Level Order Traversal II</a>
-</p>
-
-<p>
-<b>Solution</b>
-</p>
-
-<div class="org-src-container">
-
-<pre><code class="lang-C">
-/**
- * Definition for a binary tree node.
- * struct TreeNode {
- *     int val;
- *     TreeNode *left;
- *     TreeNode *right;
- *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
- *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
- *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left),
- * right(right) {}
- * };
- */
-class Solution {
-  public:
-    vector&lt;vector&lt;int&gt;&gt; levelOrderBottom(TreeNode *root) {
-        vector&lt;vector&lt;int&gt;&gt; result;
-
-        queue&lt;TreeNode *&gt; q;
-        TreeNode *last, *end;
-        if (root) {
-            q.push(root);
-            end = root;
-            last = end;
-            result.push_back(vector&lt;int&gt;{});
-        }
-        while (!q.empty()) {
-            TreeNode *temp = q.front();
-            result[result.size() - 1].push_back(temp-&gt;val);
-            q.pop();
-            if (temp-&gt;left)q.push(temp-&gt;left);
-            if (temp-&gt;right)q.push(temp-&gt;right);
-            if (temp == last &amp;&amp; !q.empty())result.push_back(vector&lt;int&gt;{}); // 达到一层结尾还有元素就增加一个空 vector
-            if (temp == last)last=q.back();
-        }
-        reverse(result.begin(), result.end());
-        return result;
-    }
-};
-
-
-</code></pre>
-
-</div>
-
-<p>
-二叉树的层序遍历，稍微修改一下就行。
-</p>
-
-<div class="org-src-container">
-
-<pre><code class="lang-html">
-Status: Accepted (34/34)
-
-Runtime: 4 ms, faster than 91.99% of C++ submissions.
-
-Memory Usage: 12.5 MB, less than 97.56% of C++ submissions.
-
-</code></pre>
-
-</div>
-</div>
-                <p class="commentline">
-        
-    <a href="posts/leetcode107-binary-tree-level-order-traversal-ii/#disqus_thread" data-disqus-identifier="cache/posts/leetcode107-binary-tree-level-order-traversal-ii.html">Comments</a>
+    <a href="posts/no-news-is-good-news/#disqus_thread" data-disqus-identifier="cache/posts/no-news-is-good-news.html">Comments</a>
 
 
         </p>

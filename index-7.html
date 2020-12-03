@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="Stay open">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>wd's blog (old posts, page 7) | wd's blog</title>
+<link href="assets/css/theme.css" type="text/css" rel="stylesheet">
+<link href="assets/css/pure.css" type="text/css" rel="stylesheet">
+<link href="assets/css/style.css" type="text/css" rel="stylesheet">
+<meta name="theme-color" content="#5670d4">
+<meta name="generator" content="Nikola (getnikola.com)">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="rss.xml">
+<link rel="canonical" href="https://fpghwd.github.io/index-7.html">
+<link rel="prev" href="index-8.html" type="text/html">
+<link rel="next" href="index-6.html" type="text/html">
+<!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]-->
+</head>
+<body>
+<div class="body_container">
+    <div id="header">
+        <div class="site-name">
+                <h1>wd's blog</h1>
+        </div>
+
+        <div id="nav-menu">
+            <div class="bitcron_nav_container">
+                <div class="bitcron_nav">
+                    <div class="site_nav_wrap">
+                        <ul class="site_nav sm sm-base">
+<li><a href="archive.html" class="nav__item">Archive</a></li>
+            <li><a href="categories/" class="nav__item">Tags</a></li>
+            <li><a href="rss.xml" class="nav__item">RSS feed</a></li>
+
+                            
+                        </ul>
+<div class="clear clear_nav_inline_end"></div>
+                    </div>
+                </div>
+                <div class="clear clear_nav_end"></div>
+            </div>
+        </div>
+    </div>
+    <div id="layout">
+        <div class="pure-g">
+            <div class=" pure-u-24-24 pure-u-sm-24-24 pure-u-md-18-24 pure_cell">
+                <div class="content_container">
+                    <!--Body content-->
+                    <div class="row">
+                        
+                        
+
+    
+    <div class="post">
+        <h2 class="post-title"><a href="posts/leetcode107-binary-tree-level-order-traversal-ii/">Leetcode107 Binary Tree Level Order Traversal II</a></h2>
+        <div class="post-meta">
+            2020-09-25 04:07
+        </div>
+        <div class="post-meta">
+                suzumiya natsuhi
+        </div>
+        <div class="post-content">
+                <div>
+<p>
+<a href="https://leetcode.com/problems/binary-tree-level-order-traversal-ii/">107. Binary Tree Level Order Traversal II</a>
+</p>
+
+<p>
+<b>Solution</b>
+</p>
+
+<div class="org-src-container">
+
+<pre><code class="lang-C">
+/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left),
+ * right(right) {}
+ * };
+ */
+class Solution {
+  public:
+    vector&lt;vector&lt;int&gt;&gt; levelOrderBottom(TreeNode *root) {
+        vector&lt;vector&lt;int&gt;&gt; result;
+
+        queue&lt;TreeNode *&gt; q;
+        TreeNode *last, *end;
+        if (root) {
+            q.push(root);
+            end = root;
+            last = end;
+            result.push_back(vector&lt;int&gt;{});
+        }
+        while (!q.empty()) {
+            TreeNode *temp = q.front();
+            result[result.size() - 1].push_back(temp-&gt;val);
+            q.pop();
+            if (temp-&gt;left)q.push(temp-&gt;left);
+            if (temp-&gt;right)q.push(temp-&gt;right);
+            if (temp == last &amp;&amp; !q.empty())result.push_back(vector&lt;int&gt;{}); // 达到一层结尾还有元素就增加一个空 vector
+            if (temp == last)last=q.back();
+        }
+        reverse(result.begin(), result.end());
+        return result;
+    }
+};
+
+
+</code></pre>
+
+</div>
+
+<p>
+二叉树的层序遍历，稍微修改一下就行。
+</p>
+
+<div class="org-src-container">
+
+<pre><code class="lang-html">
+Status: Accepted (34/34)
+
+Runtime: 4 ms, faster than 91.99% of C++ submissions.
+
+Memory Usage: 12.5 MB, less than 97.56% of C++ submissions.
+
+</code></pre>
+
+</div>
+</div>
+                <p class="commentline">
+        
+    <a href="posts/leetcode107-binary-tree-level-order-traversal-ii/#disqus_thread" data-disqus-identifier="cache/posts/leetcode107-binary-tree-level-order-traversal-ii.html">Comments</a>
+
+
+        </p>
+</div>
+    </div>
+    <div class="post">
+        <h2 class="post-title"><a href="posts/leetcode108-convert-sorted-array-to-binary-search-tree/">Leetcode108 Convert Sorted Array to Binary Search Tree</a></h2>
+        <div class="post-meta">
+            2020-09-25 03:35
+        </div>
+        <div class="post-meta">
+                suzumiya natsuhi
+        </div>
+        <div class="post-content">
+                <div>
+<p>
+<a href="https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/">108. Convert Sorted Array to Binary Search Tree</a>
+</p>
+
+<p>
+<b>Solution</b>
+</p>
+
+<div class="org-src-container">
+
+<pre><code class="lang-C">
+/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left),
+ * right(right) {}
+ * };
+ */
+class Solution {
+  public:
+    TreeNode *sortedArrayToBST(vector&lt;int&gt; &amp;nums) {
+        // create tree
+        return toHeightBST(nums, 0, nums.size() - 1);
+    }
+
+    TreeNode *toHeightBST(vector&lt;int&gt; &amp;nums, int l, int r) {
+        if (l &gt; r)
+            return NULL;
+        int mid = l + (r - l) / 2;
+        TreeNode *root = new TreeNode(nums[mid]);
+        root-&gt;left = toHeightBST(nums, l, mid - 1);
+        root-&gt;right = toHeightBST(nums, mid + 1, r);
+        return root;
+    }
+};
+
+</code></pre>
+
+</div>
+
+<p>
+一开始以为是树的高度的调整题，后来发现这个和 <b>用数组表示的树构造一棵树</b> 的做法差不多。
+</p>
+</div>
+                <p class="commentline">
+        
+    <a href="posts/leetcode108-convert-sorted-array-to-binary-search-tree/#disqus_thread" data-disqus-identifier="cache/posts/leetcode108-convert-sorted-array-to-binary-search-tree.html">Comments</a>
+
+
+        </p>
+</div>
+    </div>
+    <div class="post">
+        <h2 class="post-title"><a href="posts/leetcode937-reorder-data-in-log-files/">Leetcode937 Reorder Data in Log Files</a></h2>
+        <div class="post-meta">
+            2020-09-24 12:31
+        </div>
+        <div class="post-meta">
+                suzumiya natsuhi
+        </div>
+        <div class="post-content">
+                <div>
+<p>
+<a href="https://leetcode.com/problems/reorder-data-in-log-files/">937. Reorder Data in Log Files</a>
+</p>
+
+<p>
+<b>Solution</b>
+</p>
+
+<div class="org-src-container">
+
+<pre><code class="lang-C">
+class Solution {
+    public:
+        vector&lt;string&gt; reorderLogFiles(vector&lt;string&gt; &amp;logs) {
+            stable_sort(begin(logs), end(logs), [](auto &amp;a, auto &amp;b) {
+                auto A = 1 + a.find(' '), B = 1 + b.find(' ');
+                return a[A] &gt; '@' &amp;&amp;
+                    (b[B] &lt; '@' ||
+                     a.substr(A).append(a, 0, A) &lt; b.substr(B).append(b, 0, B));
+            });
+            return logs;
+        }
+};
+
+</code></pre>
+
+</div>
+
+<p>
+先找到 identifier 和后面部分的分隔点 <code>A</code> 和 <code>B</code> ，然后用 <code>'@'</code> 作为判断后面是数字还是字母的基准。ASCII 码表中， <code>'0'</code> 和 <code>'9'</code> 分别是 48 和 57 ， <code>'@'</code> 是 64 ， <code>'a'</code> 和 <code>'z'</code> 分别是 97 和 122 。 <code>return</code> 后的部分同时保证了 letter-logs 排在 digit-logs 的前面；后部分（数字或者字母）拼接 identifier 后用字典序排列，也即后部分如果恰好相同时， identifier dominating。
+</p>
+
+<p>
+这个写法是翻解答时看到的，比较简洁，如果熟悉 sort 的话也比较容易懂。sort 的关键还是后面的函数 <code>template&lt; class RandomIt, class Compare &gt; void stable_sort( RandomIt first, RandomIt last, Compare comp );</code> 。
+</p>
+</div>
+                <p class="commentline">
+        
+    <a href="posts/leetcode937-reorder-data-in-log-files/#disqus_thread" data-disqus-identifier="cache/posts/leetcode937-reorder-data-in-log-files.html">Comments</a>
+
+
+        </p>
+</div>
+    </div>
+
+        <nav class="postindexpager"><ul class="pager">
+<li class="previous">
+                <a href="index-8.html" rel="prev">Newer posts</a>
+            </li>
+            <li class="next">
+                <a href="index-6.html" rel="next">Older posts</a>
+            </li>
+        </ul></nav><script>var disqus_shortname="fpghwd-github-io";(function(){var a=document.createElement("script");a.async=true;a.src="https://"+disqus_shortname+".disqus.com/count.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(a)}());</script>
+</div>
+                <!--End of body content-->
+                <div style="clear:both;height:0;"></div>
+            </div>
+        </div>
+
+        <!-- Sidebar -->
+
+        <div class=" pure-u-6-24 pure_cell">
+            <div id="sidebar">
+                <div class="widget">
+                    <div id="search_bar">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="footer">
+        Contents © 2020         <a href="mailto:ggwdwhu@gmail.com">suzumiya natsuhi</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
+        
+    </div>
+
+    <!--FIXME: put these somewhere                            -->
+    <!--%if len(translations) > 1:-->
+    <!--<li>
+</li>-->
+    <!--%endif-->
+    <!--% if show_sourcelink:-->
+    <!---->
+    <!--%endif-->
+    <link href="assets/css/duoshuo.css" type="text/css" rel="stylesheet">
+<script src="assets/js/all-nocdn.js"></script><script>$('a.image-reference:not(.islink) img:not(.islink)').parent().colorbox({rel:"gal",maxWidth:"100%",maxHeight:"100%",scalePhotos:true});</script><!-- fancy dates --><script>
+    moment.locale("en");
+    fancydates(0, "YYYY-MM-DD HH:mm");
+    </script><!-- end fancy dates -->
+</div>
+</div>
+</body>
+</html>

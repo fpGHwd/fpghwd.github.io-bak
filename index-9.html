@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="Stay open">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>wd's blog (old posts, page 9) | wd's blog</title>
+<link href="assets/css/theme.css" type="text/css" rel="stylesheet">
+<link href="assets/css/pure.css" type="text/css" rel="stylesheet">
+<link href="assets/css/style.css" type="text/css" rel="stylesheet">
+<meta name="theme-color" content="#5670d4">
+<meta name="generator" content="Nikola (getnikola.com)">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="rss.xml">
+<link rel="canonical" href="https://fpghwd.github.io/index-9.html">
+<link rel="prev" href="index-10.html" type="text/html">
+<link rel="next" href="index-8.html" type="text/html">
+<!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]-->
+</head>
+<body>
+<div class="body_container">
+    <div id="header">
+        <div class="site-name">
+                <h1>wd's blog</h1>
+        </div>
+
+        <div id="nav-menu">
+            <div class="bitcron_nav_container">
+                <div class="bitcron_nav">
+                    <div class="site_nav_wrap">
+                        <ul class="site_nav sm sm-base">
+<li><a href="archive.html" class="nav__item">Archive</a></li>
+            <li><a href="categories/" class="nav__item">Tags</a></li>
+            <li><a href="rss.xml" class="nav__item">RSS feed</a></li>
+
+                            
+                        </ul>
+<div class="clear clear_nav_inline_end"></div>
+                    </div>
+                </div>
+                <div class="clear clear_nav_end"></div>
+            </div>
+        </div>
+    </div>
+    <div id="layout">
+        <div class="pure-g">
+            <div class=" pure-u-24-24 pure-u-sm-24-24 pure-u-md-18-24 pure_cell">
+                <div class="content_container">
+                    <!--Body content-->
+                    <div class="row">
+                        
+                        
+
+    
+    <div class="post">
+        <h2 class="post-title"><a href="posts/leetcode/">Leetcode599. Minimum Index Sum of Two Lists</a></h2>
+        <div class="post-meta">
+            2020-09-25 09:06
+        </div>
+        <div class="post-meta">
+                suzumiya natsuhi
+        </div>
+        <div class="post-content">
+                <div>
+<p>
+<a href="https://leetcode.com/problems/minimum-index-sum-of-two-lists/">599. Minimum Index Sum of Two Lists</a>
+</p>
+
+<p>
+<b>Solution</b>
+</p>
+
+<div class="org-src-container">
+
+<pre><code class="lang-C">
+class Solution {
+  public:
+    vector&lt;string&gt; findRestaurant(vector&lt;string&gt; &amp;list1,
+                                  vector&lt;string&gt; &amp;list2) {
+        unordered_map&lt;string, int&gt; umsi;
+        for (int i = 0; i &lt; list1.size(); i++) {
+            umsi[list1[i]] = i;
+        }
+
+        int idx_sum = INT_MAX;
+        vector&lt;string&gt; vsr;
+        for (int i = 0; i &lt; list2.size(); i++) {
+            if (umsi.find(list2[i]) != umsi.end()) {
+                if (idx_sum &gt; i + umsi[list2[i]]) {
+                    vsr.clear();
+                    vsr.push_back(list2[i]);
+                    idx_sum = i + umsi[list2[i]];
+                } else if (idx_sum == i + umsi[list2[i]]) {
+                    vsr.push_back(list2[i]);
+                }
+            }
+        }
+
+        return vsr;
+    }
+};
+
+
+</code></pre>
+
+</div>
+
+<div class="org-src-container">
+
+<pre><code class="lang-html">
+Status: Accepted (133/133)
+
+Runtime: 104 ms, faster than 98.98% of C++ submissions.
+
+Memory Usage: 36.9 MB, less than 63.53% of C++ submissions.
+
+</code></pre>
+
+</div>
+</div>
+                <p class="commentline">
+        
+    <a href="posts/leetcode/#disqus_thread" data-disqus-identifier="cache/posts/leetcode.html">Comments</a>
+
+
+        </p>
+</div>
+    </div>
+    <div class="post">
+        <h2 class="post-title"><a href="posts/leetcode617-merge-two-binary-trees/">Leetcode617. Merge Two Binary Trees</a></h2>
+        <div class="post-meta">
+            2020-09-25 08:54
+        </div>
+        <div class="post-meta">
+                suzumiya natsuhi
+        </div>
+        <div class="post-content">
+                <div>
+<p>
+<a href="https://leetcode.com/problems/merge-two-binary-trees/">617. Merge Two Binary Trees</a>
+</p>
+
+<p>
+<b>Solution</b>
+</p>
+
+<div class="org-src-container">
+
+<pre><code class="lang-C">
+/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left),
+ * right(right) {}
+ * };
+ */
+class Solution {
+  public:
+    TreeNode *mergeTrees(TreeNode *t1, TreeNode *t2) {
+        if (t1 == NULL &amp;&amp; t2 == NULL)
+            return NULL;
+        TreeNode *t3 = new TreeNode((t1 == NULL ? 0 : t1-&gt;val) +
+                                    (t2 == NULL ? 0 : t2-&gt;val));
+        t3-&gt;left = mergeTrees(t1 == NULL ? NULL : t1-&gt;left,
+                              t2 == NULL ? NULL : t2-&gt;left);
+        t3-&gt;right = mergeTrees(t1 == NULL ? NULL : t1-&gt;right,
+                               t2 == NULL ? NULL : t2-&gt;right);
+        return t3;
+    }
+};
+
+</code></pre>
+
+</div>
+
+<div class="org-src-container">
+
+<pre><code class="lang-html">
+Status: Accepted (183/183)
+
+Runtime: 56 ms, faster than 47.43% of C++ submissions.
+
+Memory Usage: 35.7 MB, less than 5.05% of C++ submissions.
+
+</code></pre>
+
+</div>
+</div>
+                <p class="commentline">
+        
+    <a href="posts/leetcode617-merge-two-binary-trees/#disqus_thread" data-disqus-identifier="cache/posts/leetcode617-merge-two-binary-trees.html">Comments</a>
+
+
+        </p>
+</div>
+    </div>
+    <div class="post">
+        <h2 class="post-title"><a href="posts/leetcode668-employee-importance/">Leetcode668. Employee Importance</a></h2>
+        <div class="post-meta">
+            2020-09-25 08:15
+        </div>
+        <div class="post-meta">
+                suzumiya natsuhi
+        </div>
+        <div class="post-content">
+                <div>
+<p>
+<a href="https://leetcode.com/problems/employee-importance/">690. Employee Importance</a>
+</p>
+
+<div class="org-src-container">
+
+<pre><code class="lang-C">
+/*
+// Definition for Employee.
+class Employee {
+public:
+    int id;
+    int importance;
+    vector&lt;int&gt; subordinates;
+};
+*/
+
+class Solution {
+  public:
+    int getImportance(vector&lt;Employee *&gt; employees, int id) {
+
+        unordered_map&lt;int, Employee *&gt; umii;
+        for (Employee *e : employees) {
+            umii[e-&gt;id] = e;
+        }
+
+        int importance = 0;
+        queue&lt;int&gt; qi;
+        qi.push(id);
+
+        int tmp;
+        while (!qi.empty()) {
+            tmp = qi.front();
+            importance += umii[tmp]-&gt;importance;
+            qi.pop();
+            for (int i : umii[tmp]-&gt;subordinates)
+                qi.push(i);
+        }
+
+        return importance;
+    }
+};
+
+
+</code></pre>
+
+</div>
+
+<div class="org-src-container">
+
+<pre><code class="lang-html">
+Status: Accepted (108/108)
+
+Runtime: 36 ms, faster than 92.63% of C++ submissions.
+
+Memory Usage: 14.4 MB, less than 27.87% of C++ submissions.
+
+</code></pre>
+
+</div>
+</div>
+                <p class="commentline">
+        
+    <a href="posts/leetcode668-employee-importance/#disqus_thread" data-disqus-identifier="cache/posts/leetcode668-employee-importance.html">Comments</a>
+
+
+        </p>
+</div>
+    </div>
+
+        <nav class="postindexpager"><ul class="pager">
+<li class="previous">
+                <a href="index-10.html" rel="prev">Newer posts</a>
+            </li>
+            <li class="next">
+                <a href="index-8.html" rel="next">Older posts</a>
+            </li>
+        </ul></nav><script>var disqus_shortname="fpghwd-github-io";(function(){var a=document.createElement("script");a.async=true;a.src="https://"+disqus_shortname+".disqus.com/count.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(a)}());</script>
+</div>
+                <!--End of body content-->
+                <div style="clear:both;height:0;"></div>
+            </div>
+        </div>
+
+        <!-- Sidebar -->
+
+        <div class=" pure-u-6-24 pure_cell">
+            <div id="sidebar">
+                <div class="widget">
+                    <div id="search_bar">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="footer">
+        Contents © 2020         <a href="mailto:ggwdwhu@gmail.com">suzumiya natsuhi</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
+        
+    </div>
+
+    <!--FIXME: put these somewhere                            -->
+    <!--%if len(translations) > 1:-->
+    <!--<li>
+</li>-->
+    <!--%endif-->
+    <!--% if show_sourcelink:-->
+    <!---->
+    <!--%endif-->
+    <link href="assets/css/duoshuo.css" type="text/css" rel="stylesheet">
+<script src="assets/js/all-nocdn.js"></script><script>$('a.image-reference:not(.islink) img:not(.islink)').parent().colorbox({rel:"gal",maxWidth:"100%",maxHeight:"100%",scalePhotos:true});</script><!-- fancy dates --><script>
+    moment.locale("en");
+    fancydates(0, "YYYY-MM-DD HH:mm");
+    </script><!-- end fancy dates -->
+</div>
+</div>
+</body>
+</html>
