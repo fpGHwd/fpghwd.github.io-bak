@@ -115,14 +115,32 @@ configure
 
 <ol class="org-ol">
 <li><p>
-启动的时候如果报错 <code>comp-deferred-compilation-black-list</code>
+<code>启动的时候如果报错</code>
+</p>
+
+<p>
+<code>comp-deferred-compilation-black-list</code>
 </p>
 
 <p>
 然后找到<a href="https://github.com/hlissner/doom-emacs/issues/4316">这里</a>解决：注释掉 <code>.emacs.d/core/core.el</code> 里面的一个过程 <code>(add-to-list 'comp-deferred-compilation-black-list entry)</code>
 </p></li>
 
-<li>现在已经修复，直接 <code>doom upgrade -f</code> 并且 <code>doom sync</code> 最后 <code>doom run --version</code> 查看 emacs 版本即可。最后运行 <code>doom run</code> 。</li>
+<li><p>
+doom build and run
+</p>
+
+<p>
+升级 doom ，包含 doom build 过程 <code>doom upgrade</code>
+</p>
+
+<p>
+查看 doom 是否是使用 emacs 28 版本 <code>doom run --version</code>
+</p>
+
+<p>
+若确认是 emacs 28 版本，就可运行 <code>doom run</code>
+</p></li>
 </ol></li>
 
 <li><p>

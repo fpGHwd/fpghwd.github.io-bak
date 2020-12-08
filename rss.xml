@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>wd's blog</title><link>https://fpghwd.github.io/</link><description>Stay open</description><atom:link href="https://fpghwd.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;suzumiya natsuhi&lt;/a&gt; </copyright><lastBuildDate>Tue, 08 Dec 2020 06:01:00 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>《被讨厌的勇气》和宁静祷文</title><link>https://fpghwd.github.io/posts/bei-tao-yan-de-yong-qi-he-ning-jing-dao-wen/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;ul class="org-ul"&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>wd's blog</title><link>https://fpghwd.github.io/</link><description>Stay open</description><atom:link href="https://fpghwd.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;suzumiya natsuhi&lt;/a&gt; </copyright><lastBuildDate>Tue, 08 Dec 2020 06:06:16 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>《被讨厌的勇气》和宁静祷文</title><link>https://fpghwd.github.io/posts/bei-tao-yan-de-yong-qi-he-ning-jing-dao-wen/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;ul class="org-ul"&gt;
 &lt;li&gt;&lt;p&gt;
 被讨厌的勇气
 &lt;/p&gt;
@@ -396,14 +396,32 @@ configure
 
 &lt;ol class="org-ol"&gt;
 &lt;li&gt;&lt;p&gt;
-启动的时候如果报错 &lt;code&gt;comp-deferred-compilation-black-list&lt;/code&gt;
+&lt;code&gt;启动的时候如果报错&lt;/code&gt;
+&lt;/p&gt;
+
+&lt;p&gt;
+&lt;code&gt;comp-deferred-compilation-black-list&lt;/code&gt;
 &lt;/p&gt;
 
 &lt;p&gt;
 然后找到&lt;a href="https://github.com/hlissner/doom-emacs/issues/4316"&gt;这里&lt;/a&gt;解决：注释掉 &lt;code&gt;.emacs.d/core/core.el&lt;/code&gt; 里面的一个过程 &lt;code&gt;(add-to-list 'comp-deferred-compilation-black-list entry)&lt;/code&gt;
 &lt;/p&gt;&lt;/li&gt;
 
-&lt;li&gt;现在已经修复，直接 &lt;code&gt;doom upgrade -f&lt;/code&gt; 并且 &lt;code&gt;doom sync&lt;/code&gt; 最后 &lt;code&gt;doom run --version&lt;/code&gt; 查看 emacs 版本即可。最后运行 &lt;code&gt;doom run&lt;/code&gt; 。&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;
+doom build and run
+&lt;/p&gt;
+
+&lt;p&gt;
+升级 doom ，包含 doom build 过程 &lt;code&gt;doom upgrade&lt;/code&gt;
+&lt;/p&gt;
+
+&lt;p&gt;
+查看 doom 是否是使用 emacs 28 版本 &lt;code&gt;doom run --version&lt;/code&gt;
+&lt;/p&gt;
+
+&lt;p&gt;
+若确认是 emacs 28 版本，就可运行 &lt;code&gt;doom run&lt;/code&gt;
+&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;&lt;/li&gt;
 
 &lt;li&gt;&lt;p&gt;
