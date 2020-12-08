@@ -71,6 +71,22 @@ configure
 
 <ol class="org-ol">
 <li><p>
+下载 emacs
+</p>
+
+<p>
+克隆 emacs 仓库 <code>git clone https://github.com/emacs-mirror/emacs</code>
+</p>
+
+<p>
+进入 emacs 目录 <code>cd emacs</code>
+</p>
+
+<p>
+切换到 native-comp 分枝 <code>git checkout feature/native-comp</code>
+</p></li>
+
+<li><p>
 进入 emacs 目录后运行 autogen.sh
 </p>
 

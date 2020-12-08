@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>wd's blog</title><link>https://fpghwd.github.io/</link><description>Stay open</description><atom:link href="https://fpghwd.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;suzumiya natsuhi&lt;/a&gt; </copyright><lastBuildDate>Tue, 08 Dec 2020 05:53:02 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>《被讨厌的勇气》和宁静祷文</title><link>https://fpghwd.github.io/posts/bei-tao-yan-de-yong-qi-he-ning-jing-dao-wen/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;ul class="org-ul"&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>wd's blog</title><link>https://fpghwd.github.io/</link><description>Stay open</description><atom:link href="https://fpghwd.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;suzumiya natsuhi&lt;/a&gt; </copyright><lastBuildDate>Tue, 08 Dec 2020 06:01:00 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>《被讨厌的勇气》和宁静祷文</title><link>https://fpghwd.github.io/posts/bei-tao-yan-de-yong-qi-he-ning-jing-dao-wen/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;ul class="org-ul"&gt;
 &lt;li&gt;&lt;p&gt;
 被讨厌的勇气
 &lt;/p&gt;
@@ -351,6 +351,22 @@ configure
 &lt;li&gt;编译 emacs
 
 &lt;ol class="org-ol"&gt;
+&lt;li&gt;&lt;p&gt;
+下载 emacs
+&lt;/p&gt;
+
+&lt;p&gt;
+克隆 emacs 仓库 &lt;code&gt;git clone https://github.com/emacs-mirror/emacs&lt;/code&gt;
+&lt;/p&gt;
+
+&lt;p&gt;
+进入 emacs 目录 &lt;code&gt;cd emacs&lt;/code&gt;
+&lt;/p&gt;
+
+&lt;p&gt;
+切换到 native-comp 分枝 &lt;code&gt;git checkout feature/native-comp&lt;/code&gt;
+&lt;/p&gt;&lt;/li&gt;
+
 &lt;li&gt;&lt;p&gt;
 进入 emacs 目录后运行 autogen.sh
 &lt;/p&gt;
