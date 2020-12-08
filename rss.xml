@@ -1,5 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>wd's blog</title><link>https://fpghwd.github.io/</link><description>Stay open</description><atom:link href="https://fpghwd.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;suzumiya natsuhi&lt;/a&gt; </copyright><lastBuildDate>Thu, 03 Dec 2020 12:27:39 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>《第六感生死缘》</title><link>https://fpghwd.github.io/posts/di-liu-gan-sheng-si-yuan/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>wd's blog</title><link>https://fpghwd.github.io/</link><description>Stay open</description><atom:link href="https://fpghwd.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;suzumiya natsuhi&lt;/a&gt; </copyright><lastBuildDate>Tue, 08 Dec 2020 05:50:38 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>《被讨厌的勇气》和宁静祷文</title><link>https://fpghwd.github.io/posts/bei-tao-yan-de-yong-qi-he-ning-jing-dao-wen/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;ul class="org-ul"&gt;
+&lt;li&gt;&lt;p&gt;
+被讨厌的勇气
+&lt;/p&gt;
+
+&lt;p&gt;
+正如本书的核心之一“课题分离”所建议的，其实“被讨厌的勇气”就是“课题分离”一个非常重要的形式。例如：讨厌是我不能决定的事情，也就是对方的课题，但是有勇气是我的课题。我插手你的课题让你不讨厌我其实是没有意义的（也就是我不能插手别人的课题），同时自己的课题“勇气”需要自己来解决。从这一点上来看，标题和阿德勒核心的指导思想是一致的，只不过用另一种形式来展现而已。
+&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;
+自己的课题和别人的课题
+&lt;/p&gt;
+
+&lt;p&gt;
+认识到这两个概念的本身，就会激发人的课题“分离”意识。这就很像软件工程界的 Decoupling （解耦）。当确认是了之后，就对于自己的课题，可以毫无保留的全力以赴；但是对于别人的课题则要慎之又慎，不可插手。
+&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;
+“分离”的智慧与宁静祷文
+&lt;/p&gt;
+
+&lt;p&gt;
+以下是宁静祷文的内容：
+&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;
+
+&lt;/p&gt;
+
+&lt;p&gt;
+上帝，请赐予我接受不能改变之事的平静，
+和我可以改变事情的勇气，
+以及区分这两者的智慧。
+&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;
+智慧就是区分本身，拥有智慧的人同时会拥有内心的宁静和改变的勇气。
+&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;</description><category>mind</category><guid>https://fpghwd.github.io/posts/bei-tao-yan-de-yong-qi-he-ning-jing-dao-wen/</guid><pubDate>Mon, 07 Dec 2020 21:50:30 GMT</pubDate></item><item><title>《第六感生死缘》</title><link>https://fpghwd.github.io/posts/di-liu-gan-sheng-si-yuan/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
 电影开场 10 分钟飞机上，Susan 和父亲 William 进行了如下对话：
 &lt;/p&gt;
 
@@ -501,44 +541,4 @@ Memory Usage: 7.8 MB, less than 16.96% of C++ submissions.
 
 &lt;p&gt;
 第一次做的时候没想那么多，暴力的做法。后来做的时候就想到这是将链表的导致的前插和尾插组合在一起的题。并不难，只要分别搞清楚这两种写法就能写出来。
-&lt;/p&gt;&lt;/div&gt;</description><category>leetcode</category><guid>https://fpghwd.github.io/posts/leetcode92-reverse-linked-list-ii/</guid><pubDate>Mon, 05 Oct 2020 02:04:08 GMT</pubDate></item><item><title>Leetcode96. Unique Binary Search Trees</title><link>https://fpghwd.github.io/posts/leetcode96-unique-binary-search-trees/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
-&lt;a href="https://leetcode.com/problems/unique-binary-search-trees/"&gt;96. Unique Binary Search Trees&lt;/a&gt;
-&lt;/p&gt;
-
-&lt;p&gt;
-&lt;b&gt;Solution&lt;/b&gt;
-&lt;/p&gt;
-
-&lt;div class="org-src-container"&gt;
-
-&lt;pre&gt;&lt;code class="lang-C"&gt;class Solution {
-  public:
-    int numTrees(int n) {
-        if (n == 0 || n == 1)return 1;
-
-        int count = 0;
-        for (int i = 1; i &amp;lt;= n; i++)count += numTrees(i - 1) * numTrees(n - i);
-
-        return count;
-    }
-};
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;/div&gt;
-
-&lt;div class="org-src-container"&gt;
-
-&lt;pre&gt;&lt;code class="lang-html"&gt;
-Status: Accepted (19/19)
-
-Runtime: 1220 ms, faster than 11.92% of C++ submissions.
-
-Memory Usage: 6 MB, less than 59.10% of C++ submissions.
-
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;/div&gt;
-
-&lt;p&gt;
-用 DP 做更快一点，但递归对理解更友好些。反过来， DP 不就是递归的递推公式的代数形式嘛。能用递归就做出来的事情，就不需要迭代了，毕竟&lt;a href="http://algosaur.us/recursion/"&gt;“To iterate is human, to recurse, divine”&lt;/a&gt;. 能请神去做的事情，就不要麻烦人啦。
-&lt;/p&gt;&lt;/div&gt;</description><category>leetcode</category><guid>https://fpghwd.github.io/posts/leetcode96-unique-binary-search-trees/</guid><pubDate>Wed, 30 Sep 2020 20:39:40 GMT</pubDate></item></channel></rss>
+&lt;/p&gt;&lt;/div&gt;</description><category>leetcode</category><guid>https://fpghwd.github.io/posts/leetcode92-reverse-linked-list-ii/</guid><pubDate>Mon, 05 Oct 2020 02:04:08 GMT</pubDate></item></channel></rss>

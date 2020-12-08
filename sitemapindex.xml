@@ -54,6 +54,10 @@
   <lastmod>2020-11-26T09:53:00Z</lastmod>
  </sitemap>
  <sitemap>
+  <loc>https://fpghwd.github.io/categories/mind.xml</loc>
+  <lastmod>2020-12-08T05:50:00Z</lastmod>
+ </sitemap>
+ <sitemap>
   <loc>https://fpghwd.github.io/categories/nikola.xml</loc>
   <lastmod>2020-07-28T12:26:00Z</lastmod>
  </sitemap>
@@ -79,10 +83,10 @@
  </sitemap>
  <sitemap>
   <loc>https://fpghwd.github.io/rss.xml</loc>
-  <lastmod>2020-12-03T12:27:00Z</lastmod>
+  <lastmod>2020-12-08T05:50:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://fpghwd.github.io/sitemap.xml</loc>
-  <lastmod>2020-12-03T12:30:00Z</lastmod>
+  <lastmod>2020-12-08T05:50:00Z</lastmod>
  </sitemap>
 </sitemapindex>
