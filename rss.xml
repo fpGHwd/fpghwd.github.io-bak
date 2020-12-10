@@ -1,5 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>wd's blog</title><link>https://fpghwd.github.io/</link><description>Stay open</description><atom:link href="https://fpghwd.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;suzumiya natsuhi&lt;/a&gt; </copyright><lastBuildDate>Tue, 08 Dec 2020 06:13:34 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>《被讨厌的勇气》和宁静祷文</title><link>https://fpghwd.github.io/posts/bei-tao-yan-de-yong-qi-he-ning-jing-dao-wen/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;ul class="org-ul"&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>wd's blog</title><link>https://fpghwd.github.io/</link><description>Stay open</description><atom:link href="https://fpghwd.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;suzumiya natsuhi&lt;/a&gt; </copyright><lastBuildDate>Thu, 10 Dec 2020 10:24:01 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Emacs 使用感受</title><link>https://fpghwd.github.io/posts/emacs-shi-yong-gan-shou/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
+不知不觉使用 emacs 已经有两年了。其实一开始看 Emacs 那篇自带的极短的介绍要更早一点，现在看当时的那种喜悦的感觉（用上了众多名人都推荐的软件）更多的是 naive 和开心。
+&lt;/p&gt;
+
+&lt;p&gt;
+后来从开始使用无配置的 emacs ，然后用 Spacemacs 的时候有眼前有一亮的感觉。然后逐渐学习使用 org-mode 并且针对 org-mode 进行自己的配置，也收获了很多开心的时光。
+&lt;/p&gt;
+
+&lt;p&gt;
+慢慢的又转向使用 doom-emacs 感觉又有眼前一亮的感觉，主要是启动速度更快了，然后基本上开箱即用。然后也学到一些自己配置的方法，虽然 spacemacs 也可以自定义，但是启动一次还是蛮长的。
+&lt;/p&gt;
+
+&lt;p&gt;
+然后逐渐学到了 org-roam, org-download, org-capture, org-pdftool 等等都是很好用的插件。不过现在已经很少纠结于配置了，现在的已经够用了。
+&lt;/p&gt;
+
+&lt;p&gt;
+Emacs loves you~
+&lt;/p&gt;&lt;/div&gt;</description><category>emacs</category><guid>https://fpghwd.github.io/posts/emacs-shi-yong-gan-shou/</guid><pubDate>Thu, 10 Dec 2020 02:23:53 GMT</pubDate></item><item><title>《被讨厌的勇气》和宁静祷文</title><link>https://fpghwd.github.io/posts/bei-tao-yan-de-yong-qi-he-ning-jing-dao-wen/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;ul class="org-ul"&gt;
 &lt;li&gt;&lt;p&gt;
 被讨厌的勇气
 &lt;/p&gt;
@@ -501,78 +519,4 @@ datetree, use "~/org/datetree.org::datetree/".
 
 &lt;p&gt;
 可以把日记和归档的条目都放到一个文件，归档也不会经常去动，只需要看的时候搜索一下就行。
-&lt;/p&gt;&lt;/div&gt;</description><category>ATTACH</category><category>emacs</category><guid>https://fpghwd.github.io/posts/org-archive-location/</guid><pubDate>Fri, 16 Oct 2020 03:32:18 GMT</pubDate></item><item><title>Leetcode92. Reverse Linked List II</title><link>https://fpghwd.github.io/posts/leetcode92-reverse-linked-list-ii/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
-&lt;a href="https://leetcode.com/problems/reverse-linked-list-ii/"&gt;92. Reverse Linked List II&lt;/a&gt;
-&lt;/p&gt;
-
-&lt;p&gt;
-&lt;b&gt;Solution&lt;/b&gt;
-&lt;/p&gt;
-
-&lt;div class="org-src-container"&gt;
-
-&lt;pre&gt;&lt;code class="lang-C"&gt;
-/**
- * Definition for singly-linked list.
- * struct ListNode {
- *     int val;
- *     ListNode *next;
- *     ListNode() : val(0), next(nullptr) {}
- *     ListNode(int x) : val(x), next(nullptr) {}
- *     ListNode(int x, ListNode *next) : val(x), next(next) {}
- * };
- */
-class Solution {
-  public:
-    ListNode *reverseBetween(ListNode *head, int m, int n) {
-        if (m == n) // 当 m = n 时并没有变化
-            return head;
-
-        int i = 1;
-        ListNode *psuedo_head = new ListNode(), *pre = psuedo_head, *n_pre;
-
-        for (ListNode *w = head; w;) {
-            if (i &amp;lt;= m || i &amp;gt; n) {
-                if (i == m)
-                    n_pre = w;
-                pre-&amp;gt;next = w;
-                if (i != m)
-                    pre = w;
-                w = w-&amp;gt;next;
-            } else if (i &amp;gt; m &amp;amp;&amp;amp; i &amp;lt;= n) {
-                ListNode *tmp = w;
-                w = w-&amp;gt;next;
-                tmp-&amp;gt;next = pre-&amp;gt;next;
-                pre-&amp;gt;next = tmp;
-                if (i == n)
-                    pre = n_pre;
-            }
-            i++;
-        }
-
-        pre-&amp;gt;next = nullptr; // 尾节点后续是 null
-
-        return psuedo_head-&amp;gt;next;
-    }
-};
-
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;/div&gt;
-
-&lt;div class="org-src-container"&gt;
-
-&lt;pre&gt;&lt;code class="lang-html"&gt;
-Status: Accepted (44/44)
-
-Runtime: 4 ms, faster than 64.43% of C++ submissions.
-
-Memory Usage: 7.8 MB, less than 16.96% of C++ submissions.
-
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;/div&gt;
-
-&lt;p&gt;
-第一次做的时候没想那么多，暴力的做法。后来做的时候就想到这是将链表的导致的前插和尾插组合在一起的题。并不难，只要分别搞清楚这两种写法就能写出来。
-&lt;/p&gt;&lt;/div&gt;</description><category>leetcode</category><guid>https://fpghwd.github.io/posts/leetcode92-reverse-linked-list-ii/</guid><pubDate>Mon, 05 Oct 2020 02:04:08 GMT</pubDate></item></channel></rss>
+&lt;/p&gt;&lt;/div&gt;</description><category>ATTACH</category><category>emacs</category><guid>https://fpghwd.github.io/posts/org-archive-location/</guid><pubDate>Fri, 16 Oct 2020 03:32:18 GMT</pubDate></item></channel></rss>

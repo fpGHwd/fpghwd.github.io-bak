@@ -1,5 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>wd's blog (Posts about emacs)</title><link>https://fpghwd.github.io/</link><description></description><atom:link href="https://fpghwd.github.io/categories/emacs.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;suzumiya natsuhi&lt;/a&gt; </copyright><lastBuildDate>Tue, 08 Dec 2020 06:13:34 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>linux 平台下 emacs native-comp 分支编译</title><link>https://fpghwd.github.io/posts/linux-ping-tai-xia-emacs-native-comp-fen-zhi-bian-yi/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;ul class="org-ul"&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>wd's blog (Posts about emacs)</title><link>https://fpghwd.github.io/</link><description></description><atom:link href="https://fpghwd.github.io/categories/emacs.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;suzumiya natsuhi&lt;/a&gt; </copyright><lastBuildDate>Thu, 10 Dec 2020 10:24:01 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Emacs 使用感受</title><link>https://fpghwd.github.io/posts/emacs-shi-yong-gan-shou/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
+不知不觉使用 emacs 已经有两年了。其实一开始看 Emacs 那篇自带的极短的介绍要更早一点，现在看当时的那种喜悦的感觉（用上了众多名人都推荐的软件）更多的是 naive 和开心。
+&lt;/p&gt;
+
+&lt;p&gt;
+后来从开始使用无配置的 emacs ，然后用 Spacemacs 的时候有眼前有一亮的感觉。然后逐渐学习使用 org-mode 并且针对 org-mode 进行自己的配置，也收获了很多开心的时光。
+&lt;/p&gt;
+
+&lt;p&gt;
+慢慢的又转向使用 doom-emacs 感觉又有眼前一亮的感觉，主要是启动速度更快了，然后基本上开箱即用。然后也学到一些自己配置的方法，虽然 spacemacs 也可以自定义，但是启动一次还是蛮长的。
+&lt;/p&gt;
+
+&lt;p&gt;
+然后逐渐学到了 org-roam, org-download, org-capture, org-pdftool 等等都是很好用的插件。不过现在已经很少纠结于配置了，现在的已经够用了。
+&lt;/p&gt;
+
+&lt;p&gt;
+Emacs loves you~
+&lt;/p&gt;&lt;/div&gt;</description><category>emacs</category><guid>https://fpghwd.github.io/posts/emacs-shi-yong-gan-shou/</guid><pubDate>Thu, 10 Dec 2020 02:23:53 GMT</pubDate></item><item><title>linux 平台下 emacs native-comp 分支编译</title><link>https://fpghwd.github.io/posts/linux-ping-tai-xia-emacs-native-comp-fen-zhi-bian-yi/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;ul class="org-ul"&gt;
 &lt;li&gt;编译 libgccjit
 
 &lt;ol class="org-ol"&gt;
