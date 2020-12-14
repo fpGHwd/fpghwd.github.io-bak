@@ -15,7 +15,7 @@
  </sitemap>
  <sitemap>
   <loc>https://fpghwd.github.io/categories/attach.xml</loc>
-  <lastmod>2020-12-14T12:11:00Z</lastmod>
+  <lastmod>2020-12-14T13:24:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://fpghwd.github.io/categories/blog.xml</loc>
@@ -47,11 +47,15 @@
  </sitemap>
  <sitemap>
   <loc>https://fpghwd.github.io/categories/life.xml</loc>
-  <lastmod>2020-12-14T11:54:00Z</lastmod>
+  <lastmod>2020-12-14T13:24:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://fpghwd.github.io/categories/makefile.xml</loc>
   <lastmod>2020-11-26T09:53:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>https://fpghwd.github.io/categories/mathjax.xml</loc>
+  <lastmod>2020-12-14T13:24:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://fpghwd.github.io/categories/mind.xml</loc>
@@ -83,10 +87,10 @@
  </sitemap>
  <sitemap>
   <loc>https://fpghwd.github.io/rss.xml</loc>
-  <lastmod>2020-12-14T12:11:00Z</lastmod>
+  <lastmod>2020-12-14T13:24:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://fpghwd.github.io/sitemap.xml</loc>
-  <lastmod>2020-12-14T12:11:00Z</lastmod>
+  <lastmod>2020-12-14T13:24:00Z</lastmod>
  </sitemap>
 </sitemapindex>
