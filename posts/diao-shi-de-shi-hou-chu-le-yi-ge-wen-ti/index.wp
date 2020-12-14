@@ -6,11 +6,9 @@
 一个 gdb 调试的问题，没太看明白（暴哭）：
 </p>
 
-
-<div class="figure">
-<p><img src="https://raw.githubusercontent.com/fpGHwd/fpghwd.github.io/master/images/_20200925_132117screenshot.png" alt="_20200925_132117screenshot.png" />
+<p>
+<a href="https://raw.githubusercontent.com/fpGHwd/fpghwd.github.io/master/images/_20200925_132117screenshot.png">gdb 调试</a>
 </p>
-</div>
 
 <p>
 想到可能是类型的问题： <code>size_type</code> 是一个无符号的整数， <code>int</code> 是有符号整数，有符号整数首先转换成无符号整数。 <code>-1</code> 转化成 <code>0xffffffff</code> ，所以应该是没有问题的。虽然是自己偷懒设置了一个 -1 索引的变量其实是为了后面 for 能从 0 开始遍历。如果从初始值设置为 0 的话应该不会出这样的问题。
