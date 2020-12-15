@@ -1,5 +1,5 @@
 <p>
-在使用 emacs 编辑一个很多的 headlines 的 org 文件时，如果每个 headline 下的内容需要交叉查看和参考的时候，我就非常需要一个单独的 windows 仅显示一个 headline 下的所有内容，所以必须用到 <code>org-narrow-to-subtree</code> 这个函数。
+在使用 emacs 编辑一个很多的 headlines 的 org 文件时，如果每个 headline 下的内容需要交叉查看和编辑的时候，我就非常需要一个单独的 windows(emacs 下的窗口，下均同) 仅显示一个 headline 下的所有内容，所以必须用到 <code>org-narrow-to-subtree</code> 这个函数。
 </p>
 
 <p>
@@ -7,7 +7,7 @@
 </p>
 
 <p>
-然后在不通的 windows 中打开相同文件的不同 buffer ，可以看到这个文件的不同 headlines ，进而使用对不同的 headline 使用 <code>org-narrow-to-subtree</code> 来实现“在不同的 windows 里面查看一个文件中不同 headlines 的 <code>org-narrow-subtree</code> ”。
+然后在不同的 windows 中打开相同文件的不同 buffer ，可以看到这个文件的不同 headlines ，进而使用对不同的 headline 使用 <code>org-narrow-to-subtree</code> 来实现“在不同的 windows 里面查看一个文件中不同 headlines 的 <code>org-narrow-subtree</code> ”。
 </p>
 
 <p>
