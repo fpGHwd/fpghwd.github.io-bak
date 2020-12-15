@@ -1,5 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>wd's blog</title><link>https://fpghwd.github.io/</link><description>Stay open</description><atom:link href="https://fpghwd.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;suzumiya natsuhi&lt;/a&gt; </copyright><lastBuildDate>Tue, 15 Dec 2020 08:04:32 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>第一场雪</title><link>https://fpghwd.github.io/posts/di-yi-chang-xue/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>wd's blog</title><link>https://fpghwd.github.io/</link><description>Stay open</description><atom:link href="https://fpghwd.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;suzumiya natsuhi&lt;/a&gt; </copyright><lastBuildDate>Tue, 15 Dec 2020 08:10:38 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Emacs open several windows with specific org narrowed headline</title><link>https://fpghwd.github.io/posts/emacs-open-several-windows-with-specific-org-narrowed-headline/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
+在使用 emacs 编辑一个很多的 headlines 的 org 文件时，如果每个 headline 下的内容需要交叉查看和参考的时候，我就非常需要一个单独的 windows 仅显示一个 headline 下的所有内容，所以必须用到 &lt;code&gt;org-narrow-to-subtree&lt;/code&gt; 这个函数。
+&lt;/p&gt;
+
+&lt;p&gt;
+但是在第一次使用这个函数后，就无法看到其他的 headlines ，所以想在多个窗口中打开多个 headlines 仅使用 &lt;code&gt;org-narrow-to-subtree&lt;/code&gt; 是不够的。好在有了 &lt;code&gt;clone-indirect-buffer&lt;/code&gt; 可以复制一个当前文件的 buffer 。一般情况下，在使用 emacs 打开文件的时候，我们只能在将一个文件绑定在一个 buffer 中，这个函数可以让我们将一个文件绑定在多个 buffer 中。
+&lt;/p&gt;
+
+&lt;p&gt;
+然后在不通的 windows 中打开相同文件的不同 buffer ，可以看到这个文件的不同 headlines ，进而使用对不同的 headline 使用 &lt;code&gt;org-narrow-to-subtree&lt;/code&gt; 来实现“在不同的 windows 里面查看一个文件中不同 headlines 的 &lt;code&gt;org-narrow-subtree&lt;/code&gt; ”。
+&lt;/p&gt;
+
+&lt;p&gt;
+这个功能对于我来说很实用，尤其是对一个比较长的， subtree 又比较多的 org 文件中同时查看和编辑多个 headline 的情况下尤其有用。
+&lt;/p&gt;&lt;/div&gt;</description><category>emacs</category><guid>https://fpghwd.github.io/posts/emacs-open-several-windows-with-specific-org-narrowed-headline/</guid><pubDate>Tue, 15 Dec 2020 00:04:30 GMT</pubDate></item><item><title>第一场雪</title><link>https://fpghwd.github.io/posts/di-yi-chang-xue/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
 2020 年的第一场雪，比去年来得要早一些。
 &lt;/p&gt;
 
@@ -479,10 +493,4 @@ Grace 重新见到父亲时，父亲说了以下的话：
 
 &lt;p&gt;
 用 emacs 写东西简直是最近感觉最幸福的一件事情了。
-&lt;/p&gt;&lt;/div&gt;</description><category>emacs</category><guid>https://fpghwd.github.io/posts/since-use-doom-emacs/</guid><pubDate>Wed, 04 Nov 2020 19:13:58 GMT</pubDate></item><item><title>Emacs Lisp Overlay</title><link>https://fpghwd.github.io/posts/emacs-lisp-overlay/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
-最近看到 Emacs Lisp 里面 Overlay 的概念，可以用于自定义介面 buffer 的文字的某些特殊效果。
-&lt;/p&gt;
-
-&lt;p&gt;
-当然其实对文字的编辑和模式本身都可以是文字内容的一种展现方式，但是文字的属性（Text Properties）是文字的一部分，overlay 并不是文字的一部分。所以在 buffer 之间复制某些文字的时候，并不会同时复制  overlay ；同时改变 buffer 的文字属性其实也是在修改 buffer 本身。但 overlay 的改变并不会改变 buffer 本身，这种修改自然也不会被保存在这个 buffer 的 undo list 中。
-&lt;/p&gt;&lt;/div&gt;</description><category>emacs</category><guid>https://fpghwd.github.io/posts/emacs-lisp-overlay/</guid><pubDate>Mon, 26 Oct 2020 05:24:03 GMT</pubDate></item></channel></rss>
+&lt;/p&gt;&lt;/div&gt;</description><category>emacs</category><guid>https://fpghwd.github.io/posts/since-use-doom-emacs/</guid><pubDate>Wed, 04 Nov 2020 19:13:58 GMT</pubDate></item></channel></rss>

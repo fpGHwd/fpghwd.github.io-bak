@@ -19,7 +19,7 @@
  </url>
  <url>
   <loc>https://fpghwd.github.io/archive.html</loc>
-  <lastmod>2020-12-14T01:57:00Z</lastmod>
+  <lastmod>2020-12-15T08:10:00Z</lastmod>
  </url>
  <url>
   <loc>https://fpghwd.github.io/authors/</loc>
@@ -139,7 +139,7 @@
  </url>
  <url>
   <loc>https://fpghwd.github.io/index-16.html</loc>
-  <lastmod>2020-12-14T01:57:00Z</lastmod>
+  <lastmod>2020-12-15T08:10:00Z</lastmod>
  </url>
  <url>
   <loc>https://fpghwd.github.io/index-2.html</loc>
@@ -268,6 +268,10 @@
  <url>
   <loc>https://fpghwd.github.io/posts/emacs-lisp-overlay/</loc>
   <lastmod>2020-10-26T13:24:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://fpghwd.github.io/posts/emacs-open-several-windows-with-specific-org-narrowed-headline/</loc>
+  <lastmod>2020-12-15T08:10:00Z</lastmod>
  </url>
  <url>
   <loc>https://fpghwd.github.io/posts/emacs-shi-yong-gan-shou/</loc>

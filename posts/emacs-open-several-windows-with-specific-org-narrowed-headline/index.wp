@@ -1,0 +1,15 @@
+<p>
+在使用 emacs 编辑一个很多的 headlines 的 org 文件时，如果每个 headline 下的内容需要交叉查看和参考的时候，我就非常需要一个单独的 windows 仅显示一个 headline 下的所有内容，所以必须用到 <code>org-narrow-to-subtree</code> 这个函数。
+</p>
+
+<p>
+但是在第一次使用这个函数后，就无法看到其他的 headlines ，所以想在多个窗口中打开多个 headlines 仅使用 <code>org-narrow-to-subtree</code> 是不够的。好在有了 <code>clone-indirect-buffer</code> 可以复制一个当前文件的 buffer 。一般情况下，在使用 emacs 打开文件的时候，我们只能在将一个文件绑定在一个 buffer 中，这个函数可以让我们将一个文件绑定在多个 buffer 中。
+</p>
+
+<p>
+然后在不通的 windows 中打开相同文件的不同 buffer ，可以看到这个文件的不同 headlines ，进而使用对不同的 headline 使用 <code>org-narrow-to-subtree</code> 来实现“在不同的 windows 里面查看一个文件中不同 headlines 的 <code>org-narrow-subtree</code> ”。
+</p>
+
+<p>
+这个功能对于我来说很实用，尤其是对一个比较长的， subtree 又比较多的 org 文件中同时查看和编辑多个 headline 的情况下尤其有用。
+</p>
