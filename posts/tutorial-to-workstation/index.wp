@@ -111,7 +111,6 @@ python 运行脚本
 <p>
 例如 <code>python test.py &gt; log.txt</code>
 </p></li>
-<li></li>
 
 <li><p>
 同时将错误信息重定向

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>wd's blog</title><link>https://fpghwd.github.io/</link><description>Stay open</description><atom:link href="https://fpghwd.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;suzumiya natsuhi&lt;/a&gt; </copyright><lastBuildDate>Fri, 18 Dec 2020 03:20:22 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Tutorial to workstation</title><link>https://fpghwd.github.io/posts/tutorial-to-workstation/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;ul class="org-ul"&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>wd's blog</title><link>https://fpghwd.github.io/</link><description>Stay open</description><atom:link href="https://fpghwd.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;suzumiya natsuhi&lt;/a&gt; </copyright><lastBuildDate>Fri, 18 Dec 2020 03:21:59 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Tutorial to workstation</title><link>https://fpghwd.github.io/posts/tutorial-to-workstation/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;ul class="org-ul"&gt;
 &lt;li&gt;SSH 隧道
 &lt;ol class="org-ol"&gt;
 &lt;li&gt;内网穿透
@@ -112,9 +112,8 @@ python 运行脚本
 &lt;p&gt;
 例如 &lt;code&gt;python test.py &amp;gt; log.txt&lt;/code&gt;
 &lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;
 
-&lt;/li&gt;&lt;li&gt;&lt;p&gt;
+&lt;li&gt;&lt;p&gt;
 同时将错误信息重定向
 &lt;/p&gt;
 
