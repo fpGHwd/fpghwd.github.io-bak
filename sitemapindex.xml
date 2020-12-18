@@ -35,7 +35,7 @@
  </sitemap>
  <sitemap>
   <loc>https://fpghwd.github.io/categories/emacs.xml</loc>
-  <lastmod>2020-12-15T08:10:00Z</lastmod>
+  <lastmod>2020-12-15T08:13:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://fpghwd.github.io/categories/film.xml</loc>
@@ -74,6 +74,10 @@
   <lastmod>2020-06-22T11:41:00Z</lastmod>
  </sitemap>
  <sitemap>
+  <loc>https://fpghwd.github.io/categories/tutorial.xml</loc>
+  <lastmod>2020-12-18T02:55:00Z</lastmod>
+ </sitemap>
+ <sitemap>
   <loc>https://fpghwd.github.io/categories/workgroups2.xml</loc>
   <lastmod>2020-11-26T09:53:00Z</lastmod>
  </sitemap>
@@ -87,10 +91,10 @@
  </sitemap>
  <sitemap>
   <loc>https://fpghwd.github.io/rss.xml</loc>
-  <lastmod>2020-12-15T08:10:00Z</lastmod>
+  <lastmod>2020-12-18T02:55:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://fpghwd.github.io/sitemap.xml</loc>
-  <lastmod>2020-12-15T08:10:00Z</lastmod>
+  <lastmod>2020-12-18T02:55:00Z</lastmod>
  </sitemap>
 </sitemapindex>
