@@ -1,13 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>wd's blog (Posts about tutorial)</title><link>https://fpghwd.github.io/</link><description></description><atom:link href="https://fpghwd.github.io/categories/tutorial.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;suzumiya natsuhi&lt;/a&gt; </copyright><lastBuildDate>Fri, 18 Dec 2020 03:27:20 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Tutorial to workstation</title><link>https://fpghwd.github.io/posts/tutorial-to-workstation/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;ul class="org-ul"&gt;
-&lt;li&gt;&lt;a href="https://en.wikipedia.org/wiki/SSH_(Secure_Shell)"&gt;SSH&lt;/a&gt; 隧道
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>wd's blog (Posts about tutorial)</title><link>https://fpghwd.github.io/</link><description></description><atom:link href="https://fpghwd.github.io/categories/tutorial.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;suzumiya natsuhi&lt;/a&gt; </copyright><lastBuildDate>Fri, 18 Dec 2020 03:40:36 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Tutorial to workstation</title><link>https://fpghwd.github.io/posts/tutorial-to-workstation/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;ul class="org-ul"&gt;
+&lt;li&gt;&lt;a href="https://en.wikipedia.org/wiki/SSH_(Secure_Shell)"&gt;SSH&lt;/a&gt;
+
 &lt;ol class="org-ol"&gt;
-&lt;li&gt;内网穿透
+&lt;li&gt;ssh 隧道内网穿透
 
 &lt;ol class="org-ol"&gt;
 &lt;li&gt;&lt;a href="https://zhuanlan.zhihu.com/p/34908698"&gt;ssh 内网穿透&lt;/a&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;a href="https://www.everythingcli.org/ssh-tunnelling-for-fun-and-profit-autossh/"&gt;autossh&lt;/a&gt; （ssh 增强）&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;
+&lt;a href="https://www.everythingcli.org/ssh-tunnelling-for-fun-and-profit-autossh/"&gt;autossh&lt;/a&gt;
+&lt;/p&gt;
+
+&lt;p&gt;
+autossh 是对 ssh 的增量，因此使用 ssh 隧道来进行内网穿透，仅使用 autossh 即可
+&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;&lt;/li&gt;
 
 &lt;li&gt;&lt;p&gt;
@@ -23,14 +30,17 @@
 &lt;/p&gt;
 
 &lt;p&gt;
-需要上传本地密钥
+需要上传本地密钥到远程主机用户的 &lt;code&gt;~/.ssh/known_hosts&lt;/code&gt; 文件中
 &lt;/p&gt;
 
 &lt;ol class="org-ol"&gt;
 &lt;li&gt;生成本地密钥 &lt;code&gt;ssh-keygen&lt;/code&gt;&lt;/li&gt;
+
 &lt;li&gt;上传本地密钥 &lt;code&gt;ssh-copy-id&lt;/code&gt;&lt;/li&gt;
 &lt;/ol&gt;&lt;/li&gt;
+
 &lt;li&gt;更快登录
+
 &lt;ol class="org-ol"&gt;
 &lt;li&gt;设置 &lt;code&gt;.ssh/config&lt;/code&gt;&lt;/li&gt;
 &lt;/ol&gt;&lt;/li&gt;
@@ -47,7 +57,7 @@
 &lt;/p&gt;&lt;/li&gt;
 
 &lt;li&gt;&lt;p&gt;
-采用 &lt;a href="https://man7.org/linux/man-pages/man1/scp.1.html"&gt;scp&lt;/a&gt; 传输文件
+采用 &lt;a href="https://man7.org/linux/man-pages/man1/scp.1.html"&gt;scp&lt;/a&gt; 传输少量文件
 &lt;/p&gt;
 
 &lt;p&gt;
@@ -59,7 +69,7 @@
 &lt;/p&gt;
 
 &lt;p&gt;
-需要 git 操作
+需要 git 操作基础
 &lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;&lt;/li&gt;
 
@@ -72,6 +82,7 @@ python 运行脚本
 &lt;p&gt;
 &lt;code&gt;python test.py&lt;/code&gt;
 &lt;/p&gt;&lt;/li&gt;
+
 &lt;li&gt;&lt;p&gt;
 后台运行
 &lt;/p&gt;
@@ -93,7 +104,7 @@ python 运行脚本
 &lt;/p&gt;
 
 &lt;p&gt;
-代码后台中，无需使用 &lt;code&gt;matplotlib.show&lt;/code&gt; 来查看图像，因此保存即可。
+代码在后台运行时，无需使用 &lt;code&gt;matplotlib.show()&lt;/code&gt; 来查看图像，因此保存 &lt;code&gt;matlplotlib.savefig(filename=filename)&lt;/code&gt; 即可。
 &lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;&lt;/li&gt;
 
