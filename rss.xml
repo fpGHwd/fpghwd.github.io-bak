@@ -1,16 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>wd's blog</title><link>https://fpghwd.github.io/</link><description>Stay open</description><atom:link href="https://fpghwd.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;suzumiya natsuhi&lt;/a&gt; </copyright><lastBuildDate>Fri, 18 Dec 2020 02:55:37 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Tutorial to workstation</title><link>https://fpghwd.github.io/posts/tutorial-to-workstation/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;ul class="org-ul"&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>wd's blog</title><link>https://fpghwd.github.io/</link><description>Stay open</description><atom:link href="https://fpghwd.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;suzumiya natsuhi&lt;/a&gt; </copyright><lastBuildDate>Fri, 18 Dec 2020 03:20:22 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Tutorial to workstation</title><link>https://fpghwd.github.io/posts/tutorial-to-workstation/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;ul class="org-ul"&gt;
 &lt;li&gt;SSH 隧道
 &lt;ol class="org-ol"&gt;
 &lt;li&gt;内网穿透
+
 &lt;ol class="org-ol"&gt;
 &lt;li&gt;ssh 内网穿透&lt;/li&gt;
+
 &lt;li&gt;autossh （ssh 增强）&lt;/li&gt;
 &lt;/ol&gt;&lt;/li&gt;
-&lt;li&gt;登录
-&lt;code&gt;ssh user@hostname&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;无密码登录
+
+&lt;li&gt;&lt;p&gt;
+登录
+&lt;/p&gt;
+
+&lt;p&gt;
+&lt;code&gt;ssh user@hostname&lt;/code&gt;
+&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;
+无密码登录
+&lt;/p&gt;
+
+&lt;p&gt;
 需要上传本地密钥
+&lt;/p&gt;
+
 &lt;ol class="org-ol"&gt;
 &lt;li&gt;生成本地密钥 &lt;code&gt;ssh-keygen&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;上传本地密钥 &lt;code&gt;ssh-copy-id&lt;/code&gt;&lt;/li&gt;
@@ -23,24 +38,63 @@
 
 &lt;li&gt;文件传输
 &lt;ol class="org-ol"&gt;
-&lt;li&gt;采用 Filezilla 传输文件
-最方便的一种方式，根据 ssh 信息来配置即可&lt;/li&gt;
-&lt;li&gt;采用 scp 传输文件
-在实现 ssh 免密码的基础上， &lt;code&gt;scp [filename] [remote-host]&lt;/code&gt; 即可&lt;/li&gt;
-&lt;li&gt;采用 git 同步文件
-需要 git 操作&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;
+采用 Filezilla 传输文件
+&lt;/p&gt;
+
+&lt;p&gt;
+最方便的一种方式，根据 ssh 信息来配置即可
+&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;
+采用 scp 传输文件
+&lt;/p&gt;
+
+&lt;p&gt;
+在实现 ssh 免密码的基础上， &lt;code&gt;scp [filename] [remote-host]&lt;/code&gt; 即可
+&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;
+采用 git 同步文件
+&lt;/p&gt;
+
+&lt;p&gt;
+需要 git 操作
+&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;&lt;/li&gt;
 
 &lt;li&gt;运行代码
 &lt;ol class="org-ol"&gt;
-&lt;li&gt;python 运行脚本
-&lt;code&gt;python test.py&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;后台运行
-后台运行在命令后面加入 &lt;code&gt;&amp;amp;&lt;/code&gt; ，也即命令成为 &lt;code&gt;python test.py &amp;amp;&lt;/code&gt; 即可。&lt;/li&gt;
-&lt;li&gt;存储日志
-在代码中，在关键信息的地方打印日志即可。&lt;/li&gt;
-&lt;li&gt;存储图像
-代码后台中，无需使用 &lt;code&gt;matplotlib.show&lt;/code&gt; 来查看图像，因此保存即可。&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;
+python 运行脚本
+&lt;/p&gt;
+
+&lt;p&gt;
+&lt;code&gt;python test.py&lt;/code&gt;
+&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;
+后台运行
+&lt;/p&gt;
+
+&lt;p&gt;
+后台运行在命令后面加入 &lt;code&gt;&amp;amp;&lt;/code&gt; ，也即命令成为 &lt;code&gt;python test.py &amp;amp;&lt;/code&gt; 即可。
+&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;
+存储日志
+&lt;/p&gt;
+
+&lt;p&gt;
+在代码中，在关键信息的地方打印日志即可。
+&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;
+存储图像
+&lt;/p&gt;
+
+&lt;p&gt;
+代码后台中，无需使用 &lt;code&gt;matplotlib.show&lt;/code&gt; 来查看图像，因此保存即可。
+&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;&lt;/li&gt;
 
 &lt;li&gt;打印关键信息和保存日志以及查看日志
@@ -51,10 +105,22 @@
 &lt;/ol&gt;&lt;/li&gt;
 &lt;li&gt;保存日志
 &lt;ol class="org-ol"&gt;
-&lt;li&gt;使用文件重定向
-例如 &lt;code&gt;python test.py &amp;gt; log.txt&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;同时将错误信息重定向
-&lt;code&gt;2&amp;gt;&amp;amp;1&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;
+使用文件重定向
+&lt;/p&gt;
+
+&lt;p&gt;
+例如 &lt;code&gt;python test.py &amp;gt; log.txt&lt;/code&gt;
+&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;
+
+&lt;/li&gt;&lt;li&gt;&lt;p&gt;
+同时将错误信息重定向
+&lt;/p&gt;
+
+&lt;p&gt;
+&lt;code&gt;2&amp;gt;&amp;amp;1&lt;/code&gt;
+&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;&lt;/li&gt;
 &lt;li&gt;查看日志
 &lt;ol class="org-ol"&gt;
