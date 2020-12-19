@@ -80,7 +80,45 @@ python 运行脚本
 
 <p>
 <code>python test.py</code>
-</p></li>
+</p>
+
+<ol class="org-ol">
+<li>脚本参数
+
+<ol class="org-ol">
+<li>参考 <a href="https://www.tutorialspoint.com/python/python_command_line_arguments.htm">python 参数使用</a></li>
+</ol></li>
+
+<li><p>
+脚本循环
+</p>
+
+<p>
+有时需要跑一个耗时较长的程序，写一个脚本在 python 运行时传入参数来自动化程序运行
+</p>
+
+<div class="org-src-container">
+
+<pre><code class="lang-bash">
+#!/bin/bash
+# cmd='nohup python -u ga_kpca.py &gt; "log/ga-custom-kernel-kpca_"$(date "+%Y-%m-%d_%H-%M-%S").log 2&gt;&amp;1'
+
+cd ~/wangding/ga-kpca
+conda activate "wangding"
+
+for i in $(seq 2 7)
+do
+    for j in $(seq 2 7)
+    do
+        nohup python -u ga_kpca.py $i $j &gt; "log/ga-custom-kernel-kpca_"$(date "+%Y-%m-%d_%H-%M-%S").log 2&gt;&amp;1
+    done
+done
+
+
+</code></pre>
+
+</div></li>
+</ol></li>
 
 <li><p>
 后台运行

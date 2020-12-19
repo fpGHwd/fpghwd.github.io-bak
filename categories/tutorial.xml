@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>wd's blog (Posts about tutorial)</title><link>https://fpghwd.github.io/</link><description></description><atom:link href="https://fpghwd.github.io/categories/tutorial.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;suzumiya natsuhi&lt;/a&gt; </copyright><lastBuildDate>Fri, 18 Dec 2020 03:40:36 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Tutorial to workstation</title><link>https://fpghwd.github.io/posts/tutorial-to-workstation/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;ul class="org-ul"&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>wd's blog (Posts about tutorial)</title><link>https://fpghwd.github.io/</link><description></description><atom:link href="https://fpghwd.github.io/categories/tutorial.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;Wang Ding&lt;/a&gt; </copyright><lastBuildDate>Sat, 19 Dec 2020 03:05:02 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Tutorial to workstation</title><link>https://fpghwd.github.io/posts/tutorial-to-workstation/</link><dc:creator>Wang Ding</dc:creator><description>&lt;ul class="org-ul"&gt;
 &lt;li&gt;&lt;a href="https://en.wikipedia.org/wiki/SSH_(Secure_Shell)"&gt;SSH&lt;/a&gt;
 
 &lt;ol class="org-ol"&gt;
@@ -81,7 +81,45 @@ python 运行脚本
 
 &lt;p&gt;
 &lt;code&gt;python test.py&lt;/code&gt;
-&lt;/p&gt;&lt;/li&gt;
+&lt;/p&gt;
+
+&lt;ol class="org-ol"&gt;
+&lt;li&gt;脚本参数
+
+&lt;ol class="org-ol"&gt;
+&lt;li&gt;参考 &lt;a href="https://www.tutorialspoint.com/python/python_command_line_arguments.htm"&gt;python 参数使用&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;
+脚本循环
+&lt;/p&gt;
+
+&lt;p&gt;
+有时需要跑一个耗时较长的程序，写一个脚本在 python 运行时传入参数来自动化程序运行
+&lt;/p&gt;
+
+&lt;div class="org-src-container"&gt;
+
+&lt;pre&gt;&lt;code class="lang-bash"&gt;
+#!/bin/bash
+# cmd='nohup python -u ga_kpca.py &amp;gt; "log/ga-custom-kernel-kpca_"$(date "+%Y-%m-%d_%H-%M-%S").log 2&amp;gt;&amp;amp;1'
+
+cd ~/wangding/ga-kpca
+conda activate "wangding"
+
+for i in $(seq 2 7)
+do
+    for j in $(seq 2 7)
+    do
+        nohup python -u ga_kpca.py $i $j &amp;gt; "log/ga-custom-kernel-kpca_"$(date "+%Y-%m-%d_%H-%M-%S").log 2&amp;gt;&amp;amp;1
+    done
+done
+
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;/div&gt;&lt;/li&gt;
+&lt;/ol&gt;&lt;/li&gt;
 
 &lt;li&gt;&lt;p&gt;
 后台运行
