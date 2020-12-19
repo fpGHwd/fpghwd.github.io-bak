@@ -43,9 +43,7 @@ SSHD
 
 <div class="org-src-container">
 
-<pre><code class="lang-bash">
-ssh -qTfNn -R '[::]:22222:localhost:22' [Jump Server User]@[Jumper Server IP or Domain Name]
-
+<pre><code class="lang-bash">            ssh -qTfNn -R '[::]:22222:localhost:22' [Jump Server User]@[Jumper Server IP or Domain Name]
 </code></pre>
 
 </div></li>
@@ -56,19 +54,13 @@ ssh -qTfNn -R '[::]:22222:localhost:22' [Jump Server User]@[Jumper Server IP or 
 
 <div class="org-src-container">
 
-<pre><code class="lang-bash">ssh -p 22222 lab@hacker.autove.dev
+<pre><code class="lang-bash">            ssh -p 22222 [Remote User on machine on sub-network]@[Jump Server IP or Domain Name]
 </code></pre>
 
 </div></li>
 </ul></li>
 </ul></li>
-</ol></li>
-</ol></li>
-</ul>
 
-
-
-<ol class="org-ol">
 <li><p>
 <a href="https://www.everythingcli.org/ssh-tunnelling-for-fun-and-profit-autossh/">autossh</a>
 </p>
@@ -76,8 +68,8 @@ ssh -qTfNn -R '[::]:22222:localhost:22' [Jump Server User]@[Jumper Server IP or 
 <p>
 autossh 是对 ssh 的增量，因此使用 ssh 隧道来进行内网穿透，仅使用 autossh 即可
 </p></li>
-</ol>
-<ol class="org-ol">
+</ol></li>
+
 <li><p>
 登录
 </p>
@@ -105,8 +97,8 @@ autossh 是对 ssh 的增量，因此使用 ssh 隧道来进行内网穿透，�
 <ol class="org-ol">
 <li>设置 <code>.ssh/config</code></li>
 </ol></li>
-</ol>
-<ul class="org-ul">
+</ol></li>
+
 <li>文件传输
 
 <ol class="org-ol">

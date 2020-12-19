@@ -59,8 +59,7 @@
                 Wang Ding
         </div>
         <div class="post-content">
-                <div>
-<ul class="org-ul">
+                <ul class="org-ul">
 <li>
 <p>
 代理
@@ -114,9 +113,7 @@ SSHD
 
 <div class="org-src-container">
 
-<pre><code class="lang-bash">
-ssh -qTfNn -R '[::]:22222:localhost:22' [Jump Server User]@[Jumper Server IP or Domain Name]
-
+<pre><code class="lang-bash">            ssh -qTfNn -R '[::]:22222:localhost:22' [Jump Server User]@[Jumper Server IP or Domain Name]
 </code></pre>
 
 </div>
@@ -129,7 +126,7 @@ ssh -qTfNn -R '[::]:22222:localhost:22' [Jump Server User]@[Jumper Server IP or 
 
 <div class="org-src-container">
 
-<pre><code class="lang-bash">ssh -p 22222 lab@hacker.autove.dev
+<pre><code class="lang-bash">            ssh -p 22222 [Remote User on machine on sub-network]@[Jump Server IP or Domain Name]
 </code></pre>
 
 </div>
@@ -138,12 +135,7 @@ ssh -qTfNn -R '[::]:22222:localhost:22' [Jump Server User]@[Jumper Server IP or 
 </li>
 </ul>
 </li>
-</ol>
-</li>
-</ol>
-</li>
-</ul>
-<ol class="org-ol">
+
 <li>
 <p>
 <a href="https://www.everythingcli.org/ssh-tunnelling-for-fun-and-profit-autossh/">autossh</a>
@@ -154,7 +146,8 @@ autossh 是对 ssh 的增量，因此使用 ssh 隧道来进行内网穿透，�
 </p>
 </li>
 </ol>
-<ol class="org-ol">
+</li>
+
 <li>
 <p>
 登录
@@ -191,7 +184,8 @@ autossh 是对 ssh 的增量，因此使用 ssh 隧道来进行内网穿透，�
 </ol>
 </li>
 </ol>
-<ul class="org-ul">
+</li>
+
 <li>文件传输
 
 <ol class="org-ol">
@@ -360,8 +354,7 @@ done
 </ol>
 </li>
 </ul>
-</div>
-                <p class="commentline">
+<p class="commentline">
         
     <a href="posts/tutorial-to-workstation/#disqus_thread" data-disqus-identifier="cache/posts/tutorial-to-workstation.html">Comments</a>
 

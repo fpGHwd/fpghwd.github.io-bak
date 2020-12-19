@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>wd's blog (Posts about tutorial)</title><link>https://fpghwd.github.io/</link><description></description><atom:link href="https://fpghwd.github.io/categories/tutorial.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;Wang Ding&lt;/a&gt; </copyright><lastBuildDate>Sat, 19 Dec 2020 09:34:08 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Tutorial to workstation</title><link>https://fpghwd.github.io/posts/tutorial-to-workstation/</link><dc:creator>Wang Ding</dc:creator><description>&lt;div&gt;&lt;ul class="org-ul"&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>wd's blog (Posts about tutorial)</title><link>https://fpghwd.github.io/</link><description></description><atom:link href="https://fpghwd.github.io/categories/tutorial.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;Wang Ding&lt;/a&gt; </copyright><lastBuildDate>Sat, 19 Dec 2020 09:37:43 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Tutorial to workstation</title><link>https://fpghwd.github.io/posts/tutorial-to-workstation/</link><dc:creator>Wang Ding</dc:creator><description>&lt;ul class="org-ul"&gt;
 &lt;li&gt;&lt;p&gt;
 代理
 &lt;/p&gt;
@@ -44,9 +44,7 @@ SSHD
 
 &lt;div class="org-src-container"&gt;
 
-&lt;pre&gt;&lt;code class="lang-bash"&gt;
-ssh -qTfNn -R '[::]:22222:localhost:22' [Jump Server User]@[Jumper Server IP or Domain Name]
-
+&lt;pre&gt;&lt;code class="lang-bash"&gt;            ssh -qTfNn -R '[::]:22222:localhost:22' [Jump Server User]@[Jumper Server IP or Domain Name]
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;/div&gt;&lt;/li&gt;
@@ -57,17 +55,13 @@ ssh -qTfNn -R '[::]:22222:localhost:22' [Jump Server User]@[Jumper Server IP or 
 
 &lt;div class="org-src-container"&gt;
 
-&lt;pre&gt;&lt;code class="lang-bash"&gt;ssh -p 22222 lab@hacker.autove.dev
+&lt;pre&gt;&lt;code class="lang-bash"&gt;            ssh -p 22222 [Remote User on machine on sub-network]@[Jump Server IP or Domain Name]
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;/div&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
-&lt;/ol&gt;&lt;/li&gt;
-&lt;/ol&gt;&lt;/li&gt;
-&lt;/ul&gt;
 
-&lt;ol class="org-ol"&gt;
 &lt;li&gt;&lt;p&gt;
 &lt;a href="https://www.everythingcli.org/ssh-tunnelling-for-fun-and-profit-autossh/"&gt;autossh&lt;/a&gt;
 &lt;/p&gt;
@@ -75,9 +69,8 @@ ssh -qTfNn -R '[::]:22222:localhost:22' [Jump Server User]@[Jumper Server IP or 
 &lt;p&gt;
 autossh 是对 ssh 的增量，因此使用 ssh 隧道来进行内网穿透，仅使用 autossh 即可
 &lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
+&lt;/ol&gt;&lt;/li&gt;
 
-&lt;ol class="org-ol"&gt;
 &lt;li&gt;&lt;p&gt;
 登录
 &lt;/p&gt;
@@ -105,9 +98,8 @@ autossh 是对 ssh 的增量，因此使用 ssh 隧道来进行内网穿透，�
 &lt;ol class="org-ol"&gt;
 &lt;li&gt;设置 &lt;code&gt;.ssh/config&lt;/code&gt;&lt;/li&gt;
 &lt;/ol&gt;&lt;/li&gt;
-&lt;/ol&gt;
+&lt;/ol&gt;&lt;/li&gt;
 
-&lt;ul class="org-ul"&gt;
 &lt;li&gt;文件传输
 
 &lt;ol class="org-ol"&gt;
@@ -246,4 +238,4 @@ done
 &lt;li&gt;&lt;a href="https://www.gnu.org/software/emacs/"&gt;Emacs&lt;/a&gt; 的 &lt;a href="https://www.emacswiki.org/emacs/TrampMode"&gt;tramp&lt;/a&gt;, 次方便。&lt;/li&gt;
 &lt;/ol&gt;&lt;/li&gt;
 &lt;/ol&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/div&gt;</description><category>tutorial</category><guid>https://fpghwd.github.io/posts/tutorial-to-workstation/</guid><pubDate>Thu, 17 Dec 2020 18:46:19 GMT</pubDate></item></channel></rss>
+&lt;/ul&gt;</description><category>tutorial</category><guid>https://fpghwd.github.io/posts/tutorial-to-workstation/</guid><pubDate>Thu, 17 Dec 2020 18:46:19 GMT</pubDate></item></channel></rss>
