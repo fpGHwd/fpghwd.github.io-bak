@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>wd's blog</title><link>https://fpghwd.github.io/</link><description>Stay open</description><atom:link href="https://fpghwd.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;Wang Ding&lt;/a&gt; </copyright><lastBuildDate>Sat, 19 Dec 2020 03:05:02 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Tutorial to workstation</title><link>https://fpghwd.github.io/posts/tutorial-to-workstation/</link><dc:creator>Wang Ding</dc:creator><description>&lt;ul class="org-ul"&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>wd's blog</title><link>https://fpghwd.github.io/</link><description>Stay open</description><atom:link href="https://fpghwd.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;Wang Ding&lt;/a&gt; </copyright><lastBuildDate>Sat, 19 Dec 2020 03:06:43 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Tutorial to workstation</title><link>https://fpghwd.github.io/posts/tutorial-to-workstation/</link><dc:creator>Wang Ding</dc:creator><description>&lt;ul class="org-ul"&gt;
 &lt;li&gt;&lt;a href="https://en.wikipedia.org/wiki/SSH_(Secure_Shell)"&gt;SSH&lt;/a&gt;
 
 &lt;ol class="org-ol"&gt;
@@ -74,6 +74,7 @@ autossh 是对 ssh 的增量，因此使用 ssh 隧道来进行内网穿透，�
 &lt;/ol&gt;&lt;/li&gt;
 
 &lt;li&gt;运行代码
+
 &lt;ol class="org-ol"&gt;
 &lt;li&gt;&lt;p&gt;
 python 运行脚本
@@ -115,10 +116,13 @@ do
     done
 done
 
-
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;/div&gt;&lt;/li&gt;
+&lt;/div&gt;
+
+&lt;p&gt;
+其中 &lt;code&gt;$i&lt;/code&gt; 和 &lt;code&gt;$j&lt;/code&gt; 就是在 bash 中传入 python 的参数，参数可以结合具体代码逻辑做审任何事情。
+&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;&lt;/li&gt;
 
 &lt;li&gt;&lt;p&gt;
