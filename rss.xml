@@ -1,13 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>wd's blog</title><link>https://fpghwd.github.io/</link><description>Stay open</description><atom:link href="https://fpghwd.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;Wang Ding&lt;/a&gt; </copyright><lastBuildDate>Sat, 19 Dec 2020 03:06:43 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Tutorial to workstation</title><link>https://fpghwd.github.io/posts/tutorial-to-workstation/</link><dc:creator>Wang Ding</dc:creator><description>&lt;ul class="org-ul"&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>wd's blog</title><link>https://fpghwd.github.io/</link><description>Stay open</description><atom:link href="https://fpghwd.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;Wang Ding&lt;/a&gt; </copyright><lastBuildDate>Sat, 19 Dec 2020 09:34:07 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Tutorial to workstation</title><link>https://fpghwd.github.io/posts/tutorial-to-workstation/</link><dc:creator>Wang Ding</dc:creator><description>&lt;div&gt;&lt;ul class="org-ul"&gt;
+&lt;li&gt;&lt;p&gt;
+代理
+&lt;/p&gt;
+
+&lt;p&gt;
+目前最爽的解决方案是&lt;a href="https://www.imperva.com/learn/ddos/transparent-proxy/"&gt;透明代理&lt;/a&gt;。
+&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;
+SSHD
+&lt;/p&gt;
+
+&lt;p&gt;
+开启服务器的 sshd 服务
+&lt;/p&gt;&lt;/li&gt;
+
 &lt;li&gt;&lt;a href="https://en.wikipedia.org/wiki/SSH_(Secure_Shell)"&gt;SSH&lt;/a&gt;
 
 &lt;ol class="org-ol"&gt;
-&lt;li&gt;ssh 隧道内网穿透
+&lt;li&gt;&lt;a href="https://www.zsythink.net/archives/2450"&gt;ssh 隧道内网穿透&lt;/a&gt;
 
 &lt;ol class="org-ol"&gt;
-&lt;li&gt;&lt;a href="https://zhuanlan.zhihu.com/p/34908698"&gt;ssh 内网穿透&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://zhuanlan.zhihu.com/p/34908698"&gt;ssh 内网穿透&lt;/a&gt;
 
+&lt;ul class="org-ul"&gt;
+&lt;li&gt;实施条件
+
+&lt;ul class="org-ul"&gt;
+&lt;li&gt;公共 IP 主机（VPS），也称“&lt;a href="https://www.cnblogs.com/RXDXB/p/11491164.html"&gt;跳板机&lt;/a&gt;”&lt;/li&gt;
+
+&lt;li&gt;需要访问的内网机器（待穿透的内网机器）能访问并 SSH 登录公共主机&lt;/li&gt;
+
+&lt;li&gt;本地机器（访问内网机器的机器）能访问并 SSH 登录中间主机&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;实施过程
+
+&lt;ul class="org-ul"&gt;
+&lt;li&gt;&lt;p&gt;
+内网穿透到跳板机
+&lt;/p&gt;
+
+&lt;div class="org-src-container"&gt;
+
+&lt;pre&gt;&lt;code class="lang-bash"&gt;
+ssh -qTfNn -R '[::]:22222:localhost:22' [Jump Server User]@[Jumper Server IP or Domain Name]
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;/div&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;
+本地机器访问内网机器
+&lt;/p&gt;
+
+&lt;div class="org-src-container"&gt;
+
+&lt;pre&gt;&lt;code class="lang-bash"&gt;ssh -p 22222 lab@hacker.autove.dev
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ol&gt;&lt;/li&gt;
+&lt;/ol&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol class="org-ol"&gt;
 &lt;li&gt;&lt;p&gt;
 &lt;a href="https://www.everythingcli.org/ssh-tunnelling-for-fun-and-profit-autossh/"&gt;autossh&lt;/a&gt;
 &lt;/p&gt;
@@ -15,8 +75,9 @@
 &lt;p&gt;
 autossh 是对 ssh 的增量，因此使用 ssh 隧道来进行内网穿透，仅使用 autossh 即可
 &lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;&lt;/li&gt;
+&lt;/ol&gt;
 
+&lt;ol class="org-ol"&gt;
 &lt;li&gt;&lt;p&gt;
 登录
 &lt;/p&gt;
@@ -44,9 +105,11 @@ autossh 是对 ssh 的增量，因此使用 ssh 隧道来进行内网穿透，�
 &lt;ol class="org-ol"&gt;
 &lt;li&gt;设置 &lt;code&gt;.ssh/config&lt;/code&gt;&lt;/li&gt;
 &lt;/ol&gt;&lt;/li&gt;
-&lt;/ol&gt;&lt;/li&gt;
+&lt;/ol&gt;
 
+&lt;ul class="org-ul"&gt;
 &lt;li&gt;文件传输
+
 &lt;ol class="org-ol"&gt;
 &lt;li&gt;&lt;p&gt;
 采用 &lt;a href="https://filezilla-project.org/"&gt;Filezilla&lt;/a&gt; 传输文件
@@ -183,7 +246,7 @@ done
 &lt;li&gt;&lt;a href="https://www.gnu.org/software/emacs/"&gt;Emacs&lt;/a&gt; 的 &lt;a href="https://www.emacswiki.org/emacs/TrampMode"&gt;tramp&lt;/a&gt;, 次方便。&lt;/li&gt;
 &lt;/ol&gt;&lt;/li&gt;
 &lt;/ol&gt;&lt;/li&gt;
-&lt;/ul&gt;</description><category>tutorial</category><guid>https://fpghwd.github.io/posts/tutorial-to-workstation/</guid><pubDate>Thu, 17 Dec 2020 18:46:19 GMT</pubDate></item><item><title>Emacs 下同时查看和编辑一个文件的多个 headline: 使用 Indirect Buffer</title><link>https://fpghwd.github.io/posts/emacs-open-several-windows-with-specific-org-narrowed-headline/</link><dc:creator>Wang Ding</dc:creator><description>&lt;div&gt;&lt;p&gt;
+&lt;/ul&gt;&lt;/div&gt;</description><category>tutorial</category><guid>https://fpghwd.github.io/posts/tutorial-to-workstation/</guid><pubDate>Thu, 17 Dec 2020 18:46:19 GMT</pubDate></item><item><title>Emacs 下同时查看和编辑一个文件的多个 headline: 使用 Indirect Buffer</title><link>https://fpghwd.github.io/posts/emacs-open-several-windows-with-specific-org-narrowed-headline/</link><dc:creator>Wang Ding</dc:creator><description>&lt;div&gt;&lt;p&gt;
 在使用 emacs 编辑一个很多的 headlines 的 org 文件时，如果每个 headline 下的内容需要交叉查看和编辑的时候，我就非常需要一个单独的 windows(emacs 下的窗口，下均同) 仅显示一个 headline 下的所有内容，所以必须用到 &lt;code&gt;org-narrow-to-subtree&lt;/code&gt; 这个函数。
 &lt;/p&gt;
 

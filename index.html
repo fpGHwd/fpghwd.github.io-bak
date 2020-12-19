@@ -59,16 +59,91 @@
                 Wang Ding
         </div>
         <div class="post-content">
-                <ul class="org-ul">
+                <div>
+<ul class="org-ul">
+<li>
+<p>
+代理
+</p>
+
+<p>
+目前最爽的解决方案是<a href="https://www.imperva.com/learn/ddos/transparent-proxy/">透明代理</a>。
+</p>
+</li>
+
+<li>
+<p>
+SSHD
+</p>
+
+<p>
+开启服务器的 sshd 服务
+</p>
+</li>
+
 <li>
 <a href="https://en.wikipedia.org/wiki/SSH_(Secure_Shell)">SSH</a>
 
 <ol class="org-ol">
-<li>ssh 隧道内网穿透
+<li>
+<a href="https://www.zsythink.net/archives/2450">ssh 隧道内网穿透</a>
 
 <ol class="org-ol">
-<li><a href="https://zhuanlan.zhihu.com/p/34908698">ssh 内网穿透</a></li>
+<li>
+<a href="https://zhuanlan.zhihu.com/p/34908698">ssh 内网穿透</a>
 
+<ul class="org-ul">
+<li>实施条件
+
+<ul class="org-ul">
+<li>公共 IP 主机（VPS），也称“<a href="https://www.cnblogs.com/RXDXB/p/11491164.html">跳板机</a>”</li>
+
+<li>需要访问的内网机器（待穿透的内网机器）能访问并 SSH 登录公共主机</li>
+
+<li>本地机器（访问内网机器的机器）能访问并 SSH 登录中间主机</li>
+</ul>
+</li>
+
+<li>实施过程
+
+<ul class="org-ul">
+<li>
+<p>
+内网穿透到跳板机
+</p>
+
+<div class="org-src-container">
+
+<pre><code class="lang-bash">
+ssh -qTfNn -R '[::]:22222:localhost:22' [Jump Server User]@[Jumper Server IP or Domain Name]
+
+</code></pre>
+
+</div>
+</li>
+
+<li>
+<p>
+本地机器访问内网机器
+</p>
+
+<div class="org-src-container">
+
+<pre><code class="lang-bash">ssh -p 22222 lab@hacker.autove.dev
+</code></pre>
+
+</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ul>
+<ol class="org-ol">
 <li>
 <p>
 <a href="https://www.everythingcli.org/ssh-tunnelling-for-fun-and-profit-autossh/">autossh</a>
@@ -79,8 +154,7 @@ autossh 是对 ssh 的增量，因此使用 ssh 隧道来进行内网穿透，�
 </p>
 </li>
 </ol>
-</li>
-
+<ol class="org-ol">
 <li>
 <p>
 登录
@@ -117,9 +191,9 @@ autossh 是对 ssh 的增量，因此使用 ssh 隧道来进行内网穿透，�
 </ol>
 </li>
 </ol>
-</li>
-
+<ul class="org-ul">
 <li>文件传输
+
 <ol class="org-ol">
 <li>
 <p>
@@ -286,7 +360,8 @@ done
 </ol>
 </li>
 </ul>
-<p class="commentline">
+</div>
+                <p class="commentline">
         
     <a href="posts/tutorial-to-workstation/#disqus_thread" data-disqus-identifier="cache/posts/tutorial-to-workstation.html">Comments</a>
 
