@@ -175,7 +175,7 @@ done
 </div>
 
 <p>
-其中 <code>$i</code> 和 <code>$j</code> 就是在 bash 中传入 python 的参数，参数可以结合具体代码逻辑做审任何事情。
+其中 <code>$i</code> 和 <code>$j</code> 就是在 bash 中传入 python 的参数，参数可以结合具体代码逻辑做任何事情。
 </p></li>
 </ol></li>
 
