@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>wd's blog</title><link>https://fpghwd.github.io/</link><description>Stay open</description><atom:link href="https://fpghwd.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;Wang Ding&lt;/a&gt; </copyright><lastBuildDate>Sun, 20 Dec 2020 01:41:30 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Tutorial to workstation</title><link>https://fpghwd.github.io/posts/tutorial-to-workstation/</link><dc:creator>Wang Ding</dc:creator><description>&lt;ul class="org-ul"&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>wd's blog</title><link>https://fpghwd.github.io/</link><description>Stay open</description><atom:link href="https://fpghwd.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;Wang Ding&lt;/a&gt; </copyright><lastBuildDate>Sun, 20 Dec 2020 01:46:54 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Tutorial to workstation</title><link>https://fpghwd.github.io/posts/tutorial-to-workstation/</link><dc:creator>Wang Ding</dc:creator><description>&lt;ul class="org-ul"&gt;
 &lt;li&gt;&lt;p&gt;
 代理
 &lt;/p&gt;
@@ -282,7 +282,7 @@ done
 &lt;p&gt;
 Emacs loves me, emacs loves you.
 &lt;/p&gt;
-&lt;/blockquote&gt;&lt;/div&gt;</description><category>emacs</category><guid>https://fpghwd.github.io/posts/emacs-shi-yong-gan-shou/</guid><pubDate>Thu, 10 Dec 2020 02:23:53 GMT</pubDate></item><item><title>《被讨厌的勇气》和宁静祷文</title><link>https://fpghwd.github.io/posts/bei-tao-yan-de-yong-qi-he-ning-jing-dao-wen/</link><dc:creator>Wang Ding</dc:creator><description>&lt;ul class="org-ul"&gt;
+&lt;/blockquote&gt;&lt;/div&gt;</description><category>emacs</category><guid>https://fpghwd.github.io/posts/emacs-shi-yong-gan-shou/</guid><pubDate>Thu, 10 Dec 2020 02:23:53 GMT</pubDate></item><item><title>《被讨厌的勇气》和宁静祷文</title><link>https://fpghwd.github.io/posts/bei-tao-yan-de-yong-qi-he-ning-jing-dao-wen/</link><dc:creator>Wang Ding</dc:creator><description>&lt;div&gt;&lt;ul class="org-ul"&gt;
 &lt;li&gt;&lt;p&gt;
 被讨厌的勇气
 &lt;/p&gt;
@@ -304,7 +304,7 @@ Emacs loves me, emacs loves you.
 &lt;/p&gt;
 
 &lt;p&gt;
-以下是宁静祷文的内容：
+以下是宁静祷文 &lt;sup&gt;&lt;a id="fnr.1" class="footref" href="https://fpghwd.github.io/posts/bei-tao-yan-de-yong-qi-he-ning-jing-dao-wen/#fn.1"&gt;1&lt;/a&gt;&lt;/sup&gt; 的内容：
 &lt;/p&gt;
 
 &lt;blockquote&gt;
@@ -333,8 +333,24 @@ and wisdom to know the difference.
 
 &lt;p&gt;
 智慧就是区分本身，拥有智慧的人同时会拥有内心的宁静和改变的勇气。
+&lt;/p&gt;
+
+&lt;p&gt;
+&lt;sup&gt;&lt;a id="fnr.1.100" class="footref" href="https://fpghwd.github.io/posts/bei-tao-yan-de-yong-qi-he-ning-jing-dao-wen/#fn.1"&gt;1&lt;/a&gt;&lt;/sup&gt; 这是尼泊尔版本： Father, give us courage to change what must be altered, serenity to accept what cannot be helped, and the insight to know the one from the other.
 &lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;</description><category>mind</category><guid>https://fpghwd.github.io/posts/bei-tao-yan-de-yong-qi-he-ning-jing-dao-wen/</guid><pubDate>Mon, 07 Dec 2020 21:50:30 GMT</pubDate></item><item><title>《第六感生死缘》</title><link>https://fpghwd.github.io/posts/di-liu-gan-sheng-si-yuan/</link><dc:creator>Wang Ding</dc:creator><description>&lt;div&gt;&lt;p&gt;
+&lt;/ul&gt;
+
+&lt;div id="footnotes"&gt;
+&lt;h3 class="footnotes"&gt;Footnotes: &lt;/h3&gt;
+&lt;div id="text-footnotes"&gt;
+
+&lt;div class="footdef"&gt;&lt;sup&gt;&lt;a id="fn.1" class="footnum" href="https://fpghwd.github.io/posts/bei-tao-yan-de-yong-qi-he-ning-jing-dao-wen/#fnr.1"&gt;1&lt;/a&gt;&lt;/sup&gt; &lt;div class="footpara"&gt;&lt;p class="footpara"&gt;
+The link is: &lt;a href="http://orgmode.org"&gt;http://orgmode.org&lt;/a&gt;
+&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;
+
+
+&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;</description><category>mind</category><guid>https://fpghwd.github.io/posts/bei-tao-yan-de-yong-qi-he-ning-jing-dao-wen/</guid><pubDate>Mon, 07 Dec 2020 21:50:30 GMT</pubDate></item><item><title>《第六感生死缘》</title><link>https://fpghwd.github.io/posts/di-liu-gan-sheng-si-yuan/</link><dc:creator>Wang Ding</dc:creator><description>&lt;div&gt;&lt;p&gt;
 电影开场 10 分钟飞机上，Susan 和父亲 William 进行了如下对话：
 &lt;/p&gt;
 
