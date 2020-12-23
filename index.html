@@ -12,8 +12,8 @@
 <meta name="generator" content="Nikola (getnikola.com)">
 <link rel="alternate" type="application/rss+xml" title="RSS" href="rss.xml">
 <link rel="canonical" href="https://fpghwd.github.io/">
-<link rel="next" href="index-16.html" type="text/html">
-<!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="posts/tutorial-to-workstation/" type="text/html">
+<link rel="next" href="index-17.html" type="text/html">
+<!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="posts/emacs-zi-dong-bao-cun-wen-jian-she-zhi/" type="text/html">
 </head>
 <body>
 <div class="body_container">
@@ -50,6 +50,32 @@
                         
 
     
+    <div class="post">
+        <h2 class="post-title"><a href="posts/emacs-zi-dong-bao-cun-wen-jian-she-zhi/">Emacs 自动保存文件设置</a></h2>
+        <div class="post-meta">
+            2020-12-23 12:06
+        </div>
+        <div class="post-meta">
+                Wang Ding
+        </div>
+        <div class="post-content">
+                <div>
+<p>
+Emacs 自带文件自动保存的机制，利用 <code>do-auto-save</code> 可以自动存储当前编辑的文件为一个编辑过的复本，并未直接存储到 buffer 对应的文件中。当然也可以直接开启全局的 <code>(auto-save-visited-mode t)</code> ，在默认的 <code>auto-save-visited-interval</code> 时间（5秒），后会自动将已经修改后的 buffer 内容写入文件中。
+</p>
+
+<p>
+其中使用 <code>do-auto-save</code> 保存的文件的复本可以在打开该文件本身时有提示。这是一个好的地方，也是容易忽略的地方：如果在打开有更新内容复本的文件的时候，同时提示的日志被忽略的话，很可能进行编辑的时候重新形成了复本。所以我觉得还是打开 <code>(auto-save-visited-mode t)</code> 更好一些，避免形成两个新的复本合并起来会麻烦得多。
+</p>
+</div>
+                <p class="commentline">
+        
+    <a href="posts/emacs-zi-dong-bao-cun-wen-jian-she-zhi/#disqus_thread" data-disqus-identifier="cache/posts/emacs-zi-dong-bao-cun-wen-jian-she-zhi.html">Comments</a>
+
+
+        </p>
+</div>
+    </div>
     <div class="post">
         <h2 class="post-title"><a href="posts/tutorial-to-workstation/">Tutorial to workstation</a></h2>
         <div class="post-meta">
@@ -396,36 +422,10 @@ done
         </p>
 </div>
     </div>
-    <div class="post">
-        <h2 class="post-title"><a href="posts/di-yi-chang-xue/">第一场雪</a></h2>
-        <div class="post-meta">
-            2020-12-14 01:52
-        </div>
-        <div class="post-meta">
-                Wang Ding
-        </div>
-        <div class="post-content">
-                <div>
-<p>
-2020 年的第一场雪，比去年来得要早一些。
-</p>
-
-<p>
-<a href="https://raw.githubusercontent.com/fpGHwd/fpghwd.github.io/master/images/_20201214_193136IMG_20201212_132726_export_1.jpg">宿舍外</a>
-</p>
-</div>
-                <p class="commentline">
-        
-    <a href="posts/di-yi-chang-xue/#disqus_thread" data-disqus-identifier="cache/posts/di-yi-chang-xue.html">Comments</a>
-
-
-        </p>
-</div>
-    </div>
 
         <nav class="postindexpager"><ul class="pager">
 <li class="next">
-                <a href="index-16.html" rel="next">Older posts</a>
+                <a href="index-17.html" rel="next">Older posts</a>
             </li>
         </ul></nav><script>var disqus_shortname="fpghwd-github-io";(function(){var a=document.createElement("script");a.async=true;a.src="https://"+disqus_shortname+".disqus.com/count.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(a)}());</script>
 </div>
