@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>wd's blog (Posts about ATTACH)</title><link>https://fpghwd.github.io/</link><description></description><atom:link href="https://fpghwd.github.io/categories/attach.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;suzumiya natsuhi&lt;/a&gt; </copyright><lastBuildDate>Tue, 15 Dec 2020 08:04:32 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>第一场雪</title><link>https://fpghwd.github.io/posts/di-yi-chang-xue/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>wd's blog (Posts about ATTACH)</title><link>https://fpghwd.github.io/</link><description></description><atom:link href="https://fpghwd.github.io/categories/attach.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;Wang Ding&lt;/a&gt; </copyright><lastBuildDate>Wed, 23 Dec 2020 09:34:49 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>第一场雪</title><link>https://fpghwd.github.io/posts/di-yi-chang-xue/</link><dc:creator>Wang Ding</dc:creator><description>&lt;div&gt;&lt;p&gt;
 2020 年的第一场雪，比去年来得要早一些。
 &lt;/p&gt;
 
 &lt;p&gt;
 &lt;a href="https://raw.githubusercontent.com/fpGHwd/fpghwd.github.io/master/images/_20201214_193136IMG_20201212_132726_export_1.jpg"&gt;宿舍外&lt;/a&gt;
-&lt;/p&gt;&lt;/div&gt;</description><category>ATTACH</category><category>life</category><category>mathjax</category><guid>https://fpghwd.github.io/posts/di-yi-chang-xue/</guid><pubDate>Sun, 13 Dec 2020 17:52:05 GMT</pubDate></item><item><title>openSUSE 上 mariadb 的使用</title><link>https://fpghwd.github.io/posts/opensuse-shang-mariadb-de-shi-yong/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;ul class="org-ul"&gt;
+&lt;/p&gt;&lt;/div&gt;</description><category>ATTACH</category><category>life</category><category>mathjax</category><guid>https://fpghwd.github.io/posts/di-yi-chang-xue/</guid><pubDate>Mon, 14 Dec 2020 01:52:05 GMT</pubDate></item><item><title>openSUSE 上 mariadb 的使用</title><link>https://fpghwd.github.io/posts/opensuse-shang-mariadb-de-shi-yong/</link><dc:creator>Wang Ding</dc:creator><description>&lt;ul class="org-ul"&gt;
 &lt;li&gt;&lt;p&gt;
 缘起
 &lt;/p&gt;
@@ -55,7 +55,7 @@ mysql 用户组
 &lt;p&gt;&lt;img src="https://raw.githubusercontent.com/fpGHwd/fpghwd.github.io/master/images/_20201129_160845screenshot.png" alt="_20201129_160845screenshot.png"&gt;
 &lt;/p&gt;
 &lt;/div&gt;&lt;/li&gt;
-&lt;/ul&gt;</description><category>ATTACH</category><category>openSUSE</category><guid>https://fpghwd.github.io/posts/opensuse-shang-mariadb-de-shi-yong/</guid><pubDate>Sun, 29 Nov 2020 00:09:05 GMT</pubDate></item><item><title>Org archive location</title><link>https://fpghwd.github.io/posts/org-archive-location/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
+&lt;/ul&gt;</description><category>ATTACH</category><category>openSUSE</category><guid>https://fpghwd.github.io/posts/opensuse-shang-mariadb-de-shi-yong/</guid><pubDate>Sun, 29 Nov 2020 08:09:05 GMT</pubDate></item><item><title>Org archive location</title><link>https://fpghwd.github.io/posts/org-archive-location/</link><dc:creator>Wang Ding</dc:creator><description>&lt;div&gt;&lt;p&gt;
 最近在使用 org 的时候想把 org-archive-subtree 的条目和 org-capture-templates 那样，将每次当天 archived 的 headline 放到当日的日期 headline 下面，和日记一样组织。这样的话，将来查询的时候就可以顺便看一下当天发生的事情和当天完成的项目了。
 &lt;/p&gt;
 
@@ -101,7 +101,7 @@ datetree, use "~/org/datetree.org::datetree/".
 
 &lt;p&gt;
 可以把日记和归档的条目都放到一个文件，归档也不会经常去动，只需要看的时候搜索一下就行。
-&lt;/p&gt;&lt;/div&gt;</description><category>ATTACH</category><category>emacs</category><guid>https://fpghwd.github.io/posts/org-archive-location/</guid><pubDate>Fri, 16 Oct 2020 03:32:18 GMT</pubDate></item><item><title>调试的时候出了一个问题</title><link>https://fpghwd.github.io/posts/diao-shi-de-shi-hou-chu-le-yi-ge-wen-ti/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
+&lt;/p&gt;&lt;/div&gt;</description><category>ATTACH</category><category>emacs</category><guid>https://fpghwd.github.io/posts/org-archive-location/</guid><pubDate>Fri, 16 Oct 2020 11:32:18 GMT</pubDate></item><item><title>调试的时候出了一个问题</title><link>https://fpghwd.github.io/posts/diao-shi-de-shi-hou-chu-le-yi-ge-wen-ti/</link><dc:creator>Wang Ding</dc:creator><description>&lt;div&gt;&lt;p&gt;
 &lt;a href="https://leetcode.com/problems/shortest-distance-to-a-character/"&gt;821. Shortest Distance to a Character&lt;/a&gt;
 &lt;/p&gt;
 
@@ -120,7 +120,7 @@ datetree, use "~/org/datetree.org::datetree/".
 
 &lt;p&gt;
 同时有一个问题：转化时为什么是有符号整数转换成无符号整数，而不是相反呢？
-&lt;/p&gt;&lt;/div&gt;</description><category>ATTACH</category><category>leetcode</category><guid>https://fpghwd.github.io/posts/diao-shi-de-shi-hou-chu-le-yi-ge-wen-ti/</guid><pubDate>Thu, 24 Sep 2020 21:22:42 GMT</pubDate></item><item><title>Org2nikola image displaying</title><link>https://fpghwd.github.io/posts/org2nikola-image-display/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
+&lt;/p&gt;&lt;/div&gt;</description><category>ATTACH</category><category>leetcode</category><guid>https://fpghwd.github.io/posts/diao-shi-de-shi-hou-chu-le-yi-ge-wen-ti/</guid><pubDate>Fri, 25 Sep 2020 05:22:42 GMT</pubDate></item><item><title>Org2nikola image displaying</title><link>https://fpghwd.github.io/posts/org2nikola-image-display/</link><dc:creator>Wang Ding</dc:creator><description>&lt;div&gt;&lt;p&gt;
 &lt;b&gt;设置&lt;/b&gt;
 &lt;/p&gt;
 
@@ -203,7 +203,7 @@ datetree, use "~/org/datetree.org::datetree/".
 &lt;ol class="org-ol"&gt;
 &lt;li&gt;由于没有循环，只能找到第一个图片的字符串然后替换成真实的 url, 需要完善匹配后的操作。（完成）&lt;/li&gt;
 &lt;li&gt;还只能匹配截图这样文件名的图片，需要完善正则表达式。（完成）&lt;/li&gt;
-&lt;/ol&gt;&lt;/div&gt;</description><category>ATTACH</category><category>emacs</category><guid>https://fpghwd.github.io/posts/org2nikola-image-display/</guid><pubDate>Wed, 16 Sep 2020 19:35:39 GMT</pubDate></item><item><title>No news is good news</title><link>https://fpghwd.github.io/posts/no-news-is-good-news/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
+&lt;/ol&gt;&lt;/div&gt;</description><category>ATTACH</category><category>emacs</category><guid>https://fpghwd.github.io/posts/org2nikola-image-display/</guid><pubDate>Thu, 17 Sep 2020 03:35:39 GMT</pubDate></item><item><title>No news is good news</title><link>https://fpghwd.github.io/posts/no-news-is-good-news/</link><dc:creator>Wang Ding</dc:creator><description>&lt;div&gt;&lt;p&gt;
 今天看书看到了在如何在应用程序中加载/链接共享库，书中以高性能 Web 服务器的例子来说明，对于一个繁忙的网站，运行时加载和链接共享库对于服务质量的提升意义重大。
 &lt;/p&gt;
 
@@ -229,4 +229,4 @@ datetree, use "~/org/datetree.org::datetree/".
 
 &lt;p&gt;
 当然其实要说：“成功都是一样的，失败各有各的不同的原因”也是没有问题的，毕竟比“失败都是一样的，成功各有各的不同”这句话要更为实诚一点。我觉得这说明从失败中获取原因是有价值的，而从成功中找原因应该没有什么大的价值吧。怎么回事，好像顺手黑了成功学一把，这不是我的本意。
-&lt;/p&gt;&lt;/div&gt;</description><category>ATTACH</category><category>csapp</category><guid>https://fpghwd.github.io/posts/no-news-is-good-news/</guid><pubDate>Mon, 24 Aug 2020 18:52:31 GMT</pubDate></item></channel></rss>
+&lt;/p&gt;&lt;/div&gt;</description><category>ATTACH</category><category>csapp</category><guid>https://fpghwd.github.io/posts/no-news-is-good-news/</guid><pubDate>Tue, 25 Aug 2020 02:52:31 GMT</pubDate></item></channel></rss>

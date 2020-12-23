@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>wd's blog (Posts about emacs)</title><link>https://fpghwd.github.io/</link><description></description><atom:link href="https://fpghwd.github.io/categories/emacs.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;suzumiya natsuhi&lt;/a&gt; </copyright><lastBuildDate>Tue, 15 Dec 2020 08:13:58 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Emacs 下同时查看和编辑一个文件的多个 headline: 使用 Indirect Buffer</title><link>https://fpghwd.github.io/posts/emacs-open-several-windows-with-specific-org-narrowed-headline/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>wd's blog (Posts about emacs)</title><link>https://fpghwd.github.io/</link><description></description><atom:link href="https://fpghwd.github.io/categories/emacs.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;Wang Ding&lt;/a&gt; </copyright><lastBuildDate>Wed, 23 Dec 2020 09:34:49 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Emacs 下同时查看和编辑一个文件的多个 headline: 使用 Indirect Buffer</title><link>https://fpghwd.github.io/posts/emacs-open-several-windows-with-specific-org-narrowed-headline/</link><dc:creator>Wang Ding</dc:creator><description>&lt;div&gt;&lt;p&gt;
 在使用 emacs 编辑一个很多的 headlines 的 org 文件时，如果每个 headline 下的内容需要交叉查看和编辑的时候，我就非常需要一个单独的 windows(emacs 下的窗口，下均同) 仅显示一个 headline 下的所有内容，所以必须用到 &lt;code&gt;org-narrow-to-subtree&lt;/code&gt; 这个函数。
 &lt;/p&gt;
 
@@ -13,7 +13,7 @@
 
 &lt;p&gt;
 这个功能对于我来说很实用，尤其是对一个比较长的， subtree 又比较多的 org 文件中同时查看和编辑多个 headline 的情况下尤其有用。
-&lt;/p&gt;&lt;/div&gt;</description><category>emacs</category><guid>https://fpghwd.github.io/posts/emacs-open-several-windows-with-specific-org-narrowed-headline/</guid><pubDate>Tue, 15 Dec 2020 00:04:30 GMT</pubDate></item><item><title>Emacs 使用感受</title><link>https://fpghwd.github.io/posts/emacs-shi-yong-gan-shou/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
+&lt;/p&gt;&lt;/div&gt;</description><category>emacs</category><guid>https://fpghwd.github.io/posts/emacs-open-several-windows-with-specific-org-narrowed-headline/</guid><pubDate>Tue, 15 Dec 2020 08:04:30 GMT</pubDate></item><item><title>Emacs 使用感受</title><link>https://fpghwd.github.io/posts/emacs-shi-yong-gan-shou/</link><dc:creator>Wang Ding</dc:creator><description>&lt;div&gt;&lt;p&gt;
 不知不觉使用 emacs 已经有两年了。其实一开始看 Emacs 那篇自带的极短的介绍要更早一点，现在看当时的那种喜悦的感觉（用上了众多名人都推荐的软件）更多的是 naive 和开心。
 &lt;/p&gt;
 
@@ -37,7 +37,7 @@
 &lt;p&gt;
 Emacs loves me, emacs loves you.
 &lt;/p&gt;
-&lt;/blockquote&gt;&lt;/div&gt;</description><category>emacs</category><guid>https://fpghwd.github.io/posts/emacs-shi-yong-gan-shou/</guid><pubDate>Thu, 10 Dec 2020 02:23:53 GMT</pubDate></item><item><title>linux 平台下 emacs native-comp 分支编译</title><link>https://fpghwd.github.io/posts/linux-ping-tai-xia-emacs-native-comp-fen-zhi-bian-yi/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;ul class="org-ul"&gt;
+&lt;/blockquote&gt;&lt;/div&gt;</description><category>emacs</category><guid>https://fpghwd.github.io/posts/emacs-shi-yong-gan-shou/</guid><pubDate>Thu, 10 Dec 2020 10:23:53 GMT</pubDate></item><item><title>linux 平台下 emacs native-comp 分支编译</title><link>https://fpghwd.github.io/posts/linux-ping-tai-xia-emacs-native-comp-fen-zhi-bian-yi/</link><dc:creator>Wang Ding</dc:creator><description>&lt;ul class="org-ul"&gt;
 &lt;li&gt;编译 libgccjit
 
 &lt;ol class="org-ol"&gt;
@@ -189,19 +189,19 @@ doom build and run
 &lt;p&gt;
 确实有流畅很多，也可能是心理作用吧。 :)
 &lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;</description><category>emacs</category><guid>https://fpghwd.github.io/posts/linux-ping-tai-xia-emacs-native-comp-fen-zhi-bian-yi/</guid><pubDate>Thu, 26 Nov 2020 01:53:27 GMT</pubDate></item><item><title>Difference Since Using Doom Emacs</title><link>https://fpghwd.github.io/posts/since-use-doom-emacs/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
+&lt;/ul&gt;</description><category>emacs</category><guid>https://fpghwd.github.io/posts/linux-ping-tai-xia-emacs-native-comp-fen-zhi-bian-yi/</guid><pubDate>Thu, 26 Nov 2020 09:53:27 GMT</pubDate></item><item><title>Difference Since Using Doom Emacs</title><link>https://fpghwd.github.io/posts/since-use-doom-emacs/</link><dc:creator>Wang Ding</dc:creator><description>&lt;div&gt;&lt;p&gt;
 自从使用了 doom emacs 后，就很少纠结系统升级了。以前没事总是会升级一下，但是现在最多的就是可能想起来会升级一下 doom emacs, 只需要在 emacs 中 upgrade 和 reload 即可。其实大多数时候我也只是 doom sync 一下配置然后 reload 一下，最多也就十几二十秒。
 &lt;/p&gt;
 
 &lt;p&gt;
 用 emacs 写东西简直是最近感觉最幸福的一件事情了。
-&lt;/p&gt;&lt;/div&gt;</description><category>emacs</category><guid>https://fpghwd.github.io/posts/since-use-doom-emacs/</guid><pubDate>Wed, 04 Nov 2020 19:13:58 GMT</pubDate></item><item><title>Emacs Lisp Overlay</title><link>https://fpghwd.github.io/posts/emacs-lisp-overlay/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
+&lt;/p&gt;&lt;/div&gt;</description><category>emacs</category><guid>https://fpghwd.github.io/posts/since-use-doom-emacs/</guid><pubDate>Thu, 05 Nov 2020 03:13:58 GMT</pubDate></item><item><title>Emacs Lisp Overlay</title><link>https://fpghwd.github.io/posts/emacs-lisp-overlay/</link><dc:creator>Wang Ding</dc:creator><description>&lt;div&gt;&lt;p&gt;
 最近看到 Emacs Lisp 里面 Overlay 的概念，可以用于自定义介面 buffer 的文字的某些特殊效果。
 &lt;/p&gt;
 
 &lt;p&gt;
 当然其实对文字的编辑和模式本身都可以是文字内容的一种展现方式，但是文字的属性（Text Properties）是文字的一部分，overlay 并不是文字的一部分。所以在 buffer 之间复制某些文字的时候，并不会同时复制  overlay ；同时改变 buffer 的文字属性其实也是在修改 buffer 本身。但 overlay 的改变并不会改变 buffer 本身，这种修改自然也不会被保存在这个 buffer 的 undo list 中。
-&lt;/p&gt;&lt;/div&gt;</description><category>emacs</category><guid>https://fpghwd.github.io/posts/emacs-lisp-overlay/</guid><pubDate>Mon, 26 Oct 2020 05:24:03 GMT</pubDate></item><item><title>Org archive location</title><link>https://fpghwd.github.io/posts/org-archive-location/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
+&lt;/p&gt;&lt;/div&gt;</description><category>emacs</category><guid>https://fpghwd.github.io/posts/emacs-lisp-overlay/</guid><pubDate>Mon, 26 Oct 2020 13:24:03 GMT</pubDate></item><item><title>Org archive location</title><link>https://fpghwd.github.io/posts/org-archive-location/</link><dc:creator>Wang Ding</dc:creator><description>&lt;div&gt;&lt;p&gt;
 最近在使用 org 的时候想把 org-archive-subtree 的条目和 org-capture-templates 那样，将每次当天 archived 的 headline 放到当日的日期 headline 下面，和日记一样组织。这样的话，将来查询的时候就可以顺便看一下当天发生的事情和当天完成的项目了。
 &lt;/p&gt;
 
@@ -247,7 +247,7 @@ datetree, use "~/org/datetree.org::datetree/".
 
 &lt;p&gt;
 可以把日记和归档的条目都放到一个文件，归档也不会经常去动，只需要看的时候搜索一下就行。
-&lt;/p&gt;&lt;/div&gt;</description><category>ATTACH</category><category>emacs</category><guid>https://fpghwd.github.io/posts/org-archive-location/</guid><pubDate>Fri, 16 Oct 2020 03:32:18 GMT</pubDate></item><item><title>Org2nikola image displaying</title><link>https://fpghwd.github.io/posts/org2nikola-image-display/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
+&lt;/p&gt;&lt;/div&gt;</description><category>ATTACH</category><category>emacs</category><guid>https://fpghwd.github.io/posts/org-archive-location/</guid><pubDate>Fri, 16 Oct 2020 11:32:18 GMT</pubDate></item><item><title>Org2nikola image displaying</title><link>https://fpghwd.github.io/posts/org2nikola-image-display/</link><dc:creator>Wang Ding</dc:creator><description>&lt;div&gt;&lt;p&gt;
 &lt;b&gt;设置&lt;/b&gt;
 &lt;/p&gt;
 
@@ -330,7 +330,7 @@ datetree, use "~/org/datetree.org::datetree/".
 &lt;ol class="org-ol"&gt;
 &lt;li&gt;由于没有循环，只能找到第一个图片的字符串然后替换成真实的 url, 需要完善匹配后的操作。（完成）&lt;/li&gt;
 &lt;li&gt;还只能匹配截图这样文件名的图片，需要完善正则表达式。（完成）&lt;/li&gt;
-&lt;/ol&gt;&lt;/div&gt;</description><category>ATTACH</category><category>emacs</category><guid>https://fpghwd.github.io/posts/org2nikola-image-display/</guid><pubDate>Wed, 16 Sep 2020 19:35:39 GMT</pubDate></item><item><title>Manage workgroups in emacs via workgroups2</title><link>https://fpghwd.github.io/posts/shi-yong-workgroups2-guan-li-emacs-de-session/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
+&lt;/ol&gt;&lt;/div&gt;</description><category>ATTACH</category><category>emacs</category><guid>https://fpghwd.github.io/posts/org2nikola-image-display/</guid><pubDate>Thu, 17 Sep 2020 03:35:39 GMT</pubDate></item><item><title>Manage workgroups in emacs via workgroups2</title><link>https://fpghwd.github.io/posts/shi-yong-workgroups2-guan-li-emacs-de-session/</link><dc:creator>Wang Ding</dc:creator><description>&lt;div&gt;&lt;p&gt;
 &lt;b&gt;Workgroups2&lt;sup&gt;&lt;a id="fnr.1" class="footref" href="https://fpghwd.github.io/posts/shi-yong-workgroups2-guan-li-emacs-de-session/#fn.1"&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/b&gt; 
 Workgroups2 是一款保存和恢复用户工作空间的一款 emacs 插件。
 &lt;/p&gt;
@@ -369,7 +369,7 @@ Workgroups2 是一款保存和恢复用户工作空间的一款 emacs 插件。
 
 
 &lt;/div&gt;
-&lt;/div&gt;&lt;/div&gt;</description><category>emacs</category><category>workgroups2</category><guid>https://fpghwd.github.io/posts/shi-yong-workgroups2-guan-li-emacs-de-session/</guid><pubDate>Thu, 09 Jul 2020 02:08:16 GMT</pubDate></item><item><title>Makefile</title><link>https://fpghwd.github.io/posts/makefileemacs/</link><dc:creator>suzumiya natsuhi</dc:creator><description>&lt;div&gt;&lt;p&gt;
+&lt;/div&gt;&lt;/div&gt;</description><category>emacs</category><category>workgroups2</category><guid>https://fpghwd.github.io/posts/shi-yong-workgroups2-guan-li-emacs-de-session/</guid><pubDate>Thu, 09 Jul 2020 10:08:16 GMT</pubDate></item><item><title>Makefile</title><link>https://fpghwd.github.io/posts/makefileemacs/</link><dc:creator>Wang Ding</dc:creator><description>&lt;div&gt;&lt;p&gt;
 &lt;b&gt;预警&lt;/b&gt;
 本文可能没有重点，我觉得博客改个更日常的标题更为合适:)
 &lt;/p&gt;
@@ -387,4 +387,4 @@ Workgroups2 是一款保存和恢复用户工作空间的一款 emacs 插件。
 &lt;p&gt;
 &lt;b&gt;english&lt;/b&gt;
 想这些旅程也离不开英语的陪伴，曾经也吃过英语的亏，英语也是国际化所必须要掌握的一个工具。
-&lt;/p&gt;&lt;/div&gt;</description><category>emacs</category><category>makefile</category><guid>https://fpghwd.github.io/posts/makefileemacs/</guid><pubDate>Wed, 08 Jul 2020 19:45:25 GMT</pubDate></item></channel></rss>
+&lt;/p&gt;&lt;/div&gt;</description><category>emacs</category><category>makefile</category><guid>https://fpghwd.github.io/posts/makefileemacs/</guid><pubDate>Thu, 09 Jul 2020 03:45:25 GMT</pubDate></item></channel></rss>

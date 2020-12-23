@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>wd's blog (Posts about tutorial)</title><link>https://fpghwd.github.io/</link><description></description><atom:link href="https://fpghwd.github.io/categories/tutorial.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;Wang Ding&lt;/a&gt; </copyright><lastBuildDate>Sat, 19 Dec 2020 09:38:54 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Tutorial to workstation</title><link>https://fpghwd.github.io/posts/tutorial-to-workstation/</link><dc:creator>Wang Ding</dc:creator><description>&lt;ul class="org-ul"&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>wd's blog (Posts about tutorial)</title><link>https://fpghwd.github.io/</link><description></description><atom:link href="https://fpghwd.github.io/categories/tutorial.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;Wang Ding&lt;/a&gt; </copyright><lastBuildDate>Wed, 23 Dec 2020 09:34:49 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Tutorial to workstation</title><link>https://fpghwd.github.io/posts/tutorial-to-workstation/</link><dc:creator>Wang Ding</dc:creator><description>&lt;ul class="org-ul"&gt;
 &lt;li&gt;&lt;p&gt;
 代理
 &lt;/p&gt;
@@ -238,4 +238,4 @@ done
 &lt;li&gt;&lt;a href="https://www.gnu.org/software/emacs/"&gt;Emacs&lt;/a&gt; 的 &lt;a href="https://www.emacswiki.org/emacs/TrampMode"&gt;tramp&lt;/a&gt;, 次方便。&lt;/li&gt;
 &lt;/ol&gt;&lt;/li&gt;
 &lt;/ol&gt;&lt;/li&gt;
-&lt;/ul&gt;</description><category>tutorial</category><guid>https://fpghwd.github.io/posts/tutorial-to-workstation/</guid><pubDate>Thu, 17 Dec 2020 18:46:19 GMT</pubDate></item></channel></rss>
+&lt;/ul&gt;</description><category>tutorial</category><guid>https://fpghwd.github.io/posts/tutorial-to-workstation/</guid><pubDate>Fri, 18 Dec 2020 02:46:19 GMT</pubDate></item></channel></rss>
