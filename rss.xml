@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>wd's blog</title><link>https://fpghwd.github.io/</link><description>Stay open, hold your courage</description><atom:link href="https://fpghwd.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;Wang Ding&lt;/a&gt; </copyright><lastBuildDate>Wed, 23 Dec 2020 09:32:46 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Tutorial to workstation</title><link>https://fpghwd.github.io/posts/tutorial-to-workstation/</link><dc:creator>Wang Ding</dc:creator><description>&lt;ul class="org-ul"&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>wd's blog</title><link>https://fpghwd.github.io/</link><description>Stay open, hold your courage</description><atom:link href="https://fpghwd.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;Wang Ding&lt;/a&gt; </copyright><lastBuildDate>Wed, 23 Dec 2020 11:01:18 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Emacs 自动保存文件设置</title><link>https://fpghwd.github.io/posts/emacs-zi-dong-bao-cun-wen-jian-she-zhi/</link><dc:creator>Wang Ding</dc:creator><description>&lt;p&gt;
+测试内容
+&lt;/p&gt;</description><category>emacs</category><guid>https://fpghwd.github.io/posts/emacs-zi-dong-bao-cun-wen-jian-she-zhi/</guid><pubDate>Wed, 23 Dec 2020 09:47:59 GMT</pubDate></item><item><title>Tutorial to workstation</title><link>https://fpghwd.github.io/posts/tutorial-to-workstation/</link><dc:creator>Wang Ding</dc:creator><description>&lt;ul class="org-ul"&gt;
 &lt;li&gt;&lt;p&gt;
 代理
 &lt;/p&gt;
@@ -238,7 +240,7 @@ done
 &lt;li&gt;&lt;a href="https://www.gnu.org/software/emacs/"&gt;Emacs&lt;/a&gt; 的 &lt;a href="https://www.emacswiki.org/emacs/TrampMode"&gt;tramp&lt;/a&gt;, 次方便。&lt;/li&gt;
 &lt;/ol&gt;&lt;/li&gt;
 &lt;/ol&gt;&lt;/li&gt;
-&lt;/ul&gt;</description><category>tutorial</category><guid>https://fpghwd.github.io/posts/tutorial-to-workstation/</guid><pubDate>Thu, 17 Dec 2020 18:46:19 GMT</pubDate></item><item><title>Emacs 下同时查看和编辑一个文件的多个 headline: 使用 Indirect Buffer</title><link>https://fpghwd.github.io/posts/emacs-open-several-windows-with-specific-org-narrowed-headline/</link><dc:creator>Wang Ding</dc:creator><description>&lt;div&gt;&lt;p&gt;
+&lt;/ul&gt;</description><category>tutorial</category><guid>https://fpghwd.github.io/posts/tutorial-to-workstation/</guid><pubDate>Fri, 18 Dec 2020 02:46:19 GMT</pubDate></item><item><title>Emacs 下同时查看和编辑一个文件的多个 headline: 使用 Indirect Buffer</title><link>https://fpghwd.github.io/posts/emacs-open-several-windows-with-specific-org-narrowed-headline/</link><dc:creator>Wang Ding</dc:creator><description>&lt;div&gt;&lt;p&gt;
 在使用 emacs 编辑一个很多的 headlines 的 org 文件时，如果每个 headline 下的内容需要交叉查看和编辑的时候，我就非常需要一个单独的 windows(emacs 下的窗口，下均同) 仅显示一个 headline 下的所有内容，所以必须用到 &lt;code&gt;org-narrow-to-subtree&lt;/code&gt; 这个函数。
 &lt;/p&gt;
 
@@ -252,13 +254,13 @@ done
 
 &lt;p&gt;
 这个功能对于我来说很实用，尤其是对一个比较长的， subtree 又比较多的 org 文件中同时查看和编辑多个 headline 的情况下尤其有用。
-&lt;/p&gt;&lt;/div&gt;</description><category>emacs</category><guid>https://fpghwd.github.io/posts/emacs-open-several-windows-with-specific-org-narrowed-headline/</guid><pubDate>Tue, 15 Dec 2020 00:04:30 GMT</pubDate></item><item><title>第一场雪</title><link>https://fpghwd.github.io/posts/di-yi-chang-xue/</link><dc:creator>Wang Ding</dc:creator><description>&lt;div&gt;&lt;p&gt;
+&lt;/p&gt;&lt;/div&gt;</description><category>emacs</category><guid>https://fpghwd.github.io/posts/emacs-open-several-windows-with-specific-org-narrowed-headline/</guid><pubDate>Tue, 15 Dec 2020 08:04:30 GMT</pubDate></item><item><title>第一场雪</title><link>https://fpghwd.github.io/posts/di-yi-chang-xue/</link><dc:creator>Wang Ding</dc:creator><description>&lt;div&gt;&lt;p&gt;
 2020 年的第一场雪，比去年来得要早一些。
 &lt;/p&gt;
 
 &lt;p&gt;
 &lt;a href="https://raw.githubusercontent.com/fpGHwd/fpghwd.github.io/master/images/_20201214_193136IMG_20201212_132726_export_1.jpg"&gt;宿舍外&lt;/a&gt;
-&lt;/p&gt;&lt;/div&gt;</description><category>ATTACH</category><category>life</category><category>mathjax</category><guid>https://fpghwd.github.io/posts/di-yi-chang-xue/</guid><pubDate>Sun, 13 Dec 2020 17:52:05 GMT</pubDate></item><item><title>Emacs 使用感受</title><link>https://fpghwd.github.io/posts/emacs-shi-yong-gan-shou/</link><dc:creator>Wang Ding</dc:creator><description>&lt;div&gt;&lt;p&gt;
+&lt;/p&gt;&lt;/div&gt;</description><category>ATTACH</category><category>life</category><category>mathjax</category><guid>https://fpghwd.github.io/posts/di-yi-chang-xue/</guid><pubDate>Mon, 14 Dec 2020 01:52:05 GMT</pubDate></item><item><title>Emacs 使用感受</title><link>https://fpghwd.github.io/posts/emacs-shi-yong-gan-shou/</link><dc:creator>Wang Ding</dc:creator><description>&lt;div&gt;&lt;p&gt;
 不知不觉使用 emacs 已经有两年了。其实一开始看 Emacs 那篇自带的极短的介绍要更早一点，现在看当时的那种喜悦的感觉（用上了众多名人都推荐的软件）更多的是 naive 和开心。
 &lt;/p&gt;
 
@@ -282,7 +284,7 @@ done
 &lt;p&gt;
 Emacs loves me, emacs loves you.
 &lt;/p&gt;
-&lt;/blockquote&gt;&lt;/div&gt;</description><category>emacs</category><guid>https://fpghwd.github.io/posts/emacs-shi-yong-gan-shou/</guid><pubDate>Thu, 10 Dec 2020 02:23:53 GMT</pubDate></item><item><title>《被讨厌的勇气》和宁静祷文</title><link>https://fpghwd.github.io/posts/bei-tao-yan-de-yong-qi-he-ning-jing-dao-wen/</link><dc:creator>Wang Ding</dc:creator><description>&lt;div&gt;&lt;ul class="org-ul"&gt;
+&lt;/blockquote&gt;&lt;/div&gt;</description><category>emacs</category><guid>https://fpghwd.github.io/posts/emacs-shi-yong-gan-shou/</guid><pubDate>Thu, 10 Dec 2020 10:23:53 GMT</pubDate></item><item><title>《被讨厌的勇气》和宁静祷文</title><link>https://fpghwd.github.io/posts/bei-tao-yan-de-yong-qi-he-ning-jing-dao-wen/</link><dc:creator>Wang Ding</dc:creator><description>&lt;div&gt;&lt;ul class="org-ul"&gt;
 &lt;li&gt;&lt;p&gt;
 被讨厌的勇气
 &lt;/p&gt;
@@ -350,7 +352,7 @@ The link is: &lt;a href="http://orgmode.org"&gt;http://orgmode.org&lt;/a&gt;
 
 
 &lt;/div&gt;
-&lt;/div&gt;&lt;/div&gt;</description><category>mind</category><guid>https://fpghwd.github.io/posts/bei-tao-yan-de-yong-qi-he-ning-jing-dao-wen/</guid><pubDate>Mon, 07 Dec 2020 21:50:30 GMT</pubDate></item><item><title>《第六感生死缘》</title><link>https://fpghwd.github.io/posts/di-liu-gan-sheng-si-yuan/</link><dc:creator>Wang Ding</dc:creator><description>&lt;div&gt;&lt;p&gt;
+&lt;/div&gt;&lt;/div&gt;</description><category>mind</category><guid>https://fpghwd.github.io/posts/bei-tao-yan-de-yong-qi-he-ning-jing-dao-wen/</guid><pubDate>Tue, 08 Dec 2020 05:50:30 GMT</pubDate></item><item><title>《第六感生死缘》</title><link>https://fpghwd.github.io/posts/di-liu-gan-sheng-si-yuan/</link><dc:creator>Wang Ding</dc:creator><description>&lt;div&gt;&lt;p&gt;
 电影开场 10 分钟飞机上，Susan 和父亲 William 进行了如下对话：
 &lt;/p&gt;
 
@@ -530,7 +532,7 @@ Susan: Yeah.
 
 &lt;p&gt;
 \(\phi\)
-&lt;/p&gt;&lt;/div&gt;</description><category>film</category><guid>https://fpghwd.github.io/posts/di-liu-gan-sheng-si-yuan/</guid><pubDate>Wed, 02 Dec 2020 04:22:56 GMT</pubDate></item><item><title>最近的感想</title><link>https://fpghwd.github.io/posts/zui-jin-de-gan-xiang/</link><dc:creator>Wang Ding</dc:creator><description>&lt;div&gt;&lt;p&gt;
+&lt;/p&gt;&lt;/div&gt;</description><category>film</category><guid>https://fpghwd.github.io/posts/di-liu-gan-sheng-si-yuan/</guid><pubDate>Wed, 02 Dec 2020 12:22:56 GMT</pubDate></item><item><title>最近的感想</title><link>https://fpghwd.github.io/posts/zui-jin-de-gan-xiang/</link><dc:creator>Wang Ding</dc:creator><description>&lt;div&gt;&lt;p&gt;
 最近有在不断的写自己的感想，内容大多比较琐碎，但也感觉在逐渐摆脱琐碎和细节。
 &lt;/p&gt;
 
@@ -540,7 +542,7 @@ Susan: Yeah.
 
 &lt;p&gt;
 但是也有一些另外的感想：1. 很多突然来到的想法，会第一时间存到 gtd 中。其实这些突然来到的想法，大多是不成熟的想法。直觉它们是未来的映像，不需要立即就反应或马上开始想着完成。 2. 其实以上的想法，也大多是未完成的当下的主要的事情的一种反映而已。
-&lt;/p&gt;&lt;/div&gt;</description><category>life</category><guid>https://fpghwd.github.io/posts/zui-jin-de-gan-xiang/</guid><pubDate>Tue, 01 Dec 2020 03:57:11 GMT</pubDate></item><item><title>openSUSE 上 mariadb 的使用</title><link>https://fpghwd.github.io/posts/opensuse-shang-mariadb-de-shi-yong/</link><dc:creator>Wang Ding</dc:creator><description>&lt;ul class="org-ul"&gt;
+&lt;/p&gt;&lt;/div&gt;</description><category>life</category><guid>https://fpghwd.github.io/posts/zui-jin-de-gan-xiang/</guid><pubDate>Tue, 01 Dec 2020 11:57:11 GMT</pubDate></item><item><title>openSUSE 上 mariadb 的使用</title><link>https://fpghwd.github.io/posts/opensuse-shang-mariadb-de-shi-yong/</link><dc:creator>Wang Ding</dc:creator><description>&lt;ul class="org-ul"&gt;
 &lt;li&gt;&lt;p&gt;
 缘起
 &lt;/p&gt;
@@ -590,7 +592,7 @@ mysql 用户组
 &lt;p&gt;&lt;img src="https://raw.githubusercontent.com/fpGHwd/fpghwd.github.io/master/images/_20201129_160845screenshot.png" alt="_20201129_160845screenshot.png"&gt;
 &lt;/p&gt;
 &lt;/div&gt;&lt;/li&gt;
-&lt;/ul&gt;</description><category>ATTACH</category><category>openSUSE</category><guid>https://fpghwd.github.io/posts/opensuse-shang-mariadb-de-shi-yong/</guid><pubDate>Sun, 29 Nov 2020 00:09:05 GMT</pubDate></item><item><title>linux 平台下 emacs native-comp 分支编译</title><link>https://fpghwd.github.io/posts/linux-ping-tai-xia-emacs-native-comp-fen-zhi-bian-yi/</link><dc:creator>Wang Ding</dc:creator><description>&lt;ul class="org-ul"&gt;
+&lt;/ul&gt;</description><category>ATTACH</category><category>openSUSE</category><guid>https://fpghwd.github.io/posts/opensuse-shang-mariadb-de-shi-yong/</guid><pubDate>Sun, 29 Nov 2020 08:09:05 GMT</pubDate></item><item><title>linux 平台下 emacs native-comp 分支编译</title><link>https://fpghwd.github.io/posts/linux-ping-tai-xia-emacs-native-comp-fen-zhi-bian-yi/</link><dc:creator>Wang Ding</dc:creator><description>&lt;ul class="org-ul"&gt;
 &lt;li&gt;编译 libgccjit
 
 &lt;ol class="org-ol"&gt;
@@ -742,16 +744,4 @@ doom build and run
 &lt;p&gt;
 确实有流畅很多，也可能是心理作用吧。 :)
 &lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;</description><category>emacs</category><guid>https://fpghwd.github.io/posts/linux-ping-tai-xia-emacs-native-comp-fen-zhi-bian-yi/</guid><pubDate>Thu, 26 Nov 2020 01:53:27 GMT</pubDate></item><item><title>《狗镇》</title><link>https://fpghwd.github.io/posts/kan-wan-dian-ying-gou-zhen-de-yi-dian-xiang-fa/</link><dc:creator>Wang Ding</dc:creator><description>&lt;div&gt;&lt;p&gt;
-Grace 重新见到父亲时，父亲说了以下的话：
-&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;
-你错了，他们犯下的错误，只是因为他们在服从自己的本性。原谅，宽恕，是在纵容罪恶。你要宽恕他们，原谅他们，才是真正的傲慢。因为只有上帝才有资格去宽恕人类的罪责，去原谅他们的错误。当你要原谅所有有罪之人的时候，就是在傲慢地将自己比肩上帝。但你却指责我，说我傲慢。
-&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;
-其实在中国也有这样的表述：“以德报怨，何以报德？”
-&lt;/p&gt;&lt;/div&gt;</description><category>film</category><guid>https://fpghwd.github.io/posts/kan-wan-dian-ying-gou-zhen-de-yi-dian-xiang-fa/</guid><pubDate>Mon, 23 Nov 2020 07:39:45 GMT</pubDate></item></channel></rss>
+&lt;/ul&gt;</description><category>emacs</category><guid>https://fpghwd.github.io/posts/linux-ping-tai-xia-emacs-native-comp-fen-zhi-bian-yi/</guid><pubDate>Thu, 26 Nov 2020 09:53:27 GMT</pubDate></item></channel></rss>
