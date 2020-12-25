@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>wd's blog</title><link>https://fpghwd.github.io/</link><description>Stay open, hold your courage</description><atom:link href="https://fpghwd.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;Wang Ding&lt;/a&gt; </copyright><lastBuildDate>Thu, 24 Dec 2020 09:18:40 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Emacs 自动保存文件设置</title><link>https://fpghwd.github.io/posts/emacs-zi-dong-bao-cun-wen-jian-she-zhi/</link><dc:creator>Wang Ding</dc:creator><description>&lt;div&gt;&lt;p&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>wd's blog</title><link>https://fpghwd.github.io/</link><description>Stay open, hold your courage</description><atom:link href="https://fpghwd.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;Wang Ding&lt;/a&gt; </copyright><lastBuildDate>Fri, 25 Dec 2020 06:17:54 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Emacs 自动保存文件设置</title><link>https://fpghwd.github.io/posts/emacs-zi-dong-bao-cun-wen-jian-she-zhi/</link><dc:creator>Wang Ding</dc:creator><description>&lt;div&gt;&lt;p&gt;
 Emacs 自带文件自动保存的机制，利用 &lt;code&gt;do-auto-save&lt;/code&gt; 可以自动存储当前编辑的文件为一个编辑过的复本，并未直接存储到 buffer 对应的文件中。当然也可以直接开启全局的 &lt;code&gt;(auto-save-visited-mode t)&lt;/code&gt; ，在默认的 &lt;code&gt;auto-save-visited-interval&lt;/code&gt; 时间（默认 5 秒），后会自动将已经修改后的 buffer 内容写入文件中。
 &lt;/p&gt;
 
@@ -73,7 +73,7 @@ SSHD
 &lt;/p&gt;
 
 &lt;p&gt;
-autossh 是对 ssh 的增量，因此使用 ssh 隧道来进行内网穿透，仅使用 autossh 即可
+autossh 是对 ssh 的增强，因此使用 ssh 隧道来进行内网穿透，仅使用 autossh 即可
 &lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;&lt;/li&gt;
 
