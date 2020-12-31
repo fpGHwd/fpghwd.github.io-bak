@@ -1,5 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>wd's blog</title><link>https://fpghwd.github.io/</link><description>Stay open, hold your courage</description><atom:link href="https://fpghwd.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;Wang Ding&lt;/a&gt; </copyright><lastBuildDate>Fri, 25 Dec 2020 06:17:54 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Emacs 自动保存文件设置</title><link>https://fpghwd.github.io/posts/emacs-zi-dong-bao-cun-wen-jian-she-zhi/</link><dc:creator>Wang Ding</dc:creator><description>&lt;div&gt;&lt;p&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>wd's blog</title><link>https://fpghwd.github.io/</link><description>Stay open, hold your courage</description><atom:link href="https://fpghwd.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;Wang Ding&lt;/a&gt; </copyright><lastBuildDate>Thu, 31 Dec 2020 14:46:45 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>2020 年终总结</title><link>https://fpghwd.github.io/posts/2020-nian-zhong-zong-jie/</link><dc:creator>Wang Ding</dc:creator><description>&lt;div&gt;&lt;p&gt;
+今年虽然并没有什么好记录的，可能是因为平时记录得太多，到了现在并没有太多写的欲望。不过为了仪式感，也稍微写一点吧。
+&lt;/p&gt;
+
+&lt;p&gt;
+今年唯一重要的事情，是看了几本书。
+&lt;/p&gt;
+
+&lt;ul class="org-ul"&gt;
+&lt;li&gt;&lt;p&gt;
+《被讨厌的勇气》
+&lt;/p&gt;
+
+&lt;p&gt;
+其中对自己最有启发的是「课题分离」。具体不展开了，因为基于这一点其实有很多结论。
+&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;
+《禅与摩托车维修艺术》
+&lt;/p&gt;
+
+&lt;p&gt;
+这本书看了一半多，还没有看完。其中「良质」的概念引人深思。
+&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;
+《1984》
+&lt;/p&gt;
+
+&lt;p&gt;
+虽然看到很多推这本书的地方，但是反而对现在的社会现状有太多接触而并不觉得这本书很激进，像是一本“社会就是这个样子”的小说一样。
+&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;
+《深夜加油站遇见苏格拉底》
+&lt;/p&gt;
+
+&lt;p&gt;
+这本书是看到《和平战士》这部电影，然后才看的原著。「活在当下」是电影给我的最大提醒。
+&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;
+电影《 Meet Black 》
+&lt;/p&gt;
+
+&lt;p&gt;
+之前的博客有提到这部影片，其实我最喜欢的一句话也是女主的父亲的话。 &lt;i&gt;Stay Open&lt;/i&gt; 「谁知道呢？任何事情都有可能发生」。
+&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/div&gt;</description><guid>https://fpghwd.github.io/posts/2020-nian-zhong-zong-jie/</guid><pubDate>Thu, 31 Dec 2020 10:45:48 GMT</pubDate></item><item><title>Emacs 自动保存文件设置</title><link>https://fpghwd.github.io/posts/emacs-zi-dong-bao-cun-wen-jian-she-zhi/</link><dc:creator>Wang Ding</dc:creator><description>&lt;div&gt;&lt;p&gt;
 Emacs 自带文件自动保存的机制，利用 &lt;code&gt;do-auto-save&lt;/code&gt; 可以自动存储当前编辑的文件为一个编辑过的复本，并未直接存储到 buffer 对应的文件中。当然也可以直接开启全局的 &lt;code&gt;(auto-save-visited-mode t)&lt;/code&gt; ，在默认的 &lt;code&gt;auto-save-visited-interval&lt;/code&gt; 时间（默认 5 秒），后会自动将已经修改后的 buffer 内容写入文件中。
 &lt;/p&gt;
 
@@ -596,156 +644,4 @@ mysql 用户组
 &lt;p&gt;&lt;img src="https://raw.githubusercontent.com/fpGHwd/fpghwd.github.io/master/images/_20201129_160845screenshot.png" alt="_20201129_160845screenshot.png"&gt;
 &lt;/p&gt;
 &lt;/div&gt;&lt;/li&gt;
-&lt;/ul&gt;</description><category>ATTACH</category><category>openSUSE</category><guid>https://fpghwd.github.io/posts/opensuse-shang-mariadb-de-shi-yong/</guid><pubDate>Sun, 29 Nov 2020 08:09:05 GMT</pubDate></item><item><title>linux 平台下 emacs native-comp 分支编译</title><link>https://fpghwd.github.io/posts/linux-ping-tai-xia-emacs-native-comp-fen-zhi-bian-yi/</link><dc:creator>Wang Ding</dc:creator><description>&lt;ul class="org-ul"&gt;
-&lt;li&gt;编译 libgccjit
-
-&lt;ol class="org-ol"&gt;
-&lt;li&gt;&lt;p&gt;
-下载 gcc
-&lt;/p&gt;
-
-&lt;p&gt;
-&lt;code&gt;git clone git://gcc.gnu.org/git/gcc.git&lt;/code&gt;
-&lt;/p&gt;
-
-&lt;p&gt;
-然后切换到目录 &lt;code&gt;cd gcc&lt;/code&gt;
-&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;
-切换分枝
-&lt;/p&gt;
-
-&lt;p&gt;
-切换 gcc-9 分枝 &lt;code&gt;git checkout remotes/origin/releases/gcc-9&lt;/code&gt;
-&lt;/p&gt;
-
-&lt;p&gt;
-创建 build 目录 &lt;code&gt;mkdir -p build&lt;/code&gt;
-&lt;/p&gt;
-
-&lt;p&gt;
-进入 build 目录 &lt;code&gt;cd build&lt;/code&gt;
-&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;
-configure
-&lt;/p&gt;
-
-&lt;p&gt;
-&lt;code&gt;../configure --enable-host-shared --enable-languages=jit,c,c++,objc,obj-c++ --enable-checking=release --disable-bootstrap&lt;/code&gt;
-&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;
-编译
-&lt;/p&gt;
-
-&lt;p&gt;
-&lt;code&gt;make -j8&lt;/code&gt;
-&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;
-安装（默认到 &lt;code&gt;/usr/local&lt;/code&gt; ）
-&lt;/p&gt;
-
-&lt;p&gt;
-&lt;code&gt;sudo make install&lt;/code&gt;
-&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;
-加载库
-&lt;/p&gt;
-
-&lt;p&gt;
-&lt;code&gt;sudo ldconfig&lt;/code&gt;
-&lt;/p&gt;
-
-&lt;p&gt;
-测试是否能发现 libgccjit 库 &lt;code&gt;sudo ldconfig -p | grep libgccjit&lt;/code&gt;
-&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;&lt;/li&gt;
-
-&lt;li&gt;编译 emacs
-
-&lt;ol class="org-ol"&gt;
-&lt;li&gt;&lt;p&gt;
-下载 emacs
-&lt;/p&gt;
-
-&lt;p&gt;
-克隆 emacs 仓库 &lt;code&gt;git clone https://github.com/emacs-mirror/emacs&lt;/code&gt;
-&lt;/p&gt;
-
-&lt;p&gt;
-进入 emacs 目录 &lt;code&gt;cd emacs&lt;/code&gt;
-&lt;/p&gt;
-
-&lt;p&gt;
-切换到 native-comp 分枝 &lt;code&gt;git checkout feature/native-comp&lt;/code&gt;
-&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;
-进入 emacs 目录后运行 autogen.sh
-&lt;/p&gt;
-
-&lt;p&gt;
-&lt;code&gt;./autogen.sh&lt;/code&gt;
-&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;
-编译 emacs
-&lt;/p&gt;
-
-&lt;p&gt;
-&lt;code&gt;./configure --with-nativecomp CC=clang&lt;/code&gt;
-&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;
-安装（默认 &lt;code&gt;/usr/local&lt;/code&gt; ）
-&lt;/p&gt;
-
-&lt;p&gt;
-&lt;code&gt;sudo make install&lt;/code&gt;
-&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;&lt;/li&gt;
-
-&lt;li&gt;启动 doom emacs
-
-&lt;ol class="org-ol"&gt;
-&lt;li&gt;&lt;p&gt;
-&lt;del&gt;启动的时候如果报错&lt;/del&gt;
-&lt;/p&gt;
-
-&lt;p&gt;
-&lt;code&gt;comp-deferred-compilation-black-list&lt;/code&gt;
-&lt;/p&gt;
-
-&lt;p&gt;
-然后找到&lt;a href="https://github.com/hlissner/doom-emacs/issues/4316"&gt;这里&lt;/a&gt;解决：注释掉 &lt;code&gt;.emacs.d/core/core.el&lt;/code&gt; 里面的一个过程 &lt;code&gt;(add-to-list 'comp-deferred-compilation-black-list entry)&lt;/code&gt;
-&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;
-doom build and run
-&lt;/p&gt;
-
-&lt;p&gt;
-升级 doom ，包含 doom sync 和 doom build 过程 &lt;code&gt;doom upgrade&lt;/code&gt;
-&lt;/p&gt;
-
-&lt;p&gt;
-查看 doom 是否是使用 emacs 28 版本 &lt;code&gt;doom run --version&lt;/code&gt;
-&lt;/p&gt;
-
-&lt;p&gt;
-若确认是 emacs 28 版本，就可运行 &lt;code&gt;doom run&lt;/code&gt;
-&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;
-最后
-&lt;/p&gt;
-
-&lt;p&gt;
-确实有流畅很多，也可能是心理作用吧。 :)
-&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;</description><category>emacs</category><guid>https://fpghwd.github.io/posts/linux-ping-tai-xia-emacs-native-comp-fen-zhi-bian-yi/</guid><pubDate>Thu, 26 Nov 2020 09:53:27 GMT</pubDate></item></channel></rss>
+&lt;/ul&gt;</description><category>ATTACH</category><category>openSUSE</category><guid>https://fpghwd.github.io/posts/opensuse-shang-mariadb-de-shi-yong/</guid><pubDate>Sun, 29 Nov 2020 08:09:05 GMT</pubDate></item></channel></rss>
