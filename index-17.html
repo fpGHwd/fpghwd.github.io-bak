@@ -52,6 +52,318 @@
 
     
     <div class="post">
+        <h2 class="post-title"><a href="posts/tutorial-to-workstation/">Tutorial to workstation</a></h2>
+        <div class="post-meta">
+            2020-12-18 02:46
+        </div>
+        <div class="post-meta">
+                Wang Ding
+        </div>
+        <div class="post-content">
+                <ul class="org-ul">
+<li>
+<p>
+代理
+</p>
+
+<p>
+目前最爽的解决方案是<a href="https://www.imperva.com/learn/ddos/transparent-proxy/">透明代理</a>。
+</p>
+</li>
+
+<li>
+<p>
+SSHD
+</p>
+
+<p>
+开启服务器的 sshd 服务
+</p>
+</li>
+
+<li>
+<a href="https://en.wikipedia.org/wiki/SSH_(Secure_Shell)">SSH</a>
+
+<ol class="org-ol">
+<li>
+<a href="https://www.zsythink.net/archives/2450">ssh 隧道内网穿透</a>
+
+<ol class="org-ol">
+<li>
+<a href="https://zhuanlan.zhihu.com/p/34908698">ssh 内网穿透</a>
+
+<ul class="org-ul">
+<li>实施条件
+
+<ul class="org-ul">
+<li>公共 IP 主机（VPS），也称“<a href="https://www.cnblogs.com/RXDXB/p/11491164.html">跳板机</a>”</li>
+
+<li>需要访问的内网机器（待穿透的内网机器）能访问并 SSH 登录公共主机</li>
+
+<li>本地机器（访问内网机器的机器）能访问并 SSH 登录中间主机</li>
+</ul>
+</li>
+
+<li>实施过程
+
+<ul class="org-ul">
+<li>
+<p>
+内网穿透到跳板机
+</p>
+
+<div class="org-src-container">
+
+<pre><code class="lang-bash">            ssh -qTfNn -R '[::]:22222:localhost:22' [Jump Server User]@[Jumper Server IP or Domain Name]
+</code></pre>
+
+</div>
+</li>
+
+<li>
+<p>
+本地机器访问内网机器
+</p>
+
+<div class="org-src-container">
+
+<pre><code class="lang-bash">            ssh -p 22222 [Remote User on machine on sub-network]@[Jump Server IP or Domain Name]
+</code></pre>
+
+</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+
+<li>
+<p>
+<a href="https://www.everythingcli.org/ssh-tunnelling-for-fun-and-profit-autossh/">autossh</a>
+</p>
+
+<p>
+autossh 是对 ssh 的增强，因此使用 ssh 隧道来进行内网穿透，仅使用 autossh 即可
+</p>
+</li>
+</ol>
+</li>
+
+<li>
+<p>
+登录
+</p>
+
+<p>
+<code>ssh user@hostname</code>
+</p>
+</li>
+
+<li>
+<p>
+无密码登录
+</p>
+
+<p>
+需要上传本地密钥到远程主机用户的 <code>~/.ssh/known_hosts</code> 文件中
+</p>
+
+<ol class="org-ol">
+<li>生成本地密钥 <code>ssh-keygen</code>
+</li>
+
+<li>上传本地密钥 <code>ssh-copy-id</code>
+</li>
+</ol>
+</li>
+
+<li>更快登录
+
+<ol class="org-ol">
+<li>设置 <code>.ssh/config</code>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+
+<li>文件传输
+
+<ol class="org-ol">
+<li>
+<p>
+采用 <a href="https://filezilla-project.org/">Filezilla</a> 传输文件
+</p>
+
+<p>
+最方便的一种方式，根据 ssh 信息来配置即可
+</p>
+</li>
+
+<li>
+<p>
+采用 <a href="https://man7.org/linux/man-pages/man1/scp.1.html">scp</a> 传输少量文件
+</p>
+
+<p>
+在实现 ssh 免密码的基础上，在命令行 <code>scp [filename] [remote-host]</code> 即可
+</p>
+</li>
+
+<li>
+<p>
+采用 <a href="https://git-scm.com/docs/user-manual">git</a> 同步文件
+</p>
+
+<p>
+需要 git 操作基础
+</p>
+</li>
+</ol>
+</li>
+
+<li>运行代码
+
+<ol class="org-ol">
+<li>
+<p>
+python 运行脚本
+</p>
+
+<p>
+<code>python test.py</code>
+</p>
+
+<ol class="org-ol">
+<li>脚本参数
+
+<ol class="org-ol">
+<li>参考 <a href="https://www.tutorialspoint.com/python/python_command_line_arguments.htm">python 参数使用</a>
+</li>
+</ol>
+</li>
+
+<li>
+<p>
+脚本循环
+</p>
+
+<p>
+有时需要跑一个耗时较长的程序，写一个脚本在 python 运行时传入参数来自动化程序运行
+</p>
+
+<div class="org-src-container">
+
+<pre><code class="lang-bash">
+#!/bin/bash
+# cmd='nohup python -u ga_kpca.py &gt; "log/ga-custom-kernel-kpca_"$(date "+%Y-%m-%d_%H-%M-%S").log 2&gt;&amp;1'
+
+cd ~/wangding/ga-kpca
+conda activate "wangding"
+
+for i in $(seq 2 7)
+do
+    for j in $(seq 2 7)
+    do
+        nohup python -u ga_kpca.py $i $j &gt; "log/ga-custom-kernel-kpca_"$(date "+%Y-%m-%d_%H-%M-%S").log 2&gt;&amp;1
+    done
+done
+
+</code></pre>
+
+</div>
+
+<p>
+其中 <code>$i</code> 和 <code>$j</code> 就是在 bash 中传入 python 的参数，参数可以结合具体代码逻辑做任何事情。
+</p>
+</li>
+</ol>
+</li>
+
+<li>
+<p>
+后台运行
+</p>
+
+<p>
+后台运行在命令后面加入 <code>&amp;</code> ，也即命令成为 <code>python test.py &amp;</code> 即可。
+</p>
+</li>
+
+<li>
+<p>
+存储日志
+</p>
+
+<p>
+在代码中，在关键信息的地方打印日志即可。
+</p>
+</li>
+
+<li>
+<p>
+存储图像
+</p>
+
+<p>
+代码在后台运行时，无需使用 <code>matplotlib.show()</code> 来查看图像，因此保存 <code>matlplotlib.savefig(filename=filename)</code> 即可。
+</p>
+</li>
+</ol>
+</li>
+
+<li>打印关键信息和保存日志以及查看日志
+<ol class="org-ol">
+<li>打印日志
+<ol class="org-ol">
+<li>代码中添加需要打印的信息</li>
+</ol>
+</li>
+<li>保存日志
+<ol class="org-ol">
+<li>
+<p>
+使用文件重定向
+</p>
+
+<p>
+例如 <code>python test.py &gt; log.txt</code>
+</p>
+</li>
+
+<li>
+<p>
+同时将错误信息重定向
+</p>
+
+<p>
+<code>2&gt;&amp;1</code>
+</p>
+</li>
+</ol>
+</li>
+<li>查看日志
+<ol class="org-ol">
+<li>使用 <a href="https://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=&amp;ved=2ahUKEwiWkLuoytbtAhWCc30KHSz2AAUQFjAAegQIARAD&amp;url=https%3A%2F%2Fwww.jetbrains.com%2Fpycharm%2F&amp;usg=AOvVaw08gOuiX9h_nAkWJhXYmZeT">Pycharm</a> 设置 <a href="https://www.jetbrains.com/help/pycharm/creating-a-remote-server-configuration.html">sftp</a> 来查看文件，最方便</li>
+
+<li>ssh 登录远程机器，然后使用 <code>more</code> or <code>less</code> 命令查看</li>
+
+<li>
+<a href="https://www.gnu.org/software/emacs/">Emacs</a> 的 <a href="https://www.emacswiki.org/emacs/TrampMode">tramp</a>, 次方便。</li>
+</ol>
+</li>
+</ol>
+</li>
+</ul>
+<p class="commentline">
+        
+    <a href="posts/tutorial-to-workstation/#disqus_thread" data-disqus-identifier="cache/posts/tutorial-to-workstation.html">Comments</a>
+
+
+        </p>
+</div>
+    </div>
+    <div class="post">
         <h2 class="post-title"><a href="posts/emacs-open-several-windows-with-specific-org-narrowed-headline/">Emacs 下同时查看和编辑一个文件的多个 headline: 使用 Indirect Buffer</a></h2>
         <div class="post-meta">
             2020-12-15 08:04
