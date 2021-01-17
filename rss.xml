@@ -1,5 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>WD's BLOG</title><link>https://fpghwd.github.io/</link><description>passion, love and music</description><atom:link href="https://fpghwd.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2021 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;Wang Ding&lt;/a&gt; </copyright><lastBuildDate>Mon, 04 Jan 2021 12:57:23 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Turn to archlinux</title><link>https://fpghwd.github.io/posts/turn-to-archlinux/</link><dc:creator>Wang Ding</dc:creator><description>&lt;div&gt;&lt;p&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>WD's BLOG</title><link>https://fpghwd.github.io/</link><description>passion, love and music</description><atom:link href="https://fpghwd.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2021 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;Wang Ding&lt;/a&gt; </copyright><lastBuildDate>Sun, 17 Jan 2021 12:28:05 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Open-close principle</title><link>https://fpghwd.github.io/posts/open-close-principle/</link><dc:creator>Wang Ding</dc:creator><description>&lt;div&gt;&lt;p&gt;
+开闭原则是软件工程中对于开发原则的一条描述。它规定：软件中的对象（类，模块，函数等等）应该对于拓展开放，对于修改封闭。这是一条非常重要的原则，它的内涵是：一个实体是允许在不改变它本身（的源代码）的前提下变更它的行为。
+&lt;/p&gt;
+
+&lt;p&gt;
+这段话我所理解的是：只加不改。也就是对于一个能够运行正常的代码（或者说旧的系统），我们最好是添加一些需要的东西，而不是修改内部的机制。因为内部的机制牵连比较多，修改的时候也比较容易出现引用的问题。但是增加就不用想那么多，也实际上效果更好一点。
+&lt;/p&gt;
+
+&lt;p&gt;
+对于旧的系统，我的一个理解也包含生活方式或者理念的系统。在接触到一个新的生活方式或者理念的时候，不要急着先否定过去的系统，而是加上去新的机制和理念。它们不应该是互斥存在的，而是可以友好的协作的。如果不行，那么只能说没有组织好。
+&lt;/p&gt;
+
+&lt;p&gt;
+很有意思的一条原则，发散的化可以得到很多有价值的应用。
+&lt;/p&gt;&lt;/div&gt;</description><category>software</category><guid>https://fpghwd.github.io/posts/open-close-principle/</guid><pubDate>Sun, 17 Jan 2021 11:33:03 GMT</pubDate></item><item><title>Turn to archlinux</title><link>https://fpghwd.github.io/posts/turn-to-archlinux/</link><dc:creator>Wang Ding</dc:creator><description>&lt;div&gt;&lt;p&gt;
 昨天晚上新装了 archlinux ，目前基本已经能用了。
 &lt;/p&gt;
 
@@ -607,14 +621,4 @@ Susan: Yeah.
 
 &lt;p&gt;
 \(\phi\)
-&lt;/p&gt;&lt;/div&gt;</description><category>film</category><guid>https://fpghwd.github.io/posts/di-liu-gan-sheng-si-yuan/</guid><pubDate>Wed, 02 Dec 2020 12:22:56 GMT</pubDate></item><item><title>最近的感想</title><link>https://fpghwd.github.io/posts/zui-jin-de-gan-xiang/</link><dc:creator>Wang Ding</dc:creator><description>&lt;div&gt;&lt;p&gt;
-最近有在不断的写自己的感想，内容大多比较琐碎，但也感觉在逐渐摆脱琐碎和细节。
-&lt;/p&gt;
-
-&lt;p&gt;
-突然的感想就是：我并没有活在现在，而是活在了过去和未来。这从我平时记录的东西的内容和自己琐碎的动作就能看出来。
-&lt;/p&gt;
-
-&lt;p&gt;
-但是也有一些另外的感想：1. 很多突然来到的想法，会第一时间存到 gtd 中。其实这些突然来到的想法，大多是不成熟的想法。直觉它们是未来的映像，不需要立即就反应或马上开始想着完成。 2. 其实以上的想法，也大多是未完成的当下的主要的事情的一种反映而已。
-&lt;/p&gt;&lt;/div&gt;</description><category>life</category><guid>https://fpghwd.github.io/posts/zui-jin-de-gan-xiang/</guid><pubDate>Tue, 01 Dec 2020 11:57:11 GMT</pubDate></item></channel></rss>
+&lt;/p&gt;&lt;/div&gt;</description><category>film</category><guid>https://fpghwd.github.io/posts/di-liu-gan-sheng-si-yuan/</guid><pubDate>Wed, 02 Dec 2020 12:22:56 GMT</pubDate></item></channel></rss>

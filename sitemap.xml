@@ -7,7 +7,7 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
   <loc>https://fpghwd.github.io/</loc>
-  <lastmod>2021-01-04T12:57:00Z</lastmod>
+  <lastmod>2021-01-17T12:28:00Z</lastmod>
  </url>
  <url>
   <loc>https://fpghwd.github.io/2012/</loc>
@@ -23,7 +23,7 @@
  </url>
  <url>
   <loc>https://fpghwd.github.io/archive.html</loc>
-  <lastmod>2021-01-04T12:57:00Z</lastmod>
+  <lastmod>2021-01-17T12:28:00Z</lastmod>
  </url>
  <url>
   <loc>https://fpghwd.github.io/authors/</loc>
@@ -39,7 +39,7 @@
  </url>
  <url>
   <loc>https://fpghwd.github.io/categories/</loc>
-  <lastmod>2020-12-18T02:55:00Z</lastmod>
+  <lastmod>2021-01-17T12:28:00Z</lastmod>
  </url>
  <url>
   <loc>https://fpghwd.github.io/categories/attach/</loc>
@@ -102,6 +102,10 @@
   <lastmod>2020-06-22T11:41:00Z</lastmod>
  </url>
  <url>
+  <loc>https://fpghwd.github.io/categories/software/</loc>
+  <lastmod>2021-01-17T12:28:00Z</lastmod>
+ </url>
+ <url>
   <loc>https://fpghwd.github.io/categories/tutorial/</loc>
   <lastmod>2020-12-18T02:55:00Z</lastmod>
  </url>
@@ -151,7 +155,11 @@
  </url>
  <url>
   <loc>https://fpghwd.github.io/index-17.html</loc>
-  <lastmod>2021-01-04T12:57:00Z</lastmod>
+  <lastmod>2021-01-17T12:28:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://fpghwd.github.io/index-18.html</loc>
+  <lastmod>2021-01-17T12:28:00Z</lastmod>
  </url>
  <url>
   <loc>https://fpghwd.github.io/index-2.html</loc>
@@ -428,6 +436,10 @@
  <url>
   <loc>https://fpghwd.github.io/posts/no-news-is-good-news/</loc>
   <lastmod>2020-09-17T17:19:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://fpghwd.github.io/posts/open-close-principle/</loc>
+  <lastmod>2021-01-17T12:28:00Z</lastmod>
  </url>
  <url>
   <loc>https://fpghwd.github.io/posts/opensuse-shang-mariadb-de-shi-yong/</loc>
