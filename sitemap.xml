@@ -23,7 +23,7 @@
  </url>
  <url>
   <loc>https://fpghwd.github.io/archive.html</loc>
-  <lastmod>2021-01-17T12:28:00Z</lastmod>
+  <lastmod>2021-01-24T13:14:00Z</lastmod>
  </url>
  <url>
   <loc>https://fpghwd.github.io/authors/</loc>
@@ -159,7 +159,7 @@
  </url>
  <url>
   <loc>https://fpghwd.github.io/index-18.html</loc>
-  <lastmod>2021-01-17T12:28:00Z</lastmod>
+  <lastmod>2021-01-24T13:14:00Z</lastmod>
  </url>
  <url>
   <loc>https://fpghwd.github.io/index-2.html</loc>
@@ -448,6 +448,10 @@
  <url>
   <loc>https://fpghwd.github.io/posts/org-archive-location/</loc>
   <lastmod>2020-10-16T11:32:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://fpghwd.github.io/posts/org-roam/</loc>
+  <lastmod>2021-01-24T13:14:00Z</lastmod>
  </url>
  <url>
   <loc>https://fpghwd.github.io/posts/org2nikola-image-display/</loc>

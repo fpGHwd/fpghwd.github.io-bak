@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>WD's BLOG (Posts about emacs)</title><link>https://fpghwd.github.io/</link><description></description><atom:link href="https://fpghwd.github.io/categories/emacs.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2021 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;Wang Ding&lt;/a&gt; </copyright><lastBuildDate>Sat, 02 Jan 2021 05:22:57 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Emacs 自动保存文件设置</title><link>https://fpghwd.github.io/posts/emacs-zi-dong-bao-cun-wen-jian-she-zhi/</link><dc:creator>Wang Ding</dc:creator><description>&lt;div&gt;&lt;p&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>WD's BLOG (Posts about emacs)</title><link>https://fpghwd.github.io/</link><description></description><atom:link href="https://fpghwd.github.io/categories/emacs.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2021 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;Wang Ding&lt;/a&gt; </copyright><lastBuildDate>Sun, 24 Jan 2021 13:14:15 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Org-roam</title><link>https://fpghwd.github.io/posts/org-roam/</link><dc:creator>Wang Ding</dc:creator><description>&lt;div&gt;&lt;p&gt;
+最近又重拾 org-roam 来做记录。我喜欢这个工具的重大原因是：它是解耦的，另外它是可拓展的。也许正是因为它是解耦的所以它的可拓展性很高吧。
+&lt;/p&gt;
+
+&lt;p&gt;
+不过我并没有一定要记录很多的 org-roam 卡片，不过这些卡片本身具有解耦的特征，因此对于分析问题应该好处特别的明显。
+&lt;/p&gt;&lt;/div&gt;</description><category>emacs</category><guid>https://fpghwd.github.io/posts/org-roam/</guid><pubDate>Sun, 24 Jan 2021 12:56:20 GMT</pubDate></item><item><title>Emacs 自动保存文件设置</title><link>https://fpghwd.github.io/posts/emacs-zi-dong-bao-cun-wen-jian-she-zhi/</link><dc:creator>Wang Ding</dc:creator><description>&lt;div&gt;&lt;p&gt;
 Emacs 自带文件自动保存的机制，利用 &lt;code&gt;do-auto-save&lt;/code&gt; 可以自动存储当前编辑的文件为一个编辑过的复本，并未直接存储到 buffer 对应的文件中。当然也可以直接开启全局的 &lt;code&gt;(auto-save-visited-mode t)&lt;/code&gt; ，在默认的 &lt;code&gt;auto-save-visited-interval&lt;/code&gt; 时间（默认 5 秒），后会自动将已经修改后的 buffer 内容写入文件中。
 &lt;/p&gt;
 
@@ -375,22 +381,4 @@ Workgroups2 是一款保存和恢复用户工作空间的一款 emacs 插件。
 
 
 &lt;/div&gt;
-&lt;/div&gt;&lt;/div&gt;</description><category>emacs</category><category>workgroups2</category><guid>https://fpghwd.github.io/posts/shi-yong-workgroups2-guan-li-emacs-de-session/</guid><pubDate>Thu, 09 Jul 2020 10:08:16 GMT</pubDate></item><item><title>Makefile</title><link>https://fpghwd.github.io/posts/makefileemacs/</link><dc:creator>Wang Ding</dc:creator><description>&lt;div&gt;&lt;p&gt;
-&lt;b&gt;预警&lt;/b&gt;
-本文可能没有重点，我觉得博客改个更日常的标题更为合适:)
-&lt;/p&gt;
-
-&lt;p&gt;
-&lt;b&gt;makefile&lt;/b&gt;
-很多年前自学了 makefile，但是当时特别想搞懂但后来的印象还是没搞懂。后来就不了了之也免不了心心念念。
-&lt;/p&gt;
-
-&lt;p&gt;
-&lt;b&gt;emacs&lt;/b&gt;
-提到 emacs 的原因是整个过程都是用 emacs 来做的，虽然很多人说 emacs 始终是一个编辑器。但是对于我来说 emacs 可能是一种态度：对于自己不了解的东西的好奇心吧。也是现阶段我最喜欢的态度了。从开始用 emacs 到现在也快两年的时间了，也收获不少。
-&lt;/p&gt;
-
-&lt;p&gt;
-&lt;b&gt;english&lt;/b&gt;
-想这些旅程也离不开英语的陪伴，曾经也吃过英语的亏，英语也是国际化所必须要掌握的一个工具。
-&lt;/p&gt;&lt;/div&gt;</description><category>emacs</category><category>makefile</category><guid>https://fpghwd.github.io/posts/makefileemacs/</guid><pubDate>Thu, 09 Jul 2020 03:45:25 GMT</pubDate></item></channel></rss>
+&lt;/div&gt;&lt;/div&gt;</description><category>emacs</category><category>workgroups2</category><guid>https://fpghwd.github.io/posts/shi-yong-workgroups2-guan-li-emacs-de-session/</guid><pubDate>Thu, 09 Jul 2020 10:08:16 GMT</pubDate></item></channel></rss>
