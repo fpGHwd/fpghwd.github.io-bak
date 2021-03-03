@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>WD's BLOG</title><link>https://fpghwd.github.io/</link><description>passion, love and music</description><atom:link href="https://fpghwd.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2021 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;Wang Ding&lt;/a&gt; </copyright><lastBuildDate>Wed, 03 Mar 2021 07:47:00 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Emacs mouse or touchpad scroll line by line</title><link>https://fpghwd.github.io/posts/emacs-mouse-or-touchpad-scroll-line-by-line/</link><dc:creator>Wang Ding</dc:creator><description>&lt;div&gt;&lt;p&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>WD's BLOG</title><link>https://fpghwd.github.io/</link><description>passion, love and music</description><atom:link href="https://fpghwd.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2021 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;Wang Ding&lt;/a&gt; </copyright><lastBuildDate>Wed, 03 Mar 2021 08:02:01 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Macos emacs-plus@27 is convenient with emacs-rime</title><link>https://fpghwd.github.io/posts/macos-emacs-plus27-is-convenient-with-emacs-rime/</link><dc:creator>Wang Ding</dc:creator><description>&lt;p&gt;
+不知道是不是我的配置问题，使用相同的配置 emacs-plus@28 –with-native-comp 就非常的卡，然后马上退回 emacs-plus@27 。感觉 emacs-rime 在长的 org 文件中编辑也不会卡。&lt;/p&gt;</description><category>emacs</category><guid>https://fpghwd.github.io/posts/macos-emacs-plus27-is-convenient-with-emacs-rime/</guid><pubDate>Wed, 03 Mar 2021 07:56:33 GMT</pubDate></item><item><title>Emacs mouse or touchpad scroll line by line</title><link>https://fpghwd.github.io/posts/emacs-mouse-or-touchpad-scroll-line-by-line/</link><dc:creator>Wang Ding</dc:creator><description>&lt;div&gt;&lt;p&gt;
 Just set &lt;code&gt;mouse-wheel-progressive-speed&lt;/code&gt; to &lt;code&gt;nil&lt;/code&gt; in init file.
 &lt;/p&gt;
 
@@ -369,28 +370,4 @@ done
 
 &lt;p&gt;
 &lt;a href="https://raw.githubusercontent.com/fpGHwd/fpghwd.github.io/master/images/_20201214_193136IMG_20201212_132726_export_1.jpg"&gt;宿舍外&lt;/a&gt;
-&lt;/p&gt;&lt;/div&gt;</description><category>ATTACH</category><category>life</category><category>mathjax</category><guid>https://fpghwd.github.io/posts/di-yi-chang-xue/</guid><pubDate>Mon, 14 Dec 2020 01:52:05 GMT</pubDate></item><item><title>Emacs 使用感受</title><link>https://fpghwd.github.io/posts/emacs-shi-yong-gan-shou/</link><dc:creator>Wang Ding</dc:creator><description>&lt;div&gt;&lt;p&gt;
-不知不觉使用 emacs 已经有两年了。其实一开始看 Emacs 那篇自带的极短的介绍要更早一点，现在看当时的那种喜悦的感觉（用上了众多名人都推荐的软件）更多的是 naive 和开心。
-&lt;/p&gt;
-
-&lt;p&gt;
-后来从开始使用无配置的 emacs ，然后用 Spacemacs 的时候有眼前有一亮的感觉。然后逐渐学习使用 org-mode 并且针对 org-mode 进行自己的配置，也收获了很多开心的时光。
-&lt;/p&gt;
-
-&lt;p&gt;
-慢慢的又转向使用 doom-emacs 感觉又有眼前一亮的感觉，主要是启动速度更快了，然后基本上开箱即用。然后也学到一些自己配置的方法，虽然 spacemacs 也可以自定义，但是启动一次还是蛮长的。
-&lt;/p&gt;
-
-&lt;p&gt;
-然后逐渐学到了 org-roam, org-download, org-capture, org-pdftool 等等都是很好用的插件。不过现在已经很少纠结于配置了，现在的已经够用了。
-&lt;/p&gt;
-
-&lt;p&gt;
-最后的最后，送一句传教语：
-&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;
-Emacs loves me, emacs loves you.
-&lt;/p&gt;
-&lt;/blockquote&gt;&lt;/div&gt;</description><category>emacs</category><guid>https://fpghwd.github.io/posts/emacs-shi-yong-gan-shou/</guid><pubDate>Thu, 10 Dec 2020 10:23:53 GMT</pubDate></item></channel></rss>
+&lt;/p&gt;&lt;/div&gt;</description><category>ATTACH</category><category>life</category><category>mathjax</category><guid>https://fpghwd.github.io/posts/di-yi-chang-xue/</guid><pubDate>Mon, 14 Dec 2020 01:52:05 GMT</pubDate></item></channel></rss>

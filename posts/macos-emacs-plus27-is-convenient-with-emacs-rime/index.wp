@@ -1,0 +1,2 @@
+<p>
+不知道是不是我的配置问题，使用相同的配置 emacs-plus@28 &#x2013;with-native-comp 就非常的卡，然后马上退回 emacs-plus@27 。感觉 emacs-rime 在长的 org 文件中编辑也不会卡。</p>
