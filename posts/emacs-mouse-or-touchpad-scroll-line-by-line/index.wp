@@ -1,0 +1,15 @@
+<p>
+Just set <code>mouse-wheel-progressive-speed</code> to <code>nil</code> in init file.
+</p>
+
+<div class="org-src-container">
+
+<pre><code class="lang-emacs">
+(setq mouse-wheel-scroll-amount '(1 ((shift) . 1))) ;; one line at a time
+(setq mouse-wheel-progressive-speed nil) ;; don't accelerate scrolling
+(setq mouse-wheel-follow-mouse 't) ;; scroll window under mouse
+(setq scroll-step 1) ;; keyboard scroll one line at a time
+
+</code></pre>
+
+</div>

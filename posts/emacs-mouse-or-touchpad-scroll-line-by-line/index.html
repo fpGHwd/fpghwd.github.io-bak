@@ -3,27 +3,29 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Org-roam | WD's BLOG</title>
+<title>Emacs mouse or touchpad scroll line by line | WD's BLOG</title>
 <link href="../../assets/css/theme.css" type="text/css" rel="stylesheet">
 <link href="../../assets/css/pure.css" type="text/css" rel="stylesheet">
 <link href="../../assets/css/style.css" type="text/css" rel="stylesheet">
 <meta name="theme-color" content="#5670d4">
 <meta name="generator" content="Nikola (getnikola.com)">
 <link rel="alternate" type="application/rss+xml" title="RSS" href="../../rss.xml">
-<link rel="canonical" href="https://fpghwd.github.io/posts/org-roam/">
+<link rel="canonical" href="https://fpghwd.github.io/posts/emacs-mouse-or-touchpad-scroll-line-by-line/">
 <!--[if lt IE 9]><script src="../../assets/js/html5.js"></script><![endif]--><meta name="author" content="Wang Ding">
-<link rel="prev" href="../open-close-principle/" title="Open-close principle" type="text/html">
-<link rel="next" href="../emacs-mouse-or-touchpad-scroll-line-by-line/" title="Emacs mouse or touchpad scroll line by line" type="text/html">
+<link rel="prev" href="../org-roam/" title="Org-roam" type="text/html">
 <meta property="og:site_name" content="WD's BLOG">
-<meta property="og:title" content="Org-roam">
-<meta property="og:url" content="https://fpghwd.github.io/posts/org-roam/">
-<meta property="og:description" content="最近又重拾 org-roam 来做记录。我喜欢这个工具的重大原因是：它是解耦的，另外它是可拓展的。也许正是因为它是解耦的所以它的可拓展性很高吧。
+<meta property="og:title" content="Emacs mouse or touchpad scroll line by line">
+<meta property="og:url" content="https://fpghwd.github.io/posts/emacs-mouse-or-touchpad-scroll-line-by-line/">
+<meta property="og:description" content="Just set mouse-wheel-progressive-speed to nil in init file.
 
 
 
-不过我并没有一定要记录很多的 org-roam 卡片，不过这些卡片本身具有解耦的特征，因此对于分析问题应该好处特别的明显。">
+
+
+(setq mouse-wheel-scroll-amount '(1 ((shift) . 1))) ;; one line at a time
+(setq mouse-wheel-progressive-speed nil) ;; don't accelerate ">
 <meta property="og:type" content="article">
-<meta property="article:published_time" content="2021-01-24T12:56:20Z">
+<meta property="article:published_time" content="2021-02-14T12:06:23Z">
 <meta property="article:tag" content="emacs">
 </head>
 <body>
@@ -60,17 +62,25 @@
                         
                         
 <div class="post post-page">
-    <h1 class="post-title">Org-roam</h1>
-    <div class="post-meta">2021-01-24 12:56</div>
+    <h1 class="post-title">Emacs mouse or touchpad scroll line by line</h1>
+    <div class="post-meta">2021-02-14 12:06</div>
     <div class="post-content">
         <div>
 <p>
-最近又重拾 org-roam 来做记录。我喜欢这个工具的重大原因是：它是解耦的，另外它是可拓展的。也许正是因为它是解耦的所以它的可拓展性很高吧。
+Just set <code>mouse-wheel-progressive-speed</code> to <code>nil</code> in init file.
 </p>
 
-<p>
-不过我并没有一定要记录很多的 org-roam 卡片，不过这些卡片本身具有解耦的特征，因此对于分析问题应该好处特别的明显。
-</p>
+<div class="org-src-container">
+
+<pre><code class="lang-emacs">
+(setq mouse-wheel-scroll-amount '(1 ((shift) . 1))) ;; one line at a time
+(setq mouse-wheel-progressive-speed nil) ;; don't accelerate scrolling
+(setq mouse-wheel-follow-mouse 't) ;; scroll window under mouse
+(setq scroll-step 1) ;; keyboard scroll one line at a time
+
+</code></pre>
+
+</div>
 </div>
     </div>
     <div class="postpromonav">
@@ -79,10 +89,7 @@
         </ul>
 <ul class="pager hidden-print">
 <li class="previous">
-                <a href="../open-close-principle/" rel="prev" title="Open-close principle">Previous post</a>
-            </li>
-            <li class="next">
-                <a href="../emacs-mouse-or-touchpad-scroll-line-by-line/" rel="next" title="Emacs mouse or touchpad scroll line by line">Next post</a>
+                <a href="../org-roam/" rel="prev" title="Org-roam">Previous post</a>
             </li>
         </ul></nav>
 </div>
@@ -92,9 +99,9 @@
         <div id="disqus_thread"></div>
         <script>
         var disqus_shortname ="fpghwd-github-io",
-            disqus_url="https://fpghwd.github.io/posts/org-roam/",
-        disqus_title="Org-roam",
-        disqus_identifier="cache/posts/org-roam.html",
+            disqus_url="https://fpghwd.github.io/posts/emacs-mouse-or-touchpad-scroll-line-by-line/",
+        disqus_title="Emacs mouse or touchpad scroll line by line",
+        disqus_identifier="cache/posts/emacs-mouse-or-touchpad-scroll-line-by-line.html",
         disqus_config = function () {
             this.language = "en";
         };
@@ -141,7 +148,7 @@
     <!--% if show_sourcelink:-->
     <!--
     <li>
-        <a href="/posts/org-roam/index.wp" id="sourcelink">Source</a>
+        <a href="/posts/emacs-mouse-or-touchpad-scroll-line-by-line/index.wp" id="sourcelink">Source</a>
     </li>
 -->
     <!--%endif-->
