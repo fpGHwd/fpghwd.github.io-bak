@@ -5,7 +5,6 @@ Just set <code>mouse-wheel-progressive-speed</code> to <code>nil</code> in init 
 <p>
 如果需要的话，也可以在对下面进行设置，不过我觉得有了上面的设置已经差不多了。关于 <code>mouse-wheel-progressive-speed</code> 的解释是：
 </p>
-
 <blockquote>
 <p>
 If non-nil, the faster the user moves the wheel, the faster the scrolling.
@@ -15,15 +14,12 @@ If non-nil, the faster the user moves the wheel, the faster the scrolling.
 <p>
 另外下面的设置也可以考虑一下：
 </p>
-
 <div class="org-src-container">
 
-<pre><code class="lang-emacs">
-(setq mouse-wheel-scroll-amount '(1 ((shift) . 1))) ;; one line at a time
+<pre><code class="lang-emacs">(setq mouse-wheel-scroll-amount '(1 ((shift) . 1))) ;; one line at a time
 (setq mouse-wheel-progressive-speed nil) ;; don't accelerate scrolling
 (setq mouse-wheel-follow-mouse 't) ;; scroll window under mouse
 (setq scroll-step 1) ;; keyboard scroll one line at a time
-
 </code></pre>
 
 </div>
