@@ -1,5 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>WD's BLOG (Posts about ATTACH)</title><link>https://fpghwd.github.io/</link><description></description><atom:link href="https://fpghwd.github.io/categories/attach.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2021 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;Wang Ding&lt;/a&gt; </copyright><lastBuildDate>Mon, 04 Jan 2021 12:57:22 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Turn to archlinux</title><link>https://fpghwd.github.io/posts/turn-to-archlinux/</link><dc:creator>Wang Ding</dc:creator><description>&lt;div&gt;&lt;p&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>WD's BLOG (Posts about ATTACH)</title><link>https://fpghwd.github.io/</link><description></description><atom:link href="https://fpghwd.github.io/categories/attach.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2021 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;Wang Ding&lt;/a&gt; </copyright><lastBuildDate>Sun, 14 Mar 2021 08:59:17 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Macos 下使用终端 emacs 而不使用 GUI emacs</title><link>https://fpghwd.github.io/posts/macos-xia-shi-yong-zhong-duan-emacs-er-bu-shi-yong-gui-emacs/</link><dc:creator>Wang Ding</dc:creator><description>&lt;div&gt;&lt;p&gt;
+最近在 macos 下使用 ssh 登录开启 daemon 启动的 emacs 后用 emacsclient -nw 连接，感觉体验舒服了很多。
+&lt;/p&gt;
+
+&lt;p&gt;
+主要说来有以下好处：
+&lt;/p&gt;
+
+&lt;ul class="org-ul"&gt;
+&lt;li&gt;不同同步配置。每次如果修改配置文件后，还需要先等文件同步好后 doom sync 然后 doom update 再 doom doctor 一次，虽然文件同步时间不需要很长时间，但是还是要等。有时文件没有同步好还得使用 ediff 合并文件（ediff 合并很好用）然后删除旧文件。&lt;/li&gt;
+&lt;li&gt;不用为 macos emacs 重新配置输入法，所有都是 emacs daemon 中的输入法（ps: emacs 内置输入法 emacs-rime 真的很好用，在终端也很不错）&lt;/li&gt;
+&lt;li&gt;不用考虑在终端 emacs 很多其他的东西：比如图片显示，什么 w3m ，图片都不用想了，只用考虑“搜索——编辑”文件就行了。我觉得作为一个编辑器就应该做编辑器的事情，不应该做其他的事情，比如说在 emacs 考虑显示图片、网页浏览等等。&lt;/li&gt;
+&lt;li&gt;不用考虑同步其他文件。所有的操作在服务器上执行，虽然中间服务器延迟还是有一点，但是一般来说不影响使用。&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;
+不会因为穷而不能享受到更不卡的 emacs on mac 。我使用的是 macbook air ，使用的核心还是双核 i3 （暴哭），其实主要是因为穷。。。当然这样的话，就放宽了运行 emacs 的服务器的限制了。macbook air 只要负责有个好看的终端就行了。
+&lt;/p&gt;
+
+
+&lt;div id="org7429ade" class="figure"&gt;
+&lt;p&gt;&lt;img src="file:///home/wd/Documents/org/.attach/4d/82bb82-0b65-4356-9def-1797ab21494b/_20210314_165839screenshot.png" alt="_20210314_165839screenshot.png"&gt;
+&lt;/p&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;
+大体来说，终端 emacs 就可以专心写文字，而不用考虑其他的功能了，当我想通了这一点后就感觉就算有了 macbook pro 我可能还是会用终端 emacs 的。相信我，终端 emacs 我们值得拥有！&lt;/p&gt;&lt;/div&gt;</description><category>ATTACH</category><category>emacs</category><guid>https://fpghwd.github.io/posts/macos-xia-shi-yong-zhong-duan-emacs-er-bu-shi-yong-gui-emacs/</guid><pubDate>Sun, 14 Mar 2021 08:59:06 GMT</pubDate></item><item><title>Turn to archlinux</title><link>https://fpghwd.github.io/posts/turn-to-archlinux/</link><dc:creator>Wang Ding</dc:creator><description>&lt;div&gt;&lt;p&gt;
 昨天晚上新装了 archlinux ，目前基本已经能用了。
 &lt;/p&gt;
 

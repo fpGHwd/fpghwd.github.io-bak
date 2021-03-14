@@ -3,27 +3,32 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Macos 下使用 Squirrel 在 vscode 中无法输入中文 | WD's BLOG</title>
+<title>Macos 下使用终端 emacs 而不使用 GUI emacs | WD's BLOG</title>
 <link href="../../assets/css/theme.css" type="text/css" rel="stylesheet">
 <link href="../../assets/css/pure.css" type="text/css" rel="stylesheet">
 <link href="../../assets/css/style.css" type="text/css" rel="stylesheet">
 <meta name="theme-color" content="#5670d4">
 <meta name="generator" content="Nikola (getnikola.com)">
 <link rel="alternate" type="application/rss+xml" title="RSS" href="../../rss.xml">
-<link rel="canonical" href="https://fpghwd.github.io/posts/macos-xia-shi-yong-squirrel-zai-vscode-zhong-wu-fa-shu-ru-zhong-wen/">
+<link rel="canonical" href="https://fpghwd.github.io/posts/macos-xia-shi-yong-zhong-duan-emacs-er-bu-shi-yong-gui-emacs/">
 <!--[if lt IE 9]><script src="../../assets/js/html5.js"></script><![endif]--><meta name="author" content="Wang Ding">
-<link rel="prev" href="../macos-emacs-plus27-is-convenient-with-emacs-rime/" title="Macos emacs-plus@27 is convenient with emacs-rime" type="text/html">
-<link rel="next" href="../macos-xia-shi-yong-zhong-duan-emacs-er-bu-shi-yong-gui-emacs/" title="Macos 下使用终端 emacs 而不使用 GUI emacs" type="text/html">
+<link rel="prev" href="../macos-xia-shi-yong-squirrel-zai-vscode-zhong-wu-fa-shu-ru-zhong-wen/" title="Macos 下使用 Squirrel 在 vscode 中无法输入中文" type="text/html">
 <meta property="og:site_name" content="WD's BLOG">
-<meta property="og:title" content="Macos 下使用 Squirrel 在 vscode 中无法输入中文">
-<meta property="og:url" content="https://fpghwd.github.io/posts/macos-xia-shi-yong-squirrel-zai-vscode-zhong-wu-fa-shu-ru-zhong-wen/">
-<meta property="og:description" content="因为 macbook 中写 latex 有点卡，实际我现在的配置，只要编辑稍长的文件多多少少在 macbook air 上有点卡，体验没有 arch 的好。但是 arch 又没有 macbook 那么好的屏幕。也 profiler 了一下，主要时间用在了 native 函数中，感觉是 emacs 版本的问题。
+<meta property="og:title" content="Macos 下使用终端 emacs 而不使用 GUI emacs">
+<meta property="og:url" content="https://fpghwd.github.io/posts/macos-xia-shi-yong-zhong-duan-emacs-er-bu-shi-yong-gui-emacs/">
+<meta property="og:description" content="最近在 macos 下使用 ssh 登录开启 daemon 启动的 emacs 后用 emacsclient -nw 连接，感觉体验舒服了很多。
 
 
 
-于是下载了 vscode + tex workshop 插件和全套的 mactex">
+主要说来有以下好处：
+
+
+
+不同同步配置。每次如果修改配置文件后，还需要先等文件同步好后 doom sync 然后 doom update 再 doom doctor 一次，虽然文件同步时间不需要很长时间，但是还是要等。有时文件没有同步好还得使用 ">
 <meta property="og:type" content="article">
-<meta property="article:published_time" content="2021-03-10T07:26:04Z">
+<meta property="article:published_time" content="2021-03-14T08:59:06Z">
+<meta property="article:tag" content="ATTACH">
+<meta property="article:tag" content="emacs">
 </head>
 <body>
 <div class="body_container">
@@ -59,26 +64,46 @@
                         
                         
 <div class="post post-page">
-    <h1 class="post-title">Macos 下使用 Squirrel 在 vscode 中无法输入中文</h1>
-    <div class="post-meta">2021-03-10 07:26</div>
+    <h1 class="post-title">Macos 下使用终端 emacs 而不使用 GUI emacs</h1>
+    <div class="post-meta">2021-03-14 08:59</div>
     <div class="post-content">
         <div>
 <p>
-因为 macbook 中写 latex 有点卡，实际我现在的配置，只要编辑稍长的文件多多少少在 macbook air 上有点卡，体验没有 arch 的好。但是 arch 又没有 macbook 那么好的屏幕。也 profiler 了一下，主要时间用在了 native 函数中，感觉是 emacs 版本的问题。
+最近在 macos 下使用 ssh 登录开启 daemon 启动的 emacs 后用 emacsclient -nw 连接，感觉体验舒服了很多。
 </p>
 
 <p>
-于是下载了 vscode + tex workshop 插件和全套的 mactex ，vscode 编辑起来还是流畅一点。不过 vscode 在切换 Squirrel 中文输入时不能使用，重新修改了 patch 也不行。不过还有系统的中文输入法还能用，全拼用起来果然没有双拼舒服。
+主要说来有以下好处：
 </p>
+
+<ul class="org-ul">
+<li>不同同步配置。每次如果修改配置文件后，还需要先等文件同步好后 doom sync 然后 doom update 再 doom doctor 一次，虽然文件同步时间不需要很长时间，但是还是要等。有时文件没有同步好还得使用 ediff 合并文件（ediff 合并很好用）然后删除旧文件。</li>
+<li>不用为 macos emacs 重新配置输入法，所有都是 emacs daemon 中的输入法（ps: emacs 内置输入法 emacs-rime 真的很好用，在终端也很不错）</li>
+<li>不用考虑在终端 emacs 很多其他的东西：比如图片显示，什么 w3m ，图片都不用想了，只用考虑“搜索——编辑”文件就行了。我觉得作为一个编辑器就应该做编辑器的事情，不应该做其他的事情，比如说在 emacs 考虑显示图片、网页浏览等等。</li>
+<li>不用考虑同步其他文件。所有的操作在服务器上执行，虽然中间服务器延迟还是有一点，但是一般来说不影响使用。</li>
+<li>
+<p>
+不会因为穷而不能享受到更不卡的 emacs on mac 。我使用的是 macbook air ，使用的核心还是双核 i3 （暴哭），其实主要是因为穷。。。当然这样的话，就放宽了运行 emacs 的服务器的限制了。macbook air 只要负责有个好看的终端就行了。
+</p>
+
+
+<div id="org7429ade" class="figure">
+<p><img src="file:///home/wd/Documents/org/.attach/4d/82bb82-0b65-4356-9def-1797ab21494b/_20210314_165839screenshot.png" alt="_20210314_165839screenshot.png"></p>
+</div>
+</li>
+</ul>
+<p>
+大体来说，终端 emacs 就可以专心写文字，而不用考虑其他的功能了，当我想通了这一点后就感觉就算有了 macbook pro 我可能还是会用终端 emacs 的。相信我，终端 emacs 我们值得拥有！</p>
 </div>
     </div>
     <div class="postpromonav">
-        <nav><ul class="pager hidden-print">
+        <nav><ul itemprop="keywords" class="tags">
+<li><a class="tag p-category" href="../../categories/attach/" rel="tag">ATTACH</a></li>
+            <li><a class="tag p-category" href="../../categories/emacs/" rel="tag">emacs</a></li>
+        </ul>
+<ul class="pager hidden-print">
 <li class="previous">
-                <a href="../macos-emacs-plus27-is-convenient-with-emacs-rime/" rel="prev" title="Macos emacs-plus@27 is convenient with emacs-rime">Previous post</a>
-            </li>
-            <li class="next">
-                <a href="../macos-xia-shi-yong-zhong-duan-emacs-er-bu-shi-yong-gui-emacs/" rel="next" title="Macos 下使用终端 emacs 而不使用 GUI emacs">Next post</a>
+                <a href="../macos-xia-shi-yong-squirrel-zai-vscode-zhong-wu-fa-shu-ru-zhong-wen/" rel="prev" title="Macos 下使用 Squirrel 在 vscode 中无法输入中文">Previous post</a>
             </li>
         </ul></nav>
 </div>
@@ -88,9 +113,9 @@
         <div id="disqus_thread"></div>
         <script>
         var disqus_shortname ="fpghwd-github-io",
-            disqus_url="https://fpghwd.github.io/posts/macos-xia-shi-yong-squirrel-zai-vscode-zhong-wu-fa-shu-ru-zhong-wen/",
-        disqus_title="Macos \u4e0b\u4f7f\u7528 Squirrel \u5728 vscode \u4e2d\u65e0\u6cd5\u8f93\u5165\u4e2d\u6587",
-        disqus_identifier="cache/posts/macos-xia-shi-yong-squirrel-zai-vscode-zhong-wu-fa-shu-ru-zhong-wen.html",
+            disqus_url="https://fpghwd.github.io/posts/macos-xia-shi-yong-zhong-duan-emacs-er-bu-shi-yong-gui-emacs/",
+        disqus_title="Macos \u4e0b\u4f7f\u7528\u7ec8\u7aef emacs \u800c\u4e0d\u4f7f\u7528 GUI emacs",
+        disqus_identifier="cache/posts/macos-xia-shi-yong-zhong-duan-emacs-er-bu-shi-yong-gui-emacs.html",
         disqus_config = function () {
             this.language = "en";
         };
@@ -137,7 +162,7 @@
     <!--% if show_sourcelink:-->
     <!--
     <li>
-        <a href="/posts/macos-xia-shi-yong-squirrel-zai-vscode-zhong-wu-fa-shu-ru-zhong-wen/index.wp" id="sourcelink">Source</a>
+        <a href="/posts/macos-xia-shi-yong-zhong-duan-emacs-er-bu-shi-yong-gui-emacs/index.wp" id="sourcelink">Source</a>
     </li>
 -->
     <!--%endif-->

@@ -13,7 +13,7 @@
 <link rel="alternate" type="application/rss+xml" title="RSS" href="rss.xml">
 <link rel="canonical" href="https://fpghwd.github.io/">
 <link rel="next" href="index-19.html" type="text/html">
-<!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="posts/macos-xia-shi-yong-squirrel-zai-vscode-zhong-wu-fa-shu-ru-zhong-wen/" type="text/html">
+<!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="posts/macos-xia-shi-yong-zhong-duan-emacs-er-bu-shi-yong-gui-emacs/" type="text/html">
 </head>
 <body>
 <div class="body_container">
@@ -50,6 +50,51 @@
                         
 
     
+    <div class="post">
+        <h2 class="post-title"><a href="posts/macos-xia-shi-yong-zhong-duan-emacs-er-bu-shi-yong-gui-emacs/">Macos 下使用终端 emacs 而不使用 GUI emacs</a></h2>
+        <div class="post-meta">
+            2021-03-14 08:59
+        </div>
+        <div class="post-meta">
+                Wang Ding
+        </div>
+        <div class="post-content">
+                <div>
+<p>
+最近在 macos 下使用 ssh 登录开启 daemon 启动的 emacs 后用 emacsclient -nw 连接，感觉体验舒服了很多。
+</p>
+
+<p>
+主要说来有以下好处：
+</p>
+
+<ul class="org-ul">
+<li>不同同步配置。每次如果修改配置文件后，还需要先等文件同步好后 doom sync 然后 doom update 再 doom doctor 一次，虽然文件同步时间不需要很长时间，但是还是要等。有时文件没有同步好还得使用 ediff 合并文件（ediff 合并很好用）然后删除旧文件。</li>
+<li>不用为 macos emacs 重新配置输入法，所有都是 emacs daemon 中的输入法（ps: emacs 内置输入法 emacs-rime 真的很好用，在终端也很不错）</li>
+<li>不用考虑在终端 emacs 很多其他的东西：比如图片显示，什么 w3m ，图片都不用想了，只用考虑“搜索——编辑”文件就行了。我觉得作为一个编辑器就应该做编辑器的事情，不应该做其他的事情，比如说在 emacs 考虑显示图片、网页浏览等等。</li>
+<li>不用考虑同步其他文件。所有的操作在服务器上执行，虽然中间服务器延迟还是有一点，但是一般来说不影响使用。</li>
+<li>
+<p>
+不会因为穷而不能享受到更不卡的 emacs on mac 。我使用的是 macbook air ，使用的核心还是双核 i3 （暴哭），其实主要是因为穷。。。当然这样的话，就放宽了运行 emacs 的服务器的限制了。macbook air 只要负责有个好看的终端就行了。
+</p>
+
+
+<div id="org7429ade" class="figure">
+<p><img src="file:///home/wd/Documents/org/.attach/4d/82bb82-0b65-4356-9def-1797ab21494b/_20210314_165839screenshot.png" alt="_20210314_165839screenshot.png"></p>
+</div>
+</li>
+</ul>
+<p>
+大体来说，终端 emacs 就可以专心写文字，而不用考虑其他的功能了，当我想通了这一点后就感觉就算有了 macbook pro 我可能还是会用终端 emacs 的。相信我，终端 emacs 我们值得拥有！</p>
+</div>
+                <p class="commentline">
+        
+    <a href="posts/macos-xia-shi-yong-zhong-duan-emacs-er-bu-shi-yong-gui-emacs/#disqus_thread" data-disqus-identifier="cache/posts/macos-xia-shi-yong-zhong-duan-emacs-er-bu-shi-yong-gui-emacs.html">Comments</a>
+
+
+        </p>
+</div>
+    </div>
     <div class="post">
         <h2 class="post-title"><a href="posts/macos-xia-shi-yong-squirrel-zai-vscode-zhong-wu-fa-shu-ru-zhong-wen/">Macos 下使用 Squirrel 在 vscode 中无法输入中文</a></h2>
         <div class="post-meta">
@@ -91,50 +136,6 @@
                 <p class="commentline">
         
     <a href="posts/macos-emacs-plus27-is-convenient-with-emacs-rime/#disqus_thread" data-disqus-identifier="cache/posts/macos-emacs-plus27-is-convenient-with-emacs-rime.html">Comments</a>
-
-
-        </p>
-</div>
-    </div>
-    <div class="post">
-        <h2 class="post-title"><a href="posts/emacs-mouse-or-touchpad-scroll-line-by-line/">Emacs mouse or touchpad scroll line by line</a></h2>
-        <div class="post-meta">
-            2021-02-14 12:06
-        </div>
-        <div class="post-meta">
-                Wang Ding
-        </div>
-        <div class="post-content">
-                <div>
-<p>
-Just set <code>mouse-wheel-progressive-speed</code> to <code>nil</code> in init file.
-</p>
-
-<p>
-如果需要的话，也可以在对下面进行设置，不过我觉得有了上面的设置已经差不多了。关于 <code>mouse-wheel-progressive-speed</code> 的解释是：
-</p>
-<blockquote>
-<p>
-If non-nil, the faster the user moves the wheel, the faster the scrolling.
-</p>
-</blockquote>
-
-<p>
-另外下面的设置也可以考虑一下：
-</p>
-<div class="org-src-container">
-
-<pre><code class="lang-emacs">(setq mouse-wheel-scroll-amount '(1 ((shift) . 1))) ;; one line at a time
-(setq mouse-wheel-progressive-speed nil) ;; don't accelerate scrolling
-(setq mouse-wheel-follow-mouse 't) ;; scroll window under mouse
-(setq scroll-step 1) ;; keyboard scroll one line at a time
-</code></pre>
-
-</div>
-</div>
-                <p class="commentline">
-        
-    <a href="posts/emacs-mouse-or-touchpad-scroll-line-by-line/#disqus_thread" data-disqus-identifier="cache/posts/emacs-mouse-or-touchpad-scroll-line-by-line.html">Comments</a>
 
 
         </p>

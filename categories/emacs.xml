@@ -1,5 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>WD's BLOG (Posts about emacs)</title><link>https://fpghwd.github.io/</link><description></description><atom:link href="https://fpghwd.github.io/categories/emacs.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2021 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;Wang Ding&lt;/a&gt; </copyright><lastBuildDate>Mon, 08 Mar 2021 08:15:24 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Macos emacs-plus@27 is convenient with emacs-rime</title><link>https://fpghwd.github.io/posts/macos-emacs-plus27-is-convenient-with-emacs-rime/</link><dc:creator>Wang Ding</dc:creator><description>&lt;p&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>WD's BLOG (Posts about emacs)</title><link>https://fpghwd.github.io/</link><description></description><atom:link href="https://fpghwd.github.io/categories/emacs.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2021 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;Wang Ding&lt;/a&gt; </copyright><lastBuildDate>Sun, 14 Mar 2021 08:59:17 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Macos 下使用终端 emacs 而不使用 GUI emacs</title><link>https://fpghwd.github.io/posts/macos-xia-shi-yong-zhong-duan-emacs-er-bu-shi-yong-gui-emacs/</link><dc:creator>Wang Ding</dc:creator><description>&lt;div&gt;&lt;p&gt;
+最近在 macos 下使用 ssh 登录开启 daemon 启动的 emacs 后用 emacsclient -nw 连接，感觉体验舒服了很多。
+&lt;/p&gt;
+
+&lt;p&gt;
+主要说来有以下好处：
+&lt;/p&gt;
+
+&lt;ul class="org-ul"&gt;
+&lt;li&gt;不同同步配置。每次如果修改配置文件后，还需要先等文件同步好后 doom sync 然后 doom update 再 doom doctor 一次，虽然文件同步时间不需要很长时间，但是还是要等。有时文件没有同步好还得使用 ediff 合并文件（ediff 合并很好用）然后删除旧文件。&lt;/li&gt;
+&lt;li&gt;不用为 macos emacs 重新配置输入法，所有都是 emacs daemon 中的输入法（ps: emacs 内置输入法 emacs-rime 真的很好用，在终端也很不错）&lt;/li&gt;
+&lt;li&gt;不用考虑在终端 emacs 很多其他的东西：比如图片显示，什么 w3m ，图片都不用想了，只用考虑“搜索——编辑”文件就行了。我觉得作为一个编辑器就应该做编辑器的事情，不应该做其他的事情，比如说在 emacs 考虑显示图片、网页浏览等等。&lt;/li&gt;
+&lt;li&gt;不用考虑同步其他文件。所有的操作在服务器上执行，虽然中间服务器延迟还是有一点，但是一般来说不影响使用。&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;
+不会因为穷而不能享受到更不卡的 emacs on mac 。我使用的是 macbook air ，使用的核心还是双核 i3 （暴哭），其实主要是因为穷。。。当然这样的话，就放宽了运行 emacs 的服务器的限制了。macbook air 只要负责有个好看的终端就行了。
+&lt;/p&gt;
+
+
+&lt;div id="org7429ade" class="figure"&gt;
+&lt;p&gt;&lt;img src="file:///home/wd/Documents/org/.attach/4d/82bb82-0b65-4356-9def-1797ab21494b/_20210314_165839screenshot.png" alt="_20210314_165839screenshot.png"&gt;
+&lt;/p&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;
+大体来说，终端 emacs 就可以专心写文字，而不用考虑其他的功能了，当我想通了这一点后就感觉就算有了 macbook pro 我可能还是会用终端 emacs 的。相信我，终端 emacs 我们值得拥有！&lt;/p&gt;&lt;/div&gt;</description><category>ATTACH</category><category>emacs</category><guid>https://fpghwd.github.io/posts/macos-xia-shi-yong-zhong-duan-emacs-er-bu-shi-yong-gui-emacs/</guid><pubDate>Sun, 14 Mar 2021 08:59:06 GMT</pubDate></item><item><title>Macos emacs-plus@27 is convenient with emacs-rime</title><link>https://fpghwd.github.io/posts/macos-emacs-plus27-is-convenient-with-emacs-rime/</link><dc:creator>Wang Ding</dc:creator><description>&lt;p&gt;
 不知道是不是自己的配置问题，使用相同的配置 &lt;code&gt;emacs-plus@28 --with-native-comp&lt;/code&gt; 就会卡顿，退回 emacs-plus@27 就还好。重新编译了一遍 doom-emacs 的 modules 后，感觉 emacs-rime 在编辑 org 文件时没有编译前那么卡了。
 &lt;/p&gt;</description><category>emacs</category><guid>https://fpghwd.github.io/posts/macos-emacs-plus27-is-convenient-with-emacs-rime/</guid><pubDate>Wed, 03 Mar 2021 07:56:33 GMT</pubDate></item><item><title>Emacs mouse or touchpad scroll line by line</title><link>https://fpghwd.github.io/posts/emacs-mouse-or-touchpad-scroll-line-by-line/</link><dc:creator>Wang Ding</dc:creator><description>&lt;div&gt;&lt;p&gt;
 Just set &lt;code&gt;mouse-wheel-progressive-speed&lt;/code&gt; to &lt;code&gt;nil&lt;/code&gt; in init file.
@@ -239,50 +264,4 @@ doom build and run
 
 &lt;p&gt;
 当然其实对文字的编辑和模式本身都可以是文字内容的一种展现方式，但是文字的属性（Text Properties）是文字的一部分，overlay 并不是文字的一部分。所以在 buffer 之间复制某些文字的时候，并不会同时复制  overlay ；同时改变 buffer 的文字属性其实也是在修改 buffer 本身。但 overlay 的改变并不会改变 buffer 本身，这种修改自然也不会被保存在这个 buffer 的 undo list 中。
-&lt;/p&gt;&lt;/div&gt;</description><category>emacs</category><guid>https://fpghwd.github.io/posts/emacs-lisp-overlay/</guid><pubDate>Mon, 26 Oct 2020 13:24:03 GMT</pubDate></item><item><title>Org archive location</title><link>https://fpghwd.github.io/posts/org-archive-location/</link><dc:creator>Wang Ding</dc:creator><description>&lt;div&gt;&lt;p&gt;
-最近在使用 org 的时候想把 org-archive-subtree 的条目和 org-capture-templates 那样，将每次当天 archived 的 headline 放到当日的日期 headline 下面，和日记一样组织。这样的话，将来查询的时候就可以顺便看一下当天发生的事情和当天完成的项目了。
-&lt;/p&gt;
-
-&lt;p&gt;
-以下是日记的组织方式：
-&lt;/p&gt;
-
-&lt;div id="org595b26c" class="figure"&gt;
-&lt;p&gt;&lt;img src="https://raw.githubusercontent.com/fpGHwd/fpghwd.github.io/master/images/_20201016_192526screenshot.png" alt="_20201016_192526screenshot.png"&gt;
-&lt;/p&gt;
-&lt;/div&gt;
-
-&lt;div class="org-src-container"&gt;
-
-&lt;pre&gt;&lt;code class="lang-lisp"&gt;
-(add-to-list 'org-capture-templates
-                      '("zj" "journal" entry (file "/home/wd/dropbox/to-encfs/text/org/journal.org")
-                        "* %u - %^{heading}\n  %?"))
-
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;/div&gt;
-
-&lt;p&gt;
-同时在 &lt;code&gt;customize org-archive-location&lt;/code&gt; 中发现了有这种设定：
-&lt;/p&gt;
-
-&lt;div class="org-src-container"&gt;
-
-&lt;pre&gt;&lt;code class="lang-html"&gt;
-"~/org/datetree.org::datetree/* Finished Tasks"
-The "datetree/" string is special, signifying to archive
-items to the datetree.  Items are placed in either the CLOSED
-date of the item, or the current date if there is no CLOSED date.
-The heading will be a subentry to the current date.  There doesn’t
-need to be a heading, but there always needs to be a slash after
-datetree.  For example, to store archived items directly in the
-datetree, use "~/org/datetree.org::datetree/".
-
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;/div&gt;
-
-&lt;p&gt;
-可以把日记和归档的条目都放到一个文件，归档也不会经常去动，只需要看的时候搜索一下就行。
-&lt;/p&gt;&lt;/div&gt;</description><category>ATTACH</category><category>emacs</category><guid>https://fpghwd.github.io/posts/org-archive-location/</guid><pubDate>Fri, 16 Oct 2020 11:32:18 GMT</pubDate></item></channel></rss>
+&lt;/p&gt;&lt;/div&gt;</description><category>emacs</category><guid>https://fpghwd.github.io/posts/emacs-lisp-overlay/</guid><pubDate>Mon, 26 Oct 2020 13:24:03 GMT</pubDate></item></channel></rss>

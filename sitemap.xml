@@ -23,7 +23,7 @@
  </url>
  <url>
   <loc>https://fpghwd.github.io/archive.html</loc>
-  <lastmod>2021-03-14T08:43:00Z</lastmod>
+  <lastmod>2021-03-14T08:59:00Z</lastmod>
  </url>
  <url>
   <loc>https://fpghwd.github.io/authors/</loc>
@@ -163,7 +163,7 @@
  </url>
  <url>
   <loc>https://fpghwd.github.io/index-19.html</loc>
-  <lastmod>2021-03-14T08:43:00Z</lastmod>
+  <lastmod>2021-03-14T08:59:00Z</lastmod>
  </url>
  <url>
   <loc>https://fpghwd.github.io/index-2.html</loc>
@@ -440,6 +440,10 @@
  <url>
   <loc>https://fpghwd.github.io/posts/macos-xia-shi-yong-squirrel-zai-vscode-zhong-wu-fa-shu-ru-zhong-wen/</loc>
   <lastmod>2021-03-10T08:47:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://fpghwd.github.io/posts/macos-xia-shi-yong-zhong-duan-emacs-er-bu-shi-yong-gui-emacs/</loc>
+  <lastmod>2021-03-14T08:59:00Z</lastmod>
  </url>
  <url>
   <loc>https://fpghwd.github.io/posts/makefileemacs/</loc>
