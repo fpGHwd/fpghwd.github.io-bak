@@ -1,5 +1,5 @@
 <p>
-最近在 macos 下使用 ssh 登录开启 daemon 启动的 emacs 后用 emacsclient -nw 连接，感觉体验舒服了很多。
+最近在 macos 下使用 ssh 登录开启 daemon 启动的 emacs 后用 <code>emacsclient -nw</code> 连接，感觉体验舒服了很多。
 </p>
 
 <p>
@@ -16,11 +16,11 @@
 </p>
 
 <p>
-<a href="file:///home/wd/Documents/org/.attach/4d/82bb82-0b65-4356-9def-1797ab21494b/_20210314_165839screenshot.png">macbook air 配置图</a>
+<a href="https://raw.githubusercontent.com/fpGHwd/fpghwd.github.io/master/images/_20210314_165839screenshot.png">macbook air 配置图</a>
 </p></li>
 </ul>
 
 
 <p>
-大体来说，终端 emacs 就可以专心写文字，而不用考虑其他的功能了，当我想通了这一点后就感觉就算有了 macbook pro 我可能还是会用终端 emacs 的。相信我，终端 emacs 我们值得拥有！
+大体来说，终端 emacs 可以让用户专心写文字，而不用考虑其他的功能了，当我想通了这一点后就感觉就算有了 macbook pro 我可能还是会用终端 emacs 的。相信我，终端 emacs 我们值得拥有！
 </p>
