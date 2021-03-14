@@ -5,3 +5,6 @@
 <p>
 于是下载了 vscode + tex workshop 插件和全套的 mactex ，vscode 编辑起来还是流畅一点。不过 vscode 在切换 Squirrel 中文输入时不能使用，重新修改了 patch 也不行。不过还有系统的中文输入法还能用，全拼用起来果然没有双拼舒服。
 </p>
+
+<p>
+测试是否能发布</p>
