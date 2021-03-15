@@ -7,7 +7,7 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
   <loc>https://fpghwd.github.io/</loc>
-  <lastmod>2021-03-14T14:43:00Z</lastmod>
+  <lastmod>2021-03-15T07:19:00Z</lastmod>
  </url>
  <url>
   <loc>https://fpghwd.github.io/2012/</loc>
@@ -23,7 +23,7 @@
  </url>
  <url>
   <loc>https://fpghwd.github.io/archive.html</loc>
-  <lastmod>2021-03-15T07:17:00Z</lastmod>
+  <lastmod>2021-03-15T07:19:00Z</lastmod>
  </url>
  <url>
   <loc>https://fpghwd.github.io/authors/</loc>
@@ -163,11 +163,15 @@
  </url>
  <url>
   <loc>https://fpghwd.github.io/index-19.html</loc>
-  <lastmod>2021-03-15T07:17:00Z</lastmod>
+  <lastmod>2021-03-15T07:19:00Z</lastmod>
  </url>
  <url>
   <loc>https://fpghwd.github.io/index-2.html</loc>
   <lastmod>2021-03-15T07:17:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://fpghwd.github.io/index-20.html</loc>
+  <lastmod>2021-03-15T07:19:00Z</lastmod>
  </url>
  <url>
   <loc>https://fpghwd.github.io/index-3.html</loc>
@@ -508,6 +512,10 @@
  <url>
   <loc>https://fpghwd.github.io/posts/welcome-to-nikola/</loc>
   <lastmod>2021-01-20T14:15:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://fpghwd.github.io/posts/zhi-shi-ce-shi-yi-xia-bo-ke-shi-fou-neng-zheng-chang-fa-song-zhao-pian/</loc>
+  <lastmod>2021-03-15T07:19:00Z</lastmod>
  </url>
  <url>
   <loc>https://fpghwd.github.io/posts/zui-jin-de-gan-xiang/</loc>
