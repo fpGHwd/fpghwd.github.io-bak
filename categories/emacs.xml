@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>WD's BLOG (Posts about emacs)</title><link>https://fpghwd.github.io/</link><description></description><atom:link href="https://fpghwd.github.io/categories/emacs.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2021 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;Wang Ding&lt;/a&gt; </copyright><lastBuildDate>Wed, 17 Mar 2021 01:58:46 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Macos 下用终端 emacs 而不使用 GUI emacs</title><link>https://fpghwd.github.io/posts/macos-xia-shi-yong-zhong-duan-emacs-er-bu-shi-yong-gui-emacs/</link><dc:creator>Wang Ding</dc:creator><description>&lt;div&gt;&lt;p&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>WD's BLOG (Posts about emacs)</title><link>https://fpghwd.github.io/</link><description></description><atom:link href="https://fpghwd.github.io/categories/emacs.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2021 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;Wang Ding&lt;/a&gt; </copyright><lastBuildDate>Wed, 17 Mar 2021 02:01:54 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Macos 下用终端 emacs 而不使用 GUI emacs</title><link>https://fpghwd.github.io/posts/macos-xia-shi-yong-zhong-duan-emacs-er-bu-shi-yong-gui-emacs/</link><dc:creator>Wang Ding</dc:creator><description>&lt;div&gt;&lt;p&gt;
 最近在 macos 下使用 ssh 登录开启 daemon 启动的 emacs 后用 &lt;code&gt;emacsclient -nw&lt;/code&gt; 连接，感觉体验舒服了很多。
 &lt;/p&gt;
 
@@ -19,7 +19,7 @@
 &lt;/p&gt;
 
 
-&lt;div id="org7159a69" class="figure"&gt;
+&lt;div id="org617390a" class="figure"&gt;
 &lt;p&gt;&lt;img src="https://raw.githubusercontent.com/fpGHwd/fpghwd.github.io/master/images/_20210314_165839screenshot.png" alt="_20210314_165839screenshot.png"&gt;
 &lt;/p&gt;
 &lt;/div&gt;&lt;/li&gt;
@@ -36,6 +36,10 @@
 
 &lt;p&gt;
 大体来说，终端 emacs 可以让用户专心写文字，而不用考虑其他的功能了，当我想通了这一点后就感觉就算有了 macbook pro 我可能还是会用终端 emacs 的。相信我，终端 emacs 我们值得拥有！
+&lt;/p&gt;
+
+&lt;p&gt;
+测试
 &lt;/p&gt;&lt;/div&gt;</description><category>ATTACH</category><category>emacs</category><guid>https://fpghwd.github.io/posts/macos-xia-shi-yong-zhong-duan-emacs-er-bu-shi-yong-gui-emacs/</guid><pubDate>Sun, 14 Mar 2021 08:59:06 GMT</pubDate></item><item><title>Macos emacs-plus@27 is convenient with emacs-rime</title><link>https://fpghwd.github.io/posts/macos-emacs-plus27-is-convenient-with-emacs-rime/</link><dc:creator>Wang Ding</dc:creator><description>&lt;p&gt;
 不知道是不是自己的配置问题，使用相同的配置 &lt;code&gt;emacs-plus@28 --with-native-comp&lt;/code&gt; 就会卡顿，退回 emacs-plus@27 就还好。重新编译了一遍 doom-emacs 的 modules 后，感觉 emacs-rime 在编辑 org 文件时没有编译前那么卡了。
 &lt;/p&gt;</description><category>emacs</category><guid>https://fpghwd.github.io/posts/macos-emacs-plus27-is-convenient-with-emacs-rime/</guid><pubDate>Wed, 03 Mar 2021 07:56:33 GMT</pubDate></item><item><title>Emacs mouse or touchpad scroll line by line</title><link>https://fpghwd.github.io/posts/emacs-mouse-or-touchpad-scroll-line-by-line/</link><dc:creator>Wang Ding</dc:creator><description>&lt;div&gt;&lt;p&gt;
