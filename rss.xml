@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>WD's BLOG</title><link>https://fpghwd.github.io/</link><description>passion, love and music</description><atom:link href="https://fpghwd.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2021 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;Wang Ding&lt;/a&gt; </copyright><lastBuildDate>Thu, 18 Mar 2021 11:28:44 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>不管怎样，我们都应该和过去和解</title><link>https://fpghwd.github.io/posts/bu-guan-zen-yang-wo-men-dou-ying-gai-he-guo-qu-he-jie/</link><dc:creator>Wang Ding</dc:creator><description>&lt;p&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>WD's BLOG</title><link>https://fpghwd.github.io/</link><description>passion, love and music</description><atom:link href="https://fpghwd.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2021 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;Wang Ding&lt;/a&gt; </copyright><lastBuildDate>Fri, 19 Mar 2021 05:45:42 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Happiness isn't something you find, it's something you build.</title><link>https://fpghwd.github.io/posts/happiness-isn-t-something-you-find-it-s-something-you-build/</link><dc:creator>Wang Ding</dc:creator><description>&lt;div&gt;&lt;div id="org78f7d7e" class="figure"&gt;
+&lt;p&gt;&lt;img src="https://raw.githubusercontent.com/fpGHwd/fpghwd.github.io/master/images/_20210319_134136screenshot.png" alt="_20210319_134136screenshot.png"&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;
+Fairly speaking, it’s the truth that happiness is not searching but building.&lt;/p&gt;&lt;/div&gt;</description><category>ATTACH</category><guid>https://fpghwd.github.io/posts/happiness-isn-t-something-you-find-it-s-something-you-build/</guid><pubDate>Fri, 19 Mar 2021 05:45:07 GMT</pubDate></item><item><title>不管怎样，我们都应该和过去和解</title><link>https://fpghwd.github.io/posts/bu-guan-zen-yang-wo-men-dou-ying-gai-he-guo-qu-he-jie/</link><dc:creator>Wang Ding</dc:creator><description>&lt;p&gt;
 看越哥说电影的&lt;a href="https://www.youtube.com/watch?v=XY7Pz9AG6T4"&gt;《忘不了》&lt;/a&gt;，里面的一句话个人觉得非常好，“不管怎样，我们都应该和过去和解”，这也是和过去解耦的一种形式，「活在当下」才是应该做的。
 &lt;/p&gt;</description><guid>https://fpghwd.github.io/posts/bu-guan-zen-yang-wo-men-dou-ying-gai-he-guo-qu-he-jie/</guid><pubDate>Wed, 17 Mar 2021 02:14:02 GMT</pubDate></item><item><title>Macos 下用终端 emacs 而不使用 GUI emacs</title><link>https://fpghwd.github.io/posts/macos-xia-shi-yong-zhong-duan-emacs-er-bu-shi-yong-gui-emacs/</link><dc:creator>Wang Ding</dc:creator><description>&lt;div&gt;&lt;p&gt;
 最近在 macos 下使用 ssh 登录开启 daemon 启动的 emacs 后用 &lt;code&gt;emacsclient -nw&lt;/code&gt; 连接，感觉体验舒服了很多。
@@ -161,10 +167,4 @@ If non-nil, the faster the user moves the wheel, the faster the scrolling.
 &lt;p&gt;
 之前的博客有提到这部影片，其实我最喜欢的一句话也是女主的父亲的话。 &lt;i&gt;Stay Open&lt;/i&gt; 「谁知道呢？任何事情都有可能发生」。
 &lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/div&gt;</description><guid>https://fpghwd.github.io/posts/2020-nian-zhong-zong-jie/</guid><pubDate>Thu, 31 Dec 2020 10:45:48 GMT</pubDate></item><item><title>Emacs 自动保存文件设置</title><link>https://fpghwd.github.io/posts/emacs-zi-dong-bao-cun-wen-jian-she-zhi/</link><dc:creator>Wang Ding</dc:creator><description>&lt;div&gt;&lt;p&gt;
-Emacs 自带文件自动保存的机制，利用 &lt;code&gt;do-auto-save&lt;/code&gt; 可以自动存储当前编辑的文件为一个编辑过的复本，并未直接存储到 buffer 对应的文件中。当然也可以直接开启全局的 &lt;code&gt;(auto-save-visited-mode t)&lt;/code&gt; ，在默认的 &lt;code&gt;auto-save-visited-interval&lt;/code&gt; 时间（默认 5 秒），后会自动将已经修改后的 buffer 内容写入文件中。
-&lt;/p&gt;
-
-&lt;p&gt;
-其中使用 &lt;code&gt;do-auto-save&lt;/code&gt; 保存的文件的复本可以在打开该文件本身时有提示。这是一个好的地方，也是容易忽略的地方：某次并没有将改动保存到文件，而是自动保存到了某个复本，而下一次用 emacs 打开该文件，虽然 emacs 有提醒该文件有复本未保存到文件中，此时极有可能形成了两个新的基于原文件改动的分枝。众所周知，合并文件是一件耗时的事情。所以我觉得还是打开 &lt;code&gt;(auto-save-visited-mode t)&lt;/code&gt; 更好，避免形成两个改动文件并且需要合并内容的情形。
-&lt;/p&gt;&lt;/div&gt;</description><category>emacs</category><guid>https://fpghwd.github.io/posts/emacs-zi-dong-bao-cun-wen-jian-she-zhi/</guid><pubDate>Wed, 23 Dec 2020 12:06:34 GMT</pubDate></item></channel></rss>
+&lt;/ul&gt;&lt;/div&gt;</description><guid>https://fpghwd.github.io/posts/2020-nian-zhong-zong-jie/</guid><pubDate>Thu, 31 Dec 2020 10:45:48 GMT</pubDate></item></channel></rss>
