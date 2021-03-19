@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>WD's BLOG</title><link>https://fpghwd.github.io/</link><description>passion, love and music</description><atom:link href="https://fpghwd.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2021 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;Wang Ding&lt;/a&gt; </copyright><lastBuildDate>Fri, 19 Mar 2021 05:45:42 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Happiness isn't something you find, it's something you build.</title><link>https://fpghwd.github.io/posts/happiness-isn-t-something-you-find-it-s-something-you-build/</link><dc:creator>Wang Ding</dc:creator><description>&lt;div&gt;&lt;div id="org78f7d7e" class="figure"&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>WD's BLOG</title><link>https://fpghwd.github.io/</link><description>passion, love and music</description><atom:link href="https://fpghwd.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2021 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;Wang Ding&lt;/a&gt; </copyright><lastBuildDate>Fri, 19 Mar 2021 18:55:18 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Warm and soft heart</title><link>https://fpghwd.github.io/posts/warm-and-soft-heart/</link><dc:creator>Wang Ding</dc:creator><description>&lt;div&gt;&lt;p&gt;
+下午在光谷等公交的时候，一直下着小雨的天突然就下了一阵大雨，然后前面的一个打着黄伞的女孩为一个没带伞的陌生男人撑伞。突然就觉得很暖啊，陌生人的关爱。虽然男人很快离开去找多雨的地方，可能也没有注意到自己身后的女孩为他撑了一下伞，但是我感受到了！
+&lt;/p&gt;
+
+&lt;div id="org913f9f6" class="figure"&gt;
+&lt;p&gt;&lt;img src="https://raw.githubusercontent.com/fpGHwd/fpghwd.github.io/master/images/_20210320_025417screenshot.png" alt="_20210320_025417screenshot.png"&gt;
+&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;</description><category>ATTACH</category><guid>https://fpghwd.github.io/posts/warm-and-soft-heart/</guid><pubDate>Fri, 19 Mar 2021 18:54:51 GMT</pubDate></item><item><title>Happiness isn't something you find, it's something you build.</title><link>https://fpghwd.github.io/posts/happiness-isn-t-something-you-find-it-s-something-you-build/</link><dc:creator>Wang Ding</dc:creator><description>&lt;div&gt;&lt;div id="org78f7d7e" class="figure"&gt;
 &lt;p&gt;&lt;img src="https://raw.githubusercontent.com/fpGHwd/fpghwd.github.io/master/images/_20210319_134136screenshot.png" alt="_20210319_134136screenshot.png"&gt;
 &lt;/p&gt;
 &lt;/div&gt;
@@ -119,52 +126,4 @@ If non-nil, the faster the user moves the wheel, the faster the scrolling.
 
 &lt;p&gt;
 虽然还有一些配置文件还没有搬运过来，直接挂载上了 openSUSE 的之前 home 目录，后面想到了就再配置。
-&lt;/p&gt;&lt;/div&gt;</description><category>ATTACH</category><guid>https://fpghwd.github.io/posts/turn-to-archlinux/</guid><pubDate>Mon, 04 Jan 2021 11:35:21 GMT</pubDate></item><item><title>2020 年终总结</title><link>https://fpghwd.github.io/posts/2020-nian-zhong-zong-jie/</link><dc:creator>Wang Ding</dc:creator><description>&lt;div&gt;&lt;p&gt;
-今年虽然并没有什么好记录的，可能是因为平时记录得太多，到了现在并没有太多写的欲望。不过为了仪式感，也稍微写一点吧。
-&lt;/p&gt;
-
-&lt;p&gt;
-今年唯一重要的事情，是看了几本书。
-&lt;/p&gt;
-
-&lt;ul class="org-ul"&gt;
-&lt;li&gt;&lt;p&gt;
-《被讨厌的勇气》
-&lt;/p&gt;
-
-&lt;p&gt;
-其中对自己最有启发的是「课题分离」。具体不展开了，因为基于这一点其实有很多结论。
-&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;
-《禅与摩托车维修艺术》
-&lt;/p&gt;
-
-&lt;p&gt;
-这本书看了一半多，还没有看完。其中「良质」的概念引人深思。
-&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;
-《1984》
-&lt;/p&gt;
-
-&lt;p&gt;
-虽然看到很多推这本书的地方，但是反而对现在的社会现状有太多接触而并不觉得这本书很激进，像是一本“社会就是这个样子”的小说一样。
-&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;
-《深夜加油站遇见苏格拉底》
-&lt;/p&gt;
-
-&lt;p&gt;
-这本书是看到《和平战士》这部电影，然后才看的原著。「活在当下」是电影给我的最大提醒。
-&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;
-电影《 Meet Black 》
-&lt;/p&gt;
-
-&lt;p&gt;
-之前的博客有提到这部影片，其实我最喜欢的一句话也是女主的父亲的话。 &lt;i&gt;Stay Open&lt;/i&gt; 「谁知道呢？任何事情都有可能发生」。
-&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/div&gt;</description><guid>https://fpghwd.github.io/posts/2020-nian-zhong-zong-jie/</guid><pubDate>Thu, 31 Dec 2020 10:45:48 GMT</pubDate></item></channel></rss>
+&lt;/p&gt;&lt;/div&gt;</description><category>ATTACH</category><guid>https://fpghwd.github.io/posts/turn-to-archlinux/</guid><pubDate>Mon, 04 Jan 2021 11:35:21 GMT</pubDate></item></channel></rss>
