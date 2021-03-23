@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>wd's blog</title><link>https://fpghwd.github.io/</link><description>passion, love and music</description><atom:link href="https://fpghwd.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2021 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;Wang Ding&lt;/a&gt; </copyright><lastBuildDate>Fri, 19 Mar 2021 19:28:05 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Warm and soft heart</title><link>https://fpghwd.github.io/posts/warm-and-soft-heart/</link><dc:creator>Wang Ding</dc:creator><description>&lt;div&gt;&lt;p&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>wd's blog</title><link>https://fpghwd.github.io/</link><description>passion, love and music</description><atom:link href="https://fpghwd.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2021 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;Wang Ding&lt;/a&gt; </copyright><lastBuildDate>Tue, 23 Mar 2021 12:11:48 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>朋友来看我</title><link>https://fpghwd.github.io/posts/peng-you-lai-kan-wo/</link><dc:creator>Wang Ding</dc:creator><description>&lt;div&gt;&lt;p&gt;
+今天好久没来看我的朋友过来看我，出去走了好久，好久没有出去呼吸下新鲜空气了。
+&lt;/p&gt;
+
+&lt;div id="org90eb6ec" class="figure"&gt;
+&lt;p&gt;&lt;img src="https://raw.githubusercontent.com/fpGHwd/fpghwd.github.io/master/images/_20210323_201102screenshot.png" alt="_20210323_201102screenshot.png"&gt;
+&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;</description><category>ATTACH</category><guid>https://fpghwd.github.io/posts/peng-you-lai-kan-wo/</guid><pubDate>Tue, 23 Mar 2021 12:11:25 GMT</pubDate></item><item><title>Warm and soft heart</title><link>https://fpghwd.github.io/posts/warm-and-soft-heart/</link><dc:creator>Wang Ding</dc:creator><description>&lt;div&gt;&lt;p&gt;
 下午在光谷等公交的时候，一直下着小雨的天突然就下了一阵大雨，然后前面的一个打着黄伞的女孩为一个没带伞的陌生男人撑伞。突然就觉得很暖啊，来自陌生人的关爱。虽然男人很快离开去找躲雨的地方，可能也没有注意到自己身后的女孩为他撑了一下伞，但是我感受到了！
 &lt;/p&gt;
 
@@ -103,27 +110,4 @@ If non-nil, the faster the user moves the wheel, the faster the scrolling.
 
 &lt;p&gt;
 很有意思的一条原则，发散的话可以得到很多有价值的应用。
-&lt;/p&gt;&lt;/div&gt;</description><category>software</category><guid>https://fpghwd.github.io/posts/open-close-principle/</guid><pubDate>Sun, 17 Jan 2021 11:33:03 GMT</pubDate></item><item><title>Turn to archlinux</title><link>https://fpghwd.github.io/posts/turn-to-archlinux/</link><dc:creator>Wang Ding</dc:creator><description>&lt;div&gt;&lt;p&gt;
-昨天晚上新装了 archlinux ，目前基本已经能用了。
-&lt;/p&gt;
-
-&lt;p&gt;
-其实并没有太多理由非要用 archlinux 。 openSUSE 用得还行，唯二让我换的理由是：1. fcitx-rime 出了一点问题，用了一段时间后，虽然切换到中文，但是无法打出中文。 2. 装各种包有点麻烦。这点 archlinux 可以说完全解决痛点。
-&lt;/p&gt;
-
-&lt;p&gt;
-早就想换，昨天晚上干脆就下定决心借来了 U 盘开始装 archlinux 。全程也没有花费太多时间（也就十多个小时吧。
-&lt;/p&gt;
-
-&lt;div id="orgf88e358" class="figure"&gt;
-&lt;p&gt;&lt;img src="https://raw.githubusercontent.com/fpGHwd/fpghwd.github.io/master/images/_20210104_190229screenshot.png" alt="_20210104_190229screenshot.png"&gt;
-&lt;/p&gt;
-&lt;/div&gt;
-
-&lt;p&gt;
-装好了之后，装上了 xfce 桌面，emacs 启动速度也很快，用起来两个字：开心。
-&lt;/p&gt;
-
-&lt;p&gt;
-虽然还有一些配置文件还没有搬运过来，直接挂载上了 openSUSE 的之前 home 目录，后面想到了就再配置。
-&lt;/p&gt;&lt;/div&gt;</description><category>ATTACH</category><guid>https://fpghwd.github.io/posts/turn-to-archlinux/</guid><pubDate>Mon, 04 Jan 2021 11:35:21 GMT</pubDate></item></channel></rss>
+&lt;/p&gt;&lt;/div&gt;</description><category>software</category><guid>https://fpghwd.github.io/posts/open-close-principle/</guid><pubDate>Sun, 17 Jan 2021 11:33:03 GMT</pubDate></item></channel></rss>
