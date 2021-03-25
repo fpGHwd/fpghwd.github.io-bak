@@ -13,7 +13,7 @@
 <link rel="alternate" type="application/rss+xml" title="RSS" href="rss.xml">
 <link rel="canonical" href="https://fpghwd.github.io/">
 <link rel="next" href="index-21.html" type="text/html">
-<!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="posts/peng-you-lai-kan-wo/" type="text/html">
+<!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="posts/leetcode-98-validate-binary-search-tree/" type="text/html">
 </head>
 <body>
 <div class="body_container">
@@ -50,6 +50,75 @@
                         
 
     
+    <div class="post">
+        <h2 class="post-title"><a href="posts/leetcode-98-validate-binary-search-tree/">leetcode 98 Validate Binary Search Tree</a></h2>
+        <div class="post-meta">
+            2021-03-25 03:22
+        </div>
+        <div class="post-meta">
+                Wang Ding
+        </div>
+        <div class="post-content">
+                <div>
+<p>
+<a href="https://leetcode.com/problems/validate-binary-search-tree/">Leetcode 98. Validate Binary Search Tree</a>
+</p>
+
+<p>
+树的题目一般可以用递归来完成，这道题也不例外。使用中序遍历判断父结点和子结点的关系即可。
+</p>
+
+<p>
+另外每次递归时，作为当前已经是 root 的左结点，需要判断它的右子结点是否超过 root 的父结点的值。同时，作为当前是 root 的右结点，需要判断它的左子结点是否超过 root 的父结点的值。
+</p>
+
+<p>
+边界的处理主要是结点可能是整数的最大和最小值。
+</p>
+
+<div class="org-src-container">
+
+<pre><code class="lang-java">
+public class Solution {
+    public  boolean isValidBST(TreeNode root) {
+        return isValidBST(root,Long.MIN_VALUE , Long.MAX_VALUE);
+    }
+
+    public  boolean isValidBST(TreeNode root , double lowerLimit, double upperLimit) {
+        if(root == null) return true;
+        if(root.val &lt;= lowerLimit|| root.val &gt;= upperLimit ) return false ;
+        return isValidBST(root.right , root.val , upperLimit) &amp;&amp; isValidBST(root.left , lowerLimit , root.val);
+    }
+
+    public static void main(String[] args){
+        System.out.print("hello, world");
+    }
+}
+
+class TreeNode {
+    int val;
+    TreeNode left;
+    TreeNode right;
+    TreeNode() {}
+    TreeNode(int val) { this.val = val; }
+    TreeNode(int val, TreeNode left, TreeNode right) {
+        this.val = val;
+        this.left = left;
+        this.right = right;
+    }
+}
+</code></pre>
+
+</div>
+</div>
+                <p class="commentline">
+        
+    <a href="posts/leetcode-98-validate-binary-search-tree/#disqus_thread" data-disqus-identifier="cache/posts/leetcode-98-validate-binary-search-tree.html">Comments</a>
+
+
+        </p>
+</div>
+    </div>
     <div class="post">
         <h2 class="post-title"><a href="posts/peng-you-lai-kan-wo/">朋友来看我</a></h2>
         <div class="post-meta">
@@ -97,31 +166,6 @@
                 <p class="commentline">
         
     <a href="posts/warm-and-soft-heart/#disqus_thread" data-disqus-identifier="cache/posts/warm-and-soft-heart.html">Comments</a>
-
-
-        </p>
-</div>
-    </div>
-    <div class="post">
-        <h2 class="post-title"><a href="posts/happiness-isn-t-something-you-find-it-s-something-you-build/">Happiness isn't something you find, it's something you build.</a></h2>
-        <div class="post-meta">
-            2021-03-19 05:45
-        </div>
-        <div class="post-meta">
-                Wang Ding
-        </div>
-        <div class="post-content">
-                <div>
-<div id="org78f7d7e" class="figure">
-<p><img src="https://raw.githubusercontent.com/fpGHwd/fpghwd.github.io/master/images/_20210319_134136screenshot.png" alt="_20210319_134136screenshot.png"></p>
-</div>
-
-<p>
-Fairly speaking, it’s the truth that happiness is not searching but building.</p>
-</div>
-                <p class="commentline">
-        
-    <a href="posts/happiness-isn-t-something-you-find-it-s-something-you-build/#disqus_thread" data-disqus-identifier="cache/posts/happiness-isn-t-something-you-find-it-s-something-you-build.html">Comments</a>
 
 
         </p>

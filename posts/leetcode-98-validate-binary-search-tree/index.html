@@ -3,24 +3,34 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>朋友来看我 | wd's blog</title>
+<title>leetcode 98 Validate Binary Search Tree | wd's blog</title>
 <link href="../../assets/css/theme.css" type="text/css" rel="stylesheet">
 <link href="../../assets/css/pure.css" type="text/css" rel="stylesheet">
 <link href="../../assets/css/style.css" type="text/css" rel="stylesheet">
 <meta name="theme-color" content="#5670d4">
 <meta name="generator" content="Nikola (getnikola.com)">
 <link rel="alternate" type="application/rss+xml" title="RSS" href="../../rss.xml">
-<link rel="canonical" href="https://fpghwd.github.io/posts/peng-you-lai-kan-wo/">
+<link rel="canonical" href="https://fpghwd.github.io/posts/leetcode-98-validate-binary-search-tree/">
 <!--[if lt IE 9]><script src="../../assets/js/html5.js"></script><![endif]--><meta name="author" content="Wang Ding">
-<link rel="prev" href="../warm-and-soft-heart/" title="Warm and soft heart" type="text/html">
-<link rel="next" href="../leetcode-98-validate-binary-search-tree/" title="leetcode 98 Validate Binary Search Tree" type="text/html">
+<link rel="prev" href="../peng-you-lai-kan-wo/" title="朋友来看我" type="text/html">
 <meta property="og:site_name" content="wd's blog">
-<meta property="og:title" content="朋友来看我">
-<meta property="og:url" content="https://fpghwd.github.io/posts/peng-you-lai-kan-wo/">
-<meta property="og:description" content="今天好久没来看我的朋友过来看我，出去走了好久，好久没有出去呼吸下新鲜空气了。">
+<meta property="og:title" content="leetcode 98 Validate Binary Search Tree">
+<meta property="og:url" content="https://fpghwd.github.io/posts/leetcode-98-validate-binary-search-tree/">
+<meta property="og:description" content="Leetcode 98. Validate Binary Search Tree
+
+
+
+树的题目一般可以用递归来完成，这道题也不例外。使用中序遍历判断父结点和子结点的关系即可。
+
+
+
+另外每次递归时，作为当前已经是 root 的左结点，需要判断它的右子结点是否超过 root 的父结点的值。同时，作为当前是 root 的右结点，需要判断它的左子结点是否超过 root 的父结点的值。
+
+
+
+边界的处理">
 <meta property="og:type" content="article">
-<meta property="article:published_time" content="2021-03-23T12:11:25Z">
-<meta property="article:tag" content="ATTACH">
+<meta property="article:published_time" content="2021-03-25T03:22:46Z">
 </head>
 <body>
 <div class="body_container">
@@ -56,29 +66,66 @@
                         
                         
 <div class="post post-page">
-    <h1 class="post-title">朋友来看我</h1>
-    <div class="post-meta">2021-03-23 12:11</div>
+    <h1 class="post-title">leetcode 98 Validate Binary Search Tree</h1>
+    <div class="post-meta">2021-03-25 03:22</div>
     <div class="post-content">
         <div>
 <p>
-今天好久没来看我的朋友过来看我，出去走了好久，好久没有出去呼吸下新鲜空气了。
+<a href="https://leetcode.com/problems/validate-binary-search-tree/">Leetcode 98. Validate Binary Search Tree</a>
 </p>
 
-<div id="org90eb6ec" class="figure">
-<p><img src="https://raw.githubusercontent.com/fpGHwd/fpghwd.github.io/master/images/_20210323_201102screenshot.png" alt="_20210323_201102screenshot.png"></p>
+<p>
+树的题目一般可以用递归来完成，这道题也不例外。使用中序遍历判断父结点和子结点的关系即可。
+</p>
+
+<p>
+另外每次递归时，作为当前已经是 root 的左结点，需要判断它的右子结点是否超过 root 的父结点的值。同时，作为当前是 root 的右结点，需要判断它的左子结点是否超过 root 的父结点的值。
+</p>
+
+<p>
+边界的处理主要是结点可能是整数的最大和最小值。
+</p>
+
+<div class="org-src-container">
+
+<pre><code class="lang-java">
+public class Solution {
+    public  boolean isValidBST(TreeNode root) {
+        return isValidBST(root,Long.MIN_VALUE , Long.MAX_VALUE);
+    }
+
+    public  boolean isValidBST(TreeNode root , double lowerLimit, double upperLimit) {
+        if(root == null) return true;
+        if(root.val &lt;= lowerLimit|| root.val &gt;= upperLimit ) return false ;
+        return isValidBST(root.right , root.val , upperLimit) &amp;&amp; isValidBST(root.left , lowerLimit , root.val);
+    }
+
+    public static void main(String[] args){
+        System.out.print("hello, world");
+    }
+}
+
+class TreeNode {
+    int val;
+    TreeNode left;
+    TreeNode right;
+    TreeNode() {}
+    TreeNode(int val) { this.val = val; }
+    TreeNode(int val, TreeNode left, TreeNode right) {
+        this.val = val;
+        this.left = left;
+        this.right = right;
+    }
+}
+</code></pre>
+
 </div>
 </div>
     </div>
     <div class="postpromonav">
-        <nav><ul itemprop="keywords" class="tags">
-<li><a class="tag p-category" href="../../categories/attach/" rel="tag">ATTACH</a></li>
-        </ul>
-<ul class="pager hidden-print">
+        <nav><ul class="pager hidden-print">
 <li class="previous">
-                <a href="../warm-and-soft-heart/" rel="prev" title="Warm and soft heart">Previous post</a>
-            </li>
-            <li class="next">
-                <a href="../leetcode-98-validate-binary-search-tree/" rel="next" title="leetcode 98 Validate Binary Search Tree">Next post</a>
+                <a href="../peng-you-lai-kan-wo/" rel="prev" title="朋友来看我">Previous post</a>
             </li>
         </ul></nav>
 </div>
@@ -88,9 +135,9 @@
         <div id="disqus_thread"></div>
         <script>
         var disqus_shortname ="fpghwd-github-io",
-            disqus_url="https://fpghwd.github.io/posts/peng-you-lai-kan-wo/",
-        disqus_title="\u670b\u53cb\u6765\u770b\u6211",
-        disqus_identifier="cache/posts/peng-you-lai-kan-wo.html",
+            disqus_url="https://fpghwd.github.io/posts/leetcode-98-validate-binary-search-tree/",
+        disqus_title="leetcode 98 Validate Binary Search Tree",
+        disqus_identifier="cache/posts/leetcode-98-validate-binary-search-tree.html",
         disqus_config = function () {
             this.language = "en";
         };
@@ -137,7 +184,7 @@
     <!--% if show_sourcelink:-->
     <!--
     <li>
-        <a href="/posts/peng-you-lai-kan-wo/index.wp" id="sourcelink">Source</a>
+        <a href="/posts/leetcode-98-validate-binary-search-tree/index.wp" id="sourcelink">Source</a>
     </li>
 -->
     <!--%endif-->

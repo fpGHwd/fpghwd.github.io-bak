@@ -1,5 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>wd's blog</title><link>https://fpghwd.github.io/</link><description>passion, love and music</description><atom:link href="https://fpghwd.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2021 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;Wang Ding&lt;/a&gt; </copyright><lastBuildDate>Tue, 23 Mar 2021 12:11:48 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>朋友来看我</title><link>https://fpghwd.github.io/posts/peng-you-lai-kan-wo/</link><dc:creator>Wang Ding</dc:creator><description>&lt;div&gt;&lt;p&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>wd's blog</title><link>https://fpghwd.github.io/</link><description>passion, love and music</description><atom:link href="https://fpghwd.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2021 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;Wang Ding&lt;/a&gt; </copyright><lastBuildDate>Thu, 25 Mar 2021 03:22:56 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>leetcode 98 Validate Binary Search Tree</title><link>https://fpghwd.github.io/posts/leetcode-98-validate-binary-search-tree/</link><dc:creator>Wang Ding</dc:creator><description>&lt;div&gt;&lt;p&gt;
+&lt;a href="https://leetcode.com/problems/validate-binary-search-tree/"&gt;Leetcode 98. Validate Binary Search Tree&lt;/a&gt;
+&lt;/p&gt;
+
+&lt;p&gt;
+树的题目一般可以用递归来完成，这道题也不例外。使用中序遍历判断父结点和子结点的关系即可。
+&lt;/p&gt;
+
+&lt;p&gt;
+另外每次递归时，作为当前已经是 root 的左结点，需要判断它的右子结点是否超过 root 的父结点的值。同时，作为当前是 root 的右结点，需要判断它的左子结点是否超过 root 的父结点的值。
+&lt;/p&gt;
+
+&lt;p&gt;
+边界的处理主要是结点可能是整数的最大和最小值。
+&lt;/p&gt;
+
+&lt;div class="org-src-container"&gt;
+
+&lt;pre&gt;&lt;code class="lang-java"&gt;
+public class Solution {
+    public  boolean isValidBST(TreeNode root) {
+        return isValidBST(root,Long.MIN_VALUE , Long.MAX_VALUE);
+    }
+
+    public  boolean isValidBST(TreeNode root , double lowerLimit, double upperLimit) {
+        if(root == null) return true;
+        if(root.val &amp;lt;= lowerLimit|| root.val &amp;gt;= upperLimit ) return false ;
+        return isValidBST(root.right , root.val , upperLimit) &amp;amp;&amp;amp; isValidBST(root.left , lowerLimit , root.val);
+    }
+
+    public static void main(String[] args){
+        System.out.print("hello, world");
+    }
+}
+
+class TreeNode {
+    int val;
+    TreeNode left;
+    TreeNode right;
+    TreeNode() {}
+    TreeNode(int val) { this.val = val; }
+    TreeNode(int val, TreeNode left, TreeNode right) {
+        this.val = val;
+        this.left = left;
+        this.right = right;
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;/div&gt;&lt;/div&gt;</description><guid>https://fpghwd.github.io/posts/leetcode-98-validate-binary-search-tree/</guid><pubDate>Thu, 25 Mar 2021 03:22:46 GMT</pubDate></item><item><title>朋友来看我</title><link>https://fpghwd.github.io/posts/peng-you-lai-kan-wo/</link><dc:creator>Wang Ding</dc:creator><description>&lt;div&gt;&lt;p&gt;
 今天好久没来看我的朋友过来看我，出去走了好久，好久没有出去呼吸下新鲜空气了。
 &lt;/p&gt;
 
@@ -96,18 +145,4 @@ If non-nil, the faster the user moves the wheel, the faster the scrolling.
 
 &lt;p&gt;
 不过我并没有一定要记录很多的 org-roam 卡片，不过这些卡片本身具有解耦的特征，因此对于分析问题应该好处特别的明显。
-&lt;/p&gt;&lt;/div&gt;</description><category>emacs</category><guid>https://fpghwd.github.io/posts/org-roam/</guid><pubDate>Sun, 24 Jan 2021 12:56:20 GMT</pubDate></item><item><title>Open-close principle</title><link>https://fpghwd.github.io/posts/open-close-principle/</link><dc:creator>Wang Ding</dc:creator><description>&lt;div&gt;&lt;p&gt;
-开闭原则是软件工程中对于开发原则的一条描述。它规定：软件中的对象（类，模块，函数等等）应该对于拓展开放，对于修改封闭。这是一条非常重要的原则，它的内涵是：一个实体是允许在不改变它本身（的源代码）的前提下变更它的行为。
-&lt;/p&gt;
-
-&lt;p&gt;
-这段话我所理解的是：只加不改。也就是对于一个能够运行正常的代码（或者说旧的系统），我们最好是添加一些需要的东西，而不是修改内部的机制。因为内部的机制牵连比较多，修改的时候也比较容易出现引用的问题。但是增加就不用想那么多，也实际上效果更好一点。
-&lt;/p&gt;
-
-&lt;p&gt;
-对于旧的系统，我的一个理解也包含生活方式或者理念的系统。在接触到一个新的生活方式或者理念的时候，不要急着先否定过去的系统，而是加上去新的机制和理念。它们不应该是互斥存在的，而是可以友好的协作的。如果不行，那么只能说没有组织好。
-&lt;/p&gt;
-
-&lt;p&gt;
-很有意思的一条原则，发散的话可以得到很多有价值的应用。
-&lt;/p&gt;&lt;/div&gt;</description><category>software</category><guid>https://fpghwd.github.io/posts/open-close-principle/</guid><pubDate>Sun, 17 Jan 2021 11:33:03 GMT</pubDate></item></channel></rss>
+&lt;/p&gt;&lt;/div&gt;</description><category>emacs</category><guid>https://fpghwd.github.io/posts/org-roam/</guid><pubDate>Sun, 24 Jan 2021 12:56:20 GMT</pubDate></item></channel></rss>

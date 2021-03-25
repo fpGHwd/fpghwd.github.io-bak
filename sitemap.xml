@@ -23,7 +23,7 @@
  </url>
  <url>
   <loc>https://fpghwd.github.io/archive.html</loc>
-  <lastmod>2021-03-23T12:11:00Z</lastmod>
+  <lastmod>2021-03-25T03:22:00Z</lastmod>
  </url>
  <url>
   <loc>https://fpghwd.github.io/authors/</loc>
@@ -175,7 +175,7 @@
  </url>
  <url>
   <loc>https://fpghwd.github.io/index-21.html</loc>
-  <lastmod>2021-03-23T12:11:00Z</lastmod>
+  <lastmod>2021-03-25T03:22:00Z</lastmod>
  </url>
  <url>
   <loc>https://fpghwd.github.io/index-3.html</loc>
@@ -340,6 +340,10 @@
  <url>
   <loc>https://fpghwd.github.io/posts/kan-wan-dian-ying-gou-zhen-de-yi-dian-xiang-fa/</loc>
   <lastmod>2021-03-19T19:31:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://fpghwd.github.io/posts/leetcode-98-validate-binary-search-tree/</loc>
+  <lastmod>2021-03-25T03:22:00Z</lastmod>
  </url>
  <url>
   <loc>https://fpghwd.github.io/posts/leetcode/</loc>

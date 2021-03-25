@@ -1,0 +1,50 @@
+<p>
+<a href="https://leetcode.com/problems/validate-binary-search-tree/">Leetcode 98. Validate Binary Search Tree</a>
+</p>
+
+<p>
+树的题目一般可以用递归来完成，这道题也不例外。使用中序遍历判断父结点和子结点的关系即可。
+</p>
+
+<p>
+另外每次递归时，作为当前已经是 root 的左结点，需要判断它的右子结点是否超过 root 的父结点的值。同时，作为当前是 root 的右结点，需要判断它的左子结点是否超过 root 的父结点的值。
+</p>
+
+<p>
+边界的处理主要是结点可能是整数的最大和最小值。
+</p>
+
+<div class="org-src-container">
+
+<pre><code class="lang-java">
+public class Solution {
+    public  boolean isValidBST(TreeNode root) {
+        return isValidBST(root,Long.MIN_VALUE , Long.MAX_VALUE);
+    }
+
+    public  boolean isValidBST(TreeNode root , double lowerLimit, double upperLimit) {
+        if(root == null) return true;
+        if(root.val &lt;= lowerLimit|| root.val &gt;= upperLimit ) return false ;
+        return isValidBST(root.right , root.val , upperLimit) &amp;&amp; isValidBST(root.left , lowerLimit , root.val);
+    }
+
+    public static void main(String[] args){
+        System.out.print("hello, world");
+    }
+}
+
+class TreeNode {
+    int val;
+    TreeNode left;
+    TreeNode right;
+    TreeNode() {}
+    TreeNode(int val) { this.val = val; }
+    TreeNode(int val, TreeNode left, TreeNode right) {
+        this.val = val;
+        this.left = left;
+        this.right = right;
+    }
+}
+</code></pre>
+
+</div>
