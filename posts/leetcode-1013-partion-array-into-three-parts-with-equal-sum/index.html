@@ -3,35 +3,32 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>leetcode 98 Validate Binary Search Tree | wd's blog</title>
+<title>leetcode 1013. Partion Array Into Three Parts With Equal Sum | wd's blog</title>
 <link href="../../assets/css/theme.css" type="text/css" rel="stylesheet">
 <link href="../../assets/css/pure.css" type="text/css" rel="stylesheet">
 <link href="../../assets/css/style.css" type="text/css" rel="stylesheet">
 <meta name="theme-color" content="#5670d4">
 <meta name="generator" content="Nikola (getnikola.com)">
 <link rel="alternate" type="application/rss+xml" title="RSS" href="../../rss.xml">
-<link rel="canonical" href="https://fpghwd.github.io/posts/leetcode-98-validate-binary-search-tree/">
+<link rel="canonical" href="https://fpghwd.github.io/posts/leetcode-1013-partion-array-into-three-parts-with-equal-sum/">
 <!--[if lt IE 9]><script src="../../assets/js/html5.js"></script><![endif]--><meta name="author" content="Wang Ding">
-<link rel="prev" href="../peng-you-lai-kan-wo/" title="朋友来看我" type="text/html">
-<link rel="next" href="../leetcode-1013-partion-array-into-three-parts-with-equal-sum/" title="leetcode 1013. Partion Array Into Three Parts With Equal Sum" type="text/html">
+<link rel="prev" href="../leetcode-98-validate-binary-search-tree/" title="leetcode 98 Validate Binary Search Tree" type="text/html">
 <meta property="og:site_name" content="wd's blog">
-<meta property="og:title" content="leetcode 98 Validate Binary Search Tree">
-<meta property="og:url" content="https://fpghwd.github.io/posts/leetcode-98-validate-binary-search-tree/">
-<meta property="og:description" content="Leetcode 98. Validate Binary Search Tree
+<meta property="og:title" content="leetcode 1013. Partion Array Into Three Parts With Equal Sum">
+<meta property="og:url" content="https://fpghwd.github.io/posts/leetcode-1013-partion-array-into-three-parts-with-equal-sum/">
+<meta property="og:description" content="1013. Partition Array Into Three Parts With Equal Sum
 
 
 
-树的题目一般可以用递归来完成，这道题也不例外。使用中序遍历判断父结点和子结点的关系即可。
 
 
-
-另外每次递归时，作为当前已经是 root 的左结点，需要判断它的右子结点是否超过 root 的父结点的值。同时，作为当前是 root 的右结点，需要判断它的左子结点是否超过 root 的父结点的值。
-
-
-
-边界的处理">
+class Solution {
+    public boolean canThreePartsEqualSum(int[] arr) {
+        int length = arr.length;
+        int[] sum = new int[length];
+">
 <meta property="og:type" content="article">
-<meta property="article:published_time" content="2021-03-25T03:22:46Z">
+<meta property="article:published_time" content="2021-03-25T03:46:02Z">
 </head>
 <body>
 <div class="body_container">
@@ -67,57 +64,42 @@
                         
                         
 <div class="post post-page">
-    <h1 class="post-title">leetcode 98 Validate Binary Search Tree</h1>
-    <div class="post-meta">2021-03-25 03:22</div>
+    <h1 class="post-title">leetcode 1013. Partion Array Into Three Parts With Equal Sum</h1>
+    <div class="post-meta">2021-03-25 03:46</div>
     <div class="post-content">
         <div>
 <p>
-<a href="https://leetcode.com/problems/validate-binary-search-tree/">Leetcode 98. Validate Binary Search Tree</a>
-</p>
-
-<p>
-树的题目一般可以用递归来完成，这道题也不例外。使用中序遍历判断父结点和子结点的关系即可。
-</p>
-
-<p>
-另外每次递归时，作为当前已经是 root 的左结点，需要判断它的右子结点是否超过 root 的父结点的值。同时，作为当前是 root 的右结点，需要判断它的左子结点是否超过 root 的父结点的值。
-</p>
-
-<p>
-边界的处理主要是结点可能是整数的最大和最小值。
+<a href="https://leetcode.com/problems/partition-array-into-three-parts-with-equal-sum/">1013. Partition Array Into Three Parts With Equal Sum</a>
 </p>
 
 <div class="org-src-container">
 
 <pre><code class="lang-java">
-public class Solution {
-    public  boolean isValidBST(TreeNode root) {
-        return isValidBST(root,Long.MIN_VALUE , Long.MAX_VALUE);
-    }
+class Solution {
+    public boolean canThreePartsEqualSum(int[] arr) {
+        int length = arr.length;
+        int[] sum = new int[length];
+        int i = 0;
+        for(int a:arr){
+            if(i != 0)sum[i] = sum[i-1] + a;
+            else sum[i] = a;
+            i++;
+        }
 
-    public  boolean isValidBST(TreeNode root , double lowerLimit, double upperLimit) {
-        if(root == null) return true;
-        if(root.val &lt;= lowerLimit|| root.val &gt;= upperLimit ) return false ;
-        return isValidBST(root.right , root.val , upperLimit) &amp;&amp; isValidBST(root.left , lowerLimit , root.val);
-    }
-
-    public static void main(String[] args){
-        System.out.print("hello, world");
+        if(sum[length-1] %3 != 0)return false;
+        i = 0;
+        for(; i &lt; length; i++){
+            if(sum[i] == sum[length-1]/3)break;
+        }
+        if(i &gt;= length)return false;
+        for(i++; i &lt; length; i++){
+            if(sum[i] == 2 * sum[length-1]/3)break;
+        }
+        if(i &gt;= length-1)return false;
+        return true;
     }
 }
 
-class TreeNode {
-    int val;
-    TreeNode left;
-    TreeNode right;
-    TreeNode() {}
-    TreeNode(int val) { this.val = val; }
-    TreeNode(int val, TreeNode left, TreeNode right) {
-        this.val = val;
-        this.left = left;
-        this.right = right;
-    }
-}
 </code></pre>
 
 </div>
@@ -126,10 +108,7 @@ class TreeNode {
     <div class="postpromonav">
         <nav><ul class="pager hidden-print">
 <li class="previous">
-                <a href="../peng-you-lai-kan-wo/" rel="prev" title="朋友来看我">Previous post</a>
-            </li>
-            <li class="next">
-                <a href="../leetcode-1013-partion-array-into-three-parts-with-equal-sum/" rel="next" title="leetcode 1013. Partion Array Into Three Parts With Equal Sum">Next post</a>
+                <a href="../leetcode-98-validate-binary-search-tree/" rel="prev" title="leetcode 98 Validate Binary Search Tree">Previous post</a>
             </li>
         </ul></nav>
 </div>
@@ -139,9 +118,9 @@ class TreeNode {
         <div id="disqus_thread"></div>
         <script>
         var disqus_shortname ="fpghwd-github-io",
-            disqus_url="https://fpghwd.github.io/posts/leetcode-98-validate-binary-search-tree/",
-        disqus_title="leetcode 98 Validate Binary Search Tree",
-        disqus_identifier="cache/posts/leetcode-98-validate-binary-search-tree.html",
+            disqus_url="https://fpghwd.github.io/posts/leetcode-1013-partion-array-into-three-parts-with-equal-sum/",
+        disqus_title="leetcode 1013. Partion Array Into Three Parts With Equal Sum",
+        disqus_identifier="cache/posts/leetcode-1013-partion-array-into-three-parts-with-equal-sum.html",
         disqus_config = function () {
             this.language = "en";
         };
@@ -188,7 +167,7 @@ class TreeNode {
     <!--% if show_sourcelink:-->
     <!--
     <li>
-        <a href="/posts/leetcode-98-validate-binary-search-tree/index.wp" id="sourcelink">Source</a>
+        <a href="/posts/leetcode-1013-partion-array-into-three-parts-with-equal-sum/index.wp" id="sourcelink">Source</a>
     </li>
 -->
     <!--%endif-->

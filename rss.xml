@@ -1,5 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>wd's blog</title><link>https://fpghwd.github.io/</link><description>passion, love and music</description><atom:link href="https://fpghwd.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2021 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;Wang Ding&lt;/a&gt; </copyright><lastBuildDate>Thu, 25 Mar 2021 03:22:56 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>leetcode 98 Validate Binary Search Tree</title><link>https://fpghwd.github.io/posts/leetcode-98-validate-binary-search-tree/</link><dc:creator>Wang Ding</dc:creator><description>&lt;div&gt;&lt;p&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>wd's blog</title><link>https://fpghwd.github.io/</link><description>passion, love and music</description><atom:link href="https://fpghwd.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2021 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;Wang Ding&lt;/a&gt; </copyright><lastBuildDate>Thu, 25 Mar 2021 03:46:09 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>leetcode 1013. Partion Array Into Three Parts With Equal Sum</title><link>https://fpghwd.github.io/posts/leetcode-1013-partion-array-into-three-parts-with-equal-sum/</link><dc:creator>Wang Ding</dc:creator><description>&lt;div&gt;&lt;p&gt;
+&lt;a href="https://leetcode.com/problems/partition-array-into-three-parts-with-equal-sum/"&gt;1013. Partition Array Into Three Parts With Equal Sum&lt;/a&gt;
+&lt;/p&gt;
+
+&lt;div class="org-src-container"&gt;
+
+&lt;pre&gt;&lt;code class="lang-java"&gt;
+class Solution {
+    public boolean canThreePartsEqualSum(int[] arr) {
+        int length = arr.length;
+        int[] sum = new int[length];
+        int i = 0;
+        for(int a:arr){
+            if(i != 0)sum[i] = sum[i-1] + a;
+            else sum[i] = a;
+            i++;
+        }
+
+        if(sum[length-1] %3 != 0)return false;
+        i = 0;
+        for(; i &amp;lt; length; i++){
+            if(sum[i] == sum[length-1]/3)break;
+        }
+        if(i &amp;gt;= length)return false;
+        for(i++; i &amp;lt; length; i++){
+            if(sum[i] == 2 * sum[length-1]/3)break;
+        }
+        if(i &amp;gt;= length-1)return false;
+        return true;
+    }
+}
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;/div&gt;&lt;/div&gt;</description><guid>https://fpghwd.github.io/posts/leetcode-1013-partion-array-into-three-parts-with-equal-sum/</guid><pubDate>Thu, 25 Mar 2021 03:46:02 GMT</pubDate></item><item><title>leetcode 98 Validate Binary Search Tree</title><link>https://fpghwd.github.io/posts/leetcode-98-validate-binary-search-tree/</link><dc:creator>Wang Ding</dc:creator><description>&lt;div&gt;&lt;p&gt;
 &lt;a href="https://leetcode.com/problems/validate-binary-search-tree/"&gt;Leetcode 98. Validate Binary Search Tree&lt;/a&gt;
 &lt;/p&gt;
 
@@ -139,10 +173,4 @@ If non-nil, the faster the user moves the wheel, the faster the scrolling.
 (setq scroll-step 1) ;; keyboard scroll one line at a time
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;/div&gt;&lt;/div&gt;</description><category>emacs</category><guid>https://fpghwd.github.io/posts/emacs-mouse-or-touchpad-scroll-line-by-line/</guid><pubDate>Sun, 14 Feb 2021 12:06:23 GMT</pubDate></item><item><title>Org-roam</title><link>https://fpghwd.github.io/posts/org-roam/</link><dc:creator>Wang Ding</dc:creator><description>&lt;div&gt;&lt;p&gt;
-最近又重拾 org-roam 来做记录。我喜欢这个工具的重大原因是：它是解耦的，另外它是可拓展的。也许正是因为它是解耦的所以它的可拓展性很高吧。
-&lt;/p&gt;
-
-&lt;p&gt;
-不过我并没有一定要记录很多的 org-roam 卡片，不过这些卡片本身具有解耦的特征，因此对于分析问题应该好处特别的明显。
-&lt;/p&gt;&lt;/div&gt;</description><category>emacs</category><guid>https://fpghwd.github.io/posts/org-roam/</guid><pubDate>Sun, 24 Jan 2021 12:56:20 GMT</pubDate></item></channel></rss>
+&lt;/div&gt;&lt;/div&gt;</description><category>emacs</category><guid>https://fpghwd.github.io/posts/emacs-mouse-or-touchpad-scroll-line-by-line/</guid><pubDate>Sun, 14 Feb 2021 12:06:23 GMT</pubDate></item></channel></rss>
