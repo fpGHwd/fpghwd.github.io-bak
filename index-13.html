@@ -12,7 +12,7 @@
 <meta name="generator" content="Nikola (getnikola.com)">
 <link rel="alternate" type="application/rss+xml" title="RSS" href="rss.xml">
 <link rel="canonical" href="https://fpghwd.github.io/index-13.html">
-<link rel="prev" href="index-14.html" type="text/html">
+<link rel="prev" href="." type="text/html">
 <link rel="next" href="index-12.html" type="text/html">
 <!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]-->
 </head>
@@ -52,219 +52,20 @@
 
     
     <div class="post">
-        <h2 class="post-title"><a href="posts/org-archive-location/">Org archive location</a></h2>
+        <h2 class="post-title"><a href="posts/bu-guan-zen-yang-wo-men-dou-ying-gai-he-guo-qu-he-jie/">不管怎样，我们都应该和过去和解</a></h2>
         <div class="post-meta">
-            2020-10-16 11:32
+            2021-03-17 02:14
         </div>
         <div class="post-meta">
                 Wang Ding
         </div>
         <div class="post-content">
-                <div>
-<p>
-最近在使用 org 的时候想把 org-archive-subtree 的条目和 org-capture-templates 那样，将每次当天 archived 的 headline 放到当日的日期 headline 下面，和日记一样组织。这样的话，将来查询的时候就可以顺便看一下当天发生的事情和当天完成的项目了。
+                <p>
+看越哥说电影的<a href="https://www.youtube.com/watch?v=XY7Pz9AG6T4">《忘不了》</a>，里面的一句话个人觉得非常好，“不管怎样，我们都应该和过去和解”，这也是和过去解耦的一种形式，「活在当下」才是应该做的。
 </p>
-
-<p>
-以下是日记的组织方式：
-</p>
-
-<div id="org595b26c" class="figure">
-<p><img src="https://raw.githubusercontent.com/fpGHwd/fpghwd.github.io/master/images/_20201016_192526screenshot.png" alt="_20201016_192526screenshot.png"></p>
-</div>
-
-<div class="org-src-container">
-
-<pre><code class="lang-lisp">
-(add-to-list 'org-capture-templates
-                      '("zj" "journal" entry (file "/home/wd/dropbox/to-encfs/text/org/journal.org")
-                        "* %u - %^{heading}\n  %?"))
-
-</code></pre>
-
-</div>
-
-<p>
-同时在 <code>customize org-archive-location</code> 中发现了有这种设定：
-</p>
-
-<div class="org-src-container">
-
-<pre><code class="lang-html">
-"~/org/datetree.org::datetree/* Finished Tasks"
-The "datetree/" string is special, signifying to archive
-items to the datetree.  Items are placed in either the CLOSED
-date of the item, or the current date if there is no CLOSED date.
-The heading will be a subentry to the current date.  There doesn’t
-need to be a heading, but there always needs to be a slash after
-datetree.  For example, to store archived items directly in the
-datetree, use "~/org/datetree.org::datetree/".
-
-</code></pre>
-
-</div>
-
-<p>
-可以把日记和归档的条目都放到一个文件，归档也不会经常去动，只需要看的时候搜索一下就行。
-</p>
-</div>
                 <p class="commentline">
         
-    <a href="posts/org-archive-location/#disqus_thread" data-disqus-identifier="cache/posts/org-archive-location.html">Comments</a>
-
-
-        </p>
-</div>
-    </div>
-    <div class="post">
-        <h2 class="post-title"><a href="posts/leetcode92-reverse-linked-list-ii/">Leetcode92. Reverse Linked List II</a></h2>
-        <div class="post-meta">
-            2020-10-05 10:04
-        </div>
-        <div class="post-meta">
-                Wang Ding
-        </div>
-        <div class="post-content">
-                <div>
-<p>
-<a href="https://leetcode.com/problems/reverse-linked-list-ii/">92. Reverse Linked List II</a>
-</p>
-
-<p>
-<b>Solution</b>
-</p>
-
-<div class="org-src-container">
-
-<pre><code class="lang-C">
-/**
- * Definition for singly-linked list.
- * struct ListNode {
- *     int val;
- *     ListNode *next;
- *     ListNode() : val(0), next(nullptr) {}
- *     ListNode(int x) : val(x), next(nullptr) {}
- *     ListNode(int x, ListNode *next) : val(x), next(next) {}
- * };
- */
-class Solution {
-  public:
-    ListNode *reverseBetween(ListNode *head, int m, int n) {
-        if (m == n) // 当 m = n 时并没有变化
-            return head;
-
-        int i = 1;
-        ListNode *psuedo_head = new ListNode(), *pre = psuedo_head, *n_pre;
-
-        for (ListNode *w = head; w;) {
-            if (i &lt;= m || i &gt; n) {
-                if (i == m)
-                    n_pre = w;
-                pre-&gt;next = w;
-                if (i != m)
-                    pre = w;
-                w = w-&gt;next;
-            } else if (i &gt; m &amp;&amp; i &lt;= n) {
-                ListNode *tmp = w;
-                w = w-&gt;next;
-                tmp-&gt;next = pre-&gt;next;
-                pre-&gt;next = tmp;
-                if (i == n)
-                    pre = n_pre;
-            }
-            i++;
-        }
-
-        pre-&gt;next = nullptr; // 尾节点后续是 null
-
-        return psuedo_head-&gt;next;
-    }
-};
-
-</code></pre>
-
-</div>
-
-<div class="org-src-container">
-
-<pre><code class="lang-html">
-Status: Accepted (44/44)
-
-Runtime: 4 ms, faster than 64.43% of C++ submissions.
-
-Memory Usage: 7.8 MB, less than 16.96% of C++ submissions.
-
-</code></pre>
-
-</div>
-
-<p>
-第一次做的时候没想那么多，暴力的做法。后来做的时候就想到这是将链表的导致的前插和尾插组合在一起的题。并不难，只要分别搞清楚这两种写法就能写出来。
-</p>
-</div>
-                <p class="commentline">
-        
-    <a href="posts/leetcode92-reverse-linked-list-ii/#disqus_thread" data-disqus-identifier="cache/posts/leetcode92-reverse-linked-list-ii.html">Comments</a>
-
-
-        </p>
-</div>
-    </div>
-    <div class="post">
-        <h2 class="post-title"><a href="posts/leetcode96-unique-binary-search-trees/">Leetcode96. Unique Binary Search Trees</a></h2>
-        <div class="post-meta">
-            2020-10-01 04:39
-        </div>
-        <div class="post-meta">
-                Wang Ding
-        </div>
-        <div class="post-content">
-                <div>
-<p>
-<a href="https://leetcode.com/problems/unique-binary-search-trees/">96. Unique Binary Search Trees</a>
-</p>
-
-<p>
-<b>Solution</b>
-</p>
-
-<div class="org-src-container">
-
-<pre><code class="lang-C">class Solution {
-  public:
-    int numTrees(int n) {
-        if (n == 0 || n == 1)return 1;
-
-        int count = 0;
-        for (int i = 1; i &lt;= n; i++)count += numTrees(i - 1) * numTrees(n - i);
-
-        return count;
-    }
-};
-</code></pre>
-
-</div>
-
-<div class="org-src-container">
-
-<pre><code class="lang-html">
-Status: Accepted (19/19)
-
-Runtime: 1220 ms, faster than 11.92% of C++ submissions.
-
-Memory Usage: 6 MB, less than 59.10% of C++ submissions.
-
-</code></pre>
-
-</div>
-
-<p>
-用 DP 做更快一点，但递归对理解更友好些。反过来， DP 不就是递归的递推公式的代数形式嘛。能用递归就做出来的事情，就不需要迭代了，毕竟<a href="http://algosaur.us/recursion/">“To iterate is human, to recurse, divine”</a>. 能请神去做的事情，就不要麻烦人啦。
-</p>
-</div>
-                <p class="commentline">
-        
-    <a href="posts/leetcode96-unique-binary-search-trees/#disqus_thread" data-disqus-identifier="cache/posts/leetcode96-unique-binary-search-trees.html">Comments</a>
+    <a href="posts/bu-guan-zen-yang-wo-men-dou-ying-gai-he-guo-qu-he-jie/#disqus_thread" data-disqus-identifier="cache/posts/bu-guan-zen-yang-wo-men-dou-ying-gai-he-guo-qu-he-jie.html">Comments</a>
 
 
         </p>
@@ -273,7 +74,7 @@ Memory Usage: 6 MB, less than 59.10% of C++ submissions.
 
         <nav class="postindexpager"><ul class="pager">
 <li class="previous">
-                <a href="index-14.html" rel="prev">Newer posts</a>
+                <a href="." rel="prev">Newer posts</a>
             </li>
             <li class="next">
                 <a href="index-12.html" rel="next">Older posts</a>

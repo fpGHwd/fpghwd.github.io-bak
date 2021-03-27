@@ -51,6 +51,107 @@
 
     
     <div class="post">
+        <h2 class="post-title"><a href="posts/how-opensuse-rollback-when-using-brtfs/">How openSUSE rollbacks when using brtfs</a></h2>
+        <div class="post-meta">
+            2020-07-13 15:16
+        </div>
+        <div class="post-meta">
+                Wang Ding
+        </div>
+        <div class="post-content">
+                <div>
+<ul class="org-ul">
+<li><b>Brtfs</b></li>
+</ul>
+<p>
+Btrfs, an abbreviation for b-tree file system. By default, openSUSE is set up using Btrfs and snapshots for the root partition. Snapshots allow you to easily roll back your system if needed after applying updates, or to back up files. Snapshots can easily be managed with Snapper.
+</p>
+
+<ul class="org-ul">
+<li><b>Yast Filesystem Snapshots</b></li>
+</ul>
+<p>
+In yast Filesystem Snapshots, sensitive changes in system files(directories in / like /etc, /bin, excluding /home) will be listed and You can check difference between pre-changed status and post-changed status. One can specify the volumn to rollback via time or file(s’) changes.
+</p>
+
+<ul class="org-ul">
+<li><b>Rollback</b></li>
+</ul>
+<p>
+Boot and on grub(2) interface, choose “Advance bootloader for openSUSE” and enter in and choose item you want to rollback to. And then “openSUSE Tumbleweed” to boot normally. Login and run <code>sudo snapper rollback &amp;&amp; reboot</code> in opened terminal, then relogin. And everything is OK.
+</p>
+</div>
+                <p class="commentline">
+        
+    <a href="posts/how-opensuse-rollback-when-using-brtfs/#disqus_thread" data-disqus-identifier="cache/posts/how-opensuse-rollback-when-using-brtfs.html">Comments</a>
+
+
+        </p>
+</div>
+    </div>
+    <div class="post">
+        <h2 class="post-title"><a href="posts/shi-yong-workgroups2-guan-li-emacs-de-session/">Manage workgroups in emacs via workgroups2</a></h2>
+        <div class="post-meta">
+            2020-07-09 10:08
+        </div>
+        <div class="post-meta">
+                Wang Ding
+        </div>
+        <div class="post-content">
+                <div>
+<p>
+<b>Workgroups2<sup><a id="fnr.1" class="footref" href="posts/shi-yong-workgroups2-guan-li-emacs-de-session/#fn.1">1</a></sup></b> 
+Workgroups2 是一款保存和恢复用户工作空间的一款 emacs 插件。
+</p>
+
+<p>
+<b>sessions 和 workgroups</b> 
+这里的 session 指的是 emacs 里面的 buffer 的一个集合，甚至 buffer 的指针的状态即位置。workgroups 与用户的工作相关，指的是用户指定的显示 buffer 和 buffer 的状态集合。
+</p>
+
+<p>
+<b>如何管理：group 的创建/修改/删除</b>
+</p>
+
+<ol class="org-ol">
+<li>
+<code>wg-create-group</code> 用于创建一个 group（比如 cpp-dev），可以用 <code>wg-rename-group</code> 修改 group 的名字，然后使用 <code>wg-save-session</code> 将当前的 group 的状态保存入文件中（比如 <code>~/.emacs_workgroups</code> ）</li>
+<li>
+<code>wg-rename-group</code> 用于修改 group 的名字，然后用 <code>wg-save-session</code> 保存。同时如果想保存指针（cursor）在另一个位置的状态，需要重新用 <code>wg-save-session</code> 保存。</li>
+<li>
+<code>wg-kill-workgroup</code> 用于删除打开的 group，同时完成后用 <code>wg-save-session</code> 保存。</li>
+</ol>
+<p>
+<b>意义</b>
+</p>
+
+<ol class="org-ol">
+<li>在多个 workgroups 之间切换将会变得很容易。当然可以使用 <code>C-x b</code> 来切换 buffer，但是使用了 workgroups 后一次切换到你所指定的所需 buffer 集合，将是一个极大的效率提升。</li>
+<li>保存共享同步 workgroups。这个是一个次要的提升，由于在不同环境中的文件可能不同，buffer 是否能够正常打开并不确定。如果依赖同步来同步整个环境的话我感觉没有必要，毕竟在对应的环境中做什么事情效率更高一些。</li>
+</ol>
+<div id="footnotes">
+<h3 class="footnotes">Footnotes: </h3>
+<div id="text-footnotes">
+
+<div class="footdef">
+<sup><a id="fn.1" class="footnum" href="posts/shi-yong-workgroups2-guan-li-emacs-de-session/#fnr.1">1</a></sup><div class="footpara"><p class="footpara">
+<a href="https://github.com/pashinin/workgroups2">Workgroups2的Github主页</a>
+</p></div>
+</div>
+
+
+</div>
+</div>
+</div>
+                <p class="commentline">
+        
+    <a href="posts/shi-yong-workgroups2-guan-li-emacs-de-session/#disqus_thread" data-disqus-identifier="cache/posts/shi-yong-workgroups2-guan-li-emacs-de-session.html">Comments</a>
+
+
+        </p>
+</div>
+    </div>
+    <div class="post">
         <h2 class="post-title"><a href="posts/makefileemacs/">Makefile</a></h2>
         <div class="post-meta">
             2020-07-09 03:45

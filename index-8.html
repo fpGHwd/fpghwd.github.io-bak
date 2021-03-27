@@ -52,9 +52,9 @@
 
     
     <div class="post">
-        <h2 class="post-title"><a href="posts/leetcode649-second-minimum-node-in-a-binary-tree/">Leetcode649  Second Minimum Node In a Binary Tree</a></h2>
+        <h2 class="post-title"><a href="posts/emacs-lisp-overlay/">Emacs Lisp Overlay</a></h2>
         <div class="post-meta">
-            2020-09-25 07:44
+            2020-10-26 13:24
         </div>
         <div class="post-meta">
                 Wang Ding
@@ -62,7 +62,98 @@
         <div class="post-content">
                 <div>
 <p>
-<a href="https://leetcode.com/problems/second-minimum-node-in-a-binary-tree/">671. Second Minimum Node In a Binary Tree</a>
+最近看到 Emacs Lisp 里面 Overlay 的概念，可以用于自定义介面 buffer 的文字的某些特殊效果。
+</p>
+
+<p>
+当然其实对文字的编辑和模式本身都可以是文字内容的一种展现方式，但是文字的属性（Text Properties）是文字的一部分，overlay 并不是文字的一部分。所以在 buffer 之间复制某些文字的时候，并不会同时复制  overlay ；同时改变 buffer 的文字属性其实也是在修改 buffer 本身。但 overlay 的改变并不会改变 buffer 本身，这种修改自然也不会被保存在这个 buffer 的 undo list 中。
+</p>
+</div>
+                <p class="commentline">
+        
+    <a href="posts/emacs-lisp-overlay/#disqus_thread" data-disqus-identifier="cache/posts/emacs-lisp-overlay.html">Comments</a>
+
+
+        </p>
+</div>
+    </div>
+    <div class="post">
+        <h2 class="post-title"><a href="posts/org-archive-location/">Org archive location</a></h2>
+        <div class="post-meta">
+            2020-10-16 11:32
+        </div>
+        <div class="post-meta">
+                Wang Ding
+        </div>
+        <div class="post-content">
+                <div>
+<p>
+最近在使用 org 的时候想把 org-archive-subtree 的条目和 org-capture-templates 那样，将每次当天 archived 的 headline 放到当日的日期 headline 下面，和日记一样组织。这样的话，将来查询的时候就可以顺便看一下当天发生的事情和当天完成的项目了。
+</p>
+
+<p>
+以下是日记的组织方式：
+</p>
+
+<div id="org595b26c" class="figure">
+<p><img src="https://raw.githubusercontent.com/fpGHwd/fpghwd.github.io/master/images/_20201016_192526screenshot.png" alt="_20201016_192526screenshot.png"></p>
+</div>
+
+<div class="org-src-container">
+
+<pre><code class="lang-lisp">
+(add-to-list 'org-capture-templates
+                      '("zj" "journal" entry (file "/home/wd/dropbox/to-encfs/text/org/journal.org")
+                        "* %u - %^{heading}\n  %?"))
+
+</code></pre>
+
+</div>
+
+<p>
+同时在 <code>customize org-archive-location</code> 中发现了有这种设定：
+</p>
+
+<div class="org-src-container">
+
+<pre><code class="lang-html">
+"~/org/datetree.org::datetree/* Finished Tasks"
+The "datetree/" string is special, signifying to archive
+items to the datetree.  Items are placed in either the CLOSED
+date of the item, or the current date if there is no CLOSED date.
+The heading will be a subentry to the current date.  There doesn’t
+need to be a heading, but there always needs to be a slash after
+datetree.  For example, to store archived items directly in the
+datetree, use "~/org/datetree.org::datetree/".
+
+</code></pre>
+
+</div>
+
+<p>
+可以把日记和归档的条目都放到一个文件，归档也不会经常去动，只需要看的时候搜索一下就行。
+</p>
+</div>
+                <p class="commentline">
+        
+    <a href="posts/org-archive-location/#disqus_thread" data-disqus-identifier="cache/posts/org-archive-location.html">Comments</a>
+
+
+        </p>
+</div>
+    </div>
+    <div class="post">
+        <h2 class="post-title"><a href="posts/leetcode92-reverse-linked-list-ii/">Leetcode92. Reverse Linked List II</a></h2>
+        <div class="post-meta">
+            2020-10-05 10:04
+        </div>
+        <div class="post-meta">
+                Wang Ding
+        </div>
+        <div class="post-content">
+                <div>
+<p>
+<a href="https://leetcode.com/problems/reverse-linked-list-ii/">92. Reverse Linked List II</a>
 </p>
 
 <p>
@@ -73,54 +164,46 @@
 
 <pre><code class="lang-C">
 /**
- * Definition for a binary tree node.
- * struct TreeNode {
+ * Definition for singly-linked list.
+ * struct ListNode {
  *     int val;
- *     TreeNode *left;
- *     TreeNode *right;
- *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
- *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
- *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left),
- * right(right) {}
+ *     ListNode *next;
+ *     ListNode() : val(0), next(nullptr) {}
+ *     ListNode(int x) : val(x), next(nullptr) {}
+ *     ListNode(int x, ListNode *next) : val(x), next(next) {}
  * };
  */
 class Solution {
   public:
-    int fm = -1, sm = -1;
-    int findSecondMinimumValue(TreeNode *root) {
-        if (root == NULL)
-            return sm;
+    ListNode *reverseBetween(ListNode *head, int m, int n) {
+        if (m == n) // 当 m = n 时并没有变化
+            return head;
 
-        if (fm == -1)
-            fm = root-&gt;val;
-        else {
-            if (sm == -1) {
-                if (root-&gt;val &gt; fm)
-                    sm = root-&gt;val;
-                else if (root-&gt;val &lt; fm) {
-                    sm = fm;
-                    fm = root-&gt;val;
-                } else {
-                    // do nothing
-                }
-            } else {
-                if (root-&gt;val &gt; sm) {
-                    // do noting
-                } else if (root-&gt;val &lt; fm) {
-                    sm = fm;
-                    fm = root-&gt;val;
-                } else if (root-&gt;val == sm || root-&gt;val == fm) {
-                    // do nothing
-                } else { // root-&gt;val &gt; fm and root-&gt;val &lt; sm;
-                    sm = root-&gt;val;
-                }
+        int i = 1;
+        ListNode *psuedo_head = new ListNode(), *pre = psuedo_head, *n_pre;
+
+        for (ListNode *w = head; w;) {
+            if (i &lt;= m || i &gt; n) {
+                if (i == m)
+                    n_pre = w;
+                pre-&gt;next = w;
+                if (i != m)
+                    pre = w;
+                w = w-&gt;next;
+            } else if (i &gt; m &amp;&amp; i &lt;= n) {
+                ListNode *tmp = w;
+                w = w-&gt;next;
+                tmp-&gt;next = pre-&gt;next;
+                pre-&gt;next = tmp;
+                if (i == n)
+                    pre = n_pre;
             }
+            i++;
         }
 
-        findSecondMinimumValue(root-&gt;left);
-        findSecondMinimumValue(root-&gt;right);
+        pre-&gt;next = nullptr; // 尾节点后续是 null
 
-        return sm;
+        return psuedo_head-&gt;next;
     }
 };
 
@@ -131,32 +214,32 @@ class Solution {
 <div class="org-src-container">
 
 <pre><code class="lang-html">
-Status: Accepted (35/35)
+Status: Accepted (44/44)
 
-Runtime: 0 ms, faster than 100.00% of C++ submissions.
+Runtime: 4 ms, faster than 64.43% of C++ submissions.
 
-Memory Usage: 7.2 MB, less than 17.00% of C++ submissions.
+Memory Usage: 7.8 MB, less than 16.96% of C++ submissions.
 
 </code></pre>
 
 </div>
 
 <p>
-自从学会了一种偷懒的写法之后，就一直用这种 travel 的方法。
+第一次做的时候没想那么多，暴力的做法。后来做的时候就想到这是将链表的导致的前插和尾插组合在一起的题。并不难，只要分别搞清楚这两种写法就能写出来。
 </p>
 </div>
                 <p class="commentline">
         
-    <a href="posts/leetcode649-second-minimum-node-in-a-binary-tree/#disqus_thread" data-disqus-identifier="cache/posts/leetcode649-second-minimum-node-in-a-binary-tree.html">Comments</a>
+    <a href="posts/leetcode92-reverse-linked-list-ii/#disqus_thread" data-disqus-identifier="cache/posts/leetcode92-reverse-linked-list-ii.html">Comments</a>
 
 
         </p>
 </div>
     </div>
     <div class="post">
-        <h2 class="post-title"><a href="posts/leetcode804-most-common-word/">Leetcode804 Most Common Word</a></h2>
+        <h2 class="post-title"><a href="posts/leetcode96-unique-binary-search-trees/">Leetcode96. Unique Binary Search Trees</a></h2>
         <div class="post-meta">
-            2020-09-25 06:56
+            2020-10-01 04:39
         </div>
         <div class="post-meta">
                 Wang Ding
@@ -164,7 +247,67 @@ Memory Usage: 7.2 MB, less than 17.00% of C++ submissions.
         <div class="post-content">
                 <div>
 <p>
-<a href="https://leetcode.com/problems/most-common-word/">819. Most Common Word</a>
+<a href="https://leetcode.com/problems/unique-binary-search-trees/">96. Unique Binary Search Trees</a>
+</p>
+
+<p>
+<b>Solution</b>
+</p>
+
+<div class="org-src-container">
+
+<pre><code class="lang-C">class Solution {
+  public:
+    int numTrees(int n) {
+        if (n == 0 || n == 1)return 1;
+
+        int count = 0;
+        for (int i = 1; i &lt;= n; i++)count += numTrees(i - 1) * numTrees(n - i);
+
+        return count;
+    }
+};
+</code></pre>
+
+</div>
+
+<div class="org-src-container">
+
+<pre><code class="lang-html">
+Status: Accepted (19/19)
+
+Runtime: 1220 ms, faster than 11.92% of C++ submissions.
+
+Memory Usage: 6 MB, less than 59.10% of C++ submissions.
+
+</code></pre>
+
+</div>
+
+<p>
+用 DP 做更快一点，但递归对理解更友好些。反过来， DP 不就是递归的递推公式的代数形式嘛。能用递归就做出来的事情，就不需要迭代了，毕竟<a href="http://algosaur.us/recursion/">“To iterate is human, to recurse, divine”</a>. 能请神去做的事情，就不要麻烦人啦。
+</p>
+</div>
+                <p class="commentline">
+        
+    <a href="posts/leetcode96-unique-binary-search-trees/#disqus_thread" data-disqus-identifier="cache/posts/leetcode96-unique-binary-search-trees.html">Comments</a>
+
+
+        </p>
+</div>
+    </div>
+    <div class="post">
+        <h2 class="post-title"><a href="posts/leetcode824-goat-latin/">Leetcode824. Goat Latin</a></h2>
+        <div class="post-meta">
+            2020-09-29 10:01
+        </div>
+        <div class="post-meta">
+                Wang Ding
+        </div>
+        <div class="post-content">
+                <div>
+<p>
+<a href="https://leetcode.com/problems/goat-latin/">824. Goat Latin</a>
 </p>
 
 <p>
@@ -176,33 +319,31 @@ Memory Usage: 7.2 MB, less than 17.00% of C++ submissions.
 <pre><code class="lang-C">
 class Solution {
   public:
-    string mostCommonWord(string paragraph, vector&lt;string&gt; &amp;banned) {
-        unordered_map&lt;string, int&gt; umsi;
-        int start, end;
-        transform(paragraph.begin(),paragraph.end(),paragraph.begin(),::tolower);
-        for (int i = 0; i &lt; paragraph.length(); i++) {
-            while (i &lt; paragraph.length() &amp;&amp; !isalpha(paragraph[i]))
-                i++;
-            start = i;
-            while (i &lt; paragraph.length() &amp;&amp; isalpha(paragraph[i]))
-                i++;
-            end = i;
-            umsi[paragraph.substr(start, end - start)]++;
+    string toGoatLatin(string S) {
+        int start = 0, end = 0, i = 1;
+        string goat = "";
+        while (start &lt; S.length()) {
+            if (i != 1)
+                goat += " ";
+            while (end &lt; S.length() &amp;&amp; isalpha(S[end]))
+                end++;
+            if (S[start] == 'a' || S[start] == 'e' || S[start] == 'i' ||
+                S[start] == 'o' || S[start] == 'u' || S[start] == 'A' ||
+                S[start] == 'E' || S[start] == 'I' || S[start] == 'O' ||
+                S[start] == 'U') {
+                goat += S.substr(start, end - start);
+            } else {
+                if (start + 1 != end) {
+                    goat += S.substr(start + 1, end - start - 1);
+                }
+                goat += S.substr(start, 1);
+            }
+            goat += "ma";
+            goat += string(i, 'a');
+
+            end++, start = end, i++;
         }
-
-        for (string s : banned)
-            if (umsi.find(s) != umsi.end())
-                umsi.erase(s);
-
-        string w = "";
-        for (auto it : umsi) {
-            if (w == "")
-                w = it.first;
-            else if (umsi[it.first] &gt; umsi[w])
-                w = it.first;
-        }
-
-        return w;
+        return goat;
     }
 };
 
@@ -213,57 +354,23 @@ class Solution {
 <div class="org-src-container">
 
 <pre><code class="lang-html">
-Status: Accepted (47/47)
+Status: Accepted (99/99)
 
-Runtime: 4 ms, faster than 99.63% of C++ submissions.
+Runtime: 0 ms, faster than 100.00% of C++ submissions.
 
-Memory Usage: 7.8 MB, less than 87.14% of C++ submissions.
+Memory Usage: 6.6 MB, less than 76.77% of C++ submissions.
 
 </code></pre>
 
 </div>
-</div>
-                <p class="commentline">
-        
-    <a href="posts/leetcode804-most-common-word/#disqus_thread" data-disqus-identifier="cache/posts/leetcode804-most-common-word.html">Comments</a>
-
-
-        </p>
-</div>
-    </div>
-    <div class="post">
-        <h2 class="post-title"><a href="posts/diao-shi-de-shi-hou-chu-le-yi-ge-wen-ti/">调试的时候出了一个问题</a></h2>
-        <div class="post-meta">
-            2020-09-25 05:22
-        </div>
-        <div class="post-meta">
-                Wang Ding
-        </div>
-        <div class="post-content">
-                <div>
-<p>
-<a href="https://leetcode.com/problems/shortest-distance-to-a-character/">821. Shortest Distance to a Character</a>
-</p>
 
 <p>
-一个 gdb 调试的问题，没太看明白（暴哭）：
-</p>
-
-<div id="org47f0e90" class="figure">
-<p><img src="https://raw.githubusercontent.com/fpGHwd/fpghwd.github.io/master/images/_20200925_132117screenshot.png" alt="_20200925_132117screenshot.png"></p>
-</div>
-
-<p>
-想到可能是类型的问题： <code>size_type</code> 是一个无符号的整数， <code>int</code> 是有符号整数，有符号整数首先转换成无符号整数。 <code>-1</code> 转化成 <code>0xffffffff</code> ，所以应该是没有问题的。虽然是自己偷懒设置了一个 -1 索引的变量其实是为了后面 for 能从 0 开始遍历。如果从初始值设置为 0 的话应该不会出这样的问题。
-</p>
-
-<p>
-同时有一个问题：转化时为什么是有符号整数转换成无符号整数，而不是相反呢？
+字符串的題目都是用指針來做的。
 </p>
 </div>
                 <p class="commentline">
         
-    <a href="posts/diao-shi-de-shi-hou-chu-le-yi-ge-wen-ti/#disqus_thread" data-disqus-identifier="cache/posts/diao-shi-de-shi-hou-chu-le-yi-ge-wen-ti.html">Comments</a>
+    <a href="posts/leetcode824-goat-latin/#disqus_thread" data-disqus-identifier="cache/posts/leetcode824-goat-latin.html">Comments</a>
 
 
         </p>

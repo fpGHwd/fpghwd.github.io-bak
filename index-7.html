@@ -52,9 +52,9 @@
 
     
     <div class="post">
-        <h2 class="post-title"><a href="posts/leetcode107-binary-tree-level-order-traversal-ii/">Leetcode107 Binary Tree Level Order Traversal II</a></h2>
+        <h2 class="post-title"><a href="posts/leetcode572-subtree-of-another-tree/">Leetcode572. Subtree of Another Tree</a></h2>
         <div class="post-meta">
-            2020-09-25 04:07
+            2020-09-29 08:20
         </div>
         <div class="post-meta">
                 Wang Ding
@@ -62,7 +62,7 @@
         <div class="post-content">
                 <div>
 <p>
-<a href="https://leetcode.com/problems/binary-tree-level-order-traversal-ii/">107. Binary Tree Level Order Traversal II</a>
+<a href="https://leetcode.com/problems/subtree-of-another-tree/">572. Subtree of Another Tree</a>
 </p>
 
 <p>
@@ -86,65 +86,71 @@
  */
 class Solution {
   public:
-    vector&lt;vector&lt;int&gt;&gt; levelOrderBottom(TreeNode *root) {
-        vector&lt;vector&lt;int&gt;&gt; result;
+    bool isSubtree(TreeNode *s, TreeNode *t) {
+        // return isSameTree(s, t) || isSameTree(s-&gt;left, t) ||
+        //        isSameTree(s-&gt;right, t);
+        if (s == NULL &amp;&amp; t == NULL)
+            return true;
+        if (s == NULL)
+            return false;
+        if (t == NULL)
+            return true;
+        bool isSub;
+        if (s-&gt;val == t-&gt;val)
+            isSub = isSameTree(s, t);
+        if (isSub)
+            return true;
+        return isSubtree(s-&gt;left, t) || isSubtree(s-&gt;right, t);
+    }
 
-        queue&lt;TreeNode *&gt; q;
-        TreeNode *last, *end;
-        if (root) {
-            q.push(root);
-            end = root;
-            last = end;
-            result.push_back(vector&lt;int&gt;{});
+    bool isSameTree(TreeNode *s, TreeNode *t) {
+        if (s == nullptr &amp;&amp; t == nullptr) {
+            return true;
+        } else {
+            if (s == nullptr || t == nullptr)
+                return false;
+            if (s-&gt;val != t-&gt;val)
+                return false;
+            else
+                return isSameTree(s-&gt;left, t-&gt;left) &amp;&amp;
+                       isSameTree(s-&gt;right, t-&gt;right);
         }
-        while (!q.empty()) {
-            TreeNode *temp = q.front();
-            result[result.size() - 1].push_back(temp-&gt;val);
-            q.pop();
-            if (temp-&gt;left)q.push(temp-&gt;left);
-            if (temp-&gt;right)q.push(temp-&gt;right);
-            if (temp == last &amp;&amp; !q.empty())result.push_back(vector&lt;int&gt;{}); // 达到一层结尾还有元素就增加一个空 vector
-            if (temp == last)last=q.back();
-        }
-        reverse(result.begin(), result.end());
-        return result;
     }
 };
-
 
 </code></pre>
 
 </div>
-
-<p>
-二叉树的层序遍历，稍微修改一下就行。
-</p>
 
 <div class="org-src-container">
 
 <pre><code class="lang-html">
-Status: Accepted (34/34)
+Status: Accepted (183/183)
 
-Runtime: 4 ms, faster than 91.99% of C++ submissions.
+Runtime: 40 ms, faster than 66.02% of C++ submissions.
 
-Memory Usage: 12.5 MB, less than 97.56% of C++ submissions.
+Memory Usage: 29.7 MB, less than 18.21% of C++ submissions.
 
 </code></pre>
 
 </div>
+
+<p>
+第一次做的时候并没有做对，第二次倒是 AC 了。没啥感觉，就是感觉自己的方法代码有点复杂。
+</p>
 </div>
                 <p class="commentline">
         
-    <a href="posts/leetcode107-binary-tree-level-order-traversal-ii/#disqus_thread" data-disqus-identifier="cache/posts/leetcode107-binary-tree-level-order-traversal-ii.html">Comments</a>
+    <a href="posts/leetcode572-subtree-of-another-tree/#disqus_thread" data-disqus-identifier="cache/posts/leetcode572-subtree-of-another-tree.html">Comments</a>
 
 
         </p>
 </div>
     </div>
     <div class="post">
-        <h2 class="post-title"><a href="posts/leetcode108-convert-sorted-array-to-binary-search-tree/">Leetcode108 Convert Sorted Array to Binary Search Tree</a></h2>
+        <h2 class="post-title"><a href="posts/leetcode093-restore-ip-addresses/">Leetcode093. Restore IP Addresses</a></h2>
         <div class="post-meta">
-            2020-09-25 03:35
+            2020-09-28 15:12
         </div>
         <div class="post-meta">
                 Wang Ding
@@ -152,7 +158,107 @@ Memory Usage: 12.5 MB, less than 97.56% of C++ submissions.
         <div class="post-content">
                 <div>
 <p>
-<a href="https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/">108. Convert Sorted Array to Binary Search Tree</a>
+<a href="https://leetcode.com/problems/restore-ip-addresses/">93. Restore IP Addresses</a>
+</p>
+
+<p>
+<b>Solution</b>
+</p>
+
+<div class="org-src-container">
+
+<pre><code class="lang-C">
+class Solution {
+  public:
+    vector&lt;string&gt; addresses;
+    vector&lt;string&gt; restoreIpAddresses(string s) {
+        vector&lt;string&gt; path;
+        dfs(s, path);
+        return addresses;
+    }
+
+    void dfs(string s, vector&lt;string&gt; &amp;path) {
+
+        if (s == "" &amp;&amp; path.size() == 4) {
+            string tmp = "";
+            for (string s : path) {
+                if (tmp != "")
+                    tmp += ".";
+                tmp += s;
+            }
+            addresses.push_back(tmp);
+            return;
+        }
+
+        if (path.size() &gt; 4 || s == "")
+            return;
+
+        for (int i = 1; i &lt;= s.length(); i++) {
+            string ip = s.substr(0, i);
+            if (i &gt; 1 &amp;&amp; s[0] == '0')
+                return;
+            if (stoi(ip) &gt; 255)
+                break;
+            path.push_back(ip);
+            dfs(s.substr(i, s.length() - i), path);
+            path.pop_back();
+        }
+    }
+};
+
+</code></pre>
+
+</div>
+
+<div class="org-src-container">
+
+<pre><code class="lang-html">
+Status: Accepted (147/147)
+
+Runtime: 4 ms, faster than 81.89% of C++ submissions.
+
+Memory Usage: 7.6 MB, less than 13.80% of C++ submissions.
+
+</code></pre>
+
+</div>
+
+<p>
+第一次嘗試是忽略了 10.0.010.0 中的 010 是不能作爲一個符合要求的 ip 段。所以添加了
+</p>
+
+<div class="org-src-container">
+
+<pre><code class="lang-C">if (i &gt; 1 &amp;&amp; s[0] == '0')
+    return;
+</code></pre>
+
+</div>
+
+<p>
+這一段，雖然丑但是很有用。
+</p>
+</div>
+                <p class="commentline">
+        
+    <a href="posts/leetcode093-restore-ip-addresses/#disqus_thread" data-disqus-identifier="cache/posts/leetcode093-restore-ip-addresses.html">Comments</a>
+
+
+        </p>
+</div>
+    </div>
+    <div class="post">
+        <h2 class="post-title"><a href="posts/leetcode528-diameter-of-binary-tree/">Leetcode543. Diameter of Binary Tree</a></h2>
+        <div class="post-meta">
+            2020-09-28 04:21
+        </div>
+        <div class="post-meta">
+                Wang Ding
+        </div>
+        <div class="post-content">
+                <div>
+<p>
+<a href="https://leetcode.com/problems/diameter-of-binary-tree/">543. Diameter of Binary Tree</a>
 </p>
 
 <p>
@@ -176,19 +282,18 @@ Memory Usage: 12.5 MB, less than 97.56% of C++ submissions.
  */
 class Solution {
   public:
-    TreeNode *sortedArrayToBST(vector&lt;int&gt; &amp;nums) {
-        // create tree
-        return toHeightBST(nums, 0, nums.size() - 1);
+    int diameter = 0;
+    int diameterOfBinaryTree(TreeNode *root) {
+        depthTravel(root);
+        return diameter;
     }
-
-    TreeNode *toHeightBST(vector&lt;int&gt; &amp;nums, int l, int r) {
-        if (l &gt; r)
-            return NULL;
-        int mid = l + (r - l) / 2;
-        TreeNode *root = new TreeNode(nums[mid]);
-        root-&gt;left = toHeightBST(nums, l, mid - 1);
-        root-&gt;right = toHeightBST(nums, mid + 1, r);
-        return root;
+    int depthTravel(TreeNode *root) {
+        if (root == nullptr)
+            return 0;
+        int left = depthTravel(root-&gt;left);
+        int right = depthTravel(root-&gt;right);
+        diameter = max(left + right, diameter);
+        return 1 + max(left, right);
     }
 };
 
@@ -196,22 +301,34 @@ class Solution {
 
 </div>
 
+<div class="org-src-container">
+
+<pre><code class="lang-html">
+Status: Accepted (106/106)
+
+Runtime: 12 ms, faster than 88.39% of C++ submissions.
+
+Memory Usage: 21 MB, less than 13.09% of C++ submissions.
+
+</code></pre>
+
+</div>
+
 <p>
-一开始以为是树的高度的调整题，后来发现这个和 <b>用数组表示的树构造一棵树</b> 的做法差不多。
-</p>
+同樣的是一個樹遍歷的題目。不過第一次做的時候因爲想用一個函數解決問題，但是好像是不行的。因爲遞歸返回值如果是最長的直徑的話，就無法只用一個單一的返回值來構造這個函數，又不能修改參數。所以遞歸函數的返回值需要更多的信息，因此還是藉助了返回值爲結點高度的函數 <code>depthTravel</code> 。</p>
 </div>
                 <p class="commentline">
         
-    <a href="posts/leetcode108-convert-sorted-array-to-binary-search-tree/#disqus_thread" data-disqus-identifier="cache/posts/leetcode108-convert-sorted-array-to-binary-search-tree.html">Comments</a>
+    <a href="posts/leetcode528-diameter-of-binary-tree/#disqus_thread" data-disqus-identifier="cache/posts/leetcode528-diameter-of-binary-tree.html">Comments</a>
 
 
         </p>
 </div>
     </div>
     <div class="post">
-        <h2 class="post-title"><a href="posts/leetcode937-reorder-data-in-log-files/">Leetcode937 Reorder Data in Log Files</a></h2>
+        <h2 class="post-title"><a href="posts/leetcode491-find-mode-in-binary-search-tree/">Leetcode491. Find Mode in Binary Search Tree</a></h2>
         <div class="post-meta">
-            2020-09-24 12:31
+            2020-09-27 12:46
         </div>
         <div class="post-meta">
                 Wang Ding
@@ -219,7 +336,99 @@ class Solution {
         <div class="post-content">
                 <div>
 <p>
-<a href="https://leetcode.com/problems/reorder-data-in-log-files/">937. Reorder Data in Log Files</a>
+<a href="https://leetcode.com/problems/find-mode-in-binary-search-tree/">501. Find Mode in Binary Search Tree</a>
+</p>
+
+<p>
+<b>Solution</b>
+</p>
+
+<div class="org-src-container">
+
+<pre><code class="lang-C">
+/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left),
+ * right(right) {}
+ * };
+ */
+class Solution {
+  public:
+    vector&lt;int&gt; findMode(TreeNode *root) {
+        if (root == NULL)
+            return vector&lt;int&gt;{};
+        vector&lt;int&gt; path, mode;
+        travelMidOrder(root, path);
+        int k, n = 0;
+        for (int i = 0; i &lt; path.size(); i = k) {
+            k = i;
+            while (k &lt; path.size() &amp;&amp; path[k] == path[i])
+                k++;
+            if (k - i &gt; n) {
+                mode.clear();
+                mode.push_back(path[i]);
+                n = k - i;
+            } else if (k - i == n)
+                mode.push_back(path[i]);
+        }
+
+        return mode;
+    }
+
+    void travelMidOrder(TreeNode *root, vector&lt;int&gt; &amp;path) {
+        if (root == nullptr)
+            return;
+        if (root-&gt;left)
+            travelMidOrder(root-&gt;left, path);
+        path.push_back(root-&gt;val);
+        if (root-&gt;right)
+            travelMidOrder(root-&gt;right, path);
+    }
+};
+
+</code></pre>
+
+</div>
+
+<div class="org-src-container">
+
+<pre><code class="lang-html">
+Status: Accepted (25/25)
+
+Runtime: 24 ms, faster than 94.02% of C++ submissions.
+
+Memory Usage: 24.9 MB, less than 56.91% of C++ submissions.
+
+</code></pre>
+
+</div>
+</div>
+                <p class="commentline">
+        
+    <a href="posts/leetcode491-find-mode-in-binary-search-tree/#disqus_thread" data-disqus-identifier="cache/posts/leetcode491-find-mode-in-binary-search-tree.html">Comments</a>
+
+
+        </p>
+</div>
+    </div>
+    <div class="post">
+        <h2 class="post-title"><a href="posts/leetcode901-sort-array-by-parity/">Leetcode901. Sort Array By Parity</a></h2>
+        <div class="post-meta">
+            2020-09-26 15:24
+        </div>
+        <div class="post-meta">
+                Wang Ding
+        </div>
+        <div class="post-content">
+                <div>
+<p>
+<a href="https://leetcode.com/problems/sort-array-by-parity/">901. Sort Array By Parity</a>
 </p>
 
 <p>
@@ -230,33 +439,39 @@ class Solution {
 
 <pre><code class="lang-C">
 class Solution {
-    public:
-        vector&lt;string&gt; reorderLogFiles(vector&lt;string&gt; &amp;logs) {
-            stable_sort(begin(logs), end(logs), [](auto &amp;a, auto &amp;b) {
-                auto A = 1 + a.find(' '), B = 1 + b.find(' ');
-                return a[A] &gt; '@' &amp;&amp;
-                    (b[B] &lt; '@' ||
-                     a.substr(A).append(a, 0, A) &lt; b.substr(B).append(b, 0, B));
-            });
-            return logs;
-        }
+  public:
+    vector&lt;int&gt; sortArrayByParity(vector&lt;int&gt; &amp;A) {
+        sort(begin(A), end(A),
+             [](auto &amp;a, auto &amp;b) { return a % 2 == 0 &amp;&amp; b % 2 == 1; });
+        return A;
+    }
 };
+
+
+</code></pre>
+
+</div>
+
+<div class="org-src-container">
+
+<pre><code class="lang-html">
+Status: Accepted (285/285)
+
+Runtime: 36 ms, faster than 19.11% of C++ submissions.
+
+Memory Usage: 16.6 MB, less than 16.48% of C++ submissions.
 
 </code></pre>
 
 </div>
 
 <p>
-先找到 identifier 和后面部分的分隔点 <code>A</code> 和 <code>B</code> ，然后用 <code>'@'</code> 作为判断后面是数字还是字母的基准。ASCII 码表中， <code>'0'</code> 和 <code>'9'</code> 分别是 48 和 57 ， <code>'@'</code> 是 64 ， <code>'a'</code> 和 <code>'z'</code> 分别是 97 和 122 。 <code>return</code> 后的部分同时保证了 letter-logs 排在 digit-logs 的前面；后部分（数字或者字母）拼接 identifier 后用字典序排列，也即后部分如果恰好相同时， identifier dominating。
-</p>
-
-<p>
-这个写法是翻解答时看到的，比较简洁，如果熟悉 sort 的话也比较容易懂。sort 的关键还是后面的函数 <code>template&lt; class RandomIt, class Compare &gt; void stable_sort( RandomIt first, RandomIt last, Compare comp );</code> 。
+模仿 0947 reorder-data-in-log-files 题目的写法。
 </p>
 </div>
                 <p class="commentline">
         
-    <a href="posts/leetcode937-reorder-data-in-log-files/#disqus_thread" data-disqus-identifier="cache/posts/leetcode937-reorder-data-in-log-files.html">Comments</a>
+    <a href="posts/leetcode901-sort-array-by-parity/#disqus_thread" data-disqus-identifier="cache/posts/leetcode901-sort-array-by-parity.html">Comments</a>
 
 
         </p>

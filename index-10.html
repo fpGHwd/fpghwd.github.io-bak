@@ -52,9 +52,9 @@
 
     
     <div class="post">
-        <h2 class="post-title"><a href="posts/leetcode733-flood-fill/">Leetcode733. Flood Fill</a></h2>
+        <h2 class="post-title"><a href="posts/emacs-open-several-windows-with-specific-org-narrowed-headline/">Emacs 下同时查看和编辑一个文件的多个 headline: 使用 Indirect Buffer</a></h2>
         <div class="post-meta">
-            2020-09-26 04:17
+            2020-12-15 08:04
         </div>
         <div class="post-meta">
                 Wang Ding
@@ -62,81 +62,33 @@
         <div class="post-content">
                 <div>
 <p>
-<a href="https://leetcode.com/problems/flood-fill/">733. Flood Fill</a>
+在使用 emacs 编辑一个很多的 headlines 的 org 文件时，如果每个 headline 下的内容需要交叉查看和编辑的时候，我就非常需要一个单独的 windows(emacs 下的窗口，下均同) 仅显示一个 headline 下的所有内容，所以必须用到 <code>org-narrow-to-subtree</code> 这个函数。
 </p>
 
 <p>
-<b>Solution</b>
+但是在第一次使用这个函数后，就无法看到其他的 headlines ，所以想在多个窗口中打开多个 headlines 仅使用 <code>org-narrow-to-subtree</code> 是不够的。好在有了 <code>clone-indirect-buffer</code> 可以复制一个当前文件的 buffer 。一般情况下，在使用 emacs 打开文件的时候，我们只能在将一个文件绑定在一个 buffer 中，这个函数可以让我们将一个文件绑定在多个 buffer 中。
 </p>
 
-<div class="org-src-container">
-
-<pre><code class="lang-C">
-class Solution {
-  public:
-    vector&lt;vector&lt;int&gt;&gt;
-    floodFill(vector&lt;vector&lt;int&gt;&gt; &amp;image, int sr, int sc, int newColor) {
-        int old_color = image[sr][sc];
-        if (old_color == newColor)
-            return image;
-
-        floodFill(image, sr, sc, newColor, old_color);
-
-        return image;
-    }
-
-    void floodFill(vector&lt;vector&lt;int&gt;&gt; &amp;image,
-                   int sr,
-                   int sc,
-                   int newColor,
-                   int oldColor) {
-        // paint
-        image[sr][sc] = newColor;
-
-        // paint others
-        if (sr - 1 &gt;= 0 &amp;&amp; oldColor == image[sr - 1][sc])
-            floodFill(image, sr - 1, sc, newColor);
-        if (sr + 1 &lt; image.size() &amp;&amp; oldColor == image[sr + 1][sc])
-            floodFill(image, sr + 1, sc, newColor);
-        if (sc - 1 &gt;= 0 &amp;&amp; oldColor == image[sr][sc - 1])
-            floodFill(image, sr, sc - 1, newColor);
-        if (sc + 1 &lt; image[0].size() &amp;&amp; oldColor == image[sr][sc + 1])
-            floodFill(image, sr, sc + 1, newColor);
-    }
-};
-
-</code></pre>
-
-</div>
-
-<div class="org-src-container">
-
-<pre><code class="lang-html">
-Status: Accepted (277/277)
-
-Runtime: 12 ms, faster than 97.05% of C++ submissions.
-
-Memory Usage: 14.9 MB, less than 5.01% of C++ submissions.
-
-</code></pre>
-
-</div>
+<p>
+然后在不同的 windows 中打开相同文件的不同 buffer ，可以看到这个文件的不同 headlines ，进而使用对不同的 headline 使用 <code>org-narrow-to-subtree</code> 来实现“在不同的 windows 里面查看一个文件中不同 headlines 的 <code>org-narrow-subtree</code> ”。
+</p>
 
 <p>
-第一次做的时候忽略了没有保存 <code>old_color</code> ，后面有问题。</p>
+这个功能对于我来说很实用，尤其是对一个比较长的， subtree 又比较多的 org 文件中同时查看和编辑多个 headline 的情况下尤其有用。
+</p>
 </div>
                 <p class="commentline">
         
-    <a href="posts/leetcode733-flood-fill/#disqus_thread" data-disqus-identifier="cache/posts/leetcode733-flood-fill.html">Comments</a>
+    <a href="posts/emacs-open-several-windows-with-specific-org-narrowed-headline/#disqus_thread" data-disqus-identifier="cache/posts/emacs-open-several-windows-with-specific-org-narrowed-headline.html">Comments</a>
 
 
         </p>
 </div>
     </div>
     <div class="post">
-        <h2 class="post-title"><a href="posts/leetcode696-count-binary-substrings/">Leetcode696. Count Binary Substrings</a></h2>
+        <h2 class="post-title"><a href="posts/di-yi-chang-xue/">第一场雪</a></h2>
         <div class="post-meta">
-            2020-09-26 02:34
+            2020-12-14 01:52
         </div>
         <div class="post-meta">
                 Wang Ding
@@ -144,67 +96,25 @@ Memory Usage: 14.9 MB, less than 5.01% of C++ submissions.
         <div class="post-content">
                 <div>
 <p>
-<a href="https://leetcode.com/problems/count-binary-substrings/">696. Count Binary Substrings</a>
+2020 年的第一场雪，比去年来得要早一些。
 </p>
 
-<div class="org-src-container">
-
-<pre><code class="lang-C">
-class Solution {
-  public:
-    int countBinarySubstrings(string s) {
-        if (s == "")
-            return 0;
-        vector&lt;int&gt; vi_pos;
-        for (int i = 1; i &lt; s.length(); i++) {
-            if (s[i] != s[i - 1])
-                vi_pos.push_back(i);
-        }
-        int count = 0, left, right;
-        for (int i = 0; i &lt; vi_pos.size(); i++) {
-            left = vi_pos[i] - (i == 0 ? 0 : vi_pos[i - 1]);
-            right = ((i == vi_pos.size() - 1) ? s.length() : vi_pos[i + 1]) -
-                    vi_pos[i];
-            count += min(left, right);
-        }
-        return count;
-    }
-};
-
-</code></pre>
-
+<div id="orgde3c636" class="figure">
+<p><img src="https://raw.githubusercontent.com/fpGHwd/fpghwd.github.io/master/images/_20201214_193136IMG_20201212_132726_export_1.jpg" alt="_20201214_193136IMG_20201212_132726_export_1.jpg"></p>
 </div>
-
-<div class="org-src-container">
-
-<pre><code class="lang-html">
-Status: Accepted (90/90)
-
-Runtime: 40 ms, faster than 99.85% of C++ submissions.
-
-Memory Usage: 14.4 MB, less than 6.03% of C++ submissions.
-
-</code></pre>
-
-</div>
-
-<p>
-这道题我在 <code>right = ((i =</code> vi<sub>pos.size</sub>() - 1) ? s.length() : vi<sub>pos</sub>[i + 1]) -
-                    vi<sub>pos</sub>[i];= 的时候把 <code>s.length()</code> 写成了 <code>vi_pos.size()</code> ，一直没有检查出来。后来代码拆开了几个变量用 gdb 调试出来了 right 值的问题。隐藏得太深了。
-</p>
 </div>
                 <p class="commentline">
         
-    <a href="posts/leetcode696-count-binary-substrings/#disqus_thread" data-disqus-identifier="cache/posts/leetcode696-count-binary-substrings.html">Comments</a>
+    <a href="posts/di-yi-chang-xue/#disqus_thread" data-disqus-identifier="cache/posts/di-yi-chang-xue.html">Comments</a>
 
 
         </p>
 </div>
     </div>
     <div class="post">
-        <h2 class="post-title"><a href="posts/leetcode687-longest-univalue-path/">Leetcode687. Longest Univalue Path</a></h2>
+        <h2 class="post-title"><a href="posts/emacs-shi-yong-gan-shou/">Emacs 使用感受</a></h2>
         <div class="post-meta">
-            2020-09-25 13:21
+            2020-12-10 10:23
         </div>
         <div class="post-meta">
                 Wang Ding
@@ -212,82 +122,329 @@ Memory Usage: 14.4 MB, less than 6.03% of C++ submissions.
         <div class="post-content">
                 <div>
 <p>
-<a href="https://leetcode.com/problems/longest-univalue-path/">687. Longest Univalue Path</a>
+不知不觉使用 emacs 已经有两年了。其实一开始看 Emacs 那篇自带的极短的介绍要更早一点，现在看当时的那种喜悦的感觉（用上了众多名人都推荐的软件）更多的是 naive 和开心。
 </p>
 
 <p>
-<b>Solution</b>
+后来从开始使用无配置的 emacs ，然后用 Spacemacs 的时候有眼前有一亮的感觉。然后逐渐学习使用 org-mode 并且针对 org-mode 进行自己的配置，也收获了很多开心的时光。
 </p>
 
-<div class="org-src-container">
+<p>
+慢慢的又转向使用 doom-emacs 感觉又有眼前一亮的感觉，主要是启动速度更快了，然后基本上开箱即用。然后也学到一些自己配置的方法，虽然 spacemacs 也可以自定义，但是启动一次还是蛮长的。
+</p>
 
-<pre><code class="lang-C">
-/**
- * Definition for a binary tree node.
- * struct TreeNode {
- *     int val;
- *     TreeNode *left;
- *     TreeNode *right;
- *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
- *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
- *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left),
- * right(right) {}
- * };
- */
+<p>
+然后逐渐学到了 org-roam, org-download, org-capture, org-pdftool 等等都是很好用的插件。不过现在已经很少纠结于配置了，现在的已经够用了。
+</p>
 
-class Solution {
-  public:
-    int luvp = 0;
-    int longestUnivaluePath(TreeNode *root) {
-        if (root == nullptr)
-            return 0;
-        travelPath(root);
-        return luvp - 1;
-    }
+<p>
+最后的最后，送一句传教语：
+</p>
 
-    int travelPath(TreeNode *root) {
-        int left = 0, right = 0;
-        if (root-&gt;left != nullptr)
-            left = travelPath(root-&gt;left);
-        if (root-&gt;right != nullptr)
-            right = travelPath(root-&gt;right);
-        int left_tmp =
-            ((root-&gt;left &amp;&amp; root-&gt;left-&gt;val == root-&gt;val) ? left : 0);
-        int right_tmp =
-            ((root-&gt;right &amp;&amp; root-&gt;right-&gt;val == root-&gt;val) ? right : 0);
-        luvp = max(luvp, 1 + left_tmp + right_tmp);
-        return 1 + max(left_tmp, right_tmp);
-    }
-};
+<blockquote>
+<p>
+Emacs loves me, emacs loves you.
+</p>
+</blockquote>
+</div>
+                <p class="commentline">
+        
+    <a href="posts/emacs-shi-yong-gan-shou/#disqus_thread" data-disqus-identifier="cache/posts/emacs-shi-yong-gan-shou.html">Comments</a>
 
-</code></pre>
 
+        </p>
+</div>
+    </div>
+    <div class="post">
+        <h2 class="post-title"><a href="posts/bei-tao-yan-de-yong-qi-he-ning-jing-dao-wen/">《被讨厌的勇气》和宁静祷文</a></h2>
+        <div class="post-meta">
+            2020-12-08 05:50
+        </div>
+        <div class="post-meta">
+                Wang Ding
+        </div>
+        <div class="post-content">
+                <div>
+<ul class="org-ul">
+<li>
+<p>
+被讨厌的勇气
+</p>
+
+<p>
+正如本书的核心之一“课题分离”所建议的，其实“被讨厌的勇气”就是“课题分离”一个非常重要的形式。例如：讨厌是我不能决定的事情，也就是对方的课题，但是有勇气是我的课题。我插手你的课题让你不讨厌我其实是没有意义的（也就是我不能插手别人的课题），同时自己的课题“勇气”需要自己来解决。从这一点上来看，标题和阿德勒核心的指导思想是一致的，只不过用另一种形式来展现而已。
+</p>
+</li>
+
+<li>
+<p>
+自己的课题和别人的课题
+</p>
+
+<p>
+认识到这两个概念的本身，就会激发人的课题“分离”意识。这就很像软件工程界的 <i>Decoupling</i> 。当确认之后，对于自己的课题，可以毫无保留的全力以赴；但是对于别人的课题则要慎之又慎，不可插手。
+</p>
+</li>
+
+<li>
+<p>
+“分离”的智慧与宁静祷文
+</p>
+
+<p>
+以下是宁静祷文 <sup><a id="fnr.1" class="footref" href="posts/bei-tao-yan-de-yong-qi-he-ning-jing-dao-wen/#fn.1">1</a></sup> 的内容：
+</p>
+
+<blockquote>
+<p>
+
+</p>
+
+<p>
+God, grant me the serenity to accept the things I cannot change,
+courage to change the things I can,
+and wisdom to know the difference.
+</p>
+</blockquote>
+
+<blockquote>
+<p>
+
+</p>
+
+<p>
+上帝，请赐予我接受不能改变之事的平静，
+和我可以改变事情的勇气，
+以及区分这两者的智慧。
+</p>
+</blockquote>
+
+<p>
+智慧就是区分本身，拥有智慧的人同时会拥有内心的宁静和改变的勇气。
+</p>
+
+<p>
+<sup><a id="fnr.1.100" class="footref" href="posts/bei-tao-yan-de-yong-qi-he-ning-jing-dao-wen/#fn.1">1</a></sup> 这是尼泊尔版本： Father, give us courage to change what must be altered, serenity to accept what cannot be helped, and the insight to know the one from the other.
+</p>
+</li>
+</ul>
+<div id="footnotes">
+<h3 class="footnotes">Footnotes: </h3>
+<div id="text-footnotes">
+
+<div class="footdef">
+<sup><a id="fn.1" class="footnum" href="posts/bei-tao-yan-de-yong-qi-he-ning-jing-dao-wen/#fnr.1">1</a></sup><div class="footpara"><p class="footpara">
+The link is: <a href="http://orgmode.org">http://orgmode.org</a>
+</p></div>
 </div>
 
-<div class="org-src-container">
-
-<pre><code class="lang-html">
-Status: Accepted (71/71)
-
-Runtime: 184 ms, faster than 86.14% of C++ submissions.
-
-Memory Usage: 72.6 MB, less than 5.21% of C++ submissions.
-
-</code></pre>
 
 </div>
+</div>
+</div>
+                <p class="commentline">
+        
+    <a href="posts/bei-tao-yan-de-yong-qi-he-ning-jing-dao-wen/#disqus_thread" data-disqus-identifier="cache/posts/bei-tao-yan-de-yong-qi-he-ning-jing-dao-wen.html">Comments</a>
 
+
+        </p>
+</div>
+    </div>
+    <div class="post">
+        <h2 class="post-title"><a href="posts/di-liu-gan-sheng-si-yuan/">《第六感生死缘》</a></h2>
+        <div class="post-meta">
+            2020-12-02 12:22
+        </div>
+        <div class="post-meta">
+                Wang Ding
+        </div>
+        <div class="post-content">
+                <div>
 <p>
-第一次做的时候没有做出来，觉得有点复杂。不过说到底还只是一个简单的树遍历，当然可以认为和求树深度的那类题其实差不多。其中每个点的处理就是找到是否比现有的最长路径 <code>luvp</code> 更长的 <code>1 + left_tmp + right_tmp</code> ，然后返回的若是 <code>1 + left_tmp + right_tmp</code> ，那么得出来的结果不是 <b>最长的path</b> ，而是相同值最多的相邻点个数。所以最后修改一下，返回稍长的路径即可。
+电影开场 10 分钟飞机上，Susan 和父亲 William 进行了如下对话：
+</p>
+
+<blockquote>
+<p>
+
 </p>
 
 <p>
-树的题，递归是最简洁的。
+William: Do you love Drew? (repeatedly)
+</p>
+
+<p>
+威廉：你爱朱尔吗？（重复问了一次）
+</p>
+
+<p>
+Susan: You mean, like you loved Mom?
+</p>
+
+<p>
+苏珊：你是说，像你爱妈妈
+</p>
+
+<p>
+William: Forget about me and Mom. Are you gonna marry him?
+</p>
+
+<p>
+威廉：别管我和你妈。你会和他结婚吗？
+</p>
+
+<p>
+Susan: (…)
+</p>
+
+<p>
+William: Oh, come on.
+</p>
+
+<p>
+Susan: I’m probably.
+</p>
+
+<p>
+苏珊：可能吧
+</p>
+
+<p>
+William: Listen, I’m crazy about the guy. He’s smart. He’s aggressive. He could carry Parrish Communications into the 21st century and me along with it.
+</p>
+
+<p>
+威廉：我很喜欢朱尔他聪明又积极，他能带领裴瑞许通讯公司进入 21 世纪
+</p>
+
+<p>
+Susan: Mm-hmm, So, what’s wrong with that?
+</p>
+
+<p>
+苏珊：那样不好吗
+</p>
+
+<p>
+William: That’s for me. I’m talking about you. It’s not what you say about Drew. It’s what you don’t say.
+</p>
+
+<p>
+威廉：对我很好，我说的是你。没听你提过朱尔的其他的事
+</p>
+
+<p>
+Susan: Maybe you’re not listening.
+</p>
+
+<p>
+苏珊：也许你没有注意听
+</p>
+
+<p>
+William: Oh, yes I am. “Give him whatever he wants.” There’s not an ounce of excitement, not a whisper of a thrill. And this relationship has all the passion of a pair of titmice. I want you to get swept away out there. I want you to levitate. I want you to … sing with rapture and dance like a dervish.
+</p>
+
+<p>
+威廉：我有，“他要的全给他”，没有丝毫兴奋没有激情，这份感情平淡无味。我希望你能尽情体验，我希望你有好的感情发展，我希望你快乐的享受你的感情生活。
+</p>
+
+<p>
+Susan: (Smiling)Oh, that’s all.
+</p>
+
+<p>
+苏珊：就这样
+</p>
+
+<p>
+William: Yeah. Be deliriously happy, or at least leave yourself open to be.
+</p>
+
+<p>
+威廉：没错，我希望你过得非常开心，对这件事情充满期待
+</p>
+
+<p>
+Susan: Okay. “Be deliriously happy.” I shall, uh, I shall do my utmost.
+</p>
+
+<p>
+苏珊：我会的，“过得非常开心”，我会，我会尽力而为
+</p>
+
+<p>
+William: I know it’s a cornball thing. But love is passion, obsession, someone you can’t live without. (…) I say, fall head over heels. Find someone you can love like crazy and who will love you the same way back. How do you find him? Well, you forget your head, and you listen to your heart. And I’m not hearing any heart. ’Cause the truth is, honey, there’s no sense living your life without this. To make the journey and not fall deeply in love, well, you haven’t lived a life at all. But you have to try. ’cause if you haven’t tried, you haven’t lived.
+</p>
+
+<p>
+威廉：我知道这听起来很无聊。但是爱需要激情，对某个你不可缺少的人的迷恋，我说的是，完全的找到一个让你疯狂着迷的人他也同样爱你。该去哪里找？你一定要用心去寻找，我觉得你没有用心。因为事实上，宝贝，没有用心的话，人生将失去意义。要谈感情却不用心去深爱，就枉费你的人生了。你要去试试看，不试的话你就等于白活了
+</p>
+
+<p>
+Susan: Bravo!
+</p>
+
+<p>
+苏珊：好一篇演说
+</p>
+
+<p>
+William: Oh, you’re tough.
+</p>
+
+<p>
+威廉：我觉得你没有认真
+</p>
+
+<p>
+Susan: I’m sorry. Okay. Give it to me again, but the short version this time.
+</p>
+
+<p>
+苏珊：抱歉，好，再说一次这次说简单一点
+</p>
+
+<p>
+William: Okay. Stay open. Who knows? Lighting could strike.
+</p>
+
+<p>
+威廉：好。敞开心房，谁知道呢？任何事情都随时可能发生
+</p>
+
+<p>
+Susan: (Smiling)
+</p>
+
+<p>
+William: Yeah?
+</p>
+
+<p>
+威廉：怎么样？
+</p>
+
+<p>
+Susan: Yeah.
+</p>
+
+<p>
+苏珊：好的
+</p>
+</blockquote>
+
+<p>
+感觉开头就已经讲完故事了，对于我来说。
+</p>
+
+<p>
+\(\phi\)
 </p>
 </div>
                 <p class="commentline">
         
-    <a href="posts/leetcode687-longest-univalue-path/#disqus_thread" data-disqus-identifier="cache/posts/leetcode687-longest-univalue-path.html">Comments</a>
+    <a href="posts/di-liu-gan-sheng-si-yuan/#disqus_thread" data-disqus-identifier="cache/posts/di-liu-gan-sheng-si-yuan.html">Comments</a>
 
 
         </p>

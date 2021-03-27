@@ -52,9 +52,9 @@
 
     
     <div class="post">
-        <h2 class="post-title"><a href="posts/leetcode528-diameter-of-binary-tree/">Leetcode543. Diameter of Binary Tree</a></h2>
+        <h2 class="post-title"><a href="posts/open-close-principle/">Open-close principle</a></h2>
         <div class="post-meta">
-            2020-09-28 04:21
+            2021-01-17 11:33
         </div>
         <div class="post-meta">
                 Wang Ding
@@ -62,77 +62,33 @@
         <div class="post-content">
                 <div>
 <p>
-<a href="https://leetcode.com/problems/diameter-of-binary-tree/">543. Diameter of Binary Tree</a>
+开闭原则是软件工程中对于开发原则的一条描述。它规定：软件中的对象（类，模块，函数等等）应该对于拓展开放，对于修改封闭。这是一条非常重要的原则，它的内涵是：一个实体是允许在不改变它本身（的源代码）的前提下变更它的行为。
 </p>
 
 <p>
-<b>Solution</b>
+这段话我所理解的是：只加不改。也就是对于一个能够运行正常的代码（或者说旧的系统），我们最好是添加一些需要的东西，而不是修改内部的机制。因为内部的机制牵连比较多，修改的时候也比较容易出现引用的问题。但是增加就不用想那么多，也实际上效果更好一点。
 </p>
 
-<div class="org-src-container">
-
-<pre><code class="lang-C">
-/**
- * Definition for a binary tree node.
- * struct TreeNode {
- *     int val;
- *     TreeNode *left;
- *     TreeNode *right;
- *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
- *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
- *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left),
- * right(right) {}
- * };
- */
-class Solution {
-  public:
-    int diameter = 0;
-    int diameterOfBinaryTree(TreeNode *root) {
-        depthTravel(root);
-        return diameter;
-    }
-    int depthTravel(TreeNode *root) {
-        if (root == nullptr)
-            return 0;
-        int left = depthTravel(root-&gt;left);
-        int right = depthTravel(root-&gt;right);
-        diameter = max(left + right, diameter);
-        return 1 + max(left, right);
-    }
-};
-
-</code></pre>
-
-</div>
-
-<div class="org-src-container">
-
-<pre><code class="lang-html">
-Status: Accepted (106/106)
-
-Runtime: 12 ms, faster than 88.39% of C++ submissions.
-
-Memory Usage: 21 MB, less than 13.09% of C++ submissions.
-
-</code></pre>
-
-</div>
+<p>
+对于旧的系统，我的一个理解也包含生活方式或者理念的系统。在接触到一个新的生活方式或者理念的时候，不要急着先否定过去的系统，而是加上去新的机制和理念。它们不应该是互斥存在的，而是可以友好的协作的。如果不行，那么只能说没有组织好。
+</p>
 
 <p>
-同樣的是一個樹遍歷的題目。不過第一次做的時候因爲想用一個函數解決問題，但是好像是不行的。因爲遞歸返回值如果是最長的直徑的話，就無法只用一個單一的返回值來構造這個函數，又不能修改參數。所以遞歸函數的返回值需要更多的信息，因此還是藉助了返回值爲結點高度的函數 <code>depthTravel</code> 。</p>
+很有意思的一条原则，发散的话可以得到很多有价值的应用。
+</p>
 </div>
                 <p class="commentline">
         
-    <a href="posts/leetcode528-diameter-of-binary-tree/#disqus_thread" data-disqus-identifier="cache/posts/leetcode528-diameter-of-binary-tree.html">Comments</a>
+    <a href="posts/open-close-principle/#disqus_thread" data-disqus-identifier="cache/posts/open-close-principle.html">Comments</a>
 
 
         </p>
 </div>
     </div>
     <div class="post">
-        <h2 class="post-title"><a href="posts/leetcode491-find-mode-in-binary-search-tree/">Leetcode491. Find Mode in Binary Search Tree</a></h2>
+        <h2 class="post-title"><a href="posts/turn-to-archlinux/">Turn to archlinux</a></h2>
         <div class="post-meta">
-            2020-09-27 12:46
+            2021-01-04 11:35
         </div>
         <div class="post-meta">
                 Wang Ding
@@ -140,91 +96,41 @@ Memory Usage: 21 MB, less than 13.09% of C++ submissions.
         <div class="post-content">
                 <div>
 <p>
-<a href="https://leetcode.com/problems/find-mode-in-binary-search-tree/">501. Find Mode in Binary Search Tree</a>
+昨天晚上新装了 archlinux ，目前基本已经能用了。
 </p>
 
 <p>
-<b>Solution</b>
+其实并没有太多理由非要用 archlinux 。 openSUSE 用得还行，唯二让我换的理由是：1. fcitx-rime 出了一点问题，用了一段时间后，虽然切换到中文，但是无法打出中文。 2. 装各种包有点麻烦。这点 archlinux 可以说完全解决痛点。
 </p>
 
-<div class="org-src-container">
+<p>
+早就想换，昨天晚上干脆就下定决心借来了 U 盘开始装 archlinux 。全程也没有花费太多时间（也就十多个小时吧。
+</p>
 
-<pre><code class="lang-C">
-/**
- * Definition for a binary tree node.
- * struct TreeNode {
- *     int val;
- *     TreeNode *left;
- *     TreeNode *right;
- *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
- *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
- *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left),
- * right(right) {}
- * };
- */
-class Solution {
-  public:
-    vector&lt;int&gt; findMode(TreeNode *root) {
-        if (root == NULL)
-            return vector&lt;int&gt;{};
-        vector&lt;int&gt; path, mode;
-        travelMidOrder(root, path);
-        int k, n = 0;
-        for (int i = 0; i &lt; path.size(); i = k) {
-            k = i;
-            while (k &lt; path.size() &amp;&amp; path[k] == path[i])
-                k++;
-            if (k - i &gt; n) {
-                mode.clear();
-                mode.push_back(path[i]);
-                n = k - i;
-            } else if (k - i == n)
-                mode.push_back(path[i]);
-        }
-
-        return mode;
-    }
-
-    void travelMidOrder(TreeNode *root, vector&lt;int&gt; &amp;path) {
-        if (root == nullptr)
-            return;
-        if (root-&gt;left)
-            travelMidOrder(root-&gt;left, path);
-        path.push_back(root-&gt;val);
-        if (root-&gt;right)
-            travelMidOrder(root-&gt;right, path);
-    }
-};
-
-</code></pre>
-
+<div id="orgf88e358" class="figure">
+<p><img src="https://raw.githubusercontent.com/fpGHwd/fpghwd.github.io/master/images/_20210104_190229screenshot.png" alt="_20210104_190229screenshot.png"></p>
 </div>
 
-<div class="org-src-container">
+<p>
+装好了之后，装上了 xfce 桌面，emacs 启动速度也很快，用起来两个字：开心。
+</p>
 
-<pre><code class="lang-html">
-Status: Accepted (25/25)
-
-Runtime: 24 ms, faster than 94.02% of C++ submissions.
-
-Memory Usage: 24.9 MB, less than 56.91% of C++ submissions.
-
-</code></pre>
-
-</div>
+<p>
+虽然还有一些配置文件还没有搬运过来，直接挂载上了 openSUSE 的之前 home 目录，后面想到了就再配置。
+</p>
 </div>
                 <p class="commentline">
         
-    <a href="posts/leetcode491-find-mode-in-binary-search-tree/#disqus_thread" data-disqus-identifier="cache/posts/leetcode491-find-mode-in-binary-search-tree.html">Comments</a>
+    <a href="posts/turn-to-archlinux/#disqus_thread" data-disqus-identifier="cache/posts/turn-to-archlinux.html">Comments</a>
 
 
         </p>
 </div>
     </div>
     <div class="post">
-        <h2 class="post-title"><a href="posts/leetcode901-sort-array-by-parity/">Leetcode901. Sort Array By Parity</a></h2>
+        <h2 class="post-title"><a href="posts/2020-nian-zhong-zong-jie/">2020 年终总结</a></h2>
         <div class="post-meta">
-            2020-09-26 15:24
+            2020-12-31 10:45
         </div>
         <div class="post-meta">
                 Wang Ding
@@ -232,50 +138,406 @@ Memory Usage: 24.9 MB, less than 56.91% of C++ submissions.
         <div class="post-content">
                 <div>
 <p>
-<a href="https://leetcode.com/problems/sort-array-by-parity/">901. Sort Array By Parity</a>
+今年虽然并没有什么好记录的，可能是因为平时记录得太多，到了现在并没有太多写的欲望。不过为了仪式感，也稍微写一点吧。
 </p>
 
 <p>
-<b>Solution</b>
+今年唯一重要的事情，是看了几本书。
 </p>
 
-<div class="org-src-container">
-
-<pre><code class="lang-C">
-class Solution {
-  public:
-    vector&lt;int&gt; sortArrayByParity(vector&lt;int&gt; &amp;A) {
-        sort(begin(A), end(A),
-             [](auto &amp;a, auto &amp;b) { return a % 2 == 0 &amp;&amp; b % 2 == 1; });
-        return A;
-    }
-};
-
-
-</code></pre>
-
-</div>
-
-<div class="org-src-container">
-
-<pre><code class="lang-html">
-Status: Accepted (285/285)
-
-Runtime: 36 ms, faster than 19.11% of C++ submissions.
-
-Memory Usage: 16.6 MB, less than 16.48% of C++ submissions.
-
-</code></pre>
-
-</div>
+<ul class="org-ul">
+<li>
+<p>
+《被讨厌的勇气》
+</p>
 
 <p>
-模仿 0947 reorder-data-in-log-files 题目的写法。
+其中对自己最有启发的是「课题分离」。具体不展开了，因为基于这一点其实有很多结论。
+</p>
+</li>
+
+<li>
+<p>
+《禅与摩托车维修艺术》
+</p>
+
+<p>
+这本书看了一半多，还没有看完。其中「良质」的概念引人深思。
+</p>
+</li>
+
+<li>
+<p>
+《1984》
+</p>
+
+<p>
+虽然看到很多推这本书的地方，但是反而对现在的社会现状有太多接触而并不觉得这本书很激进，像是一本“社会就是这个样子”的小说一样。
+</p>
+</li>
+
+<li>
+<p>
+《深夜加油站遇见苏格拉底》
+</p>
+
+<p>
+这本书是看到《和平战士》这部电影，然后才看的原著。「活在当下」是电影给我的最大提醒。
+</p>
+</li>
+
+<li>
+<p>
+电影《 Meet Black 》
+</p>
+
+<p>
+之前的博客有提到这部影片，其实我最喜欢的一句话也是女主的父亲的话。 <i>Stay Open</i> 「谁知道呢？任何事情都有可能发生」。
+</p>
+</li>
+</ul>
+</div>
+                <p class="commentline">
+        
+    <a href="posts/2020-nian-zhong-zong-jie/#disqus_thread" data-disqus-identifier="cache/posts/2020-nian-zhong-zong-jie.html">Comments</a>
+
+
+        </p>
+</div>
+    </div>
+    <div class="post">
+        <h2 class="post-title"><a href="posts/emacs-zi-dong-bao-cun-wen-jian-she-zhi/">Emacs 自动保存文件设置</a></h2>
+        <div class="post-meta">
+            2020-12-23 12:06
+        </div>
+        <div class="post-meta">
+                Wang Ding
+        </div>
+        <div class="post-content">
+                <div>
+<p>
+Emacs 自带文件自动保存的机制，利用 <code>do-auto-save</code> 可以自动存储当前编辑的文件为一个编辑过的复本，并未直接存储到 buffer 对应的文件中。当然也可以直接开启全局的 <code>(auto-save-visited-mode t)</code> ，在默认的 <code>auto-save-visited-interval</code> 时间（默认 5 秒），后会自动将已经修改后的 buffer 内容写入文件中。
+</p>
+
+<p>
+其中使用 <code>do-auto-save</code> 保存的文件的复本可以在打开该文件本身时有提示。这是一个好的地方，也是容易忽略的地方：某次并没有将改动保存到文件，而是自动保存到了某个复本，而下一次用 emacs 打开该文件，虽然 emacs 有提醒该文件有复本未保存到文件中，此时极有可能形成了两个新的基于原文件改动的分枝。众所周知，合并文件是一件耗时的事情。所以我觉得还是打开 <code>(auto-save-visited-mode t)</code> 更好，避免形成两个改动文件并且需要合并内容的情形。
 </p>
 </div>
                 <p class="commentline">
         
-    <a href="posts/leetcode901-sort-array-by-parity/#disqus_thread" data-disqus-identifier="cache/posts/leetcode901-sort-array-by-parity.html">Comments</a>
+    <a href="posts/emacs-zi-dong-bao-cun-wen-jian-she-zhi/#disqus_thread" data-disqus-identifier="cache/posts/emacs-zi-dong-bao-cun-wen-jian-she-zhi.html">Comments</a>
+
+
+        </p>
+</div>
+    </div>
+    <div class="post">
+        <h2 class="post-title"><a href="posts/tutorial-to-workstation/">Tutorial to workstation</a></h2>
+        <div class="post-meta">
+            2020-12-18 02:46
+        </div>
+        <div class="post-meta">
+                Wang Ding
+        </div>
+        <div class="post-content">
+                <ul class="org-ul">
+<li>
+<p>
+代理
+</p>
+
+<p>
+目前最爽的解决方案是<a href="https://www.imperva.com/learn/ddos/transparent-proxy/">透明代理</a>。
+</p>
+</li>
+
+<li>
+<p>
+SSHD
+</p>
+
+<p>
+开启服务器的 sshd 服务
+</p>
+</li>
+
+<li>
+<a href="https://en.wikipedia.org/wiki/SSH_(Secure_Shell)">SSH</a>
+
+<ol class="org-ol">
+<li>
+<a href="https://www.zsythink.net/archives/2450">ssh 隧道内网穿透</a>
+
+<ol class="org-ol">
+<li>
+<a href="https://zhuanlan.zhihu.com/p/34908698">ssh 内网穿透</a>
+
+<ul class="org-ul">
+<li>实施条件
+
+<ul class="org-ul">
+<li>公共 IP 主机（VPS），也称“<a href="https://www.cnblogs.com/RXDXB/p/11491164.html">跳板机</a>”</li>
+
+<li>需要访问的内网机器（待穿透的内网机器）能访问并 SSH 登录公共主机</li>
+
+<li>本地机器（访问内网机器的机器）能访问并 SSH 登录中间主机</li>
+</ul>
+</li>
+
+<li>实施过程
+
+<ul class="org-ul">
+<li>
+<p>
+内网穿透到跳板机
+</p>
+
+<div class="org-src-container">
+
+<pre><code class="lang-bash">            ssh -qTfNn -R '[::]:22222:localhost:22' [Jump Server User]@[Jumper Server IP or Domain Name]
+</code></pre>
+
+</div>
+</li>
+
+<li>
+<p>
+本地机器访问内网机器
+</p>
+
+<div class="org-src-container">
+
+<pre><code class="lang-bash">            ssh -p 22222 [Remote User on machine on sub-network]@[Jump Server IP or Domain Name]
+</code></pre>
+
+</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+
+<li>
+<p>
+<a href="https://www.everythingcli.org/ssh-tunnelling-for-fun-and-profit-autossh/">autossh</a>
+</p>
+
+<p>
+autossh 是对 ssh 的增强，因此使用 ssh 隧道来进行内网穿透，仅使用 autossh 即可
+</p>
+</li>
+</ol>
+</li>
+
+<li>
+<p>
+登录
+</p>
+
+<p>
+<code>ssh user@hostname</code>
+</p>
+</li>
+
+<li>
+<p>
+无密码登录
+</p>
+
+<p>
+需要上传本地密钥到远程主机用户的 <code>~/.ssh/known_hosts</code> 文件中
+</p>
+
+<ol class="org-ol">
+<li>生成本地密钥 <code>ssh-keygen</code>
+</li>
+
+<li>上传本地密钥 <code>ssh-copy-id</code>
+</li>
+</ol>
+</li>
+
+<li>更快登录
+
+<ol class="org-ol">
+<li>设置 <code>.ssh/config</code>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+
+<li>文件传输
+
+<ol class="org-ol">
+<li>
+<p>
+采用 <a href="https://filezilla-project.org/">Filezilla</a> 传输文件
+</p>
+
+<p>
+最方便的一种方式，根据 ssh 信息来配置即可
+</p>
+</li>
+
+<li>
+<p>
+采用 <a href="https://man7.org/linux/man-pages/man1/scp.1.html">scp</a> 传输少量文件
+</p>
+
+<p>
+在实现 ssh 免密码的基础上，在命令行 <code>scp [filename] [remote-host]</code> 即可
+</p>
+</li>
+
+<li>
+<p>
+采用 <a href="https://git-scm.com/docs/user-manual">git</a> 同步文件
+</p>
+
+<p>
+需要 git 操作基础
+</p>
+</li>
+</ol>
+</li>
+
+<li>运行代码
+
+<ol class="org-ol">
+<li>
+<p>
+python 运行脚本
+</p>
+
+<p>
+<code>python test.py</code>
+</p>
+
+<ol class="org-ol">
+<li>脚本参数
+
+<ol class="org-ol">
+<li>参考 <a href="https://www.tutorialspoint.com/python/python_command_line_arguments.htm">python 参数使用</a>
+</li>
+</ol>
+</li>
+
+<li>
+<p>
+脚本循环
+</p>
+
+<p>
+有时需要跑一个耗时较长的程序，写一个脚本在 python 运行时传入参数来自动化程序运行
+</p>
+
+<div class="org-src-container">
+
+<pre><code class="lang-bash">
+#!/bin/bash
+# cmd='nohup python -u ga_kpca.py &gt; "log/ga-custom-kernel-kpca_"$(date "+%Y-%m-%d_%H-%M-%S").log 2&gt;&amp;1'
+
+cd ~/wangding/ga-kpca
+conda activate "wangding"
+
+for i in $(seq 2 7)
+do
+    for j in $(seq 2 7)
+    do
+        nohup python -u ga_kpca.py $i $j &gt; "log/ga-custom-kernel-kpca_"$(date "+%Y-%m-%d_%H-%M-%S").log 2&gt;&amp;1
+    done
+done
+
+</code></pre>
+
+</div>
+
+<p>
+其中 <code>$i</code> 和 <code>$j</code> 就是在 bash 中传入 python 的参数，参数可以结合具体代码逻辑做任何事情。
+</p>
+</li>
+</ol>
+</li>
+
+<li>
+<p>
+后台运行
+</p>
+
+<p>
+后台运行在命令后面加入 <code>&amp;</code> ，也即命令成为 <code>python test.py &amp;</code> 即可。
+</p>
+</li>
+
+<li>
+<p>
+存储日志
+</p>
+
+<p>
+在代码中，在关键信息的地方打印日志即可。
+</p>
+</li>
+
+<li>
+<p>
+存储图像
+</p>
+
+<p>
+代码在后台运行时，无需使用 <code>matplotlib.show()</code> 来查看图像，因此保存 <code>matlplotlib.savefig(filename=filename)</code> 即可。
+</p>
+</li>
+</ol>
+</li>
+
+<li>打印关键信息和保存日志以及查看日志
+<ol class="org-ol">
+<li>打印日志
+<ol class="org-ol">
+<li>代码中添加需要打印的信息</li>
+</ol>
+</li>
+<li>保存日志
+<ol class="org-ol">
+<li>
+<p>
+使用文件重定向
+</p>
+
+<p>
+例如 <code>python test.py &gt; log.txt</code>
+</p>
+</li>
+
+<li>
+<p>
+同时将错误信息重定向
+</p>
+
+<p>
+<code>2&gt;&amp;1</code>
+</p>
+</li>
+</ol>
+</li>
+<li>查看日志
+<ol class="org-ol">
+<li>使用 <a href="https://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=&amp;ved=2ahUKEwiWkLuoytbtAhWCc30KHSz2AAUQFjAAegQIARAD&amp;url=https%3A%2F%2Fwww.jetbrains.com%2Fpycharm%2F&amp;usg=AOvVaw08gOuiX9h_nAkWJhXYmZeT">Pycharm</a> 设置 <a href="https://www.jetbrains.com/help/pycharm/creating-a-remote-server-configuration.html">sftp</a> 来查看文件，最方便</li>
+
+<li>ssh 登录远程机器，然后使用 <code>more</code> or <code>less</code> 命令查看</li>
+
+<li>
+<a href="https://www.gnu.org/software/emacs/">Emacs</a> 的 <a href="https://www.emacswiki.org/emacs/TrampMode">tramp</a>, 次方便。</li>
+</ol>
+</li>
+</ol>
+</li>
+</ul>
+<p class="commentline">
+        
+    <a href="posts/tutorial-to-workstation/#disqus_thread" data-disqus-identifier="cache/posts/tutorial-to-workstation.html">Comments</a>
 
 
         </p>

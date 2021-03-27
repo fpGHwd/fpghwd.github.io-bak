@@ -52,9 +52,9 @@
 
     
     <div class="post">
-        <h2 class="post-title"><a href="posts/leetcode824-goat-latin/">Leetcode824. Goat Latin</a></h2>
+        <h2 class="post-title"><a href="posts/macos-xia-shi-yong-zhong-duan-emacs-er-bu-shi-yong-gui-emacs/">Macos 下用终端 emacs 而不使用 GUI emacs</a></h2>
         <div class="post-meta">
-            2020-09-29 10:01
+            2021-03-14 08:59
         </div>
         <div class="post-meta">
                 Wang Ding
@@ -62,79 +62,55 @@
         <div class="post-content">
                 <div>
 <p>
-<a href="https://leetcode.com/problems/goat-latin/">824. Goat Latin</a>
+最近在 macos 下使用 ssh 登录开启 daemon 启动的 emacs 后用 <code>emacsclient -nw</code> 连接，感觉体验舒服了很多。
 </p>
 
 <p>
-<b>Solution</b>
+主要说来有以下好处：
 </p>
 
-<div class="org-src-container">
-
-<pre><code class="lang-C">
-class Solution {
-  public:
-    string toGoatLatin(string S) {
-        int start = 0, end = 0, i = 1;
-        string goat = "";
-        while (start &lt; S.length()) {
-            if (i != 1)
-                goat += " ";
-            while (end &lt; S.length() &amp;&amp; isalpha(S[end]))
-                end++;
-            if (S[start] == 'a' || S[start] == 'e' || S[start] == 'i' ||
-                S[start] == 'o' || S[start] == 'u' || S[start] == 'A' ||
-                S[start] == 'E' || S[start] == 'I' || S[start] == 'O' ||
-                S[start] == 'U') {
-                goat += S.substr(start, end - start);
-            } else {
-                if (start + 1 != end) {
-                    goat += S.substr(start + 1, end - start - 1);
-                }
-                goat += S.substr(start, 1);
-            }
-            goat += "ma";
-            goat += string(i, 'a');
-
-            end++, start = end, i++;
-        }
-        return goat;
-    }
-};
-
-</code></pre>
-
-</div>
-
-<div class="org-src-container">
-
-<pre><code class="lang-html">
-Status: Accepted (99/99)
-
-Runtime: 0 ms, faster than 100.00% of C++ submissions.
-
-Memory Usage: 6.6 MB, less than 76.77% of C++ submissions.
-
-</code></pre>
-
-</div>
-
+<ul class="org-ul">
+<li>不同同步配置。每次如果修改配置文件后，还需要先等文件同步好后 doom sync 然后 doom update 再 doom doctor 一次，虽然文件同步时间不需要很长时间，但是还是要等。有时文件没有同步好还得使用 ediff 合并文件（ediff 合并很好用）然后删除旧文件。</li>
+<li>不用为 macos emacs 重新配置输入法，所有都是 emacs daemon 中的输入法（ps: emacs 内置输入法 emacs-rime 真的很好用，在终端也很不错）</li>
+<li>不用考虑在终端 emacs 很多其他的东西：比如图片显示，什么 w3m ，图片都不用想了，只用考虑“搜索——编辑”文件就行了。我觉得作为一个编辑器就应该做编辑器的事情，不应该做其他的事情，比如说在 emacs 考虑显示图片、网页浏览等等。</li>
+<li>不用考虑同步其他文件。所有的操作在服务器上执行，虽然中间服务器延迟还是有一点，但是一般来说不影响使用。</li>
+<li>不用在乎编辑的状态，即使断网了也能很快连接进来，打开的 buffer 和其编辑状态都还在。</li>
+<li>连接速度快，秒连</li>
+<li>
 <p>
-字符串的題目都是用指針來做的。
+不会因为穷而不能享受到更不卡的 emacs on mac 。我使用的是 macbook air ，使用的核心还是双核 i3 （暴哭），其实主要是因为穷。。。当然这样的话，就放宽了运行 emacs 的服务器的限制了。macbook air 只要负责有个好看的终端就行了。
+</p>
+
+
+<div id="org070e709" class="figure">
+<p><img src="https://raw.githubusercontent.com/fpGHwd/fpghwd.github.io/master/images/_20210314_165839screenshot.png" alt="_20210314_165839screenshot.png"></p>
+</div>
+</li>
+</ul>
+<p>
+缺点也有：
+</p>
+
+<ul class="org-ul">
+<li>无法处理图片，elfeed 有很多图片的内容，以及 telega 的图片无法显示</li>
+<li>字体是终端字体，无法通过修改配置的字体来变换字体</li>
+</ul>
+<p>
+大体来说，终端 emacs 可以让用户专心写文字，而不用考虑其他的功能了，当我想通了这一点后就感觉就算有了 macbook pro 我可能还是会用终端 emacs 的。相信我，终端 emacs 我们值得拥有！
 </p>
 </div>
                 <p class="commentline">
         
-    <a href="posts/leetcode824-goat-latin/#disqus_thread" data-disqus-identifier="cache/posts/leetcode824-goat-latin.html">Comments</a>
+    <a href="posts/macos-xia-shi-yong-zhong-duan-emacs-er-bu-shi-yong-gui-emacs/#disqus_thread" data-disqus-identifier="cache/posts/macos-xia-shi-yong-zhong-duan-emacs-er-bu-shi-yong-gui-emacs.html">Comments</a>
 
 
         </p>
 </div>
     </div>
     <div class="post">
-        <h2 class="post-title"><a href="posts/leetcode572-subtree-of-another-tree/">Leetcode572. Subtree of Another Tree</a></h2>
+        <h2 class="post-title"><a href="posts/macos-xia-shi-yong-squirrel-zai-vscode-zhong-wu-fa-shu-ru-zhong-wen/">Macos 下使用 Squirrel 在 vscode 中无法输入中文</a></h2>
         <div class="post-meta">
-            2020-09-29 08:20
+            2021-03-10 07:26
         </div>
         <div class="post-meta">
                 Wang Ding
@@ -142,95 +118,45 @@ Memory Usage: 6.6 MB, less than 76.77% of C++ submissions.
         <div class="post-content">
                 <div>
 <p>
-<a href="https://leetcode.com/problems/subtree-of-another-tree/">572. Subtree of Another Tree</a>
+因为 macbook 中写 latex 有点卡，实际我现在的配置，只要编辑稍长的文件多多少少在 macbook air 上有点卡，体验没有 arch 的好。但是 arch 又没有 macbook 那么好的屏幕。也 profiler 了一下，主要时间用在了 native 函数中，感觉是 emacs 版本的问题。
 </p>
 
 <p>
-<b>Solution</b>
-</p>
-
-<div class="org-src-container">
-
-<pre><code class="lang-C">
-/**
- * Definition for a binary tree node.
- * struct TreeNode {
- *     int val;
- *     TreeNode *left;
- *     TreeNode *right;
- *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
- *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
- *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left),
- * right(right) {}
- * };
- */
-class Solution {
-  public:
-    bool isSubtree(TreeNode *s, TreeNode *t) {
-        // return isSameTree(s, t) || isSameTree(s-&gt;left, t) ||
-        //        isSameTree(s-&gt;right, t);
-        if (s == NULL &amp;&amp; t == NULL)
-            return true;
-        if (s == NULL)
-            return false;
-        if (t == NULL)
-            return true;
-        bool isSub;
-        if (s-&gt;val == t-&gt;val)
-            isSub = isSameTree(s, t);
-        if (isSub)
-            return true;
-        return isSubtree(s-&gt;left, t) || isSubtree(s-&gt;right, t);
-    }
-
-    bool isSameTree(TreeNode *s, TreeNode *t) {
-        if (s == nullptr &amp;&amp; t == nullptr) {
-            return true;
-        } else {
-            if (s == nullptr || t == nullptr)
-                return false;
-            if (s-&gt;val != t-&gt;val)
-                return false;
-            else
-                return isSameTree(s-&gt;left, t-&gt;left) &amp;&amp;
-                       isSameTree(s-&gt;right, t-&gt;right);
-        }
-    }
-};
-
-</code></pre>
-
-</div>
-
-<div class="org-src-container">
-
-<pre><code class="lang-html">
-Status: Accepted (183/183)
-
-Runtime: 40 ms, faster than 66.02% of C++ submissions.
-
-Memory Usage: 29.7 MB, less than 18.21% of C++ submissions.
-
-</code></pre>
-
-</div>
-
-<p>
-第一次做的时候并没有做对，第二次倒是 AC 了。没啥感觉，就是感觉自己的方法代码有点复杂。
+于是下载了 vscode + tex workshop 插件和全套的 mactex ，vscode 编辑起来还是流畅一点。不过 vscode 在切换 Squirrel 中文输入时不能使用，重新修改了 patch 也不行。不过还有系统的中文输入法还能用，全拼用起来果然没有双拼舒服。
 </p>
 </div>
                 <p class="commentline">
         
-    <a href="posts/leetcode572-subtree-of-another-tree/#disqus_thread" data-disqus-identifier="cache/posts/leetcode572-subtree-of-another-tree.html">Comments</a>
+    <a href="posts/macos-xia-shi-yong-squirrel-zai-vscode-zhong-wu-fa-shu-ru-zhong-wen/#disqus_thread" data-disqus-identifier="cache/posts/macos-xia-shi-yong-squirrel-zai-vscode-zhong-wu-fa-shu-ru-zhong-wen.html">Comments</a>
 
 
         </p>
 </div>
     </div>
     <div class="post">
-        <h2 class="post-title"><a href="posts/leetcode093-restore-ip-addresses/">Leetcode093. Restore IP Addresses</a></h2>
+        <h2 class="post-title"><a href="posts/macos-emacs-plus27-is-convenient-with-emacs-rime/">Macos emacs-plus@27 is convenient with emacs-rime</a></h2>
         <div class="post-meta">
-            2020-09-28 15:12
+            2021-03-03 07:56
+        </div>
+        <div class="post-meta">
+                Wang Ding
+        </div>
+        <div class="post-content">
+                <p>
+不知道是不是自己的配置问题，使用相同的配置 <code>emacs-plus@28 --with-native-comp</code> 就会卡顿，退回 emacs-plus@27 就还好。重新编译了一遍 doom-emacs 的 modules 后，感觉 emacs-rime 在编辑 org 文件时没有编译前那么卡了。
+</p>
+                <p class="commentline">
+        
+    <a href="posts/macos-emacs-plus27-is-convenient-with-emacs-rime/#disqus_thread" data-disqus-identifier="cache/posts/macos-emacs-plus27-is-convenient-with-emacs-rime.html">Comments</a>
+
+
+        </p>
+</div>
+    </div>
+    <div class="post">
+        <h2 class="post-title"><a href="posts/emacs-mouse-or-touchpad-scroll-line-by-line/">Emacs mouse or touchpad scroll line by line</a></h2>
+        <div class="post-meta">
+            2021-02-14 12:06
         </div>
         <div class="post-meta">
                 Wang Ding
@@ -238,90 +164,60 @@ Memory Usage: 29.7 MB, less than 18.21% of C++ submissions.
         <div class="post-content">
                 <div>
 <p>
-<a href="https://leetcode.com/problems/restore-ip-addresses/">93. Restore IP Addresses</a>
+Just set <code>mouse-wheel-progressive-speed</code> to <code>nil</code> in init file.
 </p>
 
 <p>
-<b>Solution</b>
+如果需要的话，也可以在对下面进行设置，不过我觉得有了上面的设置已经差不多了。关于 <code>mouse-wheel-progressive-speed</code> 的解释是：
 </p>
-
-<div class="org-src-container">
-
-<pre><code class="lang-C">
-class Solution {
-  public:
-    vector&lt;string&gt; addresses;
-    vector&lt;string&gt; restoreIpAddresses(string s) {
-        vector&lt;string&gt; path;
-        dfs(s, path);
-        return addresses;
-    }
-
-    void dfs(string s, vector&lt;string&gt; &amp;path) {
-
-        if (s == "" &amp;&amp; path.size() == 4) {
-            string tmp = "";
-            for (string s : path) {
-                if (tmp != "")
-                    tmp += ".";
-                tmp += s;
-            }
-            addresses.push_back(tmp);
-            return;
-        }
-
-        if (path.size() &gt; 4 || s == "")
-            return;
-
-        for (int i = 1; i &lt;= s.length(); i++) {
-            string ip = s.substr(0, i);
-            if (i &gt; 1 &amp;&amp; s[0] == '0')
-                return;
-            if (stoi(ip) &gt; 255)
-                break;
-            path.push_back(ip);
-            dfs(s.substr(i, s.length() - i), path);
-            path.pop_back();
-        }
-    }
-};
-
-</code></pre>
-
-</div>
-
-<div class="org-src-container">
-
-<pre><code class="lang-html">
-Status: Accepted (147/147)
-
-Runtime: 4 ms, faster than 81.89% of C++ submissions.
-
-Memory Usage: 7.6 MB, less than 13.80% of C++ submissions.
-
-</code></pre>
-
-</div>
+<blockquote>
+<p>
+If non-nil, the faster the user moves the wheel, the faster the scrolling.
+</p>
+</blockquote>
 
 <p>
-第一次嘗試是忽略了 10.0.010.0 中的 010 是不能作爲一個符合要求的 ip 段。所以添加了
+另外下面的设置也可以考虑一下：
 </p>
-
 <div class="org-src-container">
 
-<pre><code class="lang-C">if (i &gt; 1 &amp;&amp; s[0] == '0')
-    return;
+<pre><code class="lang-emacs">(setq mouse-wheel-scroll-amount '(1 ((shift) . 1))) ;; one line at a time
+(setq mouse-wheel-progressive-speed nil) ;; don't accelerate scrolling
+(setq mouse-wheel-follow-mouse 't) ;; scroll window under mouse
+(setq scroll-step 1) ;; keyboard scroll one line at a time
 </code></pre>
 
 </div>
+</div>
+                <p class="commentline">
+        
+    <a href="posts/emacs-mouse-or-touchpad-scroll-line-by-line/#disqus_thread" data-disqus-identifier="cache/posts/emacs-mouse-or-touchpad-scroll-line-by-line.html">Comments</a>
+
+
+        </p>
+</div>
+    </div>
+    <div class="post">
+        <h2 class="post-title"><a href="posts/org-roam/">Org-roam</a></h2>
+        <div class="post-meta">
+            2021-01-24 12:56
+        </div>
+        <div class="post-meta">
+                Wang Ding
+        </div>
+        <div class="post-content">
+                <div>
+<p>
+最近又重拾 org-roam 来做记录。我喜欢这个工具的重大原因是：它是解耦的，另外它是可拓展的。也许正是因为它是解耦的所以它的可拓展性很高吧。
+</p>
 
 <p>
-這一段，雖然丑但是很有用。
+不过我并没有一定要记录很多的 org-roam 卡片，不过这些卡片本身具有解耦的特征，因此对于分析问题应该好处特别的明显。
 </p>
 </div>
                 <p class="commentline">
         
-    <a href="posts/leetcode093-restore-ip-addresses/#disqus_thread" data-disqus-identifier="cache/posts/leetcode093-restore-ip-addresses.html">Comments</a>
+    <a href="posts/org-roam/#disqus_thread" data-disqus-identifier="cache/posts/org-roam.html">Comments</a>
 
 
         </p>
