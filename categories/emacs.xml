@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>wd's blog (Posts about emacs)</title><link>https://fpghwd.github.io/</link><description></description><atom:link href="https://fpghwd.github.io/categories/emacs.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2021 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;Wang Ding&lt;/a&gt; </copyright><lastBuildDate>Fri, 19 Mar 2021 19:28:05 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Macos 下用终端 emacs 而不使用 GUI emacs</title><link>https://fpghwd.github.io/posts/macos-xia-shi-yong-zhong-duan-emacs-er-bu-shi-yong-gui-emacs/</link><dc:creator>Wang Ding</dc:creator><description>&lt;div&gt;&lt;p&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>wd's blog (Posts about emacs)</title><link>https://fpghwd.github.io/</link><description></description><atom:link href="https://fpghwd.github.io/categories/emacs.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2021 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;Wang Ding&lt;/a&gt; </copyright><lastBuildDate>Sun, 28 Mar 2021 07:30:51 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Macos 下用终端 emacs 而不使用 GUI emacs</title><link>https://fpghwd.github.io/posts/macos-xia-shi-yong-zhong-duan-emacs-er-bu-shi-yong-gui-emacs/</link><dc:creator>Wang Ding</dc:creator><description>&lt;div&gt;&lt;p&gt;
 最近在 macos 下使用 ssh 登录开启 daemon 启动的 emacs 后用 &lt;code&gt;emacsclient -nw&lt;/code&gt; 连接，感觉体验舒服了很多。
 &lt;/p&gt;
 
@@ -36,9 +36,9 @@
 
 &lt;p&gt;
 大体来说，终端 emacs 可以让用户专心写文字，而不用考虑其他的功能了，当我想通了这一点后就感觉就算有了 macbook pro 我可能还是会用终端 emacs 的。相信我，终端 emacs 我们值得拥有！
-&lt;/p&gt;&lt;/div&gt;</description><category>ATTACH</category><category>emacs</category><guid>https://fpghwd.github.io/posts/macos-xia-shi-yong-zhong-duan-emacs-er-bu-shi-yong-gui-emacs/</guid><pubDate>Sun, 14 Mar 2021 08:59:06 GMT</pubDate></item><item><title>Macos emacs-plus@27 is convenient with emacs-rime</title><link>https://fpghwd.github.io/posts/macos-emacs-plus27-is-convenient-with-emacs-rime/</link><dc:creator>Wang Ding</dc:creator><description>&lt;p&gt;
+&lt;/p&gt;&lt;/div&gt;</description><category>ATTACH</category><category>emacs</category><guid>https://fpghwd.github.io/posts/macos-xia-shi-yong-zhong-duan-emacs-er-bu-shi-yong-gui-emacs/</guid><pubDate>Sun, 14 Mar 2021 00:59:06 GMT</pubDate></item><item><title>Macos emacs-plus@27 is convenient with emacs-rime</title><link>https://fpghwd.github.io/posts/macos-emacs-plus27-is-convenient-with-emacs-rime/</link><dc:creator>Wang Ding</dc:creator><description>&lt;p&gt;
 不知道是不是自己的配置问题，使用相同的配置 &lt;code&gt;emacs-plus@28 --with-native-comp&lt;/code&gt; 就会卡顿，退回 emacs-plus@27 就还好。重新编译了一遍 doom-emacs 的 modules 后，感觉 emacs-rime 在编辑 org 文件时没有编译前那么卡了。
-&lt;/p&gt;</description><category>emacs</category><guid>https://fpghwd.github.io/posts/macos-emacs-plus27-is-convenient-with-emacs-rime/</guid><pubDate>Wed, 03 Mar 2021 07:56:33 GMT</pubDate></item><item><title>Emacs mouse or touchpad scroll line by line</title><link>https://fpghwd.github.io/posts/emacs-mouse-or-touchpad-scroll-line-by-line/</link><dc:creator>Wang Ding</dc:creator><description>&lt;div&gt;&lt;p&gt;
+&lt;/p&gt;</description><category>emacs</category><guid>https://fpghwd.github.io/posts/macos-emacs-plus27-is-convenient-with-emacs-rime/</guid><pubDate>Tue, 02 Mar 2021 23:56:33 GMT</pubDate></item><item><title>Emacs mouse or touchpad scroll line by line</title><link>https://fpghwd.github.io/posts/emacs-mouse-or-touchpad-scroll-line-by-line/</link><dc:creator>Wang Ding</dc:creator><description>&lt;div&gt;&lt;p&gt;
 Just set &lt;code&gt;mouse-wheel-progressive-speed&lt;/code&gt; to &lt;code&gt;nil&lt;/code&gt; in init file.
 &lt;/p&gt;
 
@@ -62,19 +62,19 @@ If non-nil, the faster the user moves the wheel, the faster the scrolling.
 (setq scroll-step 1) ;; keyboard scroll one line at a time
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;/div&gt;&lt;/div&gt;</description><category>emacs</category><guid>https://fpghwd.github.io/posts/emacs-mouse-or-touchpad-scroll-line-by-line/</guid><pubDate>Sun, 14 Feb 2021 12:06:23 GMT</pubDate></item><item><title>Org-roam</title><link>https://fpghwd.github.io/posts/org-roam/</link><dc:creator>Wang Ding</dc:creator><description>&lt;div&gt;&lt;p&gt;
+&lt;/div&gt;&lt;/div&gt;</description><category>emacs</category><guid>https://fpghwd.github.io/posts/emacs-mouse-or-touchpad-scroll-line-by-line/</guid><pubDate>Sun, 14 Feb 2021 04:06:23 GMT</pubDate></item><item><title>Org-roam</title><link>https://fpghwd.github.io/posts/org-roam/</link><dc:creator>Wang Ding</dc:creator><description>&lt;div&gt;&lt;p&gt;
 最近又重拾 org-roam 来做记录。我喜欢这个工具的重大原因是：它是解耦的，另外它是可拓展的。也许正是因为它是解耦的所以它的可拓展性很高吧。
 &lt;/p&gt;
 
 &lt;p&gt;
 不过我并没有一定要记录很多的 org-roam 卡片，不过这些卡片本身具有解耦的特征，因此对于分析问题应该好处特别的明显。
-&lt;/p&gt;&lt;/div&gt;</description><category>emacs</category><guid>https://fpghwd.github.io/posts/org-roam/</guid><pubDate>Sun, 24 Jan 2021 12:56:20 GMT</pubDate></item><item><title>Emacs 自动保存文件设置</title><link>https://fpghwd.github.io/posts/emacs-zi-dong-bao-cun-wen-jian-she-zhi/</link><dc:creator>Wang Ding</dc:creator><description>&lt;div&gt;&lt;p&gt;
+&lt;/p&gt;&lt;/div&gt;</description><category>emacs</category><guid>https://fpghwd.github.io/posts/org-roam/</guid><pubDate>Sun, 24 Jan 2021 04:56:20 GMT</pubDate></item><item><title>Emacs 自动保存文件设置</title><link>https://fpghwd.github.io/posts/emacs-zi-dong-bao-cun-wen-jian-she-zhi/</link><dc:creator>Wang Ding</dc:creator><description>&lt;div&gt;&lt;p&gt;
 Emacs 自带文件自动保存的机制，利用 &lt;code&gt;do-auto-save&lt;/code&gt; 可以自动存储当前编辑的文件为一个编辑过的复本，并未直接存储到 buffer 对应的文件中。当然也可以直接开启全局的 &lt;code&gt;(auto-save-visited-mode t)&lt;/code&gt; ，在默认的 &lt;code&gt;auto-save-visited-interval&lt;/code&gt; 时间（默认 5 秒），后会自动将已经修改后的 buffer 内容写入文件中。
 &lt;/p&gt;
 
 &lt;p&gt;
 其中使用 &lt;code&gt;do-auto-save&lt;/code&gt; 保存的文件的复本可以在打开该文件本身时有提示。这是一个好的地方，也是容易忽略的地方：某次并没有将改动保存到文件，而是自动保存到了某个复本，而下一次用 emacs 打开该文件，虽然 emacs 有提醒该文件有复本未保存到文件中，此时极有可能形成了两个新的基于原文件改动的分枝。众所周知，合并文件是一件耗时的事情。所以我觉得还是打开 &lt;code&gt;(auto-save-visited-mode t)&lt;/code&gt; 更好，避免形成两个改动文件并且需要合并内容的情形。
-&lt;/p&gt;&lt;/div&gt;</description><category>emacs</category><guid>https://fpghwd.github.io/posts/emacs-zi-dong-bao-cun-wen-jian-she-zhi/</guid><pubDate>Wed, 23 Dec 2020 12:06:34 GMT</pubDate></item><item><title>Emacs 下同时查看和编辑一个文件的多个 headline: 使用 Indirect Buffer</title><link>https://fpghwd.github.io/posts/emacs-open-several-windows-with-specific-org-narrowed-headline/</link><dc:creator>Wang Ding</dc:creator><description>&lt;div&gt;&lt;p&gt;
+&lt;/p&gt;&lt;/div&gt;</description><category>emacs</category><guid>https://fpghwd.github.io/posts/emacs-zi-dong-bao-cun-wen-jian-she-zhi/</guid><pubDate>Wed, 23 Dec 2020 04:06:34 GMT</pubDate></item><item><title>Emacs 下同时查看和编辑一个文件的多个 headline: 使用 Indirect Buffer</title><link>https://fpghwd.github.io/posts/emacs-open-several-windows-with-specific-org-narrowed-headline/</link><dc:creator>Wang Ding</dc:creator><description>&lt;div&gt;&lt;p&gt;
 在使用 emacs 编辑一个很多的 headlines 的 org 文件时，如果每个 headline 下的内容需要交叉查看和编辑的时候，我就非常需要一个单独的 windows(emacs 下的窗口，下均同) 仅显示一个 headline 下的所有内容，所以必须用到 &lt;code&gt;org-narrow-to-subtree&lt;/code&gt; 这个函数。
 &lt;/p&gt;
 
@@ -88,7 +88,7 @@ Emacs 自带文件自动保存的机制，利用 &lt;code&gt;do-auto-save&lt;/co
 
 &lt;p&gt;
 这个功能对于我来说很实用，尤其是对一个比较长的， subtree 又比较多的 org 文件中同时查看和编辑多个 headline 的情况下尤其有用。
-&lt;/p&gt;&lt;/div&gt;</description><category>emacs</category><guid>https://fpghwd.github.io/posts/emacs-open-several-windows-with-specific-org-narrowed-headline/</guid><pubDate>Tue, 15 Dec 2020 08:04:30 GMT</pubDate></item><item><title>Emacs 使用感受</title><link>https://fpghwd.github.io/posts/emacs-shi-yong-gan-shou/</link><dc:creator>Wang Ding</dc:creator><description>&lt;div&gt;&lt;p&gt;
+&lt;/p&gt;&lt;/div&gt;</description><category>emacs</category><guid>https://fpghwd.github.io/posts/emacs-open-several-windows-with-specific-org-narrowed-headline/</guid><pubDate>Tue, 15 Dec 2020 00:04:30 GMT</pubDate></item><item><title>Emacs 使用感受</title><link>https://fpghwd.github.io/posts/emacs-shi-yong-gan-shou/</link><dc:creator>Wang Ding</dc:creator><description>&lt;div&gt;&lt;p&gt;
 不知不觉使用 emacs 已经有两年了。其实一开始看 Emacs 那篇自带的极短的介绍要更早一点，现在看当时的那种喜悦的感觉（用上了众多名人都推荐的软件）更多的是 naive 和开心。
 &lt;/p&gt;
 
@@ -112,7 +112,7 @@ Emacs 自带文件自动保存的机制，利用 &lt;code&gt;do-auto-save&lt;/co
 &lt;p&gt;
 Emacs loves me, emacs loves you.
 &lt;/p&gt;
-&lt;/blockquote&gt;&lt;/div&gt;</description><category>emacs</category><guid>https://fpghwd.github.io/posts/emacs-shi-yong-gan-shou/</guid><pubDate>Thu, 10 Dec 2020 10:23:53 GMT</pubDate></item><item><title>linux 平台下 emacs native-comp 分支编译</title><link>https://fpghwd.github.io/posts/linux-ping-tai-xia-emacs-native-comp-fen-zhi-bian-yi/</link><dc:creator>Wang Ding</dc:creator><description>&lt;ul class="org-ul"&gt;
+&lt;/blockquote&gt;&lt;/div&gt;</description><category>emacs</category><guid>https://fpghwd.github.io/posts/emacs-shi-yong-gan-shou/</guid><pubDate>Thu, 10 Dec 2020 02:23:53 GMT</pubDate></item><item><title>linux 平台下 emacs native-comp 分支编译</title><link>https://fpghwd.github.io/posts/linux-ping-tai-xia-emacs-native-comp-fen-zhi-bian-yi/</link><dc:creator>Wang Ding</dc:creator><description>&lt;ul class="org-ul"&gt;
 &lt;li&gt;编译 libgccjit
 
 &lt;ol class="org-ol"&gt;
@@ -264,16 +264,16 @@ doom build and run
 &lt;p&gt;
 确实有流畅很多，也可能是心理作用吧。 :)
 &lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;</description><category>emacs</category><guid>https://fpghwd.github.io/posts/linux-ping-tai-xia-emacs-native-comp-fen-zhi-bian-yi/</guid><pubDate>Thu, 26 Nov 2020 09:53:27 GMT</pubDate></item><item><title>Difference Since Using Doom Emacs</title><link>https://fpghwd.github.io/posts/since-use-doom-emacs/</link><dc:creator>Wang Ding</dc:creator><description>&lt;div&gt;&lt;p&gt;
+&lt;/ul&gt;</description><category>emacs</category><guid>https://fpghwd.github.io/posts/linux-ping-tai-xia-emacs-native-comp-fen-zhi-bian-yi/</guid><pubDate>Thu, 26 Nov 2020 01:53:27 GMT</pubDate></item><item><title>Difference Since Using Doom Emacs</title><link>https://fpghwd.github.io/posts/since-use-doom-emacs/</link><dc:creator>Wang Ding</dc:creator><description>&lt;div&gt;&lt;p&gt;
 自从使用了 doom emacs 后，就很少纠结系统升级了。以前没事总是会升级一下，但是现在最多的就是可能想起来会升级一下 doom emacs, 只需要在 emacs 中 upgrade 和 reload 即可。其实大多数时候我也只是 doom sync 一下配置然后 reload 一下，最多也就十几二十秒。
 &lt;/p&gt;
 
 &lt;p&gt;
 用 emacs 写东西简直是最近感觉最幸福的一件事情了。
-&lt;/p&gt;&lt;/div&gt;</description><category>emacs</category><guid>https://fpghwd.github.io/posts/since-use-doom-emacs/</guid><pubDate>Thu, 05 Nov 2020 03:13:58 GMT</pubDate></item><item><title>Emacs Lisp Overlay</title><link>https://fpghwd.github.io/posts/emacs-lisp-overlay/</link><dc:creator>Wang Ding</dc:creator><description>&lt;div&gt;&lt;p&gt;
+&lt;/p&gt;&lt;/div&gt;</description><category>emacs</category><guid>https://fpghwd.github.io/posts/since-use-doom-emacs/</guid><pubDate>Wed, 04 Nov 2020 19:13:58 GMT</pubDate></item><item><title>Emacs Lisp Overlay</title><link>https://fpghwd.github.io/posts/emacs-lisp-overlay/</link><dc:creator>Wang Ding</dc:creator><description>&lt;div&gt;&lt;p&gt;
 最近看到 Emacs Lisp 里面 Overlay 的概念，可以用于自定义介面 buffer 的文字的某些特殊效果。
 &lt;/p&gt;
 
 &lt;p&gt;
 当然其实对文字的编辑和模式本身都可以是文字内容的一种展现方式，但是文字的属性（Text Properties）是文字的一部分，overlay 并不是文字的一部分。所以在 buffer 之间复制某些文字的时候，并不会同时复制  overlay ；同时改变 buffer 的文字属性其实也是在修改 buffer 本身。但 overlay 的改变并不会改变 buffer 本身，这种修改自然也不会被保存在这个 buffer 的 undo list 中。
-&lt;/p&gt;&lt;/div&gt;</description><category>emacs</category><guid>https://fpghwd.github.io/posts/emacs-lisp-overlay/</guid><pubDate>Mon, 26 Oct 2020 13:24:03 GMT</pubDate></item></channel></rss>
+&lt;/p&gt;&lt;/div&gt;</description><category>emacs</category><guid>https://fpghwd.github.io/posts/emacs-lisp-overlay/</guid><pubDate>Mon, 26 Oct 2020 05:24:03 GMT</pubDate></item></channel></rss>
