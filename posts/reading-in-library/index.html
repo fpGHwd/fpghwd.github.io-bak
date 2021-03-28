@@ -3,34 +3,23 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>leetcode 1013. Partion Array Into Three Parts With Equal Sum | wd's blog</title>
+<title>Reading in Library | wd's blog</title>
 <link href="../../assets/css/theme.css" type="text/css" rel="stylesheet">
 <link href="../../assets/css/pure.css" type="text/css" rel="stylesheet">
 <link href="../../assets/css/style.css" type="text/css" rel="stylesheet">
 <meta name="theme-color" content="#5670d4">
 <meta name="generator" content="Nikola (getnikola.com)">
 <link rel="alternate" type="application/rss+xml" title="RSS" href="../../rss.xml">
-<link rel="canonical" href="https://fpghwd.github.io/posts/leetcode-1013-partion-array-into-three-parts-with-equal-sum/">
+<link rel="canonical" href="https://fpghwd.github.io/posts/reading-in-library/">
 <!--[if lt IE 9]><script src="../../assets/js/html5.js"></script><![endif]--><meta name="author" content="Wang Ding">
-<link rel="prev" href="../leetcode-98-validate-binary-search-tree/" title="leetcode 98 Validate Binary Search Tree" type="text/html">
-<link rel="next" href="../reading-in-library/" title="Reading in Library" type="text/html">
+<link rel="prev" href="../leetcode-1013-partion-array-into-three-parts-with-equal-sum/" title="leetcode 1013. Partion Array Into Three Parts With Equal Sum" type="text/html">
 <meta property="og:site_name" content="wd's blog">
-<meta property="og:title" content="leetcode 1013. Partion Array Into Three Parts With Equal Sum">
-<meta property="og:url" content="https://fpghwd.github.io/posts/leetcode-1013-partion-array-into-three-parts-with-equal-sum/">
-<meta property="og:description" content="1013. Partition Array Into Three Parts With Equal Sum
-
-
-
-数组可以分成三部分和相等的块，那么数组的总和应该符合 sum mod 3 = 0 。找到部分和的值，然后从和数组中找出 1*(sum/3) 和 2*(sum/3) 即可。
-
-
-
-
-
-class Solution {
-    public boolean canThreePartsEqu">
+<meta property="og:title" content="Reading in Library">
+<meta property="og:url" content="https://fpghwd.github.io/posts/reading-in-library/">
+<meta property="og:description" content="Figure 1: 《一生能读几多书》">
 <meta property="og:type" content="article">
-<meta property="article:published_time" content="2021-03-25T03:46:02Z">
+<meta property="article:published_time" content="2021-03-28T06:49:25Z">
+<meta property="article:tag" content="ATTACH">
 </head>
 <body>
 <div class="body_container">
@@ -66,58 +55,21 @@ class Solution {
                         
                         
 <div class="post post-page">
-    <h1 class="post-title">leetcode 1013. Partion Array Into Three Parts With Equal Sum</h1>
-    <div class="post-meta">2021-03-25 03:46</div>
+    <h1 class="post-title">Reading in Library</h1>
+    <div class="post-meta">2021-03-28 06:49</div>
     <div class="post-content">
-        <div>
-<p>
-<a href="https://leetcode.com/problems/partition-array-into-three-parts-with-equal-sum/">1013. Partition Array Into Three Parts With Equal Sum</a>
-</p>
-
-<p>
-数组可以分成三部分和相等的块，那么数组的总和应该符合 <code>sum mod 3 = 0</code> 。找到部分和的值，然后从和数组中找出 <code>1*(sum/3)</code> 和 <code>2*(sum/3)</code> 即可。
-</p>
-
-<div class="org-src-container">
-
-<pre><code class="lang-java">
-class Solution {
-    public boolean canThreePartsEqualSum(int[] arr) {
-        int length = arr.length;
-        int[] sum = new int[length];
-        int i = 0;
-        for(int a:arr){
-            if(i != 0)sum[i] = sum[i-1] + a;
-            else sum[i] = a;
-            i++;
-        }
-
-        if(sum[length-1] %3 != 0)return false;
-        i = 0;
-        for(; i &lt; length; i++){
-            if(sum[i] == sum[length-1]/3)break;
-        }
-        if(i &gt;= length)return false;
-        for(i++; i &lt; length; i++){
-            if(sum[i] == 2 * sum[length-1]/3)break;
-        }
-        if(i &gt;= length-1)return false;
-        return true;
-    }
-}
-
-</code></pre>
-
-</div>
+        <div id="org2c00b26" class="figure">
+<p><img src="file:///Users/wd/Documents/org/.attach/aa/7d894c-138d-4da5-94df-bac1d0c8513d/_20210328_144655screenshot.png" alt="_20210328_144655screenshot.png" width="200"></p>
+<p><span class="figure-number">Figure 1: </span>《一生能读几多书》</p>
 </div>
     </div>
     <div class="postpromonav">
-        <nav><ul class="pager hidden-print">
+        <nav><ul itemprop="keywords" class="tags">
+<li><a class="tag p-category" href="../../categories/attach/" rel="tag">ATTACH</a></li>
+        </ul>
+<ul class="pager hidden-print">
 <li class="previous">
-                <a href="../leetcode-98-validate-binary-search-tree/" rel="prev" title="leetcode 98 Validate Binary Search Tree">Previous post</a>
-            </li>
-            <li class="next">
-                <a href="../reading-in-library/" rel="next" title="Reading in Library">Next post</a>
+                <a href="../leetcode-1013-partion-array-into-three-parts-with-equal-sum/" rel="prev" title="leetcode 1013. Partion Array Into Three Parts With Equal Sum">Previous post</a>
             </li>
         </ul></nav>
 </div>
@@ -127,9 +79,9 @@ class Solution {
         <div id="disqus_thread"></div>
         <script>
         var disqus_shortname ="fpghwd-github-io",
-            disqus_url="https://fpghwd.github.io/posts/leetcode-1013-partion-array-into-three-parts-with-equal-sum/",
-        disqus_title="leetcode 1013. Partion Array Into Three Parts With Equal Sum",
-        disqus_identifier="cache/posts/leetcode-1013-partion-array-into-three-parts-with-equal-sum.html",
+            disqus_url="https://fpghwd.github.io/posts/reading-in-library/",
+        disqus_title="Reading in Library",
+        disqus_identifier="cache/posts/reading-in-library.html",
         disqus_config = function () {
             this.language = "en";
         };
@@ -176,7 +128,7 @@ class Solution {
     <!--% if show_sourcelink:-->
     <!--
     <li>
-        <a href="/posts/leetcode-1013-partion-array-into-three-parts-with-equal-sum/index.wp" id="sourcelink">Source</a>
+        <a href="/posts/reading-in-library/index.wp" id="sourcelink">Source</a>
     </li>
 -->
     <!--%endif-->
