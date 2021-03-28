@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>wd's blog (Posts about ATTACH)</title><link>https://fpghwd.github.io/</link><description></description><atom:link href="https://fpghwd.github.io/categories/attach.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2021 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;Wang Ding&lt;/a&gt; </copyright><lastBuildDate>Sun, 28 Mar 2021 07:30:51 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Reading in Library</title><link>https://fpghwd.github.io/posts/reading-in-library/</link><dc:creator>Wang Ding</dc:creator><description>&lt;div&gt;&lt;p&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>wd's blog (Posts about ATTACH)</title><link>https://fpghwd.github.io/</link><description></description><atom:link href="https://fpghwd.github.io/categories/attach.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2021 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;Wang Ding&lt;/a&gt; </copyright><lastBuildDate>Sun, 28 Mar 2021 08:48:05 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Leetcode in Emacs</title><link>https://fpghwd.github.io/posts/leetcode-in-emacs/</link><dc:creator>Wang Ding</dc:creator><description>&lt;div id="orgb72b0c3" class="figure"&gt;
+&lt;p&gt;&lt;img src="https://raw.githubusercontent.com/fpGHwd/fpghwd.github.io/master/images/_20210328_164641screenshot.png" alt="_20210328_164641screenshot.png"&gt;
+&lt;/p&gt;
+&lt;/div&gt;</description><category>ATTACH</category><guid>https://fpghwd.github.io/posts/leetcode-in-emacs/</guid><pubDate>Sun, 28 Mar 2021 08:46:55 GMT</pubDate></item><item><title>Reading in Library</title><link>https://fpghwd.github.io/posts/reading-in-library/</link><dc:creator>Wang Ding</dc:creator><description>&lt;div&gt;&lt;p&gt;
 昨天下午等车之前，和同学一起到本部图书馆看了大概两个小时的书。一本是《一生能读几多书》。
 &lt;/p&gt;
 
@@ -202,23 +205,4 @@ datetree, use "~/org/datetree.org::datetree/".
 
 &lt;p&gt;
 可以把日记和归档的条目都放到一个文件，归档也不会经常去动，只需要看的时候搜索一下就行。
-&lt;/p&gt;&lt;/div&gt;</description><category>ATTACH</category><category>emacs</category><guid>https://fpghwd.github.io/posts/org-archive-location/</guid><pubDate>Fri, 16 Oct 2020 03:32:18 GMT</pubDate></item><item><title>调试的时候出了一个问题</title><link>https://fpghwd.github.io/posts/diao-shi-de-shi-hou-chu-le-yi-ge-wen-ti/</link><dc:creator>Wang Ding</dc:creator><description>&lt;div&gt;&lt;p&gt;
-&lt;a href="https://leetcode.com/problems/shortest-distance-to-a-character/"&gt;821. Shortest Distance to a Character&lt;/a&gt;
-&lt;/p&gt;
-
-&lt;p&gt;
-一个 gdb 调试的问题，没太看明白（暴哭）：
-&lt;/p&gt;
-
-&lt;div id="org47f0e90" class="figure"&gt;
-&lt;p&gt;&lt;img src="https://raw.githubusercontent.com/fpGHwd/fpghwd.github.io/master/images/_20200925_132117screenshot.png" alt="_20200925_132117screenshot.png"&gt;
-&lt;/p&gt;
-&lt;/div&gt;
-
-&lt;p&gt;
-想到可能是类型的问题： &lt;code&gt;size_type&lt;/code&gt; 是一个无符号的整数， &lt;code&gt;int&lt;/code&gt; 是有符号整数，有符号整数首先转换成无符号整数。 &lt;code&gt;-1&lt;/code&gt; 转化成 &lt;code&gt;0xffffffff&lt;/code&gt; ，所以应该是没有问题的。虽然是自己偷懒设置了一个 -1 索引的变量其实是为了后面 for 能从 0 开始遍历。如果从初始值设置为 0 的话应该不会出这样的问题。
-&lt;/p&gt;
-
-&lt;p&gt;
-同时有一个问题：转化时为什么是有符号整数转换成无符号整数，而不是相反呢？
-&lt;/p&gt;&lt;/div&gt;</description><category>ATTACH</category><category>leetcode</category><guid>https://fpghwd.github.io/posts/diao-shi-de-shi-hou-chu-le-yi-ge-wen-ti/</guid><pubDate>Thu, 24 Sep 2020 21:22:42 GMT</pubDate></item></channel></rss>
+&lt;/p&gt;&lt;/div&gt;</description><category>ATTACH</category><category>emacs</category><guid>https://fpghwd.github.io/posts/org-archive-location/</guid><pubDate>Fri, 16 Oct 2020 03:32:18 GMT</pubDate></item></channel></rss>
