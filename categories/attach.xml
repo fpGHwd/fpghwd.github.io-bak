@@ -1,25 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>wd's blog (Posts about ATTACH)</title><link>https://fpghwd.github.io/</link><description></description><atom:link href="https://fpghwd.github.io/categories/attach.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2021 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;Wang Ding&lt;/a&gt; </copyright><lastBuildDate>Sun, 28 Mar 2021 07:15:12 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Reading in Library</title><link>https://fpghwd.github.io/posts/reading-in-library/</link><dc:creator>Wang Ding</dc:creator><description>&lt;div&gt;&lt;p&gt;
-昨天下午等车之前，和同学一起到本部图书馆看了大概两个小时的书。一本是《一生能读几多书》。
-&lt;/p&gt;
-
-&lt;div id="orga0f2154" class="figure"&gt;
-&lt;p&gt;&lt;img src="file:///Users/wd/Projects/org/_20210328_144655screenshot.png" alt="_20210328_144655screenshot.png"&gt;
-&lt;/p&gt;
-&lt;/div&gt;
-
-&lt;p&gt;
-还有一本是《源氏物语》中译本。
-&lt;/p&gt;
-
-&lt;div id="orgae69ea5" class="figure"&gt;
-&lt;p&gt;&lt;img src="file:///Users/wd/Projects/org/_20210328_145750screenshot.png" alt="_20210328_145750screenshot.png"&gt;
-&lt;/p&gt;
-&lt;/div&gt;
-
-&lt;p&gt;
-图书馆是一个好地方。
-&lt;/p&gt;&lt;/div&gt;</description><category>ATTACH</category><guid>https://fpghwd.github.io/posts/reading-in-library/</guid><pubDate>Sun, 28 Mar 2021 07:09:19 GMT</pubDate></item><item><title>朋友来看我</title><link>https://fpghwd.github.io/posts/peng-you-lai-kan-wo/</link><dc:creator>Wang Ding</dc:creator><description>&lt;div&gt;&lt;p&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>wd's blog (Posts about ATTACH)</title><link>https://fpghwd.github.io/</link><description></description><atom:link href="https://fpghwd.github.io/categories/attach.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2021 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;Wang Ding&lt;/a&gt; </copyright><lastBuildDate>Sun, 28 Mar 2021 07:16:28 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>朋友来看我</title><link>https://fpghwd.github.io/posts/peng-you-lai-kan-wo/</link><dc:creator>Wang Ding</dc:creator><description>&lt;div&gt;&lt;p&gt;
 今天好久没来看我的朋友过来看我，出去走了好久，好久没有出去呼吸下新鲜空气了。
 &lt;/p&gt;
 
@@ -221,4 +201,87 @@ datetree, use "~/org/datetree.org::datetree/".
 
 &lt;p&gt;
 同时有一个问题：转化时为什么是有符号整数转换成无符号整数，而不是相反呢？
-&lt;/p&gt;&lt;/div&gt;</description><category>ATTACH</category><category>leetcode</category><guid>https://fpghwd.github.io/posts/diao-shi-de-shi-hou-chu-le-yi-ge-wen-ti/</guid><pubDate>Fri, 25 Sep 2020 05:22:42 GMT</pubDate></item></channel></rss>
+&lt;/p&gt;&lt;/div&gt;</description><category>ATTACH</category><category>leetcode</category><guid>https://fpghwd.github.io/posts/diao-shi-de-shi-hou-chu-le-yi-ge-wen-ti/</guid><pubDate>Fri, 25 Sep 2020 05:22:42 GMT</pubDate></item><item><title>Org2nikola image displaying</title><link>https://fpghwd.github.io/posts/org2nikola-image-display/</link><dc:creator>Wang Ding</dc:creator><description>&lt;div&gt;&lt;p&gt;
+&lt;b&gt;设置&lt;/b&gt;
+&lt;/p&gt;
+
+&lt;p&gt;
+先&lt;a href="https://github.com/redguardtoo/org2nikola/issues/11"&gt;咨询&lt;/a&gt;了作者，然后得到了思路：获得一个对 output html 进行自定义 render 的函数，然后自定义修改 html 。
+&lt;/p&gt;
+
+&lt;p&gt;
+设置 org2nikola 包变量的 &lt;code&gt;org2nikola-process-output-html-function&lt;/code&gt; 为：
+&lt;/p&gt;
+
+&lt;div class="org-src-container"&gt;
+
+&lt;pre&gt;&lt;code class="lang-lisp"&gt;
+(setq org2nikola-process-output-html-function
+ (lambda (html-text title post-slug)
+   (progn (let* ((re-str "\\/home\\/.+?\\.\\(png\\|jpg\\|jpeg\\|bmp\\)"))
+            (let* ((files-list (s-match-strings-all re-str html-text)))
+              (dolist (file-path files-list)
+                (message (format "file-path: %s" (car file-path)))
+                (setq cmd (format "cp %s /home/wd/.config/nikola/images/" (car file-path)))
+                (message cmd)
+                (shell-command cmd))))
+          (replace-regexp-in-string
+           "file:.+?\\/[a-z0-9-]\\{34\\}\\/"
+           "https://raw.githubusercontent.com/fpGHwd/fpghwd.github.io/master/images/"
+           html-text))))
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;/div&gt;
+
+&lt;p&gt;
+其中用到了 &lt;code&gt;s-match-strings-all&lt;/code&gt; 和 &lt;code&gt;replace-regexp-in-string&lt;/code&gt; 两个函数。
+&lt;/p&gt;
+
+&lt;p&gt;
+整个过程中最重要的还是匹配文件地址和修改 github 图片资源 url 的两个正则表达式。我需要匹配字符串的是（目前只能匹配一个字符串，如果贴文本的话，写好博客后进行处理后面的真正图片的链接就不能进行转换了，所以用图片代替）：
+&lt;code&gt;找不到图片了算了)○(￣□￣○)&lt;/code&gt; 。
+&lt;/p&gt;
+
+&lt;p&gt;
+&lt;b&gt;获取图片地址&lt;/b&gt;
+&lt;/p&gt;
+
+&lt;p&gt;
+我需要将图片的地址拿到并复制到 nikola/images 目录，这样 nikola 在发布的时候会对图片做一些处理，然后输出到 output/images 中。使用的正则是 &lt;code&gt;\\/home\\/.+?\\.\\(png\\|jpg\\|jpeg\\|bmp\\)&lt;/code&gt; 。
+&lt;/p&gt;
+
+&lt;div id="org69cde4d" class="figure"&gt;
+&lt;p&gt;&lt;img src="https://raw.githubusercontent.com/fpGHwd/fpghwd.github.io/master/images/_20200918_123005screenshot.png" alt="_20200918_123005screenshot.png"&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;
+&lt;b&gt;替换图片地址&lt;/b&gt;
+&lt;/p&gt;
+
+&lt;p&gt;
+我需要将形如 &lt;code&gt;file:///home/wd/Dropbox/text/org/.attach/(HashI/(UUID)/&lt;/code&gt; 的所有字符串替换为 &lt;code&gt;https://raw.githubusercontent.com/fpGHwd/fpghwd.github.io/master/images/&lt;/code&gt; ，使用的正则是 &lt;code&gt;"file:.+?\\/[a-z0-9-]\\{34\\}\\/&lt;/code&gt; 。
+&lt;/p&gt;
+
+&lt;div id="orgd2806f2" class="figure"&gt;
+&lt;p&gt;&lt;img src="https://raw.githubusercontent.com/fpGHwd/fpghwd.github.io/master/images/_20200918_122914screenshot.png" alt="_20200918_122914screenshot.png"&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;
+&lt;b&gt;调试正则&lt;/b&gt;
+&lt;/p&gt;
+
+&lt;p&gt;
+用到了 emacs 自带的 &lt;code&gt;re-builder&lt;/code&gt; 来对当前 buffer 测试正则表达式，很好用。
+&lt;/p&gt;
+
+&lt;p&gt;
+&lt;b&gt;TODO&lt;/b&gt;
+&lt;/p&gt;
+
+&lt;ol class="org-ol"&gt;
+&lt;li&gt;由于没有循环，只能找到第一个图片的字符串然后替换成真实的 url, 需要完善匹配后的操作。（完成）&lt;/li&gt;
+&lt;li&gt;还只能匹配截图这样文件名的图片，需要完善正则表达式。（完成）&lt;/li&gt;
+&lt;/ol&gt;&lt;/div&gt;</description><category>ATTACH</category><category>emacs</category><guid>https://fpghwd.github.io/posts/org2nikola-image-display/</guid><pubDate>Thu, 17 Sep 2020 03:35:39 GMT</pubDate></item></channel></rss>

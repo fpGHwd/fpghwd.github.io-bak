@@ -1,25 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>wd's blog</title><link>https://fpghwd.github.io/</link><description>passion, love and music</description><atom:link href="https://fpghwd.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2021 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;Wang Ding&lt;/a&gt; </copyright><lastBuildDate>Sun, 28 Mar 2021 07:15:12 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Reading in Library</title><link>https://fpghwd.github.io/posts/reading-in-library/</link><dc:creator>Wang Ding</dc:creator><description>&lt;div&gt;&lt;p&gt;
-昨天下午等车之前，和同学一起到本部图书馆看了大概两个小时的书。一本是《一生能读几多书》。
-&lt;/p&gt;
-
-&lt;div id="orga0f2154" class="figure"&gt;
-&lt;p&gt;&lt;img src="file:///Users/wd/Projects/org/_20210328_144655screenshot.png" alt="_20210328_144655screenshot.png"&gt;
-&lt;/p&gt;
-&lt;/div&gt;
-
-&lt;p&gt;
-还有一本是《源氏物语》中译本。
-&lt;/p&gt;
-
-&lt;div id="orgae69ea5" class="figure"&gt;
-&lt;p&gt;&lt;img src="file:///Users/wd/Projects/org/_20210328_145750screenshot.png" alt="_20210328_145750screenshot.png"&gt;
-&lt;/p&gt;
-&lt;/div&gt;
-
-&lt;p&gt;
-图书馆是一个好地方。
-&lt;/p&gt;&lt;/div&gt;</description><category>ATTACH</category><guid>https://fpghwd.github.io/posts/reading-in-library/</guid><pubDate>Sun, 28 Mar 2021 07:09:19 GMT</pubDate></item><item><title>leetcode 1013. Partion Array Into Three Parts With Equal Sum</title><link>https://fpghwd.github.io/posts/leetcode-1013-partion-array-into-three-parts-with-equal-sum/</link><dc:creator>Wang Ding</dc:creator><description>&lt;div&gt;&lt;p&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>wd's blog</title><link>https://fpghwd.github.io/</link><description>passion, love and music</description><atom:link href="https://fpghwd.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2021 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;Wang Ding&lt;/a&gt; </copyright><lastBuildDate>Sun, 28 Mar 2021 07:16:28 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>leetcode 1013. Partion Array Into Three Parts With Equal Sum</title><link>https://fpghwd.github.io/posts/leetcode-1013-partion-array-into-three-parts-with-equal-sum/</link><dc:creator>Wang Ding</dc:creator><description>&lt;div&gt;&lt;p&gt;
 &lt;a href="https://leetcode.com/problems/partition-array-into-three-parts-with-equal-sum/"&gt;1013. Partition Array Into Three Parts With Equal Sum&lt;/a&gt;
 &lt;/p&gt;
 
@@ -173,4 +153,28 @@ Fairly speaking, it’s the truth that happiness is not searching but building.&
 于是下载了 vscode + tex workshop 插件和全套的 mactex ，vscode 编辑起来还是流畅一点。不过 vscode 在切换 Squirrel 中文输入时不能使用，重新修改了 patch 也不行。不过还有系统的中文输入法还能用，全拼用起来果然没有双拼舒服。
 &lt;/p&gt;&lt;/div&gt;</description><guid>https://fpghwd.github.io/posts/macos-xia-shi-yong-squirrel-zai-vscode-zhong-wu-fa-shu-ru-zhong-wen/</guid><pubDate>Wed, 10 Mar 2021 07:26:04 GMT</pubDate></item><item><title>Macos emacs-plus@27 is convenient with emacs-rime</title><link>https://fpghwd.github.io/posts/macos-emacs-plus27-is-convenient-with-emacs-rime/</link><dc:creator>Wang Ding</dc:creator><description>&lt;p&gt;
 不知道是不是自己的配置问题，使用相同的配置 &lt;code&gt;emacs-plus@28 --with-native-comp&lt;/code&gt; 就会卡顿，退回 emacs-plus@27 就还好。重新编译了一遍 doom-emacs 的 modules 后，感觉 emacs-rime 在编辑 org 文件时没有编译前那么卡了。
-&lt;/p&gt;</description><category>emacs</category><guid>https://fpghwd.github.io/posts/macos-emacs-plus27-is-convenient-with-emacs-rime/</guid><pubDate>Wed, 03 Mar 2021 07:56:33 GMT</pubDate></item></channel></rss>
+&lt;/p&gt;</description><category>emacs</category><guid>https://fpghwd.github.io/posts/macos-emacs-plus27-is-convenient-with-emacs-rime/</guid><pubDate>Wed, 03 Mar 2021 07:56:33 GMT</pubDate></item><item><title>Emacs mouse or touchpad scroll line by line</title><link>https://fpghwd.github.io/posts/emacs-mouse-or-touchpad-scroll-line-by-line/</link><dc:creator>Wang Ding</dc:creator><description>&lt;div&gt;&lt;p&gt;
+Just set &lt;code&gt;mouse-wheel-progressive-speed&lt;/code&gt; to &lt;code&gt;nil&lt;/code&gt; in init file.
+&lt;/p&gt;
+
+&lt;p&gt;
+如果需要的话，也可以在对下面进行设置，不过我觉得有了上面的设置已经差不多了。关于 &lt;code&gt;mouse-wheel-progressive-speed&lt;/code&gt; 的解释是：
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+If non-nil, the faster the user moves the wheel, the faster the scrolling.
+&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;
+另外下面的设置也可以考虑一下：
+&lt;/p&gt;
+&lt;div class="org-src-container"&gt;
+
+&lt;pre&gt;&lt;code class="lang-emacs"&gt;(setq mouse-wheel-scroll-amount '(1 ((shift) . 1))) ;; one line at a time
+(setq mouse-wheel-progressive-speed nil) ;; don't accelerate scrolling
+(setq mouse-wheel-follow-mouse 't) ;; scroll window under mouse
+(setq scroll-step 1) ;; keyboard scroll one line at a time
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;/div&gt;&lt;/div&gt;</description><category>emacs</category><guid>https://fpghwd.github.io/posts/emacs-mouse-or-touchpad-scroll-line-by-line/</guid><pubDate>Sun, 14 Feb 2021 12:06:23 GMT</pubDate></item></channel></rss>
