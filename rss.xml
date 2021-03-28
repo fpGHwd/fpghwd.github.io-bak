@@ -1,8 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>wd's blog</title><link>https://fpghwd.github.io/</link><description>passion, love and music</description><atom:link href="https://fpghwd.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2021 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;Wang Ding&lt;/a&gt; </copyright><lastBuildDate>Sun, 28 Mar 2021 06:52:13 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Reading in Library</title><link>https://fpghwd.github.io/posts/reading-in-library/</link><dc:creator>Wang Ding</dc:creator><description>&lt;div id="orgcfda340" class="figure"&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>wd's blog</title><link>https://fpghwd.github.io/</link><description>passion, love and music</description><atom:link href="https://fpghwd.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2021 &lt;a href="mailto:ggwdwhu@gmail.com"&gt;Wang Ding&lt;/a&gt; </copyright><lastBuildDate>Sun, 28 Mar 2021 06:59:01 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Reading in Library</title><link>https://fpghwd.github.io/posts/reading-in-library/</link><dc:creator>Wang Ding</dc:creator><description>&lt;div&gt;&lt;p&gt;
+昨天下午等车之前，和同学一起到本部图书馆看了大概两个小时的书。一本是《一生能读几多书》。
+&lt;/p&gt;
+
+&lt;div id="org277479f" class="figure"&gt;
 &lt;p&gt;&lt;img src="https://raw.githubusercontent.com/fpGHwd/fpghwd.github.io/master/images/_20210328_144655screenshot.png" alt="_20210328_144655screenshot.png"&gt;
 &lt;/p&gt;
-&lt;/div&gt;</description><category>ATTACH</category><guid>https://fpghwd.github.io/posts/reading-in-library/</guid><pubDate>Sun, 28 Mar 2021 06:49:25 GMT</pubDate></item><item><title>leetcode 1013. Partion Array Into Three Parts With Equal Sum</title><link>https://fpghwd.github.io/posts/leetcode-1013-partion-array-into-three-parts-with-equal-sum/</link><dc:creator>Wang Ding</dc:creator><description>&lt;div&gt;&lt;p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;
+还有一本是《源氏物语》中译本。
+&lt;/p&gt;
+
+&lt;div id="org4e87b91" class="figure"&gt;
+&lt;p&gt;&lt;img src="https://raw.githubusercontent.com/fpGHwd/fpghwd.github.io/master/images/_20210328_145750screenshot.png" alt="_20210328_145750screenshot.png"&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;
+图书馆是一个好地方。
+&lt;/p&gt;&lt;/div&gt;</description><category>ATTACH</category><guid>https://fpghwd.github.io/posts/reading-in-library/</guid><pubDate>Sun, 28 Mar 2021 06:49:25 GMT</pubDate></item><item><title>leetcode 1013. Partion Array Into Three Parts With Equal Sum</title><link>https://fpghwd.github.io/posts/leetcode-1013-partion-array-into-three-parts-with-equal-sum/</link><dc:creator>Wang Ding</dc:creator><description>&lt;div&gt;&lt;p&gt;
 &lt;a href="https://leetcode.com/problems/partition-array-into-three-parts-with-equal-sum/"&gt;1013. Partition Array Into Three Parts With Equal Sum&lt;/a&gt;
 &lt;/p&gt;
 
