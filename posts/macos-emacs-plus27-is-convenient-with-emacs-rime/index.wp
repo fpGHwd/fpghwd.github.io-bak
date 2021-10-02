@@ -1,3 +1,0 @@
-<p>
-不知道是不是自己的配置问题，使用相同的配置 <code>emacs-plus@28 --with-native-comp</code> 就会卡顿，退回 emacs-plus@27 就还好。重新编译了一遍 doom-emacs 的 modules 后，感觉 emacs-rime 在编辑 org 文件时没有编译前那么卡了。
-</p>

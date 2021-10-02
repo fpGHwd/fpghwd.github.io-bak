@@ -1,7 +1,0 @@
-<p>
-Emacs 自带文件自动保存的机制，利用 <code>do-auto-save</code> 可以自动存储当前编辑的文件为一个编辑过的复本，并未直接存储到 buffer 对应的文件中。当然也可以直接开启全局的 <code>(auto-save-visited-mode t)</code> ，在默认的 <code>auto-save-visited-interval</code> 时间（默认 5 秒），后会自动将已经修改后的 buffer 内容写入文件中。
-</p>
-
-<p>
-其中使用 <code>do-auto-save</code> 保存的文件的复本可以在打开该文件本身时有提示。这是一个好的地方，也是容易忽略的地方：某次并没有将改动保存到文件，而是自动保存到了某个复本，而下一次用 emacs 打开该文件，虽然 emacs 有提醒该文件有复本未保存到文件中，此时极有可能形成了两个新的基于原文件改动的分枝。众所周知，合并文件是一件耗时的事情。所以我觉得还是打开 <code>(auto-save-visited-mode t)</code> 更好，避免形成两个改动文件并且需要合并内容的情形。
-</p>

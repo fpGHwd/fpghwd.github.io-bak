@@ -1,4 +1,0 @@
-Sitemap: https://fpghwd.github.io/sitemapindex.xml
-
-User-Agent: *
-Host: fpghwd.github.io
