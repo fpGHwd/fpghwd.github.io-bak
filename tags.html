@@ -1,0 +1,19 @@
+---
+layout: page
+title: 标签
+permalink: /tags.html
+description: "An archive of posts sorted by tags."
+---
+<ul class="tag-box inline">
+  {% assign items_list = site.tags %}
+  {% include category_or_tag_list %}
+</ul>
+
+
+{% for tag in site.tags %}
+  <h2 id="{{ tag[0] }}">{{ tag[0]  }}</h2>
+  <ul class="post-list">
+  {% assign pages_list = tag[1] %}
+  {% include page_list %}
+  </ul>
+{% endfor %}

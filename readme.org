@@ -1,0 +1,102 @@
+* Linusp's Blog
+
+** 简介
+
+   这是我在Github上搭建的静态博客的所有源代码。该博客用来记录个人生活点滴以及一些学习、工作的心得。
+
+   至于本人，目前是一个 Python 程序员，从事自然语言处理相关的工作，如果有兴趣也欢迎交流。
+
+** 模板使用
+
+   以下文件、目录是可用的模板的组成部分
+   + _config.yml : 网站设置文件，包含以下内容
+     - permalink: 通过 *permalink* 可以对文章链接进行设置，在我的设置中它的值是 */:year/:month/:day/:title.html* ，这将使我的文章链接表现为 *http://linusp.github.io/2013/09/30/static-blog-way.html* 这样的形式——这同时需要本地的文章以 *2014-09-30-static-blog-way.org* 或 *2014-09-30-static-blog-way.md* 的形式保存到 _post目录下，具体细节可参照[[http://jekyllrb.com/docs/permalinks/][Jekyll的文档]]
+     - markdown: 设置Jekyll渲染网站时使用的解析器
+     - title : 网站标题， *请替换成自己的网站标题*
+     - author : 作者信息设置， *请替换成自己的个人信息*
+     - url : 网站地址， *请替换成自己的网站地址*
+     - nav : 导航菜单条目，可以参照我的配置文件来新增或去除导航条目，相应的页面的描述和链接将会出现在导航栏中
+
+   + _includes: 一些可复用的网页内容模板，包括评论、导航栏等
+   + _layouts : 网站主要模板，包含default.html、post.html、page.html、note.html 四个模板，它们的作用分别是:
+     - default.html : 根模板(不知道这个词是否使用恰当)，其他模板都是从它继承而来
+     - post.html : 文章模板
+     - page.html : 页面模板
+     - note.html : 笔记页模板，和 post.html 基本一样，做了一些微调，比如去除了日期信息
+   + _posts : 本地文章存储目录， *请只复制或创建该目录，而不要复制其下的内容*
+   + assets : css/图片存储目录，可自定义， *若进行了自定义，请修改 _includes 目录中的模板*
+   + index.html : 网站首页，仅展示文章列表
+   + 预设页面 : 404.html, about.md, archive.html, categories.html, link.md, tags.html——404.html在请求不存在的链接时展现，其他预设页面是 *_config.yml* 中进行了设置的页面
+   + sitemap.xml : 网站地图， *请进行修改*
+   + atom.xml : feed文件，用于博客订阅，
+
+   除此以外的东西，都是网站模板不需要的额外的东西，可以根据自己的喜好与习惯进行增删。
+
+** 写作流程
+
+   本人的这个博客，使用的是Jekyll，不过这里的"使用Jekyll"仅仅是指Jekyll的结构和模板，实际上我在本地对博客的写作和管理是使用Emacs + git。目前我的写作+发布流程是这样的：
+   1. 打开Emacs
+   2. C-c p 调用自定义函数，询问标题，这里的标题是生成文件用的，并不是文章的真正标题。该函数会用当前日期与这个输入连接起来作为文件名。例如，今天是2014年9月10日，我给的输入是：
+      #+BEGIN_EXAMPLE
+      first-blog-with-org-mode
+      #+END_EXAMPLE
+      将会在我设定的目录下生成 2014-09-10-first-blog-with-org-mode.org 这个文件，然后在Emacs中打开它。
+   3. 撰写文章
+   4. C-x p 调用自定义函数将写好的org-mode导出成html文件，放置到jekyll目录的_posts目录下
+   5. 打开终端，切换到jekyll目录下
+   6. 执行
+      #+BEGIN_SRC sh
+      git add . && git commit -m 'new post'
+      git push origin master
+      #+END_SRC
+      将更改提交到github
+
+** How to
+
+   搭建博客与设置Emacs环境的内容可以参照我的这篇文章： [[http://linusp.github.io/2013/09/14/blogging-with-jekyll-emacs.html][使用Github Pages服务建立个人博客]]。
+
+   以下是我的相关自定义函数
+   1. 新建文章并进行写作
+
+      #+BEGIN_SRC emacs-lisp
+      ;; Write Blog
+      (defvar post-dir "~/Dropbox/org/blog/_posts/")
+      (defun blog-post (title)
+        (interactive "sEnter title: ")
+        (let ((post-file (concat post-dir
+                                 (format-time-string "%Y-%m-%d")
+                                 "-"
+                                 title
+                                 ".org")))
+          (progn
+            (switch-to-buffer (find-file-noselect post-file))
+            (insert (concat "#+startup: showall\n"
+                            "#+options: toc:nil\n"
+                            "#+begin_export html\n"
+                            "---\n"
+                            "layout     : post\n"
+                            "title      : \n"
+                            "categories : \n"
+                            "tags       : \n"
+                            "---\n"
+                            "#+end_export\n"
+                            "#+TOC: headlines 2\n"))))
+        )
+      (define-key global-map "\C-cp" 'blog-post)
+      #+END_SRC
+   2. 导出org文件为html
+
+      #+BEGIN_SRC emacs-lisp
+      (defun publish-project (project no-cache)
+        (interactive "sName of project: \nsNo-cache?[y/n] ")
+        (if (or (string= no-cache "y")
+                (string= no-cache "Y"))
+            (setq org-publish-use-timestamps-flag nil))
+        (org-publish-project project)
+        (setq org-publish-use-timestamps-flag t))
+      (define-key global-map "\C-xp" 'publish-project)
+      #+END_SRC
+      实际上我的所有文章的源文件都是处在同一个目录中并作为一个org project来管理，org-mode中内置的函数 =org-pulish-project= 就能将整个 project 按照设置导出成html。上面这个自定义函数的实现主要是两个目的：
+      + 除了博客外，我还有笔记系统，也以 project 的形式进行了组织，并需要导出，这个方法可以在 publish 的时候让我选择对应的 project
+
+      + org-publish-project 在 publish 某个 project 时，会判断文件是否修改过，如果没有，则不会 publish 该文件。而当我在 Emacs 的配置文件对 project 的设置进行了修改后，虽然源文件没有改动，但有必要重新 publish 成 html

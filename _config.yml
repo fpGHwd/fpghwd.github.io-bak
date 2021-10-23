@@ -1,0 +1,48 @@
+# Dependencies
+gems:                [jekyll-paginate]
+markdown:            kramdown
+
+# Permalinks
+#
+# Use of `relative_permalinks` ensures post links from the index work properly.
+permalink:           /:year/:month/:day/:title.html
+
+# Setup
+title:               "ZMonster's Blog"
+tagline:             '巧者劳而智者忧，无能者无所求，饱食而遨游，泛若不系之舟'
+description:         '计算机科学|自然语言处理|程序设计'
+url:                 http://linusp.github.io
+baseurl:             /
+paginate:            10
+
+out_url:             http://www.zmonster.me
+
+# About/contact
+author:
+  name:              Linusp
+  url:               https://github.com/Linusp
+  email:             linusp1024@gmail.com
+
+# Social Media
+github:              https://github.com/Linusp
+
+# sidebar nav
+nav:
+  - text: 分类
+    url : /categories.html
+  - text: 标签
+    url : /tags.html
+  - text: 归档
+    url : /archive.html
+  - text: 链接
+    url : /link.html
+  - text: 关于
+    url : /about.html
+  - text: Feed
+    url : /feed.html
+
+# Theme Author (Please don't edit this line cause of MIT LICENSE rules)
+theme_settings:
+  creator:           Rizky Ariestiyansyah
+  codename:          Naringu
+  link:              https://github.com/ariestiyansyah/naringu
