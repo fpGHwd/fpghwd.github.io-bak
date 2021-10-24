@@ -28,18 +28,18 @@ github:              https://github.com/fpghwd
 
 # sidebar nav
 nav:
-#   - text: 分类
-#     url : /categories.html
-#   - text: 标签
-#     url : /tags.html
-#   - text: 归档
-#     url : /archive.html
-#   - text: 链接
-#     url : /link.html
-#   - text: 关于
-#     url : /about.html
-#   - text: Feed
-#     url : /feed.html
+  - text: 分类
+    url : /categories.html
+  - text: 标签
+    url : /tags.html
+  - text: 归档
+    url : /archive.html
+  - text: 链接
+    url : /link.html
+  - text: 关于
+    url : /about.html
+  - text: Feed
+    url : /feed.html
 
 # Theme Author (Please don't edit this line cause of MIT LICENSE rules)
 theme_settings:
