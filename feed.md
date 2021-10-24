@@ -1,6 +1,6 @@
 ---
 title: 订阅
-author: Linusp
+author: Wang Ding
 layout: page
 permalink: /feed.html
 ---
