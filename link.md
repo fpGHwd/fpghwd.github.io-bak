@@ -6,8 +6,10 @@ permalink: /link.html
 
 -------
 
+
 # 朋友
 
++ [zmonster](https://www.zmonster.me)
 + [lastmayday](http://lastmayday.org/)
 + [绿子的指尖簿](http://blog.sina.com.cn/u/2102130980/)
 + [CourageJ](http://couragej.github.io/)
