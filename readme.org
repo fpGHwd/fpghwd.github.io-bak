@@ -1,4 +1,6 @@
-* Linusp's Blog
+* A blog
+1. whose emplate is from [[https://www.zmonster.me][Zmonster]]
+* COMMENT Linusp's Blog
 
 ** 简介
 
