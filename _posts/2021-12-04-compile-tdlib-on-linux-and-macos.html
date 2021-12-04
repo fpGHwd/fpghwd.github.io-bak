@@ -1,0 +1,30 @@
+---
+layout     : post
+title      : MacOS/Linux 上本地编译 tdlib
+categories : emacs
+tags       :
+---
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#orgde9f906">1. 源码编译 tdlib</a></li>
+</ul>
+</div>
+</div>
+
+<p>
+最近在使用 telega 的过程中，升级 emacs packages 的过程中没有考虑到 tdlib ，telega 提示 <code>UPDATE_APP_TO_LOGIN</code> 。应该是 tdlib 没有及时更新，于是需要从源码编译 tdlib 。
+</p>
+
+<div id="outline-container-orgde9f906" class="outline-2">
+<h2 id="orgde9f906"><span class="section-number-2">1.</span> 源码编译 tdlib</h2>
+<div class="outline-text-2" id="text-1">
+<ol class="org-ol">
+<li>在 github clone 源码后，按照主页提示准备编译；</li>
+<li>macos 下需要指定 openssl 的目录： <code>export OPENSSL_ROOT_DIR=/opt/homebrew</code> ， linux 下一般无需特殊设置；</li>
+<li>准备需要安装的目录 <code>mkdir -p ~/Documents/td_install/</code> 后，在 cmake 编译选项中加入 <code>-DCMAKE_INSTALL_PREFIX</code> ，即 <code>cmake -DCMAKE_BUILD_TYPE=Release  -DCMAKE_INSTALL_PREFIX=/home/wd/Documents/td_install/  ..</code> ；</li>
+<li>安装： <code>make install</code> ，然后在 telega 中指定 <code>telega-server-libs-prefix</code> 的值为 <code>"~/Documents/td_install"</code> ，emacs 中重新构建 <code>telega-server-build</code> 即可。</li>
+</ol>
+</div>
+</div>
