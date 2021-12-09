@@ -9,7 +9,7 @@ permalink:           /:year/:month/:day/:title.html
 
 # Setup
 title:               "Wang Ding's Blog"
-tagline:             'Linux|Emacs'
+tagline:             'Haste makes waste.'
 description:         '如果你看到了云雾笼罩的城堡，那么请一定走向那里去实现你非凡的梦想吧'
 url:                 http://fpghwd.github.io
 baseurl:             /
